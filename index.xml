@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>  on cdaf.info</title>
+    <title>Class B on cdaf.info</title>
     <link>http://cdaf.info/</link>
-    <description>Recent content in   on cdaf.info</description>
+    <description>Recent content in Class B on cdaf.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate>
@@ -12,23 +12,22 @@
     
     
     <item>
+      <title>The Class B Site</title>
+      <link>http://cdaf.info/posts/my-first-post/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://cdaf.info/posts/my-first-post/</guid>
+      <description>My friend Jules created this orsome website for me, and he lent me his domain. He&amp;rsquo;s sooo kool. Don&amp;rsquo;t change the header blocks in content files.
+--- title: &amp;quot;Hugo Ship Boarding&amp;quot; date: 2020-05-24 type: blog --- </description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>http://cdaf.info/about/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
       <guid>http://cdaf.info/about/</guid>
       <description>This site only serves as a basic example of Hugo with Ananke theme.</description>
-    </item>
-    
-    <item>
-      <title>Hugo Ship Boarding</title>
-      <link>http://cdaf.info/posts/my-first-post/</link>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://cdaf.info/posts/my-first-post/</guid>
-      <description>Having ruled out Wordpress due to it&amp;rsquo;s export/import promote mechanics, pivoted to Hugo and applied the Ananke theme simply because it was the most common and included in the Quickstart guide.
-Many of the Hugo commands in different tutorials are incorrect, so a level of guessing was required to get the basics working, only to find the good stuff is in the ananke/exampleSite directory.
-hugo new site quickstart cd quickstart cp ananke/exampleSite/_index.</description>
     </item>
     
   </channel>

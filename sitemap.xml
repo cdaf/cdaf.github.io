@@ -3,8 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://cdaf.info/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+    <loc>http://cdaf.info/posts/</loc>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://cdaf.info/posts/my-first-post/</loc>
+    <lastmod>2020-05-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -13,12 +18,7 @@
   </url>
   
   <url>
-    <loc>http://cdaf.info/posts/my-first-post/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://cdaf.info/posts/</loc>
+    <loc>http://cdaf.info/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
   </url>
   
