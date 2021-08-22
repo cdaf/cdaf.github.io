@@ -28,7 +28,7 @@ twitter_username: v8lust
 github_username:  cdaf
 
 # Build settings
-theme: minima
+theme: just-the-docs
 plugins:
   - jekyll-feed
 
