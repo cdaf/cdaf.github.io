@@ -46,8 +46,11 @@ http.createServer(function (request, response) {
         case '.jpg':
             contentType = 'image/jpg';
             break;
-        case '.wav':
-            contentType = 'audio/wav';
+        case '.zip':
+            contentType = 'audio/application/zip';
+            break;
+        case '.gz':
+            contentType = 'audio/application/gzip';
             break;
     }
 
