@@ -1,0 +1,232 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+
+<p>{{ message }}</p>
+
+<p>2.4.1 : 07-Mar-2021 : Properties with Spaces</p>
+<ul>
+    <li class="release">
+    <h5>New feature implemented using function call, which inadvertantly converts commas into spaces</h5>
+    <ul>
+        <li>Where a property contains a comma, the value must be wrapped as a string, i.e. with single or double quotes.</li>
+    </ul>
+</ul>
+
+<p>2.4.0 : 21-Feb-2021 : containerDeploy feature to complete the self-host delivery workload Epic</p>
+<ul>
+    <li class="release">
+    <h5>Separation of Image Build and Container Build environment variables</h5>
+    <ul>
+        <li>Container Build (CDAF_CB_) prefix environment variables now exclusively used for build container. To supply environment variables to image build, use CDAF_IB_ prefix.</li>
+    </ul>
+</ul>
+
+<p>2.3.0 : 23-Nov-2020 : Git Branch Clean-up</p>
+<ul>
+    <li class="release">
+    <h5>Deprecate http_proxy argument from containerBuild</h5>
+    <ul>
+        <li>Replace http_proxy argument with CDAF_CB_ generic loading.</li>
+    </ul>
+    <li class="release">
+    <h5>Implicit Variable Loading from Properties</h5>
+    <ul>
+        <li>Any properties containing variables are not expanded at time of loading. Any expansion requirements now need to be explicitly managed in the task.</li>
+    </ul>
+</ul>
+
+<p>2.2.0 : 01-Nov-2020 : Container Image Build</p>
+<ul>
+    <li class="release">
+    <h5>Duplicate Entry Script deprecated</h5>
+    <ul>
+        <li>Only one entry script is now maintained in the CDAF root.</li>
+    </ul>
+    <li class="release">
+    <h5>Forced Rebuild in imageBuild no longer support (Windows)</h5>
+    <ul>
+        <li>This Windows only feature has been deprecated to support the overloaded constructor argument in both Linux and Windows.</li>
+    </ul>
+</ul>
+
+<p>2.1.0 : 29-Jun-2020 : Symmetrical Encryption</p>
+<ul>
+    <li class="release">
+    <h5>Linux Align remote crypt files with local matching relative path</h5>
+    <ul>
+        <li>Local tasks placed crypt files in a crypt subdirectory, while remote placed in root. Aligned root with Local (and Windows) ensuring no clash with properties file names.</li>
+    </ul>
+    <li class="release">
+    <h5>Align SOLUTIONROOT to absolute path</h5>
+    <ul>
+        <li>$SOLUTIONROOT is now absolute page in Linux and Windows, therefore any additional relative reference to, e.g. ../$SOLUTIONROOT needs to be removed.</li>
+    </ul>
+</ul>
+
+<p>2.0.0 : 24-Aug-2019 : Symmetrical Encryption</p>
+<ul>
+    <li class="release">
+    <h5>Linux DECRYP function aligned with Windows, with introduction of key</h5>
+    <ul>
+        <li>To support the same decryption capability introduced in the DETOKN function, this function has been updated to use explicit encrypted file name with optional decryption key.</li>
+    </ul>
+    <li class="release">
+    <h5>Emulation Environment Variable Naming Standard</h5>
+    <ul>
+        <li>Environment variables are normally uppercase, so replaces environmentDelivery with CDAF_DELIVERY.</li>
+    </ul>
+</ul>
+
+<p>1.8.0 : 27-Oct-2018 : Windows Base for curl</p>
+<ul>
+    <li class="release">
+    <h5>curl.ps1 provisioner was being detected as a virus</h5>
+    <ul>
+        <li>Replace "curl.ps1" with "base.ps1 'curl'"</li>
+    </ul>
+</ul>
+
+<p>1.7.0 : 6-Mar-2018 : Standardised Entry point for Container Build</p>
+<ul>
+    <li class="release">
+    <h5>Avoid using custom entry points in delivery toolchain</h5>
+    <ul>
+        <li>Moved container build driver from CD Emulation to Build/Package process. This breaking change only affects container build implementations, i.e from 1.6.0 and above.</li>
+    </ul>
+</ul>
+
+<p>1.6.0 : 11-Nov-2017 : Container Build</p>
+<ul>
+    <li class="release">
+        <h5>SQL Server Installer support for Managed Service Accounts</h5>
+        <ul>
+            <li>Provisioning only impact. Deprecate SQL.ps1 and replace with InstallSQL.ps1, with now optional service account password after mandatory parameters.</li>
+        </ul>
+    <li class="release">
+        <h5>Disable Regular Expression Parsing when searching for replacement name (Windows)</h5>
+        <ul>
+            <li>Any string replacement reliant of regex will no longer work as replacing on literal string only.</li>
+        </ul>
+</ul>
+
+<p>1.5.0 : 22-Feb-2017 : Resilience</p>
+<ul>
+    <li class="release">
+    <h5>SQL Server user creation, support local machine user</h5>
+    <ul>
+        <li>Provisioning only impact. Now have to pass user and domain as separate arguments to sqlAddUser.ps1.</li>
+    </ul>
+</ul>
+
+<p>1.4.0 : 14-Oct-2016 : Convention over Configuratione</p>
+<ul>
+    <li class="release">
+    <h5>Reorganise Optional arguments in coupling</h5>
+    <ul>
+        <li>Change build and delivery entry point and argument list (reduced). If deriving build number in a pipeline, this is no required.</li>
+    </ul>
+</ul>
+
+<p>1.3.0 : 06-Sep-2016 : Continuous Delivery Coupling Change</p>
+<ul>
+    <li class="release">
+    <h5>Remove unused "automationroot" from CD process</h5>
+    <ul>
+        <li>By removing this unused argument, all Delivery couplings will need to also have this removed.</li>
+    </ul>
+</ul>
+
+<p>1.2.0 : 19-Jul-2016 : Docker and Execute</p>
+<ul>
+    <li class="release">
+    <h5>Remove Implicit Execute based on variables (Windows)</h5>
+    <ul>
+        <li>Align with Linux, removing functionality based on $loadProperties (replaced with PROPLD) and $terminate (replaced with EXITIF).</li>
+    </ul>
+
+    <li class="release">
+    <h5>Implement Docker Runtime Management using Environment Label (Linux)</h5>
+    <ul>
+        <li>Previous Docker management scripts support 1-to-1 relationship between images and instances, based on TCP port number. This has been reengineered to use an environment label (corresponding to image tag) to allow management of multiple running instances. As a result of this change, instance properties files now require an environment property and any existing deployments based on port numbers will need to be manually removed before being deployed based on environment.</li>
+    </ul>
+</ul>
+
+<p>1.1.0 : 11-Jul-2016 : Linux Build</p>
+<ul>
+    <li class="release">
+    <h5>Incorrectly Populated for Linux Projects</h5>
+    <ul>
+        <li>Linux project build was passing project name in the $SOLUTION variable, this has been corrected, with project now passed as $PROJECT, however, if a build process has utilised $SOLUTION, this may have unexpected results after applying this release.</li>
+    </ul>
+</ul>
+
+<p>1.0.0 : 2-Jun-2016 : CDAF GA</p>
+<ul>
+    <li class="release">
+    <h5>Incorrectly Populated for Linux Projects</h5>
+    <ul>
+        <li>Linux project build was passing project name in the $SOLUTION variable, this has been corrected, with project now passed as $PROJECT, however, if a build process has utilised $SOLUTION, this may have unexpected results after applying this release.</li>
+    </ul>
+</ul>
+
+<p>0.9.0 : 26-Oct-2015 : Generic Execution</p>
+<ul>
+    <li class="release">
+    <h5>Invoke Task Driver keyword</h5>
+    <ul>
+        <li>To allow the consistent use of the execute engine, with side-by-side Windows/Linux implementations, the root of remote task execution is now the same as local task execution. This means any remote execution tasks that refer to the Deploy folder, or relative paths to that (e.g. ../) will need to be adjusted.</li>
+    </ul>
+
+    <li class="release">
+    <h5>Allow zip creation (remote packaging) to be optional</h5>
+    <ul>
+        <li>If the default storeForRemote file has been deleted, but remote task execution is required, recreate this file (empty). This will continue to create the zip package with only the CDAF helper files.</li>
+    </ul>
+</ul>
+
+<p>0.8.0 : 7-May-2015 : Compliance and Flex</p>
+<ul>
+    <li class="release">
+    <h5>Emulation Flexibility</h5>
+    <ul>
+        <li>By default, CI and CD use two different environments, BUILD and DEV respectively. Existing solutions dependent on DEV for both will require a copy of DEV properties for BUILD.</li>
+    </ul>
+
+    <li class="release">
+    <h5>Remote File Processing</h5>
+    <ul>
+        <li>Automated copy of 7 zip redistributable to package landing folder no longer performed. This will require the installation of 7 zip on both build (create zip file package) and target (extract zip file package).</li>
+    </ul>
+</ul>
+
+<p>0.7.0 : 3-Mar-2015 : CDAF Branding</p>
+<ul>
+    <li class="release">
+    <h5>CDAF Branding</h5>
+    <ul>
+        <li>Added CDAF.solution driver file to allow user definitions and tasks to be created in a stand alone directory.</li>
+        <li>Change any solution references (i.e. in the automation tool) from autodeploy to automation.</li>
+    </ul>
+
+    <li class="release">
+    <h5>deploy script loose coupling</h5>
+    <ul>
+        <li>Change any local task path (e.g. TasksLocal/) references in local tasks definition, runtime location is not inside the working folder.</li>
+        <li>Remove ENVIRONMENT from tasks using copyReplace and decryptKey.</li>
+    </ul>
+</ul>
+
+<p>0.6.2 : 19-Feb-2015 : Linear Deploy</p>
+<ul>
+    <li class="release">
+    <h5>Build Execution</h5>
+    <ul>
+        <li>Add BuildEnvironment  e.g. BUILD to buildProjects.sh.</li>
+        <li>BuildEnvironment on to any build scripts (build.sh or build.ps1). Note: this release introduced Linear Deploy, where build.tsk will not be affected by future argument changes.</li>
+        <li>Add Working Folder for Remote artefacts argument (e.g. TasksRemote) to calling package.sh, not the argument used here will need to match any path references in tasksRunLocal.tsk</li>
+    </ul>
+</ul>
+{% endblock %}
