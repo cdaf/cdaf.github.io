@@ -1,0 +1,9 @@
+{
+  "name": "cdaf",
+  "version": "0.0.0",
+  "description": "CDAF",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
