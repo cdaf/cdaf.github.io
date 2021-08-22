@@ -13,6 +13,21 @@ http.createServer(function (request, response) {
     if (filePath == './')
         filePath = './index.html';
 
+    if (filePath == './about')
+        filePath = './about.html';
+
+    if (filePath == './release')
+        filePath = './release.html';
+
+    if (filePath == './linux')
+        filePath = './linux.html';
+
+    if (filePath == './windows')
+        filePath = './windows.html';
+
+    if (filePath == './breaking')
+        filePath = './breaking.html';
+
     var extname = path.extname(filePath);
     var contentType = 'text/html';
     switch (extname) {
