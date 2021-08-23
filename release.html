@@ -1,25 +1,85 @@
-{% extends "app/layout.html" %}
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Release History - Continuous Delivery Automation Framework</title>
+    
+    <link rel="stylesheet" type="text/css" href="static/app/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/app/content/site.css" />
+    <link rel="shortcut icon" type="image/png" href="static/app/images/favicon.ico" />
+    <script src="static/app/scripts/modernizr-2.6.2.js"></script>
+</head>
 
-{% block content %}
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">CDAF</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="http://cdaf.io/linux">Linux</a></li>
+                    <li><a href="http://cdaf.io/windows">Windows</a></li>
+                    <li><a href="release.html">Release History</a></li>
+                    <li><a href="breaking.html">Breaking Change History</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<h2>{{ title }}.</h2>
+    <div class="container body-content">
 
-<p>{{ message }}</p>
 
-<!-- {% for r in report %}
+<h2>Release History.</h2>
 
-<p>{{ r.release }} : {{ r.date|date:"d-M-Y" }}</p>
+<p>Release history since initial public availability.</p>
+
+<!-- 
+
+<p>0.5.7 : 19-Dec-2014</p>
 <ul>
 
-    {% for d in r.releasedetail_set.all %}
+    
 
-    <li>{{ d.release_note }}</li>
+    <li>Upgrade Selenium Server to 2.42.2</li>
 
-    {% endfor %}
+    
+
+    <li>Provide message for empty artefacts to check for line feed</li>
+
+    
+
+    <li>Add message to check for DOS carriage return when artefact processing fails</li>
+
+    
+
+    <li>Change Artefact packaging to support wildcard and path</li>
+
+    
+
+    <li>List Available Parameters for Remote Tasks template</li>
+
+    
+
+    <li>Allow support for on domain and off domain Remote Exection</li>
+
+    
+
+    <li>Add Encrypted Password support</li>
+
+    
 
 </ul>
 
-{% endfor %} -->
+ -->
 
 <p>
     2.4.3 : 27-Jun-2021 : CDAF Docker Image
@@ -1283,4 +1343,17 @@
     <li>Add Encrypted Password support</li>
 </ul>
 
-{% endblock %}
+
+        <hr/>
+        <footer>
+            <p>&copy; cdaf.io - 2.4.3.404</p>
+        </footer>
+    </div>
+
+    <script src="static/app/scripts/jquery-1.10.2.js"></script>
+    <script src="static/app/scripts/bootstrap.js"></script>
+    <script src="static/app/scripts/respond.js"></script>
+
+
+</body>
+</html>

@@ -1,16 +1,52 @@
-{% extends "app/layout.html" %}
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDAF for Linux - Continuous Delivery Automation Framework</title>
+    
+    <link rel="stylesheet" type="text/css" href="static/app/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/app/content/site.css" />
+    <link rel="shortcut icon" type="image/png" href="static/app/images/favicon.ico" />
+    <script src="static/app/scripts/modernizr-2.6.2.js"></script>
+</head>
 
-{% block content %}
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">CDAF</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="http://cdaf.io/linux">Linux</a></li>
+                    <li><a href="http://cdaf.io/windows">Windows</a></li>
+                    <li><a href="release.html">Release History</a></li>
+                    <li><a href="breaking.html">Breaking Change History</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<h2>{{ title }}.</h2>
+    <div class="container body-content">
 
-<p>{{ message }}</p>
+
+<h2>CDAF for Linux.</h2>
+
+<p>Getting Started with CDAF on Linux. This is not a comprehensive tutorial on implementing CDAF, this is simple quickstart guide, serving primarily as a reminder when creating a new solution.</p>
 
 <h3>Production-Like Environment Using Vagrant and VirtualBox (Recommended)</h3>
 
 <p>By using the included Vagrant file, a quickstart environment can be created from the CDAF package.</p>
 
-<img src="../../static/app/images/LU-CDM.png" />
+<img src="static/app/images/LU-CDM.png" />
 
 <h3>Desktop Execution</h3>
 
@@ -124,6 +160,19 @@
 <h1>Incremental Database </h1>
 
 <p/><p>Simple imcrimental script runner (postgresql only).</p>
-<p><a class="btn btn-default" href="../../static/app/downloads/incrdb.jar">incrdb.jar</a></p>
+<p><a class="btn btn-default" href="static/app/downloads/incrdb.jar">incrdb.jar</a></p>
 
-{% endblock %}
+
+        <hr/>
+        <footer>
+            <p>&copy; cdaf.io - 2.4.3.404</p>
+        </footer>
+    </div>
+
+    <script src="static/app/scripts/jquery-1.10.2.js"></script>
+    <script src="static/app/scripts/bootstrap.js"></script>
+    <script src="static/app/scripts/respond.js"></script>
+
+
+</body>
+</html>
