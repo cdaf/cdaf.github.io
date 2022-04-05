@@ -42,10 +42,19 @@
 
 <p>Breaking changes are indicated by an increment of the minor version number in the release.</p>
 
+<p>2.5.0 : 05-Apr-2022 : Multiple TARGET support for containerDeploy ENVIRONMENT</p>
+<ul>
+    <li class="release">
+    <h5>containerDeploy custom workspace (CDAF_WORKSPACE) deprecated</h5>
+    <ul>
+        <li>The initial containerDeploy was not aligned to local and remote processes, i.e. it could only process ENVIRONMENT as TARGET, not multiple targets, and used a non-standard workspace. This non-standard workspace has been deprecated.</li>
+    </ul>
+</ul>
+
 <p>2.4.1 : 07-Mar-2021 : Properties with Spaces</p>
 <ul>
     <li class="release">
-    <h5>New feature implemented using function call, which inadvertantly converts commas into spaces</h5>
+    <h5>New feature implemented using function call, which inadvertantly converts commas into spaces (Windows)</h5>
     <ul>
         <li>Where a property contains a comma, the value must be wrapped as a string, i.e. with single or double quotes.</li>
     </ul>
@@ -268,7 +277,7 @@
 
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.4.6.450</p>
+            <p>&copy; cdaf.io - 2.5.0.455</p>
         </footer>
     </div>
 

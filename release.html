@@ -81,7 +81,21 @@
 
  -->
 <p>
-    2.4.6 : 21-Fed-2022 : Variable Validation
+    2.5.0 : 05-Apr-2022 : Multiple TARGET support for containerDeploy ENVIRONMENT
+</p>
+<ul>
+    <li>containerDeploy environment prefix used in the same way as localDeploy and remoteDeploy</li>
+    <li>Do not attempt to execute CI process if solution not found</li>
+    <li>Remove out-of-date configuration guidance from cdEmulate</li>
+    <li>Replace hyphen with underscore in solution name in containerDeploy</li>
+    <li>dotNET.ps1 default version 4.8 (Windows)</li>
+    <li>Support for Choco downgrade (Windows)</li>
+    <li>EnableFileAndPrintSharing.ps1 include File-Services (Windows)</li>
+    <li>IISAddApp.ps1 include New-WebApplication (Windows)</li>
+    <li>imageBuild include support for DOCKER-HUB as registryURL (Windows)</li>
+</ul>
+<p>
+    2.4.6 : 21-Feb-2022 : Variable Validation
 </p>
 <ul>
     <li>Variable Validation VARCHK Operation</li>
@@ -89,7 +103,7 @@
     <li>installApacheAnt.sh default version raised to 1.10.11 (Linux)</li>
 </ul>
 <p>
-    2.4.5 : 01-Fed-2022 : Feature Branch Environment Deploy
+    2.4.5 : 01-Feb-2022 : Feature Branch Environment Deploy
 </p>
 <ul>
     <li>feature-branch.properties mapping branch name prefix to environment</li>
@@ -1376,7 +1390,7 @@
 
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.4.6.450</p>
+            <p>&copy; cdaf.io - 2.5.0.455</p>
         </footer>
     </div>
 
