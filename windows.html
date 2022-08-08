@@ -43,119 +43,17 @@
 <p>Getting Started with CDAF on Windows. This is not a comprehensive tutorial on implementing CDAF, this is simple quickstart guide, serving primarily as a reminder when creating a new solution.</p>
 
 <p\><p>For complete guidance see <a href="https://docs.cdaf.io/mydoc_install_cdaf_on_windows.html">CDAF documentation</a>.</p>
-<p>Download and extract the CDAF package. To validate the downloaded framework:</p>
+<p>Download, extract and install CDAF.</p>
 
 <div title="Obtain" class="container" style="border:1px solid #cecece;">
     <div>
     <code>. { iwr -useb https://cdaf.io/static/app/downloads/cdaf.ps1 } | iex</code>
     </div>
     <div>
-    <code>.\automation\provisioning\runner.bat .\automation\remote\capabilities.ps1</code>
-    </div>
-</div>
-
-<h3>Apply to Solution</h3>
-
-<p/><p>Initialise the solution run the emulator</p>
-
-<div title="Initialise workspace" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>mkdir automation-solution</code>
+    <code>.\automation\provisioning\runner.bat .\automation\provisioning\addPath.ps1 .\automation\provisioning</code>
     </div>
     <div>
-    <code>cp .\automation\solution\CDAF.solution .\automation-solution</code>
-    </div>
-    <div>
-    <code>.\automation\cdEmulate.bat</code>
-    </div>
-</div>
-
-<p/><p>Create a build task in the a project directory (name is Project in this example)</p>
-
-<div title="Execute first build" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>mkdir Project</code>
-    </div>
-    <div>
-    <code>echo 'REMOVE bin' > Project/build.tsk</code>
-    </div>
-    <div>
-    <code>echo 'EXITIF $ACTION -eq "clean"' >> Project/build.tsk</code>
-    </div>
-    <div>
-    <code>echo '# Following will be executed when ACTION is clean' >> Project/build.tsk</code>
-    </div>
-    <div>
-    <code>echo 'PROPLD ../$SOLUTIONROOT/CDAF.solution' >> Project/build.tsk</code>
-    </div>
-    <div>
-    <code>.\automation\cdEmulate.bat</code>
-    </div>
-</div>
-
-<p/><p>Once the Project Build is validated, gather the resulting artefacts for packaging. Create a the artefact definition file in your solution.</p>
-
-<div title="Artefacts for packaging" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>echo '# Placeholder File for TasksLocal' > automation-solution/storeForRemote</code>
-    </div>
-    <div>
-    <code>.\automation\cdEmulate.bat</code>
-    </div>
-</div>
-
-<p/><p>Copy and add the target definitions (Windows, Workgroup and Vagrant) to the solution and define a task to perform on the target.</p>
-
-<div title="Local Target Templates" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>cp ./automation/solution/propertiesForLocalTasks ./automation-solution -Recurse</code>
-    </div>
-    <div>
-    <code>echo 'dir' > automation-solution/tasksRunLocal.tsk</code>
-    </div>
-    <div>
-    <code>echo 'dir' > automation-solution/tasksRunRemote.tsk</code>
-    </div>
-    <div>
-    <code>.\automation\cdEmulate.bat</code>
-    </div>
-</div>
-    
-<h3>Remote Deployment (using loopback)</h3>
-
-<p\><p>This can only be used for on-domain hosts. One-off provisioning for "remote" connection to localhost.</p>
-
-<div title="Provision" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>winrm quickconfig</code>
-    </div>
-    <div>
-    <code>.\automation\provisioning\runner.bat .\automation\provisioning\CredSSP.ps1 client</code>
-    </div>
-</div>
-
-<p\><p>Similar to local artefacts, create a remote artefacts definition file.</p>
-
-<div title="Artefacts for packaging" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>echo '# Placeholder File will trigger zip file creation from TasksRemote' > automation-solution/storeForRemote.</code>
-    </div>
-    <div>
-    <code>.\automation\cdEmulate.bat</code>
-    </div>
-</div>
-
-<p\><p>Copy and add the target definitions (Windows and Vagrant only) to the solution and define a task to perform on the target.</p>
-
-<div title="Remote Target Templates" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>cp ./automation/solution/propertiesForRemoteTasks ./automation-solution -Recurse</code>
-    </div>
-    <div>
-    <code>echo 'dir' > automation-solution/tasksRunRemote.tsk</code>
-    </div>
-    <div>
-    <code>.\automation\cdEmulate.bat</code>
+    <code>.\automation\provisioning\runner.bat .\automation\provisioning\addPath.ps1 .\automation</code>
     </div>
 </div>
 
@@ -172,7 +70,7 @@
 
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.5.3.464</p>
+            <p>&copy; cdaf.io - 2.5.3.465</p>
         </footer>
     </div>
 

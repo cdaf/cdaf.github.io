@@ -43,7 +43,7 @@
 <p>Getting Started with CDAF on Linux. This is not a comprehensive tutorial on implementing CDAF, this is simple quickstart guide, serving primarily as a reminder when creating a new solution.</p>
 
 <p\><p>For complete guidance see <a href="https://docs.cdaf.io/mydoc_install_cdaf_on_linux.html">CDAF documentation</a>.</p>
-<p>Download and extract the CDAF package. To validate the downloaded framework:</p>
+<p>Download, extract and install CDAF.</p>
 
 <div title="Obtain" class="container" style="border:1px solid #cecece;">
     <div>
@@ -52,97 +52,11 @@
     <div>
     <code>./automation/remote/capabilities.sh</code>
     </div>
-</div>
-
-<p\><p>To provision, create a deployer user and target directory, set a password for the deploy user.</p>
-
-<div title="Provision" class="container" style="border:1px solid #cecece;">
     <div>
-    <code>./automation/provisioning/addUser.sh deployer</code>
+    <code>./automation/provisioning/addPath.sh $(pwd)/automation/provisioning</code>
     </div>
     <div>
-    <code>./automation/provisioning/mkDirWithOwner.sh /opt/packages deployer</code>
-    </div>
-    <div>
-    <code>sudo passwd deployer</code>
-    </div>
-</div>
-
-<p\><p>Run the agent pre-shared key utility, press enter three times when prompted to generate the key, do not enter a passphrase.</p>
-
-<div title="Preshare" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>./automation/provisioning/agent.sh deployer@localhost</code>
-    </div>
-</div>
-
-<h3>Apply to Solution</h3>
-
-<p/><p>Initialise the solution and re-run the emulator, this time no build, local or remote tasks are performed...</p>
-
-<div title="Initialise workspace" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>mkdir automation-solution</code>
-    </div>
-    <div>
-    <code>cp ./automation/solution/CDAF.solution ./automation-solution</code>
-    </div>
-    <div>
-    <code>./automation/cdEmulate.sh</code>
-    </div>
-</div>
-
-<p/><p>Create a build task in the a project directory (name is Project in this example)</p>
-
-<div title="Execute first build" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>mkdir Project</code>
-    </div>
-    <div>
-    <code>echo "REMOVE bin" > Project/build.tsk</code>
-    </div>
-    <div>
-    <code>echo "EXITIF \$ACTION" >> Project/build.tsk</code>
-    </div>
-    <div>
-    <code>echo "# Following will be executed when performing ACTION is not populated" >> Project/build.tsk</code>
-    </div>
-    <div>
-    <code>echo "PROPLD \$SOLUTIONROOT/CDAF.solution" >> Project/build.tsk</code>
-    </div>
-    <div>
-    <code>echo "MAKDIR bin" >> Project/build.tsk</code>
-    </div>
-    <div>
-    <code>echo "VECOPY \$SOLUTIONROOT/CDAF.solution bin/pretend.jar" >> Project/build.tsk</code>
-    </div>
-    <div>
-    <code>./automation/cdEmulate.sh</code>
-    </div>
-</div>
-
-<p/><p>Once the Project Build is validated, gather the resulting artefacts for packaging. Create a the artefact definition file in your solution.</p>
-
-<div title="Artefacts for packaging" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>echo "Project/bin/*.jar" > automation-solution/storeForRemote</code>
-    </div>
-    <div>
-    <code>./automation/cdEmulate.sh</code>
-    </div>
-</div>
-
-<p/><p>Copy and add the target definitions (localhost and Vagrant) to the solution and define a task to perform on the target</p>
-
-<div title="Remote Target Templates" class="container" style="border:1px solid #cecece;">
-    <div>
-    <code>cp ./automation/solution/propertiesForRemoteTasks ./automation-solution -r</code>
-    </div>
-    <div>
-    <code>echo "ls -l Project/bin" > automation-solution/tasksRunRemote.tsk</code>
-    </div>
-    <div>
-    <code>./automation/cdEmulate.sh</code>
+    <code>./automation/provisioning/addPath.sh $(pwd)/automation</code>
     </div>
 </div>
 
@@ -160,7 +74,7 @@
 
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.5.3.464</p>
+            <p>&copy; cdaf.io - 2.5.3.465</p>
         </footer>
     </div>
 
