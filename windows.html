@@ -50,12 +50,14 @@
     <code>. { iwr -useb https://cdaf.io/static/app/downloads/cdaf.ps1 } | iex</code>
     </div>
     <div>
-    <code>.\automation\provisioning\runner.bat .\automation\provisioning\addPath.ps1 .\automation\provisioning</code>
+    <code>.\automation\provisioning\runner.bat .\automation\provisioning\addPath.ps1 "'$(pwd)automation\provisioning'"</code>
     </div>
     <div>
-    <code>.\automation\provisioning\runner.bat .\automation\provisioning\addPath.ps1 .\automation</code>
+    <code>.\automation\provisioning\runner.bat .\automation\provisioning\addPath.ps1 "'$(pwd)automation'"</code>
     </div>
 </div>
+
+<p>Close and reopen the session to load the path.</p>
 
 <h1>Incremental Database</h1>
 
@@ -70,7 +72,7 @@
 
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.5.3.465</p>
+            <p>&copy; cdaf.io - 2.5.3.466</p>
         </footer>
     </div>
 
