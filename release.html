@@ -85,6 +85,20 @@
      -->
 
     <p>
+        2.5.5 : 09-Nov-2022 : CDAF_ERROR_DIAG Default as Solution Property
+    </p>
+    <ul>
+        <li>If CDAF_ERROR_DIAG environment variable not set, use CDAF.solution property (if set)</li>
+        <li>Add Kubectl, Helm and Helmsman to capabilities listing</li>
+        <li>Default for CI entry point set to "revision"</li>
+        <li>Ensure current Docker image is available for containerBuild</li>
+        <li>Fix global property loader when CDAF.solution does not have a closing EOL (Linux)</li>
+        <li>Update default ant version to 1.10.12 in installApacheAnt.sh provisioner (Linux)</li>
+        <li>Update default dotnet version to 6 (Windows)</li>
+        <li>Include Hugo in capabilities (Windows)</li>
+        <li>Correct dockerRun argument validation (Windows)</li>
+    </ul>
+    <p>
         2.5.4 : 30-Oct-2022 : VARVHK default
     </p>
     <ul>
@@ -1442,7 +1456,7 @@
     
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.5.4.478</p>
+            <p>&copy; cdaf.io - 2.5.5.482</p>
         </footer>
     </div>
 
