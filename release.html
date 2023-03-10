@@ -85,6 +85,30 @@
      -->
 
     <p>
+        2.5.6 : 26-Feb-2023 : VARCHK Build Process Support
+    </p>
+    <ul>
+        <li>VARCHK support in Build process</li>
+        <li>Align containerDeploy ID to other docker helpers</li>
+        <li>Ensure all tests are posix compliant (Linux)</li>
+        <li>Ensure Docker is available after starting daemon when CDAF_DOCKER_REQUIRED set (Linux)</li>
+        <li>Volume mount support for Podman (Linux)</li>
+        <li>Support for version as an argument for Azure DevOps installAgent.sh (Linux)</li>
+        <li>Flexible Red Hat Enterprise Linux version support in installAnsible.sh, InstallNodeJS.sh and installPython.sh (Linux)</li>
+        <li>Support for self-hosted docker executor for GitLab installRunner.sh (Linux)</li>
+        <li>Do not fail on workspace clean-up (Linux)</li>
+        <li>Only attempt exited container clean-up in containerBuild where exited containers exist (Linux)</li>
+        <li>imageBuild support for list of tags for registry push (Linux)</li>
+        <li>Ensure REVISION is always set for buildPackage.ps1 (Windows)</li>
+        <li>Consistent use of WORKING_DIRECTORY variable, vs. $env:WORK_SPACE environment variable in delivery.ps1 (Windows)</li>
+        <li>Correct version test for ant and kubectl in capabilities.ps1 (Windows)</li>
+        <li>Support for long build number in dockerClean.ps1 (Windows)</li>
+        <li>Discontinue --password-stdin usage in docker login as not supported in Windows Server (Windows)</li>
+        <li>Use Write-Warning in execute.ps1 (Windows)</li>
+        <li>Check for vstest.console.exe on PATH when setting $env:VS_TEST in msTools.ps1 (Windows)</li>
+        <li>Web Deploy v4 support for provisioning and capabilities listing (Windows)</li>
+    </ul>
+    <p>
         2.5.5 : 09-Nov-2022 : CDAF_ERROR_DIAG Default as Solution Property
     </p>
     <ul>
@@ -1456,7 +1480,7 @@
     
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.5.5.484</p>
+            <p>&copy; cdaf.io - 2.5.6.493</p>
         </footer>
     </div>
 
