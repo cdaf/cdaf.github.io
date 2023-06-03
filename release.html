@@ -85,6 +85,24 @@
      -->
 
     <p>
+        2.6.0 : 30-May-2023 : Cascading Properties
+    </p>
+    <ul>
+        <li>Deprecate DOCKER-HUB for Push registry</li>
+        <li>CDAF_REGISTRY_ property overrides environment variable for imageBuild</li>
+        <li>CDAF_PULL_REGISTRY_ for dockerBuild</li>
+        <li>CDAF_PUSH_REGISTRY_ for dockerPush</li>
+        <li>Default value for docker registry push to 'latest'</li>
+        <li>Introduce CDAF_CORE environment variable for path to helpers</li>
+        <li>imageBuild override container image if explicit image passed</li>
+        <li>Replace AUTOMATIONHELPER cascading search with explicit CDAF_CORE environment variable</li>
+        <li>pushFeatureBranch for imageBuild to push image from non-default branch</li>
+        <li>ImageBuild feature branch logic self-contained</li>
+        <li>Fix DETOKN with 'reveal' does not work with properties containing whitespace (Linux)</li>
+        <li>Remove dependency on Git for default revision in BuildPackage (Windows)</li>
+        <li>postBuild process prior to, and independent of, imageBuild (Windows)</li>
+    </ul>
+    <p>
         2.5.7 : 07-May-2023 : Introduction of packageFeatures
     </p>
     <ul>
@@ -1489,7 +1507,7 @@
     
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.5.7.497</p>
+            <p>&copy; cdaf.io - 2.6.0.513</p>
         </footer>
     </div>
 
