@@ -85,6 +85,20 @@
      -->
 
     <p>
+        2.6.1 : 07-Jun-2023 : Default Container Image Processes
+    </p>
+    <ul>
+        <li>Provide a default dockerfile when containerDeploy directory does not exist</li>
+        <li>Provide default containerBuild process when containerImage specified</li>
+        <li>Provide a default dockerfile when processing containerBuild</li>
+        <li>Provide default imageBuild process using new buildImage property</li>
+        <li>Provide a default dockerfile when processing imageBuild</li>
+        <li>Remove Readme.md from package root</li>
+        <li>Optional post build, pre-packaging process (Linux, aligning with existing Windows functionality)</li>
+        <li>CDAF in PATH for docker container (Linux)</li>
+        <li>Add JQ to cdaf/linux docker image (Linux)</li>
+    </ul>
+    <p>
         2.6.0 : 30-May-2023 : Cascading Properties
     </p>
     <ul>
@@ -1508,7 +1522,7 @@
     
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.6.0.514</p>
+            <p>&copy; cdaf.io - 2.6.1.520</p>
         </footer>
     </div>
 
