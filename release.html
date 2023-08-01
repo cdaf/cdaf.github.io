@@ -85,6 +85,21 @@
      -->
 
     <p>
+        2.6.7 : 31-Jul-2023 : New "global" variable WORKSPACE_ROOT
+    </p>
+    <ul>
+        <li>dockerPush attempt regardless of token being sent, i.e. may already be logged in</li>
+        <li>New "global" variable WORKSPACE_ROOT set by CI and CD entry scripts</li>
+        <li>Align DCMPRS with Windows, extracting to directory with the same name as the package (Linux)</li>
+        <li>Python 2 install support in Fedora based releases 8 and above using DNF (Linux)</li>
+        <li>Deprecate duplicate error handling functions, apply consistent use of ERRMSG (Windows)</li>
+        <li>Standardise internal exception and error handling (Windows)</li>
+        <li>Consistent handling of WORKSPACE "Global" variable (Windows)</li>
+        <li>deploy.bat Do not load arguments as environment variables (Windows)</li>
+        <li>installPython support for Red Hat Enterprise Linux (Linux)</li>
+        <li>DCMPRS preserve source directory structure (Linux)</li>
+    </ul>
+    <p>
         2.6.6 : 09-Jul-2023 : Maintenance Release
     </p>
     <ul>
@@ -1567,7 +1582,7 @@
     
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.6.6.538</p>
+            <p>&copy; cdaf.io - 2.6.7.543</p>
         </footer>
     </div>
 
