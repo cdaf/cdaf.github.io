@@ -85,6 +85,15 @@
      -->
 
     <p>
+        2.7.2 : 09-Oct-2023 : pass RELEASE and OPT_ARG for containerDeploy
+    </p>
+    <ul>
+        <li>Pass RELEASE and OPT_ARG to Container Deploy, previous only passed TARGET</li>
+        <li>Correctly set ENVIRONMENT for Container Deploy</li>
+        <li>Do not fail container build on docker start failure unless CDAF_DOCKER_REQUIRED set</li>
+        <li>Consistent behavior of EXITIF, aligning to documentation</li>
+    </ul>
+    <p>
         2.7.1 : 11-Sep-2023 : runtimeFile containerDeploy
     </p>
     <ul>
@@ -1611,7 +1620,7 @@
     
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.7.1.563</p>
+            <p>&copy; cdaf.io - 2.7.2.565</p>
         </footer>
     </div>
 
