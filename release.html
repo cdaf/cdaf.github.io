@@ -85,6 +85,18 @@
      -->
 
     <p>
+        2.7.5 : 31-Jan-2024 : Fix DETOKN failing when used with default target outside of starting workspace
+    </p>
+    <ul>
+        <li>DETOKN use absolute path for default property file</li>
+        <li>GitLab Runner support for non-canon default image</li>
+        <li>Property loader support for non-workspace directory</li>
+        <li>MSTOOL reset LASTEXITCODE after tool tests (Windows)</li>
+        <li>Return to workspace when tasks complete (Windows)</li>
+        <li>Set TMPDIR to user environment variable, not machine (Windows)</li>
+        <li>PROPLD validation and execution outside workspace (Windows)</li>
+    </ul>
+    <p>
         2.7.4 : 29-Nov-2023 : Bugfix for buildonly CI ACTION
     </p>
     <ul>
@@ -1634,7 +1646,7 @@
     
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.7.4.567</p>
+            <p>&copy; cdaf.io - 2.7.5.568</p>
         </footer>
     </div>
 
