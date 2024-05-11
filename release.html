@@ -85,6 +85,21 @@
      -->
 
     <p>
+        2.7.9 : 11-May-2024 : CDAF_DOCKER_RUN_ARGS for containerBuild engine arguments
+    </p>
+    <ul>
+        <li>New environment variable CDAF_DOCKER_RUN_ARGS for containerBuild engine arguments</li>
+        <li>Capabilities listing for AWS CLI and extensions</li>
+        <li>Execute wrap.tsk prior to remote package process for consistent inclusion</li>
+        <li>SOLUTIONROOT and CDAF.solution as "global" variables (using export) in CI processing (Linux)</li>
+        <li>Apache Tomcat default version 10.x (Linux)</li>
+        <li>Remove specialised PM2 deployment script (Linux)</li>
+        <li>dotnet core default version 8 (Windows)</li>
+        <li>dockerBuild Cleanup default dockerfile (Windows)</li>
+        <li>dockerPush correction for private registries other than Dockerhub (Windows)</li>
+        <li>Only perform clean on orphaned branches</li>
+    </ul>
+    <p>
         2.7.8 : 03-Mar-2024 : CloudFlare Wrangler v3 in CDAF Docker Images
     </p>
     <ul>
@@ -1672,7 +1687,7 @@
     
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.7.8.572</p>
+            <p>&copy; cdaf.io - 2.7.9.573</p>
         </footer>
     </div>
 
