@@ -42,6 +42,16 @@
 
 <p>Breaking changes are indicated by an increment of the minor version number in the release.</p>
 
+<p>2.8.0 : 16-Jul-2024 : Deprecate unsupported docker version labelling</p>
+<ul>
+    <li class="release">
+        <h5>Remove version argument from dockerBuild</h5>
+        <ul>
+            <li>In early versions of docker, applying a lable as a build argument was not supported, however, these versions of the docker CLI have been deprecated, and therefore the workaround for setting the CDAF label has been also deprecated.
+            As a result, the corresponding argument has been removed, causing positional arguments miss align. This has been catered for in features that wrap the build process, such as containerBuild and imageBuild, however solutions calling dockerBuild directly will need to be adjusted.</li>
+        </ul>
+</ul>
+
 <p>2.7.0 : 27-Aug-2023 : Replace executeRetry with EXERTY</p>
 <ul>
     <li class="release">
@@ -295,7 +305,7 @@
 
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.7.9.573</p>
+            <p>&copy; cdaf.io - 2.8.0.574</p>
         </footer>
     </div>
 

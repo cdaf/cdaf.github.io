@@ -85,6 +85,15 @@
      -->
 
     <p>
+        2.8.0 : 16-Jul-2024 : Tech Debt - Deprecate unsupported docker version labelling
+    </p>
+    <ul>
+        <li>Remove version argument from dockerBuild (see breaking changes for details)</li>
+        <li>Consolidate default Dockerfile processing for containerBuild and imageBuild into dockerBuild</li>
+        <li>dockerPush correct context loading for non-dockerhub registries (Linux)</li>
+        <li>sort project directories for build process (Linux)</li>
+    </ul>
+    <p>
         2.7.9 : 11-May-2024 : CDAF_DOCKER_RUN_ARGS for containerBuild engine arguments
     </p>
     <ul>
@@ -1687,7 +1696,7 @@
     
         <hr/>
         <footer>
-            <p>&copy; cdaf.io - 2.7.9.573</p>
+            <p>&copy; cdaf.io - 2.8.0.574</p>
         </footer>
     </div>
 
