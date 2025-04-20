@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Continuous Delivery Automation Framework">
+    <meta name="description" content="Local Tasks">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CDAF :: Concepts &amp; Applied Examples</title>
+    <title>Local Deployment Tasks :: Concepts &amp; Applied Examples</title>
 
     
     <link href="/css/nucleus.css?1745187519" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/10-cdaf/10-getting-started/60-local-tasks/">
     <nav id="sidebar" class="">
 
 
@@ -88,7 +88,7 @@
   
     
     <li data-nav-id="/10-cdaf/" title="CDAF 2.8.1" class="dd-item
-        
+        parent
         
         
         ">
@@ -117,7 +117,7 @@
   
     
     <li data-nav-id="/10-cdaf/10-getting-started/" title="Getting Started" class="dd-item
-        
+        parent
         
         
         ">
@@ -248,7 +248,7 @@
  
   
     
-      <li data-nav-id="/10-cdaf/10-getting-started/60-local-tasks/" title="Local Deployment Tasks" class="dd-item ">
+      <li data-nav-id="/10-cdaf/10-getting-started/60-local-tasks/" title="Local Deployment Tasks" class="dd-item active">
         <a href="/10-cdaf/10-getting-started/60-local-tasks/">
         Local Deployment Tasks
         
@@ -2446,44 +2446,116 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/10-cdaf/'>CDAF 2.8.1</a> > <a href='/10-cdaf/10-getting-started/'>Getting Started</a> > Local Deployment Tasks
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/kb">kb</a>
+
+  <a class="tag-link" href="/tags/12-factors">12-factors</a>
+
+</div>
+
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Local Deployment Tasks
+            </h1>
           
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<p><img src="/images/cdaf-splash.png" alt="alt text" title="Toolset Integration"></p>
-<p>For guidance for installing the framework, configuration options or end-to-end scenarios, see the navigation panel on the left. For alternate download options, see <a href="/10-cdaf/10-getting-started/10-ci">compressed package downloads</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Windows</th>
-<th style="text-align:center">Linux</th>
-<th style="text-align:center">Database Tools</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.sh">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.ps1">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/incrdb.jar">⬇️ Java (JDBC)</a> <a href="/static/app/downloads/Database.exe">⬇️ Windows (SQL Server)</a></td>
-</tr>
-</tbody>
-</table>
+<h2 id="hahahugoshortcode-s0-hbhb">Local Tasks</h2>
+<p>Local Tasks use the same execution engined as build tasks, but at deploy time, rather than build time. Local Tasks are executed in the local context of the host/server. Local Tasks are suited to situations where the agent is installed on the server where tasks are to be performed, or the server that the agent/runner is installed has the tools required to perform tasks on a remote target, i.e. a service offering with a command line interface, such as Kubernetes, Azure or AWS.</p>
+<blockquote>
+<p>The CDAF capabilities with containers cater for more sophisticated uses in the local context and the alternative container tasks execution approach.</p>
+</blockquote>
+<h3 id="example-task">Example Task</h3>
+<p>The default tasks that are run in the local context are <code>tasksRun.tsk</code> and <code>tasksRunLocal.tsk</code>. These are placed in your solution root.</p>
+<h4 id="linux">Linux</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#39;DETOKN ./output/runtime.sh&#39;</span> &gt; .cdaf/tasksRunLocal.tsk
+echo <span style="color:#e6db74">&#39;&#39;</span> &gt;&gt; .cdaf/tasksRunLocal.tsk
+echo <span style="color:#e6db74">&#39;./output/runtime.sh&#39;</span> &gt;&gt; .cdaf/tasksRunLocal.tsk
+</code></pre></div><h4 id="windows">Windows</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Content .\.cdaf\tasksRunLocal.tsk <span style="color:#e6db74">&#39;DETOKN .\output\runtime.ps1&#39;</span>
+Add-Content .\.cdaf\tasksRunLocal.tsk <span style="color:#e6db74">&#39;&#39;</span>
+Add-Content .\.cdaf\tasksRunLocal.tsk <span style="color:#e6db74">&#39;.\output\runtime.ps1&#39;</span>
+</code></pre></div><h3 id="continuous-delivery-emulation-cd">Continuous Delivery Emulation (CD)</h3>
+<p>Execute the CD emulation</p>
+<h4 id="linux-1">Linux</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cdEmulate.sh
+</code></pre></div><h4 id="windows-1">Windows</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">cdEmulate
+</code></pre></div><p>Two steps are performed, first the deployable artefact is detokenised</p>
+<pre tabindex="0"><code>Found %property%, replacing with Local Context
+Found %integer%, replacing with 1
+</code></pre><p>Then executed to verify the environment specific properties.</p>
+<pre tabindex="0"><code>Deploy 1, property set to : Local Context
+</code></pre><p>This now completes an end-to-end example of CDAF, from configuration management, build &amp; package through to deployment. Following are some common additional configuration elements, and the final step covers the increasingly less common pattern of Remote tasks.</p>
+<h3 id="alternate-tasks">Alternate Tasks</h3>
+<p>If you require a variety of tasks, you can explicitly define them, which will ignore any tasksRun.tsk and tasksRunLocal.tsk in your solution root. Please your task files in directory named either <code>custom</code> or <code>customLocal</code> in your solution root.</p>
+<p>To map your configuration to the alternate tasks, you must use the column name <code>deployTaskOverride</code>.</p>
+<pre tabindex="0"><code>context  target  deployTaskOverride     databaseFQDN        dBpassword
+local    TEST    simple-db-deploy.tsk   db1.nonprod.local   $db1Pass
+local    UAT     simple-db-deploy.tsk   $db2Pass
+local    PROD    cluster-db-deploy.tsk  $prodPass
+</code></pre><h2 id="remote-tasks">Remote Tasks</h2>
+<p>Tasks run in a remote context. This approach is less common with the license barriers to installing deployment agents, and the client oriented nature of modern agents, making the need for push deployments less common.</p>
+
+
+<footer class="footline">
 	
-  
-        
-            </div> 
+</footer>
+
         
         </div>
         
@@ -2515,8 +2587,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -2533,6 +2603,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2545,6 +2616,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2626,6 +2700,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2641,6 +2716,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4050,8 +4128,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/10-cdaf/10-getting-started/50-cd/" title="Continuous Delivery"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/10-cdaf/10-getting-started/70-remote-tasks/" title="Remote Deployment Tasks" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4061,19 +4141,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745187520"></script>
-    <script src="/js/jquery.sticky.js?1745187520"></script>
-    <script src="/js/featherlight.min.js?1745187520"></script>
-    <script src="/js/highlight.pack.js?1745187520"></script>
+    <script src="/js/clipboard.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745187519"></script>
+    <script src="/js/jquery.sticky.js?1745187519"></script>
+    <script src="/js/featherlight.min.js?1745187519"></script>
+    <script src="/js/highlight.pack.js?1745187519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745187520"></script>
-    <script src="/js/learn.js?1745187520"></script>
-    <script src="/js/hugo-learn.js?1745187520"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745187519"></script>
+    <script src="/js/learn.js?1745187519"></script>
+    <script src="/js/hugo-learn.js?1745187519"></script>
     
         
-            <script src="/mermaid/mermaid.js?1745187520"></script>
+            <script src="/mermaid/mermaid.js?1745187519"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

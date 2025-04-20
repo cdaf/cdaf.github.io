@@ -4,30 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Continuous Delivery Automation Framework">
+    <meta name="description" content="Orchestrated Component Deploy">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CDAF :: Concepts &amp; Applied Examples</title>
+    <title>Azure DevOps (ADO) Release :: Concepts &amp; Applied Examples</title>
 
     
-    <link href="/css/nucleus.css?1745187519" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745187519" rel="stylesheet">
-    <link href="/css/hybrid.css?1745187519" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745187519" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745187519" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745187519" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745187519" rel="stylesheet">
-    <link href="/css/theme.css?1745187519" rel="stylesheet">
-    <link href="/css/tabs.css?1745187519" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745187519" rel="stylesheet">
+    <link href="/css/nucleus.css?1745187520" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1745187520" rel="stylesheet">
+    <link href="/css/hybrid.css?1745187520" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1745187520" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1745187520" rel="stylesheet">
+    <link href="/css/auto-complete.css?1745187520" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1745187520" rel="stylesheet">
+    <link href="/css/theme.css?1745187520" rel="stylesheet">
+    <link href="/css/tabs.css?1745187520" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1745187520" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1745187519" rel="stylesheet">
+    <link href="/css/theme-green.css?1745187520" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745187519"></script>
+    <script src="/js/jquery-3.3.1.min.js?1745187520"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/80-release-train/10-ado-release/">
     <nav id="sidebar" class="">
 
 
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745187519"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745187519"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1745187520"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1745187520"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745187519"></script>
+<script type="text/javascript" src="/js/search.js?1745187520"></script>
 
     
   </div>
@@ -1371,7 +1371,7 @@
   
     
     <li data-nav-id="/80-release-train/" title="Release Train" class="dd-item
-        
+        parent
         
         
         ">
@@ -1400,8 +1400,8 @@
   
     
     <li data-nav-id="/80-release-train/10-ado-release/" title="Azure DevOps (ADO) Release" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="/80-release-train/10-ado-release/">
@@ -2446,6 +2446,45 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/80-release-train/'>Release Train</a> > Azure DevOps (ADO) Release
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -2457,31 +2496,184 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
+
+	<h2 id="hahahugoshortcode-s0-hbhb">Orchestrated Component Deploy</h2>
+<p>The <em>Application Stack</em> in this example deploys two components, static content and an API.</p>
+
+<div class="mermaid" align="center">
+graph TD
+
+  Agent["🌐"] 
+
+  subgraph vm1["☁️ CloudFlare"]
+    content["Static Content"]
+    API
+  end
+
+  Agent --> content
+  Agent --> API
+
+classDef external fill:lightblue
+class Agent external
+
+classDef dashed stroke-dasharray: 5, 5
+class vm1,vm2,vm3,vm4 dashed
  
-<p><img src="/images/cdaf-splash.png" alt="alt text" title="Toolset Integration"></p>
-<p>For guidance for installing the framework, configuration options or end-to-end scenarios, see the navigation panel on the left. For alternate download options, see <a href="/10-cdaf/10-getting-started/10-ci">compressed package downloads</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Windows</th>
-<th style="text-align:center">Linux</th>
-<th style="text-align:center">Database Tools</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.sh">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.ps1">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/incrdb.jar">⬇️ Java (JDBC)</a> <a href="/static/app/downloads/Database.exe">⬇️ Windows (SQL Server)</a></td>
-</tr>
-</tbody>
-</table>
+classDef dotted stroke-dasharray: 2, 2
+class vm1-pod-1,vm1-pod-2,vm2-pod-1,vm2-pod-2,vm3-pod-1,vm3-pod-2,vm4-pod-1,vm4-pod-2 dotted
+</div>
+
+<p>Each component publishes a self-contained release package to the Azure DevOps (ADO) artefact store. The ADO Release orchestrates these package deployments for each environment, ensuring the complete stack is promoted through each environment with aligned package versions.</p>
+
+<div class="mermaid" align="center">
+
+graph LR
+
+  subgraph static["Static Content"]
+    Sbuild["Build"] -->
+    Stest["Test"] -->
+    Spublish["Publish"]
+  end
+  subgraph API
+    Abuild["Build"] -->
+    Atest["Test"] -->
+    Apublish["Publish"]
+  end
+
+  subgraph Release
+    TEST
+    PROD
+  end
+
+  store[(ADO Store)]
+
+  Apublish --> store
+  Spublish --> store
+  store --> TEST
+  TEST --> PROD
+
+classDef release fill:lightgreen
+class TEST,PROD release
+</div>
+
+
+
+
+
+
+
+
+<ul class="children children-h3">
 	
-  
+
+	
+		
+	
+
+	
+
+	
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/80-release-train/10-ado-release/10-component-ci/" >Component CI</a>
+</h3>
+
+				
+
+				
+					
+<p>Autonomous Component Build &amp; Test</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/80-release-train/10-ado-release/20-component-cd/" >Component CD</a>
+</h3>
+
+				
+
+				
+					
+<p>Autonomous Component Deploy</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/80-release-train/10-ado-release/30-component-publish/" >Component Publish</a>
+</h3>
+
+				
+
+				
+					
+<p>Autonomous Component Publication</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/80-release-train/10-ado-release/40-release/" >Release</a>
+</h3>
+
+				
+
+				
+					
+<p>Full Stack Release</p>
+					
+				
+			
+			
+		
+	
+
+	
+</ul>
+
+
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
         
             </div> 
         
@@ -3344,6 +3536,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3359,6 +3552,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3371,6 +3565,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4050,8 +4247,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/80-release-train/" title="Release Train"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/80-release-train/10-ado-release/10-component-ci/" title="Component CI" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4083,4 +4282,3 @@
 
   </body>
 </html>
-

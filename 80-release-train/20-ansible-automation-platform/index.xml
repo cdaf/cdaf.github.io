@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ansible Automation Platform on Concepts &amp; Applied Examples</title>
+    <link>/80-release-train/20-ansible-automation-platform/</link>
+    <description>Recent content in Ansible Automation Platform on Concepts &amp; Applied Examples</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/80-release-train/20-ansible-automation-platform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Component Pipelines</title>
+      <link>/80-release-train/20-ansible-automation-platform/10-component-pipelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/20-ansible-automation-platform/10-component-pipelines/</guid>
+      <description>Autonomous Development Each development team is responsible to publishing a container image, how they do so it within their control, in this example GitLab and ThoughtWorks Go are used by different teams. The GitLab team are branch based, while the Go team are branch based.
+Both teams are using CDAF docker image build and push helpers.
+productName=Ruby on Rails productName=Springboot solutionName=rails solutionName=spring artifactPrefix=0.3 artifactPrefix=0.2 defaultBranch=main	containerImage=cdaf/linux buildImage=ruby:3.2.2 buildImage=registry.access.redhat.com/ubi9/openjdk-17-runtime CDAF_PUSH_REGISTRY_URL=${CI_REGISTRY} CDAF_PUSH_REGISTRY_URL=https://${NEXUS_REGISTRY} CDAF_PUSH_REGISTRY_TAG=${semver} latest CDAF_PUSH_REGISTRY_TAG=${NEXUS_REGISTRY}/${SOLUTION}:$BUILDNUMBER CDAF_PUSH_REGISTRY_USER=${CI_REGISTRY_USER} CDAF_PUSH_REGISTRY_USER=${NEXUS_REGISTRY_USER} CDAF_PUSH_REGISTRY_TOKEN=${CI_JOB_TOKEN} CDAF_PUSH_REGISTRY_TOKEN=${NEXUS_REGISTRY_PASS} Next, build a release package&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Manifest</title>
+      <link>/80-release-train/20-ansible-automation-platform/30-manifest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/20-ansible-automation-platform/30-manifest/</guid>
+      <description>Application Stack Declaration The key component of the package is the release manifest, this declares the component versions of the solution. The desired state engine (Ansible) will ensure all components for the release align with the declaration in the manifest. These are added to your CDAF.solution file. To see an example component build, see the Java SpringBoot example.
+artifactPrefix=1.2 productName=Ansible Provisioning solutionName=ansible # SMTP Configuration smtp_image=registry.example/mails:0.0.26 smtp_container_name=mail_forwarder smtp_container_ports=25:25 LISTEN_PORT=25 SITE_NAME=onprem # OAuth Verification App rails_image=registry.</description>
+    </item>
+    
+    <item>
+      <title>Ansible Build</title>
+      <link>/80-release-train/20-ansible-automation-platform/40-build-once/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/20-ansible-automation-platform/40-build-once/</guid>
+      <description>Immutable Release Package The key construct for the Release Train is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Ansible dependencies, playbooks are not downloaded at deploytime, instead they are resolved at build time and packaged into an immutable release package. For a consistent way-of-working, the Ansible build process resolves dependencies and validates the playbooks.
+Due to the complexity, a customer build script build.</description>
+    </item>
+    
+    <item>
+      <title>Ansible Deploy</title>
+      <link>/80-release-train/20-ansible-automation-platform/50-deploy-many/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/20-ansible-automation-platform/50-deploy-many/</guid>
+      <description>Detokenisation and Release At deploy time, the solution manifest and environment settings are applied, the following is an extract from the tower.tsk.
+echo &amp;quot;De-tokenise Environment properties prior to loading to Tower&amp;quot; DETOKN roles/apache-reverse-proxy/vars/main.yml echo &amp;quot;Resolve global config, i.e. container image version, then environment specific list names&amp;quot; DETOKN roles/smtp/vars/main.yml DETOKN roles/smtp/vars/main.yml $WORKSPACE/manifest.txt DETOKN roles/rails/vars/main.yml DETOKN roles/rails/vars/main.yml $WORKSPACE/manifest.txt DETOKN roles/spring/vars/main.yml DETOKN roles/spring/vars/main.yml $WORKSPACE/manifest.txt As the Ansible Automation Platform is the intermediary, the declarations need to be moved to intermediary and then the release triggered.</description>
+    </item>
+    
+  </channel>
+</rss>

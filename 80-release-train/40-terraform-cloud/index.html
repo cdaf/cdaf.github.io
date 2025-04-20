@@ -4,30 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Continuous Delivery Automation Framework">
+    <meta name="description" content="Full Stack Release using Terraform Cloud">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CDAF :: Concepts &amp; Applied Examples</title>
+    <title>Terraform Cloud :: Concepts &amp; Applied Examples</title>
 
     
-    <link href="/css/nucleus.css?1745187519" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745187519" rel="stylesheet">
-    <link href="/css/hybrid.css?1745187519" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745187519" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745187519" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745187519" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745187519" rel="stylesheet">
-    <link href="/css/theme.css?1745187519" rel="stylesheet">
-    <link href="/css/tabs.css?1745187519" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745187519" rel="stylesheet">
+    <link href="/css/nucleus.css?1745187520" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1745187520" rel="stylesheet">
+    <link href="/css/hybrid.css?1745187520" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1745187520" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1745187520" rel="stylesheet">
+    <link href="/css/auto-complete.css?1745187520" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1745187520" rel="stylesheet">
+    <link href="/css/theme.css?1745187520" rel="stylesheet">
+    <link href="/css/tabs.css?1745187520" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1745187520" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1745187519" rel="stylesheet">
+    <link href="/css/theme-green.css?1745187520" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745187519"></script>
+    <script src="/js/jquery-3.3.1.min.js?1745187520"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/80-release-train/40-terraform-cloud/">
     <nav id="sidebar" class="">
 
 
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745187519"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745187519"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1745187520"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1745187520"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745187519"></script>
+<script type="text/javascript" src="/js/search.js?1745187520"></script>
 
     
   </div>
@@ -1371,7 +1371,7 @@
   
     
     <li data-nav-id="/80-release-train/" title="Release Train" class="dd-item
-        
+        parent
         
         
         ">
@@ -1739,8 +1739,8 @@
   
     
     <li data-nav-id="/80-release-train/40-terraform-cloud/" title="Terraform Cloud" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="/80-release-train/40-terraform-cloud/">
@@ -2446,6 +2446,45 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/80-release-train/'>Release Train</a> > Terraform Cloud
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -2457,31 +2496,259 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
+
+	<h2 id="hahahugoshortcode-s0-hbhb">Full Stack Release using Terraform Cloud</h2>
+<p>This Release Train extends the <a href="/70-authoritative-release/40-terraform-kubernetes">Terraform Kubernetes</a> <em>authoritative release</em>, combining the application stack deployment with the Infrastructure-as-Code solution.</p>
+
+<div class="mermaid" align="center">
+graph TD
+  client["🌐"]:::transparent
+
+  apim["API Gateway"]
+
+  subgraph k8s["Kubernetes"]
+    subgraph ns1["Dev namespace"]
+      ns1-ingress["ingress"]
+      subgraph ns1-pod-1["Pod"]
+        ns1-con-a["container"]
+      end
+      subgraph ns1-pod-2["Pod"]
+        ns1-con-b["container"]
+        ns1-con-c["container"]
+      end
+    end
+  end
+
+  client -->
+  apim -->
+  ns1-ingress --> ns1-con-a
+  ns1-ingress --> 
+  ns1-con-b --> ns1-con-c
+
+classDef external fill:lightblue
+class client external
  
-<p><img src="/images/cdaf-splash.png" alt="alt text" title="Toolset Integration"></p>
-<p>For guidance for installing the framework, configuration options or end-to-end scenarios, see the navigation panel on the left. For alternate download options, see <a href="/10-cdaf/10-getting-started/10-ci">compressed package downloads</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Windows</th>
-<th style="text-align:center">Linux</th>
-<th style="text-align:center">Database Tools</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.sh">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.ps1">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/incrdb.jar">⬇️ Java (JDBC)</a> <a href="/static/app/downloads/Database.exe">⬇️ Windows (SQL Server)</a></td>
-</tr>
-</tbody>
-</table>
+classDef dashed stroke-dasharray: 5, 5
+class ns1,ns2,ns3 dashed
+ 
+classDef dotted stroke-dasharray: 2, 2
+class ns1-pod-1,ns1-pod-2,ns2-pod-1,ns2-pod-2,ns3-pod-1,ns3-pod-2 dotted
+</div>
+
+<p>Each component publishes a self-contained release package to the Azure DevOps (ADO) artefact store. The ADO Release orchestrates these package deployments for each environment, ensuring the complete stack is promoted through each environment with aligned package versions.</p>
+<p>
+<div class="mermaid" align="center">
+
+graph LR
+
+  subgraph Components
+    Sbuild["Build"] -->
+    Stest["Test"] -->
+    Spublish["Publish"]
+  end
+  subgraph Infrastructure
+    Abuild["Build"] -->
+    Atest["Test"] -->
+    Apublish["Publish"]
+  end
+
+  subgraph Release
+    TEST
+    PROD
+  end
+
+  store[(ADO Store)]
+
+  Apublish --> store
+  Spublish --> store
+  store --> TEST
+  TEST --> PROD
+
+classDef release fill:lightgreen
+class TEST,PROD release
+</div>
+
+
+
+
+
+
+
+
+<ul class="children children-h3">
 	
-  
+
+	
+		
+	
+
+	
+
+	
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/80-release-train/40-terraform-cloud/10-manifest/" >Manifest</a>
+</h3>
+
+				
+
+				
+					
+<p>Declare Container Deployment as Terraform Package</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/80-release-train/40-terraform-cloud/20-build-once/" >Terraform Build</a>
+</h3>
+
+				
+
+				
+					
+<p>Immutable Release Package</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/80-release-train/40-terraform-cloud/40-configuration-management/" >Configuration Management</a>
+</h3>
+
+				
+
+				
+					
+<p>Tokens and Properties</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/80-release-train/40-terraform-cloud/50-release/" >Release</a>
+</h3>
+
+				
+
+				
+					
+<p>Release Construction</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/80-release-train/40-terraform-cloud/60-intermediary/" >Intermediary</a>
+</h3>
+
+				
+
+				
+					
+<p>Terraform Cloud intermediary</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/80-release-train/40-terraform-cloud/70-deploy/" >Deploy</a>
+</h3>
+
+				
+
+				
+					
+<p>Deploy-time Detokenisation</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/80-release-train/40-terraform-cloud/80-feedback-loop/" >Feedback Loop</a>
+</h3>
+
+				
+
+				
+					
+<p>Realising the Feedback Loop</p>
+					
+				
+			
+			
+		
+	
+
+	
+</ul>
+
+</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
         
             </div> 
         
@@ -3344,6 +3611,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3359,85 +3627,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -3575,6 +3766,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -3595,6 +3802,74 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -4050,8 +4325,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/80-release-train/30-octopus-deploy/60-business-visibility/" title="Business Visibility"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/80-release-train/40-terraform-cloud/10-manifest/" title="Manifest" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4083,4 +4360,3 @@
 
   </body>
 </html>
-

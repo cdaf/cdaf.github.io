@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Continuous Delivery Automation Framework">
+    <meta name="description" content="Environment Variables">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CDAF :: Concepts &amp; Applied Examples</title>
+    <title>Environment Variables :: Concepts &amp; Applied Examples</title>
 
     
     <link href="/css/nucleus.css?1745187519" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/90-reference/20-feature-configuration/30-environment-variables/">
     <nav id="sidebar" class="">
 
 
@@ -1929,7 +1929,7 @@
   
     
     <li data-nav-id="/90-reference/" title="Reference Guide" class="dd-item
-        
+        parent
         
         
         ">
@@ -2036,7 +2036,7 @@
   
     
     <li data-nav-id="/90-reference/20-feature-configuration/" title="Feature Configuration" class="dd-item
-        
+        parent
         
         
         ">
@@ -2104,7 +2104,7 @@
  
   
     
-      <li data-nav-id="/90-reference/20-feature-configuration/30-environment-variables/" title="Environment Variables" class="dd-item ">
+      <li data-nav-id="/90-reference/20-feature-configuration/30-environment-variables/" title="Environment Variables" class="dd-item active">
         <a href="/90-reference/20-feature-configuration/30-environment-variables/">
         Environment Variables
         
@@ -2446,44 +2446,253 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/90-reference/'>Reference Guide</a> > <a href='/90-reference/20-feature-configuration/'>Feature Configuration</a> > Environment Variables
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/kb">kb</a>
+
+  <a class="tag-link" href="/tags/12-factors">12-factors</a>
+
+</div>
+
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Environment Variables
+            </h1>
           
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<p><img src="/images/cdaf-splash.png" alt="alt text" title="Toolset Integration"></p>
-<p>For guidance for installing the framework, configuration options or end-to-end scenarios, see the navigation panel on the left. For alternate download options, see <a href="/10-cdaf/10-getting-started/10-ci">compressed package downloads</a>.</p>
+<h2 id="hahahugoshortcode-s0-hbhb">Environment Variables</h2>
+<p>Due to inconsistencies between Windows and Linux handling of environment variables, these have been divided between environment variables that are set before calling an entry script to alter the behaviour of CDAF, and environment variables that are set within bash scripts to make them globally available.</p>
+<h3 id="control-variables">Control Variables</h3>
+<p>The following environment variables are available to control the behaviour of CDAF</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Windows</th>
-<th style="text-align:center">Linux</th>
-<th style="text-align:center">Database Tools</th>
+<th>Variable</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.sh">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.ps1">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/incrdb.jar">⬇️ Java (JDBC)</a> <a href="/static/app/downloads/Database.exe">⬇️ Windows (SQL Server)</a></td>
+<td>CDAF_BRANCH_NAME</td>
+<td>Used by entry.ps1/entry.sh <!-- raw HTML omitted -->Override the branch name, primarily to test CI behaviour for non-default branch, i.e. main</td>
+</tr>
+<tr>
+<td>CDAF_BUILD_ENV</td>
+<td>Define the build environment, if not set, defaults will be used, see <a href="/90-reference/20-feature-configuration/20-execution-engine">execution engine Build-time Variables</a> for details</td>
+</tr>
+<tr>
+<td>CDAF_DOCKER_REQUIRED</td>
+<td><a href="/90-reference/30-docker-features/20-container-build">containerBuild</a> will attempt to start Docker if not running and will fail if it cannot, rather than falling back to native execution</td>
+</tr>
+<tr>
+<td>CDAF_DOCKER_RUN_ARGS</td>
+<td><a href="/90-reference/30-docker-features/20-container-build">containerBuild</a> additional run arguments, e.g. &lsquo;&ndash;memory=2048m&rsquo;</td>
+</tr>
+<tr>
+<td>CDAF_DELIVERY</td>
+<td>The default target environment for cdEmulate and entry, defaults are <!-- raw HTML omitted -->LINUX, or<!-- raw HTML omitted --> WINDOWS for on-domain or WORKGROUP for off-domain</td>
+</tr>
+<tr>
+<td>CDAF_ERROR_DIAG</td>
+<td>Dependency injected custom call if error occurs in <a href="/90-reference/20-feature-configuration/20-execution-engine">Execution Engine</a></td>
+</tr>
+<tr>
+<td>CDAF_HOME_MOUNT</td>
+<td>to disable volume mount for containerDeploy set to &lsquo;no&rsquo;, note: this can be overridden a solution level, using CDAF_HOME_MOUNT as property</td>
+</tr>
+<tr>
+<td>CDAF_IGNORE_WARNING</td>
+<td>If messages are logged to standard error, the <a href="/90-reference/20-feature-configuration/20-execution-engine">Execution Engine</a> will log but not halt, however is this is set to yes, processing will halt <!-- raw HTML omitted -->yes or no, default is yes</td>
+</tr>
+<tr>
+<td>CDAF_OVERRIDE_TOKEN</td>
+<td>Default marker for DETOKN or PROPLD in <a href="/90-reference/20-feature-configuration/20-execution-engine">Execution Engine</a> is %, i.e. %key_name%, the markers can be changed using this environment variable</td>
+</tr>
+<tr>
+<td>CDAF_SKIP_CONTAINER_BUILD</td>
+<td><a href="/90-reference/30-docker-features/20-container-build">containerBuild</a> will not be performed if this environment variable is set to any value</td>
+</tr>
+<tr>
+<td>CONTAINER_IMAGE</td>
+<td>Override containerImage in <a href="/90-reference/30-docker-features/20-container-build">containerBuild</a> &amp; <a href="/90-reference/30-docker-features/30-image-build">imageBuild</a></td>
+</tr>
+<tr>
+<td>CDAF_CB_{variable_name}</td>
+<td>Prefix used in <a href="/90-reference/30-docker-features/20-container-build">containerBuild</a> to supply local variables into the build time container</td>
+</tr>
+<tr>
+<td>CDAF_CD_{variable_name}</td>
+<td>Prefix used in <a href="/90-reference/30-docker-features/40-container-deploy">containerDeploy</a> to supply local variables into the deploy time container</td>
+</tr>
+<tr>
+<td>CDAF_IB_{variable_name}</td>
+<td>Prefix used in <a href="/90-reference/30-docker-features/30-image-build">containerBuild</a> to supply during image construction</td>
 </tr>
 </tbody>
 </table>
+<h3 id="global-variables">Global Variables</h3>
+<p>These variables are available to child scripts, custom scripts and <a href="/90-reference/20-feature-configuration/20-execution-engine">task execution engine</a>, see also Build-time Variables.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDAF_CORE</td>
+<td>CDAF helper script path</td>
+</tr>
+<tr>
+<td>WORKSPACE_ROOT</td>
+<td>Static for solution, WORKSPACE will change for project (build) or target (deploy)</td>
+</tr>
+</tbody>
+</table>
+<p>See also <a href="/90-reference/20-feature-configuration/20-execution-engine">Build-time Variables</a>.</p>
+<h3 id="image-registry">Image Registry</h3>
+<p>These override <a href="/90-reference/20-feature-configuration/40-solution-properties">Solution Properties</a> properties. They are used to push the image created by dockerBuild to pull a base image from a private registry.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDAF_SKIP_PULL</td>
+<td>Skip updating of image</td>
+</tr>
+<tr>
+<td>CDAF_PULL_REGISTRY_URL</td>
+<td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+</tr>
+<tr>
+<td>CDAF_PULL_REGISTRY_USER</td>
+<td>Registry user, example registryuser (if not set, default is &lsquo;.')</td>
+</tr>
+<tr>
+<td>CDAF_PULL_REGISTRY_TOKEN</td>
+<td>Registry token, example xyzx9234sxsrwcqw34</td>
+</tr>
+</tbody>
+</table>
+<p>These override <a href="/90-reference/20-feature-configuration/40-solution-properties">Solution Properties</a> properties. They are used to push the image created by imageBuild to push to a private registry.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDAF_REGISTRY_URL</td>
+<td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+</tr>
+<tr>
+<td>CDAF_REGISTRY_TAG</td>
+<td>Image tag(s), can being single value <code>latest</code> or list <code>latest ${BUILDNUMBER}</code></td>
+</tr>
+<tr>
+<td>CDAF_REGISTRY_USER</td>
+<td>Registry user, example registryuser (if not set, default is &lsquo;.')</td>
+</tr>
+<tr>
+<td>CDAF_REGISTRY_TOKEN</td>
+<td>Registry token, example xyzx9234sxsrwcqw34</td>
+</tr>
+</tbody>
+</table>
+<p>These override <a href="/90-reference/20-feature-configuration/40-solution-properties">Solution Properties</a> properties. They are used to push the image created by dockerPush to push to a private registry.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDAF_PUSH_REGISTRY_URL</td>
+<td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+</tr>
+<tr>
+<td>CDAF_PUSH_REGISTRY_TAG</td>
+<td>Image tag(s), can being single value <code>latest</code> or list <code>latest ${BUILDNUMBER}</code> (default is <code>latest</code>)</td>
+</tr>
+<tr>
+<td>CDAF_PUSH_REGISTRY_USER</td>
+<td>Registry user, example registryuser (if not set, default is &lsquo;.')</td>
+</tr>
+<tr>
+<td>CDAF_PUSH_REGISTRY_TOKEN</td>
+<td>Registry token, example xyzx9234sxsrwcqw34</td>
+</tr>
+</tbody>
+</table>
+
+
+<footer class="footline">
 	
-  
-        
-            </div> 
+</footer>
+
         
         </div>
         
@@ -3714,6 +3923,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3729,53 +3939,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -3817,6 +3982,42 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -3837,6 +4038,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -4050,8 +4271,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/90-reference/20-feature-configuration/20-execution-engine/" title="Execution Engine"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/90-reference/20-feature-configuration/40-solution-properties/" title="Solution Properties" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4061,19 +4284,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745187520"></script>
-    <script src="/js/jquery.sticky.js?1745187520"></script>
-    <script src="/js/featherlight.min.js?1745187520"></script>
-    <script src="/js/highlight.pack.js?1745187520"></script>
+    <script src="/js/clipboard.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745187519"></script>
+    <script src="/js/jquery.sticky.js?1745187519"></script>
+    <script src="/js/featherlight.min.js?1745187519"></script>
+    <script src="/js/highlight.pack.js?1745187519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745187520"></script>
-    <script src="/js/learn.js?1745187520"></script>
-    <script src="/js/hugo-learn.js?1745187520"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745187519"></script>
+    <script src="/js/learn.js?1745187519"></script>
+    <script src="/js/hugo-learn.js?1745187519"></script>
     
         
-            <script src="/mermaid/mermaid.js?1745187520"></script>
+            <script src="/mermaid/mermaid.js?1745187519"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

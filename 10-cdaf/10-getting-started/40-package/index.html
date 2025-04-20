@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Continuous Delivery Automation Framework">
+    <meta name="description" content="Build-Once/Deploy-Many">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CDAF :: Concepts &amp; Applied Examples</title>
+    <title>Package :: Concepts &amp; Applied Examples</title>
 
     
     <link href="/css/nucleus.css?1745187519" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/10-cdaf/10-getting-started/40-package/">
     <nav id="sidebar" class="">
 
 
@@ -88,7 +88,7 @@
   
     
     <li data-nav-id="/10-cdaf/" title="CDAF 2.8.1" class="dd-item
-        
+        parent
         
         
         ">
@@ -117,7 +117,7 @@
   
     
     <li data-nav-id="/10-cdaf/10-getting-started/" title="Getting Started" class="dd-item
-        
+        parent
         
         
         ">
@@ -206,7 +206,7 @@
  
   
     
-      <li data-nav-id="/10-cdaf/10-getting-started/40-package/" title="Package" class="dd-item ">
+      <li data-nav-id="/10-cdaf/10-getting-started/40-package/" title="Package" class="dd-item active">
         <a href="/10-cdaf/10-getting-started/40-package/">
         Package
         
@@ -2446,44 +2446,124 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/10-cdaf/'>CDAF 2.8.1</a> > <a href='/10-cdaf/10-getting-started/'>Getting Started</a> > Package
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/kb">kb</a>
+
+  <a class="tag-link" href="/tags/12-factors">12-factors</a>
+
+</div>
+
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Package
+            </h1>
           
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<p><img src="/images/cdaf-splash.png" alt="alt text" title="Toolset Integration"></p>
-<p>For guidance for installing the framework, configuration options or end-to-end scenarios, see the navigation panel on the left. For alternate download options, see <a href="/10-cdaf/10-getting-started/10-ci">compressed package downloads</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Windows</th>
-<th style="text-align:center">Linux</th>
-<th style="text-align:center">Database Tools</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.sh">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.ps1">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/incrdb.jar">⬇️ Java (JDBC)</a> <a href="/static/app/downloads/Database.exe">⬇️ Windows (SQL Server)</a></td>
-</tr>
-</tbody>
-</table>
+<h2 id="hahahugoshortcode-s0-hbhb">Build-Once/Deploy-Many</h2>
+<p>An objective of Continuous Delivery is to have a predictable, repeatable, deployment process. A fundamental principle of CDAF to achieve this producing an immutable release package. This decouples the deployment process from the source management process. The release package is a self-contained deployment asset, and should be executable anywhere, i.e. on the automation developers desktop, within the pipeline or even manually file transferred to a remote server.</p>
+<h3 id="artefact-retention">Artefact Retention</h3>
+<p>In the Configuration Management step, a default release package was created which contained properties files. The following step defines the solution specific artefacts which need to be available at deploy time. These are typically compiled binaries, but can be any set of files and/or directories.</p>
+<p>Retain the output from the previous build task.</p>
+<h4 id="linux">Linux</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#39;output&#39;</span> &gt; .cdaf/storeForLocal
+</code></pre></div><h4 id="windows">Windows</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-Content .\.cdaf\storeForLocal <span style="color:#e6db74">&#39;output&#39;</span>
+</code></pre></div><h3 id="build--deploy">Build &amp; Deploy</h3>
+<p>Use the continuous deployment emulation entry point.</p>
+<ul>
+<li><strong>cdEmulate</strong> : Executes <strong>ci</strong> and then <strong>cd</strong>, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT</li>
+</ul>
+<h4 id="linux-1">Linux</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cdEmulate.sh
+</code></pre></div><h4 id="windows-1">windows</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">cdEmulate
+</code></pre></div><p>Inspect the directory TasksLocal, and will now contain the output directory produced by the build task. Test the artefact</p>
+<h4 id="linux-2">Linux</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./TasksLocal/output/runtime.sh
+</code></pre></div><h4 id="windows-2">windows</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">.\TasksLocal\output\runtime.ps1
+</code></pre></div><p>This should output the following:</p>
+<p>Deploy %integer%, property set to : %property%</p>
+<h3 id="other-file-locations">Other File Locations</h3>
+<p>There are three artefact definitions file names, depending on context, local, remote or both:</p>
+<ul>
+<li><code>storeFor</code></li>
+<li><code>storeForLocal</code></li>
+<li><code>storeForRemote</code></li>
+</ul>
+<p>Other directories within your solution directory which will also be automatically included in the root of your deployment directory. Based on the suffix these will be placed in a local context, remote context or both. See the following sections for how these contexts differ.</p>
+<ul>
+<li><code>crypt</code></li>
+<li><code>cryptLocal</code></li>
+<li><code>cryptRemote</code></li>
+<li><code>custom</code></li>
+<li><code>customLocal</code></li>
+<li><code>customRemote</code></li>
+</ul>
+<p>An explanation of the local and container extensions will be explained in following sections.</p>
+<h2 id="continuous-deliverydeployment">Continuous Delivery/Deployment</h2>
+<p>Deploy the artefact using the created package, along with Configuration Management.</p>
+
+
+<footer class="footline">
 	
-  
-        
-            </div> 
+</footer>
+
         
         </div>
         
@@ -2515,8 +2595,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -2533,6 +2611,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2545,6 +2624,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2594,6 +2676,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2609,6 +2692,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4050,8 +4136,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/10-cdaf/10-getting-started/30-ci/" title="Build"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/10-cdaf/10-getting-started/50-cd/" title="Continuous Delivery" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4061,19 +4149,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745187520"></script>
-    <script src="/js/jquery.sticky.js?1745187520"></script>
-    <script src="/js/featherlight.min.js?1745187520"></script>
-    <script src="/js/highlight.pack.js?1745187520"></script>
+    <script src="/js/clipboard.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745187519"></script>
+    <script src="/js/jquery.sticky.js?1745187519"></script>
+    <script src="/js/featherlight.min.js?1745187519"></script>
+    <script src="/js/highlight.pack.js?1745187519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745187520"></script>
-    <script src="/js/learn.js?1745187520"></script>
-    <script src="/js/hugo-learn.js?1745187520"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745187519"></script>
+    <script src="/js/learn.js?1745187519"></script>
+    <script src="/js/hugo-learn.js?1745187519"></script>
     
         
-            <script src="/mermaid/mermaid.js?1745187520"></script>
+            <script src="/mermaid/mermaid.js?1745187519"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

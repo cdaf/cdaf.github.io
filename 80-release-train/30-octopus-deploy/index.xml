@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Octopus Deploy on Concepts &amp; Applied Examples</title>
+    <link>/80-release-train/30-octopus-deploy/</link>
+    <description>Recent content in Octopus Deploy on Concepts &amp; Applied Examples</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/80-release-train/30-octopus-deploy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Octopus Pane of Glass</title>
+      <link>/80-release-train/30-octopus-deploy/10-manifest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/30-octopus-deploy/10-manifest/</guid>
+      <description>Overview of Stack Components As an intermediatry, Octopus provides release gating, orchestration and a overview of the stack components, and what versions have been promoted to which environments.
+Parent Project The parent project does not perform any deployment activity itself, it serves as the orchestrator of the child projects, providing gating and sequencing.
+Child Projects The child project, use the same template process, but each has the release packages that have been build to perform their technology specific deployment process.</description>
+    </item>
+    
+    <item>
+      <title>Decoupled Deployment</title>
+      <link>/80-release-train/30-octopus-deploy/20-deploy-many/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/30-octopus-deploy/20-deploy-many/</guid>
+      <description>Orchestrated Release The core principle of all the examples in this material is the production of a self-contained, immutable release package. This provides loose coupling with tool chains and re-usability for development environments (see Realising the Feedback Loop).
+While Octopus provides a wide range of deployment mechanisms, as a release orchestrator, each child project has the same process, executing the release package for each component against the target environment.
+Delivery Lifecycle Octopus orchestration is called a lifecycle, which is a re-usable pattern.</description>
+    </item>
+    
+    <item>
+      <title>Business Visibility</title>
+      <link>/80-release-train/30-octopus-deploy/60-business-visibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/30-octopus-deploy/60-business-visibility/</guid>
+      <description>Non-techincal Release View After each environment deployment is successful, a Confluence page (one per component/environment) is updated, capturing release details. This provides visibility outside of the toolchain, which is easier to access by business users such as test managers and product owners. Using the content include macro, these pages can be merged.</description>
+    </item>
+    
+  </channel>
+</rss>

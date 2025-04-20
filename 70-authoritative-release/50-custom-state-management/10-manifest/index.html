@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Continuous Delivery Automation Framework">
+    <meta name="description" content="Declare Anypoint Components as Package">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CDAF :: Concepts &amp; Applied Examples</title>
+    <title>Manifest :: Concepts &amp; Applied Examples</title>
 
     
     <link href="/css/nucleus.css?1745187519" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/70-authoritative-release/50-custom-state-management/10-manifest/">
     <nav id="sidebar" class="">
 
 
@@ -775,7 +775,7 @@
   
     
     <li data-nav-id="/70-authoritative-release/" title="Declarative Release" class="dd-item
-        
+        parent
         
         
         ">
@@ -1244,7 +1244,7 @@
   
     
     <li data-nav-id="/70-authoritative-release/50-custom-state-management/" title="Custom State Management" class="dd-item
-        
+        parent
         
         
         ">
@@ -1270,7 +1270,7 @@
  
   
     
-      <li data-nav-id="/70-authoritative-release/50-custom-state-management/10-manifest/" title="Manifest" class="dd-item ">
+      <li data-nav-id="/70-authoritative-release/50-custom-state-management/10-manifest/" title="Manifest" class="dd-item active">
         <a href="/70-authoritative-release/50-custom-state-management/10-manifest/">
         Manifest
         
@@ -2446,44 +2446,91 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/70-authoritative-release/'>Declarative Release</a> > <a href='/70-authoritative-release/50-custom-state-management/'>Custom State Management</a> > Manifest
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/kb">kb</a>
+
+  <a class="tag-link" href="/tags/12-factors">12-factors</a>
+
+</div>
+
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Manifest
+            </h1>
           
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<p><img src="/images/cdaf-splash.png" alt="alt text" title="Toolset Integration"></p>
-<p>For guidance for installing the framework, configuration options or end-to-end scenarios, see the navigation panel on the left. For alternate download options, see <a href="/10-cdaf/10-getting-started/10-ci">compressed package downloads</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Windows</th>
-<th style="text-align:center">Linux</th>
-<th style="text-align:center">Database Tools</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.sh">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.ps1">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/incrdb.jar">⬇️ Java (JDBC)</a> <a href="/static/app/downloads/Database.exe">⬇️ Windows (SQL Server)</a></td>
-</tr>
-</tbody>
-</table>
+<h2 id="hahahugoshortcode-s0-hbhb">Declare Anypoint Components as Package</h2>
+<p>The proprietary Mulesoft Anypoint Platform artefact store is called <em>Exchange</em>, and each artefact is called an <em>Asset</em>. Each <em>asset</em> is pushed to the <em>exchange</em> from the <em>autonomous development</em> pipelines. In the examples below, these are GitLab for Windows and Jenkins for Linux. Both use platform independent Maven deploy to push the asset.</p>
+<p><img src="/images/custom-asset-push.png" alt="alt text" title="Autonomous Development Asset Push"></p>
+<p>The release declaration is in the form of a manifest, specifying each desired component and it&rsquo;s version.</p>
+<pre tabindex="0"><code>API                        Runtime
+sprint-zero-api=1.0.1      sprint-zero-app=1.2.195
+patient-summary-api=1.2.0  patient-summary-app=1.4.114
+</code></pre><p>While the stack construction is the same in all environments, unique settings for each environment are defined in configuration management files, e.g. <code>properties.cm</code>. The properties management is covered in more detail in later sections.</p>
+<pre tabindex="0"><code>context    target  deployTaskOverride  fqdn                   page_id    hash_id    page_title                 anypoint_env  property_suffix
+container  STAGE   promote.tsk         example.atlassian.net  149094402  256409896  &quot;Staging Environment&quot;      TEST          tst
+container  PROD    promote.tsk         example.atlassian.net  149225473  256672078  &quot;Production Environment&quot;   PROD          prd
+</code></pre>
+
+<footer class="footline">
 	
-  
-        
-            </div> 
+</footer>
+
         
         </div>
         
@@ -2956,6 +3003,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2970,6 +3018,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3261,6 +3312,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3273,6 +3325,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -3289,6 +3342,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4050,8 +4106,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/70-authoritative-release/50-custom-state-management/" title="Custom State Management"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/70-authoritative-release/50-custom-state-management/20-build-once/" title="Custom State Build" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4061,19 +4119,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745187520"></script>
-    <script src="/js/jquery.sticky.js?1745187520"></script>
-    <script src="/js/featherlight.min.js?1745187520"></script>
-    <script src="/js/highlight.pack.js?1745187520"></script>
+    <script src="/js/clipboard.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745187519"></script>
+    <script src="/js/jquery.sticky.js?1745187519"></script>
+    <script src="/js/featherlight.min.js?1745187519"></script>
+    <script src="/js/highlight.pack.js?1745187519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745187520"></script>
-    <script src="/js/learn.js?1745187520"></script>
-    <script src="/js/hugo-learn.js?1745187520"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745187519"></script>
+    <script src="/js/learn.js?1745187519"></script>
+    <script src="/js/hugo-learn.js?1745187519"></script>
     
         
-            <script src="/mermaid/mermaid.js?1745187520"></script>
+            <script src="/mermaid/mermaid.js?1745187519"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

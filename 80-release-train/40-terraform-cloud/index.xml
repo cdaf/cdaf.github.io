@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terraform Cloud on Concepts &amp; Applied Examples</title>
+    <link>/80-release-train/40-terraform-cloud/</link>
+    <description>Recent content in Terraform Cloud on Concepts &amp; Applied Examples</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/80-release-train/40-terraform-cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manifest</title>
+      <link>/80-release-train/40-terraform-cloud/10-manifest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/40-terraform-cloud/10-manifest/</guid>
+      <description>Declare Container Deployment as Terraform Package The key component of the package is the release manifest, this declares the component versions of the solution. The desired state engine (Terraform) will ensure all components for the release align with the declaration in the manifest. These are added to your CDAF.solution file.
+solutionName=kat artifactPrefix=0.4 ui_image=cdaf/cdaf:572 api_image=cdaf/kestrel:ubuntu-22.04-14 fast_image=cdaf/fastapi:50 While the stack construction is the same in all environments, unique settings for each environment are defined in configuration management files, e.</description>
+    </item>
+    
+    <item>
+      <title>Terraform Build</title>
+      <link>/80-release-train/40-terraform-cloud/20-build-once/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/40-terraform-cloud/20-build-once/</guid>
+      <description>Immutable Release Package The key construct for the Authoritative Release is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Terraform dependencies, modules are not downloaded at deploytime, instead they are resolved at build time and packaged into an immutable release package. For a consistent way-of-working, the Terraform build process resolves and validates dependencies.
+Build-time Module Resolution Most Terraform module resolution approaches are to pull from source control (Git) or registry at deploy-time, which can require additional credential management, risks unexpected module changes (if tags are used) and potential network connectivity issues.</description>
+    </item>
+    
+    <item>
+      <title>Configuration Management</title>
+      <link>/80-release-train/40-terraform-cloud/40-configuration-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/40-terraform-cloud/40-configuration-management/</guid>
+      <description>Tokens and Properties To avoid a configuration file for each environment, and the inevitable drift between those files, a single, tokenised, definition is used.
+variable &amp;quot;aks_work_space&amp;quot; { default = &amp;quot;%aks_work_space%&amp;quot; } variable &amp;quot;name_space&amp;quot; { default = &amp;quot;%name_space%&amp;quot; } variable &amp;quot;REGISTRY_KEY&amp;quot; { default = &amp;quot;@REGISTRY_KEY@&amp;quot; } variable &amp;quot;REGISTRY_KEY_SHA { default = &amp;quot;@REGISTRY_KEY_SHA@&amp;quot; } To De-tokenise this definition at deploy time, name/value pair files are used. This allows the settings to be decoupled from the complexity of configuration file format.</description>
+    </item>
+    
+    <item>
+      <title>Release</title>
+      <link>/80-release-train/40-terraform-cloud/50-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/40-terraform-cloud/50-release/</guid>
+      <description>Release Construction The release combines the Infrastructure-as-Code (IaC) Continuous Integration (CI) output with the application components from Terraform Authoritative Release. The application authoritative release package (in green below) declares the image versions to be deployed to the infrastructure provided by the IaC release package.
+graph LR Key[&#34;LegendBlue - IaC &amp; CMGreen - Application Stack&#34;] subgraph ado[&#34;Azure DevOps&#34;] git[(Git)] build-artefact[(Build)] iac[&#34;release.ps1&#34;] package-artefact[(Artifacts)] app[&#34;release.ps1&#34;] end subgraph az[&#34;Azure&#34;] qa pp pr end registry[(Docker Registry)] git --CI-- build-artefact build-artefact --CD-- iac package-artefact --CD-- app registry -.</description>
+    </item>
+    
+    <item>
+      <title>Intermediary</title>
+      <link>/80-release-train/40-terraform-cloud/60-intermediary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/40-terraform-cloud/60-intermediary/</guid>
+      <description>Terraform Cloud intermediary The deployment process itself is processed via the Terraform Cloud intermediary, which decouples the configuration management, and provides state storage and execution processing.
+.
+An important aspect of the intermediaries function is to store dynamic outputs, for example, the Infrastructure-as-Code solution provides a Kubernetes cluster, the dynamically created configuration is stored as outputs.
+.
+The outputs are made available to the subsequent application deployment process.
+.
+The Application components consume the state information that has been shared</description>
+    </item>
+    
+    <item>
+      <title>Deploy</title>
+      <link>/80-release-train/40-terraform-cloud/70-deploy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/40-terraform-cloud/70-deploy/</guid>
+      <description>Deploy-time Detokenisation The configuration management is consumed at deploy time.
+Deployment Mechanics To support the build-once/deploy-many model, the environment specific values are injected and then deployed for the release. Note that the release is immutable, and any change to any component will require a new release to be created, eliminating cherry picking. The tasksRun.tsk performs multiple levels of detokenisation, the first is for environment specific settings, the second applies any solution level declarations, then cluster, groups/regions and non-secret elements of the credentials</description>
+    </item>
+    
+    <item>
+      <title>Feedback Loop</title>
+      <link>/80-release-train/40-terraform-cloud/80-feedback-loop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/80-release-train/40-terraform-cloud/80-feedback-loop/</guid>
+      <description>Realising the Feedback Loop Based on Realising the Feedback Loop, once the package has been promoted to it&amp;rsquo;s last stage, it is then pushed to the artefact store
+In this example Azure DevOps (ADO) using the az artifacts extension, see the example push.tsk.
+Write-Host &amp;quot;[$TASK_NAME] Verify deployable artefact is available`n&amp;quot; $package_name = (Get-Item &amp;quot;$(PWD)\release.ps1&amp;quot; -ErrorAction SilentlyContinue).FullName if ( ! ( $package_name )) { ERRMSG &amp;quot;[PACKAGE_NOT_FOUND] $(PWD)\release.ps1 not found!&amp;quot; 9994 } Write-Host &amp;quot;[$TASK_NAME] Verify Azure DevOps PAT is set correctly`n&amp;quot; VARCHK push.</description>
+    </item>
+    
+  </channel>
+</rss>

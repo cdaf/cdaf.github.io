@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Continuous Delivery Automation Framework">
+    <meta name="description" content="Execution Engine">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CDAF :: Concepts &amp; Applied Examples</title>
+    <title>Execution Engine :: Concepts &amp; Applied Examples</title>
 
     
     <link href="/css/nucleus.css?1745187519" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/90-reference/20-feature-configuration/20-execution-engine/">
     <nav id="sidebar" class="">
 
 
@@ -1929,7 +1929,7 @@
   
     
     <li data-nav-id="/90-reference/" title="Reference Guide" class="dd-item
-        
+        parent
         
         
         ">
@@ -2036,7 +2036,7 @@
   
     
     <li data-nav-id="/90-reference/20-feature-configuration/" title="Feature Configuration" class="dd-item
-        
+        parent
         
         
         ">
@@ -2083,7 +2083,7 @@
  
   
     
-      <li data-nav-id="/90-reference/20-feature-configuration/20-execution-engine/" title="Execution Engine" class="dd-item ">
+      <li data-nav-id="/90-reference/20-feature-configuration/20-execution-engine/" title="Execution Engine" class="dd-item active">
         <a href="/90-reference/20-feature-configuration/20-execution-engine/">
         Execution Engine
         
@@ -2446,44 +2446,387 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/90-reference/'>Reference Guide</a> > <a href='/90-reference/20-feature-configuration/'>Feature Configuration</a> > Execution Engine
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/kb">kb</a>
+
+  <a class="tag-link" href="/tags/12-factors">12-factors</a>
+
+</div>
+
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Execution Engine
+            </h1>
           
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<p><img src="/images/cdaf-splash.png" alt="alt text" title="Toolset Integration"></p>
-<p>For guidance for installing the framework, configuration options or end-to-end scenarios, see the navigation panel on the left. For alternate download options, see <a href="/10-cdaf/10-getting-started/10-ci">compressed package downloads</a>.</p>
+<h2 id="hahahugoshortcode-s0-hbhb">Execution Engine</h2>
+<p>To alleviate the burden of argument passing, exception handling and logging, the execution engine has been provided. The execution engine will essentially execute the native interpretive language (PowerShell or bash), line by line, but each execution will be tested for exceptions (trivial in bash, significantly more complex in PowerShell).</p>
+<h3 id="where-is-it-used">Where is it used</h3>
+<p>In all places using .tsk files, i.e. build, package, wrap and deploy. The following operations are available to all tasks, however, some are more applicable to specific processes, see Build, Local and Remote task execution for more details of how these can be used.</p>
+<h3 id="operations">Operations</h3>
+<p>The following operations are provided to simplify common tasks.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Windows</th>
-<th style="text-align:center">Linux</th>
-<th style="text-align:center">Database Tools</th>
+<th>Keyword</th>
+<th>Description</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.sh">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.ps1">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/incrdb.jar">⬇️ Java (JDBC)</a> <a href="/static/app/downloads/Database.exe">⬇️ Windows (SQL Server)</a></td>
+<td>ASSIGN</td>
+<td>Display, and expand as necessary, variable assignment</td>
+<td>ASSIGN $test=&quot;$varcontainingvar&quot;</td>
+</tr>
+<tr>
+<td>CMPRSS</td>
+<td>Compress directory to file</td>
+<td>CMPRSS packageName dirName</td>
+</tr>
+<tr>
+<td>DCMPRS</td>
+<td>Decompress package file</td>
+<td>DCMPRS packageName</td>
+</tr>
+<tr>
+<td>DECRYP</td>
+<td>decrypt using private key (PKI)</td>
+<td>DECRYP crypt/encrypt.dat</td>
+</tr>
+<tr>
+<td></td>
+<td>   decrypt using AES/GPG key</td>
+<td>DECRYP crypt/encrypt.dat $key</td>
+</tr>
+<tr>
+<td>DETOKN</td>
+<td>Detokenise file with target prop</td>
+<td>DETOKN token.yml</td>
+</tr>
+<tr>
+<td></td>
+<td>   Detokenise with specific file</td>
+<td>DETOKN token.yml PROP_FILE</td>
+</tr>
+<tr>
+<td></td>
+<td>   Detokenise with encrypted file</td>
+<td>DETOKN token.yml crypt/FIL $key</td>
+</tr>
+<tr>
+<td></td>
+<td>   Expand and reveal embedded variables and detokenise</td>
+<td>DETOKN token.yml $TARGET reveal</td>
+</tr>
+<tr>
+<td></td>
+<td>   Expand but do not reveal embedded variables and detokenise</td>
+<td>DETOKN token.yml manifest.txt resolve</td>
+</tr>
+<tr>
+<td>EXCREM</td>
+<td>Execute command</td>
+<td>EXCREM hostname</td>
+</tr>
+<tr>
+<td></td>
+<td>   Execute script</td>
+<td>EXCREM ./capabilities.sh</td>
+</tr>
+<tr>
+<td>EXERTY</td>
+<td>Execute Retry, wait 10 seconds and retry twice</td>
+<td>EXERTY &ldquo;temperamentalcommand&rdquo;</td>
+</tr>
+<tr>
+<td></td>
+<td>   Optional, wait and retry override</td>
+<td>EXERTY &ldquo;verytemperamentalcommand&rdquo; 20 5</td>
+</tr>
+<tr>
+<td>EXITIF</td>
+<td>Exit normally if argument set</td>
+<td>EXITIF $ACTION</td>
+</tr>
+<tr>
+<td></td>
+<td>   Exit normally if set to value</td>
+<td>EXITIF $ACTION clean</td>
+</tr>
+<tr>
+<td>IMGTXT</td>
+<td>Display image file as text (wrapper for jp2a in Linux)</td>
+<td>IMGTXT sample.jpg</td>
+</tr>
+<tr>
+<td>INVOKE</td>
+<td>call a custom script</td>
+<td>INVOKE ./script &ldquo;Hello&rdquo;</td>
+</tr>
+<tr>
+<td>MAKDIR</td>
+<td>Create a directory and path (opt)</td>
+<td>MAKDIR directory/and/path</td>
+</tr>
+<tr>
+<td>MASKED</td>
+<td>Return an uppercase hexadecimal checksum using SHA256</td>
+<td>MASKED $password</td>
+</tr>
+<tr>
+<td>MD5MSK</td>
+<td>Deprecated. Return an uppercase hexadecimal checksum</td>
+<td>MD5MSK $password</td>
+</tr>
+<tr>
+<td>PROPLD</td>
+<td>Load properties as variables</td>
+<td>PROPLD PROP_FILE</td>
+</tr>
+<tr>
+<td></td>
+<td>   Expand and reveal embedded variables</td>
+<td>PROPLD $TARGET reveal</td>
+</tr>
+<tr>
+<td></td>
+<td>   Expand but do not reveal embedded variables</td>
+<td>PROPLD manifest.txt resolve</td>
+</tr>
+<tr>
+<td>REFRSH</td>
+<td>Refresh directory contents</td>
+<td>REFRSH manifest.txt ~/temp_dir</td>
+</tr>
+<tr>
+<td></td>
+<td>   clear directory contents (create if not existing)</td>
+<td>REFRSH ~/temp_dir</td>
+</tr>
+<tr>
+<td>REMOVE</td>
+<td>Delete files, including wildcard</td>
+<td>REMOVE *.war</td>
+</tr>
+<tr>
+<td>REPLAC</td>
+<td>Replace token in file</td>
+<td>REPLAC fileName %token% $value</td>
+</tr>
+<tr>
+<td>VARCHK</td>
+<td>Variable validation using default file properties.varchk</td>
+<td>VARCHK</td>
+</tr>
+<tr>
+<td></td>
+<td>   Variable validation using names file</td>
+<td>VARCHK vars.properties</td>
+</tr>
+<tr>
+<td>VECOPY</td>
+<td>Verbose copy</td>
+<td>VECOPY *.war</td>
 </tr>
 </tbody>
 </table>
+<p>Notes on EXCREM use, the properties are similar to those used for remote tasks, where the minimum required is the host, if other properties are not used, must be set to NOT_SUPPLIED, i.e.</p>
+<pre><code>deployHost=localhost
+remUser=NOT_SUPPLIED
+remCred=NOT_SUPPLIED
+remThb=NOT_SUPPLIED
+</code></pre>
+<h4 id="windows-only">Windows only</h4>
+<p>The following operations are only available in PowerShell version</p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMDTST</td>
+<td>Returns true if command exists</td>
+<td>CMDTST vagrant</td>
+</tr>
+<tr>
+<td>ELEVAT</td>
+<td>Execute as elevated NT SYSTEM</td>
+<td>ELEVAT &ldquo;$(pwd)/custom.ps1&rdquo;</td>
+</tr>
+<tr>
+<td>EXECMD</td>
+<td>Execute in Command (CMD) shell</td>
+<td>ELEVAT &ldquo;terraform $OPT_ARG&rdquo;</td>
+</tr>
+<tr>
+<td>MSTOOL</td>
+<td>Microsoft Build Tools, set environment variables <!-- raw HTML omitted --> • MS_BUILD <!-- raw HTML omitted --> • MS_TEST <!-- raw HTML omitted --> • VS_TEST <!-- raw HTML omitted --> • DEV_ENV <!-- raw HTML omitted --> • NUGET_PATH</td>
+<td>MSTOOL</td>
+</tr>
+</tbody>
+</table>
+<h3 id="common-variables">Common Variables</h3>
+<p>These are automatically set at both build and deploy time.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$SOLUTIONROOT</td>
+<td>The solution directory identified by localtion of CDAF.solution file</td>
+</tr>
+<tr>
+<td>$SOLUTION</td>
+<td>The solution name identified by property in CDAF.solution file</td>
+</tr>
+<tr>
+<td>$BUILDNUMBER</td>
+<td>The first argument passed for CI, and propagated to CD</td>
+</tr>
+<tr>
+<td>$CDAF_CORE</td>
+<td>Core CDAF runtime location</td>
+</tr>
+<tr>
+<td>$TASK_NAME</td>
+<td>The name of the task file currently executing</td>
+</tr>
+<tr>
+<td>$TARGET</td>
+<td>Available in both build and deploy, but derived differently, see below for details</td>
+</tr>
+</tbody>
+</table>
+<h3 id="build-time-variables">Build-time Variables</h3>
+<p>These are automatically set at execution start-up</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$AUTOMATIONROOT</td>
+<td>The installation directory of the Continuous Delivery Automation Framework</td>
+</tr>
+<tr>
+<td>$ACTION</td>
+<td>The second argument passed, has some hardcoded functions<!-- raw HTML omitted --> • clean: only remove temp files<!-- raw HTML omitted --> • packageonly: skip any build tasks</td>
+</tr>
+<tr>
+<td>$TARGET</td>
+<td>At build time, this is derived (Can be overridden, see <a href="/90-reference/20-feature-configuration/30-environment-variables">CDAF_BUILD_ENV environment variable</a>) <!-- raw HTML omitted --> • Linux: Set to WSL for Windows Subsystem, otherwise LINUX <!-- raw HTML omitted --> • Windows: Set to WINDOWS is on-domain, otherwise WORKGROUP</td>
+</tr>
+<tr>
+<td>$TMPDIR</td>
+<td>Automatically set to the temp dir</td>
+</tr>
+<tr>
+<td>$WORKSPACE</td>
+<td>The working directory at execution start-up</td>
+</tr>
+</tbody>
+</table>
+<p>See also <a href="/90-reference/20-feature-configuration/30-environment-variables">Environment and Global Variables</a>.</p>
+<h3 id="deploy-time-variables">Deploy-time Variables</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ENVIRONMENT</td>
+<td>This is the first argument passed to the release, the targets are derived from this</td>
+</tr>
+<tr>
+<td>$TARGET</td>
+<td>All targets are processed based on pattern match $ENVIRONMENT*, the TARGET being currently executed is set in this variable</td>
+</tr>
+<tr>
+<td>$RELEASE</td>
+<td>Second argument passed to release</td>
+</tr>
+<tr>
+<td>$OPT_ARG</td>
+<td>Third argument passed to release</td>
+</tr>
+</tbody>
+</table>
+
+
+<footer class="footline">
 	
-  
-        
-            </div> 
+</footer>
+
         
         </div>
         
@@ -3714,6 +4057,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3729,53 +4073,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -3817,10 +4116,66 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -4050,8 +4405,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/90-reference/20-feature-configuration/10-configuration-mapping/" title="Configuration Mapping"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/90-reference/20-feature-configuration/30-environment-variables/" title="Environment Variables" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4061,19 +4418,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745187520"></script>
-    <script src="/js/jquery.sticky.js?1745187520"></script>
-    <script src="/js/featherlight.min.js?1745187520"></script>
-    <script src="/js/highlight.pack.js?1745187520"></script>
+    <script src="/js/clipboard.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745187519"></script>
+    <script src="/js/jquery.sticky.js?1745187519"></script>
+    <script src="/js/featherlight.min.js?1745187519"></script>
+    <script src="/js/highlight.pack.js?1745187519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745187520"></script>
-    <script src="/js/learn.js?1745187520"></script>
-    <script src="/js/hugo-learn.js?1745187520"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745187519"></script>
+    <script src="/js/learn.js?1745187519"></script>
+    <script src="/js/hugo-learn.js?1745187519"></script>
     
         
-            <script src="/mermaid/mermaid.js?1745187520"></script>
+            <script src="/mermaid/mermaid.js?1745187519"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

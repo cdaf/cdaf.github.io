@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Continuous Delivery Automation Framework">
+    <meta name="description" content="Solution Properties">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CDAF :: Concepts &amp; Applied Examples</title>
+    <title>Solution Properties :: Concepts &amp; Applied Examples</title>
 
     
     <link href="/css/nucleus.css?1745187519" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/90-reference/20-feature-configuration/40-solution-properties/">
     <nav id="sidebar" class="">
 
 
@@ -1929,7 +1929,7 @@
   
     
     <li data-nav-id="/90-reference/" title="Reference Guide" class="dd-item
-        
+        parent
         
         
         ">
@@ -2036,7 +2036,7 @@
   
     
     <li data-nav-id="/90-reference/20-feature-configuration/" title="Feature Configuration" class="dd-item
-        
+        parent
         
         
         ">
@@ -2125,7 +2125,7 @@
  
   
     
-      <li data-nav-id="/90-reference/20-feature-configuration/40-solution-properties/" title="Solution Properties" class="dd-item ">
+      <li data-nav-id="/90-reference/20-feature-configuration/40-solution-properties/" title="Solution Properties" class="dd-item active">
         <a href="/90-reference/20-feature-configuration/40-solution-properties/">
         Solution Properties
         
@@ -2446,44 +2446,280 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/90-reference/'>Reference Guide</a> > <a href='/90-reference/20-feature-configuration/'>Feature Configuration</a> > Solution Properties
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/kb">kb</a>
+
+  <a class="tag-link" href="/tags/12-factors">12-factors</a>
+
+</div>
+
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Solution Properties
+            </h1>
           
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<p><img src="/images/cdaf-splash.png" alt="alt text" title="Toolset Integration"></p>
-<p>For guidance for installing the framework, configuration options or end-to-end scenarios, see the navigation panel on the left. For alternate download options, see <a href="/10-cdaf/10-getting-started/10-ci">compressed package downloads</a>.</p>
+<h2 id="hahahugoshortcode-s0-hbhb">Solution Properties</h2>
+<p>CDAF.solution : file to identify a directory as the automation solution directory where the key configuration files are placed. This file is used as the bases of the manifest.txt file while is included in the resulting CI artefact package.</p>
+<p>See solution/CDAF.solution in CDAF automation directory.</p>
+<h3 id="solution-properties">Solution Properties</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Windows</th>
-<th style="text-align:center">Linux</th>
-<th style="text-align:center">Database Tools</th>
+<th>Variable</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.sh">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.ps1">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/incrdb.jar">⬇️ Java (JDBC)</a> <a href="/static/app/downloads/Database.exe">⬇️ Windows (SQL Server)</a></td>
+<td>solutionName</td>
+<td>Required. Do not include spaces.</td>
+</tr>
+<tr>
+<td>productName</td>
+<td>Solution description, this can contain spaces.</td>
+</tr>
+<tr>
+<td>artifactPrefix</td>
+<td>Generate a self-extracting package script, example 0.0, mutually exclusive to productVersion</td>
+</tr>
+<tr>
+<td>productVersion</td>
+<td>Do a self-extracting package script, example 0.0.0</td>
+</tr>
+<tr>
+<td>containerBuild</td>
+<td>Dependency injection for running container based build execution</td>
+</tr>
+<tr>
+<td>containerImage</td>
+<td>Image to be used in the container based build execution</td>
+</tr>
+<tr>
+<td>containerDeploy</td>
+<td>Execute deployment from within a container, uses the storeForRemote artefact definition</td>
+</tr>
+<tr>
+<td>imageBuild</td>
+<td>Dependency injection for creating a container image after CI process, see the Image Registry properties below</td>
+</tr>
+<tr>
+<td>runtimeImage</td>
+<td>Image to used in the runtime image created by imageBuild</td>
+</tr>
+<tr>
+<td>constructor</td>
+<td>Directory in which container images are constructed, default action will traverse and build in all directories</td>
+</tr>
+<tr>
+<td>defaultBranch</td>
+<td>Used to determine feature branch functionality, default is master</td>
+</tr>
+<tr>
+<td>defaultEnvironment</td>
+<td>Default environment to use for <a href="https://blog.cdaf.io/posts/2022-02-20-feature-branch-environments/">CDAF Feature Branch Environments post</a>, defaults to DOCKER</td>
+</tr>
+<tr>
+<td>processSequence</td>
+<td>Deployment Process Sequence, defaults to localTasks, remoteTasks and finally containerTasks</td>
 </tr>
 </tbody>
 </table>
+<h3 id="environment-variable-substitution">Environment Variable Substitution</h3>
+<p>The following properties can be used in place of environment variables</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDAF_HOME_MOUNT</td>
+<td>to disable volume mount for containerDeploy set to &lsquo;no&rsquo;</td>
+</tr>
+<tr>
+<td>CDAF_ERROR_DIAG</td>
+<td>Dependency injected custom call if error occurs in <a href="/90-reference/20-feature-configuration/20-execution-engine">Execution Engine</a></td>
+</tr>
+<tr>
+<td>CDAF_DOCKER_REQUIRED</td>
+<td><a href="/90-reference/30-docker-features/20-container-build">containerBuild</a> will attempt to start Docker if not running and will fail if it cannot, rather than falling back to native execution</td>
+</tr>
+</tbody>
+</table>
+<h4 id="image-registry">Image Registry</h4>
+<p>These properties are used to push the image created by dockerBuild to pull a base image from a private registry. These can be overriden by <a href="/90-reference/20-feature-configuration/30-environment-variables">Environment Variables</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDAF_SKIP_PULL</td>
+<td>Skip updating of image</td>
+</tr>
+<tr>
+<td>CDAF_PULL_REGISTRY_URL</td>
+<td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+</tr>
+<tr>
+<td>CDAF_PULL_REGISTRY_USER</td>
+<td>Registry user, example registryuser (if not set, default is &lsquo;.')</td>
+</tr>
+<tr>
+<td>CDAF_PULL_REGISTRY_TOKEN</td>
+<td>Registry token, example xyzx9234sxsrwcqw34</td>
+</tr>
+</tbody>
+</table>
+<p>These properties are used to push the image created by imageBuild to push to a private registry. These can be overriden by <a href="/90-reference/20-feature-configuration/30-environment-variables">Environment Variables</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDAF_REGISTRY_URL</td>
+<td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+</tr>
+<tr>
+<td>CDAF_REGISTRY_TAG</td>
+<td>Image tag(s), can be a single value <code>latest</code> (default) or space separated list, e.g. <code>latest ${BUILDNUMBER}</code></td>
+</tr>
+<tr>
+<td>CDAF_REGISTRY_USER</td>
+<td>Registry user, example registryuser (if not set, default is &lsquo;.')</td>
+</tr>
+<tr>
+<td>CDAF_REGISTRY_TOKEN</td>
+<td>Registry authentication token</td>
+</tr>
+</tbody>
+</table>
+<p>These properties are used to push the image created by dockerPush to push to a private registry. These can be overriden by <a href="/90-reference/20-feature-configuration/30-environment-variables">Environment Variables</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDAF_PUSH_REGISTRY_URL</td>
+<td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+</tr>
+<tr>
+<td>CDAF_PUSH_REGISTRY_TAG</td>
+<td>Image tag(s), can be a single value <code>latest</code> (default) or space separated list, e.g. <code>latest ${BUILDNUMBER}</code></td>
+</tr>
+<tr>
+<td>CDAF_PUSH_REGISTRY_USER</td>
+<td>Registry user, example registryuser (if not set, default is &lsquo;.')</td>
+</tr>
+<tr>
+<td>CDAF_PUSH_REGISTRY_TOKEN</td>
+<td>Registry authentication token</td>
+</tr>
+</tbody>
+</table>
+<h4 id="git-clean-up-properties">Git Clean-up Properties</h4>
+<p>To clean-up Git branches and docker images, the following properties are used.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gitRemoteURL</td>
+<td><code>https://gitserver.local/mysolution.git</code></td>
+</tr>
+<tr>
+<td>gitUserNameEnvVar</td>
+<td>gituser</td>
+</tr>
+<tr>
+<td>gitUserPassEnvVar</td>
+<td>secret-pat</td>
+</tr>
+<tr>
+<td>gitCustomCleanup</td>
+<td>&amp; $AUTOMATIONROOT/buildandpackage/clean.ps1 or $AUTOMATIONROOT/buildandpackage/clean.sh</td>
+</tr>
+</tbody>
+</table>
+
+
+<footer class="footline">
 	
-  
-        
-            </div> 
+</footer>
+
         
         </div>
         
@@ -3714,6 +3950,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3729,53 +3966,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -3805,6 +3997,42 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -3853,6 +4081,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -4050,8 +4298,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/90-reference/20-feature-configuration/30-environment-variables/" title="Environment Variables"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/90-reference/20-feature-configuration/50-extended-processes/" title="Extended Processes" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4061,19 +4311,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745187520"></script>
-    <script src="/js/jquery.sticky.js?1745187520"></script>
-    <script src="/js/featherlight.min.js?1745187520"></script>
-    <script src="/js/highlight.pack.js?1745187520"></script>
+    <script src="/js/clipboard.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745187519"></script>
+    <script src="/js/jquery.sticky.js?1745187519"></script>
+    <script src="/js/featherlight.min.js?1745187519"></script>
+    <script src="/js/highlight.pack.js?1745187519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745187520"></script>
-    <script src="/js/learn.js?1745187520"></script>
-    <script src="/js/hugo-learn.js?1745187520"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745187519"></script>
+    <script src="/js/learn.js?1745187519"></script>
+    <script src="/js/hugo-learn.js?1745187519"></script>
     
         
-            <script src="/mermaid/mermaid.js?1745187520"></script>
+            <script src="/mermaid/mermaid.js?1745187519"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

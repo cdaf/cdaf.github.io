@@ -4,30 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Continuous Delivery Automation Framework">
+    <meta name="description" content="Container Exploitation and Image Building">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CDAF :: Concepts &amp; Applied Examples</title>
+    <title>Docker Features :: Concepts &amp; Applied Examples</title>
 
     
-    <link href="/css/nucleus.css?1745187519" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745187519" rel="stylesheet">
-    <link href="/css/hybrid.css?1745187519" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745187519" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745187519" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745187519" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745187519" rel="stylesheet">
-    <link href="/css/theme.css?1745187519" rel="stylesheet">
-    <link href="/css/tabs.css?1745187519" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745187519" rel="stylesheet">
+    <link href="/css/nucleus.css?1745187520" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1745187520" rel="stylesheet">
+    <link href="/css/hybrid.css?1745187520" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1745187520" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1745187520" rel="stylesheet">
+    <link href="/css/auto-complete.css?1745187520" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1745187520" rel="stylesheet">
+    <link href="/css/theme.css?1745187520" rel="stylesheet">
+    <link href="/css/tabs.css?1745187520" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1745187520" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1745187519" rel="stylesheet">
+    <link href="/css/theme-green.css?1745187520" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745187519"></script>
+    <script src="/js/jquery-3.3.1.min.js?1745187520"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/90-reference/30-docker-features/">
     <nav id="sidebar" class="">
 
 
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745187519"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745187519"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1745187520"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1745187520"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745187519"></script>
+<script type="text/javascript" src="/js/search.js?1745187520"></script>
 
     
   </div>
@@ -1929,7 +1929,7 @@
   
     
     <li data-nav-id="/90-reference/" title="Reference Guide" class="dd-item
-        
+        parent
         
         
         ">
@@ -2261,8 +2261,8 @@
   
     
     <li data-nav-id="/90-reference/30-docker-features/" title="Docker Features" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="/90-reference/30-docker-features/">
@@ -2446,6 +2446,45 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/90-reference/'>Reference Guide</a> > Docker Features
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -2457,31 +2496,154 @@
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<p><img src="/images/cdaf-splash.png" alt="alt text" title="Toolset Integration"></p>
-<p>For guidance for installing the framework, configuration options or end-to-end scenarios, see the navigation panel on the left. For alternate download options, see <a href="/10-cdaf/10-getting-started/10-ci">compressed package downloads</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Windows</th>
-<th style="text-align:center">Linux</th>
-<th style="text-align:center">Database Tools</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.sh">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.ps1">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/incrdb.jar">⬇️ Java (JDBC)</a> <a href="/static/app/downloads/Database.exe">⬇️ Windows (SQL Server)</a></td>
-</tr>
-</tbody>
-</table>
+
+	<h2 id="hahahugoshortcode-s0-hbhb">Container Exploitation and Image Building</h2>
+<p>These features provide opinionated wrappers for using docker to perform the following:</p>
+<ul>
+<li><strong>containerBuild</strong> : to execute build processes in a pre-provisioned, or custom provisioned container</li>
+<li><strong>imageBuild</strong> : to create images for publication</li>
+<li><strong>containerDeploy</strong> : to execute deployment processes in a pre-provisioned, or custom provisioned container</li>
+</ul>
+<p>Pre-provisioned images are available in <a href="https://hub.docker.com/r/cdaf">DockerHub</a>.</p>
+
+
+
+
+
+
+
+<ul class="children children-h3">
 	
-  
+
+	
+		
+	
+
+	
+
+	
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/90-reference/30-docker-features/10-configuration-mapping/" >containerBuild</a>
+</h3>
+
+				
+
+				
+					
+<p>containerBuild</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/90-reference/30-docker-features/20-container-build/" >containerBuild</a>
+</h3>
+
+				
+
+				
+					
+<p>containerBuild</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/90-reference/30-docker-features/30-image-build/" >imageBuild</a>
+</h3>
+
+				
+
+				
+					
+<p>imageBuild</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/90-reference/30-docker-features/40-container-deploy/" >containerDeploy</a>
+</h3>
+
+				
+
+				
+					
+<p>containerDeploy</p>
+					
+				
+			
+			
+		
+	
+		
+			
+				
+					
+					
+
+<h3>
+<a href="/90-reference/30-docker-features/50-docker-push/" >dockerPush</a>
+</h3>
+
+				
+
+				
+					
+<p>dockerPush</p>
+					
+				
+			
+			
+		
+	
+
+	
+</ul>
+
+
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
         
             </div> 
         
@@ -3714,6 +3876,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3729,53 +3892,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -3816,6 +3934,22 @@
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -3929,6 +4063,19 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -3945,10 +4092,33 @@
                     
 
                     
+            
+        
+                    
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -4050,8 +4220,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/90-reference/20-feature-configuration/90-variable-validation/" title="Variable Validation"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/90-reference/30-docker-features/10-configuration-mapping/" title="containerBuild" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4083,4 +4255,3 @@
 
   </body>
 </html>
-

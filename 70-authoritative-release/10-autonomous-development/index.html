@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Continuous Delivery Automation Framework">
+    <meta name="description" content="Imperative Image Construction">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CDAF :: Concepts &amp; Applied Examples</title>
+    <title>Autonomous Development :: Concepts &amp; Applied Examples</title>
 
     
     <link href="/css/nucleus.css?1745187519" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/70-authoritative-release/10-autonomous-development/">
     <nav id="sidebar" class="">
 
 
@@ -775,7 +775,7 @@
   
     
     <li data-nav-id="/70-authoritative-release/" title="Declarative Release" class="dd-item
-        
+        parent
         
         
         ">
@@ -803,7 +803,7 @@
  
   
     
-      <li data-nav-id="/70-authoritative-release/10-autonomous-development/" title="Autonomous Development" class="dd-item ">
+      <li data-nav-id="/70-authoritative-release/10-autonomous-development/" title="Autonomous Development" class="dd-item active">
         <a href="/70-authoritative-release/10-autonomous-development/">
         Autonomous Development
         
@@ -2446,44 +2446,131 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/70-authoritative-release/'>Declarative Release</a> > Autonomous Development
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Autonomous Development
+            </h1>
           
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<p><img src="/images/cdaf-splash.png" alt="alt text" title="Toolset Integration"></p>
-<p>For guidance for installing the framework, configuration options or end-to-end scenarios, see the navigation panel on the left. For alternate download options, see <a href="/10-cdaf/10-getting-started/10-ci">compressed package downloads</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Windows</th>
-<th style="text-align:center">Linux</th>
-<th style="text-align:center">Database Tools</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.sh">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.ps1">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/incrdb.jar">⬇️ Java (JDBC)</a> <a href="/static/app/downloads/Database.exe">⬇️ Windows (SQL Server)</a></td>
-</tr>
-</tbody>
-</table>
+<h2 id="hahahugoshortcode-s0-hbhb">Imperative Image Construction</h2>
+<p>Creating an artefact for compiled languages is well understood, and is an integral part of software delivery for languages such as .NET, Java and Typescript, however, for interpretive languages (Python, Ruby, PHP, Javascript), because the code in source control can be run without a &ldquo;build&rdquo;, it is tempting to deploy from source control. This has the following challenges:</p>
+<ul>
+<li>Fulfilling dependencies in production environment, can have network issues and, even with lock files, can result is different runtime outcomes.</li>
+<li>Manual steps are required as branches are used to separate environments, e.g. test, staging, production. Which requires deploy-time developer effort and can lead to errors, i.e. untested code being merged into production.</li>
+</ul>
+<h3 id="package--publish">Package &amp; Publish</h3>
+<p>Resolving dependencies at build time, adding any other runtime components and creating an immutable package for deployment can be achieved using the CDAF technology agnostic package mechanism. The &ldquo;build&rdquo; artefact completes the development teams Continuous Integration (CI) stage.</p>
+<p>The Continuous Delivery (CD) would be limited to automated testing of the package, and then publication. Publication can be to a Container Registry, Package Registry (Nexus, Artifactory, Azure DevOps, GitLab, GitHub, etc.) or a proprietary asset registry such as Octopus Deploy or Mulesoft AnyPoint Exchange. The following example uses a Container Registry.</p>
+<p>The following overview has two examples, one using the CDAF release package with automated testing, and one performing direct image build and push.</p>
+<ul>
+<li>
+<p>PiP resolves Python dependencies, and gathers these, along with helper scripts, to produce a release package. The release package is then used to construct a runtime image, which in turn is smoke tested using docker-compose. The tested image is then pushed to the registry.</p>
+</li>
+<li>
+<p>NPM resolves NodeJS dependencies, builds an image and pushes it to the registry.</p>
+</li>
+</ul>
+
+<div class="mermaid" align="center">
+graph LR
+
+  subgraph python["Python"]
+    python-git[(Git)]
+    python-build-artefact[(Build)]
+    python-release.ps1
+    subgraph docker-compose
+      image-container
+      test-container
+    end
+    push
+  end
+
+  subgraph node["NodeJS"]
+    node-git[(Git)]
+    node-build
+    node-push["push"]
+  end
+
+  registry[(Docker Registry)]
+
+  python-git -- "CI (PiP)" -->
+  python-build-artefact -- "CD" --> 
+  python-release.ps1 -->
+  image-container -->
+  push --> registry
+  test-container -. "smoke test" .-> image-container
+
+  node-git -- "CI (NPM)" -->
+  node-build -->
+  node-push --> registry
+
+classDef dashed stroke-dasharray: 5, 5
+class python,node dashed
+
+classDef dotted stroke-dasharray: 2, 2
+class docker-compose dotted
+
+classDef blue fill:#007FFF
+class registry blue
+</div>
+
+<blockquote>
+<p>Note: the Python <code>release.ps1</code> is an intermediary artefact, and not used to deploy to the runtime environments.</p>
+</blockquote>
+
+
+<footer class="footline">
 	
-  
-        
-            </div> 
+</footer>
+
         
         </div>
         
@@ -2956,6 +3043,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2970,6 +3058,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2986,6 +3075,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4050,8 +4142,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/70-authoritative-release/" title="Declarative Release"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/70-authoritative-release/10-how-to-helm/" title="How to Helm" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4061,19 +4155,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745187520"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745187520"></script>
-    <script src="/js/jquery.sticky.js?1745187520"></script>
-    <script src="/js/featherlight.min.js?1745187520"></script>
-    <script src="/js/highlight.pack.js?1745187520"></script>
+    <script src="/js/clipboard.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745187519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745187519"></script>
+    <script src="/js/jquery.sticky.js?1745187519"></script>
+    <script src="/js/featherlight.min.js?1745187519"></script>
+    <script src="/js/highlight.pack.js?1745187519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745187520"></script>
-    <script src="/js/learn.js?1745187520"></script>
-    <script src="/js/hugo-learn.js?1745187520"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745187519"></script>
+    <script src="/js/learn.js?1745187519"></script>
+    <script src="/js/hugo-learn.js?1745187519"></script>
     
         
-            <script src="/mermaid/mermaid.js?1745187520"></script>
+            <script src="/mermaid/mermaid.js?1745187519"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

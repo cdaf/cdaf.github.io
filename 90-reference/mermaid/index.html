@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Continuous Delivery Automation Framework">
+    <meta name="description" content="Mermaid Markdown Diagrams">
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CDAF :: Concepts &amp; Applied Examples</title>
+    <title>Mermaid :: Concepts &amp; Applied Examples</title>
 
     
     <link href="/css/nucleus.css?1745187519" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/90-reference/mermaid/">
     <nav id="sidebar" class="">
 
 
@@ -1929,7 +1929,7 @@
   
     
     <li data-nav-id="/90-reference/" title="Reference Guide" class="dd-item
-        
+        parent
         
         
         ">
@@ -2446,44 +2446,165 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/90-reference/'>Reference Guide</a> > Mermaid
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/kb">kb</a>
+
+  <a class="tag-link" href="/tags/diagrams">diagrams</a>
+
+</div>
+
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Mermaid
+            </h1>
           
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor">https://mermaid-js.github.io/mermaid-live-editor</a></p>
+
+<div class="mermaid" align="center">
+gantt
+  axisFormat %d-%b-%Y
+  title Enabling
+  excludes weekends saturday,sunday
  
-<p><img src="/images/cdaf-splash.png" alt="alt text" title="Toolset Integration"></p>
-<p>For guidance for installing the framework, configuration options or end-to-end scenarios, see the navigation panel on the left. For alternate download options, see <a href="/10-cdaf/10-getting-started/10-ci">compressed package downloads</a>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Windows</th>
-<th style="text-align:center">Linux</th>
-<th style="text-align:center">Database Tools</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.sh">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/cdaf.ps1">⬇️ Download Installer</a></td>
-<td style="text-align:center"><a href="/static/app/downloads/incrdb.jar">⬇️ Java (JDBC)</a> <a href="/static/app/downloads/Database.exe">⬇️ Windows (SQL Server)</a></td>
-</tr>
-</tbody>
-</table>
+  section Section One
+  done     :done,      2023-09-10,   5d
+  active   :active,    5d
+  planned  :           2023-09-20,   3d
+ 
+  section Section Two (tagged tasks)
+  active   :active,    T2, 2023-09-12,   2d
+  critical :crit,      T3, after T2,     1d
+</div>
+
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">gantt
+  %% custom date format not consistently supported
+  %% dateFormat  DD-MM-YYYY
+  axisFormat %d-%b-%Y
+  title Enabling
+  excludes weekends saturday,sunday
+ 
+  section Section One
+  done     :done,      2023-09-10,   5d
+  active   :active,    5d
+  planned  :           2023-09-20,   3d
+ 
+  section Section Two (tagged tasks)
+  active   :active,    T2, 2023-09-12,   2d
+  critical :crit,      T3, after T2,     1d
+</code></pre>
+<div class="mermaid" align="center">
+graph TD
+  subgraph k8s["Kubernetes"]
+    subgraph services
+      ingress
+    end
+    subgraph pods
+      containers
+    end
+    persist[(persist)]
+  end
+
+browser["🌐 Browser"] -->
+ingress -->
+containers -->
+persist
+
+classDef green fill:#90EE90
+class ingress green
+
+classDef blue fill:#007FFF
+class containers blue
+
+classDef dashed stroke-dasharray: 5, 5
+class services dashed
+
+classDef dotted stroke-dasharray: 2, 2
+class pods dotted
+</div>
+
+<pre tabindex="0"><code>graph TD
+  subgraph k8s[&quot;Kubernetes&quot;]
+    subgraph services
+      ingress
+    end
+    subgraph pods
+      containers
+    end
+    persist[(persist)]
+  end
+
+browser[&quot;🌐 Browser&quot;] --&gt;
+ingress --&gt;
+containers --&gt;
+persist
+
+classDef green fill:#90EE90
+class ingress green
+
+classDef blue fill:#007FFF
+class containers blue
+
+classDef dashed stroke-dasharray: 5, 5
+class services dashed
+
+classDef dotted stroke-dasharray: 2, 2
+class pods dotted
+</code></pre>
+
+<footer class="footline">
 	
-  
-        
-            </div> 
+</footer>
+
         
         </div>
         
@@ -3714,6 +3835,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3728,6 +3850,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4050,8 +4175,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/80-release-train/40-terraform-cloud/80-feedback-loop/" title="Feedback Loop"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/90-reference/10-framework-implementation/" title="Framework Implementation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
