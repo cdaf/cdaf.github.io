@@ -526,7 +526,7 @@ Windows Remote PowerShell This approach uses the local host for both target (CD)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cdaf.io/10-cdaf/90-release-history/</guid>
-      <description>CDAF Release History All previous releases are available for download from https://cdaf.iostatic/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.tar.gz or https://cdaf.iostatic/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.zip for Linux, and https://cdaf.iostatic/app/downloads/WU-CDAF-&amp;lt;version&amp;gt;.zip for Windows.
+      <description>CDAF Release History All previous releases are available for download from https://cdaf.io/static/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.tar.gz or https://cdaf.io/static/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.zip for Linux, and https://cdaf.io/static/app/downloads/WU-CDAF-&amp;lt;version&amp;gt;.zip for Windows.
 2.8.1 : 25-Jan-2025 : Minor Release and Deploy Fixes  Fix getProperty split on first equal (=) character only Fix containerDeploy to resolve fileName variable (Linux) Fix self-extracting release not including error array and exit code reset (Windows) Include file command in dockerhub image (Linux)  2.8.0 : 16-Jul-2024 : Tech Debt - Deprecate unsupported docker version labelling  Remove version argument from dockerBuild (see breaking changes for details) Consolidate default Dockerfile processing for containerBuild and imageBuild into dockerBuild dockerPush correct context loading for non-dockerhub registries (Linux) sort project directories for build process (Linux)  2.</description>
     </item>
     
