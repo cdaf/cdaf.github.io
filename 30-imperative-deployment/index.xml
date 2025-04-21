@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Imperative Deployment on Concepts &amp; Applied Examples</title>
-    <link>/30-imperative-deployment/</link>
+    <link>https://cdaf.io/30-imperative-deployment/</link>
     <description>Recent content in Imperative Deployment on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/30-imperative-deployment/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/30-imperative-deployment/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

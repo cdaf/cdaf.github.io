@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CDAF 2.8.1 on Concepts &amp; Applied Examples</title>
-    <link>/10-cdaf/</link>
+    <link>https://cdaf.io/10-cdaf/</link>
     <description>Recent content in CDAF 2.8.1 on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/10-cdaf/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/10-cdaf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Release History</title>
-      <link>/10-cdaf/90-release-history/</link>
+      <link>https://cdaf.io/10-cdaf/90-release-history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/10-cdaf/90-release-history/</guid>
-      <description>CDAF Release History All previous releases are available for download from /static/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.tar.gz or /static/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.zip for Linux, and /static/app/downloads/WU-CDAF-&amp;lt;version&amp;gt;.zip for Windows.
+      <guid>https://cdaf.io/10-cdaf/90-release-history/</guid>
+      <description>CDAF Release History All previous releases are available for download from https://cdaf.iostatic/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.tar.gz or https://cdaf.iostatic/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.zip for Linux, and https://cdaf.iostatic/app/downloads/WU-CDAF-&amp;lt;version&amp;gt;.zip for Windows.
 2.8.1 : 25-Jan-2025 : Minor Release and Deploy Fixes  Fix getProperty split on first equal (=) character only Fix containerDeploy to resolve fileName variable (Linux) Fix self-extracting release not including error array and exit code reset (Windows) Include file command in dockerhub image (Linux)  2.8.0 : 16-Jul-2024 : Tech Debt - Deprecate unsupported docker version labelling  Remove version argument from dockerBuild (see breaking changes for details) Consolidate default Dockerfile processing for containerBuild and imageBuild into dockerBuild dockerPush correct context loading for non-dockerhub registries (Linux) sort project directories for build process (Linux)  2.</description>
     </item>
     

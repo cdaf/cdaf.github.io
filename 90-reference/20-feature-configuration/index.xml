@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Feature Configuration on Concepts &amp; Applied Examples</title>
-    <link>/90-reference/20-feature-configuration/</link>
+    <link>https://cdaf.io/90-reference/20-feature-configuration/</link>
     <description>Recent content in Feature Configuration on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/90-reference/20-feature-configuration/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/90-reference/20-feature-configuration/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Configuration Mapping</title>
-      <link>/90-reference/20-feature-configuration/10-configuration-mapping/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/10-configuration-mapping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/10-configuration-mapping/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/10-configuration-mapping/</guid>
       <description>Configuration Mapping The local and remote configuration will trigger a task execution based on each unique declaration of context and target, using the corresponding default task tasksRunLocal.tsk and tasksRunLocal.tsk.
 context target deployHost remote UAT vm.example.com local UAT vm.example.com remote PROD vm.example.com local PROD vm.example.com Customer tasks can be defined for directories customLocal and customRemote respectively, or custom if shared.
 context target deployTaskOverride local DOCKER docker-compose-test.tsk remote UAT on-premise-deploy.tsk remote PROD on-premise-deploy.</description>
@@ -18,20 +18,20 @@ context target deployTaskOverride local DOCKER docker-compose-test.tsk remote UA
     
     <item>
       <title>Execution Engine</title>
-      <link>/90-reference/20-feature-configuration/20-execution-engine/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/20-execution-engine/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/20-execution-engine/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/20-execution-engine/</guid>
       <description>Execution Engine To alleviate the burden of argument passing, exception handling and logging, the execution engine has been provided. The execution engine will essentially execute the native interpretive language (PowerShell or bash), line by line, but each execution will be tested for exceptions (trivial in bash, significantly more complex in PowerShell).
 Where is it used In all places using .tsk files, i.e. build, package, wrap and deploy. The following operations are available to all tasks, however, some are more applicable to specific processes, see Build, Local and Remote task execution for more details of how these can be used.</description>
     </item>
     
     <item>
       <title>Environment Variables</title>
-      <link>/90-reference/20-feature-configuration/30-environment-variables/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/30-environment-variables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/30-environment-variables/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/30-environment-variables/</guid>
       <description>Environment Variables Due to inconsistencies between Windows and Linux handling of environment variables, these have been divided between environment variables that are set before calling an entry script to alter the behaviour of CDAF, and environment variables that are set within bash scripts to make them globally available.
 Control Variables The following environment variables are available to control the behaviour of CDAF
    Variable Description     CDAF_BRANCH_NAME Used by entry.</description>
@@ -39,10 +39,10 @@ Control Variables The following environment variables are available to control t
     
     <item>
       <title>Solution Properties</title>
-      <link>/90-reference/20-feature-configuration/40-solution-properties/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/40-solution-properties/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/40-solution-properties/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/40-solution-properties/</guid>
       <description>Solution Properties CDAF.solution : file to identify a directory as the automation solution directory where the key configuration files are placed. This file is used as the bases of the manifest.txt file while is included in the resulting CI artefact package.
 See solution/CDAF.solution in CDAF automation directory.
 Solution Properties    Variable Description     solutionName Required. Do not include spaces.   productName Solution description, this can contain spaces.</description>
@@ -50,50 +50,50 @@ Solution Properties    Variable Description     solutionName Required. Do not in
     
     <item>
       <title>Extended Processes</title>
-      <link>/90-reference/20-feature-configuration/50-extended-processes/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/50-extended-processes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/50-extended-processes/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/50-extended-processes/</guid>
       <description>Extended Processes Optional Build Processes By placing these files in your solution root, the processes will execute as described
    File Name Description     prebuild.tsk Execute after Configuration Management processing, but before any build tasks   postbuild.tsk Execute after solution and project level build tasks are complete    Optional Package Processes By placing these files in your solution root, the processes will execute as described</description>
     </item>
     
     <item>
       <title>Feature Branch Execution</title>
-      <link>/90-reference/20-feature-configuration/60-feature-branch-execution/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/60-feature-branch-execution/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/60-feature-branch-execution/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/60-feature-branch-execution/</guid>
       <description>Feature Branch Execution Place feature-branch.properties in your SOLUTIONROOT to allow dynamic delivery execution, based on Git Branch name. This capability is limited to entry.sh/entry.bat/entry.ps1, which are Git aware, and the recommended loose coupling entry scripts for CDAF.
 # Separate environments for features and bugs feature=DEV1 bugfix=DEV2 # Hotfixes deploy to all environments hotfix=DEV1 hotfix=DEV2 See CDAF Samples for complete implementations in Linux and Windows.</description>
     </item>
     
     <item>
       <title>Sensitive Data Strategies</title>
-      <link>/90-reference/20-feature-configuration/70-sensitive-data-strategies/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/70-sensitive-data-strategies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/70-sensitive-data-strategies/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/70-sensitive-data-strategies/</guid>
       <description>Sensitive Data Strategies Loose Coupling A key approach to support the principle of automation execution in a local desktop context, is the use of environment variables. It&amp;rsquo;s important to remember that environment variables do not necessarily need to be persisted, i.e. stored unencrypted on disk, it&amp;rsquo;s the global availability of the variable that makes it an environment variable.
 context target databaseFQDN dBpassword local TEST db1.nonprod.local $DB1_PASSWORD local UAT db2.nonprod.local $DB2_PASSWORD local PROD cluster.</description>
     </item>
     
     <item>
       <title>Legacy Features</title>
-      <link>/90-reference/20-feature-configuration/80-legacy-features/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/80-legacy-features/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/80-legacy-features/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/80-legacy-features/</guid>
       <description>Legacy Features Remote Deployment Machine to machine deployments are increasingly uncommon, as local agents/runners are readily available, making on-premise deployments from the build server an infrequent use case. While there is no plan to deprecate this capability, it&amp;rsquo;s complexity makes local testing i.e. shift-left complicated, especially in windows. For CDAF configuration, see Remote Tasks.
 Windows Remote PowerShell This approach uses the local host for both target (CD) and build (CI) execution.</description>
     </item>
     
     <item>
       <title>Variable Validation</title>
-      <link>/90-reference/20-feature-configuration/90-variable-validation/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/90-variable-validation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/90-variable-validation/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/90-variable-validation/</guid>
       <description>Variable Validation There are 5 rules available, two for plain text and three for secrets. When validating a secret against a known MD5 value, either a literal or variable can be supplied. See VARCHK in the execution engine operations
 # Plain text values OPT_ARG # Optional plain text terraform_version=required # Required plain text # Secret values TERRAFORM_TOKEN=optional # Optional secret TERRAFORM_TOKEN=secret # Required secret TERRAFORM_TOKEN=$TERRAFORM_TOKEN_MASK # Required secret verified against supplied SHA-256 value </description>
     </item>

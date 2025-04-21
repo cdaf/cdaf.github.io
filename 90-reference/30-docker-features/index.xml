@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker Features on Concepts &amp; Applied Examples</title>
-    <link>/90-reference/30-docker-features/</link>
+    <link>https://cdaf.io/90-reference/30-docker-features/</link>
     <description>Recent content in Docker Features on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/90-reference/30-docker-features/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/90-reference/30-docker-features/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>containerBuild</title>
-      <link>/90-reference/30-docker-features/10-configuration-mapping/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/10-configuration-mapping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/30-docker-features/10-configuration-mapping/</guid>
+      <guid>https://cdaf.io/90-reference/30-docker-features/10-configuration-mapping/</guid>
       <description>containerBuild Some CI/CD pipeline toolsets support native capability (GitLab, BitBucket) to execute with a container. In other some cases, (CircleCI, Travis) all pipeline activity can only be executed within containers.
 For toolsets which do not support this functionality, but do allow for self-hosted agents or where a self-hosted agent is preferred/mandated i.e. execution within a private network, the CDAF container helpers can provide consistency for construction, execution and housekeeping.
 Even with a toolset uses containers, if they support docker-in-docker, the CDAF container helpers can still be utilised.</description>
@@ -18,20 +18,20 @@ Even with a toolset uses containers, if they support docker-in-docker, the CDAF 
     
     <item>
       <title>containerBuild</title>
-      <link>/90-reference/30-docker-features/20-container-build/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/20-container-build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/30-docker-features/20-container-build/</guid>
+      <guid>https://cdaf.io/90-reference/30-docker-features/20-container-build/</guid>
       <description>containerBuild Master of Build Success The containerBuild option allows the execution of the build process from within a container. Unlike toolsets which reference a image that is used to create the build container, CDAF uses a Dockerfile, for the following advantages:
  Build Prerequisites can be defined in code, without being limited to available published images Once constructed the image image cache provides improved performance, without having to use a image registry Working directory and user home directory are volume mounted, to allow caching of build dependencies, e.</description>
     </item>
     
     <item>
       <title>imageBuild</title>
-      <link>/90-reference/30-docker-features/30-image-build/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/30-image-build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/30-docker-features/30-image-build/</guid>
+      <guid>https://cdaf.io/90-reference/30-docker-features/30-image-build/</guid>
       <description>imageBuild This helper script supports the creation of docker images, and conditionally, the pushing of that image to a registry.
 Container Build Configuration To execute, define the buildImage definition. Note: complete definitions are provided in the GitHub samples for Windows and Linux.
  The following samples have the default process commented out, and can be used to define a custom process.
@@ -40,10 +40,10 @@ Container Build Configuration To execute, define the buildImage definition. Note
     
     <item>
       <title>containerDeploy</title>
-      <link>/90-reference/30-docker-features/40-container-deploy/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/40-container-deploy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/30-docker-features/40-container-deploy/</guid>
+      <guid>https://cdaf.io/90-reference/30-docker-features/40-container-deploy/</guid>
       <description>containerDeploy Like containerBuild, containerDeploy provides both image build and container task execution. The common use for container deploy where a command line interface is required.
 Master of Deployment Success The containerDeploy option allows the execution of the deploy process from within a container. Unlike toolsets which reference a image that is used to create the deploy container, CDAF uses a Dockerfile, for the following advantages:
  Deploy Prerequisites can be defined in code, without being limited to available published images Once constructed the image image cache provides improved performance, without having to use a image registry  Container Deploy Configuration To execute the deploy within a container, add the containerDeploy definition and runtimeImage (if not supplied, containerImage will be used) to CDAF.</description>
@@ -51,10 +51,10 @@ Master of Deployment Success The containerDeploy option allows the execution of 
     
     <item>
       <title>dockerPush</title>
-      <link>/90-reference/30-docker-features/50-docker-push/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/50-docker-push/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/30-docker-features/50-docker-push/</guid>
+      <guid>https://cdaf.io/90-reference/30-docker-features/50-docker-push/</guid>
       <description>dockerPush Using the same logic after imageBuild, this utility script provides simple login and push logic.
 The script can be called passing arguments
 ./dockerPush.ps1 $TARGET_TAG cdaf/${SOLUTION} &amp;quot;${artifactPrefix}.${BUILDNUMBER} latest&amp;quot; $DOCKERHUB_TOKEN cdaf This example uses an environment variable (complete list follows) to set the URL. The registry in this example does not require authentication.

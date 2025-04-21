@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CDAF on Concepts &amp; Applied Examples</title>
-    <link>/</link>
+    <link>https://cdaf.io/</link>
     <description>Recent content in CDAF on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Helm Hello World</title>
-      <link>/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/</guid>
       <description>The following example is relatively complicated and doesn&amp;rsquo;t serve well as a learning exercise.
 Use the Helm Getting Started material to create a template which has all the appropriate structure and some example charts.
 The template does not work in OpenShift because the root-less containers do not allow Nginx to bind to port 80.
@@ -19,40 +19,40 @@ The template does not work in OpenShift because the root-less containers do not 
     
     <item>
       <title>Tokenised Values</title>
-      <link>/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/</guid>
       <description>To avoid the creation of multiple values YAML files, and the inherent structural drift of those files, a single file should be defined with tokenised settings. The CDAF configuration management feature can be used to provide a human readable settings definition which gives an abstraction from the complexity of the Helm files.
 example.cm context target replicaCount portcontainer LINUX 1 8081container dev 1 8080container TEST 2 8001container PROD 2 8000Now the values YAML contains tokens for deploy time replacement.</description>
     </item>
     
     <item>
       <title>Helm Repository</title>
-      <link>/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/</guid>
       <description>To provide Helm charts as a re-usable asset, Helm provides versioning and packaging. The resulting versioned packages can be consumed by multiple applications and environments. To ensure the release package is consistent and repeatable, the Helm packages are downloaded at build (CI) and not during deployment (CD). The packages are included in the release package so there are no external dependencies at deploy time.
 The Helm registry Helm command line can create the packaged templates and the required index file.</description>
     </item>
     
     <item>
       <title>Autonomous Development</title>
-      <link>/70-authoritative-release/10-autonomous-development/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-autonomous-development/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-autonomous-development/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-autonomous-development/</guid>
       <description>Imperative Image Construction Creating an artefact for compiled languages is well understood, and is an integral part of software delivery for languages such as .NET, Java and Typescript, however, for interpretive languages (Python, Ruby, PHP, Javascript), because the code in source control can be run without a &amp;ldquo;build&amp;rdquo;, it is tempting to deploy from source control. This has the following challenges:
  Fulfilling dependencies in production environment, can have network issues and, even with lock files, can result is different runtime outcomes.</description>
     </item>
     
     <item>
       <title>Component CI</title>
-      <link>/80-release-train/10-ado-release/10-component-ci/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/10-component-ci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/10-ado-release/10-component-ci/</guid>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/10-component-ci/</guid>
       <description>Autonomous Component Build &amp;amp; Test Each component contains both application code and deployment automation. The development team can imperatively deploy to the dev environment, i.e. the API and Vue application can be deployed separately, with no assurance of version alignment.
 Example Vue properties.cm file, the deployment tool used is Wrangler.
 context target pages_app_project fqdn api_url container DEV petstore-dev vue-dev.example.com api-dev.example.com container TEST petstore-tst vue-tst.example.com api-tst.example.com container PROD petstore-prd vue.example.com api.example.com Example API properties.</description>
@@ -60,10 +60,10 @@ context target pages_app_project fqdn api_url container DEV petstore-dev vue-dev
     
     <item>
       <title>Component Pipelines</title>
-      <link>/80-release-train/20-ansible-automation-platform/10-component-pipelines/</link>
+      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/10-component-pipelines/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/20-ansible-automation-platform/10-component-pipelines/</guid>
+      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/10-component-pipelines/</guid>
       <description>Autonomous Development Each development team is responsible to publishing a container image, how they do so it within their control, in this example GitLab and ThoughtWorks Go are used by different teams. The GitLab team are branch based, while the Go team are branch based.
 Both teams are using CDAF docker image build and push helpers.
 productName=Ruby on Rails productName=Springboot solutionName=rails solutionName=spring artifactPrefix=0.3 artifactPrefix=0.2 defaultBranch=main	containerImage=cdaf/linux buildImage=ruby:3.2.2 buildImage=registry.access.redhat.com/ubi9/openjdk-17-runtime CDAF_PUSH_REGISTRY_URL=${CI_REGISTRY} CDAF_PUSH_REGISTRY_URL=https://${NEXUS_REGISTRY} CDAF_PUSH_REGISTRY_TAG=${semver} latest CDAF_PUSH_REGISTRY_TAG=${NEXUS_REGISTRY}/${SOLUTION}:$BUILDNUMBER CDAF_PUSH_REGISTRY_USER=${CI_REGISTRY_USER} CDAF_PUSH_REGISTRY_USER=${NEXUS_REGISTRY_USER} CDAF_PUSH_REGISTRY_TOKEN=${CI_JOB_TOKEN} CDAF_PUSH_REGISTRY_TOKEN=${NEXUS_REGISTRY_PASS} Next, build a release package&amp;hellip;</description>
@@ -71,10 +71,10 @@ productName=Ruby on Rails productName=Springboot solutionName=rails solutionName
     
     <item>
       <title>Configuration Mapping</title>
-      <link>/90-reference/20-feature-configuration/10-configuration-mapping/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/10-configuration-mapping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/10-configuration-mapping/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/10-configuration-mapping/</guid>
       <description>Configuration Mapping The local and remote configuration will trigger a task execution based on each unique declaration of context and target, using the corresponding default task tasksRunLocal.tsk and tasksRunLocal.tsk.
 context target deployHost remote UAT vm.example.com local UAT vm.example.com remote PROD vm.example.com local PROD vm.example.com Customer tasks can be defined for directories customLocal and customRemote respectively, or custom if shared.
 context target deployTaskOverride local DOCKER docker-compose-test.tsk remote UAT on-premise-deploy.tsk remote PROD on-premise-deploy.</description>
@@ -82,10 +82,10 @@ context target deployTaskOverride local DOCKER docker-compose-test.tsk remote UA
     
     <item>
       <title>containerBuild</title>
-      <link>/90-reference/30-docker-features/10-configuration-mapping/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/10-configuration-mapping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/30-docker-features/10-configuration-mapping/</guid>
+      <guid>https://cdaf.io/90-reference/30-docker-features/10-configuration-mapping/</guid>
       <description>containerBuild Some CI/CD pipeline toolsets support native capability (GitLab, BitBucket) to execute with a container. In other some cases, (CircleCI, Travis) all pipeline activity can only be executed within containers.
 For toolsets which do not support this functionality, but do allow for self-hosted agents or where a self-hosted agent is preferred/mandated i.e. execution within a private network, the CDAF container helpers can provide consistency for construction, execution and housekeeping.
 Even with a toolset uses containers, if they support docker-in-docker, the CDAF container helpers can still be utilised.</description>
@@ -93,60 +93,60 @@ Even with a toolset uses containers, if they support docker-in-docker, the CDAF 
     
     <item>
       <title>Continuous Delivery</title>
-      <link>/20-principles-and-concepts/20-branch-plans/10-cd/</link>
+      <link>https://cdaf.io/20-principles-and-concepts/20-branch-plans/10-cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/20-principles-and-concepts/20-branch-plans/10-cd/</guid>
+      <guid>https://cdaf.io/20-principles-and-concepts/20-branch-plans/10-cd/</guid>
       <description>Continuous Delivery (CD) decouples the release activity from development activity. Unlike Continuous Deployment, Continuous Delivery has one or more approval gates. At time of writing, the majority of pipeline tools support approval gates, with the exception of the GitHub Free tier.
 The Continuous Delivery Maturity Model A fundamental aspect of Continuous Delivery is to build once and deploy many times. This means the output of the development process (Continuous Integration) is an artefact which can be re-used to deploy to multiple environments.</description>
     </item>
     
     <item>
       <title>Entry Points</title>
-      <link>/90-reference/10-framework-implementation/10-entry/</link>
+      <link>https://cdaf.io/90-reference/10-framework-implementation/10-entry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/10-framework-implementation/10-entry/</guid>
+      <guid>https://cdaf.io/90-reference/10-framework-implementation/10-entry/</guid>
       <description>CDAF Entry Scripts CDAF providers 4 entry scripts for different purposes.
  ci : Build and Package only, i.e. Continuous Integration, mandatory argument is BUILDNUMBER cd : Release, i.e. Continuous Delivery or Deploy (depending on gating or not), mandatory argument is ENVIRONMENT cdEmulate : Executes ci and then cd, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT entry : Executes ci and then cd, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT(s)  The CI entry point (ci.</description>
     </item>
     
     <item>
       <title>Manifest</title>
-      <link>/70-authoritative-release/40-terraform-kubernetes/10-manifest/</link>
+      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/10-manifest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/40-terraform-kubernetes/10-manifest/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/10-manifest/</guid>
       <description>Declare Container Deployment as Terraform Package The key component of the package is the release manifest, this declares the component versions of the solution. The desired state engine (Terraform) will ensure all components for the release align with the declaration in the manifest. These are added to your CDAF.solution file.
 solutionName=kat artifactPrefix=0.4 ui_image=cdaf/cdaf:572 api_image=cdaf/kestrel:ubuntu-22.04-14 fast_image=cdaf/fastapi:50 While the stack construction is the same in all environments, unique settings for each environment are defined in configuration management files, e.</description>
     </item>
     
     <item>
       <title>Manifest</title>
-      <link>/70-authoritative-release/50-custom-state-management/10-manifest/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/10-manifest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/50-custom-state-management/10-manifest/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/10-manifest/</guid>
       <description>Declare Anypoint Components as Package The proprietary Mulesoft Anypoint Platform artefact store is called Exchange, and each artefact is called an Asset. Each asset is pushed to the exchange from the autonomous development pipelines. In the examples below, these are GitLab for Windows and Jenkins for Linux. Both use platform independent Maven deploy to push the asset.
 The release declaration is in the form of a manifest, specifying each desired component and it&amp;rsquo;s version.</description>
     </item>
     
     <item>
       <title>Manifest</title>
-      <link>/80-release-train/40-terraform-cloud/10-manifest/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/10-manifest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/40-terraform-cloud/10-manifest/</guid>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/10-manifest/</guid>
       <description>Declare Container Deployment as Terraform Package The key component of the package is the release manifest, this declares the component versions of the solution. The desired state engine (Terraform) will ensure all components for the release align with the declaration in the manifest. These are added to your CDAF.solution file.
 solutionName=kat artifactPrefix=0.4 ui_image=cdaf/cdaf:572 api_image=cdaf/kestrel:ubuntu-22.04-14 fast_image=cdaf/fastapi:50 While the stack construction is the same in all environments, unique settings for each environment are defined in configuration management files, e.</description>
     </item>
     
     <item>
       <title>Octopus Pane of Glass</title>
-      <link>/80-release-train/30-octopus-deploy/10-manifest/</link>
+      <link>https://cdaf.io/80-release-train/30-octopus-deploy/10-manifest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/30-octopus-deploy/10-manifest/</guid>
+      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/10-manifest/</guid>
       <description>Overview of Stack Components As an intermediatry, Octopus provides release gating, orchestration and a overview of the stack components, and what versions have been promoted to which environments.
 Parent Project The parent project does not perform any deployment activity itself, it serves as the orchestrator of the child projects, providing gating and sequencing.
 Child Projects The child project, use the same template process, but each has the release packages that have been build to perform their technology specific deployment process.</description>
@@ -154,10 +154,10 @@ Child Projects The child project, use the same template process, but each has th
     
     <item>
       <title>Seed Solution</title>
-      <link>/10-cdaf/10-getting-started/10-ci/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/10-ci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/10-cdaf/10-getting-started/10-ci/</guid>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/10-ci/</guid>
       <description>Continuous Integration (CI) is a critical prerequisite of Continuous Delivery/Deployment (CD).
 Create a Release Package To allow the execution of the build and package (CI) process on the DevOps Engineers machine, CDAF is used for both loose coupling and standardisation. CDAF provides a variety of features which provide consistency, especially important and the number of pipelines grow and the team members move between both squads and value streams.
 Install on Windows To install to current directory, recommend placing in your home directory, or download latest zip.</description>
@@ -165,10 +165,10 @@ Install on Windows To install to current directory, recommend placing in your ho
     
     <item>
       <title>Tokenisation</title>
-      <link>/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/</link>
+      <link>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/</guid>
+      <guid>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/</guid>
       <description>Abstraction of Application Settings In this example, the ASP.NET solution creates a Web Deploy package. A common approach for this is to create a build for each environment with the settings transformed into environment specific .config files.
 In the CDAF approach, a single, tokenised, configuration file, i.e. Web.Release.config is produced. The principle of a single way of working encourages the abstraction of application settings from the internal representation.
 Note: The Release build is used in this example, to avoid breaking the development experience which typically uses the Debug configuration.</description>
@@ -176,20 +176,20 @@ Note: The Release build is used in this example, to avoid breaking the developme
     
     <item>
       <title>Tokenisation</title>
-      <link>/30-imperative-deployment/40-static-content/10-tokenisation/</link>
+      <link>https://cdaf.io/30-imperative-deployment/40-static-content/10-tokenisation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/30-imperative-deployment/40-static-content/10-tokenisation/</guid>
+      <guid>https://cdaf.io/30-imperative-deployment/40-static-content/10-tokenisation/</guid>
       <description>Abstraction of Application Settings As the application is static content, runtime variables are not applicable, however, variations in the application configuration at deploy time can, on occasions, be applicable, e.g. using a different Google Tag Manager (GTM) for production and non-production environments to ensure the analytics are not contaminated.
 Within source control there are two tokens applied. The first is a build-time token, which captures the semantic version. This is constructed from a release prefix and build number.</description>
     </item>
     
     <item>
       <title>Branch Deploy</title>
-      <link>/20-principles-and-concepts/20-branch-plans/20-branch-deploy/</link>
+      <link>https://cdaf.io/20-principles-and-concepts/20-branch-plans/20-branch-deploy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/20-principles-and-concepts/20-branch-plans/20-branch-deploy/</guid>
+      <guid>https://cdaf.io/20-principles-and-concepts/20-branch-plans/20-branch-deploy/</guid>
       <description>Where the pipeline tool does not support approval gating, but a review and approval mechanism is desired, the &amp;ldquo;Pull Request&amp;rdquo;/&amp;ldquo;Merge Request&amp;rdquo; can be used. The resulting approval will rebuild the solution and deliver it to the defined environment.
 Branch Based Deployment There are a variety of methods used within a branch based deployment approach, the following is a common example.
 A long-living branch is defined for each target environment, in this example dev, test and release.</description>
@@ -197,10 +197,10 @@ A long-living branch is defined for each target environment, in this example dev
     
     <item>
       <title>Component CD</title>
-      <link>/80-release-train/10-ado-release/20-component-cd/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/20-component-cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/10-ado-release/20-component-cd/</guid>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/20-component-cd/</guid>
       <description>Autonomous Component Deploy By using the feature-branch.properties capability of CDAF, branches containing the string dev will deploy to the development environment. This feature allows imperative deployment by the development team, without manipulating the pipeline, and therefore avoiding drift.
 vue
 # Feature Branch name match mapping to environment dev=DEV API
@@ -209,30 +209,30 @@ vue
     
     <item>
       <title>containerBuild</title>
-      <link>/90-reference/30-docker-features/20-container-build/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/20-container-build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/30-docker-features/20-container-build/</guid>
+      <guid>https://cdaf.io/90-reference/30-docker-features/20-container-build/</guid>
       <description>containerBuild Master of Build Success The containerBuild option allows the execution of the build process from within a container. Unlike toolsets which reference a image that is used to create the build container, CDAF uses a Dockerfile, for the following advantages:
  Build Prerequisites can be defined in code, without being limited to available published images Once constructed the image image cache provides improved performance, without having to use a image registry Working directory and user home directory are volume mounted, to allow caching of build dependencies, e.</description>
     </item>
     
     <item>
       <title>Continuous Integration (CI)</title>
-      <link>/30-imperative-deployment/20-asp-net-web-deploy/20-ci/</link>
+      <link>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/20-ci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/30-imperative-deployment/20-asp-net-web-deploy/20-ci/</guid>
+      <guid>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/20-ci/</guid>
       <description>Build &amp;amp; Package Once The primary driver file for CDAF is the CDAF.solution file. The directory containing this file is the SOLUTIONROOT. The mandatory properties are solutionName and artifactPrefix.
 solutionName=MyAspApp artifactPrefix=0.1 Build Process The CDAF Execution Engine is used to reduce the cognitive load, allowing the engineer to focus on the primary objective, and not have to cater for logging, exception and error handling. The build.tsk file is placed in the project sub-directory.</description>
     </item>
     
     <item>
       <title>Continuous Integration (CI)</title>
-      <link>/30-imperative-deployment/30-java-maven/20-ci/</link>
+      <link>https://cdaf.io/30-imperative-deployment/30-java-maven/20-ci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/30-imperative-deployment/30-java-maven/20-ci/</guid>
+      <guid>https://cdaf.io/30-imperative-deployment/30-java-maven/20-ci/</guid>
       <description>Build &amp;amp; Package Once To provide a runtime verification of the build that has been deployed, the version is automatically incremented by placing a variable in the pom.xml file
 &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; .. &amp;lt;artifactId&amp;gt;springboot&amp;lt;/artifactId&amp;gt; &amp;lt;groupId&amp;gt;io.cdaf&amp;lt;/groupId&amp;gt; &amp;lt;name&amp;gt;Spring Boot Data REST Sample&amp;lt;/name&amp;gt; &amp;lt;description&amp;gt;Spring Boot Data REST Sample&amp;lt;/description&amp;gt; &amp;lt;version&amp;gt;0.2.${build.number}&amp;lt;/version&amp;gt; In the build task, the build number is supplied as a maven parameter
 mvn --batch-mode --file springboot/pom.xml package -D&amp;#34;build.number=${BUILDNUMBER}&amp;#34; The resulting artefact is in a subdirectory, buy using the -flat parameter in storeForLocal the artefact will be placed in the root of release package.</description>
@@ -240,30 +240,30 @@ mvn --batch-mode --file springboot/pom.xml package -D&amp;#34;build.number=${BUI
     
     <item>
       <title>Continuous Integration (CI)</title>
-      <link>/30-imperative-deployment/40-static-content/20-ci/</link>
+      <link>https://cdaf.io/30-imperative-deployment/40-static-content/20-ci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/30-imperative-deployment/40-static-content/20-ci/</guid>
+      <guid>https://cdaf.io/30-imperative-deployment/40-static-content/20-ci/</guid>
       <description>Build &amp;amp; Package Once The primary driver file for CDAF is the CDAF.solution file. The directory containing this file is the SOLUTIONROOT. The mandatory properties are solutionName and artifactPrefix.
 solutionName=classbwizard productName=React Class B Recreational Vehicle Comparison Tool artifactPrefix=0.5 Build Process The CDAF Execution Engine is used to reduce the cognitive load, allowing the engineer to focus on the primary objective, and not have to cater for logging, exception and error handling.</description>
     </item>
     
     <item>
       <title>Custom State Build</title>
-      <link>/70-authoritative-release/50-custom-state-management/20-build-once/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/50-custom-state-management/20-build-once/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/</guid>
       <description>Custom State Release Package The key construct for the Authoritative Release is that all aspects of the release process are predictable and repeatable. Configuration and helper scripts are packaged into an immutable release. No build process is required, so the minimal CDAF.solution is all that is required, assuming the custom state management is placed in the custom directory within the solution directory, e.g.
 devops ├── CDAF.solution ├── custom │ ├── anypoint.</description>
     </item>
     
     <item>
       <title>Decoupled Deployment</title>
-      <link>/80-release-train/30-octopus-deploy/20-deploy-many/</link>
+      <link>https://cdaf.io/80-release-train/30-octopus-deploy/20-deploy-many/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/30-octopus-deploy/20-deploy-many/</guid>
+      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/20-deploy-many/</guid>
       <description>Orchestrated Release The core principle of all the examples in this material is the production of a self-contained, immutable release package. This provides loose coupling with tool chains and re-usability for development environments (see Realising the Feedback Loop).
 While Octopus provides a wide range of deployment mechanisms, as a release orchestrator, each child project has the same process, executing the release package for each component against the target environment.
 Delivery Lifecycle Octopus orchestration is called a lifecycle, which is a re-usable pattern.</description>
@@ -271,69 +271,69 @@ Delivery Lifecycle Octopus orchestration is called a lifecycle, which is a re-us
     
     <item>
       <title>Execution Engine</title>
-      <link>/90-reference/20-feature-configuration/20-execution-engine/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/20-execution-engine/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/20-execution-engine/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/20-execution-engine/</guid>
       <description>Execution Engine To alleviate the burden of argument passing, exception handling and logging, the execution engine has been provided. The execution engine will essentially execute the native interpretive language (PowerShell or bash), line by line, but each execution will be tested for exceptions (trivial in bash, significantly more complex in PowerShell).
 Where is it used In all places using .tsk files, i.e. build, package, wrap and deploy. The following operations are available to all tasks, however, some are more applicable to specific processes, see Build, Local and Remote task execution for more details of how these can be used.</description>
     </item>
     
     <item>
       <title>Pipeline</title>
-      <link>/10-cdaf/10-getting-started/20-pipeline/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/10-cdaf/10-getting-started/20-pipeline/</guid>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/</guid>
       <description>CDAF provides a loose coupling for core CI &amp;amp; CD objectives. The intention is that the CI &amp;amp; CD processing is performed on the developers desktop, and then executed in the same way in the pipeline tool. By establishing a healthy pipeline as soon as possible, any pipeline failures can be quickly and incrementally identified.
 Pipeline Orchestration and Capabilities The CI process gathers files from source control, then uses the CDAF CI entry point to produce the release package.</description>
     </item>
     
     <item>
       <title>Task Processing</title>
-      <link>/90-reference/10-framework-implementation/20-execution-engine/</link>
+      <link>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/10-framework-implementation/20-execution-engine/</guid>
+      <guid>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/</guid>
       <description>Execution Engine The CDAF execution engine allows the DevOps Engineer to focus on the primary objective, and not have to cater for logging, exception and error handling. Within this engine are a set of operations for common problems, further allowing a focus on results and rewriting/copying scripts. See Execution Engine documentation.
  Note: The following is details a subset of CDAF capabilities, describing a common usage, For a detailed breakdown of each component, see the CDAF Reference Guide.</description>
     </item>
     
     <item>
       <title>Terraform Build</title>
-      <link>/70-authoritative-release/40-terraform-kubernetes/20-build-once/</link>
+      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/20-build-once/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/40-terraform-kubernetes/20-build-once/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/20-build-once/</guid>
       <description>Immutable Release Package The key construct for the Authoritative Release is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Terraform dependencies, modules are not downloaded at deploytime, instead they are resolved at build time and packaged into an immutable release package. For a consistent way-of-working, the Terraform build process resolves and validates dependencies.
 Build-time Module Resolution Most Terraform module resolution approaches are to pull from source control (Git) or registry at deploy-time, which can require additional credential management, risks unexpected module changes (if tags are used) and potential network connectivity issues.</description>
     </item>
     
     <item>
       <title>Terraform Build</title>
-      <link>/80-release-train/40-terraform-cloud/20-build-once/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/20-build-once/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/40-terraform-cloud/20-build-once/</guid>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/20-build-once/</guid>
       <description>Immutable Release Package The key construct for the Authoritative Release is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Terraform dependencies, modules are not downloaded at deploytime, instead they are resolved at build time and packaged into an immutable release package. For a consistent way-of-working, the Terraform build process resolves and validates dependencies.
 Build-time Module Resolution Most Terraform module resolution approaches are to pull from source control (Git) or registry at deploy-time, which can require additional credential management, risks unexpected module changes (if tags are used) and potential network connectivity issues.</description>
     </item>
     
     <item>
       <title>Build</title>
-      <link>/10-cdaf/10-getting-started/30-ci/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/30-ci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/10-cdaf/10-getting-started/30-ci/</guid>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/30-ci/</guid>
       <description>Continuous Integration Continuous Integration (CI) is the objective of bringing code branches together and building them to produce a consolidated artefact. This shift-left approach ensures the efforts of multiple contributors are combined and tested regularly. The testing within CI typically starts with unit testing, and that should be included in the build task. For some ecosystems this is an implicit or parameterised part of the build command, others, it’s separate command.</description>
     </item>
     
     <item>
       <title>Component Publish</title>
-      <link>/80-release-train/10-ado-release/30-component-publish/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/30-component-publish/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/10-ado-release/30-component-publish/</guid>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/30-component-publish/</guid>
       <description>Autonomous Component Publication the final stage of the main pipeline is publication. This pushes the release package to the artefact registry.
 Each component publishes their release package, so although they use different technologies, they are now available as consistent packages, using the CDAF package process, which outputs a self-extract release.ps1 (of release.sh for linux) file.
 Next, Release&amp;hellip;</description>
@@ -341,30 +341,30 @@ Next, Release&amp;hellip;</description>
     
     <item>
       <title>Continuous Delivery (CD)</title>
-      <link>/30-imperative-deployment/20-asp-net-web-deploy/30-cd/</link>
+      <link>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/30-cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/30-imperative-deployment/20-asp-net-web-deploy/30-cd/</guid>
+      <guid>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/30-cd/</guid>
       <description>Deploy Many The tokenised configuration files need to be detokenised at deploy time. The settings are likely to include both sensitive and non-sensitive values. A core principle of CDAF for sensitive values is based on the 12-Factor approach of using environment variables, while source control is the recommended approach for non-sensitive values.
 Why Source Control for Settings? The Continuous Delivery Automation Framework (CDAF) has been engineered for enterprise scale implementations. Large scale organisations typically have a higher focus on gating and auditing, and to provide a change of configuration audit trail, along with a single way-of-working, the configuration changes are applied using the same principles as other deliveries, e.</description>
     </item>
     
     <item>
       <title>Continuous Delivery (CD)</title>
-      <link>/30-imperative-deployment/30-java-maven/30-cd/</link>
+      <link>https://cdaf.io/30-imperative-deployment/30-java-maven/30-cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/30-imperative-deployment/30-java-maven/30-cd/</guid>
+      <guid>https://cdaf.io/30-imperative-deployment/30-java-maven/30-cd/</guid>
       <description>Deploy Many While this example does not delivery the software component imperatively, i.e. it is release declaratively via the Release Train, a Continuous Delivery stage is still performed, however this is a closed loop process, where docker-compose is used to stand-up a container instance from the image, stand-up another container to perform a smoke test, and then tear down the stack.
 services: target: image: &amp;#34;${TARGET_TAG}&amp;#34; test: image: &amp;#34;${TEST_TAG}&amp;#34; links: - target:target depends_on: - target </description>
     </item>
     
     <item>
       <title>Continuous Delivery (CD)</title>
-      <link>/30-imperative-deployment/40-static-content/30-cd/</link>
+      <link>https://cdaf.io/30-imperative-deployment/40-static-content/30-cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/30-imperative-deployment/40-static-content/30-cd/</guid>
+      <guid>https://cdaf.io/30-imperative-deployment/40-static-content/30-cd/</guid>
       <description>Deploy Many The continuous delivery has multiple phases, first is a closed-loop test, then are the runtime environments, which are promoted, starting with acceptance test.
 Closed-Loop Test This first delivery stage used docker-compose to stand-up, test and tear-down an environment. This environment is transient and not accessible by manual testers.
 services: classb: image: &amp;#34;${CLASSB_TAG}&amp;#34; ports: - &amp;#34;8000:8000&amp;#34; test: image: &amp;#34;${TEST_TAG}&amp;#34; volumes: - ${WORK_SPACE}:/solution/workspace links: - classb:classb depends_on: - classb Release Promotion After the closed-loop tests have passed, then the deployment to user acceptance test is performed.</description>
@@ -372,10 +372,10 @@ services: classb: image: &amp;#34;${CLASSB_TAG}&amp;#34; ports: - &amp;#34;8000:
     
     <item>
       <title>Environment Variables</title>
-      <link>/90-reference/20-feature-configuration/30-environment-variables/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/30-environment-variables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/30-environment-variables/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/30-environment-variables/</guid>
       <description>Environment Variables Due to inconsistencies between Windows and Linux handling of environment variables, these have been divided between environment variables that are set before calling an entry script to alter the behaviour of CDAF, and environment variables that are set within bash scripts to make them globally available.
 Control Variables The following environment variables are available to control the behaviour of CDAF
    Variable Description     CDAF_BRANCH_NAME Used by entry.</description>
@@ -383,10 +383,10 @@ Control Variables The following environment variables are available to control t
     
     <item>
       <title>GitOps</title>
-      <link>/20-principles-and-concepts/20-branch-plans/30-gitops/</link>
+      <link>https://cdaf.io/20-principles-and-concepts/20-branch-plans/30-gitops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/20-principles-and-concepts/20-branch-plans/30-gitops/</guid>
+      <guid>https://cdaf.io/20-principles-and-concepts/20-branch-plans/30-gitops/</guid>
       <description>GitOps is another branch based deployment approach, however it typically does not have a Continuous Integration construct, and instead deploys directly from source control.
 Branch Based Deployment Directly from Source Control GitOps is commonly portrayed as Trunk Based
 Each target environment maybe defined as a directory, but in many some cases, i.e. to provide a gating mechanism, like Branch Based Deployment, multiple long-lived branches are used.</description>
@@ -394,10 +394,10 @@ Each target environment maybe defined as a directory, but in many some cases, i.
     
     <item>
       <title>imageBuild</title>
-      <link>/90-reference/30-docker-features/30-image-build/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/30-image-build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/30-docker-features/30-image-build/</guid>
+      <guid>https://cdaf.io/90-reference/30-docker-features/30-image-build/</guid>
       <description>imageBuild This helper script supports the creation of docker images, and conditionally, the pushing of that image to a registry.
 Container Build Configuration To execute, define the buildImage definition. Note: complete definitions are provided in the GitHub samples for Windows and Linux.
  The following samples have the default process commented out, and can be used to define a custom process.
@@ -406,60 +406,60 @@ Container Build Configuration To execute, define the buildImage definition. Note
     
     <item>
       <title>Manifest</title>
-      <link>/80-release-train/20-ansible-automation-platform/30-manifest/</link>
+      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/30-manifest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/20-ansible-automation-platform/30-manifest/</guid>
+      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/30-manifest/</guid>
       <description>Application Stack Declaration The key component of the package is the release manifest, this declares the component versions of the solution. The desired state engine (Ansible) will ensure all components for the release align with the declaration in the manifest. These are added to your CDAF.solution file. To see an example component build, see the Java SpringBoot example.
 artifactPrefix=1.2 productName=Ansible Provisioning solutionName=ansible # SMTP Configuration smtp_image=registry.example/mails:0.0.26 smtp_container_name=mail_forwarder smtp_container_ports=25:25 LISTEN_PORT=25 SITE_NAME=onprem # OAuth Verification App rails_image=registry.</description>
     </item>
     
     <item>
       <title>Ansible Build</title>
-      <link>/80-release-train/20-ansible-automation-platform/40-build-once/</link>
+      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/40-build-once/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/20-ansible-automation-platform/40-build-once/</guid>
+      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/40-build-once/</guid>
       <description>Immutable Release Package The key construct for the Release Train is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Ansible dependencies, playbooks are not downloaded at deploytime, instead they are resolved at build time and packaged into an immutable release package. For a consistent way-of-working, the Ansible build process resolves dependencies and validates the playbooks.
 Due to the complexity, a customer build script build.</description>
     </item>
     
     <item>
       <title>Configuration Management</title>
-      <link>/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/</link>
+      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/</guid>
       <description>Tokens and Properties To avoid a configuration file for each environment, and the inevitable drift between those files, a single, tokenised, definition is used.
 variable &amp;quot;aks_work_space&amp;quot; { default = &amp;quot;%aks_work_space%&amp;quot; } variable &amp;quot;name_space&amp;quot; { default = &amp;quot;%name_space%&amp;quot; } variable &amp;quot;REGISTRY_KEY&amp;quot; { default = &amp;quot;@REGISTRY_KEY@&amp;quot; } variable &amp;quot;REGISTRY_KEY_SHA { default = &amp;quot;@REGISTRY_KEY_SHA@&amp;quot; } To De-tokenise this definition at deploy time, name/value pair files are used. This allows the settings to be decoupled from the complexity of configuration file format.</description>
     </item>
     
     <item>
       <title>Configuration Management</title>
-      <link>/70-authoritative-release/50-custom-state-management/40-configuration-management/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/40-configuration-management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/50-custom-state-management/40-configuration-management/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/40-configuration-management/</guid>
       <description>Building Desired State from Properties The application and environment settings are split into separate configuration management files. Application settings are those which have the same value, for the release, in all environments.
 context target region runtime_version java_version release_channel container patient-summary-app cloudhub-us-east-2 4.6.7 8 LTS container sprint-zero-app cloudhub-us-east-2 4.7.1 17 Edge Environment specific settings are associated to a given component, and differ for each environment. Note the special marker for sensitive data.</description>
     </item>
     
     <item>
       <title>Configuration Management</title>
-      <link>/80-release-train/40-terraform-cloud/40-configuration-management/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/40-configuration-management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/40-terraform-cloud/40-configuration-management/</guid>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/40-configuration-management/</guid>
       <description>Tokens and Properties To avoid a configuration file for each environment, and the inevitable drift between those files, a single, tokenised, definition is used.
 variable &amp;quot;aks_work_space&amp;quot; { default = &amp;quot;%aks_work_space%&amp;quot; } variable &amp;quot;name_space&amp;quot; { default = &amp;quot;%name_space%&amp;quot; } variable &amp;quot;REGISTRY_KEY&amp;quot; { default = &amp;quot;@REGISTRY_KEY@&amp;quot; } variable &amp;quot;REGISTRY_KEY_SHA { default = &amp;quot;@REGISTRY_KEY_SHA@&amp;quot; } To De-tokenise this definition at deploy time, name/value pair files are used. This allows the settings to be decoupled from the complexity of configuration file format.</description>
     </item>
     
     <item>
       <title>containerDeploy</title>
-      <link>/90-reference/30-docker-features/40-container-deploy/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/40-container-deploy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/30-docker-features/40-container-deploy/</guid>
+      <guid>https://cdaf.io/90-reference/30-docker-features/40-container-deploy/</guid>
       <description>containerDeploy Like containerBuild, containerDeploy provides both image build and container task execution. The common use for container deploy where a command line interface is required.
 Master of Deployment Success The containerDeploy option allows the execution of the deploy process from within a container. Unlike toolsets which reference a image that is used to create the deploy container, CDAF uses a Dockerfile, for the following advantages:
  Deploy Prerequisites can be defined in code, without being limited to available published images Once constructed the image image cache provides improved performance, without having to use a image registry  Container Deploy Configuration To execute the deploy within a container, add the containerDeploy definition and runtimeImage (if not supplied, containerImage will be used) to CDAF.</description>
@@ -467,20 +467,20 @@ Master of Deployment Success The containerDeploy option allows the execution of 
     
     <item>
       <title>Package</title>
-      <link>/10-cdaf/10-getting-started/40-package/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/40-package/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/10-cdaf/10-getting-started/40-package/</guid>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/40-package/</guid>
       <description>Build-Once/Deploy-Many An objective of Continuous Delivery is to have a predictable, repeatable, deployment process. A fundamental principle of CDAF to achieve this producing an immutable release package. This decouples the deployment process from the source management process. The release package is a self-contained deployment asset, and should be executable anywhere, i.e. on the automation developers desktop, within the pipeline or even manually file transferred to a remote server.
 Artefact Retention In the Configuration Management step, a default release package was created which contained properties files.</description>
     </item>
     
     <item>
       <title>Release</title>
-      <link>/80-release-train/10-ado-release/40-release/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/40-release/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/10-ado-release/40-release/</guid>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/40-release/</guid>
       <description>Full Stack Release The ADO Release function is used to create a release, and promote it through the environments. The release obtains the components from the artefact store
 The Release is defined in order of dependency, i.e. the CloudFlare infrastructure is created/updated and configured with the API, then the front-end is deployed to the infrastructure.
  The release itself includes to deployment logic, it simply invokes the packages provided by the component development team.</description>
@@ -488,10 +488,10 @@ The Release is defined in order of dependency, i.e. the CloudFlare infrastructur
     
     <item>
       <title>Solution Properties</title>
-      <link>/90-reference/20-feature-configuration/40-solution-properties/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/40-solution-properties/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/40-solution-properties/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/40-solution-properties/</guid>
       <description>Solution Properties CDAF.solution : file to identify a directory as the automation solution directory where the key configuration files are placed. This file is used as the bases of the manifest.txt file while is included in the resulting CI artefact package.
 See solution/CDAF.solution in CDAF automation directory.
 Solution Properties    Variable Description     solutionName Required. Do not include spaces.   productName Solution description, this can contain spaces.</description>
@@ -499,40 +499,40 @@ Solution Properties    Variable Description     solutionName Required. Do not in
     
     <item>
       <title>Ansible Deploy</title>
-      <link>/80-release-train/20-ansible-automation-platform/50-deploy-many/</link>
+      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/50-deploy-many/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/20-ansible-automation-platform/50-deploy-many/</guid>
+      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/50-deploy-many/</guid>
       <description>Detokenisation and Release At deploy time, the solution manifest and environment settings are applied, the following is an extract from the tower.tsk.
 echo &amp;quot;De-tokenise Environment properties prior to loading to Tower&amp;quot; DETOKN roles/apache-reverse-proxy/vars/main.yml echo &amp;quot;Resolve global config, i.e. container image version, then environment specific list names&amp;quot; DETOKN roles/smtp/vars/main.yml DETOKN roles/smtp/vars/main.yml $WORKSPACE/manifest.txt DETOKN roles/rails/vars/main.yml DETOKN roles/rails/vars/main.yml $WORKSPACE/manifest.txt DETOKN roles/spring/vars/main.yml DETOKN roles/spring/vars/main.yml $WORKSPACE/manifest.txt As the Ansible Automation Platform is the intermediary, the declarations need to be moved to intermediary and then the release triggered.</description>
     </item>
     
     <item>
       <title>Continuous Delivery</title>
-      <link>/10-cdaf/10-getting-started/50-cd/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/50-cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/10-cdaf/10-getting-started/50-cd/</guid>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/50-cd/</guid>
       <description>Continuous Integration (CI) is a critical prerequisite of production-like stand-up/tear-down, i.e. if it can&amp;rsquo;t be build on the engineers machine, it can&amp;rsquo;t be deployed from the engineers machine.
 Configuration Management and Automated Deployment Configuration Management CDAF origin was to ensure consistent configuration of servers across environments, based on a source of truth. The partner construct to this approach is tokenisation, i.e. a way of abstracting environment variations away from the syntax of the consuming application.</description>
     </item>
     
     <item>
       <title>Deploy</title>
-      <link>/70-authoritative-release/40-terraform-kubernetes/50-deploy/</link>
+      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/50-deploy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/40-terraform-kubernetes/50-deploy/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/50-deploy/</guid>
       <description>Deploy-time Detokenisation To support the build-once/deploy-many model, the environment specific values are injected and then deployed for the release. Note that the release is immutable, and any change to any component will require a new release to be created, eliminating cherry picking. The tasksRun.tsk performs two levels of detokenisation, the first is for environment specific settings, and the second applies any solution level declarations.
 Write-Host &amp;quot;[$TASK_NAME] Generic Properties Detokenisation`n&amp;quot; -ForegroundColor Cyan Get-Content variables.</description>
     </item>
     
     <item>
       <title>Desired State</title>
-      <link>/70-authoritative-release/50-custom-state-management/50-desired-state/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/50-custom-state-management/50-desired-state/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/</guid>
       <description>Determining Change At deploy time, the current state, and desired state are compared, and only those components which have changed, are deployed.
  In this example, deployment is orchestrated in Octopus Deploy Release Train
  Once complete, the new current state is persisted.
@@ -542,10 +542,10 @@ Note that the overarching release number is used as a update comment when writin
     
     <item>
       <title>dockerPush</title>
-      <link>/90-reference/30-docker-features/50-docker-push/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/50-docker-push/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/30-docker-features/50-docker-push/</guid>
+      <guid>https://cdaf.io/90-reference/30-docker-features/50-docker-push/</guid>
       <description>dockerPush Using the same logic after imageBuild, this utility script provides simple login and push logic.
 The script can be called passing arguments
 ./dockerPush.ps1 $TARGET_TAG cdaf/${SOLUTION} &amp;quot;${artifactPrefix}.${BUILDNUMBER} latest&amp;quot; $DOCKERHUB_TOKEN cdaf This example uses an environment variable (complete list follows) to set the URL. The registry in this example does not require authentication.
@@ -555,49 +555,49 @@ export CDAF_PUSH_REGISTRY_URL=hub.private.registry ./dockerPush.sh ${SOLUTION}_m
     
     <item>
       <title>Extended Processes</title>
-      <link>/90-reference/20-feature-configuration/50-extended-processes/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/50-extended-processes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/50-extended-processes/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/50-extended-processes/</guid>
       <description>Extended Processes Optional Build Processes By placing these files in your solution root, the processes will execute as described
    File Name Description     prebuild.tsk Execute after Configuration Management processing, but before any build tasks   postbuild.tsk Execute after solution and project level build tasks are complete    Optional Package Processes By placing these files in your solution root, the processes will execute as described</description>
     </item>
     
     <item>
       <title>Release</title>
-      <link>/80-release-train/40-terraform-cloud/50-release/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/50-release/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/40-terraform-cloud/50-release/</guid>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/50-release/</guid>
       <description>Release Construction The release combines the Infrastructure-as-Code (IaC) Continuous Integration (CI) output with the application components from Terraform Authoritative Release. The application authoritative release package (in green below) declares the image versions to be deployed to the infrastructure provided by the IaC release package.
 graph LR Key[&#34;LegendBlue - IaC &amp; CMGreen - Application Stack&#34;] subgraph ado[&#34;Azure DevOps&#34;] git[(Git)] build-artefact[(Build)] iac[&#34;release.ps1&#34;] package-artefact[(Artifacts)] app[&#34;release.ps1&#34;] end subgraph az[&#34;Azure&#34;] qa pp pr end registry[(Docker Registry)] git --CI-- build-artefact build-artefact --CD-- iac package-artefact --CD-- app registry -.</description>
     </item>
     
     <item>
       <title>Business Visibility</title>
-      <link>/80-release-train/30-octopus-deploy/60-business-visibility/</link>
+      <link>https://cdaf.io/80-release-train/30-octopus-deploy/60-business-visibility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/30-octopus-deploy/60-business-visibility/</guid>
+      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/60-business-visibility/</guid>
       <description>Non-techincal Release View After each environment deployment is successful, a Confluence page (one per component/environment) is updated, capturing release details. This provides visibility outside of the toolchain, which is easier to access by business users such as test managers and product owners. Using the content include macro, these pages can be merged.</description>
     </item>
     
     <item>
       <title>Feature Branch Execution</title>
-      <link>/90-reference/20-feature-configuration/60-feature-branch-execution/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/60-feature-branch-execution/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/60-feature-branch-execution/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/60-feature-branch-execution/</guid>
       <description>Feature Branch Execution Place feature-branch.properties in your SOLUTIONROOT to allow dynamic delivery execution, based on Git Branch name. This capability is limited to entry.sh/entry.bat/entry.ps1, which are Git aware, and the recommended loose coupling entry scripts for CDAF.
 # Separate environments for features and bugs feature=DEV1 bugfix=DEV2 # Hotfixes deploy to all environments hotfix=DEV1 hotfix=DEV2 See CDAF Samples for complete implementations in Linux and Windows.</description>
     </item>
     
     <item>
       <title>Feedback Loop</title>
-      <link>/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/</link>
+      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/</guid>
       <description>Realising the Feedback Loop Based on Realising the Feedback Loop, once the package has been promoted to it&amp;rsquo;s last stage, it is then pushed to the artefact store
 In this example Azure DevOps (ADO) using the az artifacts extension, see the example push.tsk.
 Write-Host &amp;quot;[$TASK_NAME] Verify deployable artefact is available`n&amp;quot; $package_name = (Get-Item &amp;quot;$(PWD)\release.ps1&amp;quot; -ErrorAction SilentlyContinue).FullName if ( ! ( $package_name )) { ERRMSG &amp;quot;[PACKAGE_NOT_FOUND] $(PWD)\release.ps1 not found!&amp;quot; 9996 } Write-Host &amp;quot;[$TASK_NAME] Verify Azure DevOps PAT is set correctly`n&amp;quot; VARCHK push.</description>
@@ -605,10 +605,10 @@ Write-Host &amp;quot;[$TASK_NAME] Verify deployable artefact is available`n&amp;
     
     <item>
       <title>Intermediary</title>
-      <link>/80-release-train/40-terraform-cloud/60-intermediary/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/60-intermediary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/40-terraform-cloud/60-intermediary/</guid>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/60-intermediary/</guid>
       <description>Terraform Cloud intermediary The deployment process itself is processed via the Terraform Cloud intermediary, which decouples the configuration management, and provides state storage and execution processing.
 .
 An important aspect of the intermediaries function is to store dynamic outputs, for example, the Infrastructure-as-Code solution provides a Kubernetes cluster, the dynamically created configuration is stored as outputs.
@@ -620,48 +620,48 @@ The Application components consume the state information that has been shared</d
     
     <item>
       <title>Local Deployment Tasks</title>
-      <link>/10-cdaf/10-getting-started/60-local-tasks/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/60-local-tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/10-cdaf/10-getting-started/60-local-tasks/</guid>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/60-local-tasks/</guid>
       <description>Local Tasks Local Tasks use the same execution engined as build tasks, but at deploy time, rather than build time. Local Tasks are executed in the local context of the host/server. Local Tasks are suited to situations where the agent is installed on the server where tasks are to be performed, or the server that the agent/runner is installed has the tools required to perform tasks on a remote target, i.</description>
     </item>
     
     <item>
       <title>Deploy</title>
-      <link>/80-release-train/40-terraform-cloud/70-deploy/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/70-deploy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/40-terraform-cloud/70-deploy/</guid>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/70-deploy/</guid>
       <description>Deploy-time Detokenisation The configuration management is consumed at deploy time.
 Deployment Mechanics To support the build-once/deploy-many model, the environment specific values are injected and then deployed for the release. Note that the release is immutable, and any change to any component will require a new release to be created, eliminating cherry picking. The tasksRun.tsk performs multiple levels of detokenisation, the first is for environment specific settings, the second applies any solution level declarations, then cluster, groups/regions and non-secret elements of the credentials</description>
     </item>
     
     <item>
       <title>Remote Deployment Tasks</title>
-      <link>/10-cdaf/10-getting-started/70-remote-tasks/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/10-cdaf/10-getting-started/70-remote-tasks/</guid>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/</guid>
       <description>Remote Tasks Like Local Tasks, Remote Tasks use the same execution engined as build tasks, but at deploy time, rather than build time. Remote Tasks are executed in the local context of a remote host/server. Remote Tasks are suited to situations where the agent is not installed on the server where tasks are to be performed and instead the deployment is pushed, i.e. to an application server in the DMZ which can only be accessed by Remote PowerShell or SSH.</description>
     </item>
     
     <item>
       <title>Sensitive Data Strategies</title>
-      <link>/90-reference/20-feature-configuration/70-sensitive-data-strategies/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/70-sensitive-data-strategies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/70-sensitive-data-strategies/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/70-sensitive-data-strategies/</guid>
       <description>Sensitive Data Strategies Loose Coupling A key approach to support the principle of automation execution in a local desktop context, is the use of environment variables. It&amp;rsquo;s important to remember that environment variables do not necessarily need to be persisted, i.e. stored unencrypted on disk, it&amp;rsquo;s the global availability of the variable that makes it an environment variable.
 context target databaseFQDN dBpassword local TEST db1.nonprod.local $DB1_PASSWORD local UAT db2.nonprod.local $DB2_PASSWORD local PROD cluster.</description>
     </item>
     
     <item>
       <title>Feedback Loop</title>
-      <link>/80-release-train/40-terraform-cloud/80-feedback-loop/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/80-feedback-loop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/40-terraform-cloud/80-feedback-loop/</guid>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/80-feedback-loop/</guid>
       <description>Realising the Feedback Loop Based on Realising the Feedback Loop, once the package has been promoted to it&amp;rsquo;s last stage, it is then pushed to the artefact store
 In this example Azure DevOps (ADO) using the az artifacts extension, see the example push.tsk.
 Write-Host &amp;quot;[$TASK_NAME] Verify deployable artefact is available`n&amp;quot; $package_name = (Get-Item &amp;quot;$(PWD)\release.ps1&amp;quot; -ErrorAction SilentlyContinue).FullName if ( ! ( $package_name )) { ERRMSG &amp;quot;[PACKAGE_NOT_FOUND] $(PWD)\release.ps1 not found!&amp;quot; 9994 } Write-Host &amp;quot;[$TASK_NAME] Verify Azure DevOps PAT is set correctly`n&amp;quot; VARCHK push.</description>
@@ -669,40 +669,40 @@ Write-Host &amp;quot;[$TASK_NAME] Verify deployable artefact is available`n&amp;
     
     <item>
       <title>Legacy Features</title>
-      <link>/90-reference/20-feature-configuration/80-legacy-features/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/80-legacy-features/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/80-legacy-features/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/80-legacy-features/</guid>
       <description>Legacy Features Remote Deployment Machine to machine deployments are increasingly uncommon, as local agents/runners are readily available, making on-premise deployments from the build server an infrequent use case. While there is no plan to deprecate this capability, it&amp;rsquo;s complexity makes local testing i.e. shift-left complicated, especially in windows. For CDAF configuration, see Remote Tasks.
 Windows Remote PowerShell This approach uses the local host for both target (CD) and build (CI) execution.</description>
     </item>
     
     <item>
       <title>Release History</title>
-      <link>/10-cdaf/90-release-history/</link>
+      <link>https://cdaf.io/10-cdaf/90-release-history/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/10-cdaf/90-release-history/</guid>
-      <description>CDAF Release History All previous releases are available for download from /static/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.tar.gz or /static/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.zip for Linux, and /static/app/downloads/WU-CDAF-&amp;lt;version&amp;gt;.zip for Windows.
+      <guid>https://cdaf.io/10-cdaf/90-release-history/</guid>
+      <description>CDAF Release History All previous releases are available for download from https://cdaf.iostatic/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.tar.gz or https://cdaf.iostatic/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.zip for Linux, and https://cdaf.iostatic/app/downloads/WU-CDAF-&amp;lt;version&amp;gt;.zip for Windows.
 2.8.1 : 25-Jan-2025 : Minor Release and Deploy Fixes  Fix getProperty split on first equal (=) character only Fix containerDeploy to resolve fileName variable (Linux) Fix self-extracting release not including error array and exit code reset (Windows) Include file command in dockerhub image (Linux)  2.8.0 : 16-Jul-2024 : Tech Debt - Deprecate unsupported docker version labelling  Remove version argument from dockerBuild (see breaking changes for details) Consolidate default Dockerfile processing for containerBuild and imageBuild into dockerBuild dockerPush correct context loading for non-dockerhub registries (Linux) sort project directories for build process (Linux)  2.</description>
     </item>
     
     <item>
       <title>Variable Validation</title>
-      <link>/90-reference/20-feature-configuration/90-variable-validation/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/90-variable-validation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/20-feature-configuration/90-variable-validation/</guid>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/90-variable-validation/</guid>
       <description>Variable Validation There are 5 rules available, two for plain text and three for secrets. When validating a secret against a known MD5 value, either a literal or variable can be supplied. See VARCHK in the execution engine operations
 # Plain text values OPT_ARG # Optional plain text terraform_version=required # Required plain text # Secret values TERRAFORM_TOKEN=optional # Optional secret TERRAFORM_TOKEN=secret # Required secret TERRAFORM_TOKEN=$TERRAFORM_TOKEN_MASK # Required secret verified against supplied SHA-256 value </description>
     </item>
     
     <item>
       <title>Build Once, Deploy Many</title>
-      <link>/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</guid>
       <description>CI Process for Declarative Release The following example is Helmsman, but the same mechanism works for Helmfile also.
 Using DRY principles, a single declaration of the application stack is used, and tokens applied for deplopy-time environment variations.
 metadata: scope: &amp;#34;cluster microservices&amp;#34; maintainer: &amp;#34;Jules Clements&amp;#34; namespaces: %name_space%: protected: false apps: pull: name: &amp;#34;docker-registry-pull-secret&amp;#34; description: &amp;#34;GitLab Registry Pull Secret&amp;#34; namespace: &amp;#34;%name_space%&amp;#34; enabled: true chart: &amp;#34;pull-secrets-0.0.1.tgz&amp;#34; version: &amp;#34;0.0.1&amp;#34; valuesFile: &amp;#34;pods/docker-registry-pull-secret.yaml&amp;#34; cdaf-ui: name: &amp;#34;cdaf-ui&amp;#34; description: &amp;#34;CDAF Published Site (Django)&amp;#34; namespace: &amp;#34;%name_space%&amp;#34; enabled: true chart: &amp;#34;public-ingress-0.</description>
@@ -710,10 +710,10 @@ metadata: scope: &amp;#34;cluster microservices&amp;#34; maintainer: &amp;#34;Ju
     
     <item>
       <title>Helmsman Deploy-Time</title>
-      <link>/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</guid>
       <description>Built Once, Deployed Many This example is the deploy time process for Helmsman, although it is fundamentally the same for Helmfile. The tokenised application stack declaration is de-tokenised to apply the correct name_space at deploy time.
 helm.tsk sed -i -- &amp;#34;s•name_space•*****•g&amp;#34; ranger.yaml the resulting deployment
 helmsman --apply -f ranger.yaml ranger-chart_ _ | | | | | |__ ___| |_ __ ___ ___ _ __ ___ __ _ _ __| &#39;_ \ / _ \ | &#39;_ ` _ \/ __| &#39;_ ` _ \ / _` | &#39;_ \ | | | | __/ | | | | | \__ \ | | | | | (_| | | | | |_| |_|\___|_|_| |_| |_|___/_| |_| |_|\__,_|_| |_| version: v3.</description>
@@ -721,10 +721,10 @@ helmsman --apply -f ranger.yaml ranger-chart_ _ | | | | | |__ ___| |_ __ ___ __
     
     <item>
       <title>DRY</title>
-      <link>/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</guid>
       <description>Don&amp;#39;t Repeat Yourself The key to using Helm charts rather than simply authoring Kubernetes YAML definitions is the use of templates. This way a deployment pattern can be defined once, with only the deploy time, application specific, values being changed.
 From the Helm template the health probes are hard coded, replace these with shared definitions, .Values.service.port &amp;amp; .Values.service.probeContext.
 deployment.yaml containers: - name: {{ .Chart.Name }} securityContext: {{- toYaml .Values.securityContext | nindent 12 }} image: &amp;#34;{{ .</description>
@@ -732,10 +732,10 @@ deployment.yaml containers: - name: {{ .Chart.Name }} securityContext: {{- toYam
     
     <item>
       <title>Helmsman Secrets</title>
-      <link>/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</guid>
       <description>Sensitive Data Management Define the secret in your chart with a substitution value.
 secrets.yaml apiVersion: v1 kind: Secret metadata: name: dockerhub-secret type: kubernetes.io/dockerconfigjson data: .dockerconfigjson: &amp;gt;- {{ .Values.dockerconfigjson }} Define the property with no value. Note also the reference to the secret for pull from the private registry.
 values.yaml replicaCount: 1 image: repository: docker.io/cdaf/cdaf pullPolicy: IfNotPresent # Overrides the image tag whose default is the chart appVersion. tag: &amp;#34;464&amp;#34; imagePullSecrets: [{ name: dockerhub-secret }] dockerconfigjson: &amp;#34;&amp;#34; Define the environment variable to be substituted into the chart</description>
@@ -743,29 +743,29 @@ values.yaml replicaCount: 1 image: repository: docker.io/cdaf/cdaf pullPolicy: I
     
     <item>
       <title>Helmsman Version Constraints</title>
-      <link>/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</guid>
       <description>Helmsman Update Limitations Some changes cannot be updated in place, an example of this is the service port. If this is changed, the chart version has be updated or the existing deployment manually removed.</description>
     </item>
     
     <item>
       <title>GoAT</title>
-      <link>/90-reference/goat/</link>
+      <link>https://cdaf.io/90-reference/goat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/goat/</guid>
+      <guid>https://cdaf.io/90-reference/goat/</guid>
       <description>This is not currently working in the Learn theme
  . . . .--- 1 .-- 1 / 1 / \ | | .---+ .-+ + / \ .---+---. .--+--. | &#39;--- 2 | &#39;-- 2 / \ 2 + + | | | | ---+ ---+ + / \ / \ .-+-. .-+-. .+. .+. | .--- 3 | .-- 3 \ / 3 / \ / \ | | | | | | | | &#39;---+ &#39;-+ + 1 2 3 4 1 2 3 4 1 2 3 4 &#39;--- 4 &#39;-- 4 \ 4 .</description>
     </item>
     
     <item>
       <title>Mermaid</title>
-      <link>/90-reference/mermaid/</link>
+      <link>https://cdaf.io/90-reference/mermaid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/90-reference/mermaid/</guid>
+      <guid>https://cdaf.io/90-reference/mermaid/</guid>
       <description>https://mermaid-js.github.io/mermaid-live-editor
 gantt axisFormat %d-%b-%Y title Enabling excludes weekends saturday,sunday section Section One done :done, 2023-09-10, 5d active :active, 5d planned : 2023-09-20, 3d section Section Two (tagged tasks) active :active, T2, 2023-09-12, 2d critical :crit, T3, after T2, 1d  gantt %% custom date format not consistently supported %% dateFormat DD-MM-YYYY axisFormat %d-%b-%Y title Enabling excludes weekends saturday,sunday section Section One done :done, 2023-09-10, 5d active :active, 5d planned : 2023-09-20, 3d section Section Two (tagged tasks) active :active, T2, 2023-09-12, 2d critical :crit, T3, after T2, 1d  graph TD subgraph k8s[&#34;</description>
     </item>

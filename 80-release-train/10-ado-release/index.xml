@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azure DevOps (ADO) Release on Concepts &amp; Applied Examples</title>
-    <link>/80-release-train/10-ado-release/</link>
+    <link>https://cdaf.io/80-release-train/10-ado-release/</link>
     <description>Recent content in Azure DevOps (ADO) Release on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/80-release-train/10-ado-release/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/80-release-train/10-ado-release/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Component CI</title>
-      <link>/80-release-train/10-ado-release/10-component-ci/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/10-component-ci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/10-ado-release/10-component-ci/</guid>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/10-component-ci/</guid>
       <description>Autonomous Component Build &amp;amp; Test Each component contains both application code and deployment automation. The development team can imperatively deploy to the dev environment, i.e. the API and Vue application can be deployed separately, with no assurance of version alignment.
 Example Vue properties.cm file, the deployment tool used is Wrangler.
 context target pages_app_project fqdn api_url container DEV petstore-dev vue-dev.example.com api-dev.example.com container TEST petstore-tst vue-tst.example.com api-tst.example.com container PROD petstore-prd vue.example.com api.example.com Example API properties.</description>
@@ -18,10 +18,10 @@ context target pages_app_project fqdn api_url container DEV petstore-dev vue-dev
     
     <item>
       <title>Component CD</title>
-      <link>/80-release-train/10-ado-release/20-component-cd/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/20-component-cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/10-ado-release/20-component-cd/</guid>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/20-component-cd/</guid>
       <description>Autonomous Component Deploy By using the feature-branch.properties capability of CDAF, branches containing the string dev will deploy to the development environment. This feature allows imperative deployment by the development team, without manipulating the pipeline, and therefore avoiding drift.
 vue
 # Feature Branch name match mapping to environment dev=DEV API
@@ -30,10 +30,10 @@ vue
     
     <item>
       <title>Component Publish</title>
-      <link>/80-release-train/10-ado-release/30-component-publish/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/30-component-publish/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/10-ado-release/30-component-publish/</guid>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/30-component-publish/</guid>
       <description>Autonomous Component Publication the final stage of the main pipeline is publication. This pushes the release package to the artefact registry.
 Each component publishes their release package, so although they use different technologies, they are now available as consistent packages, using the CDAF package process, which outputs a self-extract release.ps1 (of release.sh for linux) file.
 Next, Release&amp;hellip;</description>
@@ -41,10 +41,10 @@ Next, Release&amp;hellip;</description>
     
     <item>
       <title>Release</title>
-      <link>/80-release-train/10-ado-release/40-release/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/40-release/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/80-release-train/10-ado-release/40-release/</guid>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/40-release/</guid>
       <description>Full Stack Release The ADO Release function is used to create a release, and promote it through the environments. The release obtains the components from the artefact store
 The Release is defined in order of dependency, i.e. the CloudFlare infrastructure is created/updated and configured with the API, then the front-end is deployed to the infrastructure.
  The release itself includes to deployment logic, it simply invokes the packages provided by the component development team.</description>

@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Static Content on Concepts &amp; Applied Examples</title>
-    <link>/30-imperative-deployment/40-static-content/</link>
+    <link>https://cdaf.io/30-imperative-deployment/40-static-content/</link>
     <description>Recent content in Static Content on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/30-imperative-deployment/40-static-content/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/30-imperative-deployment/40-static-content/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tokenisation</title>
-      <link>/30-imperative-deployment/40-static-content/10-tokenisation/</link>
+      <link>https://cdaf.io/30-imperative-deployment/40-static-content/10-tokenisation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/30-imperative-deployment/40-static-content/10-tokenisation/</guid>
+      <guid>https://cdaf.io/30-imperative-deployment/40-static-content/10-tokenisation/</guid>
       <description>Abstraction of Application Settings As the application is static content, runtime variables are not applicable, however, variations in the application configuration at deploy time can, on occasions, be applicable, e.g. using a different Google Tag Manager (GTM) for production and non-production environments to ensure the analytics are not contaminated.
 Within source control there are two tokens applied. The first is a build-time token, which captures the semantic version. This is constructed from a release prefix and build number.</description>
     </item>
     
     <item>
       <title>Continuous Integration (CI)</title>
-      <link>/30-imperative-deployment/40-static-content/20-ci/</link>
+      <link>https://cdaf.io/30-imperative-deployment/40-static-content/20-ci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/30-imperative-deployment/40-static-content/20-ci/</guid>
+      <guid>https://cdaf.io/30-imperative-deployment/40-static-content/20-ci/</guid>
       <description>Build &amp;amp; Package Once The primary driver file for CDAF is the CDAF.solution file. The directory containing this file is the SOLUTIONROOT. The mandatory properties are solutionName and artifactPrefix.
 solutionName=classbwizard productName=React Class B Recreational Vehicle Comparison Tool artifactPrefix=0.5 Build Process The CDAF Execution Engine is used to reduce the cognitive load, allowing the engineer to focus on the primary objective, and not have to cater for logging, exception and error handling.</description>
     </item>
     
     <item>
       <title>Continuous Delivery (CD)</title>
-      <link>/30-imperative-deployment/40-static-content/30-cd/</link>
+      <link>https://cdaf.io/30-imperative-deployment/40-static-content/30-cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/30-imperative-deployment/40-static-content/30-cd/</guid>
+      <guid>https://cdaf.io/30-imperative-deployment/40-static-content/30-cd/</guid>
       <description>Deploy Many The continuous delivery has multiple phases, first is a closed-loop test, then are the runtime environments, which are promoted, starting with acceptance test.
 Closed-Loop Test This first delivery stage used docker-compose to stand-up, test and tear-down an environment. This environment is transient and not accessible by manual testers.
 services: classb: image: &amp;#34;${CLASSB_TAG}&amp;#34; ports: - &amp;#34;8000:8000&amp;#34; test: image: &amp;#34;${TEST_TAG}&amp;#34; volumes: - ${WORK_SPACE}:/solution/workspace links: - classb:classb depends_on: - classb Release Promotion After the closed-loop tests have passed, then the deployment to user acceptance test is performed.</description>

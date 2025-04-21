@@ -2,214 +2,214 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/</loc>
   </url><url>
-    <loc>/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/</loc>
   </url><url>
-    <loc>/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/</loc>
   </url><url>
-    <loc>/</loc>
+    <loc>https://cdaf.io/</loc>
   </url><url>
-    <loc>/70-authoritative-release/10-autonomous-development/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-autonomous-development/</loc>
   </url><url>
-    <loc>/80-release-train/10-ado-release/</loc>
+    <loc>https://cdaf.io/80-release-train/10-ado-release/</loc>
   </url><url>
-    <loc>/10-cdaf/</loc>
+    <loc>https://cdaf.io/10-cdaf/</loc>
   </url><url>
-    <loc>/80-release-train/10-ado-release/10-component-ci/</loc>
+    <loc>https://cdaf.io/80-release-train/10-ado-release/10-component-ci/</loc>
   </url><url>
-    <loc>/80-release-train/20-ansible-automation-platform/10-component-pipelines/</loc>
+    <loc>https://cdaf.io/80-release-train/20-ansible-automation-platform/10-component-pipelines/</loc>
   </url><url>
-    <loc>/90-reference/20-feature-configuration/10-configuration-mapping/</loc>
+    <loc>https://cdaf.io/90-reference/20-feature-configuration/10-configuration-mapping/</loc>
   </url><url>
-    <loc>/90-reference/30-docker-features/10-configuration-mapping/</loc>
+    <loc>https://cdaf.io/90-reference/30-docker-features/10-configuration-mapping/</loc>
   </url><url>
-    <loc>/20-principles-and-concepts/20-branch-plans/10-cd/</loc>
+    <loc>https://cdaf.io/20-principles-and-concepts/20-branch-plans/10-cd/</loc>
   </url><url>
-    <loc>/90-reference/10-framework-implementation/10-entry/</loc>
+    <loc>https://cdaf.io/90-reference/10-framework-implementation/10-entry/</loc>
   </url><url>
-    <loc>/90-reference/10-framework-implementation/</loc>
+    <loc>https://cdaf.io/90-reference/10-framework-implementation/</loc>
   </url><url>
-    <loc>/10-cdaf/10-getting-started/</loc>
+    <loc>https://cdaf.io/10-cdaf/10-getting-started/</loc>
   </url><url>
-    <loc>/70-authoritative-release/10-how-to-helm/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/</loc>
   </url><url>
-    <loc>/70-authoritative-release/40-terraform-kubernetes/10-manifest/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/10-manifest/</loc>
   </url><url>
-    <loc>/70-authoritative-release/50-custom-state-management/10-manifest/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/50-custom-state-management/10-manifest/</loc>
   </url><url>
-    <loc>/80-release-train/40-terraform-cloud/10-manifest/</loc>
+    <loc>https://cdaf.io/80-release-train/40-terraform-cloud/10-manifest/</loc>
   </url><url>
-    <loc>/80-release-train/30-octopus-deploy/10-manifest/</loc>
+    <loc>https://cdaf.io/80-release-train/30-octopus-deploy/10-manifest/</loc>
   </url><url>
-    <loc>/10-cdaf/10-getting-started/10-ci/</loc>
+    <loc>https://cdaf.io/10-cdaf/10-getting-started/10-ci/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/40-static-content/10-tokenisation/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/40-static-content/10-tokenisation/</loc>
   </url><url>
-    <loc>/80-release-train/20-ansible-automation-platform/</loc>
+    <loc>https://cdaf.io/80-release-train/20-ansible-automation-platform/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/20-asp-net-web-deploy/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/</loc>
   </url><url>
-    <loc>/20-principles-and-concepts/20-branch-plans/20-branch-deploy/</loc>
+    <loc>https://cdaf.io/20-principles-and-concepts/20-branch-plans/20-branch-deploy/</loc>
   </url><url>
-    <loc>/20-principles-and-concepts/20-branch-plans/</loc>
+    <loc>https://cdaf.io/20-principles-and-concepts/20-branch-plans/</loc>
   </url><url>
-    <loc>/80-release-train/10-ado-release/20-component-cd/</loc>
+    <loc>https://cdaf.io/80-release-train/10-ado-release/20-component-cd/</loc>
   </url><url>
-    <loc>/90-reference/30-docker-features/20-container-build/</loc>
+    <loc>https://cdaf.io/90-reference/30-docker-features/20-container-build/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/20-asp-net-web-deploy/20-ci/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/20-ci/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/30-java-maven/20-ci/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/30-java-maven/20-ci/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/40-static-content/20-ci/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/40-static-content/20-ci/</loc>
   </url><url>
-    <loc>/70-authoritative-release/50-custom-state-management/20-build-once/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/</loc>
   </url><url>
-    <loc>/80-release-train/30-octopus-deploy/20-deploy-many/</loc>
+    <loc>https://cdaf.io/80-release-train/30-octopus-deploy/20-deploy-many/</loc>
   </url><url>
-    <loc>/90-reference/20-feature-configuration/20-execution-engine/</loc>
+    <loc>https://cdaf.io/90-reference/20-feature-configuration/20-execution-engine/</loc>
   </url><url>
-    <loc>/90-reference/20-feature-configuration/</loc>
+    <loc>https://cdaf.io/90-reference/20-feature-configuration/</loc>
   </url><url>
-    <loc>/70-authoritative-release/10-how-to-helm/20-helm/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/</loc>
   </url><url>
-    <loc>/10-cdaf/10-getting-started/20-pipeline/</loc>
+    <loc>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/</loc>
   </url><url>
-    <loc>/20-principles-and-concepts/</loc>
+    <loc>https://cdaf.io/20-principles-and-concepts/</loc>
   </url><url>
-    <loc>/90-reference/10-framework-implementation/20-execution-engine/</loc>
+    <loc>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/</loc>
   </url><url>
-    <loc>/70-authoritative-release/40-terraform-kubernetes/20-build-once/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/20-build-once/</loc>
   </url><url>
-    <loc>/80-release-train/40-terraform-cloud/20-build-once/</loc>
+    <loc>https://cdaf.io/80-release-train/40-terraform-cloud/20-build-once/</loc>
   </url><url>
-    <loc>/10-cdaf/10-getting-started/30-ci/</loc>
+    <loc>https://cdaf.io/10-cdaf/10-getting-started/30-ci/</loc>
   </url><url>
-    <loc>/80-release-train/10-ado-release/30-component-publish/</loc>
+    <loc>https://cdaf.io/80-release-train/10-ado-release/30-component-publish/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/20-asp-net-web-deploy/30-cd/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/30-cd/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/30-java-maven/30-cd/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/30-java-maven/30-cd/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/40-static-content/30-cd/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/40-static-content/30-cd/</loc>
   </url><url>
-    <loc>/70-authoritative-release/10-how-to-helm/30-desiredstate/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/</loc>
   </url><url>
-    <loc>/90-reference/30-docker-features/</loc>
+    <loc>https://cdaf.io/90-reference/30-docker-features/</loc>
   </url><url>
-    <loc>/90-reference/20-feature-configuration/30-environment-variables/</loc>
+    <loc>https://cdaf.io/90-reference/20-feature-configuration/30-environment-variables/</loc>
   </url><url>
-    <loc>/20-principles-and-concepts/20-branch-plans/30-gitops/</loc>
+    <loc>https://cdaf.io/20-principles-and-concepts/20-branch-plans/30-gitops/</loc>
   </url><url>
-    <loc>/90-reference/30-docker-features/30-image-build/</loc>
+    <loc>https://cdaf.io/90-reference/30-docker-features/30-image-build/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/30-java-maven/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/30-java-maven/</loc>
   </url><url>
-    <loc>/80-release-train/20-ansible-automation-platform/30-manifest/</loc>
+    <loc>https://cdaf.io/80-release-train/20-ansible-automation-platform/30-manifest/</loc>
   </url><url>
-    <loc>/80-release-train/30-octopus-deploy/</loc>
+    <loc>https://cdaf.io/80-release-train/30-octopus-deploy/</loc>
   </url><url>
-    <loc>/80-release-train/20-ansible-automation-platform/40-build-once/</loc>
+    <loc>https://cdaf.io/80-release-train/20-ansible-automation-platform/40-build-once/</loc>
   </url><url>
-    <loc>/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/</loc>
   </url><url>
-    <loc>/70-authoritative-release/50-custom-state-management/40-configuration-management/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/50-custom-state-management/40-configuration-management/</loc>
   </url><url>
-    <loc>/80-release-train/40-terraform-cloud/40-configuration-management/</loc>
+    <loc>https://cdaf.io/80-release-train/40-terraform-cloud/40-configuration-management/</loc>
   </url><url>
-    <loc>/90-reference/30-docker-features/40-container-deploy/</loc>
+    <loc>https://cdaf.io/90-reference/30-docker-features/40-container-deploy/</loc>
   </url><url>
-    <loc>/10-cdaf/10-getting-started/40-package/</loc>
+    <loc>https://cdaf.io/10-cdaf/10-getting-started/40-package/</loc>
   </url><url>
-    <loc>/80-release-train/10-ado-release/40-release/</loc>
+    <loc>https://cdaf.io/80-release-train/10-ado-release/40-release/</loc>
   </url><url>
-    <loc>/90-reference/20-feature-configuration/40-solution-properties/</loc>
+    <loc>https://cdaf.io/90-reference/20-feature-configuration/40-solution-properties/</loc>
   </url><url>
-    <loc>/30-imperative-deployment/40-static-content/</loc>
+    <loc>https://cdaf.io/30-imperative-deployment/40-static-content/</loc>
   </url><url>
-    <loc>/80-release-train/40-terraform-cloud/</loc>
+    <loc>https://cdaf.io/80-release-train/40-terraform-cloud/</loc>
   </url><url>
-    <loc>/70-authoritative-release/40-terraform-kubernetes/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/</loc>
   </url><url>
-    <loc>/80-release-train/20-ansible-automation-platform/50-deploy-many/</loc>
+    <loc>https://cdaf.io/80-release-train/20-ansible-automation-platform/50-deploy-many/</loc>
   </url><url>
-    <loc>/10-cdaf/10-getting-started/50-cd/</loc>
+    <loc>https://cdaf.io/10-cdaf/10-getting-started/50-cd/</loc>
   </url><url>
-    <loc>/70-authoritative-release/50-custom-state-management/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/50-custom-state-management/</loc>
   </url><url>
-    <loc>/70-authoritative-release/40-terraform-kubernetes/50-deploy/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/50-deploy/</loc>
   </url><url>
-    <loc>/70-authoritative-release/50-custom-state-management/50-desired-state/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/</loc>
   </url><url>
-    <loc>/90-reference/30-docker-features/50-docker-push/</loc>
+    <loc>https://cdaf.io/90-reference/30-docker-features/50-docker-push/</loc>
   </url><url>
-    <loc>/90-reference/20-feature-configuration/50-extended-processes/</loc>
+    <loc>https://cdaf.io/90-reference/20-feature-configuration/50-extended-processes/</loc>
   </url><url>
-    <loc>/80-release-train/40-terraform-cloud/50-release/</loc>
+    <loc>https://cdaf.io/80-release-train/40-terraform-cloud/50-release/</loc>
   </url><url>
-    <loc>/80-release-train/30-octopus-deploy/60-business-visibility/</loc>
+    <loc>https://cdaf.io/80-release-train/30-octopus-deploy/60-business-visibility/</loc>
   </url><url>
-    <loc>/90-reference/20-feature-configuration/60-feature-branch-execution/</loc>
+    <loc>https://cdaf.io/90-reference/20-feature-configuration/60-feature-branch-execution/</loc>
   </url><url>
-    <loc>/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/</loc>
   </url><url>
-    <loc>/80-release-train/40-terraform-cloud/60-intermediary/</loc>
+    <loc>https://cdaf.io/80-release-train/40-terraform-cloud/60-intermediary/</loc>
   </url><url>
-    <loc>/10-cdaf/10-getting-started/60-local-tasks/</loc>
+    <loc>https://cdaf.io/10-cdaf/10-getting-started/60-local-tasks/</loc>
   </url><url>
-    <loc>/70-authoritative-release/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/</loc>
   </url><url>
-    <loc>/80-release-train/40-terraform-cloud/70-deploy/</loc>
+    <loc>https://cdaf.io/80-release-train/40-terraform-cloud/70-deploy/</loc>
   </url><url>
-    <loc>/10-cdaf/10-getting-started/70-remote-tasks/</loc>
+    <loc>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/</loc>
   </url><url>
-    <loc>/90-reference/20-feature-configuration/70-sensitive-data-strategies/</loc>
+    <loc>https://cdaf.io/90-reference/20-feature-configuration/70-sensitive-data-strategies/</loc>
   </url><url>
-    <loc>/80-release-train/40-terraform-cloud/80-feedback-loop/</loc>
+    <loc>https://cdaf.io/80-release-train/40-terraform-cloud/80-feedback-loop/</loc>
   </url><url>
-    <loc>/90-reference/20-feature-configuration/80-legacy-features/</loc>
+    <loc>https://cdaf.io/90-reference/20-feature-configuration/80-legacy-features/</loc>
   </url><url>
-    <loc>/80-release-train/</loc>
+    <loc>https://cdaf.io/80-release-train/</loc>
   </url><url>
-    <loc>/90-reference/</loc>
+    <loc>https://cdaf.io/90-reference/</loc>
   </url><url>
-    <loc>/10-cdaf/90-release-history/</loc>
+    <loc>https://cdaf.io/10-cdaf/90-release-history/</loc>
   </url><url>
-    <loc>/90-reference/20-feature-configuration/90-variable-validation/</loc>
+    <loc>https://cdaf.io/90-reference/20-feature-configuration/90-variable-validation/</loc>
   </url><url>
-    <loc>/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</loc>
   </url><url>
-    <loc>/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</loc>
   </url><url>
-    <loc>/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</loc>
   </url><url>
-    <loc>/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</loc>
   </url><url>
-    <loc>/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</loc>
   </url><url>
-    <loc>/tags/12-factors/</loc>
+    <loc>https://cdaf.io/tags/12-factors/</loc>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://cdaf.io/categories/</loc>
   </url><url>
-    <loc>/tags/declarative/</loc>
+    <loc>https://cdaf.io/tags/declarative/</loc>
   </url><url>
-    <loc>/tags/desired_state/</loc>
+    <loc>https://cdaf.io/tags/desired_state/</loc>
   </url><url>
-    <loc>/tags/diagrams/</loc>
+    <loc>https://cdaf.io/tags/diagrams/</loc>
   </url><url>
-    <loc>/90-reference/goat/</loc>
+    <loc>https://cdaf.io/90-reference/goat/</loc>
   </url><url>
-    <loc>/tags/kb/</loc>
+    <loc>https://cdaf.io/tags/kb/</loc>
   </url><url>
-    <loc>/90-reference/mermaid/</loc>
+    <loc>https://cdaf.io/90-reference/mermaid/</loc>
   </url><url>
-    <loc>/tags/separation-of-concerns/</loc>
+    <loc>https://cdaf.io/tags/separation-of-concerns/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://cdaf.io/tags/</loc>
   </url>
 </urlset>

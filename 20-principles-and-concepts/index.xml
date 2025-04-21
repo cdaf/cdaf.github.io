@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Principles and Concepts on Concepts &amp; Applied Examples</title>
-    <link>/20-principles-and-concepts/</link>
+    <link>https://cdaf.io/20-principles-and-concepts/</link>
     <description>Recent content in Principles and Concepts on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/20-principles-and-concepts/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/20-principles-and-concepts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Desired State Release on Concepts &amp; Applied Examples</title>
-    <link>/70-authoritative-release/10-how-to-helm/30-desiredstate/</link>
+    <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/</link>
     <description>Recent content in Desired State Release on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/70-authoritative-release/10-how-to-helm/30-desiredstate/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Build Once, Deploy Many</title>
-      <link>/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</guid>
       <description>CI Process for Declarative Release The following example is Helmsman, but the same mechanism works for Helmfile also.
 Using DRY principles, a single declaration of the application stack is used, and tokens applied for deplopy-time environment variations.
 metadata: scope: &amp;#34;cluster microservices&amp;#34; maintainer: &amp;#34;Jules Clements&amp;#34; namespaces: %name_space%: protected: false apps: pull: name: &amp;#34;docker-registry-pull-secret&amp;#34; description: &amp;#34;GitLab Registry Pull Secret&amp;#34; namespace: &amp;#34;%name_space%&amp;#34; enabled: true chart: &amp;#34;pull-secrets-0.0.1.tgz&amp;#34; version: &amp;#34;0.0.1&amp;#34; valuesFile: &amp;#34;pods/docker-registry-pull-secret.yaml&amp;#34; cdaf-ui: name: &amp;#34;cdaf-ui&amp;#34; description: &amp;#34;CDAF Published Site (Django)&amp;#34; namespace: &amp;#34;%name_space%&amp;#34; enabled: true chart: &amp;#34;public-ingress-0.</description>
@@ -18,10 +18,10 @@ metadata: scope: &amp;#34;cluster microservices&amp;#34; maintainer: &amp;#34;Ju
     
     <item>
       <title>Helmsman Deploy-Time</title>
-      <link>/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</guid>
       <description>Built Once, Deployed Many This example is the deploy time process for Helmsman, although it is fundamentally the same for Helmfile. The tokenised application stack declaration is de-tokenised to apply the correct name_space at deploy time.
 helm.tsk sed -i -- &amp;#34;s•name_space•*****•g&amp;#34; ranger.yaml the resulting deployment
 helmsman --apply -f ranger.yaml ranger-chart_ _ | | | | | |__ ___| |_ __ ___ ___ _ __ ___ __ _ _ __| &#39;_ \ / _ \ | &#39;_ ` _ \/ __| &#39;_ ` _ \ / _` | &#39;_ \ | | | | __/ | | | | | \__ \ | | | | | (_| | | | | |_| |_|\___|_|_| |_| |_|___/_| |_| |_|\__,_|_| |_| version: v3.</description>
@@ -29,10 +29,10 @@ helmsman --apply -f ranger.yaml ranger-chart_ _ | | | | | |__ ___| |_ __ ___ __
     
     <item>
       <title>DRY</title>
-      <link>/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</guid>
       <description>Don&amp;#39;t Repeat Yourself The key to using Helm charts rather than simply authoring Kubernetes YAML definitions is the use of templates. This way a deployment pattern can be defined once, with only the deploy time, application specific, values being changed.
 From the Helm template the health probes are hard coded, replace these with shared definitions, .Values.service.port &amp;amp; .Values.service.probeContext.
 deployment.yaml containers: - name: {{ .Chart.Name }} securityContext: {{- toYaml .Values.securityContext | nindent 12 }} image: &amp;#34;{{ .</description>
@@ -40,10 +40,10 @@ deployment.yaml containers: - name: {{ .Chart.Name }} securityContext: {{- toYam
     
     <item>
       <title>Helmsman Secrets</title>
-      <link>/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</guid>
       <description>Sensitive Data Management Define the secret in your chart with a substitution value.
 secrets.yaml apiVersion: v1 kind: Secret metadata: name: dockerhub-secret type: kubernetes.io/dockerconfigjson data: .dockerconfigjson: &amp;gt;- {{ .Values.dockerconfigjson }} Define the property with no value. Note also the reference to the secret for pull from the private registry.
 values.yaml replicaCount: 1 image: repository: docker.io/cdaf/cdaf pullPolicy: IfNotPresent # Overrides the image tag whose default is the chart appVersion. tag: &amp;#34;464&amp;#34; imagePullSecrets: [{ name: dockerhub-secret }] dockerconfigjson: &amp;#34;&amp;#34; Define the environment variable to be substituted into the chart</description>
@@ -51,10 +51,10 @@ values.yaml replicaCount: 1 image: repository: docker.io/cdaf/cdaf pullPolicy: I
     
     <item>
       <title>Helmsman Version Constraints</title>
-      <link>/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</guid>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</guid>
       <description>Helmsman Update Limitations Some changes cannot be updated in place, an example of this is the service port. If this is changed, the chart version has be updated or the existing deployment manually removed.</description>
     </item>
     
