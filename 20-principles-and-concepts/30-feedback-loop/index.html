@@ -4,30 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Declarative Desired State Container Deployment using Helm">
+    <meta name="description" content="Continuous Delivery to Shift-Left">
 
 
     <link rel="icon" href="/images/favicon.ico" type="image/ico">
 
-    <title>Feature Configuration :: Concepts &amp; Applied Examples</title>
+    <title>Realising the Feedback Loop :: Concepts &amp; Applied Examples</title>
 
     
-    <link href="/css/nucleus.css?1745399849" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745399849" rel="stylesheet">
-    <link href="/css/hybrid.css?1745399849" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745399849" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745399849" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745399849" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745399849" rel="stylesheet">
-    <link href="/css/theme.css?1745399849" rel="stylesheet">
-    <link href="/css/tabs.css?1745399849" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745399849" rel="stylesheet">
+    <link href="/css/nucleus.css?1745399848" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1745399848" rel="stylesheet">
+    <link href="/css/hybrid.css?1745399848" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1745399848" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1745399848" rel="stylesheet">
+    <link href="/css/auto-complete.css?1745399848" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1745399848" rel="stylesheet">
+    <link href="/css/theme.css?1745399848" rel="stylesheet">
+    <link href="/css/tabs.css?1745399848" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1745399848" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1745399849" rel="stylesheet">
+    <link href="/css/theme-green.css?1745399848" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745399849"></script>
+    <script src="/js/jquery-3.3.1.min.js?1745399848"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/90-reference/20-feature-configuration/">
+  <body class="" data-url="/20-principles-and-concepts/30-feedback-loop/">
     <nav id="sidebar" class="">
 
 
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745399849"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745399849"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1745399848"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1745399848"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/cdaf.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745399849"></script>
+<script type="text/javascript" src="/js/search.js?1745399848"></script>
 
     
   </div>
@@ -328,7 +328,7 @@
   
     
     <li data-nav-id="/20-principles-and-concepts/" title="Principles and Concepts" class="dd-item
-        
+        parent
         
         
         ">
@@ -383,8 +383,8 @@
   
     
     <li data-nav-id="/20-principles-and-concepts/30-feedback-loop/" title="Realising the Feedback Loop" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="/20-principles-and-concepts/30-feedback-loop/">
@@ -1981,7 +1981,7 @@
   
     
     <li data-nav-id="/90-reference/" title="Reference Guide" class="dd-item
-        parent
+        
         
         
         ">
@@ -2088,8 +2088,8 @@
   
     
     <li data-nav-id="/90-reference/20-feature-configuration/" title="Feature Configuration" class="dd-item
-        parent
-        active
+        
+        
         
         ">
       <a href="/90-reference/20-feature-configuration/">
@@ -2527,7 +2527,7 @@
             
           
           
-            <a href='/'>CDAF</a> > <a href='/90-reference/'>Reference Guide</a> > Feature Configuration
+            <a href='/'>CDAF</a> > <a href='/20-principles-and-concepts/'>Principles and Concepts</a> > Realising the Feedback Loop
           
         
           
@@ -2554,221 +2554,29 @@
 
 
 
-	<h2 id="hahahugoshortcode-s0-hbhb">Declarative Desired State Container Deployment using Helm</h2>
-<p>This section provides a detailed breakdown of the Continuous Delivery Automation Framework (CDAF) feature configuration options. For a step-by-step usage guide see <a href="/10-cdaf/10-getting-started">getting started</a>.</p>
-
-
-
-
-
-
-
-<ul class="children children-h3">
-	
-
-	
-		
-	
-
-	
-
-	
-		
-	
-		
-			
-				
-					
-					
-
-<h3>
-<a href="/90-reference/20-feature-configuration/10-configuration-mapping/" >Configuration Mapping</a>
-</h3>
-
-				
-
-				
-					
-<p>Configuration Mapping</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-					
-					
-
-<h3>
-<a href="/90-reference/20-feature-configuration/20-execution-engine/" >Execution Engine</a>
-</h3>
-
-				
-
-				
-					
-<p>Execution Engine</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-					
-					
-
-<h3>
-<a href="/90-reference/20-feature-configuration/30-environment-variables/" >Environment Variables</a>
-</h3>
-
-				
-
-				
-					
-<p>Environment Variables</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-					
-					
-
-<h3>
-<a href="/90-reference/20-feature-configuration/40-solution-properties/" >Solution Properties</a>
-</h3>
-
-				
-
-				
-					
-<p>Solution Properties</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-					
-					
-
-<h3>
-<a href="/90-reference/20-feature-configuration/50-extended-processes/" >Extended Processes</a>
-</h3>
-
-				
-
-				
-					
-<p>Extended Processes</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-					
-					
-
-<h3>
-<a href="/90-reference/20-feature-configuration/60-feature-branch-execution/" >Feature Branch Execution</a>
-</h3>
-
-				
-
-				
-					
-<p>Feature Branch Execution</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-					
-					
-
-<h3>
-<a href="/90-reference/20-feature-configuration/70-sensitive-data-strategies/" >Sensitive Data Strategies</a>
-</h3>
-
-				
-
-				
-					
-<p>Sensitive Data Strategies</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-					
-					
-
-<h3>
-<a href="/90-reference/20-feature-configuration/80-legacy-features/" >Legacy Features</a>
-</h3>
-
-				
-
-				
-					
-<p>Legacy Features</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-					
-					
-
-<h3>
-<a href="/90-reference/20-feature-configuration/90-variable-validation/" >Variable Validation</a>
-</h3>
-
-				
-
-				
-					
-<p>Variable Validation</p>
-					
-				
-			
-			
-		
-	
-
-	
+	<h3 id="hahahugoshortcode-s0-hbhb">Continuous Delivery to Shift-Left</h3>
+<p><img src="/images/AdobeStock_283863898.jpeg" alt="alt text" title="Do Nothing Pipeline"></p>
+<p>While the DevOps Feedback-Loop, along with finding issues early by moving production-like environments closer to the developer (Shift-Left), are key principles, there is commonly no tangible way of achieving this.</p>
+<p>In the typically incremental progression of continuous delivery implementations, eventually automation is built to deliver to production, and typically, that is where the story ends.</p>
+<p>Before describing the realisation of the feedback loop, it&rsquo;s important to highlight the underlying framework approaches that make this possible, which are:</p>
+<ul>
+<li><strong>Release Portability</strong> : the output of the <em>build</em> (Continuous Integration) process is a single, self-contained, <em>deployable artefact</em></li>
+<li><strong>Loose Coupling</strong> : delivery orchestration does not use any proprietary mechanisms to deploy, the pipeline tool simply calls the <em>deployable artefact</em></li>
+<li><strong>Artefact Registry</strong> : a store of immutable artefacts, not code (repository). These are strictly versioned and ideally offer the ability to download the <em>latest</em> version.</li>
 </ul>
-
-
+<p>In my <a href="/20-principles-and-concepts/20-do-nothing-pipeline">Sprint Zero</a> approach, I espouse the creation of an end-to-end, <em>do-nothing</em> pipeline before any development begins. The final stage of this pipeline should be to push the <em>deployable artefact</em> to the <strong>Artefact Registry</strong>.</p>
+<p>By doing this, a known production state is available as feedback to the developers and testers, by getting the latest version from the <strong>Artefact Registry</strong>.</p>
+<h2 id="consistent-ways-of-working">Consistent Ways of Working</h2>
+<p>If this approach is applied consistently between your infrastructure, configuration management and software developers, an automated view of the Production environment is automatically available, without having to inspect the current state of each contributing pipeline.</p>
+<p><img src="/images/ado-artifacts.png" alt="alt text" title="artefact registry"></p>
+<p>By combining these deployable assets, users have the ability to create a full-stack, production-like environment on demand. This could be wrapped in a graphical user interface or simply run from the command-line.</p>
+<h2 id="artefact-registries">Artefact Registries</h2>
+<p>Each registry vendor has different names for general purpose stores, in Azure DevOps it&rsquo;s called <em>Universal</em>, in GitLab it&rsquo;s called <em>Generic</em> and in Nexus it&rsquo;s called <em>Raw</em>.</p>
+<hr>
+<blockquote>
+<p>Closing note: in the above example provided, there is an Infrastructure-as-Code (IaC)/configuration management deployment package (AZT) and software deployment package (KAT). The software deployment package is a manifest driven, desired state, deployment of containers, the container image publication is <strong>not</strong> captured in the artefact store as the image build pipeline does not reflect any target environment state.</p>
+</blockquote>
+<p>For detailed example the creation and usage of the release artefacts in this article see <a href="http://127.0.0.1:1313/80-release-train/40-terraform-cloud">Terraform Cloud Release Train</a>.</p>
 
 
 
@@ -2976,6 +2784,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2990,6 +2799,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3007,6 +2819,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3022,6 +2835,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -4042,7 +3858,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -4057,9 +3872,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -4109,7 +3921,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -4122,9 +3933,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -4386,10 +4194,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/90-reference/10-framework-implementation/20-execution-engine/" title="Task Processing"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/20-principles-and-concepts/20-do-nothing-pipeline/" title="Do Nothing Pipeline"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/90-reference/20-feature-configuration/10-configuration-mapping/" title="Configuration Mapping" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/20-principles-and-concepts/90-branch-plans/" title="Branch Plans" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4399,19 +4207,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745399849"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745399849"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745399849"></script>
-    <script src="/js/jquery.sticky.js?1745399849"></script>
-    <script src="/js/featherlight.min.js?1745399849"></script>
-    <script src="/js/highlight.pack.js?1745399849"></script>
+    <script src="/js/clipboard.min.js?1745399848"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745399848"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745399848"></script>
+    <script src="/js/jquery.sticky.js?1745399848"></script>
+    <script src="/js/featherlight.min.js?1745399848"></script>
+    <script src="/js/highlight.pack.js?1745399848"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745399849"></script>
-    <script src="/js/learn.js?1745399849"></script>
-    <script src="/js/hugo-learn.js?1745399849"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745399848"></script>
+    <script src="/js/learn.js?1745399848"></script>
+    <script src="/js/hugo-learn.js?1745399848"></script>
     
         
-            <script src="/mermaid/mermaid.js?1745399849"></script>
+            <script src="/mermaid/mermaid.js?1745399848"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
