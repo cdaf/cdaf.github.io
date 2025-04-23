@@ -93,10 +93,10 @@ Even with a toolset uses containers, if they support docker-in-docker, the CDAF 
     
     <item>
       <title>Continuous Delivery</title>
-      <link>https://cdaf.io/20-principles-and-concepts/20-branch-plans/10-cd/</link>
+      <link>https://cdaf.io/20-principles-and-concepts/90-branch-plans/10-cd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cdaf.io/20-principles-and-concepts/20-branch-plans/10-cd/</guid>
+      <guid>https://cdaf.io/20-principles-and-concepts/90-branch-plans/10-cd/</guid>
       <description>Continuous Delivery (CD) decouples the release activity from development activity. Unlike Continuous Deployment, Continuous Delivery has one or more approval gates. At time of writing, the majority of pipeline tools support approval gates, with the exception of the GitHub Free tier.
 The Continuous Delivery Maturity Model A fundamental aspect of Continuous Delivery is to build once and deploy many times. This means the output of the development process (Continuous Integration) is an artefact which can be re-used to deploy to multiple environments.</description>
     </item>
@@ -186,10 +186,10 @@ Within source control there are two tokens applied. The first is a build-time to
     
     <item>
       <title>Branch Deploy</title>
-      <link>https://cdaf.io/20-principles-and-concepts/20-branch-plans/20-branch-deploy/</link>
+      <link>https://cdaf.io/20-principles-and-concepts/90-branch-plans/20-branch-deploy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cdaf.io/20-principles-and-concepts/20-branch-plans/20-branch-deploy/</guid>
+      <guid>https://cdaf.io/20-principles-and-concepts/90-branch-plans/20-branch-deploy/</guid>
       <description>Where the pipeline tool does not support approval gating, but a review and approval mechanism is desired, the &amp;ldquo;Pull Request&amp;rdquo;/&amp;ldquo;Merge Request&amp;rdquo; can be used. The resulting approval will rebuild the solution and deliver it to the defined environment.
 Branch Based Deployment There are a variety of methods used within a branch based deployment approach, the following is a common example.
 A long-living branch is defined for each target environment, in this example dev, test and release.</description>
@@ -285,7 +285,7 @@ Where is it used In all places using .tsk files, i.e. build, package, wrap and d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/</guid>
-      <description>CDAF provides a loose coupling for core CI &amp;amp; CD objectives. The intention is that the CI &amp;amp; CD processing is performed on the developers desktop, and then executed in the same way in the pipeline tool. By establishing a healthy pipeline as soon as possible, any pipeline failures can be quickly and incrementally identified.
+      <description>CDAF provides a loose coupling for core CI &amp;amp; CD objectives. The intention is that the CI &amp;amp; CD processing is performed on the developers desktop, and then executed in the same way in the pipeline tool. By establishing a healthy pipeline as soon as possible, any pipeline failures can be quickly and incrementally identified. See Entering Sprint-0 for elaboration.
 Pipeline Orchestration and Capabilities The CI process gathers files from source control, then uses the CDAF CI entry point to produce the release package.</description>
     </item>
     
@@ -383,10 +383,10 @@ Control Variables The following environment variables are available to control t
     
     <item>
       <title>GitOps</title>
-      <link>https://cdaf.io/20-principles-and-concepts/20-branch-plans/30-gitops/</link>
+      <link>https://cdaf.io/20-principles-and-concepts/90-branch-plans/30-gitops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cdaf.io/20-principles-and-concepts/20-branch-plans/30-gitops/</guid>
+      <guid>https://cdaf.io/20-principles-and-concepts/90-branch-plans/30-gitops/</guid>
       <description>GitOps is another branch based deployment approach, however it typically does not have a Continuous Integration construct, and instead deploys directly from source control.
 Branch Based Deployment Directly from Source Control GitOps is commonly portrayed as Trunk Based
 Each target environment maybe defined as a directory, but in many some cases, i.e. to provide a gating mechanism, like Branch Based Deployment, multiple long-lived branches are used.</description>
@@ -400,8 +400,8 @@ Each target environment maybe defined as a directory, but in many some cases, i.
       <guid>https://cdaf.io/90-reference/30-docker-features/30-image-build/</guid>
       <description>imageBuild This helper script supports the creation of docker images, and conditionally, the pushing of that image to a registry.
 Container Build Configuration To execute, define the buildImage definition. Note: complete definitions are provided in the GitHub samples for Windows and Linux.
- The following samples have the default process commented out, and can be used to define a custom process.
- Windows buildImage=cdaf/windows # imageBuild=&amp;amp; &amp;quot;$AUTOMATIONROOT/remote/imageBuild.ps1&amp;quot; ${SOLUTION}_${REVISION} ${BUILDNUMBER} Linux buildImage=cdaf/linux # imageBuild=&amp;quot;$AUTOMATIONROOT/remote/imageBuild.</description>
+The following samples have the default process commented out, and can be used to define a custom process.
+Windows buildImage=cdaf/windows # imageBuild=&amp;amp; &amp;quot;$AUTOMATIONROOT/remote/imageBuild.ps1&amp;quot; ${SOLUTION}_${REVISION} ${BUILDNUMBER} Linux buildImage=cdaf/linux # imageBuild=&amp;quot;$AUTOMATIONROOT/remote/imageBuild.</description>
     </item>
     
     <item>

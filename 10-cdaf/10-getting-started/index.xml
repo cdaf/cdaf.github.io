@@ -22,7 +22,7 @@ Install on Windows To install to current directory, recommend placing in your ho
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/</guid>
-      <description>CDAF provides a loose coupling for core CI &amp;amp; CD objectives. The intention is that the CI &amp;amp; CD processing is performed on the developers desktop, and then executed in the same way in the pipeline tool. By establishing a healthy pipeline as soon as possible, any pipeline failures can be quickly and incrementally identified.
+      <description>CDAF provides a loose coupling for core CI &amp;amp; CD objectives. The intention is that the CI &amp;amp; CD processing is performed on the developers desktop, and then executed in the same way in the pipeline tool. By establishing a healthy pipeline as soon as possible, any pipeline failures can be quickly and incrementally identified. See Entering Sprint-0 for elaboration.
 Pipeline Orchestration and Capabilities The CI process gathers files from source control, then uses the CDAF CI entry point to produce the release package.</description>
     </item>
     

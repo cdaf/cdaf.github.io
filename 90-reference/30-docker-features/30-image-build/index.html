@@ -12,22 +12,22 @@
     <title>imageBuild :: Concepts &amp; Applied Examples</title>
 
     
-    <link href="/css/nucleus.css?1745221656" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745221656" rel="stylesheet">
-    <link href="/css/hybrid.css?1745221656" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745221656" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745221656" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745221656" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745221656" rel="stylesheet">
-    <link href="/css/theme.css?1745221656" rel="stylesheet">
-    <link href="/css/tabs.css?1745221656" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745221656" rel="stylesheet">
+    <link href="/css/nucleus.css?1745393649" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1745393649" rel="stylesheet">
+    <link href="/css/hybrid.css?1745393649" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1745393649" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1745393649" rel="stylesheet">
+    <link href="/css/auto-complete.css?1745393649" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1745393649" rel="stylesheet">
+    <link href="/css/theme.css?1745393649" rel="stylesheet">
+    <link href="/css/tabs.css?1745393649" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1745393649" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1745221656" rel="stylesheet">
+    <link href="/css/theme-green.css?1745393649" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745221656"></script>
+    <script src="/js/jquery-3.3.1.min.js?1745393649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745221656"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745221656"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1745393649"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1745393649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/cdaf.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745221656"></script>
+<script type="text/javascript" src="/js/search.js?1745393649"></script>
 
     
   </div>
@@ -356,12 +356,38 @@
  
   
     
-    <li data-nav-id="/20-principles-and-concepts/20-branch-plans/" title="Branch Plans" class="dd-item
+    <li data-nav-id="/20-principles-and-concepts/20-do-nothing-pipeline/" title="Do Nothing Pipeline" class="dd-item
         
         
         
         ">
-      <a href="/20-principles-and-concepts/20-branch-plans/">
+      <a href="/20-principles-and-concepts/20-do-nothing-pipeline/">
+          <i class='far fa-stop-circle'></i>  Do Nothing Pipeline
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/20-principles-and-concepts/90-branch-plans/" title="Branch Plans" class="dd-item
+        
+        
+        
+        ">
+      <a href="/20-principles-and-concepts/90-branch-plans/">
           <i class='fas fa-code-branch'></i>  Branch Plans
           
       </a>
@@ -383,8 +409,8 @@
  
   
     
-      <li data-nav-id="/20-principles-and-concepts/20-branch-plans/10-cd/" title="Continuous Delivery" class="dd-item ">
-        <a href="/20-principles-and-concepts/20-branch-plans/10-cd/">
+      <li data-nav-id="/20-principles-and-concepts/90-branch-plans/10-cd/" title="Continuous Delivery" class="dd-item ">
+        <a href="/20-principles-and-concepts/90-branch-plans/10-cd/">
         Continuous Delivery
         
         </a>
@@ -404,8 +430,8 @@
  
   
     
-      <li data-nav-id="/20-principles-and-concepts/20-branch-plans/20-branch-deploy/" title="Branch Deploy" class="dd-item ">
-        <a href="/20-principles-and-concepts/20-branch-plans/20-branch-deploy/">
+      <li data-nav-id="/20-principles-and-concepts/90-branch-plans/20-branch-deploy/" title="Branch Deploy" class="dd-item ">
+        <a href="/20-principles-and-concepts/90-branch-plans/20-branch-deploy/">
         Branch Deploy
         
         </a>
@@ -425,8 +451,8 @@
  
   
     
-      <li data-nav-id="/20-principles-and-concepts/20-branch-plans/30-gitops/" title="GitOps" class="dd-item ">
-        <a href="/20-principles-and-concepts/20-branch-plans/30-gitops/">
+      <li data-nav-id="/20-principles-and-concepts/90-branch-plans/30-gitops/" title="GitOps" class="dd-item ">
+        <a href="/20-principles-and-concepts/90-branch-plans/30-gitops/">
         GitOps
         
         </a>
@@ -2518,22 +2544,20 @@
         
 
 
-<h2 id="hahahugoshortcode-s0-hbhb">imageBuild</h2>
+<h3 id="hahahugoshortcode-s0-hbhb">imageBuild</h3>
 <p>This helper script supports the creation of docker images, and conditionally, the pushing of that image to a registry.</p>
-<h1 id="container-build-configuration">Container Build Configuration</h1>
+<h4 id="container-build-configuration">Container Build Configuration</h4>
 <p>To execute, define the buildImage definition. Note: complete definitions are provided in the GitHub samples for <a href="https://github.com/cdaf/windows/tree/master/samples/imageBuild">Windows</a> and <a href="https://github.com/cdaf/linux/tree/master/samples/imageBuild">Linux</a>.</p>
-<blockquote>
 <p>The following samples have the default process commented out, and can be used to define a custom process.</p>
-</blockquote>
-<h2 id="windows">Windows</h2>
+<h4 id="windows">Windows</h4>
 <pre tabindex="0"><code>buildImage=cdaf/windows
 # imageBuild=&amp; &quot;$AUTOMATIONROOT/remote/imageBuild.ps1&quot; ${SOLUTION}_${REVISION} ${BUILDNUMBER}
-</code></pre><h2 id="linux">Linux</h2>
+</code></pre><h4 id="linux">Linux</h4>
 <pre tabindex="0"><code>buildImage=cdaf/linux
 # imageBuild=&quot;$AUTOMATIONROOT/remote/imageBuild.sh&quot; ${SOLUTION}_${REVISION} ${BUILDNUMBER}
-</code></pre><h2 id="immutable-deploy-in-construction">Immutable Deploy in Construction</h2>
+</code></pre><h3 id="immutable-deploy-in-construction">Immutable Deploy in Construction</h3>
 <p>If a custom docker file is not supplied, the default dockerfile will execute the IMMUTABLE release in the image construction process.</p>
-<h1 id="registry-push">Registry Push</h1>
+<h3 id="registry-push">Registry Push</h3>
 <p>To include a push to a registry, add the following to <strong>CDAF.solution</strong> for DockerHub</p>
 <pre tabindex="0"><code>CDAF_REGISTRY_URL=DOCKER-HUB
 CDAF_REGISTRY_TAG=repo/${SOLUTION}:$BUILDNUMBER
@@ -2544,8 +2568,20 @@ CDAF_REGISTRY_TOKEN=${ACCESS_TOKEN}
 CDAF_REGISTRY_TAG=${CDAF_REGISTRY_URL}/${SOLUTION}:$BUILDNUMBER
 CDAF_REGISTRY_USER=pat
 CDAF_REGISTRY_TOKEN=${ACCESS_TOKEN}
-</code></pre><h1 id="custom-image--process">Custom Image &amp; Process</h1>
+</code></pre><h3 id="custom-image--process">Custom Image &amp; Process</h3>
 <p>For samples of more complex usage see the GitHub samples for <a href="https://github.com/cdaf/windows/tree/master/samples/imageBuild-custom-image">Windows</a> and <a href="https://github.com/cdaf/linux/tree/master/samples/imageBuild-custom-image">Linux</a> dockerfile and additional properties.</p>
+<h3 id="stand-alone-usage">Stand-alone Usage</h3>
+<p>The imageBuild script is used for docker-compose stand-up/tear-down process, for complete samples see <a href="https://github.com/cdaf/windows/tree/master/samples/targetlessCD">Windows</a> and <a href="https://github.com/cdaf/linux/tree/master/samples/targetlessCD">Linux</a>.</p>
+<p>The following parameters must be passed</p>
+<ul>
+<li><strong>Unique ID</strong> : normally <code>&quot;${SOLUTION}_${REVISION}&quot;</code></li>
+<li><strong>Sequential Number</strong> : normally <code>&quot;${BUILDNUMBER}&quot;</code></li>
+<li><strong>Base Image</strong> : any valid image, e.g. <code>cdaf/linux</code> or <code>cdaf/windows</code></li>
+</ul>
+<p>Optional parameters</p>
+<ul>
+<li><strong>Context</strong> : if supplied, only the named directory is built, if ommited, all directories are built.</li>
+</ul>
 
 
 <footer class="footline">
@@ -2757,6 +2793,22 @@ CDAF_REGISTRY_TOKEN=${ACCESS_TOKEN}
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -4143,19 +4195,19 @@ CDAF_REGISTRY_TOKEN=${ACCESS_TOKEN}
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745221656"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745221656"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745221656"></script>
-    <script src="/js/jquery.sticky.js?1745221656"></script>
-    <script src="/js/featherlight.min.js?1745221656"></script>
-    <script src="/js/highlight.pack.js?1745221656"></script>
+    <script src="/js/clipboard.min.js?1745393649"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745393649"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745393649"></script>
+    <script src="/js/jquery.sticky.js?1745393649"></script>
+    <script src="/js/featherlight.min.js?1745393649"></script>
+    <script src="/js/highlight.pack.js?1745393649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745221656"></script>
-    <script src="/js/learn.js?1745221656"></script>
-    <script src="/js/hugo-learn.js?1745221656"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745393649"></script>
+    <script src="/js/learn.js?1745393649"></script>
+    <script src="/js/hugo-learn.js?1745393649"></script>
     
         
-            <script src="/mermaid/mermaid.js?1745221656"></script>
+            <script src="/mermaid/mermaid.js?1745393649"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

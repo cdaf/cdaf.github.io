@@ -170,7 +170,7 @@ Where is it used In all places using .tsk files, i.e. build, package, wrap and d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/</guid>
-      <description>CDAF provides a loose coupling for core CI &amp;amp; CD objectives. The intention is that the CI &amp;amp; CD processing is performed on the developers desktop, and then executed in the same way in the pipeline tool. By establishing a healthy pipeline as soon as possible, any pipeline failures can be quickly and incrementally identified.
+      <description>CDAF provides a loose coupling for core CI &amp;amp; CD objectives. The intention is that the CI &amp;amp; CD processing is performed on the developers desktop, and then executed in the same way in the pipeline tool. By establishing a healthy pipeline as soon as possible, any pipeline failures can be quickly and incrementally identified. See Entering Sprint-0 for elaboration.
 Pipeline Orchestration and Capabilities The CI process gathers files from source control, then uses the CDAF CI entry point to produce the release package.</description>
     </item>
     
@@ -243,8 +243,8 @@ Control Variables The following environment variables are available to control t
       <guid>https://cdaf.io/90-reference/30-docker-features/30-image-build/</guid>
       <description>imageBuild This helper script supports the creation of docker images, and conditionally, the pushing of that image to a registry.
 Container Build Configuration To execute, define the buildImage definition. Note: complete definitions are provided in the GitHub samples for Windows and Linux.
- The following samples have the default process commented out, and can be used to define a custom process.
- Windows buildImage=cdaf/windows # imageBuild=&amp;amp; &amp;quot;$AUTOMATIONROOT/remote/imageBuild.ps1&amp;quot; ${SOLUTION}_${REVISION} ${BUILDNUMBER} Linux buildImage=cdaf/linux # imageBuild=&amp;quot;$AUTOMATIONROOT/remote/imageBuild.</description>
+The following samples have the default process commented out, and can be used to define a custom process.
+Windows buildImage=cdaf/windows # imageBuild=&amp;amp; &amp;quot;$AUTOMATIONROOT/remote/imageBuild.ps1&amp;quot; ${SOLUTION}_${REVISION} ${BUILDNUMBER} Linux buildImage=cdaf/linux # imageBuild=&amp;quot;$AUTOMATIONROOT/remote/imageBuild.</description>
     </item>
     
     <item>

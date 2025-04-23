@@ -34,8 +34,8 @@ Even with a toolset uses containers, if they support docker-in-docker, the CDAF 
       <guid>https://cdaf.io/90-reference/30-docker-features/30-image-build/</guid>
       <description>imageBuild This helper script supports the creation of docker images, and conditionally, the pushing of that image to a registry.
 Container Build Configuration To execute, define the buildImage definition. Note: complete definitions are provided in the GitHub samples for Windows and Linux.
- The following samples have the default process commented out, and can be used to define a custom process.
- Windows buildImage=cdaf/windows # imageBuild=&amp;amp; &amp;quot;$AUTOMATIONROOT/remote/imageBuild.ps1&amp;quot; ${SOLUTION}_${REVISION} ${BUILDNUMBER} Linux buildImage=cdaf/linux # imageBuild=&amp;quot;$AUTOMATIONROOT/remote/imageBuild.</description>
+The following samples have the default process commented out, and can be used to define a custom process.
+Windows buildImage=cdaf/windows # imageBuild=&amp;amp; &amp;quot;$AUTOMATIONROOT/remote/imageBuild.ps1&amp;quot; ${SOLUTION}_${REVISION} ${BUILDNUMBER} Linux buildImage=cdaf/linux # imageBuild=&amp;quot;$AUTOMATIONROOT/remote/imageBuild.</description>
     </item>
     
     <item>

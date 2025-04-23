@@ -4,30 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Branch Based Deployment">
+    <meta name="description" content="Alternate Branch Strategies">
 
 
     <link rel="icon" href="/images/favicon.ico" type="image/ico">
 
-    <title>Branch Deploy :: Concepts &amp; Applied Examples</title>
+    <title>Branch Plans :: Concepts &amp; Applied Examples</title>
 
     
-    <link href="/css/nucleus.css?1745221656" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745221656" rel="stylesheet">
-    <link href="/css/hybrid.css?1745221656" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745221656" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745221656" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745221656" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745221656" rel="stylesheet">
-    <link href="/css/theme.css?1745221656" rel="stylesheet">
-    <link href="/css/tabs.css?1745221656" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745221656" rel="stylesheet">
+    <link href="/css/nucleus.css?1745393649" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1745393649" rel="stylesheet">
+    <link href="/css/hybrid.css?1745393649" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1745393649" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1745393649" rel="stylesheet">
+    <link href="/css/auto-complete.css?1745393649" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1745393649" rel="stylesheet">
+    <link href="/css/theme.css?1745393649" rel="stylesheet">
+    <link href="/css/tabs.css?1745393649" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1745393649" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1745221656" rel="stylesheet">
+    <link href="/css/theme-green.css?1745393649" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745221656"></script>
+    <script src="/js/jquery-3.3.1.min.js?1745393649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/20-principles-and-concepts/20-branch-plans/20-branch-deploy/">
+  <body class="" data-url="/20-principles-and-concepts/90-branch-plans/">
     <nav id="sidebar" class="">
 
 
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745221656"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745221656"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1745393649"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1745393649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/cdaf.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745221656"></script>
+<script type="text/javascript" src="/js/search.js?1745393649"></script>
 
     
   </div>
@@ -356,12 +356,38 @@
  
   
     
-    <li data-nav-id="/20-principles-and-concepts/20-branch-plans/" title="Branch Plans" class="dd-item
-        parent
+    <li data-nav-id="/20-principles-and-concepts/20-do-nothing-pipeline/" title="Do Nothing Pipeline" class="dd-item
+        
         
         
         ">
-      <a href="/20-principles-and-concepts/20-branch-plans/">
+      <a href="/20-principles-and-concepts/20-do-nothing-pipeline/">
+          <i class='far fa-stop-circle'></i>  Do Nothing Pipeline
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/20-principles-and-concepts/90-branch-plans/" title="Branch Plans" class="dd-item
+        parent
+        active
+        
+        ">
+      <a href="/20-principles-and-concepts/90-branch-plans/">
           <i class='fas fa-code-branch'></i>  Branch Plans
           
       </a>
@@ -383,8 +409,8 @@
  
   
     
-      <li data-nav-id="/20-principles-and-concepts/20-branch-plans/10-cd/" title="Continuous Delivery" class="dd-item ">
-        <a href="/20-principles-and-concepts/20-branch-plans/10-cd/">
+      <li data-nav-id="/20-principles-and-concepts/90-branch-plans/10-cd/" title="Continuous Delivery" class="dd-item ">
+        <a href="/20-principles-and-concepts/90-branch-plans/10-cd/">
         Continuous Delivery
         
         </a>
@@ -404,8 +430,8 @@
  
   
     
-      <li data-nav-id="/20-principles-and-concepts/20-branch-plans/20-branch-deploy/" title="Branch Deploy" class="dd-item active">
-        <a href="/20-principles-and-concepts/20-branch-plans/20-branch-deploy/">
+      <li data-nav-id="/20-principles-and-concepts/90-branch-plans/20-branch-deploy/" title="Branch Deploy" class="dd-item ">
+        <a href="/20-principles-and-concepts/90-branch-plans/20-branch-deploy/">
         Branch Deploy
         
         </a>
@@ -425,8 +451,8 @@
  
   
     
-      <li data-nav-id="/20-principles-and-concepts/20-branch-plans/30-gitops/" title="GitOps" class="dd-item ">
-        <a href="/20-principles-and-concepts/20-branch-plans/30-gitops/">
+      <li data-nav-id="/20-principles-and-concepts/90-branch-plans/30-gitops/" title="GitOps" class="dd-item ">
+        <a href="/20-principles-and-concepts/90-branch-plans/30-gitops/">
         GitOps
         
         </a>
@@ -2475,13 +2501,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>CDAF</a> > <a href='/20-principles-and-concepts/'>Principles and Concepts</a> > <a href='/20-principles-and-concepts/20-branch-plans/'>Branch Plans</a> > Branch Deploy
-          
-        
+            <a href='/'>CDAF</a> > <a href='/20-principles-and-concepts/'>Principles and Concepts</a> > Branch Plans
           
         
           
@@ -2497,43 +2517,40 @@
             
         <div id="head-tags">
         
-<div class="tags">
-
-  <a class="tag-link" href="/tags/kb">kb</a>
-
-</div>
-
         </div>
+        
+          <div id="chapter">
         
         <div id="body-inner">
           
-            <h1>
-              
-              Branch Deploy
-            </h1>
-          
 
         
 
 
-<p>Where the pipeline tool does not support approval gating, but a review and approval mechanism is desired, the &ldquo;Pull Request&rdquo;/&ldquo;Merge Request&rdquo; can be used. The resulting approval will rebuild the solution and deliver it to the defined environment.</p>
-<h2 id="hahahugoshortcode-s0-hbhb">Branch Based Deployment</h2>
-<p>There are a variety of methods used within a branch based deployment approach, the following is a common example.</p>
-<p>A long-living branch is defined for each target environment, in this example <code>dev</code>, <code>test</code> and <code>release</code>. A <em>source of truth</em> branch exists (<code>main</code>) which does not trigger a deployment.</p>
-<p><img src="/images/long-lived-branches.png" alt="alt text" title="Long Lived Branches"></p>
-<p>Unlike <a href="/20-principles-and-concepts/20-branch-plans/10-cd">Continuous Delivery</a>, a separate build is created for each environment, e.g. <code>#64</code> in <em>development</em>, <code>#65</code> in <em>acceptance test</em>, etc.</p>
-<p>The long-lived branches provide a high level of concurrency and flexibility to skip stages, or deploy a selected feature or fix (known as &ldquo;Cherry-picking&rdquo;).</p>
-<p><img src="/images/branch-trunk-comparison.png" alt="alt text" title="Branch Based and Trunk Based comparison"></p>
-<p>To &ldquo;promote&rdquo; changes from <em>feature</em> to <em>development</em>, then on to <em>test</em> and <em>production</em>, a pull request is raised for each stage. In this scenario it is typically a fellow developer that reviews and approves the change, and not a business user, i.e. Product Owner.</p>
-<p><img src="/images/github-pr.png" alt="alt text" title="GitHub Pull Request"></p>
-<p>The merge triggers the corresponding build and deploy for the target branch/environment.</p>
-<p><img src="/images/merge-trigger.png" alt="alt text" title="Merge Trigger"></p>
+
+	<h3 id="hahahugoshortcode-s0-hbhb">Alternate Branch Strategies</h3>
+<p>Different branch plans do not explicitly define deployment approaches, however, there are common associative methods for each plan, which are described in the subsequent pages. This page provides the baseline terminology that will be used in the remainder of this material.</p>
+<h4 id="trunk-based">Trunk Based</h4>
+<p>Commonly referred to as Trunk Based Development. This is the simplest strategy and is commonly synonymous with Continuous Delivery (more on this to come). The only long running branch is <code>main</code>.</p>
+<p><img src="/images/image-20240701-194641.png" alt="alt text" title="Trunk based Development"></p>
+<h4 id="simple-branch-plans">Simple Branch Plans</h4>
+<p>This branch strategy has been promoted by Microsoft, and is fundamental in their deploy process within Visual Studio. with two (or sometimes more) long-lived branches, e.g. <code>main</code> being used for test and <code>release</code> being used for production. Each additional environment requires another branch.</p>
+<p><img src="/images/image-20240701-193242.png" alt="alt text" title="Simple Branch Plans"></p>
+<h4 id="gitflow">GitFlow</h4>
+<p>Originating from distributed source control systems, with prolonged disconnection. The majority of source control tools provided now are centralised server solutions, which obfuscate the underlying distributed architecture. GitFlow has continued, while being adjusted to use Pull Request/Merge Request to merge between branches. This typically has many long-lived branches, e.g. <code>main</code>, <code>develop</code>, <code>release</code>, <code>hot-fix</code>.</p>
+<p>From Atlassian <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow</a></p>
+<p><img src="/images/image-20240701-192859.png" alt="alt text" title="GitFlow"></p>
 
 
-<footer class="footline">
+
+
+
+<footer class=" footline" >
 	
 </footer>
 
+        
+            </div> 
         
         </div>
         
@@ -2746,6 +2763,25 @@
             
                 
                     
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -2779,7 +2815,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2795,9 +2830,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -4109,10 +4141,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/20-principles-and-concepts/20-branch-plans/10-cd/" title="Continuous Delivery"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/20-principles-and-concepts/20-do-nothing-pipeline/" title="Do Nothing Pipeline"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/20-principles-and-concepts/20-branch-plans/30-gitops/" title="GitOps" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/20-principles-and-concepts/90-branch-plans/10-cd/" title="Continuous Delivery" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4122,19 +4154,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745221656"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745221656"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745221656"></script>
-    <script src="/js/jquery.sticky.js?1745221656"></script>
-    <script src="/js/featherlight.min.js?1745221656"></script>
-    <script src="/js/highlight.pack.js?1745221656"></script>
+    <script src="/js/clipboard.min.js?1745393649"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745393649"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745393649"></script>
+    <script src="/js/jquery.sticky.js?1745393649"></script>
+    <script src="/js/featherlight.min.js?1745393649"></script>
+    <script src="/js/highlight.pack.js?1745393649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745221656"></script>
-    <script src="/js/learn.js?1745221656"></script>
-    <script src="/js/hugo-learn.js?1745221656"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745393649"></script>
+    <script src="/js/learn.js?1745393649"></script>
+    <script src="/js/hugo-learn.js?1745393649"></script>
     
         
-            <script src="/mermaid/mermaid.js?1745221656"></script>
+            <script src="/mermaid/mermaid.js?1745393649"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
@@ -4144,4 +4176,3 @@
 
   </body>
 </html>
-

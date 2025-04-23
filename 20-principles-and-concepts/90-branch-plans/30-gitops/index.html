@@ -1,0 +1,4186 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="description" content="Branch Based Deployment Directly from Source Control">
+
+
+    <link rel="icon" href="/images/favicon.ico" type="image/ico">
+
+    <title>GitOps :: Concepts &amp; Applied Examples</title>
+
+    
+    <link href="/css/nucleus.css?1745393648" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1745393648" rel="stylesheet">
+    <link href="/css/hybrid.css?1745393648" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1745393648" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1745393648" rel="stylesheet">
+    <link href="/css/auto-complete.css?1745393648" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1745393648" rel="stylesheet">
+    <link href="/css/theme.css?1745393648" rel="stylesheet">
+    <link href="/css/tabs.css?1745393648" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1745393648" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1745393648" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1745393648"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/20-principles-and-concepts/90-branch-plans/30-gitops/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <img src="/images/cdaf.png" alt="Continuous Delivery Automation Framework">
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1745393648"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1745393648"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/cdaf.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1745393648"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/10-cdaf/" title="CDAF 2.8.1" class="dd-item
+        
+        
+        
+        ">
+      <a href="/10-cdaf/">
+          <i class='fas fa-cog'></i>  CDAF 2.8.1
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/10-cdaf/10-getting-started/" title="Getting Started" class="dd-item
+        
+        
+        
+        ">
+      <a href="/10-cdaf/10-getting-started/">
+          <i class='fas fa-play-circle'></i>  Getting Started
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/10-cdaf/10-getting-started/10-ci/" title="Seed Solution" class="dd-item ">
+        <a href="/10-cdaf/10-getting-started/10-ci/">
+        Seed Solution
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/10-cdaf/10-getting-started/20-pipeline/" title="Pipeline" class="dd-item ">
+        <a href="/10-cdaf/10-getting-started/20-pipeline/">
+        Pipeline
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/10-cdaf/10-getting-started/30-ci/" title="Build" class="dd-item ">
+        <a href="/10-cdaf/10-getting-started/30-ci/">
+        Build
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/10-cdaf/10-getting-started/40-package/" title="Package" class="dd-item ">
+        <a href="/10-cdaf/10-getting-started/40-package/">
+        Package
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/10-cdaf/10-getting-started/50-cd/" title="Continuous Delivery" class="dd-item ">
+        <a href="/10-cdaf/10-getting-started/50-cd/">
+        Continuous Delivery
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/10-cdaf/10-getting-started/60-local-tasks/" title="Local Deployment Tasks" class="dd-item ">
+        <a href="/10-cdaf/10-getting-started/60-local-tasks/">
+        Local Deployment Tasks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/10-cdaf/10-getting-started/70-remote-tasks/" title="Remote Deployment Tasks" class="dd-item ">
+        <a href="/10-cdaf/10-getting-started/70-remote-tasks/">
+        Remote Deployment Tasks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/10-cdaf/90-release-history/" title="Release History" class="dd-item ">
+        <a href="/10-cdaf/90-release-history/">
+        Release History
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/20-principles-and-concepts/" title="Principles and Concepts" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/20-principles-and-concepts/">
+          <i class='fas fa-comments'></i>  Principles and Concepts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/20-principles-and-concepts/20-do-nothing-pipeline/" title="Do Nothing Pipeline" class="dd-item
+        
+        
+        
+        ">
+      <a href="/20-principles-and-concepts/20-do-nothing-pipeline/">
+          <i class='far fa-stop-circle'></i>  Do Nothing Pipeline
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/20-principles-and-concepts/90-branch-plans/" title="Branch Plans" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/20-principles-and-concepts/90-branch-plans/">
+          <i class='fas fa-code-branch'></i>  Branch Plans
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/20-principles-and-concepts/90-branch-plans/10-cd/" title="Continuous Delivery" class="dd-item ">
+        <a href="/20-principles-and-concepts/90-branch-plans/10-cd/">
+        Continuous Delivery
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/20-principles-and-concepts/90-branch-plans/20-branch-deploy/" title="Branch Deploy" class="dd-item ">
+        <a href="/20-principles-and-concepts/90-branch-plans/20-branch-deploy/">
+        Branch Deploy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/20-principles-and-concepts/90-branch-plans/30-gitops/" title="GitOps" class="dd-item active">
+        <a href="/20-principles-and-concepts/90-branch-plans/30-gitops/">
+        GitOps
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/30-imperative-deployment/" title="Imperative Deployment" class="dd-item
+        
+        
+        
+        ">
+      <a href="/30-imperative-deployment/">
+          <i class='fas fa-sliders-h'></i>  Imperative Deployment
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/30-imperative-deployment/20-asp-net-web-deploy/" title="ASP.NET Classic Example" class="dd-item
+        
+        
+        
+        ">
+      <a href="/30-imperative-deployment/20-asp-net-web-deploy/">
+          <i class='fab fa-microsoft'></i>  ASP.NET Classic Example
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/" title="Tokenisation" class="dd-item ">
+        <a href="/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/">
+        Tokenisation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/30-imperative-deployment/20-asp-net-web-deploy/20-ci/" title="Continuous Integration (CI)" class="dd-item ">
+        <a href="/30-imperative-deployment/20-asp-net-web-deploy/20-ci/">
+        Continuous Integration (CI)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/30-imperative-deployment/20-asp-net-web-deploy/30-cd/" title="Continuous Delivery (CD)" class="dd-item ">
+        <a href="/30-imperative-deployment/20-asp-net-web-deploy/30-cd/">
+        Continuous Delivery (CD)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/30-imperative-deployment/30-java-maven/" title="Java and Maven Example" class="dd-item
+        
+        
+        
+        ">
+      <a href="/30-imperative-deployment/30-java-maven/">
+          <i class='fab fa-java'></i>  Java and Maven Example
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/30-imperative-deployment/30-java-maven/20-ci/" title="Continuous Integration (CI)" class="dd-item ">
+        <a href="/30-imperative-deployment/30-java-maven/20-ci/">
+        Continuous Integration (CI)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/30-imperative-deployment/30-java-maven/30-cd/" title="Continuous Delivery (CD)" class="dd-item ">
+        <a href="/30-imperative-deployment/30-java-maven/30-cd/">
+        Continuous Delivery (CD)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/30-imperative-deployment/40-static-content/" title="Static Content" class="dd-item
+        
+        
+        
+        ">
+      <a href="/30-imperative-deployment/40-static-content/">
+          <i class='fab fa-react'></i>  Static Content
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/30-imperative-deployment/40-static-content/10-tokenisation/" title="Tokenisation" class="dd-item ">
+        <a href="/30-imperative-deployment/40-static-content/10-tokenisation/">
+        Tokenisation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/30-imperative-deployment/40-static-content/20-ci/" title="Continuous Integration (CI)" class="dd-item ">
+        <a href="/30-imperative-deployment/40-static-content/20-ci/">
+        Continuous Integration (CI)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/30-imperative-deployment/40-static-content/30-cd/" title="Continuous Delivery (CD)" class="dd-item ">
+        <a href="/30-imperative-deployment/40-static-content/30-cd/">
+        Continuous Delivery (CD)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/70-authoritative-release/" title="Declarative Release" class="dd-item
+        
+        
+        
+        ">
+      <a href="/70-authoritative-release/">
+          <i class='fas fa-list-ul'></i>  Declarative Release
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/10-autonomous-development/" title="Autonomous Development" class="dd-item ">
+        <a href="/70-authoritative-release/10-autonomous-development/">
+        Autonomous Development
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/70-authoritative-release/10-how-to-helm/" title="How to Helm" class="dd-item
+        
+        
+        
+        ">
+      <a href="/70-authoritative-release/10-how-to-helm/">
+          <i class='fas fa-life-ring'></i>  How to Helm
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/" title="Helm" class="dd-item
+        
+        
+        
+        ">
+      <a href="/70-authoritative-release/10-how-to-helm/20-helm/">
+          Helm
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/" title="Helm Hello World" class="dd-item ">
+        <a href="/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/">
+        Helm Hello World
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/" title="Tokenised Values" class="dd-item ">
+        <a href="/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/">
+        Tokenised Values
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/" title="Helm Repository" class="dd-item ">
+        <a href="/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/">
+        Helm Repository
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/" title="Desired State Release" class="dd-item
+        
+        
+        
+        ">
+      <a href="/70-authoritative-release/10-how-to-helm/30-desiredstate/">
+          Desired State Release
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/" title="Build Once, Deploy Many" class="dd-item ">
+        <a href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/">
+        Build Once, Deploy Many
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/" title="Helmsman Deploy-Time" class="dd-item ">
+        <a href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/">
+        Helmsman Deploy-Time
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/" title="DRY" class="dd-item ">
+        <a href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/">
+        DRY
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/" title="Helmsman Secrets" class="dd-item ">
+        <a href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/">
+        Helmsman Secrets
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/" title="Helmsman Version Constraints" class="dd-item ">
+        <a href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/">
+        Helmsman Version Constraints
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/70-authoritative-release/40-terraform-kubernetes/" title="Terraform Kubernetes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/70-authoritative-release/40-terraform-kubernetes/">
+          <i class='fas fa-box-open'></i>  Terraform Kubernetes
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/40-terraform-kubernetes/10-manifest/" title="Manifest" class="dd-item ">
+        <a href="/70-authoritative-release/40-terraform-kubernetes/10-manifest/">
+        Manifest
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/40-terraform-kubernetes/20-build-once/" title="Terraform Build" class="dd-item ">
+        <a href="/70-authoritative-release/40-terraform-kubernetes/20-build-once/">
+        Terraform Build
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/" title="Configuration Management" class="dd-item ">
+        <a href="/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/">
+        Configuration Management
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/40-terraform-kubernetes/50-deploy/" title="Deploy" class="dd-item ">
+        <a href="/70-authoritative-release/40-terraform-kubernetes/50-deploy/">
+        Deploy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/" title="Feedback Loop" class="dd-item ">
+        <a href="/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/">
+        Feedback Loop
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/70-authoritative-release/50-custom-state-management/" title="Custom State Management" class="dd-item
+        
+        
+        
+        ">
+      <a href="/70-authoritative-release/50-custom-state-management/">
+          <i class='fas fa-file-alt'></i>  Custom State Management
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/50-custom-state-management/10-manifest/" title="Manifest" class="dd-item ">
+        <a href="/70-authoritative-release/50-custom-state-management/10-manifest/">
+        Manifest
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/50-custom-state-management/20-build-once/" title="Custom State Build" class="dd-item ">
+        <a href="/70-authoritative-release/50-custom-state-management/20-build-once/">
+        Custom State Build
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/50-custom-state-management/40-configuration-management/" title="Configuration Management" class="dd-item ">
+        <a href="/70-authoritative-release/50-custom-state-management/40-configuration-management/">
+        Configuration Management
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/70-authoritative-release/50-custom-state-management/50-desired-state/" title="Desired State" class="dd-item ">
+        <a href="/70-authoritative-release/50-custom-state-management/50-desired-state/">
+        Desired State
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/80-release-train/" title="Release Train" class="dd-item
+        
+        
+        
+        ">
+      <a href="/80-release-train/">
+          <i class='fas fa-train'></i>  Release Train
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/80-release-train/10-ado-release/" title="Azure DevOps (ADO) Release" class="dd-item
+        
+        
+        
+        ">
+      <a href="/80-release-train/10-ado-release/">
+          <i class='fa fa-server'></i>  Azure DevOps (ADO) Release
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/10-ado-release/10-component-ci/" title="Component CI" class="dd-item ">
+        <a href="/80-release-train/10-ado-release/10-component-ci/">
+        Component CI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/10-ado-release/20-component-cd/" title="Component CD" class="dd-item ">
+        <a href="/80-release-train/10-ado-release/20-component-cd/">
+        Component CD
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/10-ado-release/30-component-publish/" title="Component Publish" class="dd-item ">
+        <a href="/80-release-train/10-ado-release/30-component-publish/">
+        Component Publish
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/10-ado-release/40-release/" title="Release" class="dd-item ">
+        <a href="/80-release-train/10-ado-release/40-release/">
+        Release
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/80-release-train/20-ansible-automation-platform/" title="Ansible Automation Platform" class="dd-item
+        
+        
+        
+        ">
+      <a href="/80-release-train/20-ansible-automation-platform/">
+          <i class='fas fa-magic'></i>  Ansible Automation Platform
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/20-ansible-automation-platform/10-component-pipelines/" title="Component Pipelines" class="dd-item ">
+        <a href="/80-release-train/20-ansible-automation-platform/10-component-pipelines/">
+        Component Pipelines
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/20-ansible-automation-platform/30-manifest/" title="Manifest" class="dd-item ">
+        <a href="/80-release-train/20-ansible-automation-platform/30-manifest/">
+        Manifest
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/20-ansible-automation-platform/40-build-once/" title="Ansible Build" class="dd-item ">
+        <a href="/80-release-train/20-ansible-automation-platform/40-build-once/">
+        Ansible Build
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/20-ansible-automation-platform/50-deploy-many/" title="Ansible Deploy" class="dd-item ">
+        <a href="/80-release-train/20-ansible-automation-platform/50-deploy-many/">
+        Ansible Deploy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/80-release-train/30-octopus-deploy/" title="Octopus Deploy" class="dd-item
+        
+        
+        
+        ">
+      <a href="/80-release-train/30-octopus-deploy/">
+          <i class='fas fa-water'></i>  Octopus Deploy
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/30-octopus-deploy/10-manifest/" title="Octopus Pane of Glass" class="dd-item ">
+        <a href="/80-release-train/30-octopus-deploy/10-manifest/">
+        Octopus Pane of Glass
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/30-octopus-deploy/20-deploy-many/" title="Decoupled Deployment" class="dd-item ">
+        <a href="/80-release-train/30-octopus-deploy/20-deploy-many/">
+        Decoupled Deployment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/30-octopus-deploy/60-business-visibility/" title="Business Visibility" class="dd-item ">
+        <a href="/80-release-train/30-octopus-deploy/60-business-visibility/">
+        Business Visibility
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/80-release-train/40-terraform-cloud/" title="Terraform Cloud" class="dd-item
+        
+        
+        
+        ">
+      <a href="/80-release-train/40-terraform-cloud/">
+          <i class='fas fa-cloud'></i>  Terraform Cloud
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/40-terraform-cloud/10-manifest/" title="Manifest" class="dd-item ">
+        <a href="/80-release-train/40-terraform-cloud/10-manifest/">
+        Manifest
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/40-terraform-cloud/20-build-once/" title="Terraform Build" class="dd-item ">
+        <a href="/80-release-train/40-terraform-cloud/20-build-once/">
+        Terraform Build
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/40-terraform-cloud/40-configuration-management/" title="Configuration Management" class="dd-item ">
+        <a href="/80-release-train/40-terraform-cloud/40-configuration-management/">
+        Configuration Management
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/40-terraform-cloud/50-release/" title="Release" class="dd-item ">
+        <a href="/80-release-train/40-terraform-cloud/50-release/">
+        Release
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/40-terraform-cloud/60-intermediary/" title="Intermediary" class="dd-item ">
+        <a href="/80-release-train/40-terraform-cloud/60-intermediary/">
+        Intermediary
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/40-terraform-cloud/70-deploy/" title="Deploy" class="dd-item ">
+        <a href="/80-release-train/40-terraform-cloud/70-deploy/">
+        Deploy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/80-release-train/40-terraform-cloud/80-feedback-loop/" title="Feedback Loop" class="dd-item ">
+        <a href="/80-release-train/40-terraform-cloud/80-feedback-loop/">
+        Feedback Loop
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/90-reference/" title="Reference Guide" class="dd-item
+        
+        
+        
+        ">
+      <a href="/90-reference/">
+          <i class='fas fa-info'></i>  Reference Guide
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/90-reference/10-framework-implementation/" title="Framework Implementation" class="dd-item
+        
+        
+        
+        ">
+      <a href="/90-reference/10-framework-implementation/">
+          <i class='fas fa-wrench'></i>  Framework Implementation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/10-framework-implementation/10-entry/" title="Entry Points" class="dd-item ">
+        <a href="/90-reference/10-framework-implementation/10-entry/">
+        Entry Points
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/10-framework-implementation/20-execution-engine/" title="Task Processing" class="dd-item ">
+        <a href="/90-reference/10-framework-implementation/20-execution-engine/">
+        Task Processing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/90-reference/20-feature-configuration/" title="Feature Configuration" class="dd-item
+        
+        
+        
+        ">
+      <a href="/90-reference/20-feature-configuration/">
+          <i class='fas fa-hammer'></i>  Feature Configuration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/20-feature-configuration/10-configuration-mapping/" title="Configuration Mapping" class="dd-item ">
+        <a href="/90-reference/20-feature-configuration/10-configuration-mapping/">
+        Configuration Mapping
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/20-feature-configuration/20-execution-engine/" title="Execution Engine" class="dd-item ">
+        <a href="/90-reference/20-feature-configuration/20-execution-engine/">
+        Execution Engine
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/20-feature-configuration/30-environment-variables/" title="Environment Variables" class="dd-item ">
+        <a href="/90-reference/20-feature-configuration/30-environment-variables/">
+        Environment Variables
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/20-feature-configuration/40-solution-properties/" title="Solution Properties" class="dd-item ">
+        <a href="/90-reference/20-feature-configuration/40-solution-properties/">
+        Solution Properties
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/20-feature-configuration/50-extended-processes/" title="Extended Processes" class="dd-item ">
+        <a href="/90-reference/20-feature-configuration/50-extended-processes/">
+        Extended Processes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/20-feature-configuration/60-feature-branch-execution/" title="Feature Branch Execution" class="dd-item ">
+        <a href="/90-reference/20-feature-configuration/60-feature-branch-execution/">
+        Feature Branch Execution
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/20-feature-configuration/70-sensitive-data-strategies/" title="Sensitive Data Strategies" class="dd-item ">
+        <a href="/90-reference/20-feature-configuration/70-sensitive-data-strategies/">
+        Sensitive Data Strategies
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/20-feature-configuration/80-legacy-features/" title="Legacy Features" class="dd-item ">
+        <a href="/90-reference/20-feature-configuration/80-legacy-features/">
+        Legacy Features
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/20-feature-configuration/90-variable-validation/" title="Variable Validation" class="dd-item ">
+        <a href="/90-reference/20-feature-configuration/90-variable-validation/">
+        Variable Validation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/90-reference/30-docker-features/" title="Docker Features" class="dd-item
+        
+        
+        
+        ">
+      <a href="/90-reference/30-docker-features/">
+          <i class='fas fa-toolbox'></i>  Docker Features
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/30-docker-features/10-configuration-mapping/" title="containerBuild" class="dd-item ">
+        <a href="/90-reference/30-docker-features/10-configuration-mapping/">
+        containerBuild
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/30-docker-features/20-container-build/" title="containerBuild" class="dd-item ">
+        <a href="/90-reference/30-docker-features/20-container-build/">
+        containerBuild
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/30-docker-features/30-image-build/" title="imageBuild" class="dd-item ">
+        <a href="/90-reference/30-docker-features/30-image-build/">
+        imageBuild
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/30-docker-features/40-container-deploy/" title="containerDeploy" class="dd-item ">
+        <a href="/90-reference/30-docker-features/40-container-deploy/">
+        containerDeploy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/90-reference/30-docker-features/50-docker-push/" title="dockerPush" class="dd-item ">
+        <a href="/90-reference/30-docker-features/50-docker-push/">
+        dockerPush
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+          
+            
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/cdaf/"><i class='fab fa-github'></i> Contribute & Support</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://nz.linkedin.com/in/jules-clements-842b589/"><i class='fab fa-linkedin'></i> Blogs & Articles</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://hub.docker.com/u/cdaf/"><i class='fab fa-docker'></i> CDAF Images</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://cdaf.io/tags"><i class='fas fa-tags'></i> Tags</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>CDAF</a> > <a href='/20-principles-and-concepts/'>Principles and Concepts</a> > <a href='/20-principles-and-concepts/90-branch-plans/'>Branch Plans</a> > GitOps
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/kb">kb</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              GitOps
+            </h1>
+          
+
+        
+
+
+<p>GitOps is another branch based deployment approach, however it typically does not have a Continuous Integration construct, and instead deploys directly from source control.</p>
+<h2 id="hahahugoshortcode-s0-hbhb">Branch Based Deployment Directly from Source Control</h2>
+<p>GitOps is commonly portrayed as Trunk Based</p>
+<p><img src="/images/image-20240701-193813.png" alt="alt text" title="GitOps workflow"></p>
+<p>Each target environment maybe defined as a directory, but in many some cases, i.e. to provide a gating mechanism, like <a href="/20-principles-and-concepts/90-branch-plans/20-branch-deploy">Branch Based Deployment</a>, multiple long-lived branches are used.</p>
+<p><img src="/images/image-20240701-194140.png" alt="alt text" title="GitOps workflow"></p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/20-principles-and-concepts/90-branch-plans/20-branch-deploy/" title="Branch Deploy"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/30-imperative-deployment/" title="Imperative Deployment" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1745393648"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745393648"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745393648"></script>
+    <script src="/js/jquery.sticky.js?1745393648"></script>
+    <script src="/js/featherlight.min.js?1745393648"></script>
+    <script src="/js/highlight.pack.js?1745393648"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745393648"></script>
+    <script src="/js/learn.js?1745393648"></script>
+    <script src="/js/hugo-learn.js?1745393648"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1745393648"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+
