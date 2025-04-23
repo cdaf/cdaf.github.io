@@ -198,6 +198,10 @@
   </url><url>
     <loc>https://cdaf.io/categories/</loc>
   </url><url>
+    <loc>https://cdaf.io/tags/cdaf-config/</loc>
+  </url><url>
+    <loc>https://cdaf.io/tags/cdaf-features/</loc>
+  </url><url>
     <loc>https://cdaf.io/tags/declarative/</loc>
   </url><url>
     <loc>https://cdaf.io/tags/desired_state/</loc>

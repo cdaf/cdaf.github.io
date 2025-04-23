@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.92.2" />
-    <meta name="description" content="Configuration Mapping">
+    <meta name="description" content="">
 
 
     <link rel="icon" href="/images/favicon.ico" type="image/ico">
 
-    <title>Configuration Mapping :: Concepts &amp; Applied Examples</title>
+    <title>cdaf-config :: Concepts &amp; Applied Examples</title>
 
     
     <link href="/css/nucleus.css?1745394781" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/90-reference/20-feature-configuration/10-configuration-mapping/">
+  <body class="" data-url="/tags/cdaf-config/">
     <nav id="sidebar" class="">
 
 
@@ -1955,7 +1955,7 @@
   
     
     <li data-nav-id="/90-reference/" title="Reference Guide" class="dd-item
-        parent
+        
         
         
         ">
@@ -2062,7 +2062,7 @@
   
     
     <li data-nav-id="/90-reference/20-feature-configuration/" title="Feature Configuration" class="dd-item
-        parent
+        
         
         
         ">
@@ -2088,7 +2088,7 @@
  
   
     
-      <li data-nav-id="/90-reference/20-feature-configuration/10-configuration-mapping/" title="Configuration Mapping" class="dd-item active">
+      <li data-nav-id="/90-reference/20-feature-configuration/10-configuration-mapping/" title="Configuration Mapping" class="dd-item ">
         <a href="/90-reference/20-feature-configuration/10-configuration-mapping/">
         Configuration Mapping
         
@@ -2487,6 +2487,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -2501,13 +2503,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>CDAF</a> > <a href='/90-reference/'>Reference Guide</a> > <a href='/90-reference/20-feature-configuration/'>Feature Configuration</a> > Configuration Mapping
-          
-        
+            <a href='/'>CDAF</a> > <a href='/tags/'>Tags</a> > cdaf-config
           
         
           
@@ -2518,51 +2514,88 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
               </div>
             </div>
             
         <div id="head-tags">
         
-<div class="tags">
-
-  <a class="tag-link" href="/tags/kb">kb</a>
-
-  <a class="tag-link" href="/tags/cdaf-config">cdaf-config</a>
-
-  <a class="tag-link" href="/tags/cdaf-features">cdaf-features</a>
-
-</div>
-
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-              Configuration Mapping
+                tag ::
+              
+              cdaf-config
             </h1>
           
 
         
 
 
-<h2 id="hahahugoshortcode-s0-hbhb">Configuration Mapping</h2>
-<p>The local and remote configuration will trigger a task execution based on each unique declaration of context and target, using the corresponding default task <code>tasksRunLocal.tsk</code> and <code>tasksRunLocal.tsk</code>.</p>
-<pre tabindex="0"><code>context  target  deployHost
-remote   UAT     vm.example.com
-local    UAT     vm.example.com
-remote   PROD    vm.example.com
-local    PROD    vm.example.com
-</code></pre><p>Customer tasks can be defined for directories <code>customLocal</code> and <code>customRemote</code> respectively, or custom if shared.</p>
-<pre tabindex="0"><code>context    target  deployTaskOverride
-local      DOCKER  docker-compose-test.tsk
-remote     UAT     on-premise-deploy.tsk
-remote     PROD    on-premise-deploy.tsk
-container  PUSH    publish-production-ertefact.tsk
-</code></pre><p>Note that container override tasks are made available in the customRemote directory.</p>
 
 
-<footer class="footline">
+
+<ul>
+	
+		<li><a href="/90-reference/20-feature-configuration/10-configuration-mapping/">Configuration Mapping</a></li>
+	
+		<li><a href="/90-reference/30-docker-features/10-configuration-mapping/">containerBuild</a></li>
+	
+		<li><a href="/90-reference/10-framework-implementation/10-entry/">Entry Points</a></li>
+	
+		<li><a href="/10-cdaf/10-getting-started/10-ci/">Seed Solution</a></li>
+	
+		<li><a href="/90-reference/30-docker-features/20-container-build/">containerBuild</a></li>
+	
+		<li><a href="/90-reference/20-feature-configuration/20-execution-engine/">Execution Engine</a></li>
+	
+		<li><a href="/10-cdaf/10-getting-started/20-pipeline/">Pipeline</a></li>
+	
+		<li><a href="/90-reference/10-framework-implementation/20-execution-engine/">Task Processing</a></li>
+	
+		<li><a href="/10-cdaf/10-getting-started/30-ci/">Build</a></li>
+	
+		<li><a href="/90-reference/20-feature-configuration/30-environment-variables/">Environment Variables</a></li>
+	
+		<li><a href="/90-reference/30-docker-features/30-image-build/">imageBuild</a></li>
+	
+		<li><a href="/90-reference/30-docker-features/40-container-deploy/">containerDeploy</a></li>
+	
+		<li><a href="/10-cdaf/10-getting-started/40-package/">Package</a></li>
+	
+		<li><a href="/90-reference/20-feature-configuration/40-solution-properties/">Solution Properties</a></li>
+	
+		<li><a href="/10-cdaf/10-getting-started/50-cd/">Continuous Delivery</a></li>
+	
+		<li><a href="/90-reference/30-docker-features/50-docker-push/">dockerPush</a></li>
+	
+		<li><a href="/90-reference/20-feature-configuration/50-extended-processes/">Extended Processes</a></li>
+	
+		<li><a href="/90-reference/20-feature-configuration/60-feature-branch-execution/">Feature Branch Execution</a></li>
+	
+		<li><a href="/10-cdaf/10-getting-started/60-local-tasks/">Local Deployment Tasks</a></li>
+	
+		<li><a href="/10-cdaf/10-getting-started/70-remote-tasks/">Remote Deployment Tasks</a></li>
+	
+		<li><a href="/90-reference/20-feature-configuration/70-sensitive-data-strategies/">Sensitive Data Strategies</a></li>
+	
+		<li><a href="/90-reference/20-feature-configuration/80-legacy-features/">Legacy Features</a></li>
+	
+		<li><a href="/90-reference/20-feature-configuration/90-variable-validation/">Variable Validation</a></li>
+	
+</ul>
+
+
+<footer class=" footline" >
 	
 </footer>
 
@@ -3812,7 +3845,6 @@ container  PUSH    publish-production-ertefact.tsk
             
                 
                     
-                    
                 
                 
 
@@ -3827,9 +3859,6 @@ container  PUSH    publish-production-ertefact.tsk
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3879,7 +3908,6 @@ container  PUSH    publish-production-ertefact.tsk
             
                 
                     
-                    
                 
                 
 
@@ -3892,7 +3920,6 @@ container  PUSH    publish-production-ertefact.tsk
             
             
                 
-                    
                     
                 
                 
@@ -3909,9 +3936,6 @@ container  PUSH    publish-production-ertefact.tsk
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -4157,10 +4181,8 @@ container  PUSH    publish-production-ertefact.tsk
 	 
 	 
 		
-			<a class="nav nav-prev" href="/90-reference/20-feature-configuration/" title="Feature Configuration"> <i class="fa fa-chevron-left"></i></a>
 		
-		
-			<a class="nav nav-next" href="/90-reference/20-feature-configuration/20-execution-engine/" title="Execution Engine" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/10-cdaf/" title="CDAF 2.8.1" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -4192,4 +4214,3 @@ container  PUSH    publish-production-ertefact.tsk
 
   </body>
 </html>
-
