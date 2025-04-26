@@ -23,18 +23,18 @@
     <meta itemprop="wordCount" content="189">
     <meta itemprop="keywords" content="Kb">
     <title>Branch Deploy :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745655782" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745655782" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745655782" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745655782" rel="stylesheet">
-    <link href="/css/theme.min.css?1745655782" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745655782" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745655782" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745655782" defer></script>
-    <script src="/js/search.min.js?1745655782" defer></script>
+    <link href="/images/favicon.ico?1745696548" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745696548" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745696548" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745696548" rel="stylesheet">
+    <link href="/css/theme.min.css?1745696548" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745696548" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745696548" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745696548" defer></script>
+    <script src="/js/search.min.js?1745696548" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +44,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745655782";
+      window.relearn.index_js_url="/searchindex.en.js?1745696548";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -138,21 +138,21 @@
 <h1 id="branch-deploy">Branch Deploy</h1>
 
 <p>Where the pipeline tool does not support approval gating, but a review and approval mechanism is desired, the &ldquo;Pull Request&rdquo;/&ldquo;Merge Request&rdquo; can be used. The resulting approval will rebuild the solution and deliver it to the defined environment.</p>
-<h2 id="hahahugoshortcode20s0hbhb">Branch Based Deployment</h2>
+<h2 id="hahahugoshortcode18s0hbhb">Branch Based Deployment</h2>
 <p>There are a variety of methods used within a branch based deployment approach, the following is a common example.</p>
 <p>A long-living branch is defined for each target environment, in this example <code>dev</code>, <code>test</code> and <code>release</code>. A <em>source of truth</em> branch exists (<code>main</code>) which does not trigger a deployment.</p>
-<p><a href="#R-image-5bd03b638be8ba55f29b4be7e26a8b2e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/long-lived-branches.png" style=" height: auto; width: auto;" title="Long Lived Branches"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5bd03b638be8ba55f29b4be7e26a8b2e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/long-lived-branches.png" title="Long Lived Branches"></a></p>
+<p><a href="#R-image-e6f734e85558fbf075b99d49e52a29da" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/long-lived-branches.png" style=" height: auto; width: auto;" title="Long Lived Branches"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e6f734e85558fbf075b99d49e52a29da"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/long-lived-branches.png" title="Long Lived Branches"></a></p>
 <p>Unlike <a href="/20-principles-and-concepts/90-branch-plans/10-cd/index.html">Continuous Delivery</a>, a separate build is created for each environment, e.g. <code>#64</code> in <em>development</em>, <code>#65</code> in <em>acceptance test</em>, etc.</p>
 <p>The long-lived branches provide a high level of concurrency and flexibility to skip stages, or deploy a selected feature or fix (known as &ldquo;Cherry-picking&rdquo;).</p>
-<p><a href="#R-image-aa7e7b1cc151f382464f51fc41e55703" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/branch-trunk-comparison.png" style=" height: auto; width: auto;" title="Branch Based and Trunk Based comparison"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-aa7e7b1cc151f382464f51fc41e55703"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/branch-trunk-comparison.png" title="Branch Based and Trunk Based comparison"></a></p>
+<p><a href="#R-image-5431d74c418a4d981ea5722c9eba0e2a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/branch-trunk-comparison.png" style=" height: auto; width: auto;" title="Branch Based and Trunk Based comparison"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5431d74c418a4d981ea5722c9eba0e2a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/branch-trunk-comparison.png" title="Branch Based and Trunk Based comparison"></a></p>
 <p>To &ldquo;promote&rdquo; changes from <em>feature</em> to <em>development</em>, then on to <em>test</em> and <em>production</em>, a pull request is raised for each stage. In this scenario it is typically a fellow developer that reviews and approves the change, and not a business user, i.e. Product Owner.</p>
-<p><a href="#R-image-cfc4b0dc27eda7907f28c3b5a0f0de3e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/github-pr.png" style=" height: auto; width: auto;" title="GitHub Pull Request"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cfc4b0dc27eda7907f28c3b5a0f0de3e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/github-pr.png" title="GitHub Pull Request"></a></p>
+<p><a href="#R-image-17ab9f64526ff57c0bc54fa661597618" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/github-pr.png" style=" height: auto; width: auto;" title="GitHub Pull Request"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-17ab9f64526ff57c0bc54fa661597618"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/github-pr.png" title="GitHub Pull Request"></a></p>
 <p>The merge triggers the corresponding build and deploy for the target branch/environment.</p>
-<p><a href="#R-image-add847e996d1c7ab5b09b321893f9e0b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/merge-trigger.png" style=" height: auto; width: auto;" title="Merge Trigger"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-add847e996d1c7ab5b09b321893f9e0b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/merge-trigger.png" title="Merge Trigger"></a></p>
+<p><a href="#R-image-03663e8c528928bb70348641439cdf21" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/merge-trigger.png" style=" height: auto; width: auto;" title="Merge Trigger"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-03663e8c528928bb70348641439cdf21"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/merge-trigger.png" title="Merge Trigger"></a></p>
 
   <footer class="footline">
   </footer>
@@ -197,7 +197,7 @@
       <div id="R-content-wrapper" class="highlightable">
         <div class="R-sidebarmenu R-shortcutmenu-main">
           <ul class="enlarge morespace collapsible-menu">
-            <li class="" data-nav-id="/10-cdaf/index.html"><input type="checkbox" id="R-section-a9cb0b536404115325c82530a716c7b6" aria-controls="R-subsections-a9cb0b536404115325c82530a716c7b6"><label for="R-section-a9cb0b536404115325c82530a716c7b6"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CDAF 2.8.2</span></label><a class="padding" href="/10-cdaf/index.html"><i class='fas fa-cog'></i>  CDAF 2.8.2</a><ul id="R-subsections-a9cb0b536404115325c82530a716c7b6" class="collapsible-menu">
+            <li class="" data-nav-id="/10-cdaf/index.html"><input type="checkbox" id="R-section-a9cb0b536404115325c82530a716c7b6" aria-controls="R-subsections-a9cb0b536404115325c82530a716c7b6"><label for="R-section-a9cb0b536404115325c82530a716c7b6"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CDAF</span></label><a class="padding" href="/10-cdaf/index.html"><i class='fas fa-cog'></i>  CDAF</a><ul id="R-subsections-a9cb0b536404115325c82530a716c7b6" class="collapsible-menu">
             <li class="alwaysopen " data-nav-id="/10-cdaf/10-getting-started/index.html"><input type="checkbox" id="R-section-0b5d88139130c562a7e54d32afdbaa5e" aria-controls="R-subsections-0b5d88139130c562a7e54d32afdbaa5e" checked><label for="R-section-0b5d88139130c562a7e54d32afdbaa5e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Getting Started</span></label><a class="padding" href="/10-cdaf/10-getting-started/index.html"><i class='fas fa-play-circle'></i>  Getting Started</a><ul id="R-subsections-0b5d88139130c562a7e54d32afdbaa5e" class="collapsible-menu">
             <li class="" data-nav-id="/10-cdaf/10-getting-started/10-ci/index.html"><a class="padding" href="/10-cdaf/10-getting-started/10-ci/index.html">Seed Solution</a></li>
             <li class="" data-nav-id="/10-cdaf/10-getting-started/20-pipeline/index.html"><a class="padding" href="/10-cdaf/10-getting-started/20-pipeline/index.html">Pipeline</a></li>
@@ -317,22 +317,22 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745655782" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745655782" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-color.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1745655782" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1745655782" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745696548" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745696548" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-color.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1745696548" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1745696548" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.min.js?1745655782" defer></script>
+    <script src="/js/theme.min.js?1745696548" defer></script>
   </body>
 </html>

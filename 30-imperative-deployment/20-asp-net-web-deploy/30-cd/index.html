@@ -23,18 +23,18 @@
     <meta itemprop="wordCount" content="348">
     <meta itemprop="keywords" content="Separation-of-Concerns">
     <title>Continuous Delivery (CD) :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745655782" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745655782" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745655782" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745655782" rel="stylesheet">
-    <link href="/css/theme.min.css?1745655782" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745655782" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745655782" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745655782" defer></script>
-    <script src="/js/search.min.js?1745655782" defer></script>
+    <link href="/images/favicon.ico?1745696548" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745696548" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745696548" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745696548" rel="stylesheet">
+    <link href="/css/theme.min.css?1745696548" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745696548" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745696548" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745696548" defer></script>
+    <script src="/js/search.min.js?1745696548" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +44,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745655782";
+      window.relearn.index_js_url="/searchindex.en.js?1745696548";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -137,7 +137,7 @@
 
 <h1 id="continuous-delivery-cd">Continuous Delivery (CD)</h1>
 
-<h2 id="hahahugoshortcode28s0hbhb">Deploy Many</h2>
+<h2 id="hahahugoshortcode25s0hbhb">Deploy Many</h2>
 <p>The tokenised configuration files need to be detokenised at deploy time. The settings are likely to include both sensitive and non-sensitive values. A core principle of CDAF for sensitive values is based on the 12-Factor approach of using environment variables, while source control is the recommended approach for non-sensitive values.</p>
 <h3 id="why-source-control-for-settings">Why Source Control for Settings?</h3>
 <p>The Continuous Delivery Automation Framework (CDAF) has been engineered for enterprise scale implementations. Large scale organisations typically have a higher focus on gating and auditing, and to provide a change of configuration audit trail, along with a single way-of-working, the configuration changes are applied using the same principles as other deliveries, e.g application development.</p>
@@ -160,8 +160,8 @@ local    PROD    &#34;Default Web Site&#34;   prod        prodsql    prod       
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Use Web Deploy to deploy the Aware application&#34;</span>
 </span></span><span style="display:flex;"><span>.\MyAspApp.deploy.cmd /Y /M:localhost</span></span></code></pre></div>
-<p><a href="#R-image-1004d2e593cfbc180184cb4a1109f0b0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wol-deploy.png" style=" height: auto; width: auto;" title="Deployment"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1004d2e593cfbc180184cb4a1109f0b0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wol-deploy.png" title="Deployment"></a></p>
+<p><a href="#R-image-edb0feb32202a7cdc6f70a07dd5c1e67" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wol-deploy.png" style=" height: auto; width: auto;" title="Deployment"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-edb0feb32202a7cdc6f70a07dd5c1e67"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wol-deploy.png" title="Deployment"></a></p>
 <p>The overview of how to construct and test this locally see the <a href="/10-cdaf/10-getting-started/50-cd/index.html">CDAF basics</a>.</p>
 
   <footer class="footline">
@@ -207,7 +207,7 @@ local    PROD    &#34;Default Web Site&#34;   prod        prodsql    prod       
       <div id="R-content-wrapper" class="highlightable">
         <div class="R-sidebarmenu R-shortcutmenu-main">
           <ul class="enlarge morespace collapsible-menu">
-            <li class="" data-nav-id="/10-cdaf/index.html"><input type="checkbox" id="R-section-a9cb0b536404115325c82530a716c7b6" aria-controls="R-subsections-a9cb0b536404115325c82530a716c7b6"><label for="R-section-a9cb0b536404115325c82530a716c7b6"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CDAF 2.8.2</span></label><a class="padding" href="/10-cdaf/index.html"><i class='fas fa-cog'></i>  CDAF 2.8.2</a><ul id="R-subsections-a9cb0b536404115325c82530a716c7b6" class="collapsible-menu">
+            <li class="" data-nav-id="/10-cdaf/index.html"><input type="checkbox" id="R-section-a9cb0b536404115325c82530a716c7b6" aria-controls="R-subsections-a9cb0b536404115325c82530a716c7b6"><label for="R-section-a9cb0b536404115325c82530a716c7b6"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CDAF</span></label><a class="padding" href="/10-cdaf/index.html"><i class='fas fa-cog'></i>  CDAF</a><ul id="R-subsections-a9cb0b536404115325c82530a716c7b6" class="collapsible-menu">
             <li class="alwaysopen " data-nav-id="/10-cdaf/10-getting-started/index.html"><input type="checkbox" id="R-section-0b5d88139130c562a7e54d32afdbaa5e" aria-controls="R-subsections-0b5d88139130c562a7e54d32afdbaa5e" checked><label for="R-section-0b5d88139130c562a7e54d32afdbaa5e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Getting Started</span></label><a class="padding" href="/10-cdaf/10-getting-started/index.html"><i class='fas fa-play-circle'></i>  Getting Started</a><ul id="R-subsections-0b5d88139130c562a7e54d32afdbaa5e" class="collapsible-menu">
             <li class="" data-nav-id="/10-cdaf/10-getting-started/10-ci/index.html"><a class="padding" href="/10-cdaf/10-getting-started/10-ci/index.html">Seed Solution</a></li>
             <li class="" data-nav-id="/10-cdaf/10-getting-started/20-pipeline/index.html"><a class="padding" href="/10-cdaf/10-getting-started/20-pipeline/index.html">Pipeline</a></li>
@@ -327,22 +327,22 @@ local    PROD    &#34;Default Web Site&#34;   prod        prodsql    prod       
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745655782" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745655782" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-color.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1745655782" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1745655782" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745696548" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745696548" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-color.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1745696548" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1745696548" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.min.js?1745655782" defer></script>
+    <script src="/js/theme.min.js?1745696548" defer></script>
   </body>
 </html>

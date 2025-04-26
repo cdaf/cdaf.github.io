@@ -24,18 +24,18 @@
     <meta itemprop="wordCount" content="157">
     <meta itemprop="keywords" content="Kb,12-Factors">
     <title>Release :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745655782" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745655782" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745655782" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745655782" rel="stylesheet">
-    <link href="/css/theme.min.css?1745655782" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745655782" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745655782" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745655782" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745655782" defer></script>
-    <script src="/js/search.min.js?1745655782" defer></script>
+    <link href="/images/favicon.ico?1745696548" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745696548" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745696548" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745696548" rel="stylesheet">
+    <link href="/css/theme.min.css?1745696548" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745696548" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745696548" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745696548" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745696548" defer></script>
+    <script src="/js/search.min.js?1745696548" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -45,7 +45,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745655782";
+      window.relearn.index_js_url="/searchindex.en.js?1745696548";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -139,23 +139,23 @@
 
 <h1 id="release">Release</h1>
 
-<h2 id="hahahugoshortcode59s0hbhb">Full Stack Release</h2>
+<h2 id="hahahugoshortcode61s0hbhb">Full Stack Release</h2>
 <p>The ADO Release function is used to create a release, and promote it through the environments. The release obtains the components from the artefact store</p>
-<p><a href="#R-image-c17586b7b236f9402a4dc9403aa767bc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-packages.png" style=" height: auto; width: auto;" title="ADO Release Packages"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c17586b7b236f9402a4dc9403aa767bc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-packages.png" title="ADO Release Packages"></a></p>
+<p><a href="#R-image-839695ee4a008beeeb315a30b39575c9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-packages.png" style=" height: auto; width: auto;" title="ADO Release Packages"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-839695ee4a008beeeb315a30b39575c9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-packages.png" title="ADO Release Packages"></a></p>
 <p>The Release is defined in order of dependency, i.e. the CloudFlare infrastructure is created/updated and configured with the API, then the front-end is deployed to the infrastructure.</p>
 <blockquote>
 <p>The release itself includes to deployment logic, it simply invokes the packages provided by the component development team.</p></blockquote>
-<p><a href="#R-image-e12d53ace1d3e44f627a86fd4de5d098" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-stages.png" style=" height: auto; width: auto;" title="ADO Release Stages"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e12d53ace1d3e44f627a86fd4de5d098"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-stages.png" title="ADO Release Stages"></a></p>
+<p><a href="#R-image-f7cae2de6a0754c30c877593a38eb934" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-stages.png" style=" height: auto; width: auto;" title="ADO Release Stages"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f7cae2de6a0754c30c877593a38eb934"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-stages.png" title="ADO Release Stages"></a></p>
 <p>When a new release is created, the latest versions are defaulted, and this defines the manifest for the release, i.e. different versions cannot be deployed to different environments. This ensures the stack is consistency promoted.</p>
 <blockquote>
 <p>The latest versions do not have to selected, but whatever is selected is static for that release instance.</p></blockquote>
-<p><a href="#R-image-6b09b838f2dd248c23c446ea90e237c9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-create.png" style=" height: auto; width: auto;" title="ADO Release Create"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6b09b838f2dd248c23c446ea90e237c9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-create.png" title="ADO Release Create"></a></p>
+<p><a href="#R-image-299ff384c4b7bc79910173bb68571515" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-create.png" style=" height: auto; width: auto;" title="ADO Release Create"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-299ff384c4b7bc79910173bb68571515"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-create.png" title="ADO Release Create"></a></p>
 <p>When the release is promoted, no manual intervention is required, except for approval gates, which can be approved by business or product owners, and does not require any further development effort.</p>
-<p><a href="#R-image-d9929298da096292616e279556b4b874" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-promotion.png" style=" height: auto; width: auto;" title="ADO Release Create"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d9929298da096292616e279556b4b874"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-promotion.png" title="ADO Release Create"></a></p>
+<p><a href="#R-image-73b4e38857dc0bd8ef49bbc0b6e6d10d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-promotion.png" style=" height: auto; width: auto;" title="ADO Release Create"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-73b4e38857dc0bd8ef49bbc0b6e6d10d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-promotion.png" title="ADO Release Create"></a></p>
 
   <footer class="footline">
   </footer>
@@ -200,7 +200,7 @@
       <div id="R-content-wrapper" class="highlightable">
         <div class="R-sidebarmenu R-shortcutmenu-main">
           <ul class="enlarge morespace collapsible-menu">
-            <li class="" data-nav-id="/10-cdaf/index.html"><input type="checkbox" id="R-section-a9cb0b536404115325c82530a716c7b6" aria-controls="R-subsections-a9cb0b536404115325c82530a716c7b6"><label for="R-section-a9cb0b536404115325c82530a716c7b6"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CDAF 2.8.2</span></label><a class="padding" href="/10-cdaf/index.html"><i class='fas fa-cog'></i>  CDAF 2.8.2</a><ul id="R-subsections-a9cb0b536404115325c82530a716c7b6" class="collapsible-menu">
+            <li class="" data-nav-id="/10-cdaf/index.html"><input type="checkbox" id="R-section-a9cb0b536404115325c82530a716c7b6" aria-controls="R-subsections-a9cb0b536404115325c82530a716c7b6"><label for="R-section-a9cb0b536404115325c82530a716c7b6"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu CDAF</span></label><a class="padding" href="/10-cdaf/index.html"><i class='fas fa-cog'></i>  CDAF</a><ul id="R-subsections-a9cb0b536404115325c82530a716c7b6" class="collapsible-menu">
             <li class="alwaysopen " data-nav-id="/10-cdaf/10-getting-started/index.html"><input type="checkbox" id="R-section-0b5d88139130c562a7e54d32afdbaa5e" aria-controls="R-subsections-0b5d88139130c562a7e54d32afdbaa5e" checked><label for="R-section-0b5d88139130c562a7e54d32afdbaa5e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Getting Started</span></label><a class="padding" href="/10-cdaf/10-getting-started/index.html"><i class='fas fa-play-circle'></i>  Getting Started</a><ul id="R-subsections-0b5d88139130c562a7e54d32afdbaa5e" class="collapsible-menu">
             <li class="" data-nav-id="/10-cdaf/10-getting-started/10-ci/index.html"><a class="padding" href="/10-cdaf/10-getting-started/10-ci/index.html">Seed Solution</a></li>
             <li class="" data-nav-id="/10-cdaf/10-getting-started/20-pipeline/index.html"><a class="padding" href="/10-cdaf/10-getting-started/20-pipeline/index.html">Pipeline</a></li>
@@ -320,22 +320,22 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745655782" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745655782" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-color.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1745655782" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1745655782" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1745655782" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745696548" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745696548" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-color.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1745696548" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1745696548" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1745696548" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.min.js?1745655782" defer></script>
+    <script src="/js/theme.min.js?1745696548" defer></script>
   </body>
 </html>
