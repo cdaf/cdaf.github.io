@@ -24,18 +24,18 @@
     <meta itemprop="wordCount" content="172">
     <meta itemprop="keywords" content="Kb,12-Factors">
     <title>Release :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745696548" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745696548" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745696548" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745696548" rel="stylesheet">
-    <link href="/css/theme.min.css?1745696548" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745696548" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745696548" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745696548" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745696548" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745696548" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745696548" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745696548" defer></script>
-    <script src="/js/search.min.js?1745696548" defer></script>
+    <link href="/images/favicon.ico?1745697598" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745697598" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745697598" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745697598" rel="stylesheet">
+    <link href="/css/theme.min.css?1745697598" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745697598" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745697598" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745697598" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745697598" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745697598" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745697598" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745697598" defer></script>
+    <script src="/js/search.min.js?1745697598" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -45,7 +45,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745696548";
+      window.relearn.index_js_url="/searchindex.en.js?1745697598";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -139,7 +139,7 @@
 
 <h1 id="release">Release</h1>
 
-<h2 id="hahahugoshortcode75s0hbhb">Release Construction</h2>
+<h2 id="hahahugoshortcode76s0hbhb">Release Construction</h2>
 <p>The release combines the Infrastructure-as-Code (IaC) Continuous Integration (CI) output with the application components from <a href="/70-authoritative-release/40-terraform-kubernetes/index.html">Terraform Authoritative Release</a>. The application <em>authoritative release package</em> (in green below) declares the image versions to be deployed to the infrastructure provided by the IaC <em>release package</em>.</p>
 <pre class="mermaid align-center ">
 graph LR
@@ -178,19 +178,19 @@ graph LR
 
 </pre>
 <p>In this example, the application release pipeline only deploys to the development environment to verify the package, and then pushes to the artefact store</p>
-<p><a href="#R-image-62f747ddd497239619133c7d02dc42eb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style=" height: auto; width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-62f747ddd497239619133c7d02dc42eb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-41b3dc02827b07cf3ac4191644ce2a58" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style=" height: auto; width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-41b3dc02827b07cf3ac4191644ce2a58"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Terraform Apply"></a></p>
 <p>The package, based on it&rsquo;s semantic version is pulled from this store at deploy time, based on the solution manifest, <code>CDAF.solution</code>.</p>
-<p><a href="#R-image-c4a1de3cbd3de0675b2820a6df89e941" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style=" height: auto; width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c4a1de3cbd3de0675b2820a6df89e941"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-bd25e9f9a986b24e9ee9874431b27fbf" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style=" height: auto; width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bd25e9f9a986b24e9ee9874431b27fbf"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>artifactPrefix=0.5
 productName=Azure Terraform for Kubernetes
 solutionName=azt
 
 kat_release=0.4.80</code></pre></div>
 <p>the two release artefacts are promoted together through the pipeline</p>
-<p><a href="#R-image-e0e4946c4c786b32dde3501065b7eb11" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline.png" style=" height: auto; width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e0e4946c4c786b32dde3501065b7eb11"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-b3c99b89af54fa7b086b4cdcf44007b2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline.png" style=" height: auto; width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b3c99b89af54fa7b086b4cdcf44007b2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline.png" title="Terraform Apply"></a></p>
 
   <footer class="footline">
   </footer>
@@ -301,7 +301,7 @@ kat_release=0.4.80</code></pre></div>
             <li class="" data-nav-id="/80-release-train/20-ansible-automation-platform/30-manifest/index.html"><a class="padding" href="/80-release-train/20-ansible-automation-platform/30-manifest/index.html">Manifest</a></li>
             <li class="" data-nav-id="/80-release-train/20-ansible-automation-platform/40-build-once/index.html"><a class="padding" href="/80-release-train/20-ansible-automation-platform/40-build-once/index.html">Ansible Build</a></li>
             <li class="" data-nav-id="/80-release-train/20-ansible-automation-platform/50-deploy-many/index.html"><a class="padding" href="/80-release-train/20-ansible-automation-platform/50-deploy-many/index.html">Ansible Deploy</a></li></ul></li>
-            <li class="alwaysopen " data-nav-id="/80-release-train/30-octopus-deploy/index.html"><input type="checkbox" id="R-section-d2109aecf2a401581780c0b8f947f635" aria-controls="R-subsections-d2109aecf2a401581780c0b8f947f635" checked><label for="R-section-d2109aecf2a401581780c0b8f947f635"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Octopus Deploy</span></label><a class="padding" href="/80-release-train/30-octopus-deploy/index.html"><i class='fas fa-water'></i>  Octopus Deploy</a><ul id="R-subsections-d2109aecf2a401581780c0b8f947f635" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/80-release-train/30-octopus-deploy/index.html"><input type="checkbox" id="R-section-d2109aecf2a401581780c0b8f947f635" aria-controls="R-subsections-d2109aecf2a401581780c0b8f947f635" checked><label for="R-section-d2109aecf2a401581780c0b8f947f635"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Octopus Deploy</span></label><a class="padding" href="/80-release-train/30-octopus-deploy/index.html"><i class='fa-brands fa-octopus-deploy'></i>  Octopus Deploy</a><ul id="R-subsections-d2109aecf2a401581780c0b8f947f635" class="collapsible-menu">
             <li class="" data-nav-id="/80-release-train/30-octopus-deploy/10-manifest/index.html"><a class="padding" href="/80-release-train/30-octopus-deploy/10-manifest/index.html">Octopus Pane of Glass</a></li>
             <li class="" data-nav-id="/80-release-train/30-octopus-deploy/20-deploy-many/index.html"><a class="padding" href="/80-release-train/30-octopus-deploy/20-deploy-many/index.html">Decoupled Deployment</a></li>
             <li class="" data-nav-id="/80-release-train/30-octopus-deploy/60-business-visibility/index.html"><a class="padding" href="/80-release-train/30-octopus-deploy/60-business-visibility/index.html">Business Visibility</a></li></ul></li>
@@ -327,7 +327,7 @@ kat_release=0.4.80</code></pre></div>
             <li class="" data-nav-id="/90-reference/20-feature-configuration/70-sensitive-data-strategies/index.html"><a class="padding" href="/90-reference/20-feature-configuration/70-sensitive-data-strategies/index.html">Sensitive Data Strategies</a></li>
             <li class="" data-nav-id="/90-reference/20-feature-configuration/80-legacy-features/index.html"><a class="padding" href="/90-reference/20-feature-configuration/80-legacy-features/index.html">Legacy Features</a></li>
             <li class="" data-nav-id="/90-reference/20-feature-configuration/90-variable-validation/index.html"><a class="padding" href="/90-reference/20-feature-configuration/90-variable-validation/index.html">Variable Validation</a></li></ul></li>
-            <li class="alwaysopen " data-nav-id="/90-reference/30-docker-features/index.html"><input type="checkbox" id="R-section-aa1a8a19c8be27895a8a6ea14a173222" aria-controls="R-subsections-aa1a8a19c8be27895a8a6ea14a173222" checked><label for="R-section-aa1a8a19c8be27895a8a6ea14a173222"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Docker Features</span></label><a class="padding" href="/90-reference/30-docker-features/index.html"><i class='fas fa-toolbox'></i>  Docker Features</a><ul id="R-subsections-aa1a8a19c8be27895a8a6ea14a173222" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/90-reference/30-docker-features/index.html"><input type="checkbox" id="R-section-aa1a8a19c8be27895a8a6ea14a173222" aria-controls="R-subsections-aa1a8a19c8be27895a8a6ea14a173222" checked><label for="R-section-aa1a8a19c8be27895a8a6ea14a173222"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Docker Features</span></label><a class="padding" href="/90-reference/30-docker-features/index.html"><i class='fa-brands fa-docker'></i>  Docker Features</a><ul id="R-subsections-aa1a8a19c8be27895a8a6ea14a173222" class="collapsible-menu">
             <li class="" data-nav-id="/90-reference/30-docker-features/10-configuration-mapping/index.html"><a class="padding" href="/90-reference/30-docker-features/10-configuration-mapping/index.html">containerBuild</a></li>
             <li class="" data-nav-id="/90-reference/30-docker-features/20-container-build/index.html"><a class="padding" href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a></li>
             <li class="" data-nav-id="/90-reference/30-docker-features/30-image-build/index.html"><a class="padding" href="/90-reference/30-docker-features/30-image-build/index.html">imageBuild</a></li>
@@ -355,22 +355,22 @@ kat_release=0.4.80</code></pre></div>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745696548" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745696548" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-color.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1745696548" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1745696548" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745697598" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745697598" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-color.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1745697598" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1745697598" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.min.js?1745696548" defer></script>
+    <script src="/js/theme.min.js?1745697598" defer></script>
   </body>
 </html>

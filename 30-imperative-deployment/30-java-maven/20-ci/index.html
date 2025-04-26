@@ -23,18 +23,18 @@
     <meta itemprop="wordCount" content="150">
     <meta itemprop="keywords" content="Separation-of-Concerns">
     <title>Continuous Integration (CI) :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745696548" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745696548" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745696548" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745696548" rel="stylesheet">
-    <link href="/css/theme.min.css?1745696548" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745696548" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745696548" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745696548" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745696548" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745696548" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745696548" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745696548" defer></script>
-    <script src="/js/search.min.js?1745696548" defer></script>
+    <link href="/images/favicon.ico?1745697598" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745697598" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745697598" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745697598" rel="stylesheet">
+    <link href="/css/theme.min.css?1745697598" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745697598" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745697598" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745697598" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745697598" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745697598" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745697598" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745697598" defer></script>
+    <script src="/js/search.min.js?1745697598" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +44,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745696548";
+      window.relearn.index_js_url="/searchindex.en.js?1745697598";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -137,7 +137,7 @@
 
 <h1 id="continuous-integration-ci">Continuous Integration (CI)</h1>
 
-<h2 id="hahahugoshortcode27s0hbhb">Build &amp; Package Once</h2>
+<h2 id="hahahugoshortcode26s0hbhb">Build &amp; Package Once</h2>
 <p>To provide a runtime verification of the build that has been deployed, the version is automatically incremented by placing a variable in the <code>pom.xml</code> file</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 </span></span><span style="display:flex;"><span>
@@ -150,12 +150,12 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;version&gt;</span>0.2.${build.number}<span style="color:#f92672">&lt;/version&gt;</span></span></span></code></pre></div>
 <p>In the <a href="/10-cdaf/10-getting-started/30-ci/index.html">build task</a>, the build number is supplied as a maven parameter</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn --batch-mode --file springboot/pom.xml package -D<span style="color:#e6db74">&#34;build.number=</span><span style="color:#e6db74">${</span>BUILDNUMBER<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span></span></span></code></pre></div>
-<p><a href="#R-image-e7b8625b48dbf6633e89072ccfd8f12e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-mvn.png" style=" height: auto; width: auto;" title="Spring Maven Build"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e7b8625b48dbf6633e89072ccfd8f12e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-mvn.png" title="Spring Maven Build"></a></p>
+<p><a href="#R-image-45025f0110e175a7fdd9771017e0fe65" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-mvn.png" style=" height: auto; width: auto;" title="Spring Maven Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-45025f0110e175a7fdd9771017e0fe65"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-mvn.png" title="Spring Maven Build"></a></p>
 <p>The resulting artefact is in a subdirectory, buy using the -flat parameter in <code>storeForLocal</code> the artefact will be placed in the root of release package.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>springboot/target/springboot.war -flat</code></pre></div>
-<p><a href="#R-image-52055e34f8fcee5b5f89481a5f386866" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-store-for.png" style=" height: auto; width: auto;" title="Package"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-52055e34f8fcee5b5f89481a5f386866"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-store-for.png" title="Package"></a></p>
+<p><a href="#R-image-be609ebb036c598493117a67f6cbd1a8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-store-for.png" style=" height: auto; width: auto;" title="Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-be609ebb036c598493117a67f6cbd1a8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-store-for.png" title="Package"></a></p>
 <h3 id="image-build">Image Build</h3>
 <p>By setting the <code>buildImage</code> property in the <code>CDAF.solution</code> driver file, a docker image build and push is triggered. In this example the image is pushed to an on-premise container registry (Nexus).</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>productName=Springboot Sprint Zero
@@ -170,10 +170,10 @@ CDAF_REGISTRY_USER=${NEXUS_REGISTRY_USER}
 CDAF_REGISTRY_TOKEN=${NEXUS_REGISTRY_PASS}
 
 registryTag=${NEXUS_REGISTRY}/${SOLUTION}:$BUILDNUMBER</code></pre></div>
-<p><a href="#R-image-dd8bf698642cd4babebd202e841de374" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-image-build.png" style=" height: auto; width: auto;" title="Image Build"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd8bf698642cd4babebd202e841de374"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-image-build.png" title="Image Build"></a>
-<a href="#R-image-badb02eb3ce461b72b1bd6e180a3991a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-image-push.png" style=" height: auto; width: auto;" title="Image Push"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-badb02eb3ce461b72b1bd6e180a3991a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-image-push.png" title="Image Push"></a></p>
+<p><a href="#R-image-afffa417f327e109bbe7206c100ee626" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-image-build.png" style=" height: auto; width: auto;" title="Image Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-afffa417f327e109bbe7206c100ee626"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-image-build.png" title="Image Build"></a>
+<a href="#R-image-349b77ac73ebcf34c04b8a588351be2b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-image-push.png" style=" height: auto; width: auto;" title="Image Push"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-349b77ac73ebcf34c04b8a588351be2b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-image-push.png" title="Image Push"></a></p>
 <p>This image is consumed, along with other autonomous development components, in the <a href="/80-release-train/20-ansible-automation-platform/index.html"><em>Release Train</em></a>.</p>
 
   <footer class="footline">
@@ -285,7 +285,7 @@ registryTag=${NEXUS_REGISTRY}/${SOLUTION}:$BUILDNUMBER</code></pre></div>
             <li class="" data-nav-id="/80-release-train/20-ansible-automation-platform/30-manifest/index.html"><a class="padding" href="/80-release-train/20-ansible-automation-platform/30-manifest/index.html">Manifest</a></li>
             <li class="" data-nav-id="/80-release-train/20-ansible-automation-platform/40-build-once/index.html"><a class="padding" href="/80-release-train/20-ansible-automation-platform/40-build-once/index.html">Ansible Build</a></li>
             <li class="" data-nav-id="/80-release-train/20-ansible-automation-platform/50-deploy-many/index.html"><a class="padding" href="/80-release-train/20-ansible-automation-platform/50-deploy-many/index.html">Ansible Deploy</a></li></ul></li>
-            <li class="alwaysopen " data-nav-id="/80-release-train/30-octopus-deploy/index.html"><input type="checkbox" id="R-section-d2109aecf2a401581780c0b8f947f635" aria-controls="R-subsections-d2109aecf2a401581780c0b8f947f635" checked><label for="R-section-d2109aecf2a401581780c0b8f947f635"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Octopus Deploy</span></label><a class="padding" href="/80-release-train/30-octopus-deploy/index.html"><i class='fas fa-water'></i>  Octopus Deploy</a><ul id="R-subsections-d2109aecf2a401581780c0b8f947f635" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/80-release-train/30-octopus-deploy/index.html"><input type="checkbox" id="R-section-d2109aecf2a401581780c0b8f947f635" aria-controls="R-subsections-d2109aecf2a401581780c0b8f947f635" checked><label for="R-section-d2109aecf2a401581780c0b8f947f635"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Octopus Deploy</span></label><a class="padding" href="/80-release-train/30-octopus-deploy/index.html"><i class='fa-brands fa-octopus-deploy'></i>  Octopus Deploy</a><ul id="R-subsections-d2109aecf2a401581780c0b8f947f635" class="collapsible-menu">
             <li class="" data-nav-id="/80-release-train/30-octopus-deploy/10-manifest/index.html"><a class="padding" href="/80-release-train/30-octopus-deploy/10-manifest/index.html">Octopus Pane of Glass</a></li>
             <li class="" data-nav-id="/80-release-train/30-octopus-deploy/20-deploy-many/index.html"><a class="padding" href="/80-release-train/30-octopus-deploy/20-deploy-many/index.html">Decoupled Deployment</a></li>
             <li class="" data-nav-id="/80-release-train/30-octopus-deploy/60-business-visibility/index.html"><a class="padding" href="/80-release-train/30-octopus-deploy/60-business-visibility/index.html">Business Visibility</a></li></ul></li>
@@ -311,7 +311,7 @@ registryTag=${NEXUS_REGISTRY}/${SOLUTION}:$BUILDNUMBER</code></pre></div>
             <li class="" data-nav-id="/90-reference/20-feature-configuration/70-sensitive-data-strategies/index.html"><a class="padding" href="/90-reference/20-feature-configuration/70-sensitive-data-strategies/index.html">Sensitive Data Strategies</a></li>
             <li class="" data-nav-id="/90-reference/20-feature-configuration/80-legacy-features/index.html"><a class="padding" href="/90-reference/20-feature-configuration/80-legacy-features/index.html">Legacy Features</a></li>
             <li class="" data-nav-id="/90-reference/20-feature-configuration/90-variable-validation/index.html"><a class="padding" href="/90-reference/20-feature-configuration/90-variable-validation/index.html">Variable Validation</a></li></ul></li>
-            <li class="alwaysopen " data-nav-id="/90-reference/30-docker-features/index.html"><input type="checkbox" id="R-section-aa1a8a19c8be27895a8a6ea14a173222" aria-controls="R-subsections-aa1a8a19c8be27895a8a6ea14a173222" checked><label for="R-section-aa1a8a19c8be27895a8a6ea14a173222"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Docker Features</span></label><a class="padding" href="/90-reference/30-docker-features/index.html"><i class='fas fa-toolbox'></i>  Docker Features</a><ul id="R-subsections-aa1a8a19c8be27895a8a6ea14a173222" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/90-reference/30-docker-features/index.html"><input type="checkbox" id="R-section-aa1a8a19c8be27895a8a6ea14a173222" aria-controls="R-subsections-aa1a8a19c8be27895a8a6ea14a173222" checked><label for="R-section-aa1a8a19c8be27895a8a6ea14a173222"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Docker Features</span></label><a class="padding" href="/90-reference/30-docker-features/index.html"><i class='fa-brands fa-docker'></i>  Docker Features</a><ul id="R-subsections-aa1a8a19c8be27895a8a6ea14a173222" class="collapsible-menu">
             <li class="" data-nav-id="/90-reference/30-docker-features/10-configuration-mapping/index.html"><a class="padding" href="/90-reference/30-docker-features/10-configuration-mapping/index.html">containerBuild</a></li>
             <li class="" data-nav-id="/90-reference/30-docker-features/20-container-build/index.html"><a class="padding" href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a></li>
             <li class="" data-nav-id="/90-reference/30-docker-features/30-image-build/index.html"><a class="padding" href="/90-reference/30-docker-features/30-image-build/index.html">imageBuild</a></li>
@@ -339,22 +339,22 @@ registryTag=${NEXUS_REGISTRY}/${SOLUTION}:$BUILDNUMBER</code></pre></div>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745696548" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745696548" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-color.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1745696548" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1745696548" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1745696548" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745697598" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745697598" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-color.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1745697598" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1745697598" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1745697598" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.min.js?1745696548" defer></script>
+    <script src="/js/theme.min.js?1745697598" defer></script>
   </body>
 </html>

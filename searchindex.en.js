@@ -34,7 +34,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "",
-    "content": "For an overview of the Continuous Delivery Automation Framework (CDAF) see objectives and principles, or jump to getting started.\nFor alternate download options, see compressed package downloads.\nWindows\n⬇️ Download Installer\nLinux\n⬇️ Download Installer\nDatabase Tools\n⬇️ Java (JDBC) ⬇️ Windows (SQL Server)",
+    "content": "For an overview of the Continuous Delivery Automation Framework (CDAF) see objectives and principles, or jump to getting started.\nFor alternate download options, see compressed package downloads.\n⬇️ Download Installer\n⬇️ Download Installer\nDatabase Tools\n⬇️ Java (JDBC) ⬇️ Windows (SQL Server)",
     "description": "Continuous Delivery Automation Framework",
     "tags": [],
     "title": "CDAF 2.8.2",
