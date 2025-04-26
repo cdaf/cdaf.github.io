@@ -1,296 +1,200 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>12-factors on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/tags/12-factors/</link>
-    <description>Recent content in 12-factors on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/tags/12-factors/index.xml" rel="self" type="application/rss+xml" />
+    <title>12-Factors :: Tag :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/tags/12-factors/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/tags/12-factors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Component CI</title>
-      <link>https://cdaf.io/80-release-train/10-ado-release/10-component-ci/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/10-component-ci/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/10-ado-release/10-component-ci/</guid>
-      <description>Autonomous Component Build &amp;amp; Test Each component contains both application code and deployment automation. The development team can imperatively deploy to the dev environment, i.e. the API and Vue application can be deployed separately, with no assurance of version alignment.
-Example Vue properties.cm file, the deployment tool used is Wrangler.
-context target pages_app_project fqdn api_url container DEV petstore-dev vue-dev.example.com api-dev.example.com container TEST petstore-tst vue-tst.example.com api-tst.example.com container PROD petstore-prd vue.example.com api.example.com Example API properties.</description>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/10-component-ci/index.html</guid>
+      <description>Autonomous Component Build &amp; Test</description>
     </item>
-    
     <item>
       <title>Component Pipelines</title>
-      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/10-component-pipelines/</link>
+      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/10-component-pipelines/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/10-component-pipelines/</guid>
-      <description>Autonomous Development Each development team is responsible to publishing a container image, how they do so it within their control, in this example GitLab and ThoughtWorks Go are used by different teams. The GitLab team are branch based, while the Go team are branch based.
-Both teams are using CDAF docker image build and push helpers.
-productName=Ruby on Rails productName=Springboot solutionName=rails solutionName=spring artifactPrefix=0.3 artifactPrefix=0.2 defaultBranch=main	containerImage=cdaf/linux buildImage=ruby:3.2.2 buildImage=registry.access.redhat.com/ubi9/openjdk-17-runtime CDAF_PUSH_REGISTRY_URL=${CI_REGISTRY} CDAF_PUSH_REGISTRY_URL=https://${NEXUS_REGISTRY} CDAF_PUSH_REGISTRY_TAG=${semver} latest CDAF_PUSH_REGISTRY_TAG=${NEXUS_REGISTRY}/${SOLUTION}:$BUILDNUMBER CDAF_PUSH_REGISTRY_USER=${CI_REGISTRY_USER} CDAF_PUSH_REGISTRY_USER=${NEXUS_REGISTRY_USER} CDAF_PUSH_REGISTRY_TOKEN=${CI_JOB_TOKEN} CDAF_PUSH_REGISTRY_TOKEN=${NEXUS_REGISTRY_PASS} Next, build a release package&amp;hellip;</description>
+      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/10-component-pipelines/index.html</guid>
+      <description>Autonomous Development</description>
     </item>
-    
     <item>
       <title>Manifest</title>
-      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/10-manifest/</link>
+      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/10-manifest/</guid>
-      <description>Declare Container Deployment as Terraform Package The key component of the package is the release manifest, this declares the component versions of the solution. The desired state engine (Terraform) will ensure all components for the release align with the declaration in the manifest. These are added to your CDAF.solution file.
-solutionName=kat artifactPrefix=0.4 ui_image=cdaf/cdaf:572 api_image=cdaf/kestrel:ubuntu-22.04-14 fast_image=cdaf/fastapi:50 While the stack construction is the same in all environments, unique settings for each environment are defined in configuration management files, e.</description>
+      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.html</guid>
+      <description>Declare Container Deployment as Terraform Package</description>
     </item>
-    
     <item>
       <title>Manifest</title>
-      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/10-manifest/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/10-manifest/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/10-manifest/</guid>
-      <description>Declare Anypoint Components as Package The proprietary Mulesoft Anypoint Platform artefact store is called Exchange, and each artefact is called an Asset. Each asset is pushed to the exchange from the autonomous development pipelines. In the examples below, these are GitLab for Windows and Jenkins for Linux. Both use platform independent Maven deploy to push the asset.
-The release declaration is in the form of a manifest, specifying each desired component and it&amp;rsquo;s version.</description>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/10-manifest/index.html</guid>
+      <description>Declare Anypoint Components as Package</description>
     </item>
-    
     <item>
       <title>Manifest</title>
-      <link>https://cdaf.io/80-release-train/40-terraform-cloud/10-manifest/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/10-manifest/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/10-manifest/</guid>
-      <description>Declare Container Deployment as Terraform Package The key component of the package is the release manifest, this declares the component versions of the solution. The desired state engine (Terraform) will ensure all components for the release align with the declaration in the manifest. These are added to your CDAF.solution file.
-solutionName=kat artifactPrefix=0.4 ui_image=cdaf/cdaf:572 api_image=cdaf/kestrel:ubuntu-22.04-14 fast_image=cdaf/fastapi:50 While the stack construction is the same in all environments, unique settings for each environment are defined in configuration management files, e.</description>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/10-manifest/index.html</guid>
+      <description>Declare Container Deployment as Terraform Package</description>
     </item>
-    
     <item>
       <title>Octopus Pane of Glass</title>
-      <link>https://cdaf.io/80-release-train/30-octopus-deploy/10-manifest/</link>
+      <link>https://cdaf.io/80-release-train/30-octopus-deploy/10-manifest/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/10-manifest/</guid>
-      <description>Overview of Stack Components As an intermediatry, Octopus provides release gating, orchestration and a overview of the stack components, and what versions have been promoted to which environments.
-Parent Project The parent project does not perform any deployment activity itself, it serves as the orchestrator of the child projects, providing gating and sequencing.
-Child Projects The child project, use the same template process, but each has the release packages that have been build to perform their technology specific deployment process.</description>
+      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/10-manifest/index.html</guid>
+      <description>Overview of Stack Components</description>
     </item>
-    
     <item>
       <title>Component CD</title>
-      <link>https://cdaf.io/80-release-train/10-ado-release/20-component-cd/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/20-component-cd/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/10-ado-release/20-component-cd/</guid>
-      <description>Autonomous Component Deploy By using the feature-branch.properties capability of CDAF, branches containing the string dev will deploy to the development environment. This feature allows imperative deployment by the development team, without manipulating the pipeline, and therefore avoiding drift.
-vue
-# Feature Branch name match mapping to environment dev=DEV API
-# Feature Branch name &amp;quot;contains&amp;quot; mapping to environment dev=DEV release &#39;apply --auto-approve&#39; In the feature branch, where dev is in the branch name, CDAF will detect and execute a deployment, using the mapping above to invoke a release to DEV.</description>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/20-component-cd/index.html</guid>
+      <description>Autonomous Component Deploy</description>
     </item>
-    
     <item>
       <title>Custom State Build</title>
-      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/</guid>
-      <description>Custom State Release Package The key construct for the Authoritative Release is that all aspects of the release process are predictable and repeatable. Configuration and helper scripts are packaged into an immutable release. No build process is required, so the minimal CDAF.solution is all that is required, assuming the custom state management is placed in the custom directory within the solution directory, e.g.
-devops ├── CDAF.solution ├── custom │ ├── anypoint.</description>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/index.html</guid>
+      <description>Custom State Release Package</description>
     </item>
-    
     <item>
       <title>Decoupled Deployment</title>
-      <link>https://cdaf.io/80-release-train/30-octopus-deploy/20-deploy-many/</link>
+      <link>https://cdaf.io/80-release-train/30-octopus-deploy/20-deploy-many/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/20-deploy-many/</guid>
-      <description>Orchestrated Release The core principle of all the examples in this material is the production of a self-contained, immutable release package. This provides loose coupling with tool chains and re-usability for development environments (see Realising the Feedback Loop).
-While Octopus provides a wide range of deployment mechanisms, as a release orchestrator, each child project has the same process, executing the release package for each component against the target environment.
-Delivery Lifecycle Octopus orchestration is called a lifecycle, which is a re-usable pattern.</description>
+      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/20-deploy-many/index.html</guid>
+      <description>Orchestrated Release</description>
     </item>
-    
     <item>
       <title>Terraform Build</title>
-      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/20-build-once/</link>
+      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/20-build-once/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/20-build-once/</guid>
-      <description>Immutable Release Package The key construct for the Authoritative Release is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Terraform dependencies, modules are not downloaded at deploytime, instead they are resolved at build time and packaged into an immutable release package. For a consistent way-of-working, the Terraform build process resolves and validates dependencies.
-Build-time Module Resolution Most Terraform module resolution approaches are to pull from source control (Git) or registry at deploy-time, which can require additional credential management, risks unexpected module changes (if tags are used) and potential network connectivity issues.</description>
+      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/20-build-once/index.html</guid>
+      <description>Immutable Release Package</description>
     </item>
-    
     <item>
       <title>Terraform Build</title>
-      <link>https://cdaf.io/80-release-train/40-terraform-cloud/20-build-once/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/20-build-once/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/20-build-once/</guid>
-      <description>Immutable Release Package The key construct for the Authoritative Release is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Terraform dependencies, modules are not downloaded at deploytime, instead they are resolved at build time and packaged into an immutable release package. For a consistent way-of-working, the Terraform build process resolves and validates dependencies.
-Build-time Module Resolution Most Terraform module resolution approaches are to pull from source control (Git) or registry at deploy-time, which can require additional credential management, risks unexpected module changes (if tags are used) and potential network connectivity issues.</description>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/20-build-once/index.html</guid>
+      <description>Immutable Release Package</description>
     </item>
-    
     <item>
       <title>Component Publish</title>
-      <link>https://cdaf.io/80-release-train/10-ado-release/30-component-publish/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/30-component-publish/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/10-ado-release/30-component-publish/</guid>
-      <description>Autonomous Component Publication the final stage of the main pipeline is publication. This pushes the release package to the artefact registry.
-Each component publishes their release package, so although they use different technologies, they are now available as consistent packages, using the CDAF package process, which outputs a self-extract release.ps1 (of release.sh for linux) file.
-Next, Release&amp;hellip;</description>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/30-component-publish/index.html</guid>
+      <description>Autonomous Component Publication</description>
     </item>
-    
     <item>
       <title>Manifest</title>
-      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/30-manifest/</link>
+      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/30-manifest/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/30-manifest/</guid>
-      <description>Application Stack Declaration The key component of the package is the release manifest, this declares the component versions of the solution. The desired state engine (Ansible) will ensure all components for the release align with the declaration in the manifest. These are added to your CDAF.solution file. To see an example component build, see the Java SpringBoot example.
-artifactPrefix=1.2 productName=Ansible Provisioning solutionName=ansible # SMTP Configuration smtp_image=registry.example/mails:0.0.26 smtp_container_name=mail_forwarder smtp_container_ports=25:25 LISTEN_PORT=25 SITE_NAME=onprem # OAuth Verification App rails_image=registry.</description>
+      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/30-manifest/index.html</guid>
+      <description>Application Stack Declaration</description>
     </item>
-    
     <item>
       <title>Ansible Build</title>
-      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/40-build-once/</link>
+      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/40-build-once/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/40-build-once/</guid>
-      <description>Immutable Release Package The key construct for the Release Train is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Ansible dependencies, playbooks are not downloaded at deploytime, instead they are resolved at build time and packaged into an immutable release package. For a consistent way-of-working, the Ansible build process resolves dependencies and validates the playbooks.
-Due to the complexity, a customer build script build.</description>
+      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/40-build-once/index.html</guid>
+      <description>Immutable Release Package</description>
     </item>
-    
     <item>
       <title>Configuration Management</title>
-      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/</link>
+      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/</guid>
-      <description>Tokens and Properties To avoid a configuration file for each environment, and the inevitable drift between those files, a single, tokenised, definition is used.
-variable &amp;quot;aks_work_space&amp;quot; { default = &amp;quot;%aks_work_space%&amp;quot; } variable &amp;quot;name_space&amp;quot; { default = &amp;quot;%name_space%&amp;quot; } variable &amp;quot;REGISTRY_KEY&amp;quot; { default = &amp;quot;@REGISTRY_KEY@&amp;quot; } variable &amp;quot;REGISTRY_KEY_SHA { default = &amp;quot;@REGISTRY_KEY_SHA@&amp;quot; } To De-tokenise this definition at deploy time, name/value pair files are used. This allows the settings to be decoupled from the complexity of configuration file format.</description>
+      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/index.html</guid>
+      <description>Tokens and Properties</description>
     </item>
-    
     <item>
       <title>Configuration Management</title>
-      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/40-configuration-management/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/40-configuration-management/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/40-configuration-management/</guid>
-      <description>Building Desired State from Properties The application and environment settings are split into separate configuration management files. Application settings are those which have the same value, for the release, in all environments.
-context target region runtime_version java_version release_channel container patient-summary-app cloudhub-us-east-2 4.6.7 8 LTS container sprint-zero-app cloudhub-us-east-2 4.7.1 17 Edge Environment specific settings are associated to a given component, and differ for each environment. Note the special marker for sensitive data.</description>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/40-configuration-management/index.html</guid>
+      <description>Building Desired State from Properties</description>
     </item>
-    
     <item>
       <title>Configuration Management</title>
-      <link>https://cdaf.io/80-release-train/40-terraform-cloud/40-configuration-management/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/40-configuration-management/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/40-configuration-management/</guid>
-      <description>Tokens and Properties To avoid a configuration file for each environment, and the inevitable drift between those files, a single, tokenised, definition is used.
-variable &amp;quot;aks_work_space&amp;quot; { default = &amp;quot;%aks_work_space%&amp;quot; } variable &amp;quot;name_space&amp;quot; { default = &amp;quot;%name_space%&amp;quot; } variable &amp;quot;REGISTRY_KEY&amp;quot; { default = &amp;quot;@REGISTRY_KEY@&amp;quot; } variable &amp;quot;REGISTRY_KEY_SHA { default = &amp;quot;@REGISTRY_KEY_SHA@&amp;quot; } To De-tokenise this definition at deploy time, name/value pair files are used. This allows the settings to be decoupled from the complexity of configuration file format.</description>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/40-configuration-management/index.html</guid>
+      <description>Tokens and Properties</description>
     </item>
-    
     <item>
       <title>Release</title>
-      <link>https://cdaf.io/80-release-train/10-ado-release/40-release/</link>
+      <link>https://cdaf.io/80-release-train/10-ado-release/40-release/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/10-ado-release/40-release/</guid>
-      <description>Full Stack Release The ADO Release function is used to create a release, and promote it through the environments. The release obtains the components from the artefact store
-The Release is defined in order of dependency, i.e. the CloudFlare infrastructure is created/updated and configured with the API, then the front-end is deployed to the infrastructure.
- The release itself includes to deployment logic, it simply invokes the packages provided by the component development team.</description>
+      <guid>https://cdaf.io/80-release-train/10-ado-release/40-release/index.html</guid>
+      <description>Full Stack Release</description>
     </item>
-    
     <item>
       <title>Ansible Deploy</title>
-      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/50-deploy-many/</link>
+      <link>https://cdaf.io/80-release-train/20-ansible-automation-platform/50-deploy-many/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/50-deploy-many/</guid>
-      <description>Detokenisation and Release At deploy time, the solution manifest and environment settings are applied, the following is an extract from the tower.tsk.
-echo &amp;quot;De-tokenise Environment properties prior to loading to Tower&amp;quot; DETOKN roles/apache-reverse-proxy/vars/main.yml echo &amp;quot;Resolve global config, i.e. container image version, then environment specific list names&amp;quot; DETOKN roles/smtp/vars/main.yml DETOKN roles/smtp/vars/main.yml $WORKSPACE/manifest.txt DETOKN roles/rails/vars/main.yml DETOKN roles/rails/vars/main.yml $WORKSPACE/manifest.txt DETOKN roles/spring/vars/main.yml DETOKN roles/spring/vars/main.yml $WORKSPACE/manifest.txt As the Ansible Automation Platform is the intermediary, the declarations need to be moved to intermediary and then the release triggered.</description>
+      <guid>https://cdaf.io/80-release-train/20-ansible-automation-platform/50-deploy-many/index.html</guid>
+      <description>Detokenisation and Release</description>
     </item>
-    
     <item>
       <title>Deploy</title>
-      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/50-deploy/</link>
+      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/50-deploy/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/50-deploy/</guid>
-      <description>Deploy-time Detokenisation To support the build-once/deploy-many model, the environment specific values are injected and then deployed for the release. Note that the release is immutable, and any change to any component will require a new release to be created, eliminating cherry picking. The tasksRun.tsk performs two levels of detokenisation, the first is for environment specific settings, and the second applies any solution level declarations.
-Write-Host &amp;quot;[$TASK_NAME] Generic Properties Detokenisation`n&amp;quot; -ForegroundColor Cyan Get-Content variables.</description>
+      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/50-deploy/index.html</guid>
+      <description>Deploy-time Detokenisation</description>
     </item>
-    
     <item>
       <title>Desired State</title>
-      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/</guid>
-      <description>Determining Change At deploy time, the current state, and desired state are compared, and only those components which have changed, are deployed.
- In this example, deployment is orchestrated in Octopus Deploy Release Train
- Once complete, the new current state is persisted.
-These can be aggregated in the Wiki to provide a consolidate view for non-techincal users
-Note that the overarching release number is used as a update comment when writing to the Confluence page, this provides a release history which is visible outside of the toolchain, which is easier to access by business users such as test managers and product owners.</description>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/index.html</guid>
+      <description>Determining Change</description>
     </item>
-    
     <item>
       <title>Release</title>
-      <link>https://cdaf.io/80-release-train/40-terraform-cloud/50-release/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/50-release/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/50-release/</guid>
-      <description>Release Construction The release combines the Infrastructure-as-Code (IaC) Continuous Integration (CI) output with the application components from Terraform Authoritative Release. The application authoritative release package (in green below) declares the image versions to be deployed to the infrastructure provided by the IaC release package.
-graph LR Key[&#34;LegendBlue - IaC &amp; CMGreen - Application Stack&#34;] subgraph ado[&#34;Azure DevOps&#34;] git[(Git)] build-artefact[(Build)] iac[&#34;release.ps1&#34;] package-artefact[(Artifacts)] app[&#34;release.ps1&#34;] end subgraph az[&#34;Azure&#34;] qa pp pr end registry[(Docker Registry)] git --CI-- build-artefact build-artefact --CD-- iac package-artefact --CD-- app registry -.</description>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/50-release/index.html</guid>
+      <description>Release Construction</description>
     </item>
-    
     <item>
       <title>Business Visibility</title>
-      <link>https://cdaf.io/80-release-train/30-octopus-deploy/60-business-visibility/</link>
+      <link>https://cdaf.io/80-release-train/30-octopus-deploy/60-business-visibility/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/60-business-visibility/</guid>
-      <description>Non-techincal Release View After each environment deployment is successful, a Confluence page (one per component/environment) is updated, capturing release details. This provides visibility outside of the toolchain, which is easier to access by business users such as test managers and product owners. Using the content include macro, these pages can be merged.</description>
+      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/60-business-visibility/index.html</guid>
+      <description>Non-techincal Release View</description>
     </item>
-    
     <item>
       <title>Feedback Loop</title>
-      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/</link>
+      <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/</guid>
-      <description>Realising the Feedback Loop Based on Realising the Feedback Loop, once the package has been promoted to it&amp;rsquo;s last stage, it is then pushed to the artefact store
-In this example Azure DevOps (ADO) using the az artifacts extension, see the example push.tsk.
-Write-Host &amp;quot;[$TASK_NAME] Verify deployable artefact is available`n&amp;quot; $package_name = (Get-Item &amp;quot;$(PWD)\release.ps1&amp;quot; -ErrorAction SilentlyContinue).FullName if ( ! ( $package_name )) { ERRMSG &amp;quot;[PACKAGE_NOT_FOUND] $(PWD)\release.ps1 not found!&amp;quot; 9996 } Write-Host &amp;quot;[$TASK_NAME] Verify Azure DevOps PAT is set correctly`n&amp;quot; VARCHK push.</description>
+      <guid>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/index.html</guid>
+      <description>Realising the Feedback Loop</description>
     </item>
-    
     <item>
       <title>Intermediary</title>
-      <link>https://cdaf.io/80-release-train/40-terraform-cloud/60-intermediary/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/60-intermediary/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/60-intermediary/</guid>
-      <description>Terraform Cloud intermediary The deployment process itself is processed via the Terraform Cloud intermediary, which decouples the configuration management, and provides state storage and execution processing.
-.
-An important aspect of the intermediaries function is to store dynamic outputs, for example, the Infrastructure-as-Code solution provides a Kubernetes cluster, the dynamically created configuration is stored as outputs.
-.
-The outputs are made available to the subsequent application deployment process.
-.
-The Application components consume the state information that has been shared</description>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/60-intermediary/index.html</guid>
+      <description>Terraform Cloud intermediary</description>
     </item>
-    
     <item>
       <title>Deploy</title>
-      <link>https://cdaf.io/80-release-train/40-terraform-cloud/70-deploy/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/70-deploy/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/70-deploy/</guid>
-      <description>Deploy-time Detokenisation The configuration management is consumed at deploy time.
-Deployment Mechanics To support the build-once/deploy-many model, the environment specific values are injected and then deployed for the release. Note that the release is immutable, and any change to any component will require a new release to be created, eliminating cherry picking. The tasksRun.tsk performs multiple levels of detokenisation, the first is for environment specific settings, the second applies any solution level declarations, then cluster, groups/regions and non-secret elements of the credentials</description>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/70-deploy/index.html</guid>
+      <description>Deploy-time Detokenisation</description>
     </item>
-    
     <item>
       <title>Feedback Loop</title>
-      <link>https://cdaf.io/80-release-train/40-terraform-cloud/80-feedback-loop/</link>
+      <link>https://cdaf.io/80-release-train/40-terraform-cloud/80-feedback-loop/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/80-feedback-loop/</guid>
-      <description>Realising the Feedback Loop Based on Realising the Feedback Loop, once the package has been promoted to it&amp;rsquo;s last stage, it is then pushed to the artefact store
-In this example Azure DevOps (ADO) using the az artifacts extension, see the example push.tsk.
-Write-Host &amp;quot;[$TASK_NAME] Verify deployable artefact is available`n&amp;quot; $package_name = (Get-Item &amp;quot;$(PWD)\release.ps1&amp;quot; -ErrorAction SilentlyContinue).FullName if ( ! ( $package_name )) { ERRMSG &amp;quot;[PACKAGE_NOT_FOUND] $(PWD)\release.ps1 not found!&amp;quot; 9994 } Write-Host &amp;quot;[$TASK_NAME] Verify Azure DevOps PAT is set correctly`n&amp;quot; VARCHK push.</description>
+      <guid>https://cdaf.io/80-release-train/40-terraform-cloud/80-feedback-loop/index.html</guid>
+      <description>Realising the Feedback Loop</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,247 +1,172 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cdaf-config on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/tags/cdaf-config/</link>
-    <description>Recent content in cdaf-config on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/tags/cdaf-config/index.xml" rel="self" type="application/rss+xml" />
+    <title>Cdaf-Config :: Tag :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/tags/cdaf-config/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/tags/cdaf-config/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Configuration Mapping</title>
-      <link>https://cdaf.io/90-reference/20-feature-configuration/10-configuration-mapping/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/10-configuration-mapping/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/20-feature-configuration/10-configuration-mapping/</guid>
-      <description>Configuration Mapping The local and remote configuration will trigger a task execution based on each unique declaration of context and target, using the corresponding default task tasksRunLocal.tsk and tasksRunLocal.tsk.
-context target deployHost remote UAT vm.example.com local UAT vm.example.com remote PROD vm.example.com local PROD vm.example.com Customer tasks can be defined for directories customLocal and customRemote respectively, or custom if shared.
-context target deployTaskOverride local DOCKER docker-compose-test.tsk remote UAT on-premise-deploy.tsk remote PROD on-premise-deploy.</description>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/10-configuration-mapping/index.html</guid>
+      <description>Configuration Mapping</description>
     </item>
-    
     <item>
       <title>containerBuild</title>
-      <link>https://cdaf.io/90-reference/30-docker-features/10-configuration-mapping/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/10-configuration-mapping/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/30-docker-features/10-configuration-mapping/</guid>
-      <description>containerBuild Some CI/CD pipeline toolsets support native capability (GitLab, BitBucket) to execute with a container. In other some cases, (CircleCI, Travis) all pipeline activity can only be executed within containers.
-For toolsets which do not support this functionality, but do allow for self-hosted agents or where a self-hosted agent is preferred/mandated i.e. execution within a private network, the CDAF container helpers can provide consistency for construction, execution and housekeeping.
-Even with a toolset uses containers, if they support docker-in-docker, the CDAF container helpers can still be utilised.</description>
+      <guid>https://cdaf.io/90-reference/30-docker-features/10-configuration-mapping/index.html</guid>
+      <description>containerBuild</description>
     </item>
-    
     <item>
       <title>Entry Points</title>
-      <link>https://cdaf.io/90-reference/10-framework-implementation/10-entry/</link>
+      <link>https://cdaf.io/90-reference/10-framework-implementation/10-entry/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/10-framework-implementation/10-entry/</guid>
-      <description>CDAF Entry Scripts CDAF providers 4 entry scripts for different purposes.
- ci : Build and Package only, i.e. Continuous Integration, mandatory argument is BUILDNUMBER cd : Release, i.e. Continuous Delivery or Deploy (depending on gating or not), mandatory argument is ENVIRONMENT cdEmulate : Executes ci and then cd, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT entry : Executes ci and then cd, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT(s)  The CI entry point (ci.</description>
+      <guid>https://cdaf.io/90-reference/10-framework-implementation/10-entry/index.html</guid>
+      <description>CDAF Entry Scripts</description>
     </item>
-    
     <item>
       <title>Seed Solution</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/10-ci/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/10-ci/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/10-ci/</guid>
-      <description>Continuous Integration (CI) is a critical prerequisite of Continuous Delivery/Deployment (CD).
-Create a Release Package To allow the execution of the build and package (CI) process on the DevOps Engineers machine, CDAF is used for both loose coupling and standardisation. CDAF provides a variety of features which provide consistency, especially important and the number of pipelines grow and the team members move between both squads and value streams.
-Install on Windows To install to current directory, recommend placing in your home directory, or download latest zip.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/10-ci/index.html</guid>
+      <description>Create a Release Package</description>
     </item>
-    
     <item>
       <title>containerBuild</title>
-      <link>https://cdaf.io/90-reference/30-docker-features/20-container-build/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/20-container-build/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/30-docker-features/20-container-build/</guid>
-      <description>containerBuild Master of Build Success The containerBuild option allows the execution of the build process from within a container. Unlike toolsets which reference a image that is used to create the build container, CDAF uses a Dockerfile, for the following advantages:
- Build Prerequisites can be defined in code, without being limited to available published images Once constructed the image image cache provides improved performance, without having to use a image registry Working directory and user home directory are volume mounted, to allow caching of build dependencies, e.</description>
+      <guid>https://cdaf.io/90-reference/30-docker-features/20-container-build/index.html</guid>
+      <description>containerBuild</description>
     </item>
-    
     <item>
       <title>Execution Engine</title>
-      <link>https://cdaf.io/90-reference/20-feature-configuration/20-execution-engine/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/20-execution-engine/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/20-feature-configuration/20-execution-engine/</guid>
-      <description>Execution Engine To alleviate the burden of argument passing, exception handling and logging, the execution engine has been provided. The execution engine will essentially execute the native interpretive language (PowerShell or bash), line by line, but each execution will be tested for exceptions (trivial in bash, significantly more complex in PowerShell).
-Where is it used In all places using .tsk files, i.e. build, package, wrap and deploy. The following operations are available to all tasks, however, some are more applicable to specific processes, see Build, Local and Remote task execution for more details of how these can be used.</description>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/20-execution-engine/index.html</guid>
+      <description>Execution Engine</description>
     </item>
-    
     <item>
       <title>Pipeline</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/</guid>
-      <description>CDAF provides a loose coupling for core CI &amp;amp; CD objectives. The intention is that the CI &amp;amp; CD processing is performed on the developers desktop, and then executed in the same way in the pipeline tool. By establishing a healthy pipeline as soon as possible, any pipeline failures can be quickly and incrementally identified. See Entering Sprint-0 for elaboration.
-Pipeline Orchestration and Capabilities The CI process gathers files from source control, then uses the CDAF CI entry point to produce the release package.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/index.html</guid>
+      <description>Pipeline Orchestration and Capabilities</description>
     </item>
-    
     <item>
       <title>Task Processing</title>
-      <link>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/</link>
+      <link>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/</guid>
-      <description>Execution Engine The CDAF execution engine allows the DevOps Engineer to focus on the primary objective, and not have to cater for logging, exception and error handling. Within this engine are a set of operations for common problems, further allowing a focus on results and rewriting/copying scripts. See Execution Engine documentation.
- Note: The following is details a subset of CDAF capabilities, describing a common usage, For a detailed breakdown of each component, see the CDAF Reference Guide.</description>
+      <guid>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/index.html</guid>
+      <description>Execution Engine</description>
     </item>
-    
     <item>
       <title>Build</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/30-ci/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/30-ci/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/30-ci/</guid>
-      <description>Continuous Integration Continuous Integration (CI) is the objective of bringing code branches together and building them to produce a consolidated artefact. This shift-left approach ensures the efforts of multiple contributors are combined and tested regularly. The testing within CI typically starts with unit testing, and that should be included in the build task. For some ecosystems this is an implicit or parameterised part of the build command, others, it’s separate command.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/30-ci/index.html</guid>
+      <description>Continuous Integration</description>
     </item>
-    
     <item>
       <title>Environment Variables</title>
-      <link>https://cdaf.io/90-reference/20-feature-configuration/30-environment-variables/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/30-environment-variables/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/20-feature-configuration/30-environment-variables/</guid>
-      <description>Environment Variables Due to inconsistencies between Windows and Linux handling of environment variables, these have been divided between environment variables that are set before calling an entry script to alter the behaviour of CDAF, and environment variables that are set within bash scripts to make them globally available.
-Control Variables The following environment variables are available to control the behaviour of CDAF
-   Variable Description     CDAF_BRANCH_NAME Used by entry.</description>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/30-environment-variables/index.html</guid>
+      <description>Environment Variables</description>
     </item>
-    
     <item>
       <title>imageBuild</title>
-      <link>https://cdaf.io/90-reference/30-docker-features/30-image-build/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/30-image-build/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/30-docker-features/30-image-build/</guid>
-      <description>imageBuild This helper script supports the creation of docker images, and conditionally, the pushing of that image to a registry.
-Container Build Configuration To execute, define the buildImage definition. Note: complete definitions are provided in the GitHub samples for Windows and Linux.
-The following samples have the default process commented out, and can be used to define a custom process.
-Windows buildImage=cdaf/windows # imageBuild=&amp;amp; &amp;quot;$AUTOMATIONROOT/remote/imageBuild.ps1&amp;quot; ${SOLUTION}_${REVISION} ${BUILDNUMBER} Linux buildImage=cdaf/linux # imageBuild=&amp;quot;$AUTOMATIONROOT/remote/imageBuild.</description>
+      <guid>https://cdaf.io/90-reference/30-docker-features/30-image-build/index.html</guid>
+      <description>imageBuild</description>
     </item>
-    
     <item>
       <title>containerDeploy</title>
-      <link>https://cdaf.io/90-reference/30-docker-features/40-container-deploy/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/40-container-deploy/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/30-docker-features/40-container-deploy/</guid>
-      <description>containerDeploy Like containerBuild, containerDeploy provides both image build and container task execution. The common use for container deploy where a command line interface is required.
-Master of Deployment Success The containerDeploy option allows the execution of the deploy process from within a container. Unlike toolsets which reference a image that is used to create the deploy container, CDAF uses a Dockerfile, for the following advantages:
- Deploy Prerequisites can be defined in code, without being limited to available published images Once constructed the image image cache provides improved performance, without having to use a image registry  Container Deploy Configuration To execute the deploy within a container, add the containerDeploy definition and runtimeImage (if not supplied, containerImage will be used) to CDAF.</description>
+      <guid>https://cdaf.io/90-reference/30-docker-features/40-container-deploy/index.html</guid>
+      <description>containerDeploy</description>
     </item>
-    
     <item>
       <title>Package</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/40-package/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/40-package/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/40-package/</guid>
-      <description>Build-Once/Deploy-Many An objective of Continuous Delivery is to have a predictable, repeatable, deployment process. A fundamental principle of CDAF to achieve this producing an immutable release package. This decouples the deployment process from the source management process. The release package is a self-contained deployment asset, and should be executable anywhere, i.e. on the automation developers desktop, within the pipeline or even manually file transferred to a remote server.
-Artefact Retention In the Configuration Management step, a default release package was created which contained properties files.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/40-package/index.html</guid>
+      <description>Build-Once/Deploy-Many</description>
     </item>
-    
     <item>
       <title>Solution Properties</title>
-      <link>https://cdaf.io/90-reference/20-feature-configuration/40-solution-properties/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/40-solution-properties/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/20-feature-configuration/40-solution-properties/</guid>
-      <description>Solution Properties CDAF.solution : file to identify a directory as the automation solution directory where the key configuration files are placed. This file is used as the bases of the manifest.txt file while is included in the resulting CI artefact package.
-See solution/CDAF.solution in CDAF automation directory.
-Solution Properties    Variable Description     solutionName Required. Do not include spaces.   productName Solution description, this can contain spaces.</description>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/40-solution-properties/index.html</guid>
+      <description>Solution Properties</description>
     </item>
-    
     <item>
       <title>Continuous Delivery</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/50-cd/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/50-cd/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/50-cd/</guid>
-      <description>Continuous Integration (CI) is a critical prerequisite of production-like stand-up/tear-down, i.e. if it can&amp;rsquo;t be build on the engineers machine, it can&amp;rsquo;t be deployed from the engineers machine.
-Configuration Management and Automated Deployment Configuration Management CDAF origin was to ensure consistent configuration of servers across environments, based on a source of truth. The partner construct to this approach is tokenisation, i.e. a way of abstracting environment variations away from the syntax of the consuming application.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/50-cd/index.html</guid>
+      <description>Configuration Management and Automated Deployment</description>
     </item>
-    
     <item>
       <title>dockerPush</title>
-      <link>https://cdaf.io/90-reference/30-docker-features/50-docker-push/</link>
+      <link>https://cdaf.io/90-reference/30-docker-features/50-docker-push/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/30-docker-features/50-docker-push/</guid>
-      <description>dockerPush Using the same logic after imageBuild, this utility script provides simple login and push logic.
-The script can be called passing arguments
-./dockerPush.ps1 $TARGET_TAG cdaf/${SOLUTION} &amp;quot;${artifactPrefix}.${BUILDNUMBER} latest&amp;quot; $DOCKERHUB_TOKEN cdaf This example uses an environment variable (complete list follows) to set the URL. The registry in this example does not require authentication.
-export CDAF_PUSH_REGISTRY_URL=hub.private.registry ./dockerPush.sh ${SOLUTION}_master_target:${BUILDNUMBER} ${SOLUTION} ${BUILDNUMBER} Available environment variables
-   Variable Description     CDAF_PUSH_REGISTRY_URL Image registry URL, example myregistry.</description>
+      <guid>https://cdaf.io/90-reference/30-docker-features/50-docker-push/index.html</guid>
+      <description>dockerPush</description>
     </item>
-    
     <item>
       <title>Extended Processes</title>
-      <link>https://cdaf.io/90-reference/20-feature-configuration/50-extended-processes/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/50-extended-processes/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/20-feature-configuration/50-extended-processes/</guid>
-      <description>Extended Processes Optional Build Processes By placing these files in your solution root, the processes will execute as described
-   File Name Description     prebuild.tsk Execute after Configuration Management processing, but before any build tasks   postbuild.tsk Execute after solution and project level build tasks are complete    Optional Package Processes By placing these files in your solution root, the processes will execute as described</description>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/50-extended-processes/index.html</guid>
+      <description>Extended Processes</description>
     </item>
-    
     <item>
       <title>Feature Branch Execution</title>
-      <link>https://cdaf.io/90-reference/20-feature-configuration/60-feature-branch-execution/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/60-feature-branch-execution/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/20-feature-configuration/60-feature-branch-execution/</guid>
-      <description>Feature Branch Execution Place feature-branch.properties in your SOLUTIONROOT to allow dynamic delivery execution, based on Git Branch name. This capability is limited to entry.sh/entry.bat/entry.ps1, which are Git aware, and the recommended loose coupling entry scripts for CDAF.
-# Separate environments for features and bugs feature=DEV1 bugfix=DEV2 # Hotfixes deploy to all environments hotfix=DEV1 hotfix=DEV2 See CDAF Samples for complete implementations in Linux and Windows.</description>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/60-feature-branch-execution/index.html</guid>
+      <description>Feature Branch Execution</description>
     </item>
-    
     <item>
       <title>Local Deployment Tasks</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/60-local-tasks/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/60-local-tasks/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/60-local-tasks/</guid>
-      <description>Local Tasks Local Tasks use the same execution engined as build tasks, but at deploy time, rather than build time. Local Tasks are executed in the local context of the host/server. Local Tasks are suited to situations where the agent is installed on the server where tasks are to be performed, or the server that the agent/runner is installed has the tools required to perform tasks on a remote target, i.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/60-local-tasks/index.html</guid>
+      <description>Local Tasks</description>
     </item>
-    
     <item>
       <title>Remote Deployment Tasks</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/</guid>
-      <description>Remote Tasks Like Local Tasks, Remote Tasks use the same execution engined as build tasks, but at deploy time, rather than build time. Remote Tasks are executed in the local context of a remote host/server. Remote Tasks are suited to situations where the agent is not installed on the server where tasks are to be performed and instead the deployment is pushed, i.e. to an application server in the DMZ which can only be accessed by Remote PowerShell or SSH.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/index.html</guid>
+      <description>Remote Tasks</description>
     </item>
-    
     <item>
       <title>Sensitive Data Strategies</title>
-      <link>https://cdaf.io/90-reference/20-feature-configuration/70-sensitive-data-strategies/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/70-sensitive-data-strategies/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/20-feature-configuration/70-sensitive-data-strategies/</guid>
-      <description>Sensitive Data Strategies Loose Coupling A key approach to support the principle of automation execution in a local desktop context, is the use of environment variables. It&amp;rsquo;s important to remember that environment variables do not necessarily need to be persisted, i.e. stored unencrypted on disk, it&amp;rsquo;s the global availability of the variable that makes it an environment variable.
-context target databaseFQDN dBpassword local TEST db1.nonprod.local $DB1_PASSWORD local UAT db2.nonprod.local $DB2_PASSWORD local PROD cluster.</description>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/70-sensitive-data-strategies/index.html</guid>
+      <description>Sensitive Data Strategies</description>
     </item>
-    
     <item>
       <title>Legacy Features</title>
-      <link>https://cdaf.io/90-reference/20-feature-configuration/80-legacy-features/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/80-legacy-features/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/20-feature-configuration/80-legacy-features/</guid>
-      <description>Legacy Features Remote Deployment Machine to machine deployments are increasingly uncommon, as local agents/runners are readily available, making on-premise deployments from the build server an infrequent use case. While there is no plan to deprecate this capability, it&amp;rsquo;s complexity makes local testing i.e. shift-left complicated, especially in windows. For CDAF configuration, see Remote Tasks.
-Windows Remote PowerShell This approach uses the local host for both target (CD) and build (CI) execution.</description>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/80-legacy-features/index.html</guid>
+      <description>Legacy Features</description>
     </item>
-    
     <item>
       <title>Variable Validation</title>
-      <link>https://cdaf.io/90-reference/20-feature-configuration/90-variable-validation/</link>
+      <link>https://cdaf.io/90-reference/20-feature-configuration/90-variable-validation/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/20-feature-configuration/90-variable-validation/</guid>
-      <description>Variable Validation There are 5 rules available, two for plain text and three for secrets. When validating a secret against a known MD5 value, either a literal or variable can be supplied. See VARCHK in the execution engine operations
-# Plain text values OPT_ARG # Optional plain text terraform_version=required # Required plain text # Secret values TERRAFORM_TOKEN=optional # Optional secret TERRAFORM_TOKEN=secret # Required secret TERRAFORM_TOKEN=$TERRAFORM_TOKEN_MASK # Required secret verified against supplied SHA-256 value </description>
+      <guid>https://cdaf.io/90-reference/20-feature-configuration/90-variable-validation/index.html</guid>
+      <description>Variable Validation</description>
     </item>
-    
   </channel>
 </rss>

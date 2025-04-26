@@ -1,40 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ASP.NET Classic Example on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/</link>
-    <description>Recent content in ASP.NET Classic Example on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/index.xml" rel="self" type="application/rss+xml" />
+    <title>ASP.NET Classic Example :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/index.html</link>
+    <description>Build, Package and Deploy with Internet Information Services</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tokenisation</title>
-      <link>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/</link>
+      <link>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/</guid>
-      <description>Abstraction of Application Settings In this example, the ASP.NET solution creates a Web Deploy package. A common approach for this is to create a build for each environment with the settings transformed into environment specific .config files.
-In the CDAF approach, a single, tokenised, configuration file, i.e. Web.Release.config is produced. The principle of a single way of working encourages the abstraction of application settings from the internal representation.
-Note: The Release build is used in this example, to avoid breaking the development experience which typically uses the Debug configuration.</description>
+      <guid>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/index.html</guid>
+      <description>Abstraction of Application Settings</description>
     </item>
-    
     <item>
       <title>Continuous Integration (CI)</title>
-      <link>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/20-ci/</link>
+      <link>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/20-ci/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/20-ci/</guid>
-      <description>Build &amp;amp; Package Once The primary driver file for CDAF is the CDAF.solution file. The directory containing this file is the SOLUTIONROOT. The mandatory properties are solutionName and artifactPrefix.
-solutionName=MyAspApp artifactPrefix=0.1 Build Process The CDAF Execution Engine is used to reduce the cognitive load, allowing the engineer to focus on the primary objective, and not have to cater for logging, exception and error handling. The build.tsk file is placed in the project sub-directory.</description>
+      <guid>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/20-ci/index.html</guid>
+      <description>Build &amp; Package Once</description>
     </item>
-    
     <item>
       <title>Continuous Delivery (CD)</title>
-      <link>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/30-cd/</link>
+      <link>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/30-cd/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/30-cd/</guid>
-      <description>Deploy Many The tokenised configuration files need to be detokenised at deploy time. The settings are likely to include both sensitive and non-sensitive values. A core principle of CDAF for sensitive values is based on the 12-Factor approach of using environment variables, while source control is the recommended approach for non-sensitive values.
-Why Source Control for Settings? The Continuous Delivery Automation Framework (CDAF) has been engineered for enterprise scale implementations. Large scale organisations typically have a higher focus on gating and auditing, and to provide a change of configuration audit trail, along with a single way-of-working, the configuration changes are applied using the same principles as other deliveries, e.</description>
+      <guid>https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/30-cd/index.html</guid>
+      <description>Deploy Many</description>
     </item>
-    
   </channel>
 </rss>

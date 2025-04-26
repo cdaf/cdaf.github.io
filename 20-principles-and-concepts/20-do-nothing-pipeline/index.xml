@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Do Nothing Pipeline on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/20-principles-and-concepts/20-do-nothing-pipeline/</link>
-    <description>Recent content in Do Nothing Pipeline on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/20-principles-and-concepts/20-do-nothing-pipeline/index.xml" rel="self" type="application/rss+xml" />
+    <title>Do Nothing Pipeline :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/20-principles-and-concepts/20-do-nothing-pipeline/index.html</link>
+    <description>Entering Sprint-0</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/20-principles-and-concepts/20-do-nothing-pipeline/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

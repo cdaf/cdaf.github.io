@@ -1,52 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Custom State Management on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/</link>
-    <description>Recent content in Custom State Management on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/70-authoritative-release/50-custom-state-management/index.xml" rel="self" type="application/rss+xml" />
+    <title>Custom State Management :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/index.html</link>
+    <description>Custom Desired State Management Solution</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/70-authoritative-release/50-custom-state-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Manifest</title>
-      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/10-manifest/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/10-manifest/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/10-manifest/</guid>
-      <description>Declare Anypoint Components as Package The proprietary Mulesoft Anypoint Platform artefact store is called Exchange, and each artefact is called an Asset. Each asset is pushed to the exchange from the autonomous development pipelines. In the examples below, these are GitLab for Windows and Jenkins for Linux. Both use platform independent Maven deploy to push the asset.
-The release declaration is in the form of a manifest, specifying each desired component and it&amp;rsquo;s version.</description>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/10-manifest/index.html</guid>
+      <description>Declare Anypoint Components as Package</description>
     </item>
-    
     <item>
       <title>Custom State Build</title>
-      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/</guid>
-      <description>Custom State Release Package The key construct for the Authoritative Release is that all aspects of the release process are predictable and repeatable. Configuration and helper scripts are packaged into an immutable release. No build process is required, so the minimal CDAF.solution is all that is required, assuming the custom state management is placed in the custom directory within the solution directory, e.g.
-devops ├── CDAF.solution ├── custom │ ├── anypoint.</description>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/index.html</guid>
+      <description>Custom State Release Package</description>
     </item>
-    
     <item>
       <title>Configuration Management</title>
-      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/40-configuration-management/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/40-configuration-management/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/40-configuration-management/</guid>
-      <description>Building Desired State from Properties The application and environment settings are split into separate configuration management files. Application settings are those which have the same value, for the release, in all environments.
-context target region runtime_version java_version release_channel container patient-summary-app cloudhub-us-east-2 4.6.7 8 LTS container sprint-zero-app cloudhub-us-east-2 4.7.1 17 Edge Environment specific settings are associated to a given component, and differ for each environment. Note the special marker for sensitive data.</description>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/40-configuration-management/index.html</guid>
+      <description>Building Desired State from Properties</description>
     </item>
-    
     <item>
       <title>Desired State</title>
-      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/</link>
+      <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/</guid>
-      <description>Determining Change At deploy time, the current state, and desired state are compared, and only those components which have changed, are deployed.
- In this example, deployment is orchestrated in Octopus Deploy Release Train
- Once complete, the new current state is persisted.
-These can be aggregated in the Wiki to provide a consolidate view for non-techincal users
-Note that the overarching release number is used as a update comment when writing to the Confluence page, this provides a release history which is visible outside of the toolchain, which is easier to access by business users such as test managers and product owners.</description>
+      <guid>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/index.html</guid>
+      <description>Determining Change</description>
     </item>
-    
   </channel>
 </rss>

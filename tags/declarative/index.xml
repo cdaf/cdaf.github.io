@@ -1,113 +1,81 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>declarative on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/tags/declarative/</link>
-    <description>Recent content in declarative on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/tags/declarative/index.xml" rel="self" type="application/rss+xml" />
+    <title>Declarative :: Tag :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/tags/declarative/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/tags/declarative/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Helm Hello World</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/</guid>
-      <description>The following example is relatively complicated and doesn&amp;rsquo;t serve well as a learning exercise.
-Use the Helm Getting Started material to create a template which has all the appropriate structure and some example charts.
-The template does not work in OpenShift because the root-less containers do not allow Nginx to bind to port 80.
- How Helm Works Using the previous YAML example, all of the elements that we want to re-use for multiple apps, or configure differently for progressive environments, are defined as properties.</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/index.html</guid>
+      <description>Generating a Helm Template</description>
     </item>
-    
     <item>
       <title>Tokenised Values</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/</guid>
-      <description>To avoid the creation of multiple values YAML files, and the inherent structural drift of those files, a single file should be defined with tokenised settings. The CDAF configuration management feature can be used to provide a human readable settings definition which gives an abstraction from the complexity of the Helm files.
-example.cm context target replicaCount portcontainer LINUX 1 8081container dev 1 8080container TEST 2 8001container PROD 2 8000Now the values YAML contains tokens for deploy time replacement.</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html</guid>
+      <description>DRY Principles and Avoiding Drift</description>
     </item>
-    
     <item>
       <title>Helm Repository</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/</guid>
-      <description>To provide Helm charts as a re-usable asset, Helm provides versioning and packaging. The resulting versioned packages can be consumed by multiple applications and environments. To ensure the release package is consistent and repeatable, the Helm packages are downloaded at build (CI) and not during deployment (CD). The packages are included in the release package so there are no external dependencies at deploy time.
-The Helm registry Helm command line can create the packaged templates and the required index file.</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html</guid>
+      <description>Generating a Helm Template</description>
     </item>
-    
     <item>
       <title>Helm</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/</guid>
-      <description>Kubernetes configuration can be performed via imperative command line or declarative YAML files. While OpenShift provides a user interface to allow manual configuration of the Kubernetes cluster, which is ideal for discovery and development purposes, but is not sustainable in a production solution.
-While Kubernetes YAML definitions are declarative, it is laborious have multiple copies for similar deployment patterns and multiple target environments. The most fundamental declaration is a deployment, which defines what containers are to be deployed.</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/index.html</guid>
+      <description>Helm for Kubernetes</description>
     </item>
-    
     <item>
       <title>Desired State Release</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/</guid>
-      <description>Full Stack Release Helm/Kubernetes To manage an application stack holistically, a Declaration is required. From this declaration, desired state can be calculated, i.e. what changes need to be made for an environment to be aligned to the declaration. The tool used in this example is Helmsman, however, another tool, Helmfile has fundamentally the same configuration constructs. Each gather one or more Helm applications to create an application stack. Only the necessary components will be updated if a change is determined, based on a calculated state change.</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/index.html</guid>
+      <description>Full Stack Release Helm/Kubernetes</description>
     </item>
-    
     <item>
       <title>Build Once, Deploy Many</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/</guid>
-      <description>CI Process for Declarative Release The following example is Helmsman, but the same mechanism works for Helmfile also.
-Using DRY principles, a single declaration of the application stack is used, and tokens applied for deplopy-time environment variations.
-metadata: scope: &amp;#34;cluster microservices&amp;#34; maintainer: &amp;#34;Jules Clements&amp;#34; namespaces: %name_space%: protected: false apps: pull: name: &amp;#34;docker-registry-pull-secret&amp;#34; description: &amp;#34;GitLab Registry Pull Secret&amp;#34; namespace: &amp;#34;%name_space%&amp;#34; enabled: true chart: &amp;#34;pull-secrets-0.0.1.tgz&amp;#34; version: &amp;#34;0.0.1&amp;#34; valuesFile: &amp;#34;pods/docker-registry-pull-secret.yaml&amp;#34; cdaf-ui: name: &amp;#34;cdaf-ui&amp;#34; description: &amp;#34;CDAF Published Site (Django)&amp;#34; namespace: &amp;#34;%name_space%&amp;#34; enabled: true chart: &amp;#34;public-ingress-0.</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/index.html</guid>
+      <description>CI Process for Declarative Release</description>
     </item>
-    
     <item>
       <title>Helmsman Deploy-Time</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/</guid>
-      <description>Built Once, Deployed Many This example is the deploy time process for Helmsman, although it is fundamentally the same for Helmfile. The tokenised application stack declaration is de-tokenised to apply the correct name_space at deploy time.
-helm.tsk sed -i -- &amp;#34;s•name_space•*****•g&amp;#34; ranger.yaml the resulting deployment
-helmsman --apply -f ranger.yaml ranger-chart_ _ | | | | | |__ ___| |_ __ ___ ___ _ __ ___ __ _ _ __| &#39;_ \ / _ \ | &#39;_ ` _ \/ __| &#39;_ ` _ \ / _` | &#39;_ \ | | | | __/ | | | | | \__ \ | | | | | (_| | | | | |_| |_|\___|_|_| |_| |_|___/_| |_| |_|\__,_|_| |_| version: v3.</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/index.html</guid>
+      <description>Built Once, Deployed Many</description>
     </item>
-    
     <item>
       <title>DRY</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/</guid>
-      <description>Don&amp;#39;t Repeat Yourself The key to using Helm charts rather than simply authoring Kubernetes YAML definitions is the use of templates. This way a deployment pattern can be defined once, with only the deploy time, application specific, values being changed.
-From the Helm template the health probes are hard coded, replace these with shared definitions, .Values.service.port &amp;amp; .Values.service.probeContext.
-deployment.yaml containers: - name: {{ .Chart.Name }} securityContext: {{- toYaml .Values.securityContext | nindent 12 }} image: &amp;#34;{{ .</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/index.html</guid>
+      <description>Don&#39;t Repeat Yourself</description>
     </item>
-    
     <item>
       <title>Helmsman Secrets</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/</guid>
-      <description>Sensitive Data Management Define the secret in your chart with a substitution value.
-secrets.yaml apiVersion: v1 kind: Secret metadata: name: dockerhub-secret type: kubernetes.io/dockerconfigjson data: .dockerconfigjson: &amp;gt;- {{ .Values.dockerconfigjson }} Define the property with no value. Note also the reference to the secret for pull from the private registry.
-values.yaml replicaCount: 1 image: repository: docker.io/cdaf/cdaf pullPolicy: IfNotPresent # Overrides the image tag whose default is the chart appVersion. tag: &amp;#34;464&amp;#34; imagePullSecrets: [{ name: dockerhub-secret }] dockerconfigjson: &amp;#34;&amp;#34; Define the environment variable to be substituted into the chart</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/index.html</guid>
+      <description>Sensitive Data Management</description>
     </item>
-    
     <item>
       <title>Helmsman Version Constraints</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/</guid>
-      <description>Helmsman Update Limitations Some changes cannot be updated in place, an example of this is the service port. If this is changed, the chart version has be updated or the existing deployment manually removed.</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/index.html</guid>
+      <description>Helmsman Update Limitations</description>
     </item>
-    
   </channel>
 </rss>

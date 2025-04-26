@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Framework Implementation on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/90-reference/10-framework-implementation/</link>
-    <description>Recent content in Framework Implementation on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/90-reference/10-framework-implementation/index.xml" rel="self" type="application/rss+xml" />
+    <title>Framework Implementation :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/90-reference/10-framework-implementation/index.html</link>
+    <description>CDAF Core Component Specifications</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/90-reference/10-framework-implementation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Entry Points</title>
-      <link>https://cdaf.io/90-reference/10-framework-implementation/10-entry/</link>
+      <link>https://cdaf.io/90-reference/10-framework-implementation/10-entry/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/10-framework-implementation/10-entry/</guid>
-      <description>CDAF Entry Scripts CDAF providers 4 entry scripts for different purposes.
- ci : Build and Package only, i.e. Continuous Integration, mandatory argument is BUILDNUMBER cd : Release, i.e. Continuous Delivery or Deploy (depending on gating or not), mandatory argument is ENVIRONMENT cdEmulate : Executes ci and then cd, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT entry : Executes ci and then cd, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT(s)  The CI entry point (ci.</description>
+      <guid>https://cdaf.io/90-reference/10-framework-implementation/10-entry/index.html</guid>
+      <description>CDAF Entry Scripts</description>
     </item>
-    
     <item>
       <title>Task Processing</title>
-      <link>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/</link>
+      <link>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/</guid>
-      <description>Execution Engine The CDAF execution engine allows the DevOps Engineer to focus on the primary objective, and not have to cater for logging, exception and error handling. Within this engine are a set of operations for common problems, further allowing a focus on results and rewriting/copying scripts. See Execution Engine documentation.
- Note: The following is details a subset of CDAF capabilities, describing a common usage, For a detailed breakdown of each component, see the CDAF Reference Guide.</description>
+      <guid>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/index.html</guid>
+      <description>Execution Engine</description>
     </item>
-    
   </channel>
 </rss>

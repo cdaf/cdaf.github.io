@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CDAF 2.8.2 on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/10-cdaf/</link>
-    <description>Recent content in CDAF 2.8.2 on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/10-cdaf/index.xml" rel="self" type="application/rss+xml" />
+    <title>CDAF 2.8.2 :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/10-cdaf/index.html</link>
+    <description>Continuous Delivery Automation Framework</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/10-cdaf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started</title>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/index.html</guid>
+      <description>Getting Started</description>
+    </item>
     <item>
       <title>Release History</title>
-      <link>https://cdaf.io/10-cdaf/90-release-history/</link>
+      <link>https://cdaf.io/10-cdaf/90-release-history/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/90-release-history/</guid>
-      <description>All previous releases are available for download from https://cdaf.io/static/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.tar.gz or https://cdaf.io/static/app/downloads/LU-CDAF-&amp;lt;version&amp;gt;.zip for Linux, and https://cdaf.io/static/app/downloads/WU-CDAF-&amp;lt;version&amp;gt;.zip for Windows.
-2.8.2 : 24-Apr-2025 : CDAF_OPT_ containerDeploy Runtime Options  Add containerDeploy feature to support docker run options as (environment variables) Fix dockerPush no passing registry token for login (Linux) Fix feature branch detection (Windows)  2.8.1 : 25-Jan-2025 : Minor Release and Deploy Fixes  Fix getProperty split on first equal (=) character only Fix containerDeploy to resolve fileName variable (Linux) Fix self-extracting release not including error array and exit code reset (Windows) Include file command in dockerhub image (Linux)  2.</description>
+      <guid>https://cdaf.io/10-cdaf/90-release-history/index.html</guid>
+      <description>CDAF Release History</description>
     </item>
-    
   </channel>
 </rss>

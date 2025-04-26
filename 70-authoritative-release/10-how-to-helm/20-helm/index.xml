@@ -1,41 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Helm on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/</link>
-    <description>Recent content in Helm on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/index.xml" rel="self" type="application/rss+xml" />
+    <title>Helm :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/index.html</link>
+    <description>Helm for Kubernetes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Helm Hello World</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/</guid>
-      <description>The following example is relatively complicated and doesn&amp;rsquo;t serve well as a learning exercise.
-Use the Helm Getting Started material to create a template which has all the appropriate structure and some example charts.
-The template does not work in OpenShift because the root-less containers do not allow Nginx to bind to port 80.
- How Helm Works Using the previous YAML example, all of the elements that we want to re-use for multiple apps, or configure differently for progressive environments, are defined as properties.</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/index.html</guid>
+      <description>Generating a Helm Template</description>
     </item>
-    
     <item>
       <title>Tokenised Values</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/</guid>
-      <description>To avoid the creation of multiple values YAML files, and the inherent structural drift of those files, a single file should be defined with tokenised settings. The CDAF configuration management feature can be used to provide a human readable settings definition which gives an abstraction from the complexity of the Helm files.
-example.cm context target replicaCount portcontainer LINUX 1 8081container dev 1 8080container TEST 2 8001container PROD 2 8000Now the values YAML contains tokens for deploy time replacement.</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html</guid>
+      <description>DRY Principles and Avoiding Drift</description>
     </item>
-    
     <item>
       <title>Helm Repository</title>
-      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/</link>
+      <link>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/</guid>
-      <description>To provide Helm charts as a re-usable asset, Helm provides versioning and packaging. The resulting versioned packages can be consumed by multiple applications and environments. To ensure the release package is consistent and repeatable, the Helm packages are downloaded at build (CI) and not during deployment (CD). The packages are included in the release package so there are no external dependencies at deploy time.
-The Helm registry Helm command line can create the packaged templates and the required index file.</description>
+      <guid>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html</guid>
+      <description>Generating a Helm Template</description>
     </item>
-    
   </channel>
 </rss>

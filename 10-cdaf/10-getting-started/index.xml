@@ -1,77 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Getting Started on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/10-cdaf/10-getting-started/</link>
-    <description>Recent content in Getting Started on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/10-cdaf/10-getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <title>Getting Started :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/10-cdaf/10-getting-started/index.html</link>
+    <description>Getting Started</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/10-cdaf/10-getting-started/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Seed Solution</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/10-ci/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/10-ci/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/10-ci/</guid>
-      <description>Continuous Integration (CI) is a critical prerequisite of Continuous Delivery/Deployment (CD).
-Create a Release Package To allow the execution of the build and package (CI) process on the DevOps Engineers machine, CDAF is used for both loose coupling and standardisation. CDAF provides a variety of features which provide consistency, especially important and the number of pipelines grow and the team members move between both squads and value streams.
-Install on Windows To install to current directory, recommend placing in your home directory, or download latest zip.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/10-ci/index.html</guid>
+      <description>Create a Release Package</description>
     </item>
-    
     <item>
       <title>Pipeline</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/</guid>
-      <description>CDAF provides a loose coupling for core CI &amp;amp; CD objectives. The intention is that the CI &amp;amp; CD processing is performed on the developers desktop, and then executed in the same way in the pipeline tool. By establishing a healthy pipeline as soon as possible, any pipeline failures can be quickly and incrementally identified. See Entering Sprint-0 for elaboration.
-Pipeline Orchestration and Capabilities The CI process gathers files from source control, then uses the CDAF CI entry point to produce the release package.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/index.html</guid>
+      <description>Pipeline Orchestration and Capabilities</description>
     </item>
-    
     <item>
       <title>Build</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/30-ci/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/30-ci/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/30-ci/</guid>
-      <description>Continuous Integration Continuous Integration (CI) is the objective of bringing code branches together and building them to produce a consolidated artefact. This shift-left approach ensures the efforts of multiple contributors are combined and tested regularly. The testing within CI typically starts with unit testing, and that should be included in the build task. For some ecosystems this is an implicit or parameterised part of the build command, others, it’s separate command.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/30-ci/index.html</guid>
+      <description>Continuous Integration</description>
     </item>
-    
     <item>
       <title>Package</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/40-package/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/40-package/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/40-package/</guid>
-      <description>Build-Once/Deploy-Many An objective of Continuous Delivery is to have a predictable, repeatable, deployment process. A fundamental principle of CDAF to achieve this producing an immutable release package. This decouples the deployment process from the source management process. The release package is a self-contained deployment asset, and should be executable anywhere, i.e. on the automation developers desktop, within the pipeline or even manually file transferred to a remote server.
-Artefact Retention In the Configuration Management step, a default release package was created which contained properties files.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/40-package/index.html</guid>
+      <description>Build-Once/Deploy-Many</description>
     </item>
-    
     <item>
       <title>Continuous Delivery</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/50-cd/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/50-cd/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/50-cd/</guid>
-      <description>Continuous Integration (CI) is a critical prerequisite of production-like stand-up/tear-down, i.e. if it can&amp;rsquo;t be build on the engineers machine, it can&amp;rsquo;t be deployed from the engineers machine.
-Configuration Management and Automated Deployment Configuration Management CDAF origin was to ensure consistent configuration of servers across environments, based on a source of truth. The partner construct to this approach is tokenisation, i.e. a way of abstracting environment variations away from the syntax of the consuming application.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/50-cd/index.html</guid>
+      <description>Configuration Management and Automated Deployment</description>
     </item>
-    
     <item>
       <title>Local Deployment Tasks</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/60-local-tasks/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/60-local-tasks/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/60-local-tasks/</guid>
-      <description>Local Tasks Local Tasks use the same execution engined as build tasks, but at deploy time, rather than build time. Local Tasks are executed in the local context of the host/server. Local Tasks are suited to situations where the agent is installed on the server where tasks are to be performed, or the server that the agent/runner is installed has the tools required to perform tasks on a remote target, i.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/60-local-tasks/index.html</guid>
+      <description>Local Tasks</description>
     </item>
-    
     <item>
       <title>Remote Deployment Tasks</title>
-      <link>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/</link>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/</guid>
-      <description>Remote Tasks Like Local Tasks, Remote Tasks use the same execution engined as build tasks, but at deploy time, rather than build time. Remote Tasks are executed in the local context of a remote host/server. Remote Tasks are suited to situations where the agent is not installed on the server where tasks are to be performed and instead the deployment is pushed, i.e. to an application server in the DMZ which can only be accessed by Remote PowerShell or SSH.</description>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/index.html</guid>
+      <description>Remote Tasks</description>
     </item>
-    
   </channel>
 </rss>

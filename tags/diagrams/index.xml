@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>diagrams on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/tags/diagrams/</link>
-    <description>Recent content in diagrams on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/tags/diagrams/index.xml" rel="self" type="application/rss+xml" />
+    <title>Diagrams :: Tag :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/tags/diagrams/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/tags/diagrams/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GoAT</title>
-      <link>https://cdaf.io/90-reference/goat/</link>
+      <link>https://cdaf.io/90-reference/goat/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/goat/</guid>
-      <description>This is not currently working in the Learn theme
- . . . .--- 1 .-- 1 / 1 / \ | | .---+ .-+ + / \ .---+---. .--+--. | &#39;--- 2 | &#39;-- 2 / \ 2 + + | | | | ---+ ---+ + / \ / \ .-+-. .-+-. .+. .+. | .--- 3 | .-- 3 \ / 3 / \ / \ | | | | | | | | &#39;---+ &#39;-+ + 1 2 3 4 1 2 3 4 1 2 3 4 &#39;--- 4 &#39;-- 4 \ 4 .</description>
+      <guid>https://cdaf.io/90-reference/goat/index.html</guid>
+      <description>GoAT Markdown Diagrams (Ascii)</description>
     </item>
-    
     <item>
       <title>Mermaid</title>
-      <link>https://cdaf.io/90-reference/mermaid/</link>
+      <link>https://cdaf.io/90-reference/mermaid/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cdaf.io/90-reference/mermaid/</guid>
-      <description>https://mermaid-js.github.io/mermaid-live-editor
-gantt axisFormat %d-%b-%Y title Enabling excludes weekends saturday,sunday section Section One done :done, 2023-09-10, 5d active :active, 5d planned : 2023-09-20, 3d section Section Two (tagged tasks) active :active, T2, 2023-09-12, 2d critical :crit, T3, after T2, 1d  gantt %% custom date format not consistently supported %% dateFormat DD-MM-YYYY axisFormat %d-%b-%Y title Enabling excludes weekends saturday,sunday section Section One done :done, 2023-09-10, 5d active :active, 5d planned : 2023-09-20, 3d section Section Two (tagged tasks) active :active, T2, 2023-09-12, 2d critical :crit, T3, after T2, 1d  graph TD subgraph k8s[&#34;</description>
+      <guid>https://cdaf.io/90-reference/mermaid/index.html</guid>
+      <description>Mermaid Markdown Diagrams</description>
     </item>
-    
   </channel>
 </rss>

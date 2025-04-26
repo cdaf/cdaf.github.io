@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Principles and Concepts on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/20-principles-and-concepts/</link>
-    <description>Recent content in Principles and Concepts on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/20-principles-and-concepts/index.xml" rel="self" type="application/rss+xml" />
+    <title>Principles and Concepts :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/20-principles-and-concepts/index.html</link>
+    <description>Principles and Concepts</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/20-principles-and-concepts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Loose Coupling</title>
+      <link>https://cdaf.io/20-principles-and-concepts/10-loose-coupling/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/20-principles-and-concepts/10-loose-coupling/index.html</guid>
+      <description>Works on my Machine</description>
+    </item>
+    <item>
+      <title>Do Nothing Pipeline</title>
+      <link>https://cdaf.io/20-principles-and-concepts/20-do-nothing-pipeline/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/20-principles-and-concepts/20-do-nothing-pipeline/index.html</guid>
+      <description>Entering Sprint-0</description>
+    </item>
+    <item>
+      <title>Realising the Feedback Loop</title>
+      <link>https://cdaf.io/20-principles-and-concepts/30-feedback-loop/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/20-principles-and-concepts/30-feedback-loop/index.html</guid>
+      <description>Continuous Delivery to Shift-Left</description>
+    </item>
+    <item>
+      <title>Development &amp; Release</title>
+      <link>https://cdaf.io/20-principles-and-concepts/40-development-release/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/20-principles-and-concepts/40-development-release/index.html</guid>
+      <description>Autonomous Development Authoritative Release</description>
+    </item>
+    <item>
+      <title>Branch Plans</title>
+      <link>https://cdaf.io/20-principles-and-concepts/90-branch-plans/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/20-principles-and-concepts/90-branch-plans/index.html</guid>
+      <description>Alternate Branch Strategies</description>
+    </item>
   </channel>
 </rss>

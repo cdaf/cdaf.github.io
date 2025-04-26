@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Realising the Feedback Loop on Concepts &amp; Applied Examples</title>
-    <link>https://cdaf.io/20-principles-and-concepts/30-feedback-loop/</link>
-    <description>Recent content in Realising the Feedback Loop on Concepts &amp; Applied Examples</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://cdaf.io/20-principles-and-concepts/30-feedback-loop/index.xml" rel="self" type="application/rss+xml" />
+    <title>Realising the Feedback Loop :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/20-principles-and-concepts/30-feedback-loop/index.html</link>
+    <description>Continuous Delivery to Shift-Left</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/20-principles-and-concepts/30-feedback-loop/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
