@@ -24,18 +24,18 @@
     <meta itemprop="wordCount" content="114">
     <meta itemprop="keywords" content="Kb,12-Factors">
     <title>Component CD :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745697598" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745697598" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745697598" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745697598" rel="stylesheet">
-    <link href="/css/theme.min.css?1745697598" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745697598" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745697598" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745697598" defer></script>
-    <script src="/js/search.min.js?1745697598" defer></script>
+    <link href="/images/favicon.ico?1745704064" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745704064" rel="stylesheet">
+    <link href="/css/theme.min.css?1745704064" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745704064" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745704064" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745704064" defer></script>
+    <script src="/js/search.min.js?1745704064" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -45,7 +45,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745697598";
+      window.relearn.index_js_url="/searchindex.en.js?1745704064";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -139,7 +139,7 @@
 
 <h1 id="component-cd">Component CD</h1>
 
-<h2 id="hahahugoshortcode59s0hbhb">Autonomous Component Deploy</h2>
+<h2 id="hahahugoshortcode60s0hbhb">Autonomous Component Deploy</h2>
 <p>By using the <code>feature-branch.properties</code> capability of CDAF, branches containing the string <code>dev</code> will deploy to the development environment. This feature allows imperative deployment by the development team, without manipulating the pipeline, and therefore avoiding drift.</p>
 <p><strong>vue</strong></p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code># Feature Branch name match mapping to environment
@@ -148,11 +148,11 @@ dev=DEV</code></pre></div>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code># Feature Branch name &#34;contains&#34; mapping to environment
 dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
 <p>In the feature branch, where <code>dev</code> is in the branch name, CDAF will detect and execute a deployment, using the mapping above to invoke a release to <code>DEV</code>.</p>
-<p><a href="#R-image-5a6102b537903ca703124f45cf3d0cb6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-feature-branch.png" style=" height: auto; width: auto;" title="ADO Component feature branch"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5a6102b537903ca703124f45cf3d0cb6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-feature-branch.png" title="ADO Component feature branch"></a></p>
+<p><a href="#R-image-6314c9e6ce19576754f577014d0e9db9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-feature-branch.png" style=" height: auto; width: auto;" title="ADO Component feature branch"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6314c9e6ce19576754f577014d0e9db9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-feature-branch.png" title="ADO Component feature branch"></a></p>
 <p>The trunk based pipeline will only push a release artefact from the main branch, with a stand-up/tear-down integration test of the production build.</p>
-<p><a href="#R-image-b41aba264d663577b0972c8ebea0f42b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-trunk-based.png" style=" height: auto; width: auto;" title="ADO Component pipelines"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b41aba264d663577b0972c8ebea0f42b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-trunk-based.png" title="ADO Component pipelines"></a></p>
+<p><a href="#R-image-206223afe7ca0176f0348b847d091dc5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-trunk-based.png" style=" height: auto; width: auto;" title="ADO Component pipelines"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-206223afe7ca0176f0348b847d091dc5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-trunk-based.png" title="ADO Component pipelines"></a></p>
 <p>Next, publication&hellip;</p>
 
   <footer class="footline">
@@ -318,22 +318,22 @@ dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745697598" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745697598" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-color.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1745697598" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1745697598" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745704064" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745704064" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-color.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1745704064" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1745704064" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.min.js?1745697598" defer></script>
+    <script src="/js/theme.min.js?1745704064" defer></script>
   </body>
 </html>

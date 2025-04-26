@@ -24,18 +24,18 @@
     <meta itemprop="wordCount" content="7902">
     <meta itemprop="keywords" content="Kb,Cdaf-Features">
     <title>Release History :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745697598" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745697598" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745697598" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745697598" rel="stylesheet">
-    <link href="/css/theme.min.css?1745697598" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745697598" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745697598" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745697598" defer></script>
-    <script src="/js/search.min.js?1745697598" defer></script>
+    <link href="/images/favicon.ico?1745704064" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745704064" rel="stylesheet">
+    <link href="/css/theme.min.css?1745704064" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745704064" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745704064" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745704064" defer></script>
+    <script src="/js/search.min.js?1745704064" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -45,7 +45,7 @@
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745697598";
+      window.relearn.index_js_url="/searchindex.en.js?1745704064";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -161,7 +161,7 @@
 </ul>
 <h4 id="279--11-may-2024--cdaf_docker_run_args-for-containerbuild-engine-arguments">2.7.9 : 11-May-2024 : CDAF_DOCKER_RUN_ARGS for containerBuild engine arguments</h4>
 <ul>
-<li>New environment variable CDAF_DOCKER_RUN_ARGS for containerBuild engine arguments</li>
+<li>New <a href="/90-reference/20-feature-configuration/30-environment-variables/index.html">environment variables</a> for containerBuild engine arguments</li>
 <li>Capabilities listing for AWS CLI and extensions</li>
 <li>Execute wrap.tsk prior to remote package process for consistent inclusion</li>
 <li>SOLUTIONROOT and CDAF.solution as &ldquo;global&rdquo; variables (using export) in CI processing (Linux)</li>
@@ -182,8 +182,8 @@
 </ul>
 <h4 id="277--24-feb-2024--task_name-alignment">2.7.7 : 24-Feb-2024 : TASK_NAME alignment</h4>
 <ul>
-<li>Align logging, replacing TASKLIST in Linux and TASK_LIST in Windows</li>
-<li>Pass CDAF_BUILD_ENV (overrides BUILDENV) to container build</li>
+<li>Align logging in <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">execution engine</a>, replacing TASKLIST in Linux and TASK_LIST in Windows</li>
+<li>Pass CDAF_BUILD_ENV (overrides BUILDENV) to <a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a></li>
 <li>Quote wrap docker run arguments, to support arguments containing spaces</li>
 <li>Resolve delivery arguments if they contain variable names</li>
 </ul>
@@ -214,22 +214,22 @@
 </ul>
 <h4 id="272--09-oct-2023--pass-release-and-opt_arg-for-containerdeploy">2.7.2 : 09-Oct-2023 : pass RELEASE and OPT_ARG for containerDeploy</h4>
 <ul>
-<li>Pass RELEASE and OPT_ARG to Container Deploy, previous only passed TARGET</li>
-<li>Correctly set ENVIRONMENT for Container Deploy</li>
+<li>Pass RELEASE and OPT_ARG to <a href="/90-reference/30-docker-features/40-container-deploy/index.html">containerdeploy</a>, previous only passed TARGET</li>
+<li>Correctly set ENVIRONMENT for <a href="/90-reference/30-docker-features/40-container-deploy/index.html">containerdeploy</a></li>
 <li>Do not fail container build on docker start failure unless CDAF_DOCKER_REQUIRED set</li>
 <li>Consistent behavior of EXITIF, aligning to documentation</li>
 </ul>
 <h4 id="271--11-sep-2023--runtimefile-containerdeploy">2.7.1 : 11-Sep-2023 : runtimeFile containerDeploy</h4>
 <ul>
-<li>Container Deploy runtimeFiles property supporting space separated list</li>
-<li>Container Deploy runtimeRetain to keep all runtime images, not just most recent</li>
+<li><a href="/90-reference/30-docker-features/40-container-deploy/index.html">containerdeploy</a> runtimeFiles property supporting space separated list</li>
+<li><a href="/90-reference/30-docker-features/40-container-deploy/index.html">containerdeploy</a> runtimeRetain to keep all runtime images, not just most recent</li>
 <li>Docker Push fails for private registry which does not have authentication</li>
 <li>installIIS.ps1 support for desktop (Windows)</li>
 <li>delivery.sh consistent usage of WORKSPACE_ROOT (Linux)</li>
 </ul>
 <h4 id="270--27-aug-2023--replace-executeretry-with-exerty">2.7.0 : 27-Aug-2023 : Replace executeRetry with EXERTY</h4>
 <ul>
-<li>Deprecate separate executeRetry script, replace with EXERTY function</li>
+<li>Deprecate separate executeRetry script, replace with EXERTY function in <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">execution engine</a></li>
 <li>Extend capabilities script-friendly output for Chrome</li>
 <li>installAgent (Azure DevOps Agent installer) detect latest version for default</li>
 <li>Improve logging of package process, including warnings for no artefacts found</li>
@@ -276,7 +276,7 @@
 <h4 id="263--26-jun-2023--paths-with-spaces">2.6.3 : 26-Jun-2023 : Paths with Spaces</h4>
 <ul>
 <li>Support for paths with spaces</li>
-<li>Make uppercase variables, &ldquo;Global&rdquo; variables (replace build.properties in (Linux)</li>
+<li>Make uppercase variables, &ldquo;Global&rdquo; variables (replace build.properties in (Linux))</li>
 <li>Consistent handling of Environment variables</li>
 <li>Support for custom ciProcess in entry</li>
 <li>Update GitLab runner after tag CLI deprecation</li>
@@ -1636,22 +1636,22 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745697598" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745697598" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-color.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1745697598" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1745697598" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745704064" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745704064" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-color.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1745704064" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1745704064" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.min.js?1745697598" defer></script>
+    <script src="/js/theme.min.js?1745704064" defer></script>
   </body>
 </html>

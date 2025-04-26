@@ -127,6 +127,13 @@
       <description>Tokens and Properties</description>
     </item>
     <item>
+      <title>Package</title>
+      <link>https://cdaf.io/10-cdaf/10-getting-started/40-package/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/10-cdaf/10-getting-started/40-package/index.html</guid>
+      <description>Build-Once/Deploy-Many</description>
+    </item>
+    <item>
       <title>Release</title>
       <link>https://cdaf.io/80-release-train/10-ado-release/40-release/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

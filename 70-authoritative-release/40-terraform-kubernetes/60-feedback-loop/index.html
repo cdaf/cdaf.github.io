@@ -24,18 +24,18 @@
     <meta itemprop="wordCount" content="173">
     <meta itemprop="keywords" content="Kb,12-Factors">
     <title>Feedback Loop :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745697598" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745697598" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745697598" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745697598" rel="stylesheet">
-    <link href="/css/theme.min.css?1745697598" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745697598" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745697598" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745697598" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745697598" defer></script>
-    <script src="/js/search.min.js?1745697598" defer></script>
+    <link href="/images/favicon.ico?1745704064" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745704064" rel="stylesheet">
+    <link href="/css/theme.min.css?1745704064" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745704064" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745704064" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745704064" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745704064" defer></script>
+    <script src="/js/search.min.js?1745704064" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -45,7 +45,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745697598";
+      window.relearn.index_js_url="/searchindex.en.js?1745704064";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -139,10 +139,10 @@
 
 <h1 id="feedback-loop">Feedback Loop</h1>
 
-<h2 id="hahahugoshortcode50s0hbhb">Realising the Feedback Loop</h2>
+<h2 id="hahahugoshortcode51s0hbhb">Realising the Feedback Loop</h2>
 <p>Based on <a href="https://blog.cdaf.io/articles/2023-07-23-feedback-loop/" rel="external" target="_blank">Realising the Feedback Loop</a>, once the package has been promoted to it&rsquo;s last stage, it is then pushed to the artefact store</p>
-<p><a href="#R-image-0a5c52478501cf2accce7449d5224961" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style=" height: auto; width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a5c52478501cf2accce7449d5224961"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-208cd2256ac52935abcab4077be06db9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style=" height: auto; width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-208cd2256ac52935abcab4077be06db9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Production Artefact"></a></p>
 <p>In this example Azure DevOps (ADO) using the <em>az artifacts</em> extension, see the example <code>push.tsk</code>.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Verify deployable artefact is available`n&#34;
 $package_name = (Get-Item &#34;$(PWD)\release.ps1&#34; -ErrorAction SilentlyContinue).FullName
@@ -164,8 +164,8 @@ Write-Host &#34;[$TASK_NAME]   `$package_name = $package_name&#34;
 
 az artifacts universal publish --organization $ado_org --project $ado_project --scope project --feed $ado_feed --name $SOLUTION --version $version --path $package_name</code></pre></div>
 <p>The package can be retrieved using the semantic version, or <code>latest</code> (current production).</p>
-<p><a href="#R-image-1165dd928405f4fc3e8cef630e5f0a47" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style=" height: auto; width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1165dd928405f4fc3e8cef630e5f0a47"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-01d3973e8c92dc1a1eef482962c6c6c4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style=" height: auto; width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-01d3973e8c92dc1a1eef482962c6c6c4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
 <p>To see how this can be consumed in a <em>Release Train</em> approach, see <a href="/80-release-train/40-terraform-cloud/index.html">Terraform Cloud</a>.</p>
 
   <footer class="footline">
@@ -331,22 +331,22 @@ az artifacts universal publish --organization $ado_org --project $ado_project --
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745697598" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745697598" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-color.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1745697598" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1745697598" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1745697598" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745704064" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745704064" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-color.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1745704064" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1745704064" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1745704064" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.min.js?1745697598" defer></script>
+    <script src="/js/theme.min.js?1745704064" defer></script>
   </body>
 </html>
