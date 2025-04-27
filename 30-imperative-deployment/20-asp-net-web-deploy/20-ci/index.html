@@ -23,18 +23,18 @@
     <meta itemprop="wordCount" content="274">
     <meta itemprop="keywords" content="Separation-of-Concerns">
     <title>Continuous Integration (CI) :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745704064" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745704064" rel="stylesheet">
-    <link href="/css/theme.min.css?1745704064" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745704064" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745704064" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745704064" defer></script>
-    <script src="/js/search.min.js?1745704064" defer></script>
+    <link href="/images/favicon.ico?1745741524" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745741524" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745741524" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745741524" rel="stylesheet">
+    <link href="/css/theme.min.css?1745741524" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745741524" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745741524" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745741524" defer></script>
+    <script src="/js/search.min.js?1745741524" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +44,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745704064";
+      window.relearn.index_js_url="/searchindex.en.js?1745741524";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -137,7 +137,7 @@
 
 <h1 id="continuous-integration-ci">Continuous Integration (CI)</h1>
 
-<h2 id="hahahugoshortcode24s0hbhb">Build &amp; Package Once</h2>
+<h2 id="hahahugoshortcode25s0hbhb">Build &amp; Package Once</h2>
 <p>The primary driver file for CDAF is the <code>CDAF.solution</code> file. The directory containing this file is the <a href="/10-cdaf/10-getting-started/10-ci/index.html">SOLUTIONROOT</a>. The mandatory properties are <em>solutionName</em> and <em>artifactPrefix</em>.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#a6e22e">solutionName</span><span style="color:#f92672">=</span><span style="color:#e6db74">MyAspApp</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">artifactPrefix</span><span style="color:#f92672">=</span><span style="color:#e6db74">0.1</span></span></span></code></pre></div>
@@ -165,8 +165,8 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$PROJECT<span style="color:#e6db74">] Build Project (</span>$PROJECT<span style="color:#e6db74">) with specific parameters for web deploy.</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span>
 </span></span><span style="display:flex;"><span>&amp; <span style="color:#e6db74">&#34;</span>$env:MS_BUILD<span style="color:#e6db74">&#34;</span> $PROJECT.csproj /T:Package /P:Configuration=Release /p:buildNumber=$productVersion</span></span></code></pre></div>
-<p><a href="#R-image-bb4d8b1d0ebcd2dd37d916151b5bb5fe" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-build.png" style=" height: auto; width: auto;" title="MSBuild"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bb4d8b1d0ebcd2dd37d916151b5bb5fe"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-build.png" title="MSBuild"></a></p>
+<p><a href="#R-image-2e17359792b775821418dd7b98bb3495" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-build.png" style=" height: auto; width: auto;" title="MSBuild"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2e17359792b775821418dd7b98bb3495"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-build.png" title="MSBuild"></a></p>
 <p>The resulting build is a directory files, which need to be included in your <code>storeFor</code> definition for packaging</p>
 <h4 id="storefor">storeFor</h4>
 <p>Define the artefacts that are needed to perform repeatable deployments.</p>
@@ -177,8 +177,8 @@ SelfService\obj\Release\Package\SelfService.SourceManifest.xml -Flat
 SelfService\obj\Release\Package\SelfService.zip -Flat
 
 Database\scripts -Recurse</code></pre></div>
-<p><a href="#R-image-4015b4b45e283a0c1c649b23afb59b15" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-package.png" style=" height: auto; width: auto;" title="Package"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4015b4b45e283a0c1c649b23afb59b15"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-package.png" title="Package"></a></p>
+<p><a href="#R-image-0423d44e529e1f962f50a2b0c0a82852" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-package.png" style=" height: auto; width: auto;" title="Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0423d44e529e1f962f50a2b0c0a82852"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-package.png" title="Package"></a></p>
 <p>The CDAF CI process will build the application, with tokenised settings and package this into a self-extracting <em>release.ps1</em> file. This release package can be executed for all target environments.</p>
 
   <footer class="footline">
@@ -256,18 +256,19 @@ Database\scripts -Recurse</code></pre></div>
             <li class="" data-nav-id="/30-imperative-deployment/40-static-content/20-ci/index.html"><a class="padding" href="/30-imperative-deployment/40-static-content/20-ci/index.html">Continuous Integration (CI)</a></li>
             <li class="" data-nav-id="/30-imperative-deployment/40-static-content/30-cd/index.html"><a class="padding" href="/30-imperative-deployment/40-static-content/30-cd/index.html">Continuous Delivery (CD)</a></li></ul></li></ul></li>
             <li class="" data-nav-id="/70-authoritative-release/index.html"><input type="checkbox" id="R-section-68c0ef55a5adef0606066638d7090400" aria-controls="R-subsections-68c0ef55a5adef0606066638d7090400"><label for="R-section-68c0ef55a5adef0606066638d7090400"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Declarative Release</span></label><a class="padding" href="/70-authoritative-release/index.html"><i class='fas fa-list-ul'></i>  Declarative Release</a><ul id="R-subsections-68c0ef55a5adef0606066638d7090400" class="collapsible-menu">
-            <li class="" data-nav-id="/70-authoritative-release/10-autonomous-development/index.html"><a class="padding" href="/70-authoritative-release/10-autonomous-development/index.html">Autonomous Development</a></li>
-            <li class="alwaysopen " data-nav-id="/70-authoritative-release/10-how-to-helm/index.html"><input type="checkbox" id="R-section-a140688f3b99897df6c5367f71a7da54" aria-controls="R-subsections-a140688f3b99897df6c5367f71a7da54" checked><label for="R-section-a140688f3b99897df6c5367f71a7da54"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu How to Helm</span></label><a class="padding" href="/70-authoritative-release/10-how-to-helm/index.html"><i class='fas fa-life-ring'></i>  How to Helm</a><ul id="R-subsections-a140688f3b99897df6c5367f71a7da54" class="collapsible-menu">
-            <li class="alwaysopen " data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/index.html"><input type="checkbox" id="R-section-c3f1a3da1a93ef30d77d317300091cd8" aria-controls="R-subsections-c3f1a3da1a93ef30d77d317300091cd8" checked><label for="R-section-c3f1a3da1a93ef30d77d317300091cd8"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Helm</span></label><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/index.html">Helm</a><ul id="R-subsections-c3f1a3da1a93ef30d77d317300091cd8" class="collapsible-menu">
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/index.html">Helm Hello World</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html">Tokenised Values</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html">Helm Repository</a></li></ul></li>
-            <li class="alwaysopen " data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/index.html"><input type="checkbox" id="R-section-261dfd5b060b20eba7491758810e0e04" aria-controls="R-subsections-261dfd5b060b20eba7491758810e0e04" checked><label for="R-section-261dfd5b060b20eba7491758810e0e04"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Desired State Release</span></label><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/index.html">Desired State Release</a><ul id="R-subsections-261dfd5b060b20eba7491758810e0e04" class="collapsible-menu">
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/index.html">Build Once, Deploy Many</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/index.html">Helmsman Deploy-Time</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/index.html">DRY</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/index.html">Helmsman Secrets</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/index.html">Helmsman Version Constraints</a></li></ul></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/10-autonomous-development/index.html"><input type="checkbox" id="R-section-a89a2941d66f85579265999d8d0e635d" aria-controls="R-subsections-a89a2941d66f85579265999d8d0e635d" checked><label for="R-section-a89a2941d66f85579265999d8d0e635d"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Autonomous Development</span></label><a class="padding" href="/70-authoritative-release/10-autonomous-development/index.html"><i class='fa-solid fa-file-code'></i>  Autonomous Development</a><ul id="R-subsections-a89a2941d66f85579265999d8d0e635d" class="collapsible-menu">
+            <li class="" data-nav-id="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html"><a class="padding" href="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html">Authoritative Release</a></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/30-how-to-helm/index.html"><input type="checkbox" id="R-section-7b97fc7442d8ace66e2dff36a4837ddc" aria-controls="R-subsections-7b97fc7442d8ace66e2dff36a4837ddc" checked><label for="R-section-7b97fc7442d8ace66e2dff36a4837ddc"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu How to Helm</span></label><a class="padding" href="/70-authoritative-release/30-how-to-helm/index.html"><i class='fas fa-life-ring'></i>  How to Helm</a><ul id="R-subsections-7b97fc7442d8ace66e2dff36a4837ddc" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/index.html"><input type="checkbox" id="R-section-242aa22f62107b9fceb0c6e6a176cdd8" aria-controls="R-subsections-242aa22f62107b9fceb0c6e6a176cdd8" checked><label for="R-section-242aa22f62107b9fceb0c6e6a176cdd8"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Helm</span></label><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/index.html">Helm</a><ul id="R-subsections-242aa22f62107b9fceb0c6e6a176cdd8" class="collapsible-menu">
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/1-helm-hello-world/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/1-helm-hello-world/index.html">Helm Hello World</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/2-tokenised-values/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/2-tokenised-values/index.html">Tokenised Values</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/3-helm-repository/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/3-helm-repository/index.html">Helm Repository</a></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/index.html"><input type="checkbox" id="R-section-92acc0394b8dccbcac4ea6cbe982888e" aria-controls="R-subsections-92acc0394b8dccbcac4ea6cbe982888e" checked><label for="R-section-92acc0394b8dccbcac4ea6cbe982888e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Desired State Release</span></label><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/index.html">Desired State Release</a><ul id="R-subsections-92acc0394b8dccbcac4ea6cbe982888e" class="collapsible-menu">
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3010-package/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3010-package/index.html">Build Once, Deploy Many</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3011-helmsman/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3011-helmsman/index.html">Helmsman Deploy-Time</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3012-dry/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3012-dry/index.html">DRY</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3013-secrets/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3013-secrets/index.html">Helmsman Secrets</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3014-version-constraints/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3014-version-constraints/index.html">Helmsman Version Constraints</a></li></ul></li></ul></li>
             <li class="alwaysopen " data-nav-id="/70-authoritative-release/40-terraform-kubernetes/index.html"><input type="checkbox" id="R-section-71308cf3f957fa966a32aded7f4446cc" aria-controls="R-subsections-71308cf3f957fa966a32aded7f4446cc" checked><label for="R-section-71308cf3f957fa966a32aded7f4446cc"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Terraform Kubernetes</span></label><a class="padding" href="/70-authoritative-release/40-terraform-kubernetes/index.html"><i class='fas fa-box-open'></i>  Terraform Kubernetes</a><ul id="R-subsections-71308cf3f957fa966a32aded7f4446cc" class="collapsible-menu">
             <li class="" data-nav-id="/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.html"><a class="padding" href="/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.html">Manifest</a></li>
             <li class="" data-nav-id="/70-authoritative-release/40-terraform-kubernetes/20-build-once/index.html"><a class="padding" href="/70-authoritative-release/40-terraform-kubernetes/20-build-once/index.html">Terraform Build</a></li>
@@ -344,22 +345,22 @@ Database\scripts -Recurse</code></pre></div>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745704064" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745704064" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-color.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1745704064" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1745704064" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745741524" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745741524" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-color.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1745741524" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1745741524" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.min.js?1745704064" defer></script>
+    <script src="/js/theme.min.js?1745741524" defer></script>
   </body>
 </html>

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/index.html</loc>
+    <loc>https://cdaf.io/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html</loc>
   </url>
   <url>
-    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html</loc>
+    <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/20-helm/1-helm-hello-world/index.html</loc>
   </url>
   <url>
-    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html</loc>
+    <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/20-helm/2-tokenised-values/index.html</loc>
+  </url>
+  <url>
+    <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/20-helm/3-helm-repository/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/index.html</loc>
@@ -44,9 +47,6 @@
   </url>
   <url>
     <loc>https://cdaf.io/10-cdaf/10-getting-started/index.html</loc>
-  </url>
-  <url>
-    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/20-principles-and-concepts/10-loose-coupling/index.html</loc>
@@ -112,7 +112,7 @@
     <loc>https://cdaf.io/90-reference/20-feature-configuration/index.html</loc>
   </url>
   <url>
-    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/index.html</loc>
+    <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/20-helm/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/10-cdaf/10-getting-started/20-pipeline/index.html</loc>
@@ -145,7 +145,7 @@
     <loc>https://cdaf.io/30-imperative-deployment/40-static-content/30-cd/index.html</loc>
   </url>
   <url>
-    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/index.html</loc>
+    <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/30-desiredstate/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/90-reference/30-docker-features/index.html</loc>
@@ -155,6 +155,9 @@
   </url>
   <url>
     <loc>https://cdaf.io/20-principles-and-concepts/90-branch-plans/30-gitops/index.html</loc>
+  </url>
+  <url>
+    <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/90-reference/30-docker-features/30-image-build/index.html</loc>
@@ -283,19 +286,19 @@
     <loc>https://cdaf.io/90-reference/20-feature-configuration/90-variable-validation/index.html</loc>
   </url>
   <url>
-    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/index.html</loc>
+    <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/30-desiredstate/3010-package/index.html</loc>
   </url>
   <url>
-    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/index.html</loc>
+    <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/30-desiredstate/3011-helmsman/index.html</loc>
   </url>
   <url>
-    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/index.html</loc>
+    <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/30-desiredstate/3012-dry/index.html</loc>
   </url>
   <url>
-    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/index.html</loc>
+    <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/30-desiredstate/3013-secrets/index.html</loc>
   </url>
   <url>
-    <loc>https://cdaf.io/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/index.html</loc>
+    <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/30-desiredstate/3014-version-constraints/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/tags/12-factors/index.html</loc>

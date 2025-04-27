@@ -5,47 +5,48 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
     <meta name="generator" content="Relearn 7.6.1+b0c6bb558d7728ac4535a2ac677c5f47297203cc">
-    <meta name="description" content="Generating a Helm Template">
+    <meta name="description" content="CI Process for Declarative Release">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Helm Repository :: Concepts & Applied Examples">
-    <meta name="twitter:description" content="Generating a Helm Template">
-    <meta property="og:url" content="https://cdaf.io/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html">
+    <meta name="twitter:title" content="Build Once, Deploy Many :: Concepts & Applied Examples">
+    <meta name="twitter:description" content="CI Process for Declarative Release">
+    <meta property="og:url" content="https://cdaf.io/70-authoritative-release/30-how-to-helm/30-desiredstate/3010-package/index.html">
     <meta property="og:site_name" content="Concepts & Applied Examples">
-    <meta property="og:title" content="Helm Repository :: Concepts & Applied Examples">
-    <meta property="og:description" content="Generating a Helm Template">
+    <meta property="og:title" content="Build Once, Deploy Many :: Concepts & Applied Examples">
+    <meta property="og:description" content="CI Process for Declarative Release">
     <meta property="og:locale" content="en">
     <meta property="og:type" content="article">
     <meta property="article:section" content="Declarative Release">
     <meta property="article:tag" content="Kb">
     <meta property="article:tag" content="Declarative">
-    <meta itemprop="name" content="Helm Repository :: Concepts & Applied Examples">
-    <meta itemprop="description" content="Generating a Helm Template">
-    <meta itemprop="wordCount" content="160">
-    <meta itemprop="keywords" content="Kb,Declarative">
-    <title>Helm Repository :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745704064" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745704064" rel="stylesheet">
-    <link href="/css/theme.min.css?1745704064" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745704064" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745704064" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745704064" defer></script>
-    <script src="/js/search.min.js?1745704064" defer></script>
+    <meta property="article:tag" content="Desired_state">
+    <meta itemprop="name" content="Build Once, Deploy Many :: Concepts & Applied Examples">
+    <meta itemprop="description" content="CI Process for Declarative Release">
+    <meta itemprop="wordCount" content="261">
+    <meta itemprop="keywords" content="Kb,Declarative,Desired_state">
+    <title>Build Once, Deploy Many :: Concepts &amp; Applied Examples</title>
+    <link href="/images/favicon.ico?1745741524" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745741524" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745741524" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745741524" rel="stylesheet">
+    <link href="/css/theme.min.css?1745741524" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745741524" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745741524" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745741524" defer></script>
+    <script src="/js/search.min.js?1745741524" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
       window.relearn.min = `.min`;
-      window.relearn.path='\/70-authoritative-release\/10-how-to-helm\/20-helm\/3-helm-repository\/index.html';
+      window.relearn.path='\/70-authoritative-release\/30-how-to-helm\/30-desiredstate\/3010-package\/index.html';
       window.relearn.relBasePath='..\/..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745704064";
+      window.relearn.index_js_url="/searchindex.en.js?1745741524";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -92,7 +93,7 @@
       window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
   </head>
-  <body class="mobile-support html" data-url="/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html">
+  <body class="mobile-support html" data-url="/70-authoritative-release/30-how-to-helm/30-desiredstate/3010-package/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -105,14 +106,14 @@
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/70-authoritative-release/index.html"><span itemprop="name">Declarative Release</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/70-authoritative-release/10-how-to-helm/index.html"><span itemprop="name">How to Helm</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/70-authoritative-release/10-how-to-helm/20-helm/index.html"><span itemprop="name">Helm</span></a><meta itemprop="position" content="4">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Helm Repository</span><meta itemprop="position" content="5"></li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/70-authoritative-release/30-how-to-helm/index.html"><span itemprop="name">How to Helm</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/index.html"><span itemprop="name">Desired State Release</span></a><meta itemprop="position" content="4">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Build Once, Deploy Many</span><meta itemprop="position" content="5"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html" title="Tokenised Values (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/index.html" title="Desired State Release (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/index.html" title="Desired State Release (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3011-helmsman/index.html" title="Helmsman Deploy-Time (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -133,43 +134,79 @@
 <div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
   <ul>
     <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/desired_state/index.html">Desired_state</a></li>
     <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
   </ul>
 </div>
   </header>
 
-<h1 id="helm-repository">Helm Repository</h1>
+<h1 id="build-once-deploy-many">Build Once, Deploy Many</h1>
 
-<p>To provide Helm charts as a re-usable asset, Helm provides versioning and packaging. The resulting versioned packages can be consumed by multiple applications and environments. To ensure the release package is consistent and repeatable, the Helm packages are downloaded at build (CI) and not during deployment (CD). The packages are included in the release package so there are no external dependencies at deploy time.</p>
-<h2 id="the-helm-registry">The Helm registry</h2>
-<p>Helm command line can create the packaged templates and the required index file.</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm package $chart_name --destination public
-</span></span><span style="display:flex;"><span>helm repo index public</span></span></code></pre></div>
-<p>The resulting files and index.yaml files are placed on a web server to provide the repository service, e.g.</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">entries</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">internal-service</span>:
-</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v2</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">appVersion</span>: <span style="color:#ae81ff">1.16.0</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">created</span>: <span style="color:#e6db74">&#34;2022-08-11T08:51:15.763749822Z&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Use Values for Container Name</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">digest</span>: <span style="color:#ae81ff">9a0cf4c0989e3921bd9b4d2e982417c3eac04f5863feb0439ad52a9f1d6ffeb9</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">internal-service</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">application</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">urls</span>:
-</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">internal-service-0.0.1.tgz</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">version</span>: <span style="color:#ae81ff">0.0.1</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">kiali-dashboard</span>:
-</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v2</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">appVersion</span>: <span style="color:#ae81ff">1.16.0</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">created</span>: <span style="color:#e6db74">&#34;2022-08-11T08:51:15.764037805Z&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Use Values for Container Name</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">digest</span>: <span style="color:#ae81ff">aa65089080e3e04a6560a1f3b70fc8861609d8693c279b10154264a9fe9fc794</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">kiali-dashboard</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">application</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">urls</span>:
-</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">kiali-dashboard-0.0.2.tgz</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">version</span>: <span style="color:#ae81ff">0.0.2</span></span></span></code></pre></div>
+<h2 id="hahahugoshortcode42s0hbhb">CI Process for Declarative Release</h2>
+<p>The following example is Helmsman, but the same mechanism works for Helmfile also.</p>
+<p>Using DRY principles, a single declaration of the application stack is used, and tokens applied for deplopy-time environment variations.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">scope</span>: <span style="color:#e6db74">&#34;cluster microservices&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maintainer</span>: <span style="color:#e6db74">&#34;Jules Clements&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">namespaces</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">%name_space%</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">protected</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apps</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pull</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;docker-registry-pull-secret&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;GitLab Registry Pull Secret&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">namespace</span>: <span style="color:#e6db74">&#34;%name_space%&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">chart</span>: <span style="color:#e6db74">&#34;pull-secrets-0.0.1.tgz&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;0.0.1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">valuesFile</span>: <span style="color:#e6db74">&#34;pods/docker-registry-pull-secret.yaml&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">cdaf-ui</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;cdaf-ui&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;CDAF Published Site (Django)&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">namespace</span>: <span style="color:#e6db74">&#34;%name_space%&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">chart</span>: <span style="color:#e6db74">&#34;public-ingress-0.1.4.tgz&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;0.1.4&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">valuesFile</span>: <span style="color:#e6db74">&#34;pods/cdaf-ui.yaml&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">set</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">dockerconfigjson</span>: <span style="color:#e6db74">&#34;$DOCKER_CONFIG_JSON&#34;</span></span></span></code></pre></div>
+<p>The build-time process uses the declaration to determine the Helm charts that are required at deploy time. These are downloaded and included in the package, this has the advantage of not having to manage registry access at deploy time and ensures the charts are immutable within the release package.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm repo add $repo_name https://kool-aid.gitlab.io/helm
+</span></span><span style="display:flex;"><span>IFS<span style="color:#f92672">=</span><span style="color:#e6db74">$&#39;\\n&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> chart in <span style="color:#66d9ef">$(</span>cat .cdaf/customRemote/<span style="color:#e6db74">${</span>SOLUTION<span style="color:#e6db74">}</span>.yaml | grep chart: | sort | uniq<span style="color:#66d9ef">)</span>; <span style="color:#66d9ef">do</span> eval <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>SOLUTIONROOT<span style="color:#e6db74">}</span><span style="color:#e6db74">/pull.sh </span>$repo_name<span style="color:#e6db74"> </span>$chart<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">done</span></span></span></code></pre></div>
+<h2 id="build--package">Build &amp; Package</h2>
+<p>There is no &ldquo;compiled&rdquo; output for the source files described above, so the self-contained release package capability of <a href="/10-cdaf/index.html">Continuous Delivery Automation Framework (CDAF)</a> is used to produce a portable, re-usable deployment artefact, i.e. build once, deploy many.</p>
+<pre class="mermaid align-center ">
+graph LR
+
+  subgraph ci[&#34;Continuous Integration&#34;]
+    persist[(persist)]
+  end
+
+  release.ps1
+
+  subgraph cd[&#34;Continuous Delivery&#34;]
+    test
+    prod
+  end
+
+  persist --&gt;
+  release.ps1 --&gt; test
+  release.ps1 --&gt; prod
+
+classDef blue fill:#007FFF
+class release.ps1 blue
+ 
+classDef dashed stroke-dasharray: 5, 5
+class ci,cd dashed
+</pre>
+<p>The deployment uses an <em>Environment</em> argument is a symbolic link to the settings that need to be detokenised at deploy time, e.g.</p>
+<pre><code>./release.ps1 QA
+</code></pre>
 
   <footer class="footline">
   </footer>
@@ -246,18 +283,19 @@
             <li class="" data-nav-id="/30-imperative-deployment/40-static-content/20-ci/index.html"><a class="padding" href="/30-imperative-deployment/40-static-content/20-ci/index.html">Continuous Integration (CI)</a></li>
             <li class="" data-nav-id="/30-imperative-deployment/40-static-content/30-cd/index.html"><a class="padding" href="/30-imperative-deployment/40-static-content/30-cd/index.html">Continuous Delivery (CD)</a></li></ul></li></ul></li>
             <li class="parent " data-nav-id="/70-authoritative-release/index.html"><input type="checkbox" id="R-section-68c0ef55a5adef0606066638d7090400" aria-controls="R-subsections-68c0ef55a5adef0606066638d7090400" checked><label for="R-section-68c0ef55a5adef0606066638d7090400"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Declarative Release</span></label><a class="padding" href="/70-authoritative-release/index.html"><i class='fas fa-list-ul'></i>  Declarative Release</a><ul id="R-subsections-68c0ef55a5adef0606066638d7090400" class="collapsible-menu">
-            <li class="" data-nav-id="/70-authoritative-release/10-autonomous-development/index.html"><a class="padding" href="/70-authoritative-release/10-autonomous-development/index.html">Autonomous Development</a></li>
-            <li class="parent alwaysopen " data-nav-id="/70-authoritative-release/10-how-to-helm/index.html"><input type="checkbox" id="R-section-a140688f3b99897df6c5367f71a7da54" aria-controls="R-subsections-a140688f3b99897df6c5367f71a7da54" checked><label for="R-section-a140688f3b99897df6c5367f71a7da54"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu How to Helm</span></label><a class="padding" href="/70-authoritative-release/10-how-to-helm/index.html"><i class='fas fa-life-ring'></i>  How to Helm</a><ul id="R-subsections-a140688f3b99897df6c5367f71a7da54" class="collapsible-menu">
-            <li class="parent alwaysopen " data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/index.html"><input type="checkbox" id="R-section-c3f1a3da1a93ef30d77d317300091cd8" aria-controls="R-subsections-c3f1a3da1a93ef30d77d317300091cd8" checked><label for="R-section-c3f1a3da1a93ef30d77d317300091cd8"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Helm</span></label><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/index.html">Helm</a><ul id="R-subsections-c3f1a3da1a93ef30d77d317300091cd8" class="collapsible-menu">
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/index.html">Helm Hello World</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html">Tokenised Values</a></li>
-            <li class="active " data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html">Helm Repository</a></li></ul></li>
-            <li class="alwaysopen " data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/index.html"><input type="checkbox" id="R-section-261dfd5b060b20eba7491758810e0e04" aria-controls="R-subsections-261dfd5b060b20eba7491758810e0e04" checked><label for="R-section-261dfd5b060b20eba7491758810e0e04"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Desired State Release</span></label><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/index.html">Desired State Release</a><ul id="R-subsections-261dfd5b060b20eba7491758810e0e04" class="collapsible-menu">
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/index.html">Build Once, Deploy Many</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/index.html">Helmsman Deploy-Time</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/index.html">DRY</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/index.html">Helmsman Secrets</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/index.html">Helmsman Version Constraints</a></li></ul></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/10-autonomous-development/index.html"><input type="checkbox" id="R-section-a89a2941d66f85579265999d8d0e635d" aria-controls="R-subsections-a89a2941d66f85579265999d8d0e635d" checked><label for="R-section-a89a2941d66f85579265999d8d0e635d"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Autonomous Development</span></label><a class="padding" href="/70-authoritative-release/10-autonomous-development/index.html"><i class='fa-solid fa-file-code'></i>  Autonomous Development</a><ul id="R-subsections-a89a2941d66f85579265999d8d0e635d" class="collapsible-menu">
+            <li class="" data-nav-id="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html"><a class="padding" href="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html">Authoritative Release</a></li></ul></li>
+            <li class="parent alwaysopen " data-nav-id="/70-authoritative-release/30-how-to-helm/index.html"><input type="checkbox" id="R-section-7b97fc7442d8ace66e2dff36a4837ddc" aria-controls="R-subsections-7b97fc7442d8ace66e2dff36a4837ddc" checked><label for="R-section-7b97fc7442d8ace66e2dff36a4837ddc"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu How to Helm</span></label><a class="padding" href="/70-authoritative-release/30-how-to-helm/index.html"><i class='fas fa-life-ring'></i>  How to Helm</a><ul id="R-subsections-7b97fc7442d8ace66e2dff36a4837ddc" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/index.html"><input type="checkbox" id="R-section-242aa22f62107b9fceb0c6e6a176cdd8" aria-controls="R-subsections-242aa22f62107b9fceb0c6e6a176cdd8" checked><label for="R-section-242aa22f62107b9fceb0c6e6a176cdd8"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Helm</span></label><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/index.html">Helm</a><ul id="R-subsections-242aa22f62107b9fceb0c6e6a176cdd8" class="collapsible-menu">
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/1-helm-hello-world/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/1-helm-hello-world/index.html">Helm Hello World</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/2-tokenised-values/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/2-tokenised-values/index.html">Tokenised Values</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/3-helm-repository/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/3-helm-repository/index.html">Helm Repository</a></li></ul></li>
+            <li class="parent alwaysopen " data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/index.html"><input type="checkbox" id="R-section-92acc0394b8dccbcac4ea6cbe982888e" aria-controls="R-subsections-92acc0394b8dccbcac4ea6cbe982888e" checked><label for="R-section-92acc0394b8dccbcac4ea6cbe982888e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Desired State Release</span></label><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/index.html">Desired State Release</a><ul id="R-subsections-92acc0394b8dccbcac4ea6cbe982888e" class="collapsible-menu">
+            <li class="active " data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3010-package/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3010-package/index.html">Build Once, Deploy Many</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3011-helmsman/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3011-helmsman/index.html">Helmsman Deploy-Time</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3012-dry/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3012-dry/index.html">DRY</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3013-secrets/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3013-secrets/index.html">Helmsman Secrets</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3014-version-constraints/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3014-version-constraints/index.html">Helmsman Version Constraints</a></li></ul></li></ul></li>
             <li class="alwaysopen " data-nav-id="/70-authoritative-release/40-terraform-kubernetes/index.html"><input type="checkbox" id="R-section-71308cf3f957fa966a32aded7f4446cc" aria-controls="R-subsections-71308cf3f957fa966a32aded7f4446cc" checked><label for="R-section-71308cf3f957fa966a32aded7f4446cc"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Terraform Kubernetes</span></label><a class="padding" href="/70-authoritative-release/40-terraform-kubernetes/index.html"><i class='fas fa-box-open'></i>  Terraform Kubernetes</a><ul id="R-subsections-71308cf3f957fa966a32aded7f4446cc" class="collapsible-menu">
             <li class="" data-nav-id="/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.html"><a class="padding" href="/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.html">Manifest</a></li>
             <li class="" data-nav-id="/70-authoritative-release/40-terraform-kubernetes/20-build-once/index.html"><a class="padding" href="/70-authoritative-release/40-terraform-kubernetes/20-build-once/index.html">Terraform Build</a></li>
@@ -334,22 +372,22 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745704064" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745704064" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-color.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1745704064" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1745704064" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745741524" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745741524" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-color.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1745741524" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1745741524" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.min.js?1745704064" defer></script>
+    <script src="/js/theme.min.js?1745741524" defer></script>
   </body>
 </html>

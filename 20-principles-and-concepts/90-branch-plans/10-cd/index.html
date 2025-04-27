@@ -23,18 +23,18 @@
     <meta itemprop="wordCount" content="223">
     <meta itemprop="keywords" content="Kb">
     <title>Continuous Delivery :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745704064" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745704064" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745704064" rel="stylesheet">
-    <link href="/css/theme.min.css?1745704064" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745704064" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745704064" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745704064" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745704064" defer></script>
-    <script src="/js/search.min.js?1745704064" defer></script>
+    <link href="/images/favicon.ico?1745741524" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745741524" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745741524" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745741524" rel="stylesheet">
+    <link href="/css/theme.min.css?1745741524" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745741524" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745741524" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745741524" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745741524" defer></script>
+    <script src="/js/search.min.js?1745741524" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +44,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745704064";
+      window.relearn.index_js_url="/searchindex.en.js?1745741524";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -138,24 +138,24 @@
 <h1 id="continuous-delivery">Continuous Delivery</h1>
 
 <p>Continuous Delivery (CD) decouples the release activity from development activity. Unlike Continuous Deployment, Continuous Delivery has one or more approval gates. At time of writing, the majority of pipeline tools support approval gates, with the exception of the GitHub Free tier.</p>
-<h2 id="hahahugoshortcode17s0hbhb">The Continuous Delivery Maturity Model</h2>
+<h2 id="hahahugoshortcode18s0hbhb">The Continuous Delivery Maturity Model</h2>
 <p>A fundamental aspect of Continuous Delivery is to build once and deploy many times. This means the output of the development process (Continuous Integration) is an artefact which can be re-used to deploy to multiple environments. The artefact represents the <em>Release</em>. Once this artefact is produced, the developer input is complete, and a non-development user, i.e. Test Managed or Product Owner can promote the release through various environments to production.</p>
 <p>In this example, the first stage is Continuous Integration (CI) which produces the release. Each stage after that is automatically executed, with an integration test stage, and then deployment to the <em>staging</em> environment. After the deployment to staging, the pipeline stop, awaiting approval.</p>
-<p><a href="#R-image-fff068998eb991254bcb9864901a82b4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cd-pipeline-example.png" style=" height: auto; width: auto;" title="CD Pipeline Example"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fff068998eb991254bcb9864901a82b4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cd-pipeline-example.png" title="CD Pipeline Example"></a></p>
+<p><a href="#R-image-d4f38472b5e338401de2cb70da0d3cda" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cd-pipeline-example.png" style=" height: auto; width: auto;" title="CD Pipeline Example"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d4f38472b5e338401de2cb70da0d3cda"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cd-pipeline-example.png" title="CD Pipeline Example"></a></p>
 <p>The release artefact in this example is <code>#26</code>, and this is re-used in each deployment phase.</p>
-<p><a href="#R-image-b31f95ecd757cb14d2c7c4366a3631d4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/release-26.png" style=" height: auto; width: auto;" title="Release Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b31f95ecd757cb14d2c7c4366a3631d4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/release-26.png" title="Release Artefact"></a></p>
+<p><a href="#R-image-d7bbbbfbf5968033cea58e60928498dd" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/release-26.png" style=" height: auto; width: auto;" title="Release Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d7bbbbfbf5968033cea58e60928498dd"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/release-26.png" title="Release Artefact"></a></p>
 <p>The approval gate advises the approver of what release is currently in production (<code>#23</code>) and what release will be deployed.</p>
-<p><a href="#R-image-4af383d8ea37215e9f404a8371f191a1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/approval-gate.png" style=" height: auto; width: auto;" title="Approval Gate"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4af383d8ea37215e9f404a8371f191a1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/approval-gate.png" title="Approval Gate"></a></p>
+<p><a href="#R-image-0097ea892df8d5f0f01633753a358f09" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/approval-gate.png" style=" height: auto; width: auto;" title="Approval Gate"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0097ea892df8d5f0f01633753a358f09"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/approval-gate.png" title="Approval Gate"></a></p>
 <p>Once approved, the same artefact that was tested, is now promoted to Production, completing the pipeline.</p>
-<p><a href="#R-image-3169963b7bf76696bfeee06af149048c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/deploy.png" style=" height: auto; width: auto;" title="Production Deploy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3169963b7bf76696bfeee06af149048c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/deploy.png" title="Production Deploy"></a></p>
+<p><a href="#R-image-39e1c058143de6cb3d53eb6a99cf34b0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/deploy.png" style=" height: auto; width: auto;" title="Production Deploy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-39e1c058143de6cb3d53eb6a99cf34b0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/deploy.png" title="Production Deploy"></a></p>
 <hr>
 <p>See the following reference from <a href="https://www.infoq.com/articles/Continuous-Delivery-Maturity-Model/" rel="external" target="_blank">https://www.infoq.com/articles/Continuous-Delivery-Maturity-Model</a> for the <em>build once/deploy many construct</em>.</p>
-<p><a href="#R-image-060055a4045b4e3725dab07c3e7cb227" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cdmm.png" style=" height: auto; width: auto;" title="The Continuous Delivery Maturity Model"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-060055a4045b4e3725dab07c3e7cb227"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cdmm.png" title="The Continuous Delivery Maturity Model"></a></p>
+<p><a href="#R-image-681d659fee768a15ebd7cb5349d538e4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cdmm.png" style=" height: auto; width: auto;" title="The Continuous Delivery Maturity Model"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-681d659fee768a15ebd7cb5349d538e4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cdmm.png" title="The Continuous Delivery Maturity Model"></a></p>
 
   <footer class="footline">
   </footer>
@@ -232,18 +232,19 @@
             <li class="" data-nav-id="/30-imperative-deployment/40-static-content/20-ci/index.html"><a class="padding" href="/30-imperative-deployment/40-static-content/20-ci/index.html">Continuous Integration (CI)</a></li>
             <li class="" data-nav-id="/30-imperative-deployment/40-static-content/30-cd/index.html"><a class="padding" href="/30-imperative-deployment/40-static-content/30-cd/index.html">Continuous Delivery (CD)</a></li></ul></li></ul></li>
             <li class="" data-nav-id="/70-authoritative-release/index.html"><input type="checkbox" id="R-section-68c0ef55a5adef0606066638d7090400" aria-controls="R-subsections-68c0ef55a5adef0606066638d7090400"><label for="R-section-68c0ef55a5adef0606066638d7090400"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Declarative Release</span></label><a class="padding" href="/70-authoritative-release/index.html"><i class='fas fa-list-ul'></i>  Declarative Release</a><ul id="R-subsections-68c0ef55a5adef0606066638d7090400" class="collapsible-menu">
-            <li class="" data-nav-id="/70-authoritative-release/10-autonomous-development/index.html"><a class="padding" href="/70-authoritative-release/10-autonomous-development/index.html">Autonomous Development</a></li>
-            <li class="alwaysopen " data-nav-id="/70-authoritative-release/10-how-to-helm/index.html"><input type="checkbox" id="R-section-a140688f3b99897df6c5367f71a7da54" aria-controls="R-subsections-a140688f3b99897df6c5367f71a7da54" checked><label for="R-section-a140688f3b99897df6c5367f71a7da54"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu How to Helm</span></label><a class="padding" href="/70-authoritative-release/10-how-to-helm/index.html"><i class='fas fa-life-ring'></i>  How to Helm</a><ul id="R-subsections-a140688f3b99897df6c5367f71a7da54" class="collapsible-menu">
-            <li class="alwaysopen " data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/index.html"><input type="checkbox" id="R-section-c3f1a3da1a93ef30d77d317300091cd8" aria-controls="R-subsections-c3f1a3da1a93ef30d77d317300091cd8" checked><label for="R-section-c3f1a3da1a93ef30d77d317300091cd8"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Helm</span></label><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/index.html">Helm</a><ul id="R-subsections-c3f1a3da1a93ef30d77d317300091cd8" class="collapsible-menu">
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/1-helm-hello-world/index.html">Helm Hello World</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/2-tokenised-values/index.html">Tokenised Values</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/20-helm/3-helm-repository/index.html">Helm Repository</a></li></ul></li>
-            <li class="alwaysopen " data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/index.html"><input type="checkbox" id="R-section-261dfd5b060b20eba7491758810e0e04" aria-controls="R-subsections-261dfd5b060b20eba7491758810e0e04" checked><label for="R-section-261dfd5b060b20eba7491758810e0e04"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Desired State Release</span></label><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/index.html">Desired State Release</a><ul id="R-subsections-261dfd5b060b20eba7491758810e0e04" class="collapsible-menu">
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3010-package/index.html">Build Once, Deploy Many</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3011-helmsman/index.html">Helmsman Deploy-Time</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3012-dry/index.html">DRY</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3013-secrets/index.html">Helmsman Secrets</a></li>
-            <li class="" data-nav-id="/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/index.html"><a class="padding" href="/70-authoritative-release/10-how-to-helm/30-desiredstate/3014-version-constraints/index.html">Helmsman Version Constraints</a></li></ul></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/10-autonomous-development/index.html"><input type="checkbox" id="R-section-a89a2941d66f85579265999d8d0e635d" aria-controls="R-subsections-a89a2941d66f85579265999d8d0e635d" checked><label for="R-section-a89a2941d66f85579265999d8d0e635d"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Autonomous Development</span></label><a class="padding" href="/70-authoritative-release/10-autonomous-development/index.html"><i class='fa-solid fa-file-code'></i>  Autonomous Development</a><ul id="R-subsections-a89a2941d66f85579265999d8d0e635d" class="collapsible-menu">
+            <li class="" data-nav-id="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html"><a class="padding" href="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html">Authoritative Release</a></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/30-how-to-helm/index.html"><input type="checkbox" id="R-section-7b97fc7442d8ace66e2dff36a4837ddc" aria-controls="R-subsections-7b97fc7442d8ace66e2dff36a4837ddc" checked><label for="R-section-7b97fc7442d8ace66e2dff36a4837ddc"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu How to Helm</span></label><a class="padding" href="/70-authoritative-release/30-how-to-helm/index.html"><i class='fas fa-life-ring'></i>  How to Helm</a><ul id="R-subsections-7b97fc7442d8ace66e2dff36a4837ddc" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/index.html"><input type="checkbox" id="R-section-242aa22f62107b9fceb0c6e6a176cdd8" aria-controls="R-subsections-242aa22f62107b9fceb0c6e6a176cdd8" checked><label for="R-section-242aa22f62107b9fceb0c6e6a176cdd8"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Helm</span></label><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/index.html">Helm</a><ul id="R-subsections-242aa22f62107b9fceb0c6e6a176cdd8" class="collapsible-menu">
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/1-helm-hello-world/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/1-helm-hello-world/index.html">Helm Hello World</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/2-tokenised-values/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/2-tokenised-values/index.html">Tokenised Values</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/20-helm/3-helm-repository/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/20-helm/3-helm-repository/index.html">Helm Repository</a></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/index.html"><input type="checkbox" id="R-section-92acc0394b8dccbcac4ea6cbe982888e" aria-controls="R-subsections-92acc0394b8dccbcac4ea6cbe982888e" checked><label for="R-section-92acc0394b8dccbcac4ea6cbe982888e"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Desired State Release</span></label><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/index.html">Desired State Release</a><ul id="R-subsections-92acc0394b8dccbcac4ea6cbe982888e" class="collapsible-menu">
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3010-package/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3010-package/index.html">Build Once, Deploy Many</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3011-helmsman/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3011-helmsman/index.html">Helmsman Deploy-Time</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3012-dry/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3012-dry/index.html">DRY</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3013-secrets/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3013-secrets/index.html">Helmsman Secrets</a></li>
+            <li class="" data-nav-id="/70-authoritative-release/30-how-to-helm/30-desiredstate/3014-version-constraints/index.html"><a class="padding" href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3014-version-constraints/index.html">Helmsman Version Constraints</a></li></ul></li></ul></li>
             <li class="alwaysopen " data-nav-id="/70-authoritative-release/40-terraform-kubernetes/index.html"><input type="checkbox" id="R-section-71308cf3f957fa966a32aded7f4446cc" aria-controls="R-subsections-71308cf3f957fa966a32aded7f4446cc" checked><label for="R-section-71308cf3f957fa966a32aded7f4446cc"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Terraform Kubernetes</span></label><a class="padding" href="/70-authoritative-release/40-terraform-kubernetes/index.html"><i class='fas fa-box-open'></i>  Terraform Kubernetes</a><ul id="R-subsections-71308cf3f957fa966a32aded7f4446cc" class="collapsible-menu">
             <li class="" data-nav-id="/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.html"><a class="padding" href="/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.html">Manifest</a></li>
             <li class="" data-nav-id="/70-authoritative-release/40-terraform-kubernetes/20-build-once/index.html"><a class="padding" href="/70-authoritative-release/40-terraform-kubernetes/20-build-once/index.html">Terraform Build</a></li>
@@ -320,22 +321,22 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745704064" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745704064" defer></script>
-    <script src="/js/js-yaml/js-yaml.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-color.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1745704064" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1745704064" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1745704064" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745741524" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745741524" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-color.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1745741524" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1745741524" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1745741524" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/theme.min.js?1745704064" defer></script>
+    <script src="/js/theme.min.js?1745741524" defer></script>
   </body>
 </html>
