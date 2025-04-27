@@ -21,18 +21,18 @@
     <meta itemprop="wordCount" content="380">
     <title>Realising the Feedback Loop :: Concepts &amp; Applied Examples</title>
     <link href="/20-principles-and-concepts/30-feedback-loop/index.xml" rel="alternate" type="application/rss+xml" title="Realising the Feedback Loop :: Concepts &amp; Applied Examples">
-    <link href="/images/favicon.ico?1745744763" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745744763" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745744763" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745744763" rel="stylesheet">
-    <link href="/css/theme.min.css?1745744763" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745744763" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745744763" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745744763" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745744763" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745744763" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745744763" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745744763" defer></script>
-    <script src="/js/search.min.js?1745744763" defer></script>
+    <link href="/images/favicon.ico?1745744955" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745744955" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745744955" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745744955" rel="stylesheet">
+    <link href="/css/theme.min.css?1745744955" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745744955" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745744955" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745744955" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745744955" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745744955" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745744955" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745744955" defer></script>
+    <script src="/js/search.min.js?1745744955" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -42,10 +42,10 @@
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745744763";
+      window.relearn.index_js_url="/searchindex.en.js?1745744955";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
-      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.disableInlineCopyToClipboard=true;
       window.relearn.enableBlockCodeWrap=true;
       // legal
       window.relearn.getItem = (s,n) => {return s.getItem(n)};
@@ -147,8 +147,8 @@
 <h1 id="realising-the-feedback-loop">Realising the Feedback Loop</h1>
 
 <h3 id="hahahugoshortcode15s0hbhb">Continuous Delivery to Shift-Left</h3>
-<p><a href="#R-image-b232221a76076a473c79d9d5c29f2353" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/AdobeStock_283863898.jpeg" style=" height: auto; width: auto;" title="Do Nothing Pipeline"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b232221a76076a473c79d9d5c29f2353"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/AdobeStock_283863898.jpeg" title="Do Nothing Pipeline"></a></p>
+<p><a href="#R-image-d5f4e053299b354c0e31e5036b306b30" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/AdobeStock_283863898.jpeg" style=" height: auto; width: auto;" title="Do Nothing Pipeline"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d5f4e053299b354c0e31e5036b306b30"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/AdobeStock_283863898.jpeg" title="Do Nothing Pipeline"></a></p>
 <p>While the DevOps Feedback-Loop, along with finding issues early by moving production-like environments closer to the developer (Shift-Left), are key principles, there is commonly no tangible way of achieving this.</p>
 <p>In the typically incremental progression of continuous delivery implementations, eventually automation is built to deliver to production, and typically, that is where the story ends.</p>
 <p>Before describing the realisation of the feedback loop, it&rsquo;s important to highlight the underlying framework approaches that make this possible, which are:</p>
@@ -161,8 +161,8 @@
 <p>By doing this, a known production state is available as feedback to the developers and testers, by getting the latest version from the <strong>Artefact Registry</strong>.</p>
 <h2 id="consistent-ways-of-working">Consistent Ways of Working</h2>
 <p>If this approach is applied consistently between your infrastructure, configuration management and software developers, an automated view of the Production environment is automatically available, without having to inspect the current state of each contributing pipeline.</p>
-<p><a href="#R-image-bc92c032234f79024b94746679e8d15f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-artifacts.png" style=" height: auto; width: auto;" title="artefact registry"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bc92c032234f79024b94746679e8d15f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-artifacts.png" title="artefact registry"></a></p>
+<p><a href="#R-image-4a3000495c7a4bb51574360b48e2af30" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-artifacts.png" style=" height: auto; width: auto;" title="artefact registry"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4a3000495c7a4bb51574360b48e2af30"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-artifacts.png" title="artefact registry"></a></p>
 <p>By combining these deployable assets, users have the ability to create a full-stack, production-like environment on demand. This could be wrapped in a graphical user interface or simply run from the command-line.</p>
 <h2 id="artefact-registries">Artefact Registries</h2>
 <p>Each registry vendor has different names for general purpose stores, in Azure DevOps it&rsquo;s called <em>Universal</em>, in GitLab it&rsquo;s called <em>Generic</em> and in Nexus it&rsquo;s called <em>Raw</em>.</p>
@@ -335,8 +335,8 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745744763" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745744763" defer></script>
-    <script src="/js/theme.min.js?1745744763" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745744955" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745744955" defer></script>
+    <script src="/js/theme.min.js?1745744955" defer></script>
   </body>
 </html>

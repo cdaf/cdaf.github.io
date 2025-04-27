@@ -24,18 +24,18 @@
     <meta itemprop="wordCount" content="428">
     <meta itemprop="keywords" content="Kb,12-Factors">
     <title>Terraform Build :: Concepts &amp; Applied Examples</title>
-    <link href="/images/favicon.ico?1745744763" rel="icon" type="image/x-icon" sizes="any">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745744763" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745744763" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745744763" rel="stylesheet">
-    <link href="/css/theme.min.css?1745744763" rel="stylesheet">
-    <link href="/css/format-html.min.css?1745744763" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1745744763" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1745744763" defer></script>
-    <script src="/js/lunr/lunr.min.js?1745744763" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1745744763" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1745744763" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1745744763" defer></script>
-    <script src="/js/search.min.js?1745744763" defer></script>
+    <link href="/images/favicon.ico?1745744955" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745744955" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1745744955" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1745744955" rel="stylesheet">
+    <link href="/css/theme.min.css?1745744955" rel="stylesheet">
+    <link href="/css/format-html.min.css?1745744955" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1745744955" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1745744955" defer></script>
+    <script src="/js/lunr/lunr.min.js?1745744955" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1745744955" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1745744955" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1745744955" defer></script>
+    <script src="/js/search.min.js?1745744955" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -45,10 +45,10 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1745744763";
+      window.relearn.index_js_url="/searchindex.en.js?1745744955";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
-      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.disableInlineCopyToClipboard=true;
       window.relearn.enableBlockCodeWrap=true;
       // legal
       window.relearn.getItem = (s,n) => {return s.getItem(n)};
@@ -139,7 +139,7 @@
 
 <h1 id="terraform-build">Terraform Build</h1>
 
-<h2 id="hahahugoshortcode46s0hbhb">Immutable Release Package</h2>
+<h2 id="hahahugoshortcode50s0hbhb">Immutable Release Package</h2>
 <p>The key construct for the <em>Authoritative Release</em> is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Terraform dependencies, modules are not downloaded at deploytime, instead they are resolved at <em>build</em> time and packaged into an immutable release package. For a consistent way-of-working, the Terraform <em>build</em> process resolves and validates dependencies.</p>
 <h3 id="build-time-module-resolution">Build-time Module Resolution</h3>
 <p>Most Terraform module resolution approaches are to pull from source control (Git) or registry at deploy-time, which can require additional credential management, risks unexpected module changes (if tags are used) and potential network connectivity issues. This approach is the treat modules like software dependencies, resolving them at build time and building them into an all-in-one immutable package.</p>
@@ -177,8 +177,8 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$TASK_NAME<span style="color:#e6db74">] Initialise with local state storage and download modules</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span> -ForegroundColor Cyan
 </span></span><span style="display:flex;"><span>terraform init -upgrade -input=false</span></span></code></pre></div>
-<p><a href="#R-image-09643b105d57dd49ca7eaf718d6b75f8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-resolve.png" style=" height: auto; width: auto;" title="Terraform Module Download"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-09643b105d57dd49ca7eaf718d6b75f8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-resolve.png" title="Terraform Module Download"></a></p>
+<p><a href="#R-image-3ee3e54a8fdf82f3e09c45e01805b744" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-resolve.png" style=" height: auto; width: auto;" title="Terraform Module Download"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3ee3e54a8fdf82f3e09c45e01805b744"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-resolve.png" title="Terraform Module Download"></a></p>
 <h3 id="validation">Validation</h3>
 <p>Once all modules have been downloaded, syntax is then validated.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Validate Syntax`n&#34; -ForegroundColor Cyan
@@ -186,8 +186,8 @@ terraform validate
 
 Write-Host &#34;[$TASK_NAME] Generate the graph to validate the plan`n&#34; -ForegroundColor Cyan
 terraform graph</code></pre></div>
-<p><a href="#R-image-f4ae34bae782ff4e6be676ca1a4bcef5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-validate.png" style=" height: auto; width: auto;" title="Terraform Module Download"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f4ae34bae782ff4e6be676ca1a4bcef5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-validate.png" title="Terraform Module Download"></a></p>
+<p><a href="#R-image-1223472f1cfeb3d17dd5c80a8a7dbb4b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-validate.png" style=" height: auto; width: auto;" title="Terraform Module Download"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1223472f1cfeb3d17dd5c80a8a7dbb4b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-validate.png" title="Terraform Module Download"></a></p>
 <h3 id="numeric-token-handling">Numeric Token Handling</h3>
 <p>All the deploy-time files are copied into the <code>release</code> directory. Because tokens cannot be used during the build process, an arbitrary numeric is used, and this is then replaced in the resulting <code>release</code> directory. Tokenisation is covered in more detail in the following section</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Tokenise variable file`n&#34; -ForegroundColor Cyan
@@ -195,17 +195,17 @@ REFRSH .terraform\modules\* ..\release\.terraform\modules\
 VECOPY *&#34;.tf&#34; ..\release
 VECOPY *&#34;.json&#34; ..\release
 REPLAC ..\release\variables.tf           &#39;{ default = 3 }&#39;  &#39;{ default = %agent_count% }&#39;</code></pre></div>
-<p><a href="#R-image-5ca30916ae90d2c52e4650bf1f384b5d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-post-build-token.png" style=" height: auto; width: auto;" title="Terraform Tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5ca30916ae90d2c52e4650bf1f384b5d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-post-build-token.png" title="Terraform Tokenisation"></a></p>
+<p><a href="#R-image-5d9ade74057ceebdaa465ca36dbb11b1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-post-build-token.png" style=" height: auto; width: auto;" title="Terraform Tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5d9ade74057ceebdaa465ca36dbb11b1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-post-build-token.png" title="Terraform Tokenisation"></a></p>
 <h3 id="release-package">Release Package</h3>
 <p>The deploytime components are then copied into the release package, based on the <code>storeFor</code> definition in your solution directory</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code># Tokenised Terraform Files
 release</code></pre></div>
-<p><a href="#R-image-c9d5fe9ea6be6ec44d8ea7dadf7375b7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-package.png" style=" height: auto; width: auto;" title="Terraform Package"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c9d5fe9ea6be6ec44d8ea7dadf7375b7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-package.png" title="Terraform Package"></a></p>
+<p><a href="#R-image-9661694eaa6939b3a3f0257218b007e7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-package.png" style=" height: auto; width: auto;" title="Terraform Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9661694eaa6939b3a3f0257218b007e7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-package.png" title="Terraform Package"></a></p>
 <p>The modules and helper scripts are then packed into a self-extracting release executable as per standard CDAF release build process</p>
-<p><a href="#R-image-c23cae72517a51f3f76475e465d5b100" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-release.png" style=" height: auto; width: auto;" title="Terraform Release"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c23cae72517a51f3f76475e465d5b100"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-release.png" title="Terraform Release"></a></p>
+<p><a href="#R-image-e0fecb57cf55e180ca1c848a410c5922" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-release.png" style=" height: auto; width: auto;" title="Terraform Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e0fecb57cf55e180ca1c848a410c5922"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-release.png" title="Terraform Release"></a></p>
 
   <footer class="footline">
   </footer>
@@ -371,8 +371,8 @@ release</code></pre></div>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1745744763" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745744763" defer></script>
-    <script src="/js/theme.min.js?1745744763" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1745744955" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1745744955" defer></script>
+    <script src="/js/theme.min.js?1745744955" defer></script>
   </body>
 </html>
