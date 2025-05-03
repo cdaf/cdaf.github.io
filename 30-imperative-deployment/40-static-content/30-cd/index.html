@@ -23,17 +23,17 @@
     <meta itemprop="wordCount" content="178">
     <meta itemprop="keywords" content="Separation-of-Concerns">
     <title>Continuous Delivery (CD) :: Concepts &amp; Applied Examples</title>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746250238" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746250238" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1746250238" rel="stylesheet">
-    <link href="/css/theme.min.css?1746250238" rel="stylesheet">
-    <link href="/css/format-html.min.css?1746250238" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1746250238" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1746250238" defer></script>
-    <script src="/js/lunr/lunr.min.js?1746250238" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1746250238" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1746250238" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1746250238" defer></script>
-    <script src="/js/search.min.js?1746250238" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746250704" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746250704" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1746250704" rel="stylesheet">
+    <link href="/css/theme.min.css?1746250704" rel="stylesheet">
+    <link href="/css/format-html.min.css?1746250704" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1746250704" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1746250704" defer></script>
+    <script src="/js/lunr/lunr.min.js?1746250704" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1746250704" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1746250704" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1746250704" defer></script>
+    <script src="/js/search.min.js?1746250704" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -43,7 +43,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1746250238";
+      window.relearn.index_js_url="/searchindex.en.js?1746250704";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
@@ -136,7 +136,7 @@
 
 <h1 id="continuous-delivery-cd">Continuous Delivery (CD)</h1>
 
-<h2 id="hahahugoshortcode29s0hbhb">Deploy Many</h2>
+<h2 id="hahahugoshortcode31s0hbhb">Deploy Many</h2>
 <p>The continuous delivery has multiple phases, first is a closed-loop test, then are the runtime environments, which are promoted, starting with acceptance test.</p>
 <h3 id="closed-loop-test">Closed-Loop Test</h3>
 <p>This first delivery stage used docker-compose to stand-up, test and tear-down an environment. This environment is transient and not accessible by manual testers.</p>
@@ -153,8 +153,8 @@
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">classb:classb</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">classb</span></span></span></code></pre></div>
-<p><a href="#R-image-2650a7d761597fc202a0e228ecd9f8f1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-start.png" style=" height: auto; width: auto;" title="Closed-loop"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2650a7d761597fc202a0e228ecd9f8f1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-start.png" title="Closed-loop"></a></p>
+<p><a href="#R-image-4e76959eed62336bdc3d4b81c76a972a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-start.png" style=" height: auto; width: auto;" title="Closed-loop"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e76959eed62336bdc3d4b81c76a972a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-start.png" title="Closed-loop"></a></p>
 <h3 id="release-promotion">Release Promotion</h3>
 <p>After the closed-loop tests have passed, then the deployment to user acceptance test is performed. In source control, the configuration management table defines the target environments and their GTM ID.</p>
 <blockquote>
@@ -163,11 +163,11 @@
 local    TEST    push-static-content.tsk  classb-test.opennz.org  G-JM71HCEG2Q
 local    PROD    push-static-content.tsk  classb.opennz.org       GTM-5VSBHSV</code></pre></div>
 <p>At deploy-time the GTM ID for the target environment is detonised in the static content before pushing it to the content delivery network CDN.</p>
-<p><a href="#R-image-347a53e6717faf71460d0c1fb0769a72" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-detoken.png" style=" height: auto; width: auto;" title="Detokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-347a53e6717faf71460d0c1fb0769a72"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-detoken.png" title="Detokenisation"></a></p>
+<p><a href="#R-image-dd3461f3e5a51d8fe45f62f5349f926e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-detoken.png" style=" height: auto; width: auto;" title="Detokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd3461f3e5a51d8fe45f62f5349f926e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-detoken.png" title="Detokenisation"></a></p>
 <p>The release includes both the build-time and deploy-time detokenised content.</p>
-<p><a href="#R-image-234d4e237dd076e7d6aafd9e39daf6d2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-deployed.png" style=" height: auto; width: auto;" title="Deployed Release"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-234d4e237dd076e7d6aafd9e39daf6d2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-deployed.png" title="Deployed Release"></a></p>
+<p><a href="#R-image-680daabfc6318deff28004c5cad1c889" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-deployed.png" style=" height: auto; width: auto;" title="Deployed Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-680daabfc6318deff28004c5cad1c889"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-deployed.png" title="Deployed Release"></a></p>
 
   <footer class="footline">
   </footer>
@@ -333,8 +333,8 @@ local    PROD    push-static-content.tsk  classb.opennz.org       GTM-5VSBHSV</c
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1746250238" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1746250238" defer></script>
-    <script src="/js/theme.min.js?1746250238" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1746250704" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1746250704" defer></script>
+    <script src="/js/theme.min.js?1746250704" defer></script>
   </body>
 </html>
