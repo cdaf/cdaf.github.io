@@ -24,17 +24,17 @@
     <meta itemprop="wordCount" content="226">
     <meta itemprop="keywords" content="Kb,12-Factors">
     <title>Deploy :: Concepts &amp; Applied Examples</title>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746227664" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746227664" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1746227664" rel="stylesheet">
-    <link href="/css/theme.min.css?1746227664" rel="stylesheet">
-    <link href="/css/format-html.min.css?1746227664" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1746227664" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1746227664" defer></script>
-    <script src="/js/lunr/lunr.min.js?1746227664" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1746227664" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1746227664" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1746227664" defer></script>
-    <script src="/js/search.min.js?1746227664" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746250238" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746250238" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1746250238" rel="stylesheet">
+    <link href="/css/theme.min.css?1746250238" rel="stylesheet">
+    <link href="/css/format-html.min.css?1746250238" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1746250238" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1746250238" defer></script>
+    <script src="/js/lunr/lunr.min.js?1746250238" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1746250238" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1746250238" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1746250238" defer></script>
+    <script src="/js/search.min.js?1746250238" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +44,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1746227664";
+      window.relearn.index_js_url="/searchindex.en.js?1746250238";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
@@ -145,8 +145,8 @@ Get-Content variables.tf
 DETOKN variables.tf
 DETOKN variables.tf $WORKSPACE\manifest.txt</code></pre></div>
 <p>Environment (<code>TARGET</code>) specific de-tokenisation is blue, and solution level de-tokenisation in green:</p>
-<p><a href="#R-image-1ceb86ef39ebe6c1e3dccf8cd11ffe85" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-detokenisation.png" style=" height: auto; width: auto;" title="Terraform De-tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1ceb86ef39ebe6c1e3dccf8cd11ffe85"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-detokenisation.png" title="Terraform De-tokenisation"></a></p>
+<p><a href="#R-image-21c0fec0028779f60afe75f40b63387e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-detokenisation.png" style=" height: auto; width: auto;" title="Terraform De-tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-21c0fec0028779f60afe75f40b63387e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-detokenisation.png" title="Terraform De-tokenisation"></a></p>
 <p>Terraform Cloud is being used to perform state management. To avoid false negative reporting on Terraform apply, the operation is performed in a CMD shell.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>echo &#34;[$TASK_NAME] Azure Secrets are stored in the back-end, the token opens access to these&#34;
 MAKDIR $env:APPDATA\terraform.d
@@ -174,8 +174,8 @@ Write-Host &#34;[$TASK_NAME] Initialise Remote State`n&#34; -ForegroundColor Cya
 terraform init -upgrade -input=false
 
 EXECMD &#34;terraform $OPT_ARG&#34;</code></pre></div>
-<p><a href="#R-image-485300ec0dc858e8351196d5feb0db23" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-terraform-apply.png" style=" height: auto; width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-485300ec0dc858e8351196d5feb0db23"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-terraform-apply.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-f4c3b88bfdf9725cc404560451ff447c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-terraform-apply.png" style=" height: auto; width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f4c3b88bfdf9725cc404560451ff447c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-terraform-apply.png" title="Terraform Apply"></a></p>
 
   <footer class="footline">
   </footer>
@@ -341,8 +341,8 @@ EXECMD &#34;terraform $OPT_ARG&#34;</code></pre></div>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1746227664" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1746227664" defer></script>
-    <script src="/js/theme.min.js?1746227664" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1746250238" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1746250238" defer></script>
+    <script src="/js/theme.min.js?1746250238" defer></script>
   </body>
 </html>
