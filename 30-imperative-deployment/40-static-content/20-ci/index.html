@@ -23,17 +23,17 @@
     <meta itemprop="wordCount" content="192">
     <meta itemprop="keywords" content="Separation-of-Concerns">
     <title>Continuous Integration (CI) :: Concepts &amp; Applied Examples</title>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746250704" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746250704" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1746250704" rel="stylesheet">
-    <link href="/css/theme.min.css?1746250704" rel="stylesheet">
-    <link href="/css/format-html.min.css?1746250704" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1746250704" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1746250704" defer></script>
-    <script src="/js/lunr/lunr.min.js?1746250704" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1746250704" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1746250704" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1746250704" defer></script>
-    <script src="/js/search.min.js?1746250704" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1750152437" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1750152437" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1750152437" rel="stylesheet">
+    <link href="/css/theme.min.css?1750152437" rel="stylesheet">
+    <link href="/css/format-html.min.css?1750152437" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1750152437" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1750152437" defer></script>
+    <script src="/js/lunr/lunr.min.js?1750152437" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1750152437" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1750152437" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1750152437" defer></script>
+    <script src="/js/search.min.js?1750152437" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -43,7 +43,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1746250704";
+      window.relearn.index_js_url="/searchindex.en.js?1750152437";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
@@ -136,7 +136,7 @@
 
 <h1 id="continuous-integration-ci">Continuous Integration (CI)</h1>
 
-<h2 id="hahahugoshortcode32s0hbhb">Build &amp; Package Once</h2>
+<h2 id="hahahugoshortcode31s0hbhb">Build &amp; Package Once</h2>
 <p>The primary driver file for CDAF is the <code>CDAF.solution</code> file. The directory containing this file is the <a href="/10-cdaf/10-getting-started/10-ci/index.html">SOLUTIONROOT</a>. The mandatory properties are <em>solutionName</em> and <em>artifactPrefix</em>.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#a6e22e">solutionName</span><span style="color:#f92672">=</span><span style="color:#e6db74">classbwizard</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">productName</span><span style="color:#f92672">=</span><span style="color:#e6db74">React Class B Recreational Vehicle Comparison Tool</span>
@@ -155,12 +155,12 @@ REPLAC src/App.js @semver@ $semver
 
 npm install
 npm run build</code></pre></div>
-<p><a href="#R-image-2a48a3cb2f9ac8d4afb1e510f9416e29" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-build.png" style=" height: auto; width: auto;" title="Build"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2a48a3cb2f9ac8d4afb1e510f9416e29"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-build.png" title="Build"></a></p>
+<p><a href="#R-image-10e70b8768f3f09ab5f06f8edf95f90a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-build.png" style=" height: auto; width: auto;" title="Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-10e70b8768f3f09ab5f06f8edf95f90a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-build.png" title="Build"></a></p>
 <p>Only the compiled output is retained in the release package, as defined in <code>storeForLocal</code></p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>temp/build/</code></pre></div>
-<p><a href="#R-image-5b4b334fab9c9cd0650d9e92be921c28" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-package.png" style=" height: auto; width: auto;" title="Package"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5b4b334fab9c9cd0650d9e92be921c28"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-package.png" title="Package"></a></p>
+<p><a href="#R-image-4cc1f9fdd42b6e79b24194bf7ec1cf49" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-package.png" style=" height: auto; width: auto;" title="Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4cc1f9fdd42b6e79b24194bf7ec1cf49"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-package.png" title="Package"></a></p>
 
   <footer class="footline">
   </footer>
@@ -326,8 +326,8 @@ npm run build</code></pre></div>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1746250704" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1746250704" defer></script>
-    <script src="/js/theme.min.js?1746250704" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1750152437" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1750152437" defer></script>
+    <script src="/js/theme.min.js?1750152437" defer></script>
   </body>
 </html>

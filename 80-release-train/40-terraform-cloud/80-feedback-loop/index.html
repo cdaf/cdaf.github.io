@@ -24,17 +24,17 @@
     <meta itemprop="wordCount" content="233">
     <meta itemprop="keywords" content="Kb,12-Factors">
     <title>Feedback Loop :: Concepts &amp; Applied Examples</title>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746250704" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1746250704" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1746250704" rel="stylesheet">
-    <link href="/css/theme.min.css?1746250704" rel="stylesheet">
-    <link href="/css/format-html.min.css?1746250704" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1746250704" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1746250704" defer></script>
-    <script src="/js/lunr/lunr.min.js?1746250704" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1746250704" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1746250704" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1746250704" defer></script>
-    <script src="/js/search.min.js?1746250704" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1750152437" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1750152437" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1750152437" rel="stylesheet">
+    <link href="/css/theme.min.css?1750152437" rel="stylesheet">
+    <link href="/css/format-html.min.css?1750152437" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1750152437" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1750152437" defer></script>
+    <script src="/js/lunr/lunr.min.js?1750152437" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1750152437" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1750152437" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1750152437" defer></script>
+    <script src="/js/search.min.js?1750152437" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +44,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1746250704";
+      window.relearn.index_js_url="/searchindex.en.js?1750152437";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
@@ -138,10 +138,10 @@
 
 <h1 id="feedback-loop">Feedback Loop</h1>
 
-<h2 id="hahahugoshortcode79s0hbhb">Realising the Feedback Loop</h2>
+<h2 id="hahahugoshortcode80s0hbhb">Realising the Feedback Loop</h2>
 <p>Based on <a href="https://blog.cdaf.io/articles/2023-07-23-feedback-loop/" rel="external" target="_blank">Realising the Feedback Loop</a>, once the package has been promoted to it&rsquo;s last stage, it is then pushed to the artefact store</p>
-<p><a href="#R-image-ff34314f5ca25d94f34a4275d3f0e2f7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline-complete.png" style=" height: auto; width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ff34314f5ca25d94f34a4275d3f0e2f7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline-complete.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-541bbc2a0504d1c82b2d9536747d6020" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline-complete.png" style=" height: auto; width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-541bbc2a0504d1c82b2d9536747d6020"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline-complete.png" title="Production Artefact"></a></p>
 <p>In this example Azure DevOps (ADO) using the <em>az artifacts</em> extension, see the example <code>push.tsk</code>.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Verify deployable artefact is available`n&#34;
 $package_name = (Get-Item &#34;$(PWD)\release.ps1&#34; -ErrorAction SilentlyContinue).FullName
@@ -169,12 +169,12 @@ $package_name = (Get-Item &#34;$(PWD)\userenv.ps1&#34; -ErrorAction SilentlyCont
 if ( ! ( $package_name )) { ERRMSG &#34;[PACKAGE_NOT_FOUND] $(PWD)\userenv.ps1 not found!&#34; 9995 }
 az artifacts universal publish --organization &#34;https://cdaf.visualstudio.com&#34; --project $ado_project --scope project --feed $ado_feed --name &#34;userenv&#34; --version $version --path $package_name</code></pre></div>
 <p>The package can be retrieved using the semantic version, or <code>latest</code> (current production).</p>
-<p><a href="#R-image-1cc6a2ce3d9056ea7ed87fb88489fb2d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-artefact.png" style=" height: auto; width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1cc6a2ce3d9056ea7ed87fb88489fb2d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-artefact.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-1d93936e131a3f05df6ab107f589a07f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-artefact.png" style=" height: auto; width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1d93936e131a3f05df6ab107f589a07f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-artefact.png" title="Production Artefact"></a></p>
 <h3 id="operations">Operations</h3>
 <p>Operational tasks can be performed using the production (<code>latest</code>) or specific release. In this example, a production-like development environment can be created and destroyed on demand.</p>
-<p><a href="#R-image-2ff4e83f126d5d7734c9f90212182f17" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-ops.png" style=" height: auto; width: auto;" title="Release Package for Operations"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2ff4e83f126d5d7734c9f90212182f17"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-ops.png" title="Release Package for Operations"></a></p>
+<p><a href="#R-image-986e197ecb76c9221ec9d90e68af01b6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-ops.png" style=" height: auto; width: auto;" title="Release Package for Operations"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-986e197ecb76c9221ec9d90e68af01b6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-ops.png" title="Release Package for Operations"></a></p>
 
   <footer class="footline">
   </footer>
@@ -340,8 +340,8 @@ az artifacts universal publish --organization &#34;https://cdaf.visualstudio.com
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1746250704" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1746250704" defer></script>
-    <script src="/js/theme.min.js?1746250704" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1750152437" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1750152437" defer></script>
+    <script src="/js/theme.min.js?1750152437" defer></script>
   </body>
 </html>
