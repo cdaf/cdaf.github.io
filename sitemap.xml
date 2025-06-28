@@ -61,6 +61,9 @@
     <loc>https://cdaf.io/80-release-train/40-terraform-cloud/10-manifest/index.html</loc>
   </url>
   <url>
+    <loc>https://cdaf.io/10-cdaf/20-samples/10-ci/index.html</loc>
+  </url>
+  <url>
     <loc>https://cdaf.io/80-release-train/30-octopus-deploy/10-manifest/index.html</loc>
   </url>
   <url>
@@ -119,6 +122,9 @@
   </url>
   <url>
     <loc>https://cdaf.io/20-principles-and-concepts/index.html</loc>
+  </url>
+  <url>
+    <loc>https://cdaf.io/10-cdaf/20-samples/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/90-reference/10-framework-implementation/20-execution-engine/index.html</loc>

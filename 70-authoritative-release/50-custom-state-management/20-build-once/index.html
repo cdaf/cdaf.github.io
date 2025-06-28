@@ -24,17 +24,17 @@
     <meta itemprop="wordCount" content="122">
     <meta itemprop="keywords" content="Kb,12-Factors">
     <title>Custom State Build :: Concepts &amp; Applied Examples</title>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1750152437" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1750152437" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1750152437" rel="stylesheet">
-    <link href="/css/theme.min.css?1750152437" rel="stylesheet">
-    <link href="/css/format-html.min.css?1750152437" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1750152437" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1750152437" defer></script>
-    <script src="/js/lunr/lunr.min.js?1750152437" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1750152437" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1750152437" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1750152437" defer></script>
-    <script src="/js/search.min.js?1750152437" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751088422" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751088422" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1751088422" rel="stylesheet">
+    <link href="/css/theme.min.css?1751088422" rel="stylesheet">
+    <link href="/css/format-html.min.css?1751088422" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1751088422" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1751088422" defer></script>
+    <script src="/js/lunr/lunr.min.js?1751088422" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1751088422" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1751088422" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1751088422" defer></script>
+    <script src="/js/search.min.js?1751088422" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +44,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1750152437";
+      window.relearn.index_js_url="/searchindex.en.js?1751088422";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
@@ -138,7 +138,7 @@
 
 <h1 id="custom-state-build">Custom State Build</h1>
 
-<h2 id="hahahugoshortcode55s0hbhb">Custom State Release Package</h2>
+<h2 id="hahahugoshortcode57s0hbhb">Custom State Release Package</h2>
 <p>The key construct for the <em>Authoritative Release</em> is that all aspects of the release process are predictable and repeatable. Configuration and helper scripts are packaged into an immutable release. No build process is required, so the minimal <code>CDAF.solution</code> is all that is required, assuming the custom state management is placed in the <code>custom</code> directory within the solution directory, e.g.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>devops
 ├── CDAF.solution
@@ -155,14 +155,14 @@
 productName=Mulesoft Anypoint Platform
 artifactPrefix=0.7</code></pre></div>
 <p>The configuration files are transformed into properties files</p>
-<p><a href="#R-image-2015011e20617be055ffe1b6e4ac2d0a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-cm-build.png" style=" height: auto; width: auto;" title="Configuration Management Build"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2015011e20617be055ffe1b6e4ac2d0a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-cm-build.png" title="Configuration Management Build"></a></p>
+<p><a href="#R-image-2be6c4cf26d439f6903b9ace34ca0254" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-cm-build.png" style=" height: auto; width: auto;" title="Configuration Management Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2be6c4cf26d439f6903b9ace34ca0254"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-cm-build.png" title="Configuration Management Build"></a></p>
 <p>The custom deployment tools are included due to being in the custom directory</p>
-<p><a href="#R-image-0a508d2c6f0344e7907c8b2fe1e287b8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-include.png" style=" height: auto; width: auto;" title="Custom Include"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a508d2c6f0344e7907c8b2fe1e287b8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-include.png" title="Custom Include"></a></p>
+<p><a href="#R-image-dbb37162773393f28b954ce9bb6e7ead" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-include.png" style=" height: auto; width: auto;" title="Custom Include"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dbb37162773393f28b954ce9bb6e7ead"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-include.png" title="Custom Include"></a></p>
 <p>And the release package is created</p>
-<p><a href="#R-image-cb5187e72fb27c472cbc23fe95ef726b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-release.png" style=" height: auto; width: auto;" title="Custom Release"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb5187e72fb27c472cbc23fe95ef726b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-release.png" title="Custom Release"></a></p>
+<p><a href="#R-image-50f52866b3fe66522e0f230639c153e6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-release.png" style=" height: auto; width: auto;" title="Custom Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-50f52866b3fe66522e0f230639c153e6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-release.png" title="Custom Release"></a></p>
 
   <footer class="footline">
   </footer>
@@ -216,6 +216,8 @@ artifactPrefix=0.7</code></pre></div>
             <li class="" data-nav-id="/10-cdaf/10-getting-started/50-cd/index.html"><a class="padding" href="/10-cdaf/10-getting-started/50-cd/index.html">Continuous Delivery</a></li>
             <li class="" data-nav-id="/10-cdaf/10-getting-started/60-local-tasks/index.html"><a class="padding" href="/10-cdaf/10-getting-started/60-local-tasks/index.html">Local Deployment Tasks</a></li>
             <li class="" data-nav-id="/10-cdaf/10-getting-started/70-remote-tasks/index.html"><a class="padding" href="/10-cdaf/10-getting-started/70-remote-tasks/index.html">Remote Deployment Tasks</a></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/10-cdaf/20-samples/index.html"><input type="checkbox" id="R-section-076fdf9fb378f08bd05ad997c190a3fb" aria-controls="R-subsections-076fdf9fb378f08bd05ad997c190a3fb" checked><label for="R-section-076fdf9fb378f08bd05ad997c190a3fb"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Samples</span></label><a class="padding" href="/10-cdaf/20-samples/index.html"><i class='fa-solid fa-gauge-simple'></i>  Samples</a><ul id="R-subsections-076fdf9fb378f08bd05ad997c190a3fb" class="collapsible-menu">
+            <li class="" data-nav-id="/10-cdaf/20-samples/10-ci/index.html"><a class="padding" href="/10-cdaf/20-samples/10-ci/index.html">Minimal</a></li></ul></li>
             <li class="" data-nav-id="/10-cdaf/90-release-history/index.html"><a class="padding" href="/10-cdaf/90-release-history/index.html">Release History</a></li></ul></li>
             <li class="" data-nav-id="/20-principles-and-concepts/index.html"><input type="checkbox" id="R-section-869fbb4996be3a2601a6ce682a485d79" aria-controls="R-subsections-869fbb4996be3a2601a6ce682a485d79"><label for="R-section-869fbb4996be3a2601a6ce682a485d79"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Principles and Concepts</span></label><a class="padding" href="/20-principles-and-concepts/index.html"><i class='fas fa-comments'></i>  Principles and Concepts</a><ul id="R-subsections-869fbb4996be3a2601a6ce682a485d79" class="collapsible-menu">
             <li class="" data-nav-id="/20-principles-and-concepts/10-loose-coupling/index.html"><a class="padding" href="/20-principles-and-concepts/10-loose-coupling/index.html"><i class='fas fa-laptop-code'></i>  Loose Coupling</a></li>
@@ -328,8 +330,8 @@ artifactPrefix=0.7</code></pre></div>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1750152437" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1750152437" defer></script>
-    <script src="/js/theme.min.js?1750152437" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1751088422" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1751088422" defer></script>
+    <script src="/js/theme.min.js?1751088422" defer></script>
   </body>
 </html>

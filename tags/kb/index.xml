@@ -99,6 +99,13 @@
       <description>Declare Container Deployment as Terraform Package</description>
     </item>
     <item>
+      <title>Minimal</title>
+      <link>https://cdaf.io/10-cdaf/20-samples/10-ci/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/10-cdaf/20-samples/10-ci/index.html</guid>
+      <description>Minimal Sample</description>
+    </item>
+    <item>
       <title>Octopus Pane of Glass</title>
       <link>https://cdaf.io/80-release-train/30-octopus-deploy/10-manifest/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

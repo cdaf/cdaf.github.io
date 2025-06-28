@@ -21,17 +21,17 @@
     <meta itemprop="wordCount" content="380">
     <title>Realising the Feedback Loop :: Concepts &amp; Applied Examples</title>
     <link href="/20-principles-and-concepts/30-feedback-loop/index.xml" rel="alternate" type="application/rss+xml" title="Realising the Feedback Loop :: Concepts &amp; Applied Examples">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1750152437" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1750152437" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1750152437" rel="stylesheet">
-    <link href="/css/theme.min.css?1750152437" rel="stylesheet">
-    <link href="/css/format-html.min.css?1750152437" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1750152437" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1750152437" defer></script>
-    <script src="/js/lunr/lunr.min.js?1750152437" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1750152437" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1750152437" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1750152437" defer></script>
-    <script src="/js/search.min.js?1750152437" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751088422" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751088422" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1751088422" rel="stylesheet">
+    <link href="/css/theme.min.css?1751088422" rel="stylesheet">
+    <link href="/css/format-html.min.css?1751088422" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1751088422" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1751088422" defer></script>
+    <script src="/js/lunr/lunr.min.js?1751088422" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1751088422" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1751088422" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1751088422" defer></script>
+    <script src="/js/search.min.js?1751088422" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -41,7 +41,7 @@
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1750152437";
+      window.relearn.index_js_url="/searchindex.en.js?1751088422";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
@@ -104,7 +104,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#hahahugoshortcode15s0hbhb">HAHAHUGOSHORTCODE15s0HBHB</a></li>
+        <li><a href="#hahahugoshortcode17s0hbhb">HAHAHUGOSHORTCODE17s0HBHB</a></li>
       </ul>
     </li>
     <li><a href="#consistent-ways-of-working">Consistent Ways of Working</a></li>
@@ -145,9 +145,9 @@
 
 <h1 id="realising-the-feedback-loop">Realising the Feedback Loop</h1>
 
-<h3 id="hahahugoshortcode15s0hbhb">Continuous Delivery to Shift-Left</h3>
-<p><a href="#R-image-8c04394a64d89b0cc7147fe0b3ab13b5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/AdobeStock_283863898.jpeg" style=" height: auto; width: auto;" title="Do Nothing Pipeline"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8c04394a64d89b0cc7147fe0b3ab13b5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/AdobeStock_283863898.jpeg" title="Do Nothing Pipeline"></a></p>
+<h3 id="hahahugoshortcode17s0hbhb">Continuous Delivery to Shift-Left</h3>
+<p><a href="#R-image-2d6d00e07d24365beda8046d10809f05" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/AdobeStock_283863898.jpeg" style=" height: auto; width: auto;" title="Do Nothing Pipeline"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2d6d00e07d24365beda8046d10809f05"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/AdobeStock_283863898.jpeg" title="Do Nothing Pipeline"></a></p>
 <p>While the DevOps Feedback-Loop, along with finding issues early by moving production-like environments closer to the developer (Shift-Left), are key principles, there is commonly no tangible way of achieving this.</p>
 <p>In the typically incremental progression of continuous delivery implementations, eventually automation is built to deliver to production, and typically, that is where the story ends.</p>
 <p>Before describing the realisation of the feedback loop, it&rsquo;s important to highlight the underlying framework approaches that make this possible, which are:</p>
@@ -160,8 +160,8 @@
 <p>By doing this, a known production state is available as feedback to the developers and testers, by getting the latest version from the <strong>Artefact Registry</strong>.</p>
 <h2 id="consistent-ways-of-working">Consistent Ways of Working</h2>
 <p>If this approach is applied consistently between your infrastructure, configuration management and software developers, an automated view of the Production environment is automatically available, without having to inspect the current state of each contributing pipeline.</p>
-<p><a href="#R-image-93af7e62dc1e91a53985992588e732e2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-artifacts.png" style=" height: auto; width: auto;" title="artefact registry"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-93af7e62dc1e91a53985992588e732e2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-artifacts.png" title="artefact registry"></a></p>
+<p><a href="#R-image-235712b34a19dcacf47281f2d6eb10bd" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-artifacts.png" style=" height: auto; width: auto;" title="artefact registry"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-235712b34a19dcacf47281f2d6eb10bd"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-artifacts.png" title="artefact registry"></a></p>
 <p>By combining these deployable assets, users have the ability to create a full-stack, production-like environment on demand. This could be wrapped in a graphical user interface or simply run from the command-line.</p>
 <h2 id="artefact-registries">Artefact Registries</h2>
 <p>Each registry vendor has different names for general purpose stores, in Azure DevOps it&rsquo;s called <em>Universal</em>, in GitLab it&rsquo;s called <em>Generic</em> and in Nexus it&rsquo;s called <em>Raw</em>.</p>
@@ -222,6 +222,8 @@
             <li class="" data-nav-id="/10-cdaf/10-getting-started/50-cd/index.html"><a class="padding" href="/10-cdaf/10-getting-started/50-cd/index.html">Continuous Delivery</a></li>
             <li class="" data-nav-id="/10-cdaf/10-getting-started/60-local-tasks/index.html"><a class="padding" href="/10-cdaf/10-getting-started/60-local-tasks/index.html">Local Deployment Tasks</a></li>
             <li class="" data-nav-id="/10-cdaf/10-getting-started/70-remote-tasks/index.html"><a class="padding" href="/10-cdaf/10-getting-started/70-remote-tasks/index.html">Remote Deployment Tasks</a></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/10-cdaf/20-samples/index.html"><input type="checkbox" id="R-section-076fdf9fb378f08bd05ad997c190a3fb" aria-controls="R-subsections-076fdf9fb378f08bd05ad997c190a3fb" checked><label for="R-section-076fdf9fb378f08bd05ad997c190a3fb"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Samples</span></label><a class="padding" href="/10-cdaf/20-samples/index.html"><i class='fa-solid fa-gauge-simple'></i>  Samples</a><ul id="R-subsections-076fdf9fb378f08bd05ad997c190a3fb" class="collapsible-menu">
+            <li class="" data-nav-id="/10-cdaf/20-samples/10-ci/index.html"><a class="padding" href="/10-cdaf/20-samples/10-ci/index.html">Minimal</a></li></ul></li>
             <li class="" data-nav-id="/10-cdaf/90-release-history/index.html"><a class="padding" href="/10-cdaf/90-release-history/index.html">Release History</a></li></ul></li>
             <li class="parent " data-nav-id="/20-principles-and-concepts/index.html"><input type="checkbox" id="R-section-869fbb4996be3a2601a6ce682a485d79" aria-controls="R-subsections-869fbb4996be3a2601a6ce682a485d79" checked><label for="R-section-869fbb4996be3a2601a6ce682a485d79"><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Principles and Concepts</span></label><a class="padding" href="/20-principles-and-concepts/index.html"><i class='fas fa-comments'></i>  Principles and Concepts</a><ul id="R-subsections-869fbb4996be3a2601a6ce682a485d79" class="collapsible-menu">
             <li class="" data-nav-id="/20-principles-and-concepts/10-loose-coupling/index.html"><a class="padding" href="/20-principles-and-concepts/10-loose-coupling/index.html"><i class='fas fa-laptop-code'></i>  Loose Coupling</a></li>
@@ -334,8 +336,8 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1750152437" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1750152437" defer></script>
-    <script src="/js/theme.min.js?1750152437" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1751088422" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1751088422" defer></script>
+    <script src="/js/theme.min.js?1751088422" defer></script>
   </body>
 </html>
