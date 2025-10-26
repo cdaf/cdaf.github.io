@@ -21,20 +21,20 @@
     <meta property="article:tag" content="Cdaf-Config">
     <meta itemprop="name" content="Minimal :: Concepts & Applied Examples">
     <meta itemprop="description" content="Minimal Sample">
-    <meta itemprop="wordCount" content="1745">
+    <meta itemprop="wordCount" content="1813">
     <meta itemprop="keywords" content="Kb,Cdaf-Config">
     <title>Minimal :: Concepts &amp; Applied Examples</title>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751088422" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751088422" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1751088422" rel="stylesheet">
-    <link href="/css/theme.min.css?1751088422" rel="stylesheet">
-    <link href="/css/format-html.min.css?1751088422" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1751088422" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1751088422" defer></script>
-    <script src="/js/search.min.js?1751088422" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1761435211" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1761435211" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1761435211" rel="stylesheet">
+    <link href="/css/theme.min.css?1761435211" rel="stylesheet">
+    <link href="/css/format-html.min.css?1761435211" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1761435211" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1761435211" defer></script>
+    <script src="/js/search.min.js?1761435211" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +44,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1751088422";
+      window.relearn.index_js_url="/searchindex.en.js?1761435211";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
@@ -140,9 +140,8 @@
 
 <h2 id="hahahugoshortcode13s0hbhb">Minimal Sample</h2>
 <p>This is a basic extension to the <a href="/10-cdaf/10-getting-started/10-ci/index.html">solution seed</a>, which limits the deploy step to local context only. See</p>
-<ul>
-<li><a href="https://github.com/cdaf/windows/blob/master/samples/minimal/automation-solution/CDAF.solution" rel="external" target="_blank">Windows</a></li>
-</ul>
+<h3 id="windows"><a href="https://github.com/cdaf/windows/blob/master/samples/minimal/automation-solution/CDAF.solution" rel="external" target="_blank">Windows</a></h3>
+<p>Minimal build will produce a single build output, <code>release.ps1</code>.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>[cdEmulate.bat] --------------------
 [cdEmulate.bat] Initialise Emulation
 [cdEmulate.bat] --------------------
@@ -319,8 +318,9 @@ processSequence=localTasks.ps1
 [buildPackage.ps1] Delete minimal-package-0.0.773.tar.gz
 [buildPackage.ps1] Delete minimal-package-0.0.773
 
-[buildPackage.ps1][06/28/2025 16:27:21] Process complete, artefacts [release.ps1] placed in C:\minimal
-Launching release.ps1 (0.0.773) ...
+[buildPackage.ps1][06/28/2025 16:27:21] Process complete, artefacts [release.ps1] placed in C:\minimal</code></pre></div>
+<p><code>cdEmulate.bat</code> executes the CI process above, and then automatically starts the default deploy process, <code>WINDOWS</code> for domain joined machines, or <code>WORKGROUP</code> for those that are not.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>Launching release.ps1 (0.0.773) ...
 [06/28/2025 16:27:21] Extracting embedded package file ...
 [06/28/2025 16:27:21] Decompressing package file ...
 [06/28/2025 16:27:21] Execute Deployment ...
@@ -367,9 +367,8 @@ Launching release.ps1 (0.0.773) ...
 [cdEmulate.ps1] ------------------
 [cdEmulate.ps1] Emulation Complete
 [cdEmulate.ps1] ------------------</code></pre></div>
-<ul>
-<li><a href="https://github.com/cdaf/linux/blob/master/samples/minimal/automation-solution/CDAF.solution" rel="external" target="_blank">Linux</a></li>
-</ul>
+<h3 id="linux"><a href="https://github.com/cdaf/linux/blob/master/samples/minimal/automation-solution/CDAF.solution" rel="external" target="_blank">Linux</a></h3>
+<p>Minimal build will produce a single build output, <code>release.sh</code>.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>[cdEmulate.sh] --------------------
 [cdEmulate.sh] Initialise Emulation
 [cdEmulate.sh] --------------------
@@ -530,9 +529,9 @@ rm &#39;./minimal-package-0.0.104.tar.gz&#39;
 rm -rf propertiesForLocalTasks
 rm -f manifest.txt
 
-[buildPackage.sh] Continuous Integration (CI) Finished, use ./release.sh &lt;env&gt; to perform deployment.
-
-Launching release.sh (0.0.104) ...
+[buildPackage.sh] Continuous Integration (CI) Finished, use ./release.sh &lt;env&gt; to perform deployment.</code></pre></div>
+<p><code>cdEmulate.sh</code> executes the CI process above, and then automatically starts the default deploy process, <code>WSL</code> for Windows Subsystem for Linux, or <code>LINUX</code> for others.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>Launching release.sh (0.0.104) ...
 
 [delivery.sh] =================================
 [delivery.sh] Continuous Delivery (CD) Starting
@@ -742,8 +741,8 @@ Launching release.sh (0.0.104) ...
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1751088422" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1751088422" defer></script>
-    <script src="/js/theme.min.js?1751088422" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1761435211" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1761435211" defer></script>
+    <script src="/js/theme.min.js?1761435211" defer></script>
   </body>
 </html>

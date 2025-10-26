@@ -24,17 +24,17 @@
     <meta itemprop="wordCount" content="307">
     <meta itemprop="keywords" content="Kb,12-Factors">
     <title>Deploy :: Concepts &amp; Applied Examples</title>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751088422" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751088422" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1751088422" rel="stylesheet">
-    <link href="/css/theme.min.css?1751088422" rel="stylesheet">
-    <link href="/css/format-html.min.css?1751088422" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1751088422" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1751088422" defer></script>
-    <script src="/js/search.min.js?1751088422" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1761435211" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1761435211" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1761435211" rel="stylesheet">
+    <link href="/css/theme.min.css?1761435211" rel="stylesheet">
+    <link href="/css/format-html.min.css?1761435211" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1761435211" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1761435211" defer></script>
+    <script src="/js/search.min.js?1761435211" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -44,7 +44,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1751088422";
+      window.relearn.index_js_url="/searchindex.en.js?1761435211";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
@@ -138,7 +138,7 @@
 
 <h1 id="deploy">Deploy</h1>
 
-<h2 id="hahahugoshortcode82s0hbhb">Deploy-time Detokenisation</h2>
+<h2 id="hahahugoshortcode81s0hbhb">Deploy-time Detokenisation</h2>
 <p>The <a href="/80-release-train/40-terraform-cloud/40-configuration-management/index.html"><em>configuration management</em></a> is consumed at deploy time.</p>
 <h3 id="deployment-mechanics">Deployment Mechanics</h3>
 <p>To support the build-once/deploy-many model, the environment specific values are injected and then deployed for the release. Note that the release is immutable, and any change to any component will require a new release to be created, eliminating <em>cherry picking</em>. The <code>tasksRun.tsk</code> performs multiple levels of detokenisation, the first is for environment specific settings, the second applies any solution level declarations, then cluster, groups/regions and non-secret elements of the credentials</p>
@@ -150,11 +150,11 @@ Write-Host &#34;[$TASK_NAME] Custom Properties Detokenisation`n&#34; -Foreground
 DETOKN variables.tf $azure_groups
 DETOKN variables.tf $azure_credentials reveal</code></pre></div>
 <p>Environment (<code>TARGET</code>) specific de-tokenisation is blue, and solution level de-tokenisation in green:</p>
-<p><a href="#R-image-99515400bde1626a9aee1ace0095ce19" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-detokenisation.png" style=" height: auto; width: auto;" title="Terraform De-tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-99515400bde1626a9aee1ace0095ce19"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-detokenisation.png" title="Terraform De-tokenisation"></a></p>
+<p><a href="#R-image-8de88f3f07981cedd69fe5ac5a7ae4c0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-detokenisation.png" style=" height: auto; width: auto;" title="Terraform De-tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8de88f3f07981cedd69fe5ac5a7ae4c0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-detokenisation.png" title="Terraform De-tokenisation"></a></p>
 <p>Cluster de-tokenisation is blue, group/region de-tokenisation in green and on-secret elements of the credentials in orange:</p>
-<p><a href="#R-image-65e2bb4d708f36b67900ec2132c40746" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-extended-detokenisation.png" style=" height: auto; width: auto;" title="Terraform De-tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-65e2bb4d708f36b67900ec2132c40746"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-extended-detokenisation.png" title="Terraform De-tokenisation"></a></p>
+<p><a href="#R-image-960356f445efb0ebb2de1ae30c62f157" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-extended-detokenisation.png" style=" height: auto; width: auto;" title="Terraform De-tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-960356f445efb0ebb2de1ae30c62f157"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-extended-detokenisation.png" title="Terraform De-tokenisation"></a></p>
 <p>Terraform Cloud is being used to perform state management. To avoid false negative reporting on Terraform apply, the operation is performed in a CMD shell.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Azure Secrets are stored in the back-end, the token opens access to these&#34;
 MAKDIR &#34;$env:APPDATA\terraform.d&#34;
@@ -180,11 +180,11 @@ terraform init -upgrade -input=false
 Write-Host &#34;[$TASK_NAME] Default action is plan`n&#34; -ForegroundColor Cyan
 if ( ! $OPT_ARG ) { $OPT_ARG = &#39;plan&#39; }
 EXECMD &#34;terraform $OPT_ARG&#34;</code></pre></div>
-<p><a href="#R-image-8808d833d73b2e6cabdfa94c3948233b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-terraform-apply.png" style=" height: auto; width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8808d833d73b2e6cabdfa94c3948233b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-terraform-apply.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-e1f89affe63f9c62371a719fc22b85e3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-terraform-apply.png" style=" height: auto; width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e1f89affe63f9c62371a719fc22b85e3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-terraform-apply.png" title="Terraform Apply"></a></p>
 <p>Once the infrastructure has been deployed, the application components are installed. The release package is downloaded (in this example an container with the AZ extensions pre-installed is used) and then run for the environment.</p>
-<p><a href="#R-image-c93f50f53cf1a05bc110926ba4b6ee22" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" style=" height: auto; width: auto;" title="Application Release download and deploy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c93f50f53cf1a05bc110926ba4b6ee22"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" title="Application Release download and deploy"></a></p>
+<p><a href="#R-image-cce8ad67c91f902f450c1d60cf70b946" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" style=" height: auto; width: auto;" title="Application Release download and deploy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cce8ad67c91f902f450c1d60cf70b946"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" title="Application Release download and deploy"></a></p>
 
   <footer class="footline">
   </footer>
@@ -352,8 +352,8 @@ EXECMD &#34;terraform $OPT_ARG&#34;</code></pre></div>
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1751088422" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1751088422" defer></script>
-    <script src="/js/theme.min.js?1751088422" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1761435211" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1761435211" defer></script>
+    <script src="/js/theme.min.js?1761435211" defer></script>
   </body>
 </html>

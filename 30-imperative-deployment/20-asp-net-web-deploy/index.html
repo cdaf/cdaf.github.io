@@ -21,17 +21,17 @@
     <meta itemprop="wordCount" content="92">
     <title>ASP.NET Classic Example :: Concepts &amp; Applied Examples</title>
     <link href="/30-imperative-deployment/20-asp-net-web-deploy/index.xml" rel="alternate" type="application/rss+xml" title="ASP.NET Classic Example :: Concepts &amp; Applied Examples">
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751088422" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1751088422" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1751088422" rel="stylesheet">
-    <link href="/css/theme.min.css?1751088422" rel="stylesheet">
-    <link href="/css/format-html.min.css?1751088422" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1751088422" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1751088422" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1751088422" defer></script>
-    <script src="/js/search.min.js?1751088422" defer></script>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1761435211" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1761435211" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1761435211" rel="stylesheet">
+    <link href="/css/theme.min.css?1761435211" rel="stylesheet">
+    <link href="/css/format-html.min.css?1761435211" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1761435211" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1761435211" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1761435211" defer></script>
+    <script src="/js/search.min.js?1761435211" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -41,7 +41,7 @@
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/cdaf.io';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1751088422";
+      window.relearn.index_js_url="/searchindex.en.js?1761435211";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
@@ -146,10 +146,10 @@
 <h3 id="hahahugoshortcode24s0hbhb">Build, Package and Deploy with Internet Information Services</h3>
 <p>This article matures the material authored by Troy Hunt, <a href="https://www.troyhunt.com/you-deploying-it-wrong-teamcity/" rel="external" target="_blank">You&rsquo;re deploying it wrong!</a> In his article, the <em>simple branch plan</em> method was prevalent, as prescribed by Microsoft. This article lays the implementation foundations for <em>trunk based</em> delivery.</p>
 <p>The key principle for <em>trunk based</em> delivery is build-once, deploy-many. The following steps achieve this using the Continuous Delivery Automation Framework (CDAF). The legacy features of Azure DevOps are used in this example.</p>
-<p><a href="#R-image-e9d480a2a4a9be490acd5d655bdbc18f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-ci.png" style=" height: auto; width: auto;" title="Legacy CI"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e9d480a2a4a9be490acd5d655bdbc18f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-ci.png" title="Legacy CI"></a></p>
-<p><a href="#R-image-2908fcbb1ab235c126f31b9bea1527c1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-cd.png" style=" height: auto; width: auto;" title="Legacy CD"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2908fcbb1ab235c126f31b9bea1527c1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-cd.png" title="Legacy CD"></a></p>
+<p><a href="#R-image-67eddb5e0710af8784faff2e1826a5d6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-ci.png" style=" height: auto; width: auto;" title="Legacy CI"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-67eddb5e0710af8784faff2e1826a5d6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-ci.png" title="Legacy CI"></a></p>
+<p><a href="#R-image-2dc04cbb034528b4ce3cbe2c0e04a070" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-cd.png" style=" height: auto; width: auto;" title="Legacy CD"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2dc04cbb034528b4ce3cbe2c0e04a070"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-cd.png" title="Legacy CD"></a></p>
 <div class="children children-h3 children-sort-">
   <h3 class="children-title" id="tokenisation"><a href="/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/index.html">Tokenisation</a></h3><p>Abstraction of Application Settings</p>
   <h3 class="children-title" id="continuous-integration-ci"><a href="/30-imperative-deployment/20-asp-net-web-deploy/20-ci/index.html">Continuous Integration (CI)</a></h3><p>Build &amp; Package Once</p>
@@ -322,8 +322,8 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1751088422" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1751088422" defer></script>
-    <script src="/js/theme.min.js?1751088422" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1761435211" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1761435211" defer></script>
+    <script src="/js/theme.min.js?1761435211" defer></script>
   </body>
 </html>
