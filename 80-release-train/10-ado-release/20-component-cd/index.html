@@ -26,26 +26,26 @@
     <title>Component CD :: Concepts &amp; Applied Examples</title>
     <link href="/80-release-train/10-ado-release/20-component-cd/index.xml" rel="alternate" type="application/rss+xml" title="Component CD :: Concepts &amp; Applied Examples">
     <link href="/80-release-train/10-ado-release/20-component-cd/index.print.html" rel="alternate" type="text/html" title="Component CD :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1774679297" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1774679297" defer></script>
-    <script src="/js/search-lunr.min.js?1774679297" defer></script>
-    <script src="/js/search.min.js?1774679297" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1774684203" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774684203" defer></script>
+    <script src="/js/search-lunr.min.js?1774684203" defer></script>
+    <script src="/js/search.min.js?1774684203" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1774679297";
+      window.relearn.index_js_url="/searchindex.en.js?1774684203";
     </script>
-    <script src="/js/lunr/lunr.min.js?1774679297" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1774679297" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1774679297" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1774679297" defer></script>
+    <script src="/js/lunr/lunr.min.js?1774684203" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774684203" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774684203" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774684203" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1774679297" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774679297" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774679297" rel="stylesheet">
-    <link href="/css/theme.min.css?1774679297" rel="stylesheet">
-    <link href="/css/format-html.min.css?1774679297" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1774684203" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774684203" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774684203" rel="stylesheet">
+    <link href="/css/theme.min.css?1774684203" rel="stylesheet">
+    <link href="/css/format-html.min.css?1774684203" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -146,7 +146,7 @@
 
 <h1 id="component-cd">Component CD</h1>
 
-<h2 id="hahahugoshortcode76s0hbhb">Autonomous Component Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode79s0hbhb">Autonomous Component Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>By using the <code>feature-branch.properties</code> capability of CDAF, branches containing the string <code>dev</code> will deploy to the development environment. This feature allows imperative deployment by the development team, without manipulating the pipeline, and therefore avoiding drift.</p>
 <p><strong>vue</strong></p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Feature Branch name match mapping to environment
@@ -155,11 +155,11 @@ dev=DEV</code></pre></div>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Feature Branch name &#34;contains&#34; mapping to environment
 dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
 <p>In the feature branch, where <code>dev</code> is in the branch name, CDAF will detect and execute a deployment, using the mapping above to invoke a release to <code>DEV</code>.</p>
-<p><a href="#R-image-ba5ec6bedd1fd9d4d8ffca21eca987a6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-feature-branch.png" style="height: auto;width: auto;" title="ADO Component feature branch"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ba5ec6bedd1fd9d4d8ffca21eca987a6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-feature-branch.png" title="ADO Component feature branch"></a></p>
+<p><a href="#R-image-990e323dec0d727a833f1e16462a9a5d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-feature-branch.png" style="height: auto;width: auto;" title="ADO Component feature branch"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-990e323dec0d727a833f1e16462a9a5d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-feature-branch.png" title="ADO Component feature branch"></a></p>
 <p>The trunk based pipeline will only push a release artefact from the main branch, with a stand-up/tear-down integration test of the production build.</p>
-<p><a href="#R-image-37cda66f4fad716baa7990658013350e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-trunk-based.png" style="height: auto;width: auto;" title="ADO Component pipelines"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-37cda66f4fad716baa7990658013350e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-trunk-based.png" title="ADO Component pipelines"></a></p>
+<p><a href="#R-image-e4987f3b260fe77c36748480a735b2d9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-trunk-based.png" style="height: auto;width: auto;" title="ADO Component pipelines"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e4987f3b260fe77c36748480a735b2d9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-trunk-based.png" title="ADO Component pipelines"></a></p>
 <p>Next, publication&hellip;</p>
 
   <footer class="footline">
@@ -325,8 +325,8 @@ dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774679297" defer></script>
-    <script src="/js/theme.min.js?1774679297" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774684203" defer></script>
+    <script src="/js/theme.min.js?1774684203" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

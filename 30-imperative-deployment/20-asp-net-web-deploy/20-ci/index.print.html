@@ -25,26 +25,26 @@
     <title>Continuous Integration (CI) :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/20-ci/index.html" rel="canonical" type="text/html" title="Continuous Integration (CI) :: Concepts &amp; Applied Examples">
     <link href="/30-imperative-deployment/20-asp-net-web-deploy/20-ci/index.xml" rel="alternate" type="application/rss+xml" title="Continuous Integration (CI) :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1774679297" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1774679297" defer></script>
-    <script src="/js/search-lunr.min.js?1774679297" defer></script>
-    <script src="/js/search.min.js?1774679297" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1774684203" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774684203" defer></script>
+    <script src="/js/search-lunr.min.js?1774684203" defer></script>
+    <script src="/js/search.min.js?1774684203" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1774679297";
+      window.relearn.index_js_url="/searchindex.en.js?1774684203";
     </script>
-    <script src="/js/lunr/lunr.min.js?1774679297" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1774679297" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1774679297" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1774679297" defer></script>
+    <script src="/js/lunr/lunr.min.js?1774684203" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774684203" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774684203" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774684203" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1774679297" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774679297" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774679297" rel="stylesheet">
-    <link href="/css/theme.min.css?1774679297" rel="stylesheet">
-    <link href="/css/format-print.min.css?1774679297" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1774684203" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774684203" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774684203" rel="stylesheet">
+    <link href="/css/theme.min.css?1774684203" rel="stylesheet">
+    <link href="/css/format-print.min.css?1774684203" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -172,8 +172,8 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$PROJECT<span style="color:#e6db74">] Build Project (</span>$PROJECT<span style="color:#e6db74">) with specific parameters for web deploy.</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span>
 </span></span><span style="display:flex;"><span>&amp; <span style="color:#e6db74">&#34;</span>$env:MS_BUILD<span style="color:#e6db74">&#34;</span> $PROJECT.csproj /T:Package /P:Configuration=Release /p:buildNumber=$productVersion</span></span></code></pre></div>
-<p><a href="#R-image-8e75dc39d340db5966cecd9de541715d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-build.png" style="height: auto;width: auto;" title="MSBuild"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8e75dc39d340db5966cecd9de541715d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-build.png" title="MSBuild"></a></p>
+<p><a href="#R-image-508d9e52f44ee58390ebc3f3258b58f5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-build.png" style="height: auto;width: auto;" title="MSBuild"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-508d9e52f44ee58390ebc3f3258b58f5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-build.png" title="MSBuild"></a></p>
 <p>The resulting build is a directory files, which need to be included in your <code>storeFor</code> definition for packaging</p>
 <h4 id="storefor">storeFor<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
 <p>Define the artefacts that are needed to perform repeatable deployments.</p>
@@ -184,8 +184,8 @@ SelfService\obj\Release\Package\SelfService.SourceManifest.xml -Flat
 SelfService\obj\Release\Package\SelfService.zip -Flat
 
 Database\scripts -Recurse</code></pre></div>
-<p><a href="#R-image-81715d1051acf2e014c9409f64c807a7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-package.png" style="height: auto;width: auto;" title="Package"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-81715d1051acf2e014c9409f64c807a7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-package.png" title="Package"></a></p>
+<p><a href="#R-image-23f3e09a8507e97a3ea3803a799e8e21" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-package.png" style="height: auto;width: auto;" title="Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-23f3e09a8507e97a3ea3803a799e8e21"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-package.png" title="Package"></a></p>
 <p>The CDAF CI process will build the application, with tokenised settings and package this into a self-extracting <em>release.ps1</em> file. This release package can be executed for all target environments.</p>
 
   <footer class="footline">
@@ -194,8 +194,8 @@ Database\scripts -Recurse</code></pre></div>
         </div>
       </main>
     </div>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774679297" defer></script>
-    <script src="/js/theme.min.js?1774679297" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774684203" defer></script>
+    <script src="/js/theme.min.js?1774684203" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
