@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feature Branch Execution :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/90-reference/20-feature-configuration/60-feature-branch-execution/index.html</link>
+    <description>Feature Branch Execution</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/90-reference/20-feature-configuration/60-feature-branch-execution/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

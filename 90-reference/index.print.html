@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.157.0">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="CDAF Configuration Options">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Reference Guide :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="CDAF Configuration Options">
+    <meta property="og:url" content="https://cdaf.io/90-reference/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Reference Guide :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="CDAF Configuration Options">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Reference Guide :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="CDAF Configuration Options">
+    <meta itemprop="wordCount" content="42">
+    <title>Reference Guide :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/90-reference/index.html" rel="canonical" type="text/html" title="Reference Guide :: Concepts &amp; Applied Examples">
+    <link href="/90-reference/index.xml" rel="alternate" type="application/rss+xml" title="Reference Guide :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1774678533" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774678533" defer></script>
+    <script src="/js/search-lunr.min.js?1774678533" defer></script>
+    <script src="/js/search.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1774678533";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774678533" rel="stylesheet">
+    <link href="/css/theme.min.css?1774678533" rel="stylesheet">
+    <link href="/css/format-print.min.css?1774678533" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/90-reference\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/90-reference/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#framework-implementation">Framework Implementation</a></li>
+    <li><a href="#feature-configuration">Feature Configuration</a></li>
+    <li><a href="#docker-features">Docker Features</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Reference Guide</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/90-reference/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/80-release-train/40-terraform-cloud/80-feedback-loop/index.html" title="Feedback Loop (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/90-reference/10-framework-implementation/index.html" title="Framework Implementation (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 90-reference" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="reference-guide">Reference Guide</h1>
+
+<p>Continuous Delivery Automation Framework features are opinionated and configuration driven. See the <a href="/10-cdaf/index.html">introduction material</a> for step-by-step guidance.</p>
+<ul>
+<li>
+<h2 id="framework-implementation"><a href="/90-reference/10-framework-implementation/index.html">Framework Implementation</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>CDAF Core Component Specifications</p>
+</li>
+<li>
+<h2 id="feature-configuration"><a href="/90-reference/20-feature-configuration/index.html">Feature Configuration</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Declarative Desired State Container Deployment using Helm</p>
+</li>
+<li>
+<h2 id="docker-features"><a href="/90-reference/30-docker-features/index.html">Docker Features</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Container Exploitation and Image Building
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Reference Guide</h1>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="framework-implementation">Framework Implementation</h1>
+
+<h2 id="hahahugoshortcode48s0hbhb">CDAF Core Component Specifications<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>This section provides a detailed breakdown of the Continuous Delivery Automation Framework (CDAF) itself.</p>
+<ul>
+<li>
+<h2 id="entry-points"><a href="/90-reference/10-framework-implementation/10-entry/index.html">Entry Points</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>CDAF Entry Scripts</p>
+</li>
+<li>
+<h2 id="task-processing"><a href="/90-reference/10-framework-implementation/20-execution-engine/index.html">Task Processing</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Execution Engine
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Framework Implementation</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="entry-points">Entry Points</h1>
+
+<h2 id="hahahugoshortcode91s0hbhb">CDAF Entry Scripts<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>CDAF providers 4 entry scripts for different purposes.</p>
+<ul>
+<li><strong>ci</strong> : Build and Package only, i.e. Continuous Integration, mandatory argument is BUILDNUMBER</li>
+<li><strong>cd</strong> : Release, i.e. Continuous Delivery or Deploy (depending on gating or not), mandatory argument is ENVIRONMENT</li>
+<li><strong>cdEmulate</strong> : Executes <strong>ci</strong> and then <strong>cd</strong>, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT</li>
+<li><strong>entry</strong> : Executes <strong>ci</strong> and then <strong>cd</strong>, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT(s)</li>
+</ul>
+<p>The CI entry point (<em>ci.bat</em>/<em>ci.sh</em>) will perform the build and package process. Recommended configuration is to produce a self extracting deployable artefact (release.ps1/release.sh).</p>
+<pre class="mermaid actionbar-wrapper align-center ">
+sequenceDiagram
+  ci -&gt;&gt;+ buildPackage: BUILDNUMBER
+  buildPackage -&gt;&gt;- ci: release
+</pre>
+<h2 id="cd-emulation">CD Emulation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The CD Emulation (<em>cdEmulate.bat</em>/<em>cdEmulate.sh</em>) is a simple wrapper which performs the CI process, and then executes the CD process, using the configured or default environment.</p>
+<pre class="mermaid actionbar-wrapper align-center ">
+sequenceDiagram
+  cdEmulate -&gt;&gt;+ buildPackage: BUILDNUMBER
+  buildPackage -&gt;&gt;- cdEmulate: release
+  cdEmulate -&gt;&gt;+ release: ENVIRONMENT
+  release -&gt;&gt;- cdEmulate: deployment results
+</pre>
+<h2 id="entry">Entry<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The entry wrapper (<em>entry.bat</em>/<em>entry.sh</em>), similar to cdEmulate, performs the CI process and CD process. The CD process however supports additional, optional, configuration for releases based on branch name (substrings).</p>
+<pre class="mermaid actionbar-wrapper align-center ">
+sequenceDiagram
+  cdEmulate -&gt;&gt;+ buildPackage: BUILDNUMBER
+  buildPackage -&gt;&gt;- cdEmulate: release
+  loop for each matching branch name
+    cdEmulate -&gt;&gt;+ release: ENVIRONMENT
+    release -&gt;&gt;- cdEmulate: deployment results
+  end
+</pre>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="task-processing">Task Processing</h1>
+
+<h2 id="hahahugoshortcode97s0hbhb">Execution Engine<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The CDAF execution engine allows the <em>DevOps Engineer</em> to focus on the primary objective, and not have to cater for logging, exception and error handling. Within this engine are a set of operations for common problems, further allowing a focus on results and rewriting/copying scripts. See <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine documentation</a>.</p>
+<blockquote>
+<p>Note: The following is details a subset of CDAF capabilities, describing a common usage, For a detailed breakdown of each component, see the <a href="/90-reference/index.html">CDAF Reference Guide</a>.</p>
+</blockquote>
+<pre class="mermaid actionbar-wrapper align-center ">
+sequenceDiagram
+  autonumber
+  participant entry point
+  participant buildPackage
+  participant buildProjects
+  participant execute
+  participant package
+
+  entry point -&gt;&gt;+ buildPackage: BUILDNUMBER
+    Note right of buildPackage: &#34;Build&#34; Process Begins
+    buildPackage -&gt;&gt; buildPackage: Property Translation (properties.cm)
+    loop for each Directory containering build.tsk
+      Note right of buildPackage: &#34;Project&#34; is a historical name &lt;br/&gt; from Eclipse &amp; Visual Studio
+      buildPackage -&gt;&gt;+ buildProjects: Project Name
+      buildProjects -&gt;&gt;+ Transform: Load Properties
+      Transform -&gt;&gt;- buildProjects: propertyList
+      buildProjects -&gt;&gt;+ execute: build.tsk
+      loop for each Line in build.tsk
+        Note right of execute: Build commands, such as &lt;br/&gt; MSBuild, NPM, etc.
+        execute -&gt;&gt; execute: log, execute and manage errors
+      end
+      execute -&gt;&gt;- buildProjects: build artefacts
+      buildProjects -&gt;&gt;- buildPackage: build complete
+    end
+
+    Note right of buildPackage: &#34;Package&#34; Process Begins
+    buildPackage -&gt;&gt;+ package: proejctName
+    package -&gt;&gt;+ Transform: Load Properties
+    Transform -&gt;&gt;- package: propertyList
+    package -&gt;&gt;- buildPackage: project complete
+    buildPackage -&gt;&gt;+ packageLocal: prepare release
+      packageLocal -&gt;&gt; packageLocal: Gather CDAF SCripts &lt;br/&gt; and deploy properties
+      packageLocal -&gt;&gt; packageLocal: Gather user defined artefacts
+    packageLocal -&gt;&gt;- buildPackage: artefacts
+    buildPackage -&gt;&gt; buildPackage: generate self-extract release
+  buildPackage -&gt;&gt;- entry point: release.ps1 or release.sh
+</pre>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="feature-configuration">Feature Configuration</h1>
+
+<h2 id="hahahugoshortcode59s0hbhb">Declarative Desired State Container Deployment using Helm<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>This section provides a detailed breakdown of the Continuous Delivery Automation Framework (CDAF) feature configuration options. For a step-by-step usage guide see <a href="/10-cdaf/10-getting-started/index.html">getting started</a>.</p>
+<ul>
+<li>
+<h2 id="configuration-mapping"><a href="/90-reference/20-feature-configuration/10-configuration-mapping/index.html">Configuration Mapping</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Configuration Mapping</p>
+</li>
+<li>
+<h2 id="execution-engine"><a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Execution Engine</p>
+</li>
+<li>
+<h2 id="environment-variables"><a href="/90-reference/20-feature-configuration/30-environment-variables/index.html">Environment Variables</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Environment Variables</p>
+</li>
+<li>
+<h2 id="solution-properties"><a href="/90-reference/20-feature-configuration/40-solution-properties/index.html">Solution Properties</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Solution Properties</p>
+</li>
+<li>
+<h2 id="extended-processes"><a href="/90-reference/20-feature-configuration/50-extended-processes/index.html">Extended Processes</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Extended Processes</p>
+</li>
+<li>
+<h2 id="feature-branch-execution"><a href="/90-reference/20-feature-configuration/60-feature-branch-execution/index.html">Feature Branch Execution</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Feature Branch Execution</p>
+</li>
+<li>
+<h2 id="sensitive-data-strategies"><a href="/90-reference/20-feature-configuration/70-sensitive-data-strategies/index.html">Sensitive Data Strategies</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Sensitive Data Strategies</p>
+</li>
+<li>
+<h2 id="legacy-features"><a href="/90-reference/20-feature-configuration/80-legacy-features/index.html">Legacy Features</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Legacy Features</p>
+</li>
+<li>
+<h2 id="variable-validation"><a href="/90-reference/20-feature-configuration/90-variable-validation/index.html">Variable Validation</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Variable Validation
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Feature Configuration</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="configuration-mapping">Configuration Mapping</h1>
+
+<h2 id="hahahugoshortcode100s0hbhb">Configuration Mapping<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The local and remote configuration will trigger a task execution based on each unique declaration of context and target, using the corresponding default task <code>tasksRunLocal.tsk</code> and <code>tasksRunLocal.tsk</code>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context  target  deployHost
+remote   UAT     vm.example.com
+local    UAT     vm.example.com
+remote   PROD    vm.example.com
+local    PROD    vm.example.com</code></pre></div>
+<p>Customer tasks can be defined for directories <code>customLocal</code> and <code>customRemote</code> respectively, or custom if shared.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context    target  deployTaskOverride
+local      DOCKER  docker-compose-test.tsk
+remote     UAT     on-premise-deploy.tsk
+remote     PROD    on-premise-deploy.tsk
+container  PUSH    publish-production-ertefact.tsk</code></pre></div>
+<p>Note that container override tasks are made available in the customRemote directory.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="execution-engine">Execution Engine</h1>
+
+<h2 id="hahahugoshortcode102s0hbhb">Execution Engine<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>To alleviate the burden of argument passing, exception handling and logging, the execution engine has been provided. The execution engine will essentially execute the native interpretive language (PowerShell or bash), line by line, but each execution will be tested for exceptions (trivial in bash, significantly more complex in PowerShell).</p>
+<h3 id="where-is-it-used">Where is it used<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>In all places using .tsk files, i.e. build, package, wrap and deploy. The following operations are available to all tasks, however, some are more applicable to specific processes, see Build, Local and Remote task execution for more details of how these can be used.</p>
+<h3 id="operations">Operations<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The following operations are provided to simplify common tasks.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Keyword</th>
+          <th>Description</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ASSIGN</td>
+          <td>Display, and expand as necessary, variable assignment</td>
+          <td>ASSIGN $test=&quot;$varcontainingvar&quot;</td>
+      </tr>
+      <tr>
+          <td>CMPRSS</td>
+          <td>Compress directory to file</td>
+          <td>CMPRSS packageName dirName</td>
+      </tr>
+      <tr>
+          <td>DCMPRS</td>
+          <td>Decompress package file</td>
+          <td>DCMPRS packageName</td>
+      </tr>
+      <tr>
+          <td>DECRYP</td>
+          <td>decrypt using private key (PKI)</td>
+          <td>DECRYP crypt/encrypt.dat</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   decrypt using AES/GPG key</td>
+          <td>DECRYP crypt/encrypt.dat $key</td>
+      </tr>
+      <tr>
+          <td>DETOKN</td>
+          <td>Detokenise file with target prop</td>
+          <td>DETOKN token.yml</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   Detokenise with specific file</td>
+          <td>DETOKN token.yml PROP_FILE</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   Detokenise with encrypted file</td>
+          <td>DETOKN token.yml crypt/FIL $key</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   Expand and reveal embedded variables and detokenise</td>
+          <td>DETOKN token.yml $TARGET reveal</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   Expand but do not reveal embedded variables and detokenise</td>
+          <td>DETOKN token.yml manifest.txt resolve</td>
+      </tr>
+      <tr>
+          <td>EXCREM</td>
+          <td>Execute command</td>
+          <td>EXCREM hostname</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   Execute script</td>
+          <td>EXCREM ./capabilities.sh</td>
+      </tr>
+      <tr>
+          <td>EXERTY</td>
+          <td>Execute Retry, wait 10 seconds and retry twice</td>
+          <td>EXERTY &ldquo;temperamentalcommand&rdquo;</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   Optional, wait and retry override</td>
+          <td>EXERTY &ldquo;verytemperamentalcommand&rdquo; 20 5</td>
+      </tr>
+      <tr>
+          <td>EXITIF</td>
+          <td>Exit normally if argument set</td>
+          <td>EXITIF $ACTION</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   Exit normally if set to value</td>
+          <td>EXITIF $ACTION clean</td>
+      </tr>
+      <tr>
+          <td>IGNORE</td>
+          <td>Execute expression, log and ignore errors</td>
+          <td>IGNORE &ldquo;command arg1 arg2&rdquo;</td>
+      </tr>
+      <tr>
+          <td>IMGTXT</td>
+          <td>Display image file as text (wrapper for jp2a in Linux)</td>
+          <td>IMGTXT sample.jpg</td>
+      </tr>
+      <tr>
+          <td>INVOKE</td>
+          <td>call a custom script</td>
+          <td>INVOKE ./script &ldquo;Hello&rdquo;</td>
+      </tr>
+      <tr>
+          <td>MAKDIR</td>
+          <td>Create a directory and path (opt)</td>
+          <td>MAKDIR directory/and/path</td>
+      </tr>
+      <tr>
+          <td>MASKED</td>
+          <td>Return an uppercase hexadecimal checksum using SHA256</td>
+          <td>MASKED $password</td>
+      </tr>
+      <tr>
+          <td>MD5MSK</td>
+          <td>Deprecated. Return an uppercase hexadecimal checksum</td>
+          <td>MD5MSK $password</td>
+      </tr>
+      <tr>
+          <td>PROPLD</td>
+          <td>Load properties as variables</td>
+          <td>PROPLD PROP_FILE</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   Expand and reveal embedded variables</td>
+          <td>PROPLD $TARGET reveal</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   Expand but do not reveal embedded variables</td>
+          <td>PROPLD manifest.txt resolve</td>
+      </tr>
+      <tr>
+          <td>REFRSH</td>
+          <td>Refresh directory contents</td>
+          <td>REFRSH manifest.txt ~/temp_dir</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   clear directory contents (create if not existing)</td>
+          <td>REFRSH ~/temp_dir</td>
+      </tr>
+      <tr>
+          <td>REMOVE</td>
+          <td>Delete files, including wildcard</td>
+          <td>REMOVE *.war</td>
+      </tr>
+      <tr>
+          <td>REPLAC</td>
+          <td>Replace token in file</td>
+          <td>REPLAC fileName %token% $value</td>
+      </tr>
+      <tr>
+          <td>VARCHK</td>
+          <td>Variable validation using default file properties.varchk</td>
+          <td>VARCHK</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>   Variable validation using names file</td>
+          <td>VARCHK vars.properties</td>
+      </tr>
+      <tr>
+          <td>VECOPY</td>
+          <td>Verbose copy</td>
+          <td>VECOPY *.war</td>
+      </tr>
+  </tbody>
+</table>
+<p>Notes on EXCREM use, the properties are similar to those used for remote tasks, where the minimum required is the host, if other properties are not used, must be set to NOT_SUPPLIED, i.e.</p>
+<pre><code>deployHost=localhost
+remUser=NOT_SUPPLIED
+remCred=NOT_SUPPLIED
+remThb=NOT_SUPPLIED
+</code></pre>
+<h4 id="windows-only">Windows only<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>The following operations are only available in PowerShell version</p>
+<table>
+  <thead>
+      <tr>
+          <th>Keyword</th>
+          <th>Description</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CMDTST</td>
+          <td>Returns true if command exists</td>
+          <td>CMDTST vagrant</td>
+      </tr>
+      <tr>
+          <td>ELEVAT</td>
+          <td>Execute as elevated NT SYSTEM</td>
+          <td>ELEVAT &ldquo;$(pwd)/custom.ps1&rdquo;</td>
+      </tr>
+      <tr>
+          <td>EXECMD</td>
+          <td>Execute in Command (CMD) shell</td>
+          <td>ELEVAT &ldquo;terraform $OPT_ARG&rdquo;</td>
+      </tr>
+      <tr>
+          <td>MSTOOL</td>
+          <td>Microsoft Build Tools, set environment variables <br/> • MS_BUILD <br/> • MS_TEST <br/> • VS_TEST <br/> • DEV_ENV <br/> • NUGET_PATH</td>
+          <td>MSTOOL</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="common-variables">Common Variables<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>These are automatically set at both build and deploy time.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>$SOLUTIONROOT</td>
+          <td>The solution directory identified by localtion of CDAF.solution file</td>
+      </tr>
+      <tr>
+          <td>$SOLUTION</td>
+          <td>The solution name identified by property in CDAF.solution file</td>
+      </tr>
+      <tr>
+          <td>$BUILDNUMBER</td>
+          <td>The first argument passed for CI, and propagated to CD</td>
+      </tr>
+      <tr>
+          <td>$CDAF_CORE</td>
+          <td>Core CDAF runtime location</td>
+      </tr>
+      <tr>
+          <td>$TASK_NAME</td>
+          <td>The name of the task file currently executing</td>
+      </tr>
+      <tr>
+          <td>$TARGET</td>
+          <td>Available in both build and deploy, but derived differently, see below for details</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="build-time-variables">Build-time Variables<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>These are automatically set at execution start-up</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>$AUTOMATIONROOT</td>
+          <td>The installation directory of the Continuous Delivery Automation Framework</td>
+      </tr>
+      <tr>
+          <td>$ACTION</td>
+          <td>The second argument passed, has some hardcoded functions<br/> • clean: only remove temp files<br/> • packageonly: skip any build tasks</td>
+      </tr>
+      <tr>
+          <td>$TARGET</td>
+          <td>At build time, this is derived (Can be overridden, see <a href="/90-reference/20-feature-configuration/30-environment-variables/index.html">CDAF_BUILD_ENV environment variable</a>) <br/> • Linux: Set to WSL for Windows Subsystem, otherwise LINUX <br/> • Windows: Set to WINDOWS is on-domain, otherwise WORKGROUP</td>
+      </tr>
+      <tr>
+          <td>$TMPDIR</td>
+          <td>Automatically set to the temp dir</td>
+      </tr>
+      <tr>
+          <td>$WORKSPACE</td>
+          <td>The working directory at execution start-up</td>
+      </tr>
+  </tbody>
+</table>
+<p>See also <a href="/90-reference/20-feature-configuration/30-environment-variables/index.html">Environment and Global Variables</a>.</p>
+<h3 id="deploy-time-variables">Deploy-time Variables<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>$ENVIRONMENT</td>
+          <td>This is the first argument passed to the release, the targets are derived from this</td>
+      </tr>
+      <tr>
+          <td>$TARGET</td>
+          <td>All targets are processed based on pattern match $ENVIRONMENT*, the TARGET being currently executed is set in this variable</td>
+      </tr>
+      <tr>
+          <td>$RELEASE</td>
+          <td>Second argument passed to release</td>
+      </tr>
+      <tr>
+          <td>$OPT_ARG</td>
+          <td>Third argument passed to release</td>
+      </tr>
+  </tbody>
+</table>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="environment-variables">Environment Variables</h1>
+
+<h2 id="hahahugoshortcode104s0hbhb">Environment Variables<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Due to inconsistencies between Windows and Linux handling of environment variables, these have been divided between environment variables that are set before calling an entry script to alter the behaviour of CDAF, and environment variables that are set within bash scripts to make them globally available.</p>
+<h3 id="control-variables">Control Variables<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The following environment variables are available to control the behaviour of CDAF</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_BRANCH_NAME</td>
+          <td>Used by entry.ps1/entry.sh <br/>Override the branch name, primarily to test CI behaviour for non-default branch, i.e. main</td>
+      </tr>
+      <tr>
+          <td>CDAF_BUILD_ENV</td>
+          <td>Define the build environment, if not set, defaults will be used, see <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">execution engine Build-time Variables</a> for details</td>
+      </tr>
+      <tr>
+          <td>CDAF_CB_{variable_name}</td>
+          <td>Prefix used in <a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a> to supply local variables into the build time container</td>
+      </tr>
+      <tr>
+          <td>CDAF_CD_{variable_name}</td>
+          <td>Prefix used in <a href="/90-reference/30-docker-features/40-container-deploy/index.html">containerDeploy</a> to supply local variables into the deploy time container</td>
+      </tr>
+      <tr>
+          <td>CDAF_IB_{variable_name}</td>
+          <td>Prefix used in <a href="/90-reference/30-docker-features/30-image-build/index.html">containerBuild</a> to supply during image construction</td>
+      </tr>
+      <tr>
+          <td>CDAF_OPT_{any_value}</td>
+          <td>Prefix used in <a href="/90-reference/30-docker-features/40-container-deploy/index.html">containerDeploy</a> to set docker run options e.g. $env:CDAF_OPT_foo = &lsquo;&ndash;cpu-count 2&rsquo; $env:CDAF_OPT_bar = &lsquo;&ndash;label custom=release&rsquo;</td>
+      </tr>
+      <tr>
+          <td>CDAF_DOCKER_REQUIRED</td>
+          <td><a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a> will attempt to start Docker if not running and will fail if it cannot, rather than falling back to native execution</td>
+      </tr>
+      <tr>
+          <td>CDAF_DOCKER_RUN_ARGS</td>
+          <td><a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a> additional run arguments, e.g. &lsquo;&ndash;memory=2048m&rsquo;</td>
+      </tr>
+      <tr>
+          <td>CDAF_DELIVERY</td>
+          <td>The default target environment for cdEmulate and entry, defaults are <br/>LINUX, or<br/> WINDOWS for on-domain or WORKGROUP for off-domain</td>
+      </tr>
+      <tr>
+          <td>CDAF_ERROR_DIAG</td>
+          <td>Dependency injected custom call if error occurs in <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine</a></td>
+      </tr>
+      <tr>
+          <td>CDAF_HOME_MOUNT</td>
+          <td>to disable volume mount for containerDeploy set to &rsquo;no&rsquo;, note: this can be overridden a solution level, using CDAF_HOME_MOUNT as property</td>
+      </tr>
+      <tr>
+          <td>CDAF_IGNORE_WARNING</td>
+          <td>If messages are logged to standard error, the <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine</a> will log but not halt, however is this is set to yes, processing will halt <br/>yes or no, default is yes</td>
+      </tr>
+      <tr>
+          <td>CDAF_LOG_LEVEL</td>
+          <td>Set to DEBUG for verbose logging</td>
+      </tr>
+      <tr>
+          <td>CDAF_OVERRIDE_TOKEN</td>
+          <td>Default marker for DETOKN or PROPLD in <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine</a> is %, i.e. %key_name%, the markers can be changed using this environment variable</td>
+      </tr>
+      <tr>
+          <td>CDAF_SKIP_CONTAINER_BUILD</td>
+          <td><a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a> will not be performed if this environment variable is set to any value</td>
+      </tr>
+      <tr>
+          <td>CONTAINER_IMAGE</td>
+          <td>Override containerImage in <a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a> &amp; <a href="/90-reference/30-docker-features/30-image-build/index.html">imageBuild</a></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="global-variables">Global Variables<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>These variables are available to child scripts, custom scripts and <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">task execution engine</a>, see also Build-time Variables.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_CORE</td>
+          <td>CDAF helper script path</td>
+      </tr>
+      <tr>
+          <td>WORKSPACE_ROOT</td>
+          <td>Static for solution, WORKSPACE will change for project (build) or target (deploy)</td>
+      </tr>
+  </tbody>
+</table>
+<p>See also <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Build-time Variables</a>.</p>
+<h3 id="image-registry">Image Registry<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>These override <a href="/90-reference/20-feature-configuration/40-solution-properties/index.html">Solution Properties</a> properties. They are used to push the image created by dockerBuild to pull a base image from a private registry.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_SKIP_PULL</td>
+          <td>Skip updating of image</td>
+      </tr>
+      <tr>
+          <td>CDAF_PULL_REGISTRY_URL</td>
+          <td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PULL_REGISTRY_USER</td>
+          <td>Registry user, example registryuser (if not set, default is &lsquo;.&rsquo;)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PULL_REGISTRY_TOKEN</td>
+          <td>Registry token, example xyzx9234sxsrwcqw34</td>
+      </tr>
+  </tbody>
+</table>
+<p>These override <a href="/90-reference/20-feature-configuration/40-solution-properties/index.html">Solution Properties</a> properties. They are used to push the image created by imageBuild to push to a private registry.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_REGISTRY_URL</td>
+          <td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+      </tr>
+      <tr>
+          <td>CDAF_REGISTRY_TAG</td>
+          <td>Image tag(s), can being single value <code>latest</code> or list <code>latest ${BUILDNUMBER}</code></td>
+      </tr>
+      <tr>
+          <td>CDAF_REGISTRY_USER</td>
+          <td>Registry user, example registryuser (if not set, default is &lsquo;.&rsquo;)</td>
+      </tr>
+      <tr>
+          <td>CDAF_REGISTRY_TOKEN</td>
+          <td>Registry token, example xyzx9234sxsrwcqw34</td>
+      </tr>
+  </tbody>
+</table>
+<p>These override <a href="/90-reference/20-feature-configuration/40-solution-properties/index.html">Solution Properties</a> properties. They are used to push the image created by dockerPush to push to a private registry.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_URL</td>
+          <td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_TAG</td>
+          <td>Image tag(s), can being single value <code>latest</code> or list <code>latest ${BUILDNUMBER}</code> (default is <code>latest</code>)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_USER</td>
+          <td>Registry user, example registryuser (if not set, default is &lsquo;.&rsquo;)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_TOKEN</td>
+          <td>Registry token, example xyzx9234sxsrwcqw34</td>
+      </tr>
+  </tbody>
+</table>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="solution-properties">Solution Properties</h1>
+
+<h2 id="hahahugoshortcode106s0hbhb">Solution Properties<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>CDAF.solution : file to identify a directory as the automation solution directory where the key configuration files are placed. This file is used as the bases of the manifest.txt file while is included in the resulting CI artefact package.</p>
+<p>See solution/CDAF.solution in CDAF automation directory.</p>
+<h3 id="solution-properties">Solution Properties<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>solutionName</td>
+          <td>Required. Do not include spaces.</td>
+      </tr>
+      <tr>
+          <td>productName</td>
+          <td>Solution description, this can contain spaces.</td>
+      </tr>
+      <tr>
+          <td>artifactPrefix</td>
+          <td>Generate a self-extracting package script, example 0.0, mutually exclusive to productVersion</td>
+      </tr>
+      <tr>
+          <td>productVersion</td>
+          <td>Do a self-extracting package script, example 0.0.0</td>
+      </tr>
+      <tr>
+          <td>containerBuild</td>
+          <td>Dependency injection for running container based build execution</td>
+      </tr>
+      <tr>
+          <td>containerImage</td>
+          <td>Image to be used in the container based build execution</td>
+      </tr>
+      <tr>
+          <td>containerDeploy</td>
+          <td>Execute deployment from within a container, uses the storeForRemote artefact definition</td>
+      </tr>
+      <tr>
+          <td>imageBuild</td>
+          <td>Dependency injection for creating a container image after CI process, see the Image Registry properties below</td>
+      </tr>
+      <tr>
+          <td>runtimeImage</td>
+          <td>Image to used in the runtime image created by imageBuild</td>
+      </tr>
+      <tr>
+          <td>constructor</td>
+          <td>Directory in which container images are constructed, default action will traverse and build in all directories</td>
+      </tr>
+      <tr>
+          <td>defaultBranch</td>
+          <td>Used to determine feature branch functionality, default is master</td>
+      </tr>
+      <tr>
+          <td>defaultEnvironment</td>
+          <td>Default environment to use for <a href="https://blog.cdaf.io/posts/2022-02-20-feature-branch-environments/" rel="external">CDAF Feature Branch Environments post</a>, defaults to DOCKER</td>
+      </tr>
+      <tr>
+          <td>processSequence</td>
+          <td>Deployment Process Sequence, defaults to localTasks, remoteTasks and finally containerTasks</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="environment-variable-substitution">Environment Variable Substitution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The following properties can be used in place of environment variables</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_HOME_MOUNT</td>
+          <td>to disable volume mount for containerDeploy set to &rsquo;no'</td>
+      </tr>
+      <tr>
+          <td>CDAF_ERROR_DIAG</td>
+          <td>Dependency injected custom call if error occurs in <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine</a></td>
+      </tr>
+      <tr>
+          <td>CDAF_DOCKER_REQUIRED</td>
+          <td><a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a> will attempt to start Docker if not running and will fail if it cannot, rather than falling back to native execution</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="image-registry">Image Registry<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>These properties are used to push the image created by dockerBuild to pull a base image from a private registry. These can be overriden by <a href="/90-reference/20-feature-configuration/30-environment-variables/index.html">Environment Variables</a>.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_SKIP_PULL</td>
+          <td>Skip updating of image</td>
+      </tr>
+      <tr>
+          <td>CDAF_PULL_REGISTRY_URL</td>
+          <td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PULL_REGISTRY_USER</td>
+          <td>Registry user, example registryuser (if not set, default is &lsquo;.&rsquo;)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PULL_REGISTRY_TOKEN</td>
+          <td>Registry token, example xyzx9234sxsrwcqw34</td>
+      </tr>
+  </tbody>
+</table>
+<p>These properties are used to push the image created by imageBuild to push to a private registry. These can be overriden by <a href="/90-reference/20-feature-configuration/30-environment-variables/index.html">Environment Variables</a>.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_REGISTRY_URL</td>
+          <td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+      </tr>
+      <tr>
+          <td>CDAF_REGISTRY_TAG</td>
+          <td>Image tag(s), can be a single value <code>latest</code> (default) or space separated list, e.g. <code>latest ${BUILDNUMBER}</code></td>
+      </tr>
+      <tr>
+          <td>CDAF_REGISTRY_USER</td>
+          <td>Registry user, example registryuser (if not set, default is &lsquo;.&rsquo;)</td>
+      </tr>
+      <tr>
+          <td>CDAF_REGISTRY_TOKEN</td>
+          <td>Registry authentication token</td>
+      </tr>
+  </tbody>
+</table>
+<p>These properties are used to push the image created by dockerPush to push to a private registry. These can be overriden by <a href="/90-reference/20-feature-configuration/30-environment-variables/index.html">Environment Variables</a>.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_URL</td>
+          <td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_TAG</td>
+          <td>Image tag(s), can be a single value <code>latest</code> (default) or space separated list, e.g. <code>latest ${BUILDNUMBER}</code></td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_USER</td>
+          <td>Registry user, example registryuser (if not set, default is &lsquo;.&rsquo;)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_TOKEN</td>
+          <td>Registry authentication token</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="git-clean-up-properties">Git Clean-up Properties<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>To clean-up Git branches and docker images, the following properties are used.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>gitRemoteURL</td>
+          <td><code>https://gitserver.local/mysolution.git</code></td>
+      </tr>
+      <tr>
+          <td>gitUserNameEnvVar</td>
+          <td>gituser</td>
+      </tr>
+      <tr>
+          <td>gitUserPassEnvVar</td>
+          <td>secret-pat</td>
+      </tr>
+      <tr>
+          <td>gitCustomCleanup</td>
+          <td>&amp; $AUTOMATIONROOT/buildandpackage/clean.ps1 or $AUTOMATIONROOT/buildandpackage/clean.sh</td>
+      </tr>
+  </tbody>
+</table>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="extended-processes">Extended Processes</h1>
+
+<h2 id="hahahugoshortcode107s0hbhb">Extended Processes<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="optional-build-processes">Optional Build Processes<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>By placing these files in your solution root, the processes will execute as described</p>
+<table>
+  <thead>
+      <tr>
+          <th>File Name</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>prebuild.tsk</td>
+          <td>Execute after Configuration Management processing, but before any build tasks</td>
+      </tr>
+      <tr>
+          <td>postbuild.tsk</td>
+          <td>Execute after solution and project level build tasks are complete</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="optional-package-processes">Optional Package Processes<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>By placing these files in your solution root, the processes will execute as described</p>
+<table>
+  <thead>
+      <tr>
+          <th>File Name</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>package.tsk</td>
+          <td>Execute after package workspace has been cleaned</td>
+      </tr>
+      <tr>
+          <td>wrap.tsk</td>
+          <td>Execute after package but prior to creating self-extracting release</td>
+      </tr>
+  </tbody>
+</table>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="feature-branch-execution">Feature Branch Execution</h1>
+
+<h2 id="hahahugoshortcode108s0hbhb">Feature Branch Execution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Place feature-branch.properties in your SOLUTIONROOT to allow dynamic delivery execution, based on Git Branch name. This capability is limited to entry.sh/entry.bat/entry.ps1, which are Git aware, and the recommended loose coupling entry scripts for CDAF.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Separate environments for features and bugs
+feature=DEV1
+bugfix=DEV2
+
+# Hotfixes deploy to all environments
+hotfix=DEV1
+hotfix=DEV2</code></pre></div>
+<p>See CDAF Samples for complete implementations in <a href="https://github.com/cdaf/linux/tree/master/samples/feature-branch-environments" rel="external">Linux</a> and <a href="https://github.com/cdaf/windows/tree/master/samples/feature-branch-environments" rel="external">Windows</a>.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="sensitive-data-strategies">Sensitive Data Strategies</h1>
+
+<h2 id="hahahugoshortcode109s0hbhb">Sensitive Data Strategies<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="loose-coupling">Loose Coupling<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>A key approach to support the principle of automation execution in a local desktop context, is the use of environment variables. It&rsquo;s important to remember that environment variables do not necessarily need to be persisted, i.e. stored unencrypted on disk, it&rsquo;s the global availability of the variable that makes it an environment variable.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context  target  databaseFQDN        dBpassword
+local    TEST    db1.nonprod.local   $DB1_PASSWORD
+local    UAT     db2.nonprod.local   $DB2_PASSWORD
+local    PROD    cluster.prod.local  $PRD_PASSWORD</code></pre></div>
+<h3 id="variable-expansion">Variable Expansion<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Variables can be referenced in preoperties files (see [Configuration Management][mydoc_basics_configuration_management]) or CDAF.solution file and then expanded at deploy time into variables or files using ASSIGN, PROPLD or DETOKN in the <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">execution engine</a>.</p>
+<h3 id="encrypted-files">Encrypted Files<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>This approach is to allow secrets in a file to be stored in source control. Encryption key for Windows is an EAS key, while for Linux it&rsquo;s a GPG key. This approach is used when there are a large number of secrets to cater for, and therefore only the key needs to be managed as a secret.</p>
+<p>In early generations of secret management, the secrets would be stored as persistent environment variables, however all modern toolsets provide an encrypted store which can load secrets as environment variables.</p>
+<p>See the DECRYP &amp; DETOKN operations in the <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">execution engine</a> for guidance on usage.</p>
+<h3 id="cloud-storage-integration">Cloud Storage Integration<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Toolset providers who also supply public cloud provide integration to their secret storage offerings, while these can be convenient, this does couple your automation to toolset and makes the execution of locally challenging.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="legacy-features">Legacy Features</h1>
+
+<h2 id="hahahugoshortcode110s0hbhb">Legacy Features<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="remote-deployment">Remote Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Machine to machine deployments are increasingly uncommon, as local agents/runners are readily available, making on-premise deployments from the build server an infrequent use case. While there is no plan to deprecate this capability, it&rsquo;s complexity makes local testing i.e. shift-left complicated, especially in windows. For CDAF configuration, see <a href="/10-cdaf/10-getting-started/70-remote-tasks/index.html">Remote Tasks</a>.</p>
+<h4 id="windows-remote-powershell">Windows Remote PowerShell<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>This approach uses the local host for both target (CD) and build (CI) execution. Provision the host with both roles</p>
+<pre><code>.\automation\provisioning\mkdir.ps1 C:\deploy
+.\automation\provisioning\CredSSP.ps1 server
+
+.\automation\provisioning\trustedHosts.ps1 *
+.\automation\provisioning\CredSSP.ps1 client
+</code></pre>
+<h4 id="linux-ssh">Linux SSH<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Generate PKI key and public certificate, and perform a loop-back connection to local host to place the public certificate in the authorised hosts configuration.</p>
+<pre><code>.\automation\provisioning\agent.sh deployer@localhost
+</code></pre>
+<h3 id="symetric-encryption">Symetric Encryption<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>With the implementation of 12-Factor applications, secret management in files is less common, and the storage of encrypted files in source control for subsequent decryption is now uncommon. While this capability is not planned for deprecation, it is recommended to use <a href="/90-reference/20-feature-configuration/70-sensitive-data-strategies/index.html">sensitive data strategies</a> instead.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="variable-validation">Variable Validation</h1>
+
+<h2 id="hahahugoshortcode111s0hbhb">Variable Validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>There are 5 rules available, two for plain text and three for secrets. When validating a secret against a known MD5 value, either a literal or variable can be supplied. See <code>VARCHK</code> in the <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">execution engine operations</a></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Plain text values
+OPT_ARG                                # Optional plain text
+terraform_version=required             # Required plain text
+
+# Secret values
+TERRAFORM_TOKEN=optional               # Optional secret
+TERRAFORM_TOKEN=secret                 # Required secret
+TERRAFORM_TOKEN=$TERRAFORM_TOKEN_MASK  # Required secret verified against supplied SHA-256 value</code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="docker-features">Docker Features</h1>
+
+<h2 id="hahahugoshortcode61s0hbhb">Container Exploitation and Image Building<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>These features provide opinionated wrappers for using docker to perform the following:</p>
+<ul>
+<li><strong>containerBuild</strong> : to execute build processes in a pre-provisioned, or custom provisioned container</li>
+<li><strong>imageBuild</strong> : to create images for publication</li>
+<li><strong>containerDeploy</strong> : to execute deployment processes in a pre-provisioned, or custom provisioned container</li>
+</ul>
+<p>Pre-provisioned images are available in <a href="https://hub.docker.com/r/cdaf" rel="external">DockerHub</a>.</p>
+<ul>
+<li>
+<h2 id="containerbuild"><a href="/90-reference/30-docker-features/10-configuration-mapping/index.html">containerBuild</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>containerBuild</p>
+</li>
+<li>
+<h2 id="containerbuild-1"><a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>containerBuild</p>
+</li>
+<li>
+<h2 id="imagebuild"><a href="/90-reference/30-docker-features/30-image-build/index.html">imageBuild</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>imageBuild</p>
+</li>
+<li>
+<h2 id="containerdeploy"><a href="/90-reference/30-docker-features/40-container-deploy/index.html">containerDeploy</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>containerDeploy</p>
+</li>
+<li>
+<h2 id="dockerpush"><a href="/90-reference/30-docker-features/50-docker-push/index.html">dockerPush</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>dockerPush
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Docker Features</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="containerbuild">containerBuild</h1>
+
+<h2 id="hahahugoshortcode68s0hbhb">containerBuild<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Some CI/CD pipeline toolsets support native capability (GitLab, BitBucket) to execute with a container. In other some cases, (CircleCI, Travis) all pipeline activity can only be executed within containers.</p>
+<p>For toolsets which do not support this functionality, but do allow for self-hosted agents or where a self-hosted agent is preferred/mandated i.e. execution within a private network, the CDAF container helpers can provide consistency for construction, execution and housekeeping.</p>
+<p>Even with a toolset uses containers, if they support docker-in-docker, the CDAF container helpers can still be utilised.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="containerbuild">containerBuild</h1>
+
+<h2 id="hahahugoshortcode71s0hbhb">containerBuild<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="master-of-build-success">Master of Build Success<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The containerBuild option allows the execution of the build process from within a container. Unlike toolsets which reference a image that is used to create the build container, CDAF uses a Dockerfile, for the following advantages:</p>
+<ul>
+<li>Build Prerequisites can be defined in code, without being limited to available published images</li>
+<li>Once constructed the image image cache provides improved performance, without having to use a image registry</li>
+<li>Working directory and user home directory are volume mounted, to allow caching of build dependencies, e.g. Maven, node_modules</li>
+</ul>
+<h3 id="container-build-configuration">Container Build Configuration<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>To execute the build within a container, add the containerBuild definition and containerImage to <strong>CDAF.solution</strong>. Note: complete definitions are provided in the GitHub samples for <a href="https://github.com/cdaf/windows/tree/master/samples/containerBuild" rel="external">Windows</a> and <a href="https://github.com/cdaf/linux/tree/master/samples/containerBuild" rel="external">Linux</a>.</p>
+<blockquote>
+<p>The following samples have the default process commented out, and can be used to define a custom process.</p>
+</blockquote>
+<h4 id="windows">Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<pre><code>containerImage=cdaf/windows
+# containerBuild=&amp; ${AUTOMATIONROOT}/processor/containerBuild.ps1 $SOLUTION $BUILDNUMBER $REVISION $ACTION
+</code></pre>
+<h4 id="linux">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<pre><code>containerImage=cdaf/linux
+# containerBuild=$AUTOMATIONROOT/processor/containerBuild.sh $SOLUTION $BUILDNUMBER $REVISION $ACTION
+</code></pre>
+<h4 id="build-time-variables">Build Time Variables<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>To supply variables to the build process, prefix with <code>CDAF_CB_</code> (see <a href="/90-reference/20-feature-configuration/30-environment-variables/index.html">CDAF Environment Variables</a>) and the variables will be mapped into the build container.</p>
+<blockquote>
+<p>See GitHub samples for <a href="https://github.com/cdaf/windows/tree/master/samples/containerBuild" rel="external">Windows</a> and <a href="https://github.com/cdaf/linux/tree/master/samples/containerBuild" rel="external">Linux</a> for dockerfile and additional properties.</p>
+</blockquote>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="imagebuild">imageBuild</h1>
+
+<h3 id="hahahugoshortcode74s0hbhb">imageBuild<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>This helper script supports the creation of docker images, and conditionally, the pushing of that image to a registry.</p>
+<h4 id="container-build-configuration">Container Build Configuration<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>To execute, define the buildImage definition. Note: complete definitions are provided in the GitHub samples for <a href="https://github.com/cdaf/windows/tree/master/samples/imageBuild" rel="external">Windows</a> and <a href="https://github.com/cdaf/linux/tree/master/samples/imageBuild" rel="external">Linux</a>.</p>
+<p>The following samples have the default process commented out, and can be used to define a custom process.</p>
+<h4 id="windows">Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>buildImage=cdaf/windows
+# imageBuild=&amp; &#34;$AUTOMATIONROOT/remote/imageBuild.ps1&#34; ${SOLUTION}_${REVISION} ${BUILDNUMBER}</code></pre></div>
+<h4 id="linux">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>buildImage=cdaf/linux
+# imageBuild=&#34;$AUTOMATIONROOT/remote/imageBuild.sh&#34; ${SOLUTION}_${REVISION} ${BUILDNUMBER}</code></pre></div>
+<h3 id="immutable-deploy-in-construction">Immutable Deploy in Construction<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>If a custom docker file is not supplied, the default dockerfile will execute the IMMUTABLE release in the image construction process.</p>
+<h3 id="registry-push">Registry Push<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>To include a push to a registry, add the following to <strong>CDAF.solution</strong> for DockerHub</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>CDAF_REGISTRY_URL=DOCKER-HUB
+CDAF_REGISTRY_TAG=repo/${SOLUTION}:$BUILDNUMBER
+CDAF_REGISTRY_USER=pat
+CDAF_REGISTRY_TOKEN=${ACCESS_TOKEN}</code></pre></div>
+<p>Or for another registry provider or a self-hosted registry</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>CDAF_REGISTRY_URL=myregistry.io/repo
+CDAF_REGISTRY_TAG=${CDAF_REGISTRY_URL}/${SOLUTION}:$BUILDNUMBER
+CDAF_REGISTRY_USER=pat
+CDAF_REGISTRY_TOKEN=${ACCESS_TOKEN}</code></pre></div>
+<h3 id="custom-image--process">Custom Image &amp; Process<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>For samples of more complex usage see the GitHub samples for <a href="https://github.com/cdaf/windows/tree/master/samples/imageBuild-custom-image" rel="external">Windows</a> and <a href="https://github.com/cdaf/linux/tree/master/samples/imageBuild-custom-image" rel="external">Linux</a> dockerfile and additional properties.</p>
+<h3 id="stand-alone-usage">Stand-alone Usage<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The imageBuild script is used for docker-compose stand-up/tear-down process, for complete samples see <a href="https://github.com/cdaf/windows/tree/master/samples/targetlessCD" rel="external">Windows</a> and <a href="https://github.com/cdaf/linux/tree/master/samples/targetlessCD" rel="external">Linux</a>.</p>
+<p>The following parameters must be passed</p>
+<ul>
+<li><strong>Unique ID</strong> : normally <code>&quot;${SOLUTION}_${REVISION}&quot;</code></li>
+<li><strong>Sequential Number</strong> : normally <code>&quot;${BUILDNUMBER}&quot;</code></li>
+<li><strong>Base Image</strong> : any valid image, e.g. <code>cdaf/linux</code> or <code>cdaf/windows</code></li>
+</ul>
+<p>Optional parameters</p>
+<ul>
+<li><strong>Context</strong> : if supplied, only the named directory is built, if ommited, all directories are built.</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="containerdeploy">containerDeploy</h1>
+
+<h2 id="hahahugoshortcode78s0hbhb">containerDeploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Like <a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a>, containerDeploy provides both image build and container task execution. The common use for container deploy where a command line interface is required.</p>
+<h3 id="master-of-deployment-success">Master of Deployment Success<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The containerDeploy option allows the execution of the deploy process from within a container. Unlike toolsets which reference a image that is used to create the deploy container, CDAF uses a Dockerfile, for the following advantages:</p>
+<ul>
+<li>Deploy Prerequisites can be defined in code, without being limited to available published images</li>
+<li>Once constructed the image image cache provides improved performance, without having to use a image registry</li>
+</ul>
+<h3 id="container-deploy-configuration">Container Deploy Configuration<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>To execute the deploy within a container, add the containerDeploy definition and runtimeImage (if not supplied, containerImage will be used) to <strong>CDAF.solution</strong>. Note: complete definitions are provided in the GitHub samples for <a href="https://github.com/cdaf/windows/tree/master/samples/containerDeploy" rel="external">Windows</a> and <a href="https://github.com/cdaf/linux/tree/master/samples/containerDeploy" rel="external">Linux</a>.</p>
+<blockquote>
+<p>The following samples have the default process commented out, and can be used to define a custom process.</p>
+</blockquote>
+<h4 id="windows">Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>runtimeImage=cdaf/windows
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># containerDeploy=&amp; ${WORK_DIR_DEFAULT}/containerDeploy.ps1 &#34;${TARGET}&#34; &#34;${RELEASE}&#34; &#34;${SOLUTION}&#34; &#34;${BUILDNUMBER}&#34; &#34;${REVISION}&#34; -imageDir cli</span></span></span></code></pre></div>
+<h4 id="linux">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>containerImage<span style="color:#f92672">=</span>cdaf/linux
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># containerDeploy=${WORK_DIR_DEFAULT}/containerDeploy.sh &#34;${TARGET}&#34; &#34;${RELEASE}&#34; &#34;${SOLUTION}&#34; &#34;${BUILDNUMBER}&#34; &#34;${REVISION}&#34; cli</span></span></span></code></pre></div>
+<h4 id="deploy-time-variables">Deploy Time Variables<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>To supply variables to the build process, prefix with <em>CDAF_CD_</em> (see <a href="/90-reference/20-feature-configuration/30-environment-variables/index.html">CDAF Environment Variables</a>) and the variables will be mapped into the build container.</p>
+<blockquote>
+<p>See GitHub samples for <a href="https://github.com/cdaf/windows/tree/master/samples/containerDeploy" rel="external">Windows</a> and <a href="https://github.com/cdaf/linux/tree/master/samples/containerDeploy" rel="external">Linux</a> for dockerfile and additional properties.</p>
+</blockquote>
+<h3 id="custom-image">Custom Image<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The default directory used for container deploy is <em>containerDeploy</em>, if this is not found, the default <code>Dockerfile</code> is used, with the default runtime files. If you have your own <code>Dockerfile</code> in <em>containerDeploy</em>, or a custom directory specified in <code>CDAF.solution</code> <em>containerDeploy</em> property, then that will be used.</p>
+<h3 id="runtime-files">Runtime Files<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The release.sh file is included in the default image, however, if using a default image, this needs to be explicitly defined in <code>CDAF.solution</code> <em>runtimeFiles</em> property. This can be a space separated list of files.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>runtimeFiles=$WORKSPACE_ROOT/release.sh</code></pre></div>
+<h3 id="runtime-retain">Runtime Retain<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>To skip image clean-up, set <code>CDAF.solution</code> <em>runtimeRetain</em> property.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>runtimeRetain=yes</code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="dockerpush">dockerPush</h1>
+
+<h2 id="hahahugoshortcode83s0hbhb">dockerPush<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Using the same logic after <a href="/90-reference/30-docker-features/30-image-build/index.html">imageBuild</a>, this utility script provides simple login and push logic.</p>
+<p>The script can be called passing arguments</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>./dockerPush.ps1 $TARGET_TAG cdaf/${SOLUTION} &#34;${artifactPrefix}.${BUILDNUMBER} latest&#34; $DOCKERHUB_TOKEN cdaf</code></pre></div>
+<p>This example uses an environment variable (complete list follows) to set the URL. The registry in this example does not require authentication.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>export CDAF_PUSH_REGISTRY_URL=hub.private.registry
+./dockerPush.sh ${SOLUTION}_master_target:${BUILDNUMBER} ${SOLUTION} ${BUILDNUMBER}</code></pre></div>
+<p>Available environment variables</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_URL</td>
+          <td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_TAG</td>
+          <td>Image tag(s), can being single value <code>latest</code> or list <code>latest ${BUILDNUMBER}</code> (default is <code>latest</code>)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_USER</td>
+          <td>Registry user, example registryuser (if not set, default is &lsquo;.&rsquo;)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_TOKEN</td>
+          <td>Registry token, example xyzx9234sxsrwcqw34</td>
+      </tr>
+  </tbody>
+</table>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/js/js-yaml/js-yaml.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-color.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1774678533" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1774678533" defer></script>
+    <script>
+      window.relearn.themeUseMermaid = JSON.parse("{}");
+    </script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774678533" defer></script>
+    <script src="/js/theme.min.js?1774678533" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

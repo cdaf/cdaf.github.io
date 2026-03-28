@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.157.0">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Imperative Build, Declarative Deployment">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Autonomous Development :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Imperative Build, Declarative Deployment">
+    <meta property="og:url" content="https://cdaf.io/70-authoritative-release/10-autonomous-development/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Autonomous Development :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Imperative Build, Declarative Deployment">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Autonomous Development :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Imperative Build, Declarative Deployment">
+    <meta itemprop="wordCount" content="396">
+    <title>Autonomous Development :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/70-authoritative-release/10-autonomous-development/index.html" rel="canonical" type="text/html" title="Autonomous Development :: Concepts &amp; Applied Examples">
+    <link href="/70-authoritative-release/10-autonomous-development/index.xml" rel="alternate" type="application/rss+xml" title="Autonomous Development :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1774678533" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774678533" defer></script>
+    <script src="/js/search-lunr.min.js?1774678533" defer></script>
+    <script src="/js/search.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1774678533";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774678533" rel="stylesheet">
+    <link href="/css/theme.min.css?1774678533" rel="stylesheet">
+    <link href="/css/format-print.min.css?1774678533" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/70-authoritative-release\/10-autonomous-development\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/70-authoritative-release/10-autonomous-development/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/70-authoritative-release/index.html"><span itemprop="name">Declarative Release</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Autonomous Development</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/10-autonomous-development/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/index.html" title="Declarative Release (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html" title="Authoritative Release (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 70-authoritative-release" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="autonomous-development">Autonomous Development</h1>
+
+<p>The examples provided in this section are based on the motivations of <a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external">Autonomous Development, Authoritative Release</a>.</p>
+<h2 id="hahahugoshortcode34s0hbhb">Imperative Build, Declarative Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Creating an artefact for compiled languages is well understood, and is an integral part of software delivery for languages such as .NET, Java and Typescript, however, for interpretive languages (Python, Ruby, PHP, Javascript), because the code in source control can be run without a &ldquo;build&rdquo;, it is tempting to deploy from source control. This has the following challenges:</p>
+<ul>
+<li>Fulfilling dependencies in production environment, can have network issues and, even with lock files, can result is different runtime outcomes.</li>
+<li>Manual steps are required as branches are used to separate environments, e.g. test, staging, production. Which requires deploy-time developer effort and can lead to errors, i.e. untested code being merged into production.</li>
+</ul>
+<h3 id="package--publish">Package &amp; Publish<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Resolving dependencies at build time, adding any other runtime components and creating an immutable package for deployment can be achieved using the CDAF technology agnostic package mechanism. The &ldquo;build&rdquo; artefact completes the development teams Continuous Integration (CI) stage.</p>
+<p>The Continuous Delivery (CD) would be limited to automated testing of the package, and then publication. Publication can be to a Container Registry, Package Registry (Nexus, Artifactory, Azure DevOps, GitLab, GitHub, etc.) or a proprietary asset registry such as Octopus Deploy or Mulesoft AnyPoint Exchange. The following example uses a Container Registry.</p>
+<p>The following overview has two examples, one using the CDAF release package with automated testing, and one performing direct image build and push.</p>
+<ul>
+<li>
+<p>PiP resolves Python dependencies, and gathers these, along with helper scripts, to produce a release package. The release package is then used to construct a runtime image, which in turn is smoke tested using docker-compose. The tested image is then pushed to the registry.</p>
+</li>
+<li>
+<p>NPM resolves NodeJS dependencies, builds an image and pushes it to the registry.</p>
+</li>
+</ul>
+<pre class="mermaid actionbar-wrapper align-center ">
+graph LR
+
+  subgraph python[&#34;Python&#34;]
+    python-git[(Git)]
+    python-build-artefact[(Build)]
+    python-release.ps1
+    subgraph docker-compose
+      image-container
+      test-container
+    end
+    push
+  end
+
+  subgraph node[&#34;NodeJS&#34;]
+    node-git[(Git)]
+    node-build
+    node-push[&#34;push&#34;]
+  end
+
+  registry[(Docker Registry)]
+
+  python-git -- &#34;CI (PiP)&#34; --&gt;
+  python-build-artefact -- &#34;CD&#34; --&gt; 
+  python-release.ps1 --&gt;
+  image-container --&gt;
+  push --&gt; registry
+  test-container -. &#34;smoke test&#34; .-&gt; image-container
+
+  node-git -- &#34;CI (NPM)&#34; --&gt;
+  node-build --&gt;
+  node-push --&gt; registry
+
+classDef dashed stroke-dasharray: 5, 5
+class python,node dashed
+
+classDef dotted stroke-dasharray: 2, 2
+class docker-compose dotted
+
+classDef blue fill:#007FFF
+class registry blue
+</pre>
+<blockquote>
+<p>Note: the Python <code>release.ps1</code> is an intermediary artefact, and not used to deploy to the runtime environments.</p>
+</blockquote>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Autonomous Development</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="authoritative-release">Authoritative Release</h1>
+
+<h2 id="hahahugoshortcode47s0hbhb">Declarative Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>A declarative deployment ensures all components are <em>Released</em> in a predictable way, with the assurance the same combination of component versions that were tested align with what is released.</p>
+<h3 id="release-manifest">Release Manifest<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The release contains a manifest of components and their version. This is the release <em>declaration</em>. The deployment is responsible for ensuring these components are applied at as declared at each promotion stage, e.g. test, staging, production. In the flow below, the release is <em>continuously deployed</em> through to staging, but <em>continuously deployed</em>, i.e. gated, to production.</p>
+<p>For each deployment, the same image is used to create the running container.</p>
+<pre class="mermaid actionbar-wrapper align-center ">
+flowchart LR
+  registry[(Docker Registry)]
+
+  subgraph test
+    p1[&#34;Python v0.2.135&#34;] ~~~
+    n1[&#34;NodeJS v1.0.3&#34;]
+  end
+
+  subgraph staging
+    p2[&#34;Python v0.2.135&#34;] ~~~
+    n2[&#34;NodeJS v1.0.3&#34;]
+  end
+
+  subgraph production
+    p3[&#34;Python v0.2.135&#34;] ~~~
+    n3[&#34;NodeJS v1.0.3&#34;]
+  end
+
+  test -- &#34;auto promote&#34; --&gt; staging
+  staging -- &#34;gated promote&#34; --&gt; production
+
+  registry --&gt; test
+  registry --&gt; staging
+  registry --&gt; production
+
+classDef blue fill:#007FFF
+class registry blue
+</pre>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/js/js-yaml/js-yaml.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-color.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1774678533" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1774678533" defer></script>
+    <script>
+      window.relearn.themeUseMermaid = JSON.parse("{}");
+    </script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774678533" defer></script>
+    <script src="/js/theme.min.js?1774678533" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

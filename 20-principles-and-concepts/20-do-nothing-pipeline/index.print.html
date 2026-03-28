@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.157.0">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Entering Sprint-0">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Do Nothing Pipeline :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Entering Sprint-0">
+    <meta property="og:url" content="https://cdaf.io/20-principles-and-concepts/20-do-nothing-pipeline/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Do Nothing Pipeline :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Entering Sprint-0">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Do Nothing Pipeline :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Entering Sprint-0">
+    <meta itemprop="wordCount" content="321">
+    <title>Do Nothing Pipeline :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/20-principles-and-concepts/20-do-nothing-pipeline/index.html" rel="canonical" type="text/html" title="Do Nothing Pipeline :: Concepts &amp; Applied Examples">
+    <link href="/20-principles-and-concepts/20-do-nothing-pipeline/index.xml" rel="alternate" type="application/rss+xml" title="Do Nothing Pipeline :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1774678533" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774678533" defer></script>
+    <script src="/js/search-lunr.min.js?1774678533" defer></script>
+    <script src="/js/search.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1774678533";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774678533" rel="stylesheet">
+    <link href="/css/theme.min.css?1774678533" rel="stylesheet">
+    <link href="/css/format-print.min.css?1774678533" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/20-principles-and-concepts\/20-do-nothing-pipeline\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/20-principles-and-concepts/20-do-nothing-pipeline/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#what-is-sprint-0">What is Sprint-0</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/20-principles-and-concepts/index.html"><span itemprop="name">Principles and Concepts</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Do Nothing Pipeline</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles-and-concepts/20-do-nothing-pipeline/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles-and-concepts/10-loose-coupling/index.html" title="Loose Coupling (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles-and-concepts/30-feedback-loop/index.html" title="Realising the Feedback Loop (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 20-principles-and-concepts" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="do-nothing-pipeline">Do Nothing Pipeline</h1>
+
+<p><a href="#R-image-5856a334798a70ed8288e0934ee624c0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/AdobeStock_379012841.jpeg" style="height: auto;width: auto;" title="Do Nothing Pipeline"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5856a334798a70ed8288e0934ee624c0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/AdobeStock_379012841.jpeg" title="Do Nothing Pipeline"></a></p>
+<p>To embed automation into the feature development lifecycle, a pipeline should exist at the earliest possible time, configured to initially &ldquo;do nothing&rdquo; at deploy time.</p>
+<h4 id="enough-to-make-it-run">Enough to make it run<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>A key principle of the Continuous Delivery Automation Framework (CDAF) is loose coupling. The intention is that the same automation that will be performed by the pipeline, can be developed and tested on the local workstation. Once the minimum automation is available, then the pipeline should be created.</p>
+<h4 id="do-nothing-pipeline">Do-Nothing Pipeline<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Ensure the pipeline runs successfully through all stages, e.g. if you have, test, staging and production stages, execute a do-nothing process in each to ensure the basic wiring of your pipeline is sound.</p>
+<h4 id="fail-successfully">Fail Successfully<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Intentionally push a change which causes the pipeline to fail, to ensure contributors can be confident that the pipeline is not giving false positives.</p>
+<h4 id="what-does-it-look-like">What Does It look Like<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Based on the <a href="/10-cdaf/10-getting-started/10-ci/index.html">seeded solution getting started guide</a> or using the CDAF samples for <a href="https://github.com/cdaf/linux/tree/master/samples/minimal" rel="external">Linux</a> or <a href="https://github.com/cdaf/windows/tree/master/samples/minimal" rel="external">Windows</a>, an operational pipeline can be created quickly.</p>
+<p><a href="https://docs.cdaf.io/mydoc_install_pipeline.html" rel="external"><a href="#R-image-0a25269134f131639e23905b1d55ed85" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/do-nothing-deploy.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a25269134f131639e23905b1d55ed85"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/do-nothing-deploy.png"></a></a></p>
+<h3 id="what-is-sprint-0">What is Sprint-0<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>A do nothing pipeline ensures an automation-first approach, with early detection of build failures, however, this can be taken further. Making your first deployed environment <strong>Production</strong>!</p>
+<p>Typically pipelines deploy to the development or test environments first, and eventually progress to <em>production</em>; discovering issues later in the software development lifecycle (SDCL). To realise a fail-fast approach, deploy <em>nothing</em> to production first. By nothing, the absolute bare minimum is the objective, typically something that displays the build number. This allows test teams to verify they are working with the correct build, and importantly, proving the delivery pipeline immediately.</p>
+<p>The <em>production</em> environment can be scaled down as the proving ground for the solution architecture. Only when concurrency is required in your SDLC, should non-production environments be instantiated, based on your production environment, ideally via automation. See <a href="/80-release-train/index.html">release train</a> for an elaboration of how to combine automation of infrastructure, configuration management and software delivery.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774678533" defer></script>
+    <script src="/js/theme.min.js?1774678533" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

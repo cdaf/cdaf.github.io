@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.157.0">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Getting Started">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Getting Started :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Getting Started">
+    <meta property="og:url" content="https://cdaf.io/10-cdaf/10-getting-started/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Getting Started :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Getting Started">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Getting Started :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Getting Started">
+    <meta itemprop="wordCount" content="59">
+    <title>Getting Started :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/10-cdaf/10-getting-started/index.html" rel="canonical" type="text/html" title="Getting Started :: Concepts &amp; Applied Examples">
+    <link href="/10-cdaf/10-getting-started/index.xml" rel="alternate" type="application/rss+xml" title="Getting Started :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1774678533" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774678533" defer></script>
+    <script src="/js/search-lunr.min.js?1774678533" defer></script>
+    <script src="/js/search.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1774678533";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774678533" rel="stylesheet">
+    <link href="/css/theme.min.css?1774678533" rel="stylesheet">
+    <link href="/css/format-print.min.css?1774678533" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/10-cdaf\/10-getting-started\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/10-cdaf/10-getting-started/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#hahahugoshortcode4s0hbhb">HAHAHUGOSHORTCODE4s0HBHB</a></li>
+    <li><a href="#seed-solution">Seed Solution</a></li>
+    <li><a href="#pipeline">Pipeline</a></li>
+    <li><a href="#build">Build</a></li>
+    <li><a href="#package">Package</a></li>
+    <li><a href="#continuous-delivery">Continuous Delivery</a></li>
+    <li><a href="#local-deployment-tasks">Local Deployment Tasks</a></li>
+    <li><a href="#remote-deployment-tasks">Remote Deployment Tasks</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/10-cdaf/index.html"><span itemprop="name">CDAF</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Getting Started</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/10-cdaf/10-getting-started/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/10-cdaf/index.html" title="CDAF (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/10-cdaf/10-getting-started/10-ci/index.html" title="Seed Solution (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 10-cdaf" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="getting-started">Getting Started</h1>
+
+<h2 id="hahahugoshortcode4s0hbhb">Getting Started<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The follow guidance is language independent, i.e. does not require a development environment, and simply uses scripts to reflect a deliverable.</p>
+<ul>
+<li>
+<h2 id="seed-solution"><a href="/10-cdaf/10-getting-started/10-ci/index.html">Seed Solution</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Create a Release Package</p>
+</li>
+<li>
+<h2 id="pipeline"><a href="/10-cdaf/10-getting-started/20-pipeline/index.html">Pipeline</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Pipeline Orchestration and Capabilities</p>
+</li>
+<li>
+<h2 id="build"><a href="/10-cdaf/10-getting-started/30-ci/index.html">Build</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Continuous Integration</p>
+</li>
+<li>
+<h2 id="package"><a href="/10-cdaf/10-getting-started/40-package/index.html">Package</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Build-Once/Deploy-Many</p>
+</li>
+<li>
+<h2 id="continuous-delivery"><a href="/10-cdaf/10-getting-started/50-cd/index.html">Continuous Delivery</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Configuration Management and Automated Deployment</p>
+</li>
+<li>
+<h2 id="local-deployment-tasks"><a href="/10-cdaf/10-getting-started/60-local-tasks/index.html">Local Deployment Tasks</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Local Tasks</p>
+</li>
+<li>
+<h2 id="remote-deployment-tasks"><a href="/10-cdaf/10-getting-started/70-remote-tasks/index.html">Remote Deployment Tasks</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Remote Tasks
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Getting Started</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="seed-solution">Seed Solution</h1>
+
+<p>Continuous Integration (CI) is a critical prerequisite of Continuous Delivery/Deployment (CD).</p>
+<h2 id="hahahugoshortcode26s0hbhb">Create a Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>To allow the execution of the build and package (CI) process on the DevOps Engineers machine, CDAF is used for both loose coupling and standardisation. CDAF provides a variety of features which provide consistency, especially important and the number of pipelines grow and the team members move between both squads and value streams.</p>
+<h3 id="install-on-windows">Install on Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>To install to current directory, recommend placing in your home directory, or download latest <a href="/static/app/downloads/WU-CDAF.zip">zip</a>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>. { iwr -useb https<span style="color:#960050;background-color:#1e0010">:</span>//cdaf.io/static/app/downloads/cdaf.ps1 } | iex
+</span></span><span style="display:flex;"><span>.\automation\provisioning\addPath.ps1 <span style="color:#e6db74">&#34;</span>$(pwd)<span style="color:#e6db74">\automation&#34;</span></span></span></code></pre></div>
+<p>Exit your session and re-open to reload the path.</p>
+<h3 id="install-on-linux">Install on Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>To install for the local user, recommend placing in your home directory, or download latest <a href="/static/app/downloads/LU-CDAF.tar.gz">tarball</a> or <a href="/static/app/downloads/LU-CDAF.zip">zip</a>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -s https://cdaf.io/static/app/downloads/cdaf.sh | bash -
+</span></span><span style="display:flex;"><span>./automation/provisioning/addPath.sh <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>pwd<span style="color:#66d9ef">)</span><span style="color:#e6db74">/automation&#34;</span></span></span></code></pre></div>
+<p>Exit your session and re-open to reload the path.</p>
+<h2 id="entry-points">Entry Points<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>CDAF providers 4 entry scripts for different purposes.</p>
+<ul>
+<li><strong>ci</strong> : Build and Package only, i.e. Continuous Integration, mandatory argument is BUILDNUMBER</li>
+<li><strong>cd</strong> : Release, i.e. Continuous Delivery or Deploy (depending on gating or not), mandatory argument is ENVIRONMENT</li>
+<li><strong>cdEmulate</strong> : Executes <strong>ci</strong> and then <strong>cd</strong>, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT</li>
+<li><strong>entry</strong> : Executes <strong>ci</strong> and then <strong>cd</strong>, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT(s)</li>
+</ul>
+<h3 id="release-package-creation">Release Package Creation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>With the focus being delivery, not development, the creation of a consistent, self contained release package is a core CDAF feature used for both component delivery and <em>stand-up/tear-down</em> capabilities. The output of the CDAF CI processs is a single <code>release.ps1</code> file. See <a href="https://blog.cdaf.io/posts/2020-07-29-cdaf-self-extracting-release/" rel="external">Self-extracting release article</a>.</p>
+<h3 id="property-translation">Property Translation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The transformation process converts the human readable <code>.cm</code> files into computer friendly properties file for use in the CD process, i.e. <code>release.ps1</code>. See <a href="/10-cdaf/10-getting-started/50-cd/index.html">Configuration Management, tokenisation and detokenisation documentation</a>.</p>
+<p>A key principle of the Continuous Delivery Automation Framework is loose coupling. This gives the automation developer the  ability to run the automation process on their workstation, well before executing in the pipeline tooling. This principle should be retained where possible so that troubleshooting and feature development can be be bought closer to the developer.</p>
+<blockquote>
+<p>a loosely coupled solution can allow migrating from one pipeline tool to another with minimal effort.</p>
+</blockquote>
+<h3 id="seed-your-solution">Seed your solution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>To seed a new solution, the minimal requirement is a directory with a solution file CDAF.solution</p>
+<pre><code>mkdir .cdaf
+</code></pre>
+<h4 id="linux">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;solutionName=mycoolproduct&#34;</span> &gt; .cdaf/CDAF.solution
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;artifactPrefix=0.1&#34;</span> &gt;&gt; .cdaf/CDAF.solution</span></span></code></pre></div>
+<h4 id="windows">Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-Content .\.cdaf\CDAF.solution <span style="color:#e6db74">&#34;solutionName=mycoolproduct&#34;</span>
+</span></span><span style="display:flex;"><span>Add-Content .\.cdaf\CDAF.solution <span style="color:#e6db74">&#34;artifactPrefix=0.1&#34;</span></span></span></code></pre></div>
+<p>The minimum properties are the name of your solution, and the versioning prefix. The resulting artefact will have the build number appended to the release package, e.g. the first build will be 0.1.1, then 0.1.2 and so on.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#a6e22e">solutionName</span><span style="color:#f92672">=</span><span style="color:#e6db74">mycoolproduct</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">artifactPrefix</span><span style="color:#f92672">=</span><span style="color:#e6db74">0.1</span></span></span></code></pre></div>
+<h3 id="continuous-integration-ci">Continuous Integration (CI)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>With CDAF installed on your path, you can now test the solution by running the Continuous Integration entry point</p>
+<h4 id="linux-1">linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ci.sh</span></span></code></pre></div>
+<h4 id="windows-1">windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>ci</span></span></code></pre></div>
+<p>Many things will happen, however the key observation is that a file called release.sh for linux or release.ps1 for windows will be produced, this is the build artefact that can be consumed by the Continuous Delivery (CD) stages. See <a href="/10-cdaf/20-samples/10-ci/index.html">minimal sample</a> for an executed example.</p>
+<h2 id="shift-left--fail-fast">Shift-Left &amp; Fail-Fast<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Now that you have the bare minimum, apply it to your CI/CD toolset immediately. We want to have a green pipeline from the start to trap any problems we may introduce in subsequent steps.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="pipeline">Pipeline</h1>
+
+<p>CDAF provides a loose coupling for core CI &amp; CD objectives. The intention is that the CI &amp; CD processing is performed on the developers desktop, and then executed in the same way in the pipeline tool. By establishing a healthy pipeline as soon as possible, any pipeline failures can be quickly and incrementally identified. See <a href="/20-principles-and-concepts/20-do-nothing-pipeline/index.html">Entering Sprint-0</a> for elaboration.</p>
+<h2 id="hahahugoshortcode31s0hbhb">Pipeline Orchestration and Capabilities<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The CI process gathers files from source control, then uses the CDAF CI entry point to produce the release package. The pipeline tool then stores the release package for reuse in subsequent deploy processes.</p>
+<pre class="mermaid actionbar-wrapper align-center ">
+graph LR
+  subgraph CI
+    git[(&#34;Source Control&#34;)]
+    bp[&#34;Build &amp; Package&#34;]
+    registry[(&#34;Artefact Store&#34;)]
+  end
+  qa[&#34;✓ qa&#34;]
+  pp[&#34;✅ pp&#34;]
+  pr[&#34;✅ pr&#34;]
+
+  git --&gt;
+  bp --&gt;
+  registry --&gt;
+  qa --&gt;
+  pp --&gt;
+  pr
+
+classDef dashed stroke-dasharray: 2
+class CI dashed
+</pre>
+<blockquote>
+<p>After the CI process, the pipeline tool may perform additional value add processes that are not directly related to delivery, i.e. publishing test results or code coverage.</p>
+</blockquote>
+<p>The pipeline then retrieves the release package, and then triggers one or more deployments to promote a release to production. This is the CD process.</p>
+<pre class="mermaid actionbar-wrapper align-center ">
+graph LR
+  git[(&#34;Source Control&#34;)]
+  bp[&#34;Build &amp; Package&#34;]
+  subgraph CD
+    registry[(&#34;Artefact Store&#34;)]
+    qa[&#34;✓ qa&#34;]
+    pp[&#34;✅ pp&#34;]
+    pr[&#34;✅ pr&#34;]
+  end
+
+  git --&gt;
+  bp --&gt;
+  registry --&gt;
+  qa --&gt;
+  pp --&gt;
+  pr
+
+classDef dashed stroke-dasharray: 2
+class CD dashed
+</pre>
+<p>The triggering of each stage of the promotion can be immediate (indicated with ✓ in the diagram above) or require a manual approval (✅), but it is expected the deployment process itself is fully automated once it has been triggered.</p>
+<p>Using the seeded solution from the previous material, it is recommended that this is executed in your pipeline as a <em>do nothing</em> verification. See the orchestration examples in GitHub for guidance:</p>
+<ul>
+<li><a href="https://github.com/cdaf/windows/tree/master/orchestration" rel="external">Windows</a></li>
+<li><a href="https://github.com/cdaf/linux/tree/master/orchestration" rel="external">Linux</a></li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="build">Build</h1>
+
+<h2 id="hahahugoshortcode35s0hbhb">Continuous Integration<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Continuous Integration (CI) is the objective of bringing code branches together and building them to produce a consolidated artefact. This shift-left approach ensures the efforts of multiple contributors are combined and tested regularly. The testing within CI typically starts with unit testing, and that should be included in the build task. For some ecosystems this is an implicit or parameterised part of the build command, others, it’s separate command.</p>
+<h3 id="how-does-it-work">How does it work<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>CDAF will process all build.tsk files in the solution root, then all the build.tsk files found in one level of sub-directories.</p>
+<p>The build.tsk files are processed line by line, each line is logged and then executed, with errors and exceptions trapped and logged. In the case of linux the error processing is based on the exit code and standard error, while windows has a broader range of errors, such as halt and exception conditions.</p>
+<p>For this material, the build output is a simple script, for some language specific examples see:</p>
+<ul>
+<li><a href="/30-imperative-deployment/20-asp-net-web-deploy/index.html">ASP.NET Classic</a></li>
+<li><a href="/30-imperative-deployment/30-java-maven/index.html">Java</a></li>
+<li><a href="/30-imperative-deployment/40-static-content/index.html">React(static content)</a>.</li>
+</ul>
+<h3 id="extend-the-seeded-solution">Extend the Seeded Solution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Add a <code>build.tsk</code> file to the solution root</p>
+<h4 id="linux">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;echo \&#34;hash!/usr/bin/env bash\&#34; &gt; runtime.sh&#39;</span> &gt; build.tsk
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;echo \&#34;echo Deploy %integer%, property set to : %property%\&#34; &gt;&gt; runtime.sh&#39;</span> &gt;&gt; build.tsk
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;hash=$(printf \&#34;\\u0023\&#34;)&#39;</span> &gt;&gt; build.tsk
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;REPLAC runtime.sh hash $hash&#39;</span> &gt;&gt; build.tsk
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;REFRSH runtime.sh output&#39;</span> &gt;&gt; build.tsk
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;chmod +x output/runtime.sh&#39;</span> &gt;&gt; build.tsk</span></span></code></pre></div>
+<h4 id="windows">Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-Content build.tsk <span style="color:#e6db74">&#39;Set-Content runtime.ps1 &#34;Write-Host `&#34;Deploy %integer%, property set to : %property%`&#34;&#34;&#39;</span>
+</span></span><span style="display:flex;"><span>Add-Content build.tsk <span style="color:#e6db74">&#39;REFRSH runtime.ps1 output&#39;</span></span></span></code></pre></div>
+<h3 id="continuous-integration-ci">Continuous Integration (CI)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The <code>build.tsk</code> is a CI task so only need to execute</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ci.sh</span></span></code></pre></div>
+<p>or for windows</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>ci</span></span></code></pre></div>
+<p>The build process will now be triggered, this can be observed in the log build.tsk found in solution root, this will produce a directory called output, however, this will not be included in the release file, which will be covered in the next step.</p>
+<h2 id="package">Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Now that build artefact has been created, create a deployable package.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/12-factors/index.html">12-Factors</a></li>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="package">Package</h1>
+
+<h2 id="hahahugoshortcode39s0hbhb">Build-Once/Deploy-Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>An objective of Continuous Delivery is to have a predictable, repeatable, deployment process. A fundamental principle of CDAF to achieve this producing an immutable release package. This decouples the deployment process from the source management process. The release package is a self-contained deployment asset, and should be executable anywhere, i.e. on the automation developers desktop, within the pipeline or even manually file transferred to a remote server.</p>
+<h3 id="artefact-retention">Artefact Retention<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>In the Configuration Management step, a default release package was created which contained properties files. The following step defines the solution specific artefacts which need to be available at deploy time. These are typically compiled binaries, but can be any set of files and/or directories.</p>
+<p>Retain the output from the previous build task.</p>
+<h4 id="linux">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;output&#39;</span> &gt; .cdaf/storeForLocal</span></span></code></pre></div>
+<h4 id="windows">Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-Content .\.cdaf\storeForLocal <span style="color:#e6db74">&#39;output&#39;</span></span></span></code></pre></div>
+<h3 id="build--deploy">Build &amp; Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Use the continuous deployment emulation entry point.</p>
+<ul>
+<li><strong>cdEmulate</strong> : Executes <strong>ci</strong> and then <strong>cd</strong>, generates BUILDNUMBER if not supplied and uses configurable ENVIRONMENT</li>
+</ul>
+<h4 id="linux-1">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cdEmulate.sh</span></span></code></pre></div>
+<h4 id="windows-1">windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cdEmulate</span></span></code></pre></div>
+<p>Inspect the directory TasksLocal, and will now contain the output directory produced by the build task. Test the artefact</p>
+<h4 id="linux-2">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./TasksLocal/output/runtime.sh</span></span></code></pre></div>
+<h4 id="windows-2">windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>.\TasksLocal\output\runtime.ps1</span></span></code></pre></div>
+<p>This should output the following:</p>
+<p>Deploy %integer%, property set to : %property%</p>
+<h3 id="other-file-locations">Other File Locations<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>There are three artefact definitions file names, depending on context, local, remote or both:</p>
+<ul>
+<li><code>storeFor</code></li>
+<li><code>storeForLocal</code></li>
+<li><code>storeForRemote</code></li>
+</ul>
+<p>Other directories within your solution directory which will also be automatically included in the root of your deployment directory. Based on the suffix these will be placed in a local context, remote context or both. See the following sections for how these contexts differ.</p>
+<ul>
+<li><code>crypt</code></li>
+<li><code>cryptLocal</code></li>
+<li><code>cryptRemote</code></li>
+<li><code>custom</code></li>
+<li><code>customLocal</code></li>
+<li><code>customRemote</code></li>
+</ul>
+<p>An explanation of the local and container extensions will be explained in following sections.</p>
+<h2 id="continuous-deliverydeployment">Continuous Delivery/Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Deploy the artefact using the created package, along with Configuration Management.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="continuous-delivery">Continuous Delivery</h1>
+
+<p>Continuous Integration (CI) is a critical prerequisite of production-like <em>stand-up/tear-down</em>, i.e. if it can&rsquo;t be build on the engineers machine, it can&rsquo;t be deployed from the engineers machine.</p>
+<h2 id="hahahugoshortcode43s0hbhb">Configuration Management and Automated Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="configuration-management">Configuration Management<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>CDAF origin was to ensure consistent configuration of servers across environments, based on a source of truth. The partner construct to this approach is tokenisation, i.e. a way of abstracting environment variations away from the syntax of the consuming application.</p>
+<h4 id="tabular-properties">Tabular Properties<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>To provide a human readable, single pane-of-glass view of the multiple environment configurations, a tabular approach is used. An example of this follows. The first two columns, context and target are mandatory, all others can be any values needed for your solution.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context  target  property
+local    TEST    test.server.comain
+local    PROD    production.server.domain</code></pre></div>
+<blockquote>
+<p>Configuration Management files should never container sensitive data or secrets. These are supplied as variables, see more on sensitive data strategies.</p>
+</blockquote>
+<p>The configuration management tables can be any file name with .cm extension, in your solution root. All .cm files are processed prior to the build task in the CI process.</p>
+<h3 id="extend-the-seeded-solution">Extend the Seeded Solution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Based on the seeded solution, add a <code>properties.cm file</code> to the solution root.</p>
+<h4 id="linux">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;context  target  property               integer&#39;</span> &gt; .cdaf/properties.cm
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;local    LINUX   &#34;Local Context&#34;              1&#39;</span> &gt;&gt; .cdaf/properties.cm
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;local    TEST    &#34;Test Property&#34;              2&#39;</span> &gt;&gt; .cdaf/properties.cm</span></span></code></pre></div>
+<h4 id="windows">Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-Content .\.cdaf\properties.cm <span style="color:#e6db74">&#39;context  target     property               integer&#39;</span>
+</span></span><span style="display:flex;"><span>Add-Content .\.cdaf\properties.cm <span style="color:#e6db74">&#39;local    WINDOWS    &#34;Local Context&#34;              1&#39;</span>
+</span></span><span style="display:flex;"><span>Add-Content .\.cdaf\properties.cm <span style="color:#e6db74">&#39;local    WORKGROUP  &#34;Local Context&#34;              1&#39;</span>
+</span></span><span style="display:flex;"><span>Add-Content .\.cdaf\properties.cm <span style="color:#e6db74">&#39;local    TEST       &#34;Test Property&#34;              2&#39;</span></span></span></code></pre></div>
+<h3 id="automated-deployment">Automated Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Retest your solution, but this time, execute the end-to-end process</p>
+<h4 id="linux-1">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cdEmulate.sh</span></span></code></pre></div>
+<h4 id="windows-1">Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cdEmulate</span></span></code></pre></div>
+<p>The resulting CD process will not perform any action, however, the release package will now be extracted and there will be a directory TasksLocal, and in this will be the sub-directory based on the property context, propertiesForLocalTasks. In this directory will be the two properties files, compiled from the properties.cm file, TEST and PROD respectively, e.g.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code class="language-property" data-lang="property">property=Test Property
+integer=1</code></pre></div>
+<h3 id="tokenisation">Tokenisation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The partner files in source control are in whatever syntax required by the application, with tokens only for values that vary between environment. By default, tokens are in the form %name%. Following examples highlight how the configuration management is intended to provide an abstraction from the complexities of the application configuration files.</p>
+<h4 id="aspnet">ASP.NET<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>  <span style="color:#f92672">&lt;connectionStrings&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;add</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;aspdotnetEntities&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">connectionString=</span><span style="color:#e6db74">&#34;metadata=res://*/Models.aspdotnet.csdl|res://*/Models.aspdotnet.ssdl|res://*/Models.aspdotnet.msl;provider=System.Data.SqlClient;provider connection string=&amp;quot;data source=%databaseFQDN%;initial catalog=aspdotnetapp;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&amp;quot;&#34;</span> <span style="color:#a6e22e">providerName=</span><span style="color:#e6db74">&#34;System.Data.EntityClient&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">xdt:Transform=</span><span style="color:#e6db74">&#34;SetAttributes&#34;</span> <span style="color:#a6e22e">xdt:Locator=</span><span style="color:#e6db74">&#34;Match(name)&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/connectionStrings&gt;</span>
+</span></span><span style="display:flex;"><span>dotnet core
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  &#34;ConnectionStrings&#34;: {
+</span></span><span style="display:flex;"><span>    &#34;appDB&#34;: &#34;Server=%databaseFQDN%;Database=dotnetcoreapp;Trusted_Connection=True;&#34;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h4 id="python">Python<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">database</span>: 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">dbopt</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">host</span>: <span style="color:#ae81ff">%databaseFQDN%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">dbname</span>: <span style="color:#ae81ff">pythonapp</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">user</span>: <span style="color:#ae81ff">pythonappdbuser</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">password</span>: @<span style="color:#ae81ff">dBpassword@</span></span></span></code></pre></div>
+<h4 id="java">Java<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#a6e22e">jdbcConnection</span><span style="color:#f92672">=</span><span style="color:#e6db74">jdbc:mysql://%databaseFQDN%/javaapp</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">jdbcDiver</span><span style="color:#f92672">=</span><span style="color:#e6db74">com.mysql.jdbc.Driver</span></span></span></code></pre></div>
+<h4 id="ansible">Ansible<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spring_fqdn</span>: <span style="color:#e6db74">&#34;%spring_fqdn%&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">rails_fqdn</span>: <span style="color:#e6db74">&#34;%rails_fqdn%&#34;</span></span></span></code></pre></div>
+<h4 id="helm">Helm<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name: QUEUE_TRANSPORT value</span>: <span style="color:#e6db74">&#34;%QUEUE_TRANSPORT%&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name: ORM_CONNECTION value</span>: <span style="color:#e6db74">&#34;%ORM_CONNECTION%&#34;</span></span></span></code></pre></div>
+<h2 id="deployment-tasks">Deployment Tasks<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>With the properties for the application defined, now it is time to execute the deployment.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="local-deployment-tasks">Local Deployment Tasks</h1>
+
+<h2 id="hahahugoshortcode49s0hbhb">Local Tasks<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Local Tasks use the same execution engined as build tasks, but at deploy time, rather than build time. Local Tasks are executed in the local context of the host/server. Local Tasks are suited to situations where the agent is installed on the server where tasks are to be performed, or the server that the agent/runner is installed has the tools required to perform tasks on a remote target, i.e. a service offering with a command line interface, such as Kubernetes, Azure or AWS.</p>
+<blockquote>
+<p>The CDAF capabilities with containers cater for more sophisticated uses in the local context and the alternative container tasks execution approach.</p>
+</blockquote>
+<h3 id="example-task">Example Task<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The default tasks that are run in the local context are <code>tasksRun.tsk</code> and <code>tasksRunLocal.tsk</code>. These are placed in your solution root.</p>
+<h4 id="linux">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;DETOKN ./output/runtime.sh&#39;</span> &gt; .cdaf/tasksRunLocal.tsk
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;&#39;</span> &gt;&gt; .cdaf/tasksRunLocal.tsk
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;./output/runtime.sh&#39;</span> &gt;&gt; .cdaf/tasksRunLocal.tsk</span></span></code></pre></div>
+<h4 id="windows">Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-Content .\.cdaf\tasksRunLocal.tsk <span style="color:#e6db74">&#39;DETOKN .\output\runtime.ps1&#39;</span>
+</span></span><span style="display:flex;"><span>Add-Content .\.cdaf\tasksRunLocal.tsk <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>Add-Content .\.cdaf\tasksRunLocal.tsk <span style="color:#e6db74">&#39;.\output\runtime.ps1&#39;</span></span></span></code></pre></div>
+<h3 id="continuous-delivery-emulation-cd">Continuous Delivery Emulation (CD)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Execute the CD emulation</p>
+<h4 id="linux-1">Linux<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cdEmulate.sh</span></span></code></pre></div>
+<h4 id="windows-1">Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cdEmulate</span></span></code></pre></div>
+<p>Two steps are performed, first the deployable artefact is detokenised</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Found %property%, replacing with Local Context
+Found %integer%, replacing with 1</code></pre></div>
+<p>Then executed to verify the environment specific properties.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Deploy 1, property set to : Local Context</code></pre></div>
+<p>This now completes an end-to-end example of CDAF, from configuration management, build &amp; package through to deployment. Following are some common additional configuration elements, and the final step covers the increasingly less common pattern of Remote tasks.</p>
+<h3 id="alternate-tasks">Alternate Tasks<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>If you require a variety of tasks, you can explicitly define them, which will ignore any tasksRun.tsk and tasksRunLocal.tsk in your solution root. Please your task files in directory named either <code>custom</code> or <code>customLocal</code> in your solution root.</p>
+<p>To map your configuration to the alternate tasks, you must use the column name <code>deployTaskOverride</code>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context  target  deployTaskOverride     databaseFQDN        dBpassword
+local    TEST    simple-db-deploy.tsk   db1.nonprod.local   $db1Pass
+local    UAT     simple-db-deploy.tsk   $db2Pass
+local    PROD    cluster-db-deploy.tsk  $prodPass</code></pre></div>
+<h2 id="remote-tasks">Remote Tasks<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Tasks run in a remote context. This approach is less common with the license barriers to installing deployment agents, and the client oriented nature of modern agents, making the need for push deployments less common.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="remote-deployment-tasks">Remote Deployment Tasks</h1>
+
+<h2 id="hahahugoshortcode53s0hbhb">Remote Tasks<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Like Local Tasks, Remote Tasks use the same execution engined as build tasks, but at deploy time, rather than build time. Remote Tasks are executed in the local context of a remote host/server. Remote Tasks are suited to situations where the agent is not installed on the server where tasks are to be performed and instead the deployment is pushed, i.e. to an application server in the DMZ which can only be accessed by Remote PowerShell or SSH.</p>
+<p>The Remote Task is executed in a local context, so all the processes described in Local Tasks, however, how the deployment package is made available to the execution engine differs, along with pre-execution steps to make execution on the remote host possible.</p>
+<h3 id="sshscp-or-remote-powershell-with-custom-file-transfer">SSH/SCP or Remote PowerShell with custom file transfer<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Remote PowerShell for Windows or SSH/SCP for Linux are the protocols used to transfer the Remote Task package to the remote host for execution. PowerShell does not have an file transport protocol (Windows is typically reliant on SMB) so a CDAF feature has be provided to allow a file transfer mechanism similar to SCP in Linux.</p>
+<h3 id="nested-package">Nested Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>When using Remote Tasks, a reduced set of CDAF helper scripts are packed into a nested compressed file. This file is transferred to the remote host and then unpacked. Once unpacked, the properties for the current release environment are transferred to remote host, and then the deployment is executed.</p>
+<h3 id="remote-task-configuration">Remote Task Configuration<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The default authentication for transferring the remote files is pre-shared keys for Linux and domain service principle for Windows, however, alternative authentication methods are supported.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context  target   deployHost   remoteUser
+remote   VAGRANT  linux.local  adminuser</code></pre></div>
+<h4 id="windows-powershell-authentication-options">Windows PowerShell Authentication Options<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>The simplest authentication option is to use username and password, do not store the password in source control, instead use a variable.</p>
+<p>Environment variables are the recommended approach because this allows execution on a desktop or in a pipeline.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context  target   deployHost          remoteUser           remotePass
+remote   VAGRANT  windows.mshome.net  windows-1\adminuser  $env:CDAF_PS_USERPASS</code></pre></div>
+<h2 id="release-approaches">Release Approaches<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Now that there is an automated deployment mechanism, a variety of release and deployment strategies can be considered.</p>
+<ul>
+<li><a href="/30-imperative-deployment/index.html">Imperative Deployment</a></li>
+<li><a href="/70-authoritative-release/index.html">Declarative Release</a></li>
+<li><a href="/80-release-train/index.html">Release Train</a></li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/js/js-yaml/js-yaml.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-color.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1774678533" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1774678533" defer></script>
+    <script>
+      window.relearn.themeUseMermaid = JSON.parse("{}");
+    </script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774678533" defer></script>
+    <script src="/js/theme.min.js?1774678533" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

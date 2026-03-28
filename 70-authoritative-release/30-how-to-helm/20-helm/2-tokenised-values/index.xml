@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tokenised Values :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/70-authoritative-release/30-how-to-helm/20-helm/2-tokenised-values/index.html</link>
+    <description>DRY Principles and Avoiding Drift</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/70-authoritative-release/30-how-to-helm/20-helm/2-tokenised-values/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

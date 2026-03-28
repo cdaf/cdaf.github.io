@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.157.0">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Full Stack Release using Terraform">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Terraform Kubernetes :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Full Stack Release using Terraform">
+    <meta property="og:url" content="https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Terraform Kubernetes :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Full Stack Release using Terraform">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Terraform Kubernetes :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Full Stack Release using Terraform">
+    <meta itemprop="wordCount" content="221">
+    <title>Terraform Kubernetes :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/index.html" rel="canonical" type="text/html" title="Terraform Kubernetes :: Concepts &amp; Applied Examples">
+    <link href="/70-authoritative-release/40-terraform-kubernetes/index.xml" rel="alternate" type="application/rss+xml" title="Terraform Kubernetes :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1774678533" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774678533" defer></script>
+    <script src="/js/search-lunr.min.js?1774678533" defer></script>
+    <script src="/js/search.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1774678533";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774678533" rel="stylesheet">
+    <link href="/css/theme.min.css?1774678533" rel="stylesheet">
+    <link href="/css/format-print.min.css?1774678533" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/70-authoritative-release\/40-terraform-kubernetes\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/70-authoritative-release/40-terraform-kubernetes/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hahahugoshortcode42s0hbhb">HAHAHUGOSHORTCODE42s0HBHB</a></li>
+      </ul>
+    </li>
+    <li><a href="#manifest">Manifest</a></li>
+    <li><a href="#terraform-build">Terraform Build</a></li>
+    <li><a href="#configuration-management">Configuration Management</a></li>
+    <li><a href="#deploy">Deploy</a></li>
+    <li><a href="#feedback-loop">Feedback Loop</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/70-authoritative-release/index.html"><span itemprop="name">Declarative Release</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Terraform Kubernetes</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/40-terraform-kubernetes/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/30-how-to-helm/30-desiredstate/3014-version-constraints/index.html" title="Helmsman Version Constraints (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.html" title="Manifest (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 70-authoritative-release" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="terraform-kubernetes">Terraform Kubernetes</h1>
+
+<h3 id="hahahugoshortcode42s0hbhb">Full Stack Release using Terraform<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>This approach implements the <a href="https://blog.cdaf.io/articles/autonomous-development-authoritative-release/" rel="external">Autonomous Development, Authoritative Release</a> principle, to orchestrate a full stack release, i.e. the automated coordination of <em>Infrastructure as Code</em>, <em>Configuration Management</em> and <em>Application deployment</em>.</p>
+<blockquote>
+<p>This is an alternative implementation to <a href="/70-authoritative-release/30-how-to-helm/index.html">How to Helm</a>, using Terraform instead of Helm, but with the same core principles of <strong>runtime versioning</strong> and <strong>desired state</strong>, and the inclusion of the Kubernetes Infrastructure as Code, using a single language, i.e. Terraform.</p>
+</blockquote>
+<p>The <em>Application Stack</em> can be defined once, and deployed many times into separate namespaces, e.g. development, test and production.</p>
+<pre class="mermaid actionbar-wrapper align-center ">
+graph TD
+
+  subgraph k8s[&#34;Kubernetes&#34;]
+    subgraph ns1[&#34;Dev namespace&#34;]
+      ns1-ingress[&#34;ingress&#34;]
+      subgraph ns1-pod-1[&#34;Pod&#34;]
+        ns1-con-a[&#34;container&#34;]
+      end
+      subgraph ns1-pod-2[&#34;Pod&#34;]
+        ns1-con-b[&#34;container&#34;]
+        ns1-con-c[&#34;container&#34;]
+      end
+    end
+    subgraph ns2[&#34;Test namespace&#34;]
+      ns2-ingress[&#34;ingress&#34;]
+      subgraph ns2-pod-1[&#34;Pod&#34;]
+        ns2-con-a[&#34;container&#34;]
+      end
+      subgraph ns2-pod-2[&#34;Pod&#34;]
+        ns2-con-b[&#34;container&#34;]
+        ns2-con-c[&#34;container&#34;]
+      end
+    end
+    subgraph ns3[&#34;Production namespace&#34;]
+      ns3-ingress[&#34;ingress&#34;]
+      subgraph ns3-pod-1[&#34;Pod&#34;]
+        ns3-con-a[&#34;container&#34;]
+      end
+      subgraph ns3-pod-2[&#34;Pod&#34;]
+        ns3-con-b[&#34;container&#34;]
+        ns3-con-c[&#34;container&#34;]
+      end
+    end
+  end
+
+  client --&gt;
+  ns1-ingress --&gt; ns1-con-a
+  ns1-ingress --&gt; 
+  ns1-con-b --&gt; ns1-con-c
+
+  client --&gt;
+  ns2-ingress --&gt; ns2-con-a
+  ns2-ingress --&gt; 
+  ns2-con-b --&gt; ns2-con-c
+
+  client --&gt;
+  ns3-ingress --&gt; ns3-con-a
+  ns3-ingress --&gt; 
+  ns3-con-b --&gt; ns3-con-c
+
+classDef external fill:lightblue
+class client external
+ 
+classDef dashed stroke-dasharray: 5, 5
+class ns1,ns2,ns3 dashed
+ 
+classDef dotted stroke-dasharray: 2, 2
+class ns1-pod-1,ns1-pod-2,ns2-pod-1,ns2-pod-2,ns3-pod-1,ns3-pod-2 dotted
+</pre>
+<ul>
+<li>
+<h2 id="manifest"><a href="/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.html">Manifest</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Declare Container Deployment as Terraform Package</p>
+</li>
+<li>
+<h2 id="terraform-build"><a href="/70-authoritative-release/40-terraform-kubernetes/20-build-once/index.html">Terraform Build</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Immutable Release Package</p>
+</li>
+<li>
+<h2 id="configuration-management"><a href="/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/index.html">Configuration Management</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Tokens and Properties</p>
+</li>
+<li>
+<h2 id="deploy"><a href="/70-authoritative-release/40-terraform-kubernetes/50-deploy/index.html">Deploy</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Deploy-time Detokenisation</p>
+</li>
+<li>
+<h2 id="feedback-loop"><a href="/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/index.html">Feedback Loop</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Realising the Feedback Loop
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Terraform Kubernetes</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/12-factors/index.html">12-Factors</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="manifest">Manifest</h1>
+
+<h2 id="hahahugoshortcode60s0hbhb">Declare Container Deployment as Terraform Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The key component of the package is the release manifest, this <em>declares</em> the component versions of the solution. The <em>desired state engine</em> (Terraform) will ensure <strong>all</strong> components for the release align with the <em>declaration</em> in the manifest. These are added to your CDAF.solution file.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>solutionName=kat
+artifactPrefix=0.4
+
+ui_image=cdaf/cdaf:572
+api_image=cdaf/kestrel:ubuntu-22.04-14
+fast_image=cdaf/fastapi:50</code></pre></div>
+<p>While the stack construction is the same in all environments, unique settings for each environment are defined in configuration management files, e.g. <code>properties.cm</code>. The properties management is covered in more detail in the <a href="/70-authoritative-release/40-terraform-kubernetes/40-configuration-management/index.html">Configuration Management</a> section.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context    target  work_space      name_space  api_node_category  api_ip        ui_ip     
+container  TEST    kat_test        kat-test    secondary          10.224.10.11  10.224.10.21  
+container  PROD    kat_production  kat-prod    primary            10.224.10.10  10.224.10.20  </code></pre></div>
+<p>Next, build a release package&hellip;</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/12-factors/index.html">12-Factors</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="terraform-build">Terraform Build</h1>
+
+<h2 id="hahahugoshortcode64s0hbhb">Immutable Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The key construct for the <em>Authoritative Release</em> is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Terraform dependencies, modules are not downloaded at deploytime, instead they are resolved at <em>build</em> time and packaged into an immutable release package. For a consistent way-of-working, the Terraform <em>build</em> process resolves and validates dependencies.</p>
+<h3 id="build-time-module-resolution">Build-time Module Resolution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Most Terraform module resolution approaches are to pull from source control (Git) or registry at deploy-time, which can require additional credential management, risks unexpected module changes (if tags are used) and potential network connectivity issues. This approach is the treat modules like software dependencies, resolving them at build time and building them into an all-in-one immutable package.</p>
+<p>The following <code>state.tf</code> defines the modules and versions that are required</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-tf" data-lang="tf"><span style="display:flex;"><span><span style="color:#a6e22e">terraform</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">backend</span> <span style="color:#e6db74">&#34;local&#34;</span> {}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">module</span> <span style="color:#e6db74">&#34;azure_k8s&#34;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">source</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;gitlab.com/hdc-group/azure-private-registry/k8s&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">version</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0.0.14&#34;</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>The following <code>builld.tsk</code> triggers module download from a private registry using credentials in <code>TERRAFORM_REGISTRY_TOKEN</code>, these credentials will not be required at deploy time.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$TASK_NAME<span style="color:#e6db74">] Verify Version</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span> -ForegroundColor Cyan
+</span></span><span style="display:flex;"><span>terraform --version
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>VARCHK
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MAKDIR $env:APPDATA\terraform.d
+</span></span><span style="display:flex;"><span>$conf = <span style="color:#e6db74">&#34;</span>$env:APPDATA<span style="color:#e6db74">\terraform.d\credentials.tfrc.json&#34;</span>
+</span></span><span style="display:flex;"><span>Set-Content $conf <span style="color:#e6db74">&#39;{&#39;</span>
+</span></span><span style="display:flex;"><span>Add-Content $conf <span style="color:#e6db74">&#39;  &#34;credentials&#34;: {&#39;</span>
+</span></span><span style="display:flex;"><span>Add-Content $conf <span style="color:#e6db74">&#39;    &#34;app.terraform.io&#34;: {&#39;</span>
+</span></span><span style="display:flex;"><span>Add-Content $conf <span style="color:#e6db74">&#34;      </span><span style="color:#ae81ff">`&#34;</span><span style="color:#e6db74">token</span><span style="color:#ae81ff">`&#34;</span><span style="color:#e6db74">: </span><span style="color:#ae81ff">`&#34;</span>$env:TERRAFORM_REGISTRY_TOKEN<span style="color:#ae81ff">`&#34;</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>Add-Content $conf <span style="color:#e6db74">&#39;    }&#39;</span>
+</span></span><span style="display:flex;"><span>Add-Content $conf <span style="color:#e6db74">&#39;  }&#39;</span>
+</span></span><span style="display:flex;"><span>Add-Content $conf <span style="color:#e6db74">&#39;}&#39;</span>
+</span></span><span style="display:flex;"><span>Get-Content $conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$TASK_NAME<span style="color:#e6db74">] Log the module registry details</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span> -ForegroundColor Cyan
+</span></span><span style="display:flex;"><span>Get-Content state.tf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$TASK_NAME<span style="color:#e6db74">] In a clean workspace, first init will download modules, then fail, ignore this and init again&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ( ! ( Test-Path ./.terraform/modules/azurerm )) { IGNORE <span style="color:#e6db74">&#34;terraform init -upgrade -input=false&#34;</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$TASK_NAME<span style="color:#e6db74">] Initialise with local state storage and download modules</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span> -ForegroundColor Cyan
+</span></span><span style="display:flex;"><span>terraform init -upgrade -input=false</span></span></code></pre></div>
+<p><a href="#R-image-87f63d51328fe96271f9aceef197d9a4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-resolve.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-87f63d51328fe96271f9aceef197d9a4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-resolve.png" title="Terraform Module Download"></a></p>
+<p>The trick to use the downloaded, local copy of the modules, is to reference the opinionated location of resolved modules, i.e. <code>./.terraform/modules/${module_declaration_above}/${registry_name}</code>, as per the following example:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>module &#34;azure_private_registry&#34; {
+  source            = &#34;./.terraform/modules/azure_k8s/azure-private-registry&#34;
+  REGISTRY_SERVER   = var.REGISTRY_SERVER
+  REGISTRY_USERNAME = var.REGISTRY_USERNAME
+  REGISTRY_PASSWORD = var.REGISTRY_PASSWORD
+}</code></pre></div>
+<h3 id="validation">Validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Once all modules have been downloaded, syntax is then validated.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Validate Syntax`n&#34; -ForegroundColor Cyan
+terraform validate
+
+Write-Host &#34;[$TASK_NAME] Generate the graph to validate the plan`n&#34; -ForegroundColor Cyan
+terraform graph</code></pre></div>
+<p><a href="#R-image-02d1a9cf6574646dbfcb245f74a4f837" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-validate.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-02d1a9cf6574646dbfcb245f74a4f837"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-validate.png" title="Terraform Module Download"></a></p>
+<p>Once validated, copy the modules and your <code>.tf</code> files to a release directory, as outlined below, with consideration of numeric token substitution.</p>
+<h3 id="numeric-token-handling">Numeric Token Handling<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>All the deploy-time files are copied into the <code>release</code> directory. Because tokens cannot be used during the build process, an arbitrary numeric is used, and this is then replaced in the resulting <code>release</code> directory. Tokenisation is covered in more detail in the following section</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Tokenise variable file`n&#34; -ForegroundColor Cyan
+REFRSH .terraform\modules\* ..\release\.terraform\modules\
+VECOPY *&#34;.tf&#34; ..\release
+VECOPY *&#34;.json&#34; ..\release
+REPLAC ..\release\variables.tf &#39;{ default = 3 }&#39; &#39;{ default = %agent_count% }&#39;</code></pre></div>
+<p><a href="#R-image-ce4c1a7f97e0a1ba5690f4be1c8d4223" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-post-build-token.png" style="height: auto;width: auto;" title="Terraform Tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ce4c1a7f97e0a1ba5690f4be1c8d4223"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-post-build-token.png" title="Terraform Tokenisation"></a></p>
+<h3 id="release-package">Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The deploytime components are then copied into the release package, based on the <code>storeFor</code> definition in your solution directory</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Tokenised Terraform Files
+release</code></pre></div>
+<p><a href="#R-image-878a6df9a4d197e6250c98c4b8999223" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-package.png" style="height: auto;width: auto;" title="Terraform Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-878a6df9a4d197e6250c98c4b8999223"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-package.png" title="Terraform Package"></a></p>
+<p>The modules and helper scripts are then packed into a self-extracting release executable as per standard CDAF release build process</p>
+<p><a href="#R-image-0de0281fb768c8d0f7bbaf4d175008ba" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-release.png" style="height: auto;width: auto;" title="Terraform Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0de0281fb768c8d0f7bbaf4d175008ba"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-release.png" title="Terraform Release"></a></p>
+<h2 id="deploy-time">Deploy Time<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The build-time <code>state.tf</code> file is replaced on deploy-time, replacing the declaration of local storage and removing the build time module dependencies, in your <code>.tsk</code> file</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>echo &#34;[$TASK_NAME] Replace Local State with Remote&#34;
+$remote_state = &#34;state.tf&#34;
+Set-Content $remote_state &#39;terraform {&#39;
+Add-Content $remote_state &#39;  backend &#34;remote&#34; {&#39;
+Add-Content $remote_state &#34;    organization = `&#34;${env:TERRAFORM_ORG}`&#34;&#34;
+Add-Content $remote_state &#39;    workspaces {&#39;
+Add-Content $remote_state &#34;      name = `&#34;${work_space}`&#34;&#34;
+Add-Content $remote_state &#39;    }&#39;
+Add-Content $remote_state &#39;  }&#39;
+Add-Content $remote_state &#39;}&#39;
+Get-Content $remote_state</code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/12-factors/index.html">12-Factors</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="configuration-management">Configuration Management</h1>
+
+<h2 id="hahahugoshortcode69s0hbhb">Tokens and Properties<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>To avoid a configuration file for each environment, and the inevitable drift between those files, a single, tokenised, definition is used.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>variable &#34;aks_work_space&#34;   { default = &#34;%aks_work_space%&#34; }
+variable &#34;name_space&#34;       { default = &#34;%name_space%&#34; }
+variable &#34;REGISTRY_KEY&#34;     { default = &#34;@REGISTRY_KEY@&#34; }
+variable &#34;REGISTRY_KEY_SHA  { default = &#34;@REGISTRY_KEY_SHA@&#34; }</code></pre></div>
+<p>To De-tokenise this definition at deploy time, name/value pair files are used. This allows the settings to be decoupled from the complexity of configuration file format.</p>
+<p>If these were to be stored as separate files in source control, they would suffer the same drift challenge, so in source control, the settings are stored in a tabular format, which is compiled into the name/value files during the Continuous Integration process.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>target  aks_work_space  name_space  REGISTRY_KEY       REGISTRY_KEY_SHA
+TEST    aks_prep        test        $env:REGISTRY_KEY  FD6346C8432462ED2DBA6...
+PROD    aks_prod        prod        $env:REGISTRY_KEY  CA3CBB1998E86F3237CA1...</code></pre></div>
+<blockquote>
+<p>Note: environment variables can be used for dynamic value replacement, most commonly used for secrets.</p>
+</blockquote>
+<p>These human readable configuration management tables are transformed to computer friendly format and included in the <a href="/70-authoritative-release/40-terraform-kubernetes/20-build-once/index.html">release package (release.ps1)</a>. The <code>REGISTRY_KEY</code> and <code>REGISTRY_KEY_SHA</code> are used for <a href="/90-reference/20-feature-configuration/90-variable-validation/index.html">Variable Validation</a>, creating a <code>properties.varchk</code> as following</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>env:REGISTRY_KEY=$env:REGISTRY_KEY_SHA</code></pre></div>
+<p>Write the <code>REGISTRY_KEY_SHA</code> aa a container environment variable, so that when SHA changes, the container is automatically restarted to pick up the environment variable change, and hence the corresponding secret is also reloaded.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>env {
+  name = &#34;REGISTRY_KEY_SHA&#34;
+  value = var.REGISTRY_KEY_SHA
+}</code></pre></div>
+<p>An additional benefit of this approach is that when diagnosing an issue, the SHA can be used as an indicative secret verification.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/12-factors/index.html">12-Factors</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="deploy">Deploy</h1>
+
+<h2 id="hahahugoshortcode73s0hbhb">Deploy-time Detokenisation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>To support the build-once/deploy-many model, the environment specific values are injected and then deployed for the release. Note that the release is immutable, and any change to any component will require a new release to be created, eliminating <em>cherry picking</em>. The <code>tasksRun.tsk</code> performs two levels of detokenisation, the first is for environment specific settings, and the second applies any solution level declarations.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Generic Properties Detokenisation`n&#34; -ForegroundColor Cyan
+Get-Content variables.tf
+DETOKN variables.tf
+DETOKN variables.tf $WORKSPACE\manifest.txt</code></pre></div>
+<p>Environment (<code>TARGET</code>) specific de-tokenisation is blue, and solution level de-tokenisation in green:</p>
+<p><a href="#R-image-3d8203df7bf21a7c97e12a06e78d217f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-detokenisation.png" style="height: auto;width: auto;" title="Terraform De-tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3d8203df7bf21a7c97e12a06e78d217f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-detokenisation.png" title="Terraform De-tokenisation"></a></p>
+<p>Terraform Cloud is being used to perform state management. To avoid false negative reporting on Terraform apply, the operation is performed in a CMD shell.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>echo &#34;[$TASK_NAME] Azure Secrets are stored in the back-end, the token opens access to these&#34;
+MAKDIR $env:APPDATA\terraform.d
+$conf = &#34;$env:APPDATA\terraform.d\credentials.tfrc.json&#34;
+Set-Content $conf &#39;{&#39;
+Add-Content $conf &#39;  &#34;credentials&#34;: {&#39;
+Add-Content $conf &#39;    &#34;app.terraform.io&#34;: {&#39;
+Add-Content $conf &#34;      `&#34;token`&#34;: `&#34;$env:TERRAFORM_TOKEN`&#34;&#34;
+Add-Content $conf &#39;    }&#39;
+Add-Content $conf &#39;  }&#39;
+Add-Content $conf &#39;}&#39;
+
+echo &#34;[$TASK_NAME] Replace Local State with Remote&#34;
+$remote_state = &#34;state.tf&#34;
+Set-Content $remote_state &#39;terraform {&#39;
+Add-Content $remote_state &#39;  backend &#34;remote&#34; {&#39;
+Add-Content $remote_state &#34;    organization = `&#34;${env:TERRAFORM_ORG}`&#34;&#34;
+Add-Content $remote_state &#39;    workspaces {&#39;
+Add-Content $remote_state &#34;      name = `&#34;${work_space}`&#34;&#34;
+Add-Content $remote_state &#39;    }&#39;
+Add-Content $remote_state &#39;  }&#39;
+Add-Content $remote_state &#39;}&#39;
+
+Write-Host &#34;[$TASK_NAME] Initialise Remote State`n&#34; -ForegroundColor Cyan
+terraform init -upgrade -input=false
+
+EXECMD &#34;terraform $OPT_ARG&#34;</code></pre></div>
+<p><a href="#R-image-8101c94fcad68f16c50a834f27450bbd" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-terraform-apply.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8101c94fcad68f16c50a834f27450bbd"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-terraform-apply.png" title="Terraform Apply"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/12-factors/index.html">12-Factors</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="feedback-loop">Feedback Loop</h1>
+
+<h2 id="hahahugoshortcode77s0hbhb">Realising the Feedback Loop<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Based on <a href="https://blog.cdaf.io/articles/2023-07-23-feedback-loop/" rel="external">Realising the Feedback Loop</a>, once the package has been promoted to it&rsquo;s last stage, it is then pushed to the artefact store</p>
+<p><a href="#R-image-7b1e671354ba2783f91f3d44bfa58939" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7b1e671354ba2783f91f3d44bfa58939"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Production Artefact"></a></p>
+<p>In this example Azure DevOps (ADO) using the <em>az artifacts</em> extension, see the example <code>push.tsk</code>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Verify deployable artefact is available`n&#34;
+$package_name = (Get-Item &#34;$(PWD)\release.ps1&#34; -ErrorAction SilentlyContinue).FullName
+if ( ! ( $package_name )) { ERRMSG &#34;[PACKAGE_NOT_FOUND] $(PWD)\release.ps1 not found!&#34; 9996 }
+
+Write-Host &#34;[$TASK_NAME] Verify Azure DevOps PAT is set correctly`n&#34;
+VARCHK push.varchk
+
+PROPLD manifest.txt
+$version = ${artifactPrefix} + &#39;.&#39; + ${BUILDNUMBER}
+
+Write-Host &#34;[$TASK_NAME] Push package to `$ado_project $ado_project&#34;
+Write-Host &#34;[$TASK_NAME]   `$ado_org      = $ado_org&#34;
+Write-Host &#34;[$TASK_NAME]   `$ado_project  = $ado_project&#34;
+Write-Host &#34;[$TASK_NAME]   `$ado_feed     = $ado_feed&#34;
+Write-Host &#34;[$TASK_NAME]   `$SOLUTION     = $SOLUTION&#34;
+Write-Host &#34;[$TASK_NAME]   `$version      = $version&#34;
+Write-Host &#34;[$TASK_NAME]   `$package_name = $package_name&#34;
+
+az artifacts universal publish --organization $ado_org --project $ado_project --scope project --feed $ado_feed --name $SOLUTION --version $version --path $package_name</code></pre></div>
+<p>The package can be retrieved using the semantic version, or <code>latest</code> (current production).</p>
+<p><a href="#R-image-7f68715ab160dafbb1037db7768b07b4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7f68715ab160dafbb1037db7768b07b4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
+<p>To see how this can be consumed in a <em>Release Train</em> approach, see <a href="/80-release-train/40-terraform-cloud/index.html">Terraform Cloud</a>.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/js/js-yaml/js-yaml.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-color.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1774678533" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1774678533" defer></script>
+    <script>
+      window.relearn.themeUseMermaid = JSON.parse("{}");
+    </script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774678533" defer></script>
+    <script src="/js/theme.min.js?1774678533" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

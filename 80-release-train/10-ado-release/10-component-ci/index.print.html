@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.157.0">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Autonomous Component Build &amp; Test">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Component CI :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Autonomous Component Build &amp; Test">
+    <meta property="og:url" content="https://cdaf.io/80-release-train/10-ado-release/10-component-ci/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Component CI :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Autonomous Component Build &amp; Test">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Release Train">
+    <meta property="article:tag" content="Kb">
+    <meta property="article:tag" content="12-Factors">
+    <meta itemprop="name" content="Component CI :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Autonomous Component Build &amp; Test">
+    <meta itemprop="wordCount" content="209">
+    <meta itemprop="keywords" content="Kb,12-Factors">
+    <title>Component CI :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/80-release-train/10-ado-release/10-component-ci/index.html" rel="canonical" type="text/html" title="Component CI :: Concepts &amp; Applied Examples">
+    <link href="/80-release-train/10-ado-release/10-component-ci/index.xml" rel="alternate" type="application/rss+xml" title="Component CI :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1774678533" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774678533" defer></script>
+    <script src="/js/search-lunr.min.js?1774678533" defer></script>
+    <script src="/js/search.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1774678533";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774678533" rel="stylesheet">
+    <link href="/css/theme.min.css?1774678533" rel="stylesheet">
+    <link href="/css/format-print.min.css?1774678533" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/80-release-train\/10-ado-release\/10-component-ci\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/80-release-train/10-ado-release/10-component-ci/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/80-release-train/index.html"><span itemprop="name">Release Train</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/80-release-train/10-ado-release/index.html"><span itemprop="name">Azure DevOps (ADO) Release</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Component CI</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/80-release-train/10-ado-release/10-component-ci/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/80-release-train/10-ado-release/index.html" title="Azure DevOps (ADO) Release (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/80-release-train/10-ado-release/20-component-cd/index.html" title="Component CD (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 80-release-train" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/12-factors/index.html">12-Factors</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="component-ci">Component CI</h1>
+
+<h2 id="hahahugoshortcode75s0hbhb">Autonomous Component Build &amp; Test<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Each component contains both application code and deployment automation. The development team can imperatively deploy to the dev environment, i.e. the API and Vue application can be deployed separately, with no assurance of version alignment.</p>
+<p>Example Vue <code>properties.cm</code> file, the deployment tool used is <a href="https://developers.cloudflare.com/pages/functions/wrangler-configuration/" rel="external">Wrangler</a>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context    target  pages_app_project  fqdn                 api_url
+container  DEV     petstore-dev       vue-dev.example.com  api-dev.example.com
+
+container  TEST    petstore-tst       vue-tst.example.com  api-tst.example.com
+container  PROD    petstore-prd       vue.example.com      api.example.com</code></pre></div>
+<p>Example API <code>properties.cm</code> file, the deployment tool used is <a href="https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs" rel="external">Terraform</a>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context    target tf_work_space  pages_suffix
+container  DEV    PetStack-Dev   dev
+container  TEST   PetStack-Test  tst
+container  PROD   PetStack-Prod  prd</code></pre></div>
+<p>Due to the loose-coupling principle of CDAF, the same pipeline template is used for both components, even though the code and deployment automation are different (see orchestration templates in GitHub for <a href="https://github.com/cdaf/windows/tree/master/orchestration" rel="external">Windows</a> and <a href="https://github.com/cdaf/linux/tree/master/orchestration" rel="external">Linux</a>).</p>
+<blockquote>
+<p>note that Jest for Vue and Checkov for Terraform have both been configured to output results in JUnit XML format.</p>
+</blockquote>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">job</span>: <span style="color:#ae81ff">Build</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">displayName</span>: <span style="color:#ae81ff">Build and Package</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pool</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">vmImage</span>: <span style="color:#ae81ff">windows-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">PowerShell@2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">displayName</span>: <span style="color:#ae81ff">CDAF Release Build</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">inputs</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">targetType</span>: <span style="color:#e6db74">&#39;inline&#39;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">script</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            . { iwr -useb https://cdaf.io/static/app/downloads/cdaf.ps1 } | iex
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            .\automation\entry.ps1 $(Build.BuildNumber) $(Build.SourceBranch) staging@$(Build.ArtifactStagingDirectory)</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">PublishTestResults@2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">condition</span>: <span style="color:#ae81ff">succeededOrFailed()</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">inputs</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">testResultsFormat</span>: <span style="color:#e6db74">&#39;JUnit&#39;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">testResultsFiles</span>: <span style="color:#e6db74">&#39;**/test-results/*.xml&#39;</span> 
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">PublishBuildArtifacts@1</span></span></span></code></pre></div>
+<p>The resulting ADO component pipelines are independent</p>
+<p><a href="#R-image-00746cbdfeb8bb224cb4f800110eeb7a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-pipelines.png" style="height: auto;width: auto;" title="ADO Component pipelines"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-00746cbdfeb8bb224cb4f800110eeb7a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-pipelines.png" title="ADO Component pipelines"></a></p>
+<p>Next, autonomous deploy&hellip;</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774678533" defer></script>
+    <script src="/js/theme.min.js?1774678533" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

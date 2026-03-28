@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.157.0">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Declarative Desired State Container Deployment using Helm">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="How to Helm :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Declarative Desired State Container Deployment using Helm">
+    <meta property="og:url" content="https://cdaf.io/70-authoritative-release/30-how-to-helm/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="How to Helm :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Declarative Desired State Container Deployment using Helm">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="How to Helm :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Declarative Desired State Container Deployment using Helm">
+    <meta itemprop="wordCount" content="183">
+    <title>How to Helm :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/70-authoritative-release/30-how-to-helm/index.html" rel="canonical" type="text/html" title="How to Helm :: Concepts &amp; Applied Examples">
+    <link href="/70-authoritative-release/30-how-to-helm/index.xml" rel="alternate" type="application/rss+xml" title="How to Helm :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1774678533" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774678533" defer></script>
+    <script src="/js/search-lunr.min.js?1774678533" defer></script>
+    <script src="/js/search.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1774678533";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774678533" rel="stylesheet">
+    <link href="/css/theme.min.css?1774678533" rel="stylesheet">
+    <link href="/css/format-print.min.css?1774678533" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/70-authoritative-release\/30-how-to-helm\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/70-authoritative-release/30-how-to-helm/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#hahahugoshortcode38s0hbhb">HAHAHUGOSHORTCODE38s0HBHB</a></li>
+    <li><a href="#helm">Helm</a></li>
+    <li><a href="#desired-state-release">Desired State Release</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/70-authoritative-release/index.html"><span itemprop="name">Declarative Release</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">How to Helm</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/30-how-to-helm/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html" title="Authoritative Release (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/30-how-to-helm/20-helm/index.html" title="Helm (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 70-authoritative-release" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="how-to-helm">How to Helm</h1>
+
+<h2 id="hahahugoshortcode38s0hbhb">Declarative Desired State Container Deployment using Helm<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>This approach is based on <a href="https://blog.cdaf.io/articles/autonomous-development-authoritative-release/" rel="external">Autonomous Development, Authoritative Release</a> which decouples the development process from the release process.</p>
+<blockquote>
+<p>This is an alternative implementation to <a href="/70-authoritative-release/40-terraform-kubernetes/index.html">Terraform Application Stack</a>, using Helm instead of Terraform, but with the same core principles of <strong>runtime versioning</strong> and <strong>desired state</strong>.</p>
+</blockquote>
+<p>The <em>Application Stack</em> can be defined once, and deployed many times into separate namespaces, e.g. development, test and production.</p>
+<pre class="mermaid actionbar-wrapper align-center ">
+graph TD
+
+  subgraph k8s[&#34;Kubernetes&#34;]
+    subgraph ns1[&#34;Dev namespace&#34;]
+      ns1-ingress[&#34;ingress&#34;]
+      subgraph ns1-pod-1[&#34;Pod&#34;]
+        ns1-con-a[&#34;container&#34;]
+      end
+      subgraph ns1-pod-2[&#34;Pod&#34;]
+        ns1-con-b[&#34;container&#34;]
+        ns1-con-c[&#34;container&#34;]
+      end
+    end
+    subgraph ns2[&#34;Test namespace&#34;]
+      ns2-ingress[&#34;ingress&#34;]
+      subgraph ns2-pod-1[&#34;Pod&#34;]
+        ns2-con-a[&#34;container&#34;]
+      end
+      subgraph ns2-pod-2[&#34;Pod&#34;]
+        ns2-con-b[&#34;container&#34;]
+        ns2-con-c[&#34;container&#34;]
+      end
+    end
+    subgraph ns3[&#34;Production namespace&#34;]
+      ns3-ingress[&#34;ingress&#34;]
+      subgraph ns3-pod-1[&#34;Pod&#34;]
+        ns3-con-a[&#34;container&#34;]
+      end
+      subgraph ns3-pod-2[&#34;Pod&#34;]
+        ns3-con-b[&#34;container&#34;]
+        ns3-con-c[&#34;container&#34;]
+      end
+    end
+  end
+
+  client --&gt;
+  ns1-ingress --&gt; ns1-con-a
+  ns1-ingress --&gt; 
+  ns1-con-b --&gt; ns1-con-c
+
+  client --&gt;
+  ns2-ingress --&gt; ns2-con-a
+  ns2-ingress --&gt; 
+  ns2-con-b --&gt; ns2-con-c
+
+  client --&gt;
+  ns3-ingress --&gt; ns3-con-a
+  ns3-ingress --&gt; 
+  ns3-con-b --&gt; ns3-con-c
+
+classDef external fill:lightblue
+class client external
+ 
+classDef dashed stroke-dasharray: 5, 5
+class ns1,ns2,ns3 dashed
+ 
+classDef dotted stroke-dasharray: 2, 2
+class ns1-pod-1,ns1-pod-2,ns2-pod-1,ns2-pod-2,ns3-pod-1,ns3-pod-2 dotted
+</pre>
+<ul>
+<li>
+<h2 id="helm"><a href="/70-authoritative-release/30-how-to-helm/20-helm/index.html">Helm</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Helm for Kubernetes</p>
+</li>
+<li>
+<h2 id="desired-state-release"><a href="/70-authoritative-release/30-how-to-helm/30-desiredstate/index.html">Desired State Release</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Full Stack Release Helm/Kubernetes
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of How to Helm</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="helm">Helm</h1>
+
+<p>Kubernetes configuration can be performed via imperative command line or declarative YAML files. While OpenShift provides a user interface to allow manual configuration of the Kubernetes cluster, which is ideal for discovery and development purposes, but is not sustainable in a production solution.</p>
+<p>While Kubernetes YAML definitions are declarative, it is laborious have multiple copies for similar deployment patterns and multiple target environments. The most fundamental declaration is a deployment, which defines what containers are to be deployed.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-deployment</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-container</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:1.14.2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span></span></span></code></pre></div>
+<p>To avoid proliferation of YAML definitions, and provide flexibility to alter deployment specific aspects, Helm was introduced. Helm provides a template for deployments, which can be re-used for multiple applications across multiple environments.</p>
+<pre class="mermaid actionbar-wrapper align-left ">
+graph TD
+
+    subgraph test
+        subgraph app1
+        serv1[&#34;service&#34;]
+        appt1[&#34;pod&#34;]
+        end
+        subgraph app2
+        serv2[&#34;service&#34;]
+        appp2[&#34;pod&#34;]
+        end
+    end
+
+    subgraph prod
+        subgraph app3
+        serv3[&#34;service&#34;]
+        appt3[&#34;pod&#34;]
+        end
+        subgraph app4
+        serv4[&#34;service&#34;]
+        appp4[&#34;pod&#34;]
+        end
+    end
+
+  serv1 --&gt; appt1
+  serv2 --&gt; appp2
+
+  serv3 --&gt; appt3
+  serv4 --&gt; appp4
+
+classDef dotted stroke-dasharray: 2, 2
+class test,prod dotted
+
+classDef dashed stroke-dasharray: 5, 5
+class app1,app2,app3,app4 dashed
+</pre>
+<p>Deploying each application, in each environment, requires imperative knowledge of what steps are needed to achieve the desired outcome. See <a href="/70-authoritative-release/30-how-to-helm/30-desiredstate/index.html">Desired State releases</a>, rather than imperative.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Helm</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="helm-hello-world">Helm Hello World</h1>
+
+<p>The following example is relatively complicated and doesn&rsquo;t serve well as a learning exercise.</p>
+<p>Use the <a href="https://helm.sh/docs/chart_template_guide/getting_started/" rel="external">Helm Getting Started</a> material to create a template which has all the appropriate structure and some example charts.</p>
+
+<details open class="box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>The template does not work in OpenShift because the root-less containers do not allow Nginx to bind to port 80.</p>
+  </div>
+</details>
+<h1 id="how-helm-works">How Helm Works<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<p>Using the previous YAML example, all of the elements that we want to re-use for multiple apps, or configure differently for progressive environments, are defined as properties. This is the basis of the files that make up the template.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: {{ <span style="color:#ae81ff">include &#34;Chart.fullname&#34; . }}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>    {{- <span style="color:#ae81ff">include &#34;Chart.labels&#34; . | nindent 4 }}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  {{- <span style="color:#ae81ff">if not .Values.autoscaling.enabled }}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: {{ <span style="color:#ae81ff">.Values.replicaCount }}</span>
+</span></span><span style="display:flex;"><span>  {{- <span style="color:#ae81ff">end }}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
+</span></span><span style="display:flex;"><span>      {{- <span style="color:#ae81ff">include &#34;Chart.labels&#34; . | nindent 6 }}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>        {{- <span style="color:#ae81ff">include &#34;Chart.labels&#34; . | nindent 8 }}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: {{ <span style="color:#ae81ff">.Chart.Name }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#34;{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">containerPort</span>: {{ <span style="color:#ae81ff">.Values.service.port }}</span></span></span></code></pre></div>
+<p>There are two files used with the templates to apply deploy time settings, the Chart.yaml, which is included with the template implements the DRY principle, i.e. Don&rsquo;t Repeat Yourself. Where literals that are applied repeatedly across the template are defined.</p>
+<h2 id="chartyaml">Chart.yaml<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-container</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">fullname</span>: <span style="color:#ae81ff">nginx-deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#ae81ff">A Helm chart for Kubernetes</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">appVersion</span>: <span style="color:#e6db74">&#34;1.16.0&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span></span></span></code></pre></div>
+<p>A values file is used at deploy time to allow the re-use of the template across multiple applications, and environments.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">replicaCount</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">image</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">repository</span>: <span style="color:#ae81ff">docker.io/cdaf/fastapi</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tag</span>: <span style="color:#e6db74">&#34;50&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">service</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span></span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="tokenised-values">Tokenised Values</h1>
+
+<p>To avoid the creation of multiple values YAML files, and the inherent structural drift of those files, a single file should be defined with tokenised settings. The CDAF <a href="/10-cdaf/10-getting-started/50-cd/index.html">configuration management feature</a> can be used to provide a human readable settings definition which gives an abstraction from the complexity of the Helm files.</p>
+<h2 id="examplecm">example.cm<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context    target  replicaCount  port
+container  LINUX   1             8081
+container  dev     1             8080
+container  TEST    2             8001
+container  PROD    2             8000</code></pre></div>
+<p>Now the values YAML contains tokens for deploy time replacement.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">replicaCount</span>: <span style="color:#e6db74">&#34;%replicaCount%&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">image</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">repository</span>: <span style="color:#ae81ff">docker.io/cdaf/fastapi</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tag</span>: <span style="color:#e6db74">&#34;50&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">service</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">port</span>: <span style="color:#e6db74">&#34;%port%&#34;</span></span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="helm-repository">Helm Repository</h1>
+
+<p>To provide Helm charts as a re-usable asset, Helm provides versioning and packaging. The resulting versioned packages can be consumed by multiple applications and environments. To ensure the release package is consistent and repeatable, the Helm packages are downloaded at build (CI) and not during deployment (CD). The packages are included in the release package so there are no external dependencies at deploy time.</p>
+<h2 id="the-helm-registry">The Helm registry<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Helm command line can create the packaged templates and the required index file.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm package $chart_name --destination public
+</span></span><span style="display:flex;"><span>helm repo index public</span></span></code></pre></div>
+<p>The resulting files and index.yaml files are placed on a web server to provide the repository service, e.g.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">entries</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">internal-service</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">appVersion</span>: <span style="color:#ae81ff">1.16.0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">created</span>: <span style="color:#e6db74">&#34;2022-08-11T08:51:15.763749822Z&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Use Values for Container Name</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">digest</span>: <span style="color:#ae81ff">9a0cf4c0989e3921bd9b4d2e982417c3eac04f5863feb0439ad52a9f1d6ffeb9</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">internal-service</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">application</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">urls</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">internal-service-0.0.1.tgz</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">version</span>: <span style="color:#ae81ff">0.0.1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">kiali-dashboard</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">appVersion</span>: <span style="color:#ae81ff">1.16.0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">created</span>: <span style="color:#e6db74">&#34;2022-08-11T08:51:15.764037805Z&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Use Values for Container Name</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">digest</span>: <span style="color:#ae81ff">aa65089080e3e04a6560a1f3b70fc8861609d8693c279b10154264a9fe9fc794</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">kiali-dashboard</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">application</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">urls</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">kiali-dashboard-0.0.2.tgz</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">version</span>: <span style="color:#ae81ff">0.0.2</span></span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/desired_state/index.html">Desired_state</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="desired-state-release">Desired State Release</h1>
+
+<h2 id="hahahugoshortcode58s0hbhb">Full Stack Release Helm/Kubernetes<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>To manage an application stack holistically, a <em>Declaration</em> is required. From this declaration, desired state can be calculated, i.e. what changes need to be made for an environment to be aligned to the declaration. The tool used in this example is Helmsman, however, another tool, Helmfile has fundamentally the same configuration constructs. Each gather one or more Helm applications to create an application stack. Only the necessary components will be updated if a change is determined, based on a calculated state change.</p>
+<pre class="mermaid actionbar-wrapper align-left ">
+graph TD
+  subgraph Test
+    subgraph stack1[&#34;Declaration&#34;]
+      subgraph app1[&#34;Helmchart&#34;]
+        serv1[&#34;service&#34;]
+        appt1[&#34;pod&#34;]
+      end
+      subgraph app2[&#34;Helmchart&#34;]
+        serv2[&#34;service&#34;]
+        appp2[&#34;pod&#34;]
+      end
+    end
+  end
+
+  subgraph Prod
+   subgraph stack2[&#34;Declaration&#34;]
+      subgraph app3[&#34;Helmchart&#34;]
+        serv3[&#34;service&#34;]
+        appt3[&#34;pod&#34;]
+      end
+      subgraph app4[&#34;Helmchart&#34;]
+        serv4[&#34;service&#34;]
+        appp4[&#34;pod&#34;]
+      end
+    end
+  end
+
+  serv1 --&gt; appt1
+  serv2 --&gt; appp2
+
+  serv3 --&gt; appt3
+  serv4 --&gt; appp4
+
+classDef AppStack fill:LightBlue
+class stack1,stack2 AppStack
+
+classDef dotted stroke-dasharray: 2, 2
+class stack1,stack2 dotted
+
+classDef dashed stroke-dasharray: 5, 5
+class app1,app2,app3,app4 dashed
+</pre>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Desired State Release</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/desired_state/index.html">Desired_state</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="build-once-deploy-many">Build Once, Deploy Many</h1>
+
+<h2 id="hahahugoshortcode63s0hbhb">CI Process for Declarative Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The following example is Helmsman, but the same mechanism works for Helmfile also.</p>
+<p>Using DRY principles, a single declaration of the application stack is used, and tokens applied for deplopy-time environment variations.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">scope</span>: <span style="color:#e6db74">&#34;cluster microservices&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maintainer</span>: <span style="color:#e6db74">&#34;Jules Clements&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">namespaces</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">%name_space%</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">protected</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apps</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pull</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;docker-registry-pull-secret&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;GitLab Registry Pull Secret&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">namespace</span>: <span style="color:#e6db74">&#34;%name_space%&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">chart</span>: <span style="color:#e6db74">&#34;pull-secrets-0.0.1.tgz&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;0.0.1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">valuesFile</span>: <span style="color:#e6db74">&#34;pods/docker-registry-pull-secret.yaml&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">cdaf-ui</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;cdaf-ui&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;CDAF Published Site (Django)&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">namespace</span>: <span style="color:#e6db74">&#34;%name_space%&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">chart</span>: <span style="color:#e6db74">&#34;public-ingress-0.1.4.tgz&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;0.1.4&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">valuesFile</span>: <span style="color:#e6db74">&#34;pods/cdaf-ui.yaml&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">set</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">dockerconfigjson</span>: <span style="color:#e6db74">&#34;$DOCKER_CONFIG_JSON&#34;</span></span></span></code></pre></div>
+<p>The build-time process uses the declaration to determine the Helm charts that are required at deploy time. These are downloaded and included in the package, this has the advantage of not having to manage registry access at deploy time and ensures the charts are immutable within the release package.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm repo add $repo_name https://kool-aid.gitlab.io/helm
+</span></span><span style="display:flex;"><span>IFS<span style="color:#f92672">=</span><span style="color:#e6db74">$&#39;\\n&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> chart in <span style="color:#66d9ef">$(</span>cat .cdaf/customRemote/<span style="color:#e6db74">${</span>SOLUTION<span style="color:#e6db74">}</span>.yaml | grep chart: | sort | uniq<span style="color:#66d9ef">)</span>; <span style="color:#66d9ef">do</span> eval <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>SOLUTIONROOT<span style="color:#e6db74">}</span><span style="color:#e6db74">/pull.sh </span>$repo_name<span style="color:#e6db74"> </span>$chart<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">done</span></span></span></code></pre></div>
+<h2 id="build--package">Build &amp; Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>There is no &ldquo;compiled&rdquo; output for the source files described above, so the self-contained release package capability of <a href="/10-cdaf/index.html">Continuous Delivery Automation Framework (CDAF)</a> is used to produce a portable, re-usable deployment artefact, i.e. build once, deploy many.</p>
+<pre class="mermaid actionbar-wrapper align-center ">
+graph LR
+
+  subgraph ci[&#34;Continuous Integration&#34;]
+    persist[(persist)]
+  end
+
+  release.ps1
+
+  subgraph cd[&#34;Continuous Delivery&#34;]
+    test
+    prod
+  end
+
+  persist --&gt;
+  release.ps1 --&gt; test
+  release.ps1 --&gt; prod
+
+classDef blue fill:#007FFF
+class release.ps1 blue
+ 
+classDef dashed stroke-dasharray: 5, 5
+class ci,cd dashed
+</pre>
+<p>The deployment uses an <em>Environment</em> argument is a symbolic link to the settings that need to be detokenised at deploy time, e.g.</p>
+<pre><code>./release.ps1 QA
+</code></pre>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/desired_state/index.html">Desired_state</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="helmsman-deploy-time">Helmsman Deploy-Time</h1>
+
+<h2 id="hahahugoshortcode67s0hbhb">Built Once, Deployed Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>This example is the deploy time process for Helmsman, although it is fundamentally the same for Helmfile. The tokenised application stack declaration is de-tokenised to apply the correct name_space at deploy time.</p>
+<h4 id="helmtsk">helm.tsk<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sed -i -- <span style="color:#e6db74">&#34;s•name_space•*****•g&#34;</span> ranger.yaml</span></span></code></pre></div>
+<p>the resulting deployment</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>helmsman --apply -f ranger.yaml ranger-chart
+ _ _ 
+| | | | 
+| |__ ___| |_ __ ___ ___ _ __ ___ __ _ _ __
+| &#39;_ \ / _ \ | &#39;_ ` _ \/ __| &#39;_ ` _ \ / _` | &#39;_ \ 
+| | | | __/ | | | | | \__ \ | | | | | (_| | | | | 
+|_| |_|\___|_|_| |_| |_|___/_| |_| |_|\__,_|_| |_| version: v3.11.0
+
+Helm-Charts-as-Code tool.
+WARNING: helm diff not found, using kubectl diff
+
+INFO: Parsed [[ ranger.yaml ]] successfully and found [ 1 ] apps
+INFO: Validating desired state definition
+INFO: Setting up kubectl
+INFO: Setting up helm
+INFO: Setting up namespaces
+INFO: Getting chart information
+INFO: Chart [ /solution/deploy/ranger-chart ] with version [ 0.1.0 ] was found locally.
+INFO: Charts validated.
+INFO: Preparing plan
+INFO: Acquiring current Helm state from cluster
+INFO: Checking if any Helmsman managed releases are no longer tracked by your desired state ...
+INFO: No untracked releases found
+
+NOTICE: -------- PLAN starts here --------------
+NOTICE: Release [ ranger ] in namespace [ test ] will be installed using version [ 0.1.0 ] -- priority: 0
+NOTICE: -------- PLAN ends here --------------
+
+INFO: Executing plan
+NOTICE: Install release [ ranger ] version [ 0.1.0 ] in namespace [ test ]
+NOTICE: Release &#34;ranger&#34; does not exist. Installing it now.
+NAME: ranger
+LAST DEPLOYED: Sun Aug 7 03:42:51 2022
+NAMESPACE: test
+STATUS: deployed
+REVISION: 1
+NOTES:
+
+1. Get the application URL by running these commands:
+ export POD_NAME=$(kubectl get pods --namespace test -l &#34;app.kubernetes.io/name=ranger-chart,app.kubernetes.io/instance=ranger&#34; -o jsonpath=&#34;{.items[0].metadata.name}&#34;)
+ export CONTAINER_PORT=$(kubectl get pod --namespace test $POD_NAME -o jsonpath=&#34;{.spec.containers[0].ports[0].containerPort}&#34;)
+ echo &#34;Visit http://127.0.0.1:8080 to use your application&#34;
+ kubectl --namespace test port-forward $POD_NAME 8080:$CONTAINER_PORT
+
+NOTICE: Finished: Install release [ ranger ] version [ 0.1.0 ] in namespace [ test ]</code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/desired_state/index.html">Desired_state</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="dry">DRY</h1>
+
+<h2 id="hahahugoshortcode72s0hbhb">Don&#39;t Repeat Yourself<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The key to using Helm charts rather than simply authoring Kubernetes YAML definitions is the use of templates. This way a deployment pattern can be defined once, with only the deploy time, application specific, values being changed.</p>
+<p>From the Helm template the health probes are hard coded, replace these with shared definitions, <code>.Values.service.port</code> &amp; <code>.Values.service.probeContext</code>.</p>
+<h4 id="deploymentyaml">deployment.yaml<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: {{ <span style="color:#ae81ff">.Chart.Name }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">securityContext</span>:
+</span></span><span style="display:flex;"><span>            {{- <span style="color:#ae81ff">toYaml .Values.securityContext | nindent 12 }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#34;{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">imagePullPolicy</span>: {{ <span style="color:#ae81ff">.Values.image.pullPolicy }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>            - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">http</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">containerPort</span>: {{ <span style="color:#ae81ff">.Values.service.port }}</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">protocol</span>: <span style="color:#ae81ff">TCP</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">livenessProbe</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">httpGet</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">path</span>: {{ <span style="color:#ae81ff">.Values.service.probeContext }}</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">port</span>: {{ <span style="color:#ae81ff">.Values.service.port }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">readinessProbe</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">httpGet</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">path</span>: {{ <span style="color:#ae81ff">.Values.service.probeContext }}</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">port</span>: {{ <span style="color:#ae81ff">.Values.service.port }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>            {{- <span style="color:#ae81ff">toYaml .Values.resources | nindent 12 }}</span></span></span></code></pre></div>
+<p>The <code>.Values.service.port</code> is already defined in the generated values file, but <code>.Values.service.probeContext</code> is not, so add this to the values definition.</p>
+<h4 id="valuesyaml">values.yaml<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">service</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">ClusterIP</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">8000</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">probeContext</span>: <span style="color:#ae81ff">/</span></span></span></code></pre></div>
+<p>Now replace single values file with a file for each application being deployed based on this pattern. Create additional app definitions in Helmsman</p>
+<h4 id="rangeryaml">ranger.yaml<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apps</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">kestrel</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;kestrel&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;dotnet core Kestrel API&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">namespace</span>: <span style="color:#e6db74">&#34;name_space&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">chart</span>: <span style="color:#e6db74">&#34;public-ingress-0.1.3.tgz&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;0.1.3&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">valuesFile</span>: <span style="color:#e6db74">&#34;dockerhub-public/kestrel.yaml&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">fastapi</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;fastapi&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Python Fast API&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">namespace</span>: <span style="color:#e6db74">&#34;name_space&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">chart</span>: <span style="color:#e6db74">&#34;public-ingress-0.1.1.tgz&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;0.1.1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">valuesFile</span>: <span style="color:#e6db74">&#34;dockerhub-public/fastapi.yaml&#34;</span></span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/desired_state/index.html">Desired_state</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="helmsman-secrets">Helmsman Secrets</h1>
+
+<h2 id="hahahugoshortcode76s0hbhb">Sensitive Data Management<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Define the secret in your chart with a substitution value.</p>
+<h4 id="secretsyaml">secrets.yaml<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Secret</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">dockerhub-secret</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">kubernetes.io/dockerconfigjson</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">data</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">.dockerconfigjson</span>: &gt;-<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    {{ .Values.dockerconfigjson }}</span></span></span></code></pre></div>
+<p>Define the property with no value. Note also the reference to the secret for pull from the private registry.</p>
+<h3 id="valuesyaml">values.yaml<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">replicaCount</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">image</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">repository</span>: <span style="color:#ae81ff">docker.io/cdaf/cdaf</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pullPolicy</span>: <span style="color:#ae81ff">IfNotPresent</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Overrides the image tag whose default is the chart appVersion.</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tag</span>: <span style="color:#e6db74">&#34;464&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">imagePullSecrets</span>: [{ <span style="color:#f92672">name</span>: <span style="color:#ae81ff">dockerhub-secret }]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">dockerconfigjson</span>: <span style="color:#e6db74">&#34;&#34;</span></span></span></code></pre></div>
+<p>Define the environment variable to be substituted into the chart</p>
+<h4 id="rangeryaml">ranger.yaml<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">scope</span>: <span style="color:#e6db74">&#34;cluster ranger&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maintainer</span>: <span style="color:#e6db74">&#34;Jules Clements&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">namespaces</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name_space</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">protected</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apps</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">cdaf-ui</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;cdaf-ui&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;cdaf-ui&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">namespace</span>: <span style="color:#e6db74">&#34;name_space&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">chart</span>: <span style="color:#e6db74">&#34;cdaf-ui&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;0.1.2&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">set</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">dockerconfigjson</span>: <span style="color:#e6db74">&#34;$DOCKER_CONFIG_JSON&#34;</span></span></span></code></pre></div>
+<p>No change required for the helmsman command line as the change above will trigger Helmsman to try and use the environemnt variable.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/desired_state/index.html">Desired_state</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="helmsman-version-constraints">Helmsman Version Constraints</h1>
+
+<h2 id="hahahugoshortcode79s0hbhb">Helmsman Update Limitations<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Some changes cannot be updated in place, an example of this is the service port. If this is changed, the chart version has be updated or the existing deployment manually removed.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/js/js-yaml/js-yaml.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-color.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1774678533" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1774678533" defer></script>
+    <script>
+      window.relearn.themeUseMermaid = JSON.parse("{}");
+    </script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774678533" defer></script>
+    <script src="/js/theme.min.js?1774678533" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

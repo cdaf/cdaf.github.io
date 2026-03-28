@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manifest :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.html</link>
+    <description>Declare Container Deployment as Terraform Package</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/10-manifest/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

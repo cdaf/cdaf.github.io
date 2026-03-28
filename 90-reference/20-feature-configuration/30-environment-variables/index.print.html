@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.157.0">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Environment Variables">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Environment Variables :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Environment Variables">
+    <meta property="og:url" content="https://cdaf.io/90-reference/20-feature-configuration/30-environment-variables/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Environment Variables :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Environment Variables">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Reference Guide">
+    <meta property="article:tag" content="Kb">
+    <meta property="article:tag" content="Cdaf-Config">
+    <meta property="article:tag" content="Cdaf-Features">
+    <meta itemprop="name" content="Environment Variables :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Environment Variables">
+    <meta itemprop="wordCount" content="555">
+    <meta itemprop="keywords" content="Kb,Cdaf-Config,Cdaf-Features">
+    <title>Environment Variables :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/90-reference/20-feature-configuration/30-environment-variables/index.html" rel="canonical" type="text/html" title="Environment Variables :: Concepts &amp; Applied Examples">
+    <link href="/90-reference/20-feature-configuration/30-environment-variables/index.xml" rel="alternate" type="application/rss+xml" title="Environment Variables :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1774678533" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774678533" defer></script>
+    <script src="/js/search-lunr.min.js?1774678533" defer></script>
+    <script src="/js/search.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1774678533";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774678533" rel="stylesheet">
+    <link href="/css/theme.min.css?1774678533" rel="stylesheet">
+    <link href="/css/format-print.min.css?1774678533" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/90-reference\/20-feature-configuration\/30-environment-variables\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/90-reference/20-feature-configuration/30-environment-variables/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/90-reference/index.html"><span itemprop="name">Reference Guide</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/90-reference/20-feature-configuration/index.html"><span itemprop="name">Feature Configuration</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Environment Variables</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/90-reference/20-feature-configuration/30-environment-variables/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/90-reference/20-feature-configuration/20-execution-engine/index.html" title="Execution Engine (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/90-reference/20-feature-configuration/40-solution-properties/index.html" title="Solution Properties (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 90-reference" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/cdaf-config/index.html">Cdaf-Config</a></li>
+    <li><a class="term-link" href="/tags/cdaf-features/index.html">Cdaf-Features</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="environment-variables">Environment Variables</h1>
+
+<h2 id="hahahugoshortcode104s0hbhb">Environment Variables<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Due to inconsistencies between Windows and Linux handling of environment variables, these have been divided between environment variables that are set before calling an entry script to alter the behaviour of CDAF, and environment variables that are set within bash scripts to make them globally available.</p>
+<h3 id="control-variables">Control Variables<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The following environment variables are available to control the behaviour of CDAF</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_BRANCH_NAME</td>
+          <td>Used by entry.ps1/entry.sh <br/>Override the branch name, primarily to test CI behaviour for non-default branch, i.e. main</td>
+      </tr>
+      <tr>
+          <td>CDAF_BUILD_ENV</td>
+          <td>Define the build environment, if not set, defaults will be used, see <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">execution engine Build-time Variables</a> for details</td>
+      </tr>
+      <tr>
+          <td>CDAF_CB_{variable_name}</td>
+          <td>Prefix used in <a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a> to supply local variables into the build time container</td>
+      </tr>
+      <tr>
+          <td>CDAF_CD_{variable_name}</td>
+          <td>Prefix used in <a href="/90-reference/30-docker-features/40-container-deploy/index.html">containerDeploy</a> to supply local variables into the deploy time container</td>
+      </tr>
+      <tr>
+          <td>CDAF_IB_{variable_name}</td>
+          <td>Prefix used in <a href="/90-reference/30-docker-features/30-image-build/index.html">containerBuild</a> to supply during image construction</td>
+      </tr>
+      <tr>
+          <td>CDAF_OPT_{any_value}</td>
+          <td>Prefix used in <a href="/90-reference/30-docker-features/40-container-deploy/index.html">containerDeploy</a> to set docker run options e.g. $env:CDAF_OPT_foo = &lsquo;&ndash;cpu-count 2&rsquo; $env:CDAF_OPT_bar = &lsquo;&ndash;label custom=release&rsquo;</td>
+      </tr>
+      <tr>
+          <td>CDAF_DOCKER_REQUIRED</td>
+          <td><a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a> will attempt to start Docker if not running and will fail if it cannot, rather than falling back to native execution</td>
+      </tr>
+      <tr>
+          <td>CDAF_DOCKER_RUN_ARGS</td>
+          <td><a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a> additional run arguments, e.g. &lsquo;&ndash;memory=2048m&rsquo;</td>
+      </tr>
+      <tr>
+          <td>CDAF_DELIVERY</td>
+          <td>The default target environment for cdEmulate and entry, defaults are <br/>LINUX, or<br/> WINDOWS for on-domain or WORKGROUP for off-domain</td>
+      </tr>
+      <tr>
+          <td>CDAF_ERROR_DIAG</td>
+          <td>Dependency injected custom call if error occurs in <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine</a></td>
+      </tr>
+      <tr>
+          <td>CDAF_HOME_MOUNT</td>
+          <td>to disable volume mount for containerDeploy set to &rsquo;no&rsquo;, note: this can be overridden a solution level, using CDAF_HOME_MOUNT as property</td>
+      </tr>
+      <tr>
+          <td>CDAF_IGNORE_WARNING</td>
+          <td>If messages are logged to standard error, the <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine</a> will log but not halt, however is this is set to yes, processing will halt <br/>yes or no, default is yes</td>
+      </tr>
+      <tr>
+          <td>CDAF_LOG_LEVEL</td>
+          <td>Set to DEBUG for verbose logging</td>
+      </tr>
+      <tr>
+          <td>CDAF_OVERRIDE_TOKEN</td>
+          <td>Default marker for DETOKN or PROPLD in <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine</a> is %, i.e. %key_name%, the markers can be changed using this environment variable</td>
+      </tr>
+      <tr>
+          <td>CDAF_SKIP_CONTAINER_BUILD</td>
+          <td><a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a> will not be performed if this environment variable is set to any value</td>
+      </tr>
+      <tr>
+          <td>CONTAINER_IMAGE</td>
+          <td>Override containerImage in <a href="/90-reference/30-docker-features/20-container-build/index.html">containerBuild</a> &amp; <a href="/90-reference/30-docker-features/30-image-build/index.html">imageBuild</a></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="global-variables">Global Variables<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>These variables are available to child scripts, custom scripts and <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">task execution engine</a>, see also Build-time Variables.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_CORE</td>
+          <td>CDAF helper script path</td>
+      </tr>
+      <tr>
+          <td>WORKSPACE_ROOT</td>
+          <td>Static for solution, WORKSPACE will change for project (build) or target (deploy)</td>
+      </tr>
+  </tbody>
+</table>
+<p>See also <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Build-time Variables</a>.</p>
+<h3 id="image-registry">Image Registry<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>These override <a href="/90-reference/20-feature-configuration/40-solution-properties/index.html">Solution Properties</a> properties. They are used to push the image created by dockerBuild to pull a base image from a private registry.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_SKIP_PULL</td>
+          <td>Skip updating of image</td>
+      </tr>
+      <tr>
+          <td>CDAF_PULL_REGISTRY_URL</td>
+          <td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PULL_REGISTRY_USER</td>
+          <td>Registry user, example registryuser (if not set, default is &lsquo;.&rsquo;)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PULL_REGISTRY_TOKEN</td>
+          <td>Registry token, example xyzx9234sxsrwcqw34</td>
+      </tr>
+  </tbody>
+</table>
+<p>These override <a href="/90-reference/20-feature-configuration/40-solution-properties/index.html">Solution Properties</a> properties. They are used to push the image created by imageBuild to push to a private registry.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_REGISTRY_URL</td>
+          <td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+      </tr>
+      <tr>
+          <td>CDAF_REGISTRY_TAG</td>
+          <td>Image tag(s), can being single value <code>latest</code> or list <code>latest ${BUILDNUMBER}</code></td>
+      </tr>
+      <tr>
+          <td>CDAF_REGISTRY_USER</td>
+          <td>Registry user, example registryuser (if not set, default is &lsquo;.&rsquo;)</td>
+      </tr>
+      <tr>
+          <td>CDAF_REGISTRY_TOKEN</td>
+          <td>Registry token, example xyzx9234sxsrwcqw34</td>
+      </tr>
+  </tbody>
+</table>
+<p>These override <a href="/90-reference/20-feature-configuration/40-solution-properties/index.html">Solution Properties</a> properties. They are used to push the image created by dockerPush to push to a private registry.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Variable</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_URL</td>
+          <td>Image registry URL, example myregistry.local (do not set for dockerhub)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_TAG</td>
+          <td>Image tag(s), can being single value <code>latest</code> or list <code>latest ${BUILDNUMBER}</code> (default is <code>latest</code>)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_USER</td>
+          <td>Registry user, example registryuser (if not set, default is &lsquo;.&rsquo;)</td>
+      </tr>
+      <tr>
+          <td>CDAF_PUSH_REGISTRY_TOKEN</td>
+          <td>Registry token, example xyzx9234sxsrwcqw34</td>
+      </tr>
+  </tbody>
+</table>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774678533" defer></script>
+    <script src="/js/theme.min.js?1774678533" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Package :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/10-cdaf/10-getting-started/40-package/index.html</link>
+    <description>Build-Once/Deploy-Many</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/10-cdaf/10-getting-started/40-package/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

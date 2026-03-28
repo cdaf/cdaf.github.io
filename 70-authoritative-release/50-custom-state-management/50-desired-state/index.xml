@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Desired State :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/index.html</link>
+    <description>Determining Change</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/70-authoritative-release/50-custom-state-management/50-desired-state/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

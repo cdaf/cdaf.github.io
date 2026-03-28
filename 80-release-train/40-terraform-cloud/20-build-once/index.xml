@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terraform Build :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/80-release-train/40-terraform-cloud/20-build-once/index.html</link>
+    <description>Immutable Release Package</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/80-release-train/40-terraform-cloud/20-build-once/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

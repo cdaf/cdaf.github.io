@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.157.0">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Custom Desired State Management Solution">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Custom State Management :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Custom Desired State Management Solution">
+    <meta property="og:url" content="https://cdaf.io/70-authoritative-release/50-custom-state-management/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Custom State Management :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Custom Desired State Management Solution">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Custom State Management :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Custom Desired State Management Solution">
+    <meta itemprop="wordCount" content="143">
+    <title>Custom State Management :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/70-authoritative-release/50-custom-state-management/index.html" rel="canonical" type="text/html" title="Custom State Management :: Concepts &amp; Applied Examples">
+    <link href="/70-authoritative-release/50-custom-state-management/index.xml" rel="alternate" type="application/rss+xml" title="Custom State Management :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1774678533" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774678533" defer></script>
+    <script src="/js/search-lunr.min.js?1774678533" defer></script>
+    <script src="/js/search.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1774678533";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774678533" rel="stylesheet">
+    <link href="/css/theme.min.css?1774678533" rel="stylesheet">
+    <link href="/css/format-print.min.css?1774678533" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/70-authoritative-release\/50-custom-state-management\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/70-authoritative-release/50-custom-state-management/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hahahugoshortcode46s0hbhb">HAHAHUGOSHORTCODE46s0HBHB</a></li>
+      </ul>
+    </li>
+    <li><a href="#manifest">Manifest</a></li>
+    <li><a href="#custom-state-build">Custom State Build</a></li>
+    <li><a href="#configuration-management">Configuration Management</a></li>
+    <li><a href="#desired-state">Desired State</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/70-authoritative-release/index.html"><span itemprop="name">Declarative Release</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Custom State Management</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/50-custom-state-management/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/index.html" title="Feedback Loop (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/50-custom-state-management/10-manifest/index.html" title="Manifest (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 70-authoritative-release" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="custom-state-management">Custom State Management</h1>
+
+<h3 id="hahahugoshortcode46s0hbhb">Custom Desired State Management Solution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>This example provides desired state management to the Mulesoft AnyPoint Cloudhub 2 platform. As at time of writing, a Terraform provider existed, but was incomplete, having no mechanism to deploy the runtime.</p>
+<p>The application stack is made up of individual API definitions, each paired with a runtime component.</p>
+<pre class="mermaid actionbar-wrapper align-center ">
+graph TD
+
+  subgraph dc[&#34;Mulesoft Anypoint Plaform&#34;]
+    subgraph vm1[&#34;Test&#34;]
+      vm1-in-a[&#34;API Managment&#34;]
+      vm1-con-a[&#34;Application Runtime&#34;]
+      vm1-in-b[&#34;API Managment&#34;]
+      vm1-con-b[&#34;Application Runtime&#34;]
+    end
+    subgraph vm2[&#34;Production&#34;]
+      vm2-in-a[&#34;API Managment&#34;]
+      vm2-con-a[&#34;Application Runtime&#34;]
+      vm2-in-b[&#34;API Managment&#34;]
+      vm2-con-b[&#34;Application Runtime&#34;]
+    end
+  end
+
+  client --&gt;
+  vm1-in-a --&gt; vm1-con-a
+  client --&gt;
+  vm1-in-b --&gt; vm1-con-b
+
+  client --&gt;
+  vm2-in-a --&gt; vm2-con-a
+  client --&gt;
+  vm2-in-b --&gt; vm2-con-b
+
+classDef external fill:lightblue
+class client external
+ 
+classDef dashed stroke-dasharray: 5, 5
+class vm1,vm2,cf1,cf2 dashed
+</pre>
+<ul>
+<li>
+<h2 id="manifest"><a href="/70-authoritative-release/50-custom-state-management/10-manifest/index.html">Manifest</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Declare Anypoint Components as Package</p>
+</li>
+<li>
+<h2 id="custom-state-build"><a href="/70-authoritative-release/50-custom-state-management/20-build-once/index.html">Custom State Build</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Custom State Release Package</p>
+</li>
+<li>
+<h2 id="configuration-management"><a href="/70-authoritative-release/50-custom-state-management/40-configuration-management/index.html">Configuration Management</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Building Desired State from Properties</p>
+</li>
+<li>
+<h2 id="desired-state"><a href="/70-authoritative-release/50-custom-state-management/50-desired-state/index.html">Desired State</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Determining Change
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Custom State Management</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/12-factors/index.html">12-Factors</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="manifest">Manifest</h1>
+
+<h2 id="hahahugoshortcode51s0hbhb">Declare Anypoint Components as Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The proprietary Mulesoft Anypoint Platform artefact store is called <em>Exchange</em>, and each artefact is called an <em>Asset</em>. Each <em>asset</em> is pushed to the <em>exchange</em> from the <em>autonomous development</em> pipelines. In the examples below, these are GitLab for Windows and Jenkins for Linux. Both use platform independent Maven deploy to push the asset.</p>
+<p><a href="#R-image-5e3c706cc4c1bbe5a603e267c442cc32" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-asset-push.png" style="height: auto;width: auto;" title="Autonomous Development Asset Push"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5e3c706cc4c1bbe5a603e267c442cc32"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-asset-push.png" title="Autonomous Development Asset Push"></a></p>
+<p>The release declaration is in the form of a manifest, specifying each desired component and it&rsquo;s version.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>API                        Runtime
+sprint-zero-api=1.0.1      sprint-zero-app=1.2.195
+patient-summary-api=1.2.0  patient-summary-app=1.4.114</code></pre></div>
+<p>While the stack construction is the same in all environments, unique settings for each environment are defined in configuration management files, e.g. <code>properties.cm</code>. The properties management is covered in more detail in later sections.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context    target  deployTaskOverride  fqdn                   page_id    hash_id    page_title                 anypoint_env  property_suffix
+container  STAGE   promote.tsk         example.atlassian.net  149094402  256409896  &#34;Staging Environment&#34;      TEST          tst
+container  PROD    promote.tsk         example.atlassian.net  149225473  256672078  &#34;Production Environment&#34;   PROD          prd</code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/12-factors/index.html">12-Factors</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="custom-state-build">Custom State Build</h1>
+
+<h2 id="hahahugoshortcode54s0hbhb">Custom State Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The key construct for the <em>Authoritative Release</em> is that all aspects of the release process are predictable and repeatable. Configuration and helper scripts are packaged into an immutable release. No build process is required, so the minimal <code>CDAF.solution</code> is all that is required, assuming the custom state management is placed in the <code>custom</code> directory within the solution directory, e.g.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>devops
+├── CDAF.solution
+├── custom
+│   ├── anypoint.sh
+│   ├── delta.sh
+│   ├── promote.tsk
+│   └── properties.varchk
+├── app-components.cm
+├── patient-summary-app.cm
+└── properties.cm</code></pre></div>
+<p>Example of minimal <code>CDAF.solution</code></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>solutionName=anypoint
+productName=Mulesoft Anypoint Platform
+artifactPrefix=0.7</code></pre></div>
+<p>The configuration files are transformed into properties files</p>
+<p><a href="#R-image-0255b5fac928179fa746409b9ec5849e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-cm-build.png" style="height: auto;width: auto;" title="Configuration Management Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0255b5fac928179fa746409b9ec5849e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-cm-build.png" title="Configuration Management Build"></a></p>
+<p>The custom deployment tools are included due to being in the custom directory</p>
+<p><a href="#R-image-efe3aa900dcf1ce8b871978055cd8e70" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-include.png" style="height: auto;width: auto;" title="Custom Include"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-efe3aa900dcf1ce8b871978055cd8e70"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-include.png" title="Custom Include"></a></p>
+<p>And the release package is created</p>
+<p><a href="#R-image-44d12192de733b33021802cef2d01599" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-release.png" style="height: auto;width: auto;" title="Custom Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-44d12192de733b33021802cef2d01599"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-release.png" title="Custom Release"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/12-factors/index.html">12-Factors</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="configuration-management">Configuration Management</h1>
+
+<h2 id="hahahugoshortcode56s0hbhb">Building Desired State from Properties<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The application and environment settings are split into separate configuration management files. Application settings are those which have the same value, for the release, in all environments.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context    target               region              runtime_version  java_version  release_channel
+container  patient-summary-app  cloudhub-us-east-2  4.6.7            8             LTS
+container  sprint-zero-app      cloudhub-us-east-2  4.7.1            17            Edge</code></pre></div>
+<p>Environment specific settings are associated to a given component, and differ for each environment. Note the special marker for sensitive data.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context    target                   FHIR_SERVER_PROTOCOL  FHIR_SERVER_HOST  FHIR_SERVER_PORT  FHIR_SERVER_BASE  DD_API_KEY  
+container  patient-summary-app-tst  HTTPS                 demo.kodjin.com                443  /fhir/
+container  patient-summary-app-prd  HTTPS                 server.fire.ly                 443  /r4/              PROTECT:${DD_API_KEY}</code></pre></div>
+<p>At deploy time, an array is constructed combining the application settings and the environment properties. A SHA-256 hash is generated from each array, to provide an identification mechanism of state, without disclosing any of the settings, some of which maybe sensitive.</p>
+<p>After deployment, these are persisted. In this example, they are stored in an Atlassian Confluence page. The advantage of this is that if it is desired to reset an environment after suspected manual interference, the record(s) can be deleted and the deployment rerun.</p>
+<p><a href="#R-image-709e7dc58664a6beac363ab4e94e7e34" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-current-state.png" style="height: auto;width: auto;" title="Custom Current State"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-709e7dc58664a6beac363ab4e94e7e34"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-current-state.png" title="Custom Current State"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/12-factors/index.html">12-Factors</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="desired-state">Desired State</h1>
+
+<h2 id="hahahugoshortcode57s0hbhb">Determining Change<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>At deploy time, the current state, and desired state are compared, and only those components which have changed, are deployed.</p>
+<blockquote>
+<p>In this example, deployment is orchestrated in <a href="/80-release-train/30-octopus-deploy/index.html">Octopus Deploy Release Train</a></p>
+</blockquote>
+<p><a href="#R-image-80312124930d0e85a28ef23e4677cb43" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-desired-state.png" style="height: auto;width: auto;" title="Custom Desired State"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-80312124930d0e85a28ef23e4677cb43"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-desired-state.png" title="Custom Desired State"></a></p>
+<p>Once complete, the new current state is persisted.</p>
+<p><a href="#R-image-8df288f179612f0b2707c928d3ab88ea" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/Custom-Persist-State.png" style="height: auto;width: auto;" title="Custom Persist State"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8df288f179612f0b2707c928d3ab88ea"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/Custom-Persist-State.png" title="Custom Persist State"></a></p>
+<p>These can be aggregated in the Wiki to provide a consolidate view for non-techincal users</p>
+<p><a href="#R-image-ec246cb25f4ba4ab3adf1a7308d87eaf" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-release-wiki.png" style="height: auto;width: auto;" title="Custom State Wiki"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ec246cb25f4ba4ab3adf1a7308d87eaf"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-release-wiki.png" title="Custom State Wiki"></a></p>
+<p>Note that the overarching release number is used as a update comment when writing to the Confluence page, this provides a release history which is visible outside of the toolchain, which is easier to access by business users such as test managers and product owners.</p>
+<p><a href="#R-image-66430167535dcd4e4ff5628b64ff1cd3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-release-history.png" style="height: auto;width: auto;" title="Custom Persist State"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-66430167535dcd4e4ff5628b64ff1cd3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-release-history.png" title="Custom Persist State"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/js/js-yaml/js-yaml.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-color.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1774678533" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1774678533" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1774678533" defer></script>
+    <script>
+      window.relearn.themeUseMermaid = JSON.parse("{}");
+    </script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774678533" defer></script>
+    <script src="/js/theme.min.js?1774678533" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

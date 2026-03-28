@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.157.0">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Autonomous Development Pipelines">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Imperative Deployment :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Autonomous Development Pipelines">
+    <meta property="og:url" content="https://cdaf.io/30-imperative-deployment/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Imperative Deployment :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Autonomous Development Pipelines">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Imperative Deployment :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Autonomous Development Pipelines">
+    <meta itemprop="wordCount" content="68">
+    <title>Imperative Deployment :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/30-imperative-deployment/index.html" rel="canonical" type="text/html" title="Imperative Deployment :: Concepts &amp; Applied Examples">
+    <link href="/30-imperative-deployment/index.xml" rel="alternate" type="application/rss+xml" title="Imperative Deployment :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1774678533" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1774678533" defer></script>
+    <script src="/js/search-lunr.min.js?1774678533" defer></script>
+    <script src="/js/search.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1774678533";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1774678533" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1774678533" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774678533" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774678533" rel="stylesheet">
+    <link href="/css/theme.min.css?1774678533" rel="stylesheet">
+    <link href="/css/format-print.min.css?1774678533" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/30-imperative-deployment\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/30-imperative-deployment/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hahahugoshortcode5s0hbhb">HAHAHUGOSHORTCODE5s0HBHB</a></li>
+      </ul>
+    </li>
+    <li><a href="#aspnet-classic-example">ASP.NET Classic Example</a></li>
+    <li><a href="#java-and-maven-example">Java and Maven Example</a></li>
+    <li><a href="#static-content">Static Content</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Imperative Deployment</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/30-imperative-deployment/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles-and-concepts/90-branch-plans/30-gitops/index.html" title="GitOps (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/30-imperative-deployment/20-asp-net-web-deploy/index.html" title="ASP.NET Classic Example (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 30-imperative-deployment" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="imperative-deployment">Imperative Deployment</h1>
+
+<h3 id="hahahugoshortcode5s0hbhb">Autonomous Development Pipelines<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>These examples are traditional development lifecycles, where each component is built (CI) and deployed (CD) independently. The deployments may or may not be gated, or maybe triggered based on branches, i.e. GitOps.</p>
+<ul>
+<li>
+<h2 id="aspnet-classic-example"><a href="/30-imperative-deployment/20-asp-net-web-deploy/index.html">ASP.NET Classic Example</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Build, Package and Deploy with Internet Information Services</p>
+</li>
+<li>
+<h2 id="java-and-maven-example"><a href="/30-imperative-deployment/30-java-maven/index.html">Java and Maven Example</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Build, Package and Deploy with Tomcat</p>
+</li>
+<li>
+<h2 id="static-content"><a href="/30-imperative-deployment/40-static-content/index.html">Static Content</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Build, Package and Deploy with GTM ID
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Imperative Deployment</h1>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="aspnet-classic-example">ASP.NET Classic Example</h1>
+
+<h3 id="hahahugoshortcode10s0hbhb">Build, Package and Deploy with Internet Information Services<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>This article matures the material authored by Troy Hunt, <a href="https://www.troyhunt.com/you-deploying-it-wrong-teamcity/" rel="external">You&rsquo;re deploying it wrong!</a> In his article, the <em>simple branch plan</em> method was prevalent, as prescribed by Microsoft. This article lays the implementation foundations for <em>trunk based</em> delivery.</p>
+<p>The key principle for <em>trunk based</em> delivery is build-once, deploy-many. The following steps achieve this using the Continuous Delivery Automation Framework (CDAF). The legacy features of Azure DevOps are used in this example.</p>
+<p><a href="#R-image-9078318061b27f7835e64125d6f565c5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-ci.png" style="height: auto;width: auto;" title="Legacy CI"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9078318061b27f7835e64125d6f565c5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-ci.png" title="Legacy CI"></a></p>
+<p><a href="#R-image-71801b420a93f085ca252cee4dd37e22" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-cd.png" style="height: auto;width: auto;" title="Legacy CD"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-71801b420a93f085ca252cee4dd37e22"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-cd.png" title="Legacy CD"></a></p>
+<ul>
+<li>
+<h2 id="tokenisation"><a href="/30-imperative-deployment/20-asp-net-web-deploy/10-tokenisation/index.html">Tokenisation</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Abstraction of Application Settings</p>
+</li>
+<li>
+<h2 id="continuous-integration-ci"><a href="/30-imperative-deployment/20-asp-net-web-deploy/20-ci/index.html">Continuous Integration (CI)</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Build &amp; Package Once</p>
+</li>
+<li>
+<h2 id="continuous-delivery-cd"><a href="/30-imperative-deployment/20-asp-net-web-deploy/30-cd/index.html">Continuous Delivery (CD)</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Deploy Many
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of ASP.NET Classic Example</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/separation-of-concerns/index.html">Separation-of-Concerns</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="tokenisation">Tokenisation</h1>
+
+<h2 id="hahahugoshortcode37s0hbhb">Abstraction of Application Settings<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>In this example, the ASP.NET solution creates a <em>Web Deploy</em> package. A common approach for this is to create a build for each environment with the settings transformed into environment specific <code>.config</code> files.</p>
+<p>In the CDAF approach, a single, tokenised, configuration file, i.e. <code>Web.Release.config</code> is produced. The principle of a <em>single way of working</em> encourages the abstraction of application settings from the internal representation.</p>
+<p>Note: The <em>Release</em> build is used in this example, to avoid breaking the development experience which typically uses the <em>Debug</em> configuration. IF the developers use both <em>Debug</em> &amp; <em>Release</em> configurations, create a separate configuration because the tokenised <em>Release</em> will not run in Visual Studio.</p>
+<p>For generic settings, a simple direct mapping is recommended</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>  <span style="color:#f92672">&lt;appSettings&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;add</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;displayName&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;%displayName%&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;add</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;backendURL&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;%backendURL%&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/appSettings&gt;</span></span></span></code></pre></div>
+<p>For a connection string, cannot use a token name beginning with <em>d</em>, i.e. <code>%dbname%</code> will fail as <em>%d</em> is interpreted as a special character.</p>
+<blockquote>
+<p>Note the different token marker for sensitive data.</p>
+</blockquote>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>  <span style="color:#f92672">&lt;connectionStrings&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;add</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;entities&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">connectionString=</span><span style="color:#e6db74">&#34;Server=%sqlDBHost%;Database=%sqlDBName%;user id=%sqlDBUser%;password=@sqlDBPassword@;&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">xdt:Transform=</span><span style="color:#e6db74">&#34;SetAttributes&#34;</span> <span style="color:#a6e22e">xdt:Locator=</span><span style="color:#e6db74">&#34;Match(name)&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/connectionStrings&gt;</span></span></span></code></pre></div>
+<p>The construction of web deploy settings for the deploy path is not intuitive and is no longer (after 2010) accessible via the Visual Studio user interface. Edit the <code>.csproj</code> file directly for the <code>Release</code> property group.</p>
+<blockquote>
+<p>note that the % character itself has to be encoded, i.e. <code>%25</code></p>
+</blockquote>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>  <span style="color:#f92672">&lt;PropertyGroup</span> <span style="color:#a6e22e">Condition=</span><span style="color:#e6db74">&#34; &#39;$(Configuration)|$(Platform)&#39; == &#39;Release|AnyCPU&#39; &#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;DebugType&gt;</span>pdbonly<span style="color:#f92672">&lt;/DebugType&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;Optimize&gt;</span>true<span style="color:#f92672">&lt;/Optimize&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;OutputPath&gt;</span>bin\<span style="color:#f92672">&lt;/OutputPath&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;DefineConstants&gt;</span>TRACE<span style="color:#f92672">&lt;/DefineConstants&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;ErrorReport&gt;</span>prompt<span style="color:#f92672">&lt;/ErrorReport&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;WarningLevel&gt;</span>4<span style="color:#f92672">&lt;/WarningLevel&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;DeployIisAppPath&gt;</span>%25webAppSite%25/%25webAppName%25<span style="color:#f92672">&lt;/DeployIisAppPath&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/PropertyGroup&gt;</span></span></span></code></pre></div>
+<p>Now that the ASP.NET specific files have been prepared, now the Continuous Integration (CI) process can be applied which will Build &amp; Package the solution.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/separation-of-concerns/index.html">Separation-of-Concerns</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="continuous-integration-ci">Continuous Integration (CI)</h1>
+
+<h2 id="hahahugoshortcode40s0hbhb">Build &amp; Package Once<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The primary driver file for CDAF is the <code>CDAF.solution</code> file. The directory containing this file is the <a href="/10-cdaf/10-getting-started/10-ci/index.html">SOLUTIONROOT</a>. The mandatory properties are <em>solutionName</em> and <em>artifactPrefix</em>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#a6e22e">solutionName</span><span style="color:#f92672">=</span><span style="color:#e6db74">MyAspApp</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">artifactPrefix</span><span style="color:#f92672">=</span><span style="color:#e6db74">0.1</span></span></span></code></pre></div>
+<h3 id="build-process">Build Process<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The CDAF <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine</a> is used to reduce the cognitive load, allowing the engineer to focus on the primary objective, and not have to cater for logging, exception and error handling. The <code>build.tsk</code> file is placed in the <em>project</em> sub-directory.</p>
+<h4 id="buildtsk">build.tsk<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>The <code>EXITIF</code> operation allows the skipping of the build prcess if the built-in variable <code>$ACTION</code> has been set to <code>clean</code>. The <code>MSTOOL</code> operation loads the path to MSBuild.exe into environment variable <code>$env:MS_BUILD</code>. The <code>REPLAC</code> operation detokenises static content file to inject the product version, which includes the built in <code>$BUILDNUMBER</code>. Then the compile of the code and generation of Web Deploy (<code>/T:Package</code>) artefacts is performed:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>REMOVE bin
+</span></span><span style="display:flex;"><span>REMOVE obj
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;If Action is clean only, then exit</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>EXITIF $ACTION <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;clean&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Combine to create symantic (http://semver.org/) version</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>ASSIGN $productVersion+=<span style="color:#e6db74">&#39;.&#39;</span>
+</span></span><span style="display:flex;"><span>ASSIGN $productVersion+=$BUILDNUMBER
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MSTOOL
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;PROJECT         : </span>$($PROJECT)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">`$</span><span style="color:#e6db74">productVersion : </span>$productVersion<span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$PROJECT<span style="color:#e6db74">] Apply product version as static content</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>REPLAC Views\Shared\_Layout.cshtml <span style="color:#66d9ef">%</span>productVersion% $productVersion
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$PROJECT<span style="color:#e6db74">] Build Project (</span>$PROJECT<span style="color:#e6db74">) with specific parameters for web deploy.</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>&amp; <span style="color:#e6db74">&#34;</span>$env:MS_BUILD<span style="color:#e6db74">&#34;</span> $PROJECT.csproj /T:Package /P:Configuration=Release /p:buildNumber=$productVersion</span></span></code></pre></div>
+<p><a href="#R-image-d7d78eb5de9a0ba3bf4499e332ffe8ec" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-build.png" style="height: auto;width: auto;" title="MSBuild"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d7d78eb5de9a0ba3bf4499e332ffe8ec"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-build.png" title="MSBuild"></a></p>
+<p>The resulting build is a directory files, which need to be included in your <code>storeFor</code> definition for packaging</p>
+<h4 id="storefor">storeFor<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Define the artefacts that are needed to perform repeatable deployments.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>SelfService\obj\Release\Package\SelfService.deploy.cmd -Flat
+SelfService\obj\Release\Package\SelfService.deploy-readme.txt -Flat
+SelfService\obj\Release\Package\SelfService.SetParameters.xml -Flat
+SelfService\obj\Release\Package\SelfService.SourceManifest.xml -Flat
+SelfService\obj\Release\Package\SelfService.zip -Flat
+
+Database\scripts -Recurse</code></pre></div>
+<p><a href="#R-image-6e937430efb7d7ffb78d3ed01b4e623e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wols-package.png" style="height: auto;width: auto;" title="Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6e937430efb7d7ffb78d3ed01b4e623e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wols-package.png" title="Package"></a></p>
+<p>The CDAF CI process will build the application, with tokenised settings and package this into a self-extracting <em>release.ps1</em> file. This release package can be executed for all target environments.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/separation-of-concerns/index.html">Separation-of-Concerns</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="continuous-delivery-cd">Continuous Delivery (CD)</h1>
+
+<h2 id="hahahugoshortcode44s0hbhb">Deploy Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The tokenised configuration files need to be detokenised at deploy time. The settings are likely to include both sensitive and non-sensitive values. A core principle of CDAF for sensitive values is based on the 12-Factor approach of using environment variables, while source control is the recommended approach for non-sensitive values.</p>
+<h3 id="why-source-control-for-settings">Why Source Control for Settings?<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The Continuous Delivery Automation Framework (CDAF) has been engineered for enterprise scale implementations. Large scale organisations typically have a higher focus on gating and auditing, and to provide a change of configuration audit trail, along with a single way-of-working, the configuration changes are applied using the same principles as other deliveries, e.g application development.</p>
+<h3 id="how-are-application-settings-defined">How are Application Settings Defined?<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>From the CI process, the release package containers a dokenised <code>SetParameters.xml</code> So now <a href="/10-cdaf/10-getting-started/50-cd/index.html">configuration management</a> can be applied at deploy time. To provide a <em>separation of concerns</em>, where a user only wants to compare or change settings for environments, they do not have to understand the ASP.NET specific XML file formats, instead, they only need to review the configuration management tables.</p>
+<h4 id="propertiescm">properties.cm<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>CDAF does not have an opinionated view of configuration management files, but by convention, the key configuration settings are placed in <code>properties.cm</code> in the SOLUTIONROOT. The field names in the <em>configuration management</em> file must match the tokens.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context  target  webAppSite           webAppName  sqlDBHost  sqlDBName  sqlDBUser  sqlDBPassword
+local    TEST    &#34;Default Web Site&#34;   test        nonprod    test       testuser   $env:TEST_DB_PASS
+local    TEST    &#34;Default Web Site&#34;   uat         nonprod    uat        uatuser    $env:UAT_DB_PASS
+local    PROD    &#34;Default Web Site&#34;   prod        prodsql    prod       produser   $env:PROD_DB_PASS</code></pre></div>
+<h4 id="deploy-many">Deploy Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>During (Local)[/10-cdaf/10-getting-started/60-local-tasks] or (Remote)[/10-cdaf/10-getting-started/70-remote-tasks] deployment. The deployment task can now detokenise all properties for the application deployment. The CDAF <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine</a> is used to perform the <em>deploy time</em> detokenisation. <a href="/90-reference/20-feature-configuration/30-environment-variables/index.html">CDAF environment variables</a> are used to manipulate behaviour.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Detokenise the non-sensitive settings for this environment&#34;</span>
+</span></span><span style="display:flex;"><span>DETOKN MyAspApp.SetParameters.xml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Detokenise the sensitive settings, resolving, but not revealing, settings containing variable names&#34;</span>
+</span></span><span style="display:flex;"><span>$env:CDAF_OVERRIDE_TOKEN = <span style="color:#e6db74">&#39;@&#39;</span>
+</span></span><span style="display:flex;"><span>DETOKN MyAspApp.SetParameters.xml $TARGET resolve
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Use Web Deploy to deploy the Aware application&#34;</span>
+</span></span><span style="display:flex;"><span>.\MyAspApp.deploy.cmd /Y /M:localhost</span></span></code></pre></div>
+<p><a href="#R-image-63caab46aca0f9ee9d31be3415dcfe26" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wol-deploy.png" style="height: auto;width: auto;" title="Deployment"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-63caab46aca0f9ee9d31be3415dcfe26"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wol-deploy.png" title="Deployment"></a></p>
+<p>The overview of how to construct and test this locally see the <a href="/10-cdaf/10-getting-started/50-cd/index.html">CDAF basics</a>.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="java-and-maven-example">Java and Maven Example</h1>
+
+<h3 id="hahahugoshortcode14s0hbhb">Build, Package and Deploy with Tomcat<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>This article lays the implementation foundations for <a href="/80-release-train/20-ansible-automation-platform/index.html"><em>Release Train</em></a> delivery. The key principle is <a href="https://blog.cdaf.io/articles/autonomous-development-authoritative-release/" rel="external">Autonomous Development, Authoritative Release</a>, with this material describing an <em>autonomous development</em> pipeline. The following steps achieve this using the Continuous Delivery Automation Framework (CDAF).</p>
+<p><a href="#R-image-574852d6a2e5db8aed1f84d68e54c248" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-pipeline.png" style="height: auto;width: auto;" title="Autonomous Development Pipeline"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-574852d6a2e5db8aed1f84d68e54c248"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-pipeline.png" title="Autonomous Development Pipeline"></a></p>
+<ul>
+<li>
+<h2 id="continuous-integration-ci"><a href="/30-imperative-deployment/30-java-maven/20-ci/index.html">Continuous Integration (CI)</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Build &amp; Package Once</p>
+</li>
+<li>
+<h2 id="continuous-delivery-cd"><a href="/30-imperative-deployment/30-java-maven/30-cd/index.html">Continuous Delivery (CD)</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Deploy Many
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Java and Maven Example</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/separation-of-concerns/index.html">Separation-of-Concerns</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="continuous-integration-ci">Continuous Integration (CI)</h1>
+
+<h2 id="hahahugoshortcode41s0hbhb">Build &amp; Package Once<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>To provide a runtime verification of the build that has been deployed, the version is automatically incremented by placing a variable in the <code>pom.xml</code> file</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ..
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;artifactId&gt;</span>springboot<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;groupId&gt;</span>io.cdaf<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;name&gt;</span>Spring Boot Data REST Sample<span style="color:#f92672">&lt;/name&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;description&gt;</span>Spring Boot Data REST Sample<span style="color:#f92672">&lt;/description&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;version&gt;</span>0.2.${build.number}<span style="color:#f92672">&lt;/version&gt;</span></span></span></code></pre></div>
+<p>In the <a href="/10-cdaf/10-getting-started/30-ci/index.html">build task</a>, the build number is supplied as a maven parameter</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn --batch-mode --file springboot/pom.xml package -D<span style="color:#e6db74">&#34;build.number=</span><span style="color:#e6db74">${</span>BUILDNUMBER<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span></span></span></code></pre></div>
+<p><a href="#R-image-54b3656df95857878f731d67cf48083d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-mvn.png" style="height: auto;width: auto;" title="Spring Maven Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-54b3656df95857878f731d67cf48083d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-mvn.png" title="Spring Maven Build"></a></p>
+<p>The resulting artefact is in a subdirectory, buy using the -flat parameter in <code>storeForLocal</code> the artefact will be placed in the root of release package.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>springboot/target/springboot.war -flat</code></pre></div>
+<p><a href="#R-image-2c1c37763f9e5c8b1003096638250690" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-store-for.png" style="height: auto;width: auto;" title="Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2c1c37763f9e5c8b1003096638250690"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-store-for.png" title="Package"></a></p>
+<h3 id="image-build">Image Build<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>By setting the <code>buildImage</code> property in the <code>CDAF.solution</code> driver file, a docker image build and push is triggered. In this example the image is pushed to an on-premise container registry (Nexus).</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>productName=Springboot Sprint Zero
+solutionName=spring
+
+artifactPrefix=0.2
+
+buildImage=registry.access.redhat.com/ubi9/openjdk-17-runtime
+CDAF_REGISTRY_URL=https://${NEXUS_REGISTRY}
+CDAF_REGISTRY_TAG=${NEXUS_REGISTRY}/${SOLUTION}:$BUILDNUMBER
+CDAF_REGISTRY_USER=${NEXUS_REGISTRY_USER}
+CDAF_REGISTRY_TOKEN=${NEXUS_REGISTRY_PASS}
+
+registryTag=${NEXUS_REGISTRY}/${SOLUTION}:$BUILDNUMBER</code></pre></div>
+<p><a href="#R-image-77f8106d02e1bebed4cee89f4adfdfd0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-image-build.png" style="height: auto;width: auto;" title="Image Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-77f8106d02e1bebed4cee89f4adfdfd0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-image-build.png" title="Image Build"></a>
+<a href="#R-image-75f3a0557749c685013c625b9a1ba516" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-image-push.png" style="height: auto;width: auto;" title="Image Push"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-75f3a0557749c685013c625b9a1ba516"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-image-push.png" title="Image Push"></a></p>
+<p>This image is consumed, along with other autonomous development components, in the <a href="/80-release-train/20-ansible-automation-platform/index.html"><em>Release Train</em></a>.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/separation-of-concerns/index.html">Separation-of-Concerns</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="continuous-delivery-cd">Continuous Delivery (CD)</h1>
+
+<h2 id="hahahugoshortcode45s0hbhb">Deploy Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>While this example does not delivery the software component imperatively, i.e. it is release declaratively via the <a href="/80-release-train/20-ansible-automation-platform/index.html"><em>Release Train</em></a>, a Continuous Delivery stage is still performed, however this is a closed loop process, where docker-compose is used to stand-up a container instance from the image, stand-up another container to perform a smoke test, and then tear down the stack.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">target</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#34;${TARGET_TAG}&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">test</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#34;${TEST_TAG}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">links</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">target:target</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">target</span></span></span></code></pre></div>
+<p><a href="#R-image-0782ca21979d2899a7cfe2a4f97e453f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-cd-start.png" style="height: auto;width: auto;" title="Compose Start"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0782ca21979d2899a7cfe2a4f97e453f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-cd-start.png" title="Compose Start"></a>
+<a href="#R-image-86bf01d5f5cab98d55f8ba3d4be04b6e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-cd-test.png" style="height: auto;width: auto;" title="Compose Test"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-86bf01d5f5cab98d55f8ba3d4be04b6e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-cd-test.png" title="Compose Test"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="static-content">Static Content</h1>
+
+<h3 id="hahahugoshortcode17s0hbhb">Build, Package and Deploy with GTM ID<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>In this example, a React App, with Typescript, is built and package, then deployed to a Content Delivery Network. As there is no server side component to configure for environment differences, an alternate strategy is used.</p>
+<p><a href="#R-image-5bbedfe007395452a41d1e89685503e8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-pipelines.png" style="height: auto;width: auto;" title="Multi-pipeline"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5bbedfe007395452a41d1e89685503e8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-pipelines.png" title="Multi-pipeline"></a></p>
+<ul>
+<li>
+<h2 id="tokenisation"><a href="/30-imperative-deployment/40-static-content/10-tokenisation/index.html">Tokenisation</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Abstraction of Application Settings</p>
+</li>
+<li>
+<h2 id="continuous-integration-ci"><a href="/30-imperative-deployment/40-static-content/20-ci/index.html">Continuous Integration (CI)</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Build &amp; Package Once</p>
+</li>
+<li>
+<h2 id="continuous-delivery-cd"><a href="/30-imperative-deployment/40-static-content/30-cd/index.html">Continuous Delivery (CD)</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Deploy Many
+{class=&ldquo;children children-type-list children-sort-&rdquo;}</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Static Content</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/separation-of-concerns/index.html">Separation-of-Concerns</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="tokenisation">Tokenisation</h1>
+
+<h2 id="hahahugoshortcode21s0hbhb">Abstraction of Application Settings<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>As the application is static content, <a href="https://medium.com/@hasniarif/how-to-handle-runtime-environment-variables-with-react-ec809cb07831" rel="external">runtime variables</a> are not applicable, however, variations in the application configuration at deploy time can, on occasions, be applicable, e.g. using a different Google Tag Manager (GTM) for production and non-production environments to ensure the analytics are not contaminated.</p>
+<p>Within source control there are two tokens applied. The first is a build-time token, which captures the semantic version. This is constructed from a release prefix and build number. This ensure from a user/tester perspective, the running asset can be verified to build that created it.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;App&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">header</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;App-header&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">logo</span>} <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;App-logo&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;logo&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">p</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Class</span> <span style="color:#a6e22e">B</span> <span style="color:#a6e22e">campervan</span> <span style="color:#a6e22e">comparison</span> <span style="color:#a6e22e">tool</span> <span style="color:#a6e22e">version</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">semver</span><span style="color:#960050;background-color:#1e0010">@</span></span></span></code></pre></div>
+<p>The second token is the GTM ID, this is deploy-time token.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;html</span> <span style="color:#a6e22e">lang=</span><span style="color:#e6db74">&#34;en&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;head&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">&lt;!-- Google Tag Manager --&gt;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;script&gt;</span>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#39;gtm.start&#39;:
+</span></span><span style="display:flex;"><span>	new Date().getTime(),event:&#39;gtm.js&#39;});var f=d.getElementsByTagName(s)[0],
+</span></span><span style="display:flex;"><span>	j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.async=true;j.src=
+</span></span><span style="display:flex;"><span>	&#39;https://www.googletagmanager.com/gtm.js?id=&#39;+i+dl;f.parentNode.insertBefore(j,f);
+</span></span><span style="display:flex;"><span>	})(window,document,&#39;script&#39;,&#39;dataLayer&#39;,&#39;@gtm-id@&#39;);<span style="color:#f92672">&lt;/script&gt;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">&lt;!-- End Google Tag Manager --&gt;</span></span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/separation-of-concerns/index.html">Separation-of-Concerns</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="continuous-integration-ci">Continuous Integration (CI)</h1>
+
+<h2 id="hahahugoshortcode29s0hbhb">Build &amp; Package Once<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The primary driver file for CDAF is the <code>CDAF.solution</code> file. The directory containing this file is the <a href="/10-cdaf/10-getting-started/10-ci/index.html">SOLUTIONROOT</a>. The mandatory properties are <em>solutionName</em> and <em>artifactPrefix</em>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#a6e22e">solutionName</span><span style="color:#f92672">=</span><span style="color:#e6db74">classbwizard</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">productName</span><span style="color:#f92672">=</span><span style="color:#e6db74">React Class B Recreational Vehicle Comparison Tool</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">artifactPrefix</span><span style="color:#f92672">=</span><span style="color:#e6db74">0.5</span></span></span></code></pre></div>
+<h3 id="build-process">Build Process<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The CDAF <a href="/90-reference/20-feature-configuration/20-execution-engine/index.html">Execution Engine</a> is used to reduce the cognitive load, allowing the engineer to focus on the primary objective, and not have to cater for logging, exception and error handling. In this example, the <code>build.tsk</code> file is <strong>not</strong> placed in the <em>project</em> sub-directory, instead this is placed in the solution root. The reason for this is that the project sub-directory is copied to a temporary directory for the build, because the source code is manipulated prior to the build and it this should not be mistakenly committed to source control.</p>
+<blockquote>
+<p>Note the construction of <code>semver</code>, combined from source control major &amp; minor version, with build number suffix to ensure version is unique and traceable.</p>
+</blockquote>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>REFRSH ./spa/src ./temp/src
+REFRSH ./spa/public ./temp/public
+VECOPY ./spa/*.json ./temp
+cd ./temp
+
+ASSIGN $semver=&#34;${artifactPrefix}.${BUILDNUMBER}&#34;
+REPLAC src/App.js @semver@ $semver
+
+npm install
+npm run build</code></pre></div>
+<p><a href="#R-image-f7ec56f581067d6bed82566e96c2f693" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-build.png" style="height: auto;width: auto;" title="Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f7ec56f581067d6bed82566e96c2f693"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-build.png" title="Build"></a></p>
+<p>Only the compiled output is retained in the release package, as defined in <code>storeForLocal</code></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>temp/build/</code></pre></div>
+<p><a href="#R-image-4e767cc68e24eabc6d0e0bcacff07885" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-package.png" style="height: auto;width: auto;" title="Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e767cc68e24eabc6d0e0bcacff07885"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-package.png" title="Package"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/separation-of-concerns/index.html">Separation-of-Concerns</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="continuous-delivery-cd">Continuous Delivery (CD)</h1>
+
+<h2 id="hahahugoshortcode32s0hbhb">Deploy Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The continuous delivery has multiple phases, first is a closed-loop test, then are the runtime environments, which are promoted, starting with acceptance test.</p>
+<h3 id="closed-loop-test">Closed-Loop Test<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>This first delivery stage used docker-compose to stand-up, test and tear-down an environment. This environment is transient and not accessible by manual testers.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">classb</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#34;${CLASSB_TAG}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8000:8000&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">test</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#34;${TEST_TAG}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">${WORK_SPACE}:/solution/workspace</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">links</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">classb:classb</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">classb</span></span></span></code></pre></div>
+<p><a href="#R-image-813f464473518dcd5e62ab0d5adfa478" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-start.png" style="height: auto;width: auto;" title="Closed-loop"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-813f464473518dcd5e62ab0d5adfa478"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-start.png" title="Closed-loop"></a></p>
+<h3 id="release-promotion">Release Promotion<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>After the closed-loop tests have passed, then the deployment to user acceptance test is performed. In source control, the configuration management table defines the target environments and their GTM ID.</p>
+<blockquote>
+<p>The GTM ID publicly accessible in the static content, and therefore does not need to be managed as a secret, i.e. can be plain text in source control.</p>
+</blockquote>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context  target  deployTaskOverride       github_repo             gtm_id
+local    TEST    push-static-content.tsk  classb-test.opennz.org  G-JM71HCEG2Q
+local    PROD    push-static-content.tsk  classb.opennz.org       GTM-5VSBHSV</code></pre></div>
+<p>At deploy-time the GTM ID for the target environment is detonised in the static content before pushing it to the content delivery network CDN.</p>
+<p><a href="#R-image-dc1775f79d8c9b96e41b7461f1084173" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-detoken.png" style="height: auto;width: auto;" title="Detokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dc1775f79d8c9b96e41b7461f1084173"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-detoken.png" title="Detokenisation"></a></p>
+<p>The release includes both the build-time and deploy-time detokenised content.</p>
+<p><a href="#R-image-ca3b11656387d237430a4ca456734857" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-deployed.png" style="height: auto;width: auto;" title="Deployed Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ca3b11656387d237430a4ca456734857"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-deployed.png" title="Deployed Release"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774678533" defer></script>
+    <script src="/js/theme.min.js?1774678533" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>
