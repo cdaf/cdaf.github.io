@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.157.0">
+    <meta name="generator" content="Hugo 0.159.1">
     <meta name="generator" content="Relearn 9.0.3">
     <meta name="description" content="Custom Desired State Management Solution">
     <meta name="author" content="">
@@ -22,26 +22,26 @@
     <title>Custom State Management :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/70-authoritative-release/50-custom-state-management/index.html" rel="canonical" type="text/html" title="Custom State Management :: Concepts &amp; Applied Examples">
     <link href="/70-authoritative-release/50-custom-state-management/index.xml" rel="alternate" type="application/rss+xml" title="Custom State Management :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1774684203" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1774684203" defer></script>
-    <script src="/js/search-lunr.min.js?1774684203" defer></script>
-    <script src="/js/search.min.js?1774684203" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1775338159" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1775338159" defer></script>
+    <script src="/js/search-lunr.min.js?1775338159" defer></script>
+    <script src="/js/search.min.js?1775338159" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1774684203";
+      window.relearn.index_js_url="/searchindex.en.js?1775338159";
     </script>
-    <script src="/js/lunr/lunr.min.js?1774684203" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1774684203" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1774684203" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1774684203" defer></script>
+    <script src="/js/lunr/lunr.min.js?1775338159" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1775338159" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1775338159" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1775338159" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1774684203" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1774684203" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1774684203" rel="stylesheet">
-    <link href="/css/theme.min.css?1774684203" rel="stylesheet">
-    <link href="/css/format-print.min.css?1774684203" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1775338159" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1775338159" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1775338159" rel="stylesheet">
+    <link href="/css/theme.min.css?1775338159" rel="stylesheet">
+    <link href="/css/format-print.min.css?1775338159" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -109,7 +109,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#hahahugoshortcode60s0hbhb">HAHAHUGOSHORTCODE60s0HBHB</a></li>
+        <li><a href="#hahahugoshortcode43s0hbhb">HAHAHUGOSHORTCODE43s0HBHB</a></li>
       </ul>
     </li>
     <li><a href="#manifest">Manifest</a></li>
@@ -155,7 +155,7 @@
 
 <h1 id="custom-state-management">Custom State Management</h1>
 
-<h3 id="hahahugoshortcode60s0hbhb">Custom Desired State Management Solution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h3 id="hahahugoshortcode43s0hbhb">Custom Desired State Management Solution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>This example provides desired state management to the Mulesoft AnyPoint Cloudhub 2 platform. As at time of writing, a Terraform provider existed, but was incomplete, having no mechanism to deploy the runtime.</p>
 <p>The application stack is made up of individual API definitions, each paired with a runtime component.</p>
 <pre class="mermaid actionbar-wrapper align-center ">
@@ -230,10 +230,10 @@ class vm1,vm2,cf1,cf2 dashed
 
 <h1 id="manifest">Manifest</h1>
 
-<h2 id="hahahugoshortcode63s0hbhb">Declare Anypoint Components as Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode46s0hbhb">Declare Anypoint Components as Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The proprietary Mulesoft Anypoint Platform artefact store is called <em>Exchange</em>, and each artefact is called an <em>Asset</em>. Each <em>asset</em> is pushed to the <em>exchange</em> from the <em>autonomous development</em> pipelines. In the examples below, these are GitLab for Windows and Jenkins for Linux. Both use platform independent Maven deploy to push the asset.</p>
-<p><a href="#R-image-ba4ef89764533208bf5b98c70c666d16" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-asset-push.png" style="height: auto;width: auto;" title="Autonomous Development Asset Push"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ba4ef89764533208bf5b98c70c666d16"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-asset-push.png" title="Autonomous Development Asset Push"></a></p>
+<p><a href="#R-image-cf640b9df31f38f7f9bcd333eeb4cde4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-asset-push.png" style="height: auto;width: auto;" title="Autonomous Development Asset Push"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cf640b9df31f38f7f9bcd333eeb4cde4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-asset-push.png" title="Autonomous Development Asset Push"></a></p>
 <p>The release declaration is in the form of a manifest, specifying each desired component and it&rsquo;s version.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>API                        Runtime
 sprint-zero-api=1.0.1      sprint-zero-app=1.2.195
@@ -259,7 +259,7 @@ container  PROD    promote.tsk         example.atlassian.net  149225473  2566720
 
 <h1 id="custom-state-build">Custom State Build</h1>
 
-<h2 id="hahahugoshortcode64s0hbhb">Custom State Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode48s0hbhb">Custom State Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The key construct for the <em>Authoritative Release</em> is that all aspects of the release process are predictable and repeatable. Configuration and helper scripts are packaged into an immutable release. No build process is required, so the minimal <code>CDAF.solution</code> is all that is required, assuming the custom state management is placed in the <code>custom</code> directory within the solution directory, e.g.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>devops
 ├── CDAF.solution
@@ -276,14 +276,14 @@ container  PROD    promote.tsk         example.atlassian.net  149225473  2566720
 productName=Mulesoft Anypoint Platform
 artifactPrefix=0.7</code></pre></div>
 <p>The configuration files are transformed into properties files</p>
-<p><a href="#R-image-6f0418f1cbf9526320432096398ca2cb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-cm-build.png" style="height: auto;width: auto;" title="Configuration Management Build"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6f0418f1cbf9526320432096398ca2cb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-cm-build.png" title="Configuration Management Build"></a></p>
+<p><a href="#R-image-c7f408918759c7ae9c77f46e2c152800" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-cm-build.png" style="height: auto;width: auto;" title="Configuration Management Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c7f408918759c7ae9c77f46e2c152800"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-cm-build.png" title="Configuration Management Build"></a></p>
 <p>The custom deployment tools are included due to being in the custom directory</p>
-<p><a href="#R-image-d0a2100dabdd6d3c1893b082145296ea" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-include.png" style="height: auto;width: auto;" title="Custom Include"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d0a2100dabdd6d3c1893b082145296ea"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-include.png" title="Custom Include"></a></p>
+<p><a href="#R-image-be2ab97ad697cef39a11867de07a9e46" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-include.png" style="height: auto;width: auto;" title="Custom Include"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-be2ab97ad697cef39a11867de07a9e46"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-include.png" title="Custom Include"></a></p>
 <p>And the release package is created</p>
-<p><a href="#R-image-69c349d35a34ab61d23cc5caa1891b37" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-release.png" style="height: auto;width: auto;" title="Custom Release"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-69c349d35a34ab61d23cc5caa1891b37"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-release.png" title="Custom Release"></a></p>
+<p><a href="#R-image-e1d2e4ab26edd1ea1e4381b1c6a73c82" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-release.png" style="height: auto;width: auto;" title="Custom Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e1d2e4ab26edd1ea1e4381b1c6a73c82"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-release.png" title="Custom Release"></a></p>
 
   <footer class="footline">
   </footer>
@@ -301,7 +301,7 @@ artifactPrefix=0.7</code></pre></div>
 
 <h1 id="configuration-management">Configuration Management</h1>
 
-<h2 id="hahahugoshortcode65s0hbhb">Building Desired State from Properties<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode50s0hbhb">Building Desired State from Properties<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The application and environment settings are split into separate configuration management files. Application settings are those which have the same value, for the release, in all environments.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context    target               region              runtime_version  java_version  release_channel
 container  patient-summary-app  cloudhub-us-east-2  4.6.7            8             LTS
@@ -312,8 +312,8 @@ container  patient-summary-app-tst  HTTPS                 demo.kodjin.com       
 container  patient-summary-app-prd  HTTPS                 server.fire.ly                 443  /r4/              PROTECT:${DD_API_KEY}</code></pre></div>
 <p>At deploy time, an array is constructed combining the application settings and the environment properties. A SHA-256 hash is generated from each array, to provide an identification mechanism of state, without disclosing any of the settings, some of which maybe sensitive.</p>
 <p>After deployment, these are persisted. In this example, they are stored in an Atlassian Confluence page. The advantage of this is that if it is desired to reset an environment after suspected manual interference, the record(s) can be deleted and the deployment rerun.</p>
-<p><a href="#R-image-e6c1ee3363f3f5d3fb74e78787b8e73b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-current-state.png" style="height: auto;width: auto;" title="Custom Current State"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e6c1ee3363f3f5d3fb74e78787b8e73b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-current-state.png" title="Custom Current State"></a></p>
+<p><a href="#R-image-ad4e07774d198db5c3fe5eef5c7784cc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-current-state.png" style="height: auto;width: auto;" title="Custom Current State"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ad4e07774d198db5c3fe5eef5c7784cc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-current-state.png" title="Custom Current State"></a></p>
 
   <footer class="footline">
   </footer>
@@ -331,22 +331,22 @@ container  patient-summary-app-prd  HTTPS                 server.fire.ly        
 
 <h1 id="desired-state">Desired State</h1>
 
-<h2 id="hahahugoshortcode67s0hbhb">Determining Change<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode51s0hbhb">Determining Change<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>At deploy time, the current state, and desired state are compared, and only those components which have changed, are deployed.</p>
 <blockquote>
 <p>In this example, deployment is orchestrated in <a href="/80-release-train/30-octopus-deploy/index.html">Octopus Deploy Release Train</a></p>
 </blockquote>
-<p><a href="#R-image-7fe4dd420e144b2aaf73108f07102ebb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-desired-state.png" style="height: auto;width: auto;" title="Custom Desired State"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7fe4dd420e144b2aaf73108f07102ebb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-desired-state.png" title="Custom Desired State"></a></p>
+<p><a href="#R-image-f3f1c77380c3c34d6694fe7a1a0e20c7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-desired-state.png" style="height: auto;width: auto;" title="Custom Desired State"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f3f1c77380c3c34d6694fe7a1a0e20c7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-desired-state.png" title="Custom Desired State"></a></p>
 <p>Once complete, the new current state is persisted.</p>
-<p><a href="#R-image-a389453163ab94cddf29740b951f10c4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/Custom-Persist-State.png" style="height: auto;width: auto;" title="Custom Persist State"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a389453163ab94cddf29740b951f10c4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/Custom-Persist-State.png" title="Custom Persist State"></a></p>
+<p><a href="#R-image-76aca25d36e62b1cd18f673828c4b821" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/Custom-Persist-State.png" style="height: auto;width: auto;" title="Custom Persist State"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-76aca25d36e62b1cd18f673828c4b821"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/Custom-Persist-State.png" title="Custom Persist State"></a></p>
 <p>These can be aggregated in the Wiki to provide a consolidate view for non-techincal users</p>
-<p><a href="#R-image-ce1be049b1c048faf7a1db6c3214abdb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-release-wiki.png" style="height: auto;width: auto;" title="Custom State Wiki"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ce1be049b1c048faf7a1db6c3214abdb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-release-wiki.png" title="Custom State Wiki"></a></p>
+<p><a href="#R-image-23a4b178e641d290e7a84d7336cacbf3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-release-wiki.png" style="height: auto;width: auto;" title="Custom State Wiki"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-23a4b178e641d290e7a84d7336cacbf3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-release-wiki.png" title="Custom State Wiki"></a></p>
 <p>Note that the overarching release number is used as a update comment when writing to the Confluence page, this provides a release history which is visible outside of the toolchain, which is easier to access by business users such as test managers and product owners.</p>
-<p><a href="#R-image-23c5b1b6e0b58046c37e8e523d96fddb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-release-history.png" style="height: auto;width: auto;" title="Custom Persist State"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-23c5b1b6e0b58046c37e8e523d96fddb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-release-history.png" title="Custom Persist State"></a></p>
+<p><a href="#R-image-3a00669a9c908800cdc678f01f69dff8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/custom-release-history.png" style="height: auto;width: auto;" title="Custom Persist State"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a00669a9c908800cdc678f01f69dff8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/custom-release-history.png" title="Custom Persist State"></a></p>
 
   <footer class="footline">
   </footer>
@@ -355,22 +355,22 @@ container  patient-summary-app-prd  HTTPS                 server.fire.ly        
         </div>
       </main>
     </div>
-    <script src="/js/js-yaml/js-yaml.min.js?1774684203" defer></script>
-    <script src="/js/d3/d3-color.min.js?1774684203" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1774684203" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1774684203" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1774684203" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1774684203" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1774684203" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1774684203" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1774684203" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1774684203" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1774684203" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1775338159" defer></script>
+    <script src="/js/d3/d3-color.min.js?1775338159" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1775338159" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1775338159" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1775338159" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1775338159" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1775338159" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1775338159" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1775338159" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1775338159" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1775338159" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1774684203" defer></script>
-    <script src="/js/theme.min.js?1774684203" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1775338159" defer></script>
+    <script src="/js/theme.min.js?1775338159" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
