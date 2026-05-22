@@ -22,9 +22,6 @@
     <loc>https://cdaf.io/80-release-train/10-ado-release/index.html</loc>
   </url>
   <url>
-    <loc>https://cdaf.io/20-principles-and-concepts/50-imperative-vs-declarative/10-cattle-vs-pets/index.html</loc>
-  </url>
-  <url>
     <loc>https://cdaf.io/10-cdaf/index.html</loc>
   </url>
   <url>
@@ -50,6 +47,9 @@
   </url>
   <url>
     <loc>https://cdaf.io/10-cdaf/10-getting-started/index.html</loc>
+  </url>
+  <url>
+    <loc>https://cdaf.io/20-principles-and-concepts/50-imperative-vs-declarative/10-imperative/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/20-principles-and-concepts/10-loose-coupling/index.html</loc>
@@ -104,6 +104,9 @@
   </url>
   <url>
     <loc>https://cdaf.io/70-authoritative-release/50-custom-state-management/20-build-once/index.html</loc>
+  </url>
+  <url>
+    <loc>https://cdaf.io/20-principles-and-concepts/50-imperative-vs-declarative/20-declarative-desired-state/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/80-release-train/30-octopus-deploy/20-deploy-many/index.html</loc>
@@ -275,6 +278,9 @@
   </url>
   <url>
     <loc>https://cdaf.io/90-reference/20-feature-configuration/70-sensitive-data-strategies/index.html</loc>
+  </url>
+  <url>
+    <loc>https://cdaf.io/20-principles-and-concepts/50-imperative-vs-declarative/80-cattle-vs-pets/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/80-release-train/40-terraform-cloud/80-feedback-loop/index.html</loc>
