@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.159.1">
+    <meta name="generator" content="Hugo 0.160.1">
     <meta name="generator" content="Relearn 9.0.3">
     <meta name="description" content="Overview of Stack Components">
     <meta name="author" content="">
@@ -26,26 +26,26 @@
     <title>Octopus Pane of Glass :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/80-release-train/30-octopus-deploy/10-manifest/index.html" rel="canonical" type="text/html" title="Octopus Pane of Glass :: Concepts &amp; Applied Examples">
     <link href="/80-release-train/30-octopus-deploy/10-manifest/index.xml" rel="alternate" type="application/rss+xml" title="Octopus Pane of Glass :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1775340513" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1775340513" defer></script>
-    <script src="/js/search-lunr.min.js?1775340513" defer></script>
-    <script src="/js/search.min.js?1775340513" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779414257" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779414257" defer></script>
+    <script src="/js/search-lunr.min.js?1779414257" defer></script>
+    <script src="/js/search.min.js?1779414257" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1775340513";
+      window.relearn.index_js_url="/searchindex.en.js?1779414257";
     </script>
-    <script src="/js/lunr/lunr.min.js?1775340513" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1775340513" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1775340513" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1775340513" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779414257" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779414257" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779414257" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779414257" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1775340513" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1775340513" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1775340513" rel="stylesheet">
-    <link href="/css/theme.min.css?1775340513" rel="stylesheet">
-    <link href="/css/format-print.min.css?1775340513" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779414257" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779414257" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779414257" rel="stylesheet">
+    <link href="/css/theme.min.css?1779414257" rel="stylesheet">
+    <link href="/css/format-print.min.css?1779414257" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -146,18 +146,18 @@
 
 <h1 id="octopus-pane-of-glass">Octopus Pane of Glass</h1>
 
-<h2 id="hahahugoshortcode103s0hbhb">Overview of Stack Components<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode87s0hbhb">Overview of Stack Components<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>As an intermediatry, Octopus provides release gating, orchestration and a overview of the stack components, and what versions have been promoted to which environments.</p>
-<p><a href="#R-image-929c48e5b174f6104026735477488357" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-pane-of-glass.png" style="height: auto;width: auto;" title="Octopus Pane of Glass"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-929c48e5b174f6104026735477488357"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-pane-of-glass.png" title="Octopus Pane of Glass"></a></p>
+<p><a href="#R-image-5042294ef1a2be1c72deab9053cc724e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-pane-of-glass.png" style="height: auto;width: auto;" title="Octopus Pane of Glass"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5042294ef1a2be1c72deab9053cc724e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-pane-of-glass.png" title="Octopus Pane of Glass"></a></p>
 <h3 id="parent-project">Parent Project<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The parent project does not perform any deployment activity itself, it serves as the orchestrator of the child projects, providing gating and sequencing.</p>
-<p><a href="#R-image-23e0c2c9698cccdfb4c9f94e70638004" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-parent-project.png" style="height: auto;width: auto;" title="Octopus Parent Project"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-23e0c2c9698cccdfb4c9f94e70638004"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-parent-project.png" title="Octopus Parent Project"></a></p>
+<p><a href="#R-image-ddeb25bdb7f988cc623b5cf80cb6a969" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-parent-project.png" style="height: auto;width: auto;" title="Octopus Parent Project"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ddeb25bdb7f988cc623b5cf80cb6a969"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-parent-project.png" title="Octopus Parent Project"></a></p>
 <h3 id="child-projects">Child Projects<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The child project, use the same template process, but each has the release packages that have been build to perform their technology specific deployment process.</p>
-<p><a href="#R-image-f4f905d2e9c6fc2aabe9ec6363577e17" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-child-projects.png" style="height: auto;width: auto;" title="Octopus Child Projects"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f4f905d2e9c6fc2aabe9ec6363577e17"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-child-projects.png" title="Octopus Child Projects"></a></p>
+<p><a href="#R-image-b6a2f938b67fa1e249d910065835c007" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-child-projects.png" style="height: auto;width: auto;" title="Octopus Child Projects"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b6a2f938b67fa1e249d910065835c007"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-child-projects.png" title="Octopus Child Projects"></a></p>
 <h3 id="component-independence">Component Independence<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The approach above does offer the ability to independently promote or roll-back a child component. This can be beneficial for hot-fixes, however, it is discouraged as it breaks the stack alignment principles of the release train.</p>
 
@@ -167,8 +167,8 @@
         </div>
       </main>
     </div>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1775340513" defer></script>
-    <script src="/js/theme.min.js?1775340513" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779414257" defer></script>
+    <script src="/js/theme.min.js?1779414257" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

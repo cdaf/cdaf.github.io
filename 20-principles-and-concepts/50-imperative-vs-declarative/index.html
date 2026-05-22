@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.160.1">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Imperative Deployment vs. Declarative Desired State">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Imperative vs. Declarative :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Imperative Deployment vs. Declarative Desired State">
+    <meta property="og:url" content="https://cdaf.io/20-principles-and-concepts/50-imperative-vs-declarative/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Imperative vs. Declarative :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Imperative Deployment vs. Declarative Desired State">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Imperative vs. Declarative :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Imperative Deployment vs. Declarative Desired State">
+    <meta itemprop="wordCount" content="97">
+    <title>Imperative vs. Declarative :: Concepts &amp; Applied Examples</title>
+    <link href="/20-principles-and-concepts/50-imperative-vs-declarative/index.xml" rel="alternate" type="application/rss+xml" title="Imperative vs. Declarative :: Concepts &amp; Applied Examples">
+    <link href="/20-principles-and-concepts/50-imperative-vs-declarative/index.print.html" rel="alternate" type="text/html" title="Imperative vs. Declarative :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1779414257" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779414257" defer></script>
+    <script src="/js/search-lunr.min.js?1779414257" defer></script>
+    <script src="/js/search.min.js?1779414257" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1779414257";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1779414257" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779414257" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779414257" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779414257" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1779414257" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779414257" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779414257" rel="stylesheet">
+    <link href="/css/theme.min.css?1779414257" rel="stylesheet">
+    <link href="/css/format-html.min.css?1779414257" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/20-principles-and-concepts\/50-imperative-vs-declarative\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/20-principles-and-concepts/50-imperative-vs-declarative/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hahahugoshortcode27s0hbhb">HAHAHUGOSHORTCODE27s0HBHB</a></li>
+      </ul>
+    </li>
+    <li><a href="#what-next">What Next?</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/20-principles-and-concepts/index.html"><span itemprop="name">Principles and Concepts</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Imperative vs. Declarative</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles-and-concepts/50-imperative-vs-declarative/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles-and-concepts/40-development-release/index.html" title="Development & Release (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles-and-concepts/90-branch-plans/index.html" title="Branch Plans (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 20-principles-and-concepts" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="imperative-vs-declarative">Imperative vs. Declarative</h1>
+
+<h3 id="hahahugoshortcode27s0hbhb">Imperative Deployment vs. Declarative Desired State<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Imperative (Procedural Flow): Focuses on the manual execution of a specific sequence of commands, requiring the operator to manage state transitions directly, which increases complexity and the risk of configuration drift.</p>
+<p>Declarative (Desired-State Flow): Uses an automated orchestrator (a reconciliation loop) that continuously compares the actual system state with a predefined state definition document. It handles provisioning and updates automatically to ensure consistent, self-healing environments.</p>
+<p><a href="#R-image-9f4df2ffea3434f60959e950253b22cd" class="lightbox-link"><img alt="imperative-vs-declarative" class="lazy lightbox figure-image" loading="lazy" src="/images/imperative-vs-declarative.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9f4df2ffea3434f60959e950253b22cd"><img alt="imperative-vs-declarative" class="lazy lightbox lightbox-image" loading="lazy" src="/images/imperative-vs-declarative.png"></a></p>
+<h2 id="what-next">What Next?<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>See <a href="/30-imperative-deployment/index.html">Imperative Deployment</a> for pipeline constructs &amp; <a href="/70-authoritative-release/index.html">Declarative Release</a> for implementation examples, which incorporate intermediary tools such Ansible Tower, Puppet Enterprise and Terraform Cloud.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><img src="/images/cdaf.png" alt="Continuous Delivery Automation Framework">
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/10-cdaf/index.html"><a class="padding default-animation" href="/10-cdaf/index.html"><i class='fas fa-cog'></i>  CDAF</a><ul id="R-subsections-a9cb0b536404115325c82530a716c7b6" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/20-principles-and-concepts/index.html"><a class="padding default-animation" href="/20-principles-and-concepts/index.html"><i class='fas fa-comments'></i>  Principles and Concepts</a><ul id="R-subsections-869fbb4996be3a2601a6ce682a485d79" class="collapsible-menu">
+            <li class="" data-nav-id="/20-principles-and-concepts/10-loose-coupling/index.html"><a class="padding" href="/20-principles-and-concepts/10-loose-coupling/index.html"><i class='fas fa-laptop-code'></i>  Loose Coupling</a></li>
+            <li class="" data-nav-id="/20-principles-and-concepts/20-do-nothing-pipeline/index.html"><a class="padding" href="/20-principles-and-concepts/20-do-nothing-pipeline/index.html"><i class='far fa-stop-circle'></i>  Do Nothing Pipeline</a></li>
+            <li class="" data-nav-id="/20-principles-and-concepts/30-feedback-loop/index.html"><a class="padding" href="/20-principles-and-concepts/30-feedback-loop/index.html"><i class='fas fa-undo-alt'></i>  Realising the Feedback Loop</a></li>
+            <li class="" data-nav-id="/20-principles-and-concepts/40-development-release/index.html"><a class="padding" href="/20-principles-and-concepts/40-development-release/index.html"><i class='fa-regular fa-object-ungroup'></i>  Development &amp; Release</a></li>
+            <li class="active " data-nav-id="/20-principles-and-concepts/50-imperative-vs-declarative/index.html"><a class="padding" href="/20-principles-and-concepts/50-imperative-vs-declarative/index.html"><i class="fa-solid fa-hand-holding-hand"></i>  Imperative vs. Declarative</a></li>
+            <li class="alwaysopen " data-nav-id="/20-principles-and-concepts/90-branch-plans/index.html"><a class="padding default-animation" href="/20-principles-and-concepts/90-branch-plans/index.html"><i class='fas fa-code-branch'></i>  Branch Plans</a><ul id="R-subsections-5c604ded8119cfa044848f78c39e8093" class="collapsible-menu"></ul></li></ul></li>
+            <li class="" data-nav-id="/30-imperative-deployment/index.html"><a class="padding default-animation" href="/30-imperative-deployment/index.html"><i class='fas fa-sliders-h'></i>  Imperative Deployment</a><ul id="R-subsections-722c8ca13d31320f538888833a3e334d" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/70-authoritative-release/index.html"><a class="padding default-animation" href="/70-authoritative-release/index.html"><i class='fas fa-list-ul'></i>  Declarative Release</a><ul id="R-subsections-68c0ef55a5adef0606066638d7090400" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/80-release-train/index.html"><a class="padding default-animation" href="/80-release-train/index.html"><i class='fas fa-train'></i>  Release Train</a><ul id="R-subsections-09e687527bd6b4dfd4f3f5e086fdef34" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/90-reference/index.html"><a class="padding default-animation" href="/90-reference/index.html"><i class='fas fa-info'></i>  Reference Guide</a><ul id="R-subsections-9643d01fd581153bc72452a8807c50b7" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/cdaf/"><a class="padding" href="https://github.com/cdaf/" rel="external"><i class='fab fa-github'></i> Contribute & Support</a></li>
+            <li class="" data-nav-id="https://nz.linkedin.com/in/jules-clements-842b589/"><a class="padding" href="https://nz.linkedin.com/in/jules-clements-842b589/" rel="external"><i class='fab fa-linkedin'></i> Blogs & Articles</a></li>
+            <li class="" data-nav-id="https://hub.docker.com/u/cdaf/"><a class="padding" href="https://hub.docker.com/u/cdaf/" rel="external"><i class='fab fa-docker'></i> CDAF Images</a></li>
+            <li class="" data-nav-id="/tags"><a class="padding" href="/tags"><i class='fas fa-tags'></i> Tags</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779414257" defer></script>
+    <script src="/js/theme.min.js?1779414257" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>
