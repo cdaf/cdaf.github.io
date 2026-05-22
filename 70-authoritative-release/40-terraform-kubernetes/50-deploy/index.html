@@ -26,26 +26,26 @@
     <title>Deploy :: Concepts &amp; Applied Examples</title>
     <link href="/70-authoritative-release/40-terraform-kubernetes/50-deploy/index.xml" rel="alternate" type="application/rss+xml" title="Deploy :: Concepts &amp; Applied Examples">
     <link href="/70-authoritative-release/40-terraform-kubernetes/50-deploy/index.print.html" rel="alternate" type="text/html" title="Deploy :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779488696" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779488696" defer></script>
-    <script src="/js/search-lunr.min.js?1779488696" defer></script>
-    <script src="/js/search.min.js?1779488696" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779489163" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779489163" defer></script>
+    <script src="/js/search-lunr.min.js?1779489163" defer></script>
+    <script src="/js/search.min.js?1779489163" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779488696";
+      window.relearn.index_js_url="/searchindex.en.js?1779489163";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779488696" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779488696" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779488696" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779488696" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779489163" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779489163" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779489163" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779489163" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779488696" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779488696" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779488696" rel="stylesheet">
-    <link href="/css/theme.min.css?1779488696" rel="stylesheet">
-    <link href="/css/format-html.min.css?1779488696" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779489163" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779489163" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779489163" rel="stylesheet">
+    <link href="/css/theme.min.css?1779489163" rel="stylesheet">
+    <link href="/css/format-html.min.css?1779489163" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -153,8 +153,8 @@ Get-Content variables.tf
 DETOKN variables.tf
 DETOKN variables.tf $WORKSPACE\manifest.txt</code></pre></div>
 <p>Environment (<code>TARGET</code>) specific de-tokenisation is blue, and solution level de-tokenisation in green:</p>
-<p><a href="#R-image-432f7942a428697bb97902e4d5cbd018" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-detokenisation.png" style="height: auto;width: auto;" title="Terraform De-tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-432f7942a428697bb97902e4d5cbd018"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-detokenisation.png" title="Terraform De-tokenisation"></a></p>
+<p><a href="#R-image-8175cf8692cd7c4455652acf8621f0bc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-detokenisation.png" style="height: auto;width: auto;" title="Terraform De-tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8175cf8692cd7c4455652acf8621f0bc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-detokenisation.png" title="Terraform De-tokenisation"></a></p>
 <p>Terraform Cloud is being used to perform state management. To avoid false negative reporting on Terraform apply, the operation is performed in a CMD shell.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>echo &#34;[$TASK_NAME] Azure Secrets are stored in the back-end, the token opens access to these&#34;
 MAKDIR $env:APPDATA\terraform.d
@@ -182,8 +182,8 @@ Write-Host &#34;[$TASK_NAME] Initialise Remote State`n&#34; -ForegroundColor Cya
 terraform init -upgrade -input=false
 
 EXECMD &#34;terraform $OPT_ARG&#34;</code></pre></div>
-<p><a href="#R-image-3a1a41ec663724e58ba2898a1754dc31" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-terraform-apply.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a1a41ec663724e58ba2898a1754dc31"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-terraform-apply.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-ceccabeb4c5c75f5f7abaa57ec230f5f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-terraform-apply.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ceccabeb4c5c75f5f7abaa57ec230f5f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-terraform-apply.png" title="Terraform Apply"></a></p>
 
   <footer class="footline">
   </footer>
@@ -263,8 +263,8 @@ EXECMD &#34;terraform $OPT_ARG&#34;</code></pre></div>
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779488696" defer></script>
-    <script src="/js/theme.min.js?1779488696" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779489163" defer></script>
+    <script src="/js/theme.min.js?1779489163" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
