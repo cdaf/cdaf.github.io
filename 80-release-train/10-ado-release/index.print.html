@@ -22,26 +22,26 @@
     <title>Azure DevOps (ADO) Release :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/80-release-train/10-ado-release/index.html" rel="canonical" type="text/html" title="Azure DevOps (ADO) Release :: Concepts &amp; Applied Examples">
     <link href="/80-release-train/10-ado-release/index.xml" rel="alternate" type="application/rss+xml" title="Azure DevOps (ADO) Release :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779481428" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779481428" defer></script>
-    <script src="/js/search-lunr.min.js?1779481428" defer></script>
-    <script src="/js/search.min.js?1779481428" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779481745" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779481745" defer></script>
+    <script src="/js/search-lunr.min.js?1779481745" defer></script>
+    <script src="/js/search.min.js?1779481745" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779481428";
+      window.relearn.index_js_url="/searchindex.en.js?1779481745";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779481428" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779481428" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779481428" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779481745" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779481745" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779481745" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779481745" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779481428" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779481428" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779481428" rel="stylesheet">
-    <link href="/css/theme.min.css?1779481428" rel="stylesheet">
-    <link href="/css/format-print.min.css?1779481428" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779481745" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779481745" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779481745" rel="stylesheet">
+    <link href="/css/theme.min.css?1779481745" rel="stylesheet">
+    <link href="/css/format-print.min.css?1779481745" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -107,7 +107,7 @@
                 <div class="topbar-content-wrapper">
 <nav class="TableOfContents">
   <ul>
-    <li><a href="#hahahugoshortcode56s0hbhb">HAHAHUGOSHORTCODE56s0HBHB</a></li>
+    <li><a href="#hahahugoshortcode45s0hbhb">HAHAHUGOSHORTCODE45s0HBHB</a></li>
     <li><a href="#component-ci">Component CI</a></li>
     <li><a href="#component-cd">Component CD</a></li>
     <li><a href="#component-publish">Component Publish</a></li>
@@ -151,7 +151,7 @@
 
 <h1 id="azure-devops-ado-release">Azure DevOps (ADO) Release</h1>
 
-<h2 id="hahahugoshortcode56s0hbhb">Orchestrated Component Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode45s0hbhb">Orchestrated Component Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The <em>Application Stack</em> in this example deploys two components, static content and an API.</p>
 <pre class="mermaid actionbar-wrapper align-center ">
 graph TD
@@ -243,7 +243,7 @@ class TEST,PROD release
 
 <h1 id="component-ci">Component CI</h1>
 
-<h2 id="hahahugoshortcode106s0hbhb">Autonomous Component Build &amp; Test<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode64s0hbhb">Autonomous Component Build &amp; Test<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Each component contains both application code and deployment automation. The development team can imperatively deploy to the dev environment, i.e. the API and Vue application can be deployed separately, with no assurance of version alignment.</p>
 <p>Example Vue <code>properties.cm</code> file, the deployment tool used is <a href="https://developers.cloudflare.com/pages/functions/wrangler-configuration/" rel="external">Wrangler</a>.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context    target  pages_app_project  fqdn                 api_url
@@ -280,8 +280,8 @@ container  PROD   PetStack-Prod  prd</code></pre></div>
 </span></span><span style="display:flex;"><span>          <span style="color:#f92672">testResultsFiles</span>: <span style="color:#e6db74">&#39;**/test-results/*.xml&#39;</span> 
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">PublishBuildArtifacts@1</span></span></span></code></pre></div>
 <p>The resulting ADO component pipelines are independent</p>
-<p><a href="#R-image-3c3ac6d3d0c933c395001b18fd81f099" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-pipelines.png" style="height: auto;width: auto;" title="ADO Component pipelines"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3c3ac6d3d0c933c395001b18fd81f099"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-pipelines.png" title="ADO Component pipelines"></a></p>
+<p><a href="#R-image-4ac133f6df519ee4d6233cef805e0721" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-pipelines.png" style="height: auto;width: auto;" title="ADO Component pipelines"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4ac133f6df519ee4d6233cef805e0721"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-pipelines.png" title="ADO Component pipelines"></a></p>
 <p>Next, autonomous deploy&hellip;</p>
 
   <footer class="footline">
@@ -300,7 +300,7 @@ container  PROD   PetStack-Prod  prd</code></pre></div>
 
 <h1 id="component-cd">Component CD</h1>
 
-<h2 id="hahahugoshortcode107s0hbhb">Autonomous Component Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode67s0hbhb">Autonomous Component Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>By using the <code>feature-branch.properties</code> capability of CDAF, branches containing the string <code>dev</code> will deploy to the development environment. This feature allows imperative deployment by the development team, without manipulating the pipeline, and therefore avoiding drift.</p>
 <p><strong>vue</strong></p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Feature Branch name match mapping to environment
@@ -309,11 +309,11 @@ dev=DEV</code></pre></div>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Feature Branch name &#34;contains&#34; mapping to environment
 dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
 <p>In the feature branch, where <code>dev</code> is in the branch name, CDAF will detect and execute a deployment, using the mapping above to invoke a release to <code>DEV</code>.</p>
-<p><a href="#R-image-bb0ca42ee2afc59fb8372e1720b5b9d2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-feature-branch.png" style="height: auto;width: auto;" title="ADO Component feature branch"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bb0ca42ee2afc59fb8372e1720b5b9d2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-feature-branch.png" title="ADO Component feature branch"></a></p>
+<p><a href="#R-image-63b8bfb919f07bf9be53babdf20b6a1f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-feature-branch.png" style="height: auto;width: auto;" title="ADO Component feature branch"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-63b8bfb919f07bf9be53babdf20b6a1f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-feature-branch.png" title="ADO Component feature branch"></a></p>
 <p>The trunk based pipeline will only push a release artefact from the main branch, with a stand-up/tear-down integration test of the production build.</p>
-<p><a href="#R-image-a9c776fcc150bbbc44afe7c577f24264" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-trunk-based.png" style="height: auto;width: auto;" title="ADO Component pipelines"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a9c776fcc150bbbc44afe7c577f24264"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-trunk-based.png" title="ADO Component pipelines"></a></p>
+<p><a href="#R-image-6364f5dc57a1e93770c3ba0ceb751ddf" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-trunk-based.png" style="height: auto;width: auto;" title="ADO Component pipelines"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6364f5dc57a1e93770c3ba0ceb751ddf"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-trunk-based.png" title="ADO Component pipelines"></a></p>
 <p>Next, publication&hellip;</p>
 
   <footer class="footline">
@@ -332,13 +332,13 @@ dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
 
 <h1 id="component-publish">Component Publish</h1>
 
-<h2 id="hahahugoshortcode109s0hbhb">Autonomous Component Publication<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode68s0hbhb">Autonomous Component Publication<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>the final stage of the <code>main</code> pipeline is publication. This pushes the release package to the artefact registry.</p>
-<p><a href="#R-image-7744785bac25b252b97709728cd3f4ac" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-push.png" style="height: auto;width: auto;" title="ADO Component Push"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7744785bac25b252b97709728cd3f4ac"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-push.png" title="ADO Component Push"></a></p>
+<p><a href="#R-image-072c9b2926371e7289643336b93a4aa3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-push.png" style="height: auto;width: auto;" title="ADO Component Push"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-072c9b2926371e7289643336b93a4aa3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-push.png" title="ADO Component Push"></a></p>
 <p>Each component publishes their release package, so although they use different technologies, they are now available as consistent packages, using the CDAF package process, which outputs a self-extract <code>release.ps1</code> (of <code>release.sh</code> for linux) file.</p>
-<p><a href="#R-image-0a4e9cf869aab19b4e8b4e446f3d6de0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-published.png" style="height: auto;width: auto;" title="ADO Component published"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a4e9cf869aab19b4e8b4e446f3d6de0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-published.png" title="ADO Component published"></a></p>
+<p><a href="#R-image-d67dcffb98d935d7aec8135e629fbe20" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-published.png" style="height: auto;width: auto;" title="ADO Component published"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d67dcffb98d935d7aec8135e629fbe20"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-published.png" title="ADO Component published"></a></p>
 <p>Next, Release&hellip;</p>
 
   <footer class="footline">
@@ -357,25 +357,25 @@ dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
 
 <h1 id="release">Release</h1>
 
-<h2 id="hahahugoshortcode111s0hbhb">Full Stack Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode70s0hbhb">Full Stack Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The ADO Release function is used to create a release, and promote it through the environments. The release obtains the components from the artefact store</p>
-<p><a href="#R-image-1b6fc224f89c93944df8806f67a4f1e0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-packages.png" style="height: auto;width: auto;" title="ADO Release Packages"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1b6fc224f89c93944df8806f67a4f1e0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-packages.png" title="ADO Release Packages"></a></p>
+<p><a href="#R-image-3ce627d5744cfb11723c078731663cef" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-packages.png" style="height: auto;width: auto;" title="ADO Release Packages"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3ce627d5744cfb11723c078731663cef"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-packages.png" title="ADO Release Packages"></a></p>
 <p>The Release is defined in order of dependency, i.e. the CloudFlare infrastructure is created/updated and configured with the API, then the front-end is deployed to the infrastructure.</p>
 <blockquote>
 <p>The release itself includes to deployment logic, it simply invokes the packages provided by the component development team.</p>
 </blockquote>
-<p><a href="#R-image-eb5e3f905f1b93dc2592b1504eca0fa4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-stages.png" style="height: auto;width: auto;" title="ADO Release Stages"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-eb5e3f905f1b93dc2592b1504eca0fa4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-stages.png" title="ADO Release Stages"></a></p>
+<p><a href="#R-image-40a5d00e105d64f2291ac05aa094b0f1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-stages.png" style="height: auto;width: auto;" title="ADO Release Stages"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-40a5d00e105d64f2291ac05aa094b0f1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-stages.png" title="ADO Release Stages"></a></p>
 <p>When a new release is created, the latest versions are defaulted, and this defines the manifest for the release, i.e. different versions cannot be deployed to different environments. This ensures the stack is consistency promoted.</p>
 <blockquote>
 <p>The latest versions do not have to selected, but whatever is selected is static for that release instance.</p>
 </blockquote>
-<p><a href="#R-image-c6607c59c31f52fcbb35fbf18d5b4a05" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-create.png" style="height: auto;width: auto;" title="ADO Release Create"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c6607c59c31f52fcbb35fbf18d5b4a05"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-create.png" title="ADO Release Create"></a></p>
+<p><a href="#R-image-62ea869c481fcae7056cec744e3a645e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-create.png" style="height: auto;width: auto;" title="ADO Release Create"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-62ea869c481fcae7056cec744e3a645e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-create.png" title="ADO Release Create"></a></p>
 <p>When the release is promoted, no manual intervention is required, except for approval gates, which can be approved by business or product owners, and does not require any further development effort.</p>
-<p><a href="#R-image-bab4fe550527992b90ba447cf2cac435" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-promotion.png" style="height: auto;width: auto;" title="ADO Release Create"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bab4fe550527992b90ba447cf2cac435"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-promotion.png" title="ADO Release Create"></a></p>
+<p><a href="#R-image-8a79ab4a7a4293e35dbd8cdde5318151" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-promotion.png" style="height: auto;width: auto;" title="ADO Release Create"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8a79ab4a7a4293e35dbd8cdde5318151"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-promotion.png" title="ADO Release Create"></a></p>
 
   <footer class="footline">
   </footer>
@@ -384,22 +384,22 @@ dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
         </div>
       </main>
     </div>
-    <script src="/js/js-yaml/js-yaml.min.js?1779481428" defer></script>
-    <script src="/js/d3/d3-color.min.js?1779481428" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1779481428" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1779481428" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1779481428" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1779481428" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1779481428" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1779481428" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1779481428" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1779481428" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1779481428" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1779481745" defer></script>
+    <script src="/js/d3/d3-color.min.js?1779481745" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1779481745" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1779481745" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1779481745" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1779481745" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1779481745" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1779481745" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1779481745" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1779481745" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1779481745" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779481428" defer></script>
-    <script src="/js/theme.min.js?1779481428" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779481745" defer></script>
+    <script src="/js/theme.min.js?1779481745" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
