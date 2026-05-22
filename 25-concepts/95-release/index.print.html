@@ -18,30 +18,30 @@
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Release :: Concepts &amp; Applied Examples">
     <meta itemprop="description" content="Release Definitions and Tools">
-    <meta itemprop="wordCount" content="767">
+    <meta itemprop="wordCount" content="802">
     <title>Release :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/25-concepts/95-release/index.html" rel="canonical" type="text/html" title="Release :: Concepts &amp; Applied Examples">
     <link href="/25-concepts/95-release/index.xml" rel="alternate" type="application/rss+xml" title="Release :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779489163" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779489163" defer></script>
-    <script src="/js/search-lunr.min.js?1779489163" defer></script>
-    <script src="/js/search.min.js?1779489163" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779490322" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779490322" defer></script>
+    <script src="/js/search-lunr.min.js?1779490322" defer></script>
+    <script src="/js/search.min.js?1779490322" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779489163";
+      window.relearn.index_js_url="/searchindex.en.js?1779490322";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779489163" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779489163" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779489163" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779489163" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779490322" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779490322" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779490322" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779490322" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779489163" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779489163" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779489163" rel="stylesheet">
-    <link href="/css/theme.min.css?1779489163" rel="stylesheet">
-    <link href="/css/format-print.min.css?1779489163" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779490322" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779490322" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779490322" rel="stylesheet">
+    <link href="/css/theme.min.css?1779490322" rel="stylesheet">
+    <link href="/css/format-print.min.css?1779490322" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -107,10 +107,11 @@
                 <div class="topbar-content-wrapper">
 <nav class="TableOfContents">
   <ul>
-    <li><a href="#hahahugoshortcode35s0hbhb">HAHAHUGOSHORTCODE35s0HBHB</a></li>
+    <li><a href="#hahahugoshortcode32s0hbhb">HAHAHUGOSHORTCODE32s0HBHB</a></li>
     <li><a href="#build-once-deploy-many">Build Once, Deploy Many</a>
       <ul>
         <li><a href="#code-is-not-released">Code is not released</a></li>
+        <li><a href="#implementation-patterns-with-cdaf">Implementation Patterns with CDAF</a></li>
       </ul>
     </li>
   </ul>
@@ -152,7 +153,7 @@
 
 <h1 id="release">Release</h1>
 
-<h2 id="hahahugoshortcode35s0hbhb">Release Definitions and Tools<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode32s0hbhb">Release Definitions and Tools<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>A <em>release</em> can mean different things to different organisations. For product build teams who distribute to many customers, a <em>release</em> is the shippable product made available to consumers, and this is not the context of the following material.</p>
 <p>The release process is the final stage of the software delivery pipeline, and is the point at which the software is made available to end-users or customers. The release process can involve several steps, including:</p>
 <ul>
@@ -165,12 +166,12 @@
 <p>The release process is a critical part of the software delivery pipeline, and it is important to have a well-defined and tested release process to ensure that releases are successful and do not cause issues for end-users or customers.</p>
 <h2 id="build-once-deploy-many">Build Once, Deploy Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The principle of &ldquo;build once, deploy many&rdquo; is a key concept in software delivery and release management. It refers to the practice of building a software application or component once and then deploying that same build to multiple environments, such as development, testing, staging, and production.</p>
-<p><a href="#R-image-83907d8afadbd4cdb1102db8c7c62a2f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/release-build-once-deploy-many.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-83907d8afadbd4cdb1102db8c7c62a2f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/release-build-once-deploy-many.png"></a></p>
+<p><a href="#R-image-c7322635d421a4113e48f28b5f34ab5d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/release-build-once-deploy-many.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c7322635d421a4113e48f28b5f34ab5d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/release-build-once-deploy-many.png"></a></p>
 <h3 id="code-is-not-released">Code is not released<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>While interpretive languages, e.g. Javascript, Python, etc. can be deployed directly from source control, this approach is <strong>not</strong> a release. Compiled languages which are recompiled for each environment are also <strong>not</strong> a release.</p>
-<p><a href="#R-image-89f14c28562abf83fd8dfbb952cd05de" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/release-package-only.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-89f14c28562abf83fd8dfbb952cd05de"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/release-package-only.png"></a></p>
+<p><a href="#R-image-756bd7f3ad5b7d86e6a49db310658cf2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/release-package-only.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-756bd7f3ad5b7d86e6a49db310658cf2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/release-package-only.png"></a></p>
 <p>The release artefact is the output of the build process, and should be immutable, meaning that it cannot be modified after it has been built. This allows for consistency across all environments, as the same build can be deployed to each environment without any changes. The following tools facilitate the deployment of one or more <em>release</em> packages, independent to the source code that created them.</p>
 <table style="width:100%; background: transparent; border: none; border-collapse: collapse;">
   <tr>
@@ -202,6 +203,11 @@
     </td>
   </tr>
 </table>
+<h3 id="implementation-patterns-with-cdaf">Implementation Patterns with CDAF<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><a href="/70-authoritative-release/index.html">Declarative Release</a> for implementation examples, which incorporate intermediary tools such Ansible Tower, Puppet Enterprise and Terraform Cloud</li>
+<li><a href="/80-release-train/index.html">Release Trains</a> for implementation examples, which incorporate Octopus Deploy and Azure DevOps Release feature</li>
+</ul>
 
   <footer class="footline">
   </footer>
@@ -209,8 +215,8 @@
         </div>
       </main>
     </div>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779489163" defer></script>
-    <script src="/js/theme.min.js?1779489163" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779490322" defer></script>
+    <script src="/js/theme.min.js?1779490322" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
