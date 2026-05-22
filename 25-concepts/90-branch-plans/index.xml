@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Branch Plans :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/25-concepts/90-branch-plans/index.html</link>
+    <description>Alternate Branch Strategies</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/25-concepts/90-branch-plans/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Continuous Delivery</title>
+      <link>https://cdaf.io/25-concepts/90-branch-plans/10-cd/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/25-concepts/90-branch-plans/10-cd/index.html</guid>
+      <description>The Continuous Delivery Maturity Model</description>
+    </item>
+    <item>
+      <title>Branch Deploy</title>
+      <link>https://cdaf.io/25-concepts/90-branch-plans/20-branch-deploy/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/25-concepts/90-branch-plans/20-branch-deploy/index.html</guid>
+      <description>Branch Based Deployment</description>
+    </item>
+    <item>
+      <title>GitOps</title>
+      <link>https://cdaf.io/25-concepts/90-branch-plans/30-gitops/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/25-concepts/90-branch-plans/30-gitops/index.html</guid>
+      <description>Branch Based Deployment Directly from Source Control</description>
+    </item>
+  </channel>
+</rss>

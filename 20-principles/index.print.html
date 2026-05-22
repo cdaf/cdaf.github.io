@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.160.1">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="CDAF Principles">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Principles :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="CDAF Principles">
+    <meta property="og:url" content="https://cdaf.io/20-principles/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Principles :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="CDAF Principles">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Principles :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="CDAF Principles">
+    <meta itemprop="wordCount" content="61">
+    <title>Principles :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/20-principles/index.html" rel="canonical" type="text/html" title="Principles :: Concepts &amp; Applied Examples">
+    <link href="/20-principles/index.xml" rel="alternate" type="application/rss+xml" title="Principles :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1779478661" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779478661" defer></script>
+    <script src="/js/search-lunr.min.js?1779478661" defer></script>
+    <script src="/js/search.min.js?1779478661" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1779478661";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779478661" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1779478661" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779478661" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779478661" rel="stylesheet">
+    <link href="/css/theme.min.css?1779478661" rel="stylesheet">
+    <link href="/css/format-print.min.css?1779478661" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/20-principles\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/20-principles/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hahahugoshortcode3s0hbhb">HAHAHUGOSHORTCODE3s0HBHB</a></li>
+      </ul>
+    </li>
+    <li><a href="#loose-coupling">Loose Coupling</a></li>
+    <li><a href="#do-nothing-pipeline">Do Nothing Pipeline</a></li>
+    <li><a href="#realising-the-feedback-loop">Realising the Feedback Loop</a></li>
+    <li><a href="#development--release">Development &amp; Release</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Principles</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/10-cdaf/90-release-history/index.html" title="Release History (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles/10-loose-coupling/index.html" title="Loose Coupling (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 20-principles" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="principles">Principles</h1>
+
+<h3 id="hahahugoshortcode3s0hbhb">CDAF Principles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>These articles provide the experiences and learnings which lead to creation of the Continuous Delivery Automation Framework (CDAF). Also included are articles to clarify terminology used, and provides context between these and CDAF.</p>
+<ul>
+<li>
+<h2 id="loose-coupling"><a href="/20-principles/10-loose-coupling/index.html">Loose Coupling</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Works on my Machine</p>
+</li>
+<li>
+<h2 id="do-nothing-pipeline"><a href="/20-principles/20-do-nothing-pipeline/index.html">Do Nothing Pipeline</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Entering Sprint-0</p>
+</li>
+<li>
+<h2 id="realising-the-feedback-loop"><a href="/20-principles/30-feedback-loop/index.html">Realising the Feedback Loop</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Continuous Delivery to Shift-Left</p>
+</li>
+<li>
+<h2 id="development--release"><a href="/20-principles/40-development-release/index.html">Development &amp; Release</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Autonomous Development Authoritative Release</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Principles</h1>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="loose-coupling">Loose Coupling</h1>
+
+<p><a href="#R-image-a3df8d8f473102a5d9fd137fc489b29f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/works-on-my-machine.png" style="height: auto;width: auto;" title="Works on my Machine"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a3df8d8f473102a5d9fd137fc489b29f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/works-on-my-machine.png" title="Works on my Machine"></a></p>
+<p>As mentioned in the Continuous Delivery Automation Framework (CDAF) <a href="/10-cdaf/index.html">introduction</a>, this is one of the founding principles&hellip;</p>
+<ul>
+<li><strong>Loose Coupling</strong> : Designed for workstation implementation first, with no tight coupling to any given automation tool-set</li>
+<li><strong>Lowest Common Denominator</strong> : Using the minimum of the tool-chain plugins &amp; capabilities, to ensure loose coupling</li>
+<li><strong>Package Portability</strong> : Package Task execution designed for automated push / pull or manual deployment</li>
+</ul>
+<p>While this approach protects the pipeline from degradation due to plugin issues, and allows the author to control behaviour, e.g. logging, retry, it is fundamentally important from an ownership, portability and reusability perspective.</p>
+<h4 id="shift-left--failing-fast">Shift-Left &amp; Failing Fast<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Shift-left is the principle of bringing solution aspects closer to the developer, as the cost of failing early is exponentially less costly than failing in production. While this discipline is commonly associated with software development, it should be considered a fundamental objective for all aspects of the solution, including infrastructure and configuration management.</p>
+<h4 id="consistent-ways-of-working">Consistent Ways of Working<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Infrastructure, Application and Testing automation should follow the same patterns of delivery. By doing so, a full, tested, solution can be delivered repeatably and predictably.</p>
+<h4 id="contributor-ownership">Contributor Ownership<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>By constructing and testing the automation locally, the contributor can ensure it is healthy prior to committing to source control and executing in the pipeline. The more features that are performed within the automation itself, and the less dependency on any given pipeline, reduces the friction of changing vendor should that be required or desired. See the <a href="/20-principles/20-do-nothing-pipeline/index.html">do nothing pipeline</a> for an elaboration on automation health.</p>
+<h4 id="reusable-asset">Reusable Asset<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>By creating Infrastructure, Application and Testing automation output that is portable and autonomous, it can be used for not only the pipeline deployment, but for local execution, allowing the creation of production-like environments at will. See the <a href="/20-principles/30-feedback-loop/index.html">feedback loop realisation</a> for a detailed example, based on <a href="/20-principles/30-feedback-loop/index.html">the feedback loop</a> approach.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="do-nothing-pipeline">Do Nothing Pipeline</h1>
+
+<p><a href="#R-image-b534cc36d22e1e3bd9416d58b3ac7a86" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/AdobeStock_379012841.jpeg" style="height: auto;width: auto;" title="Do Nothing Pipeline"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b534cc36d22e1e3bd9416d58b3ac7a86"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/AdobeStock_379012841.jpeg" title="Do Nothing Pipeline"></a></p>
+<p>To embed automation into the feature development lifecycle, a pipeline should exist at the earliest possible time, configured to initially &ldquo;do nothing&rdquo; at deploy time.</p>
+<h4 id="enough-to-make-it-run">Enough to make it run<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>A key principle of the Continuous Delivery Automation Framework (CDAF) is loose coupling. The intention is that the same automation that will be performed by the pipeline, can be developed and tested on the local workstation. Once the minimum automation is available, then the pipeline should be created.</p>
+<h4 id="do-nothing-pipeline">Do-Nothing Pipeline<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Ensure the pipeline runs successfully through all stages, e.g. if you have, test, staging and production stages, execute a do-nothing process in each to ensure the basic wiring of your pipeline is sound.</p>
+<h4 id="fail-successfully">Fail Successfully<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Intentionally push a change which causes the pipeline to fail, to ensure contributors can be confident that the pipeline is not giving false positives.</p>
+<h4 id="what-does-it-look-like">What Does It look Like<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Based on the <a href="/10-cdaf/10-getting-started/10-ci/index.html">seeded solution getting started guide</a> or using the CDAF samples for <a href="https://github.com/cdaf/linux/tree/master/samples/minimal" rel="external">Linux</a> or <a href="https://github.com/cdaf/windows/tree/master/samples/minimal" rel="external">Windows</a>, an operational pipeline can be created quickly.</p>
+<p><a href="https://docs.cdaf.io/mydoc_install_pipeline.html" rel="external"><a href="#R-image-f4089d95ecda57e4be4b685889783fb9" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/do-nothing-deploy.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f4089d95ecda57e4be4b685889783fb9"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/do-nothing-deploy.png"></a></a></p>
+<h3 id="what-is-sprint-0">What is Sprint-0<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>A do nothing pipeline ensures an automation-first approach, with early detection of build failures, however, this can be taken further. Making your first deployed environment <strong>Production</strong>!</p>
+<p>Typically pipelines deploy to the development or test environments first, and eventually progress to <em>production</em>; discovering issues later in the software development lifecycle (SDCL). To realise a fail-fast approach, deploy <em>nothing</em> to production first. By nothing, the absolute bare minimum is the objective, typically something that displays the build number. This allows test teams to verify they are working with the correct build, and importantly, proving the delivery pipeline immediately.</p>
+<p>The <em>production</em> environment can be scaled down as the proving ground for the solution architecture. Only when concurrency is required in your SDLC, should non-production environments be instantiated, based on your production environment, ideally via automation. See <a href="/80-release-train/index.html">release train</a> for an elaboration of how to combine automation of infrastructure, configuration management and software delivery.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="realising-the-feedback-loop">Realising the Feedback Loop</h1>
+
+<h3 id="hahahugoshortcode21s0hbhb">Continuous Delivery to Shift-Left<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><a href="#R-image-4eebfe517c335e4ca53163af8b52b243" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/AdobeStock_283863898.jpeg" style="height: auto;width: auto;" title="Do Nothing Pipeline"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4eebfe517c335e4ca53163af8b52b243"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/AdobeStock_283863898.jpeg" title="Do Nothing Pipeline"></a></p>
+<p>While the DevOps Feedback-Loop, along with finding issues early by moving production-like environments closer to the developer (Shift-Left), are key principles, there is commonly no tangible way of achieving this.</p>
+<p>In the typically incremental progression of continuous delivery implementations, eventually automation is built to deliver to production, and typically, that is where the story ends.</p>
+<p>Before describing the realisation of the feedback loop, it&rsquo;s important to highlight the underlying framework approaches that make this possible, which are:</p>
+<ul>
+<li><strong>Release Portability</strong> : the output of the <em>build</em> (Continuous Integration) process is a single, self-contained, <em>deployable artefact</em></li>
+<li><strong>Loose Coupling</strong> : delivery orchestration does not use any proprietary mechanisms to deploy, the pipeline tool simply calls the <em>deployable artefact</em></li>
+<li><strong>Artefact Registry</strong> : a store of immutable artefacts, not code (repository). These are strictly versioned and ideally offer the ability to download the <em>latest</em> version.</li>
+</ul>
+<p>In my <a href="/20-principles/20-do-nothing-pipeline/index.html">Sprint Zero</a> approach, I espouse the creation of an end-to-end, <em>do-nothing</em> pipeline before any development begins. The final stage of this pipeline should be to push the <em>deployable artefact</em> to the <strong>Artefact Registry</strong>.</p>
+<p>By doing this, a known production state is available as feedback to the developers and testers, by getting the latest version from the <strong>Artefact Registry</strong>.</p>
+<h2 id="consistent-ways-of-working">Consistent Ways of Working<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>If this approach is applied consistently between your infrastructure, configuration management and software developers, an automated view of the Production environment is automatically available, without having to inspect the current state of each contributing pipeline.</p>
+<p><a href="#R-image-a006ebcd5b69641cca4866cb671b773c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-artifacts.png" style="height: auto;width: auto;" title="artefact registry"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a006ebcd5b69641cca4866cb671b773c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-artifacts.png" title="artefact registry"></a></p>
+<p>By combining these deployable assets, users have the ability to create a full-stack, production-like environment on demand. This could be wrapped in a graphical user interface or simply run from the command-line.</p>
+<h2 id="artefact-registries">Artefact Registries<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Each registry vendor has different names for general purpose stores, in Azure DevOps it&rsquo;s called <em>Universal</em>, in GitLab it&rsquo;s called <em>Generic</em> and in Nexus it&rsquo;s called <em>Raw</em>.</p>
+<hr>
+<blockquote>
+<p>Closing note: in the above example provided, there is an Infrastructure-as-Code (IaC)/configuration management deployment package (AZT) and software deployment package (KAT). The software deployment package is a manifest driven, desired state, deployment of containers, the container image publication is <strong>not</strong> captured in the artefact store as the image build pipeline does not reflect any target environment state.</p>
+</blockquote>
+<p>For detailed example the creation and usage of the release artefacts in this article see <a href="http://127.0.0.1:1313/80-release-train/40-terraform-cloud" rel="external">Terraform Cloud Release Train</a>.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="development--release">Development &amp; Release</h1>
+
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-32ec059d744467c7d53f899e300016d6" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628300439258.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-32ec059d744467c7d53f899e300016d6"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628300439258.jpg"></a></a></p>
+<p>DevOps is not a role or product, it’s a principle. With competing desires, i.e. <a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external">autonomous vs. authoritative</a>, Development and Operations can have different perspectives and these tools can help provide a viewpoint for operations, driven from a “source of truth”.</p>
+<h2 id="development-pipelines">Development Pipelines<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>When speaking of Continuous Integration and Continuous Deployment (CI/CD), the conversations are typically developer centric. However, in enterprise environments, Continuous Delivery is more likely the reality, and it is desirable to be able to deliver a release without the involvement of the feature developers, as there may be many different teams contributing to the solution. Orchestrating these individuals for a release deployment can be a scheduling challenge and distracts those teams from their core purpose.</p>
+<p>To gather these distributed concerns, it is common to try and apply processes, procedures, governance and standardisation at the development level, which is an Agile anti-pattern. So to provide developer freedom with the release predictability required, these two concerns are divided in autonomy and authority.</p>
+<h2 id="autonomous-development">Autonomous Development<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The key difference from developer centric approaches is that the development teams do not deploy to user environments, instead the end of the development delivery pipeline results in pushing an immutable image to the registry. The development teams can use whatever source control and branch strategy they choose, e.g. Git Flow, Simple Branch Plans, Feature Branches, etc. In this example the development team are using GitHub Actions to build (Docker), test (docker-compose) and publish their component, see <a href="https://www.linkedin.com/pulse/containers-scale-jules-clements" rel="external">Containers at Scale, A Containers Journey</a>.</p>
+<p>The published image may not the build image, but it must be the production ready (optimised and hardened) image which was verified in the test process.</p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-943401744507da3241c3dc5f1e99009f" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282115797.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-943401744507da3241c3dc5f1e99009f"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282115797.png"></a></a></p>
+<p>Each component or micro service is delivered to the central catalogue, in this example, Docker Hub, but this could be any Open Container Initiative (OCI) Registry, either public or private.</p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-e4ce58639502804ff71f9b9646a6a4c1" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282146117.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e4ce58639502804ff71f9b9646a6a4c1"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282146117.png"></a></a></p>
+<h2 id="delivery-pipelines">Delivery Pipelines<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>With the Container Registry being the nexus of the autonomous development teams, now the release definition at a solution level can be declared. This codifies the release, whereas a manual release may involve spreadsheets and workbook documents, the implementation of the release is abstracted by the automation tool, in this case Terraform.</p>
+<h2 id="infrastructure-as-code-iac">Infrastructure as Code (IaC)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>This is the common use case of Terraform. In this example, the delivery of the Kubernetes platform is executed from an Azure DevOps pipeline using a 12-Factor approach, with feature branch development. Releases to production are only based on master and implemented with gating. When a feature is complete and the pull request (PR) processed, the environment created for the feature branch is destroyed (“clean-up Dev”).</p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-11d4b4b27363e3eb78db3abde09c9a97" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282265340.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-11d4b4b27363e3eb78db3abde09c9a97"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282265340.png"></a></a></p>
+<h2 id="authoritative-deployment">Authoritative Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>While Terraform is considered an infrastructure tool, what it actually is, is a flexible, declarative desired state engine. So while it can be utilised to deliver and manage a Kubernetes platform in Azure, it can also be used to deploy applications to the resulting Kubernetes platform. The components are declared as a desired state and applied via the solution pipeline, which may deploy one or more images from the development teams. In this example, the solution deployment development is performed using feature branches and pull requests.</p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-104f2383d648ad1a45a3ba424bf697f5" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282326034.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-104f2383d648ad1a45a3ba424bf697f5"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282326034.png"></a></a></p>
+<p>In this example, the solution delivery is executed from a, GitLab Pipeline with approval gates.</p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-b046498f35468aad6803f29b2b4c3b3e" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282371454.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b046498f35468aad6803f29b2b4c3b3e"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282371454.png"></a></a></p>
+<h2 id="viewpoints">Viewpoints<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Each of the viewpoints above are development oriented, so where is the operations pane-of-glass? This is where the intermediary adds value. All solutions in Terraform require a persistent store for state. There are many choices from the default local file system, to public cloud, however the Terraform Cloud offering provides the following advantages:</p>
+<ul>
+<li>persistent storage independent of any provider, e.g. to use AWS you need to create an S3 bucket, which is infrastructure, which you should do via code, but the code would then need an S3 bucket, therein lies a paradox</li>
+<li>SaaS offering, no maintenance required</li>
+<li>Execution visibility, regardless of source</li>
+</ul>
+<p>The last advantage provides the operational visibility. All of the delivery pipelines send their requests, be it IaC or solution via the Terraform Cloud, therefore a complete view of all executions, regardless of pipeline, are visible to the operations team.</p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-4a1a78fb75c170647f722b33f639699d" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282421078.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4a1a78fb75c170647f722b33f639699d"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282421078.png"></a></a></p>
+<p>Secret management for all solution are combined into the Terraform SaaS, satisfying any separation of duty requirements, and any dynamically generated attributes that the development team would need to handover to operations is defined as code, and available to authenticated users.</p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-906edb1b63561f1094b1f79a37b73af2" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282454209.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-906edb1b63561f1094b1f79a37b73af2"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282454209.png"></a></a></p>
+<h2 id="conclusion">Conclusion<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Exploit your available tools to provide separation of concerns while providing transparency.</p>
+<p>Don’t let governance stifle creativity, while ensuring freedom doesn’t lead to anarchy.</p>
+<p>Plan for scale and complexity, “we’ll automate that later” commonly leads to “automation never”, after all the building is only as sound as it’s foundations.</p>
+<h2 id="what-next">What Next?<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>See <a href="/25-concepts/50-imperative-vs-declarative/index.html">Imperative vs. Declarative Deployment</a>.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779478661" defer></script>
+    <script src="/js/theme.min.js?1779478661" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

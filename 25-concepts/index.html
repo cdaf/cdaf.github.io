@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.160.1">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Concepts">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Concepts :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Concepts">
+    <meta property="og:url" content="https://cdaf.io/25-concepts/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Concepts :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Concepts">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Concepts :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Concepts">
+    <meta itemprop="wordCount" content="24">
+    <title>Concepts :: Concepts &amp; Applied Examples</title>
+    <link href="/25-concepts/index.xml" rel="alternate" type="application/rss+xml" title="Concepts :: Concepts &amp; Applied Examples">
+    <link href="/25-concepts/index.print.html" rel="alternate" type="text/html" title="Concepts :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1779478661" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779478661" defer></script>
+    <script src="/js/search-lunr.min.js?1779478661" defer></script>
+    <script src="/js/search.min.js?1779478661" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1779478661";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779478661" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1779478661" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779478661" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779478661" rel="stylesheet">
+    <link href="/css/theme.min.css?1779478661" rel="stylesheet">
+    <link href="/css/format-html.min.css?1779478661" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/25-concepts\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/25-concepts/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hahahugoshortcode4s0hbhb">HAHAHUGOSHORTCODE4s0HBHB</a></li>
+      </ul>
+    </li>
+    <li><a href="#imperative-vs-declarative">Imperative vs. Declarative</a></li>
+    <li><a href="#branch-plans">Branch Plans</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Concepts</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/25-concepts/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles/40-development-release/index.html" title="Development & Release (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/25-concepts/50-imperative-vs-declarative/index.html" title="Imperative vs. Declarative (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 25-concepts" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="concepts">Concepts</h1>
+
+<h3 id="hahahugoshortcode4s0hbhb">Concepts<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The following are general concepts related to continuous delivery.</p>
+<ul>
+<li>
+<h2 id="imperative-vs-declarative"><a href="/25-concepts/50-imperative-vs-declarative/index.html">Imperative vs. Declarative</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Imperative Deployment vs. Declarative Desired State</p>
+</li>
+<li>
+<h2 id="branch-plans"><a href="/25-concepts/90-branch-plans/index.html">Branch Plans</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Alternate Branch Strategies</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><img src="/images/cdaf.png" alt="Continuous Delivery Automation Framework">
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/10-cdaf/index.html"><a class="padding default-animation" href="/10-cdaf/index.html"><i class='fas fa-cog'></i>  CDAF</a><ul id="R-subsections-a9cb0b536404115325c82530a716c7b6" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/20-principles/index.html"><a class="padding default-animation" href="/20-principles/index.html"><i class='fas fa-comments'></i>  Principles</a><ul id="R-subsections-23c48d22b02be837664fce51dfef72ce" class="collapsible-menu"></ul></li>
+            <li class="active parent " data-nav-id="/25-concepts/index.html"><a class="padding default-animation" href="/25-concepts/index.html"><i class='fa-regular fa-lightbulb'></i>  Concepts</a><ul id="R-subsections-705a1229a29f12cab5780068d923751c" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/25-concepts/50-imperative-vs-declarative/index.html"><a class="padding default-animation" href="/25-concepts/50-imperative-vs-declarative/index.html"><i class="fa-solid fa-hand-holding-hand"></i>  Imperative vs. Declarative</a><ul id="R-subsections-820f5a625061dd2fb5e3a63804a6d4e7" class="collapsible-menu"></ul></li>
+            <li class="alwaysopen " data-nav-id="/25-concepts/90-branch-plans/index.html"><a class="padding default-animation" href="/25-concepts/90-branch-plans/index.html"><i class='fas fa-code-branch'></i>  Branch Plans</a><ul id="R-subsections-c210232d031178564d03caba10b8604a" class="collapsible-menu"></ul></li></ul></li>
+            <li class="" data-nav-id="/30-imperative-deployment/index.html"><a class="padding default-animation" href="/30-imperative-deployment/index.html"><i class='fas fa-sliders-h'></i>  Imperative Deployment</a><ul id="R-subsections-722c8ca13d31320f538888833a3e334d" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/70-authoritative-release/index.html"><a class="padding default-animation" href="/70-authoritative-release/index.html"><i class='fas fa-list-ul'></i>  Declarative Release</a><ul id="R-subsections-68c0ef55a5adef0606066638d7090400" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/80-release-train/index.html"><a class="padding default-animation" href="/80-release-train/index.html"><i class='fas fa-train'></i>  Release Train</a><ul id="R-subsections-09e687527bd6b4dfd4f3f5e086fdef34" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/90-reference/index.html"><a class="padding default-animation" href="/90-reference/index.html"><i class='fas fa-info'></i>  Reference Guide</a><ul id="R-subsections-9643d01fd581153bc72452a8807c50b7" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/cdaf/"><a class="padding" href="https://github.com/cdaf/" rel="external"><i class='fab fa-github'></i> Contribute & Support</a></li>
+            <li class="" data-nav-id="https://nz.linkedin.com/in/jules-clements-842b589/"><a class="padding" href="https://nz.linkedin.com/in/jules-clements-842b589/" rel="external"><i class='fab fa-linkedin'></i> Blogs & Articles</a></li>
+            <li class="" data-nav-id="https://hub.docker.com/u/cdaf/"><a class="padding" href="https://hub.docker.com/u/cdaf/" rel="external"><i class='fab fa-docker'></i> CDAF Images</a></li>
+            <li class="" data-nav-id="/tags"><a class="padding" href="/tags"><i class='fas fa-tags'></i> Tags</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779478661" defer></script>
+    <script src="/js/theme.min.js?1779478661" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

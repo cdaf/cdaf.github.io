@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.160.1">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Branch Based Deployment">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Branch Deploy :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Branch Based Deployment">
+    <meta property="og:url" content="https://cdaf.io/25-concepts/90-branch-plans/20-branch-deploy/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Branch Deploy :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Branch Based Deployment">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Concepts">
+    <meta property="article:tag" content="Kb">
+    <meta itemprop="name" content="Branch Deploy :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Branch Based Deployment">
+    <meta itemprop="wordCount" content="189">
+    <meta itemprop="keywords" content="Kb">
+    <title>Branch Deploy :: Concepts &amp; Applied Examples</title>
+    <link href="/25-concepts/90-branch-plans/20-branch-deploy/index.xml" rel="alternate" type="application/rss+xml" title="Branch Deploy :: Concepts &amp; Applied Examples">
+    <link href="/25-concepts/90-branch-plans/20-branch-deploy/index.print.html" rel="alternate" type="text/html" title="Branch Deploy :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1779478661" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779478661" defer></script>
+    <script src="/js/search-lunr.min.js?1779478661" defer></script>
+    <script src="/js/search.min.js?1779478661" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1779478661";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779478661" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1779478661" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779478661" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779478661" rel="stylesheet">
+    <link href="/css/theme.min.css?1779478661" rel="stylesheet">
+    <link href="/css/format-html.min.css?1779478661" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/25-concepts\/90-branch-plans\/20-branch-deploy\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/25-concepts/90-branch-plans/20-branch-deploy/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/25-concepts/index.html"><span itemprop="name">Concepts</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/25-concepts/90-branch-plans/index.html"><span itemprop="name">Branch Plans</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Branch Deploy</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/25-concepts/90-branch-plans/20-branch-deploy/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/25-concepts/90-branch-plans/10-cd/index.html" title="Continuous Delivery (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/25-concepts/90-branch-plans/30-gitops/index.html" title="GitOps (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 25-concepts" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="branch-deploy">Branch Deploy</h1>
+
+<p>Where the pipeline tool does not support approval gating, but a review and approval mechanism is desired, the &ldquo;Pull Request&rdquo;/&ldquo;Merge Request&rdquo; can be used. The resulting approval will rebuild the solution and deliver it to the defined environment.</p>
+<h2 id="hahahugoshortcode32s0hbhb">Branch Based Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>There are a variety of methods used within a branch based deployment approach, the following is a common example.</p>
+<p>A long-living branch is defined for each target environment, in this example <code>dev</code>, <code>test</code> and <code>release</code>. A <em>source of truth</em> branch exists (<code>main</code>) which does not trigger a deployment.</p>
+<p><a href="#R-image-2457ae56b0ae000c764303ee3954193a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/long-lived-branches.png" style="height: auto;width: auto;" title="Long Lived Branches"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2457ae56b0ae000c764303ee3954193a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/long-lived-branches.png" title="Long Lived Branches"></a></p>
+<p>Unlike <a href="/25-concepts/90-branch-plans/10-cd/index.html">Continuous Delivery</a>, a separate build is created for each environment, e.g. <code>#64</code> in <em>development</em>, <code>#65</code> in <em>acceptance test</em>, etc.</p>
+<p>The long-lived branches provide a high level of concurrency and flexibility to skip stages, or deploy a selected feature or fix (known as &ldquo;Cherry-picking&rdquo;).</p>
+<p><a href="#R-image-3ac716b9abf1f18f35f14e1f41f0689f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/branch-trunk-comparison.png" style="height: auto;width: auto;" title="Branch Based and Trunk Based comparison"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3ac716b9abf1f18f35f14e1f41f0689f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/branch-trunk-comparison.png" title="Branch Based and Trunk Based comparison"></a></p>
+<p>To &ldquo;promote&rdquo; changes from <em>feature</em> to <em>development</em>, then on to <em>test</em> and <em>production</em>, a pull request is raised for each stage. In this scenario it is typically a fellow developer that reviews and approves the change, and not a business user, i.e. Product Owner.</p>
+<p><a href="#R-image-7925adfc0555bf469cf310c526191ee8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/github-pr.png" style="height: auto;width: auto;" title="GitHub Pull Request"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7925adfc0555bf469cf310c526191ee8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/github-pr.png" title="GitHub Pull Request"></a></p>
+<p>The merge triggers the corresponding build and deploy for the target branch/environment.</p>
+<p><a href="#R-image-da6db385ea25bacf5e89fe6e14127d58" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/merge-trigger.png" style="height: auto;width: auto;" title="Merge Trigger"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-da6db385ea25bacf5e89fe6e14127d58"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/merge-trigger.png" title="Merge Trigger"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><img src="/images/cdaf.png" alt="Continuous Delivery Automation Framework">
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/10-cdaf/index.html"><a class="padding default-animation" href="/10-cdaf/index.html"><i class='fas fa-cog'></i>  CDAF</a><ul id="R-subsections-a9cb0b536404115325c82530a716c7b6" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/20-principles/index.html"><a class="padding default-animation" href="/20-principles/index.html"><i class='fas fa-comments'></i>  Principles</a><ul id="R-subsections-23c48d22b02be837664fce51dfef72ce" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/25-concepts/index.html"><a class="padding default-animation" href="/25-concepts/index.html"><i class='fa-regular fa-lightbulb'></i>  Concepts</a><ul id="R-subsections-705a1229a29f12cab5780068d923751c" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/25-concepts/50-imperative-vs-declarative/index.html"><a class="padding default-animation" href="/25-concepts/50-imperative-vs-declarative/index.html"><i class="fa-solid fa-hand-holding-hand"></i>  Imperative vs. Declarative</a><ul id="R-subsections-820f5a625061dd2fb5e3a63804a6d4e7" class="collapsible-menu"></ul></li>
+            <li class="parent alwaysopen " data-nav-id="/25-concepts/90-branch-plans/index.html"><a class="padding default-animation" href="/25-concepts/90-branch-plans/index.html"><i class='fas fa-code-branch'></i>  Branch Plans</a><ul id="R-subsections-c210232d031178564d03caba10b8604a" class="collapsible-menu">
+            <li class="" data-nav-id="/25-concepts/90-branch-plans/10-cd/index.html"><a class="padding" href="/25-concepts/90-branch-plans/10-cd/index.html">Continuous Delivery</a></li>
+            <li class="active " data-nav-id="/25-concepts/90-branch-plans/20-branch-deploy/index.html"><a class="padding" href="/25-concepts/90-branch-plans/20-branch-deploy/index.html">Branch Deploy</a></li>
+            <li class="" data-nav-id="/25-concepts/90-branch-plans/30-gitops/index.html"><a class="padding" href="/25-concepts/90-branch-plans/30-gitops/index.html">GitOps</a></li></ul></li></ul></li>
+            <li class="" data-nav-id="/30-imperative-deployment/index.html"><a class="padding default-animation" href="/30-imperative-deployment/index.html"><i class='fas fa-sliders-h'></i>  Imperative Deployment</a><ul id="R-subsections-722c8ca13d31320f538888833a3e334d" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/70-authoritative-release/index.html"><a class="padding default-animation" href="/70-authoritative-release/index.html"><i class='fas fa-list-ul'></i>  Declarative Release</a><ul id="R-subsections-68c0ef55a5adef0606066638d7090400" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/80-release-train/index.html"><a class="padding default-animation" href="/80-release-train/index.html"><i class='fas fa-train'></i>  Release Train</a><ul id="R-subsections-09e687527bd6b4dfd4f3f5e086fdef34" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/90-reference/index.html"><a class="padding default-animation" href="/90-reference/index.html"><i class='fas fa-info'></i>  Reference Guide</a><ul id="R-subsections-9643d01fd581153bc72452a8807c50b7" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/cdaf/"><a class="padding" href="https://github.com/cdaf/" rel="external"><i class='fab fa-github'></i> Contribute & Support</a></li>
+            <li class="" data-nav-id="https://nz.linkedin.com/in/jules-clements-842b589/"><a class="padding" href="https://nz.linkedin.com/in/jules-clements-842b589/" rel="external"><i class='fab fa-linkedin'></i> Blogs & Articles</a></li>
+            <li class="" data-nav-id="https://hub.docker.com/u/cdaf/"><a class="padding" href="https://hub.docker.com/u/cdaf/" rel="external"><i class='fab fa-docker'></i> CDAF Images</a></li>
+            <li class="" data-nav-id="/tags"><a class="padding" href="/tags"><i class='fas fa-tags'></i> Tags</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779478661" defer></script>
+    <script src="/js/theme.min.js?1779478661" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

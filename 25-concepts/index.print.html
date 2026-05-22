@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.160.1">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Concepts">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Concepts :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Concepts">
+    <meta property="og:url" content="https://cdaf.io/25-concepts/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Concepts :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Concepts">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Concepts :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Concepts">
+    <meta itemprop="wordCount" content="24">
+    <title>Concepts :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/25-concepts/index.html" rel="canonical" type="text/html" title="Concepts :: Concepts &amp; Applied Examples">
+    <link href="/25-concepts/index.xml" rel="alternate" type="application/rss+xml" title="Concepts :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1779478661" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779478661" defer></script>
+    <script src="/js/search-lunr.min.js?1779478661" defer></script>
+    <script src="/js/search.min.js?1779478661" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1779478661";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779478661" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779478661" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1779478661" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779478661" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779478661" rel="stylesheet">
+    <link href="/css/theme.min.css?1779478661" rel="stylesheet">
+    <link href="/css/format-print.min.css?1779478661" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/25-concepts\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/25-concepts/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hahahugoshortcode4s0hbhb">HAHAHUGOSHORTCODE4s0HBHB</a></li>
+      </ul>
+    </li>
+    <li><a href="#imperative-vs-declarative">Imperative vs. Declarative</a></li>
+    <li><a href="#branch-plans">Branch Plans</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Concepts</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/25-concepts/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles/40-development-release/index.html" title="Development & Release (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/25-concepts/50-imperative-vs-declarative/index.html" title="Imperative vs. Declarative (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 25-concepts" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="concepts">Concepts</h1>
+
+<h3 id="hahahugoshortcode4s0hbhb">Concepts<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The following are general concepts related to continuous delivery.</p>
+<ul>
+<li>
+<h2 id="imperative-vs-declarative"><a href="/25-concepts/50-imperative-vs-declarative/index.html">Imperative vs. Declarative</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Imperative Deployment vs. Declarative Desired State</p>
+</li>
+<li>
+<h2 id="branch-plans"><a href="/25-concepts/90-branch-plans/index.html">Branch Plans</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Alternate Branch Strategies</p>
+</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Concepts</h1>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="imperative-vs-declarative">Imperative vs. Declarative</h1>
+
+<h2 id="hahahugoshortcode25s0hbhb">Imperative Deployment vs. Declarative Desired State<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Imperative (Procedural Flow): Focuses on the manual execution of a specific sequence of commands, requiring the operator to manage state transitions directly, which increases complexity and the risk of configuration drift.</p>
+<p>Declarative (Desired-State Flow): Uses an automated orchestrator (a reconciliation loop) that continuously compares the actual system state with a predefined state definition document. It handles provisioning and updates automatically to ensure consistent, self-healing environments.</p>
+<p><a href="#R-image-771abd03d53e8a81b13597795aedcf0b" class="lightbox-link"><img alt="imperative-vs-declarative" class="lazy lightbox figure-image" loading="lazy" src="/images/imperative-vs-declarative.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-771abd03d53e8a81b13597795aedcf0b"><img alt="imperative-vs-declarative" class="lazy lightbox lightbox-image" loading="lazy" src="/images/imperative-vs-declarative.png"></a></p>
+<h2 id="what-next">What Next?<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Related Principles</p>
+<ul>
+<li><a href="/25-concepts/50-imperative-vs-declarative/10-imperative/index.html">Imperative Deployments</a></li>
+<li><a href="/25-concepts/50-imperative-vs-declarative/20-declarative-desired-state/index.html">Declarative Desired State</a></li>
+<li><a href="/25-concepts/50-imperative-vs-declarative/80-cattle-vs-pets/index.html">Cattle vs. Pets</a></li>
+</ul>
+<p>Implementation Patterns with CDAF</p>
+<ul>
+<li><a href="/30-imperative-deployment/index.html">Imperative Deployment</a> for pipeline constructs</li>
+<li><a href="/70-authoritative-release/index.html">Declarative Release</a> for implementation examples, which incorporate intermediary tools such Ansible Tower, Puppet Enterprise and Terraform Cloud</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Imperative vs. Declarative</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="imperative-deployments">Imperative Deployments</h1>
+
+<h2 id="hahahugoshortcode51s0hbhb">Imperative Deployments, Competing Pipelines<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>In a very simple ecosystem, an imperative approach to deployments can be effective. For each target environment, the component <em>promotion</em> (the staging from Test to Production for example) can be timed by the DevOps engineer to ensure the combination of components that were tested are consistent with those that go live.</p>
+<h2 id="drift-when-things-go-wrong">Drift, When things go wrong&hellip;<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>In this example, due to an oversight, the user interface was promoted to Production without the correct API version. The user interface fails in production even though it worked in test as expected, and a critical dependent API operation is now not available due to a <em>drift</em>.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Backend</th>
+          <th>Frontend</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="#R-image-7f7eb5de70942c05d3f1c096cf598301" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/imperative-api.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7f7eb5de70942c05d3f1c096cf598301"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/imperative-api.png"></a></td>
+          <td><a href="#R-image-8263b6bd32045060712896ade1a53226" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/imperative-ux.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8263b6bd32045060712896ade1a53226"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/imperative-ux.png"></a></td>
+      </tr>
+  </tbody>
+</table>
+<p>To add more complications, there is another version of the user interface in test now. What version of the API does it require?</p>
+<p>This approach is not scalable, where an ecosystem has many components, and many environments, the complexity grows exponentially and the chances of manual errors leading to inconsistency increase.</p>
+<p>See an alternative, <a href="/25-concepts/50-imperative-vs-declarative/20-declarative-desired-state/index.html">Declarative Desired State</a>.</p>
+<blockquote>
+<p>Implementation Patterns with CDAF <a href="/30-imperative-deployment/index.html">Imperative Deployment</a> for pipeline constructs.</p>
+</blockquote>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="declarative-desired-state">Declarative Desired State</h1>
+
+<h2 id="hahahugoshortcode53s0hbhb">Declarative Desired State, Orchestrated Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>There are two distinct and important concepts to cover, Declarative &amp; Desired State.</p>
+<h3 id="declarative">Declarative<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Declarative is a style of implementation where you describe <em>what</em> you want to achieve, rather than <em>how</em> to achieve it. In a declarative approach, you specify the desired outcome or state of the system, and the underlying implementation takes care of the details.</p>
+<h3 id="desired-state">Desired State<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Desired State refers to the specific configuration or condition that you want a system to be in. It represents the target state that you want to achieve, and it is often used in the context of infrastructure management, configuration management, and orchestration.</p>
+<h3 id="orchestrated-deployment">Orchestrated Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Orchestrated Deployment is a process of managing and automating the deployment of applications and services in a way that ensures they are deployed in the desired state. It involves coordinating various components and resources to achieve the desired outcome, often using tools and frameworks that support declarative configurations.</p>
+<p>In an orchestrated deployment, you would typically define the desired state of your application, such as the number of replicas, resource requirements, and network configurations. The orchestration tool would then take care of deploying the application according to the specified desired state, ensuring that it is running and functioning as intended.</p>
+<p>In summary, a declarative approach focuses on describing the desired state of the system, while an orchestrated deployment is a method of achieving that desired state through automation and coordination of resources.</p>
+<h3 id="what-does-it-actually-look-like">What does it actually look like?<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>There are a variety of declarative notations:</p>
+<ul>
+<li>For virtual machine machines there are Chef, Salt, Puppet, Ansible, etc. and for Windows Desired State Configuration (DSC) or Active Directory Group Policies.</li>
+<li>For containers there are Kubernetes, Docker Compose, and HashiCorp Nomad. For serverless there are AWS CloudFormation, Azure Resource Manager, and Google Cloud Deployment Manager.</li>
+<li>For public cloud infrastructure and a broad range open-source and commercial production, Terraform has become the pseudo-standard.</li>
+</ul>
+<p>This example is Puppet applying environment variables to a Tomcat server.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Declaration</th>
+          <th>Application of Desired State</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="#R-image-1ee30d7ff2ca3e71d2f44a9a692ab979" class="lightbox-link"><img alt="Puppet Module" class="lazy lightbox figure-image" loading="lazy" src="/images/declarative-module.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1ee30d7ff2ca3e71d2f44a9a692ab979"><img alt="Puppet Module" class="lazy lightbox lightbox-image" loading="lazy" src="/images/declarative-module.png"></a></td>
+          <td><a href="#R-image-e5ea397eb6ba6af5f5adb66003c675c0" class="lightbox-link"><img alt="Puppet Enterprise" class="lazy lightbox figure-image" loading="lazy" src="/images/declarative-apply.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e5ea397eb6ba6af5f5adb66003c675c0"><img alt="Puppet Enterprise" class="lazy lightbox lightbox-image" loading="lazy" src="/images/declarative-apply.png"></a></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>Implementation Patterns with CDAF <a href="/70-authoritative-release/index.html">Declarative Release</a> for implementation examples, which incorporate intermediary tools such Ansible Tower, Puppet Enterprise and Terraform Cloud</p>
+</blockquote>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="cattle-vs-pets">Cattle vs. Pets</h1>
+
+<p><a href="#R-image-c89790644afe5cfd84cd2acac38681c0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cattle-vs-pets.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c89790644afe5cfd84cd2acac38681c0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cattle-vs-pets.png"></a></p>
+<h2 id="caring-for-servers-the-pets-paradigm">Caring for Servers (The &ldquo;Pets&rdquo; Paradigm)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>In a traditional infrastructure model, servers are treated like domesticated pets. They are given unique names, carefully nurtured, and kept alive at all costs.</p>
+<ul>
+<li>Individual Identification: Every server has a distinct identity (e.g., prod-oracle-db-02 or billing-app-srv). Engineers know exactly what runs on which machine.</li>
+<li>Mutable State: Software updates, security patches, and configuration tweaks are applied directly to the live, running server over time.</li>
+<li>High-Touch Maintenance: When a server acts up, an engineer logs in via SSH to diagnose the issue, read local logs, and manually repair it.</li>
+</ul>
+<p>The Cost of Failure: Because the server is unique, its downtime is an operational emergency. If it dies, rebuilding it exactly as it was can take hours or days, often leading to data loss or &ldquo;configuration drift&rdquo; (where no one is entirely sure how the server was originally configured).</p>
+<h2 id="disposable-runtimes-the-cattle-paradigm">Disposable Runtimes (The &ldquo;Cattle&rdquo; Paradigm)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>In modern cloud-native architectures, infrastructure is treated like cattle or disposable machinery. Runtimes—such as Docker containers, micro-VMs, or serverless functions—are completely anonymous, identical, and easily replaced.</p>
+<ul>
+<li>Anonymity &amp; Uniformity: Runtimes do not have individual names; they have auto-generated IDs (e.g., srv-pod-x89f2). Every instance in a cluster is a perfect clone of the other.</li>
+<li>Immutable Infrastructure: You never modify a running container or runtime. If you need to update an application or patch an OS vulnerability, you build a new container image and swap the old ones out.</li>
+<li>Automated Lifecycle: Runtimes are designed to be ephemeral. They are spun up when traffic spikes and instantly torn down when demand drops. They might live for only a few minutes or hours.</li>
+</ul>
+<p>The Cost of Failure: Disposability transforms failure into a non-event. If a container exhibits an error, becomes unresponsive, or runs out of memory, the orchestrator (like Kubernetes) immediately terminates it and provisions a brand-new, healthy replica in seconds.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="branch-plans">Branch Plans</h1>
+
+<h3 id="hahahugoshortcode27s0hbhb">Alternate Branch Strategies<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Different branch plans do not explicitly define deployment approaches, however, there are common associative methods for each plan, which are described in the subsequent pages. This page provides the baseline terminology that will be used in the remainder of this material.</p>
+<h4 id="trunk-based">Trunk Based<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Commonly referred to as Trunk Based Development. This is the simplest strategy and is commonly synonymous with Continuous Delivery (more on this to come). The only long running branch is <code>main</code>.</p>
+<p><a href="#R-image-fdf94973a9d7085fc87ddf8366539983" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/image-20240701-194641.png" style="height: auto;width: auto;" title="Trunk based Development"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fdf94973a9d7085fc87ddf8366539983"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/image-20240701-194641.png" title="Trunk based Development"></a></p>
+<h4 id="simple-branch-plans">Simple Branch Plans<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>This branch strategy has been promoted by Microsoft, and is fundamental in their deploy process within Visual Studio. with two (or sometimes more) long-lived branches, e.g. <code>main</code> being used for test and <code>release</code> being used for production. Each additional environment requires another branch.</p>
+<p><a href="#R-image-a280e033cc31b524064e43453a28e573" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/image-20240701-193242.png" style="height: auto;width: auto;" title="Simple Branch Plans"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a280e033cc31b524064e43453a28e573"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/image-20240701-193242.png" title="Simple Branch Plans"></a></p>
+<h4 id="gitflow">GitFlow<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Originating from distributed source control systems, with prolonged disconnection. The majority of source control tools provided now are centralised server solutions, which obfuscate the underlying distributed architecture. GitFlow has continued, while being adjusted to use Pull Request/Merge Request to merge between branches. This typically has many long-lived branches, e.g. <code>main</code>, <code>develop</code>, <code>release</code>, <code>hot-fix</code>.</p>
+<p>From Atlassian <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" rel="external">https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow</a></p>
+<p><a href="#R-image-40be6d6b7b04315d0bbc29abcff224a0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/image-20240701-192859.png" style="height: auto;width: auto;" title="GitFlow"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-40be6d6b7b04315d0bbc29abcff224a0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/image-20240701-192859.png" title="GitFlow"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Branch Plans</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="continuous-delivery">Continuous Delivery</h1>
+
+<p>Continuous Delivery (CD) decouples the release activity from development activity. Unlike Continuous Deployment, Continuous Delivery has one or more approval gates. At time of writing, the majority of pipeline tools support approval gates, with the exception of the GitHub Free tier.</p>
+<h2 id="hahahugoshortcode29s0hbhb">The Continuous Delivery Maturity Model<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>A fundamental aspect of Continuous Delivery is to build once and deploy many times. This means the output of the development process (Continuous Integration) is an artefact which can be re-used to deploy to multiple environments. The artefact represents the <em>Release</em>. Once this artefact is produced, the developer input is complete, and a non-development user, i.e. Test Managed or Product Owner can promote the release through various environments to production.</p>
+<p>In this example, the first stage is Continuous Integration (CI) which produces the release. Each stage after that is automatically executed, with an integration test stage, and then deployment to the <em>staging</em> environment. After the deployment to staging, the pipeline stop, awaiting approval.</p>
+<p><a href="#R-image-3ca99ab2601dc02bcd6eea2c29c11671" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cd-pipeline-example.png" style="height: auto;width: auto;" title="CD Pipeline Example"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3ca99ab2601dc02bcd6eea2c29c11671"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cd-pipeline-example.png" title="CD Pipeline Example"></a></p>
+<p>The release artefact in this example is <code>#26</code>, and this is re-used in each deployment phase.</p>
+<p><a href="#R-image-700549cb8297f972e201675a8725c57f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/release-26.png" style="height: auto;width: auto;" title="Release Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-700549cb8297f972e201675a8725c57f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/release-26.png" title="Release Artefact"></a></p>
+<p>The approval gate advises the approver of what release is currently in production (<code>#23</code>) and what release will be deployed.</p>
+<p><a href="#R-image-2820272159d87b74c7f1fb222bfb0e08" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/approval-gate.png" style="height: auto;width: auto;" title="Approval Gate"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2820272159d87b74c7f1fb222bfb0e08"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/approval-gate.png" title="Approval Gate"></a></p>
+<p>Once approved, the same artefact that was tested, is now promoted to Production, completing the pipeline.</p>
+<p><a href="#R-image-c9692f9f7b1468981be8949428af8377" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/deploy.png" style="height: auto;width: auto;" title="Production Deploy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c9692f9f7b1468981be8949428af8377"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/deploy.png" title="Production Deploy"></a></p>
+<hr>
+<p>See the following reference from <a href="https://www.infoq.com/articles/Continuous-Delivery-Maturity-Model/" rel="external">https://www.infoq.com/articles/Continuous-Delivery-Maturity-Model</a> for the <em>build once/deploy many construct</em>.</p>
+<p><a href="#R-image-0d43879591f887d45138a912c6b62661" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cdmm.png" style="height: auto;width: auto;" title="The Continuous Delivery Maturity Model"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0d43879591f887d45138a912c6b62661"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cdmm.png" title="The Continuous Delivery Maturity Model"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="branch-deploy">Branch Deploy</h1>
+
+<p>Where the pipeline tool does not support approval gating, but a review and approval mechanism is desired, the &ldquo;Pull Request&rdquo;/&ldquo;Merge Request&rdquo; can be used. The resulting approval will rebuild the solution and deliver it to the defined environment.</p>
+<h2 id="hahahugoshortcode32s0hbhb">Branch Based Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>There are a variety of methods used within a branch based deployment approach, the following is a common example.</p>
+<p>A long-living branch is defined for each target environment, in this example <code>dev</code>, <code>test</code> and <code>release</code>. A <em>source of truth</em> branch exists (<code>main</code>) which does not trigger a deployment.</p>
+<p><a href="#R-image-2457ae56b0ae000c764303ee3954193a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/long-lived-branches.png" style="height: auto;width: auto;" title="Long Lived Branches"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2457ae56b0ae000c764303ee3954193a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/long-lived-branches.png" title="Long Lived Branches"></a></p>
+<p>Unlike <a href="/25-concepts/90-branch-plans/10-cd/index.html">Continuous Delivery</a>, a separate build is created for each environment, e.g. <code>#64</code> in <em>development</em>, <code>#65</code> in <em>acceptance test</em>, etc.</p>
+<p>The long-lived branches provide a high level of concurrency and flexibility to skip stages, or deploy a selected feature or fix (known as &ldquo;Cherry-picking&rdquo;).</p>
+<p><a href="#R-image-3ac716b9abf1f18f35f14e1f41f0689f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/branch-trunk-comparison.png" style="height: auto;width: auto;" title="Branch Based and Trunk Based comparison"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3ac716b9abf1f18f35f14e1f41f0689f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/branch-trunk-comparison.png" title="Branch Based and Trunk Based comparison"></a></p>
+<p>To &ldquo;promote&rdquo; changes from <em>feature</em> to <em>development</em>, then on to <em>test</em> and <em>production</em>, a pull request is raised for each stage. In this scenario it is typically a fellow developer that reviews and approves the change, and not a business user, i.e. Product Owner.</p>
+<p><a href="#R-image-7925adfc0555bf469cf310c526191ee8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/github-pr.png" style="height: auto;width: auto;" title="GitHub Pull Request"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7925adfc0555bf469cf310c526191ee8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/github-pr.png" title="GitHub Pull Request"></a></p>
+<p>The merge triggers the corresponding build and deploy for the target branch/environment.</p>
+<p><a href="#R-image-da6db385ea25bacf5e89fe6e14127d58" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/merge-trigger.png" style="height: auto;width: auto;" title="Merge Trigger"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-da6db385ea25bacf5e89fe6e14127d58"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/merge-trigger.png" title="Merge Trigger"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="gitops">GitOps</h1>
+
+<p>GitOps is another branch based deployment approach, however it typically does not have a Continuous Integration construct, and instead deploys directly from source control.</p>
+<h2 id="hahahugoshortcode34s0hbhb">Branch Based Deployment Directly from Source Control<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>GitOps is commonly portrayed as Trunk Based</p>
+<p><a href="#R-image-5d7e84b0256bfe78a5d86b0ce9df9f28" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/image-20240701-193813.png" style="height: auto;width: auto;" title="GitOps workflow"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5d7e84b0256bfe78a5d86b0ce9df9f28"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/image-20240701-193813.png" title="GitOps workflow"></a></p>
+<p>Each target environment maybe defined as a directory, but in many some cases, i.e. to provide a gating mechanism, like <a href="/25-concepts/90-branch-plans/20-branch-deploy/index.html">Branch Based Deployment</a>, multiple long-lived branches are used.</p>
+<p><a href="#R-image-926cbd89302b8884bf4b24d6b1122758" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/image-20240701-194140.png" style="height: auto;width: auto;" title="GitOps workflow"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-926cbd89302b8884bf4b24d6b1122758"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/image-20240701-194140.png" title="GitOps workflow"></a></p>
+
+  <footer class="footline">
+  </footer>
+</article>
+          </section>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779478661" defer></script>
+    <script src="/js/theme.min.js?1779478661" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

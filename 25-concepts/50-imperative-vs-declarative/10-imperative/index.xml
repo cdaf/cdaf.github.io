@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Imperative Deployments :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/25-concepts/50-imperative-vs-declarative/10-imperative/index.html</link>
+    <description>Imperative Deployments, Competing Pipelines</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/25-concepts/50-imperative-vs-declarative/10-imperative/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

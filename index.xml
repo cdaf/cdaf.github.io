@@ -15,11 +15,18 @@
       <description>Continuous Delivery Automation Framework</description>
     </item>
     <item>
-      <title>Principles and Concepts</title>
-      <link>https://cdaf.io/20-principles-and-concepts/index.html</link>
+      <title>Principles</title>
+      <link>https://cdaf.io/20-principles/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://cdaf.io/20-principles-and-concepts/index.html</guid>
-      <description>Principles and Concepts</description>
+      <guid>https://cdaf.io/20-principles/index.html</guid>
+      <description>CDAF Principles</description>
+    </item>
+    <item>
+      <title>Concepts</title>
+      <link>https://cdaf.io/25-concepts/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/25-concepts/index.html</guid>
+      <description>Concepts</description>
     </item>
     <item>
       <title>Imperative Deployment</title>

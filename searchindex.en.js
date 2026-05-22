@@ -122,14 +122,14 @@ var relearn_searchindex = [
     "uri": "/90-reference/30-docker-features/10-configuration-mapping/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts \u003e Branch Plans",
+    "breadcrumb": "Home \u003e Concepts \u003e Branch Plans",
     "content": "Continuous Delivery (CD) decouples the release activity from development activity. Unlike Continuous Deployment, Continuous Delivery has one or more approval gates. At time of writing, the majority of pipeline tools support approval gates, with the exception of the GitHub Free tier.\nThe Continuous Delivery Maturity Model A fundamental aspect of Continuous Delivery is to build once and deploy many times. This means the output of the development process (Continuous Integration) is an artefact which can be re-used to deploy to multiple environments. The artefact represents the Release. Once this artefact is produced, the developer input is complete, and a non-development user, i.e. Test Managed or Product Owner can promote the release through various environments to production.\nIn this example, the first stage is Continuous Integration (CI) which produces the release. Each stage after that is automatically executed, with an integration test stage, and then deployment to the staging environment. After the deployment to staging, the pipeline stop, awaiting approval.\nThe release artefact in this example is #26, and this is re-used in each deployment phase.\nThe approval gate advises the approver of what release is currently in production (#23) and what release will be deployed.\nOnce approved, the same artefact that was tested, is now promoted to Production, completing the pipeline.\nSee the following reference from https://www.infoq.com/articles/Continuous-Delivery-Maturity-Model for the build once/deploy many construct.",
     "description": "The Continuous Delivery Maturity Model",
     "tags": [
       "Kb"
     ],
     "title": "Continuous Delivery",
-    "uri": "/20-principles-and-concepts/90-branch-plans/10-cd/index.html"
+    "uri": "/25-concepts/90-branch-plans/10-cd/index.html"
   },
   {
     "breadcrumb": "Home \u003e Reference Guide \u003e Framework Implementation",
@@ -159,22 +159,22 @@ var relearn_searchindex = [
     "uri": "/10-cdaf/10-getting-started/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts \u003e Imperative vs. Declarative",
+    "breadcrumb": "Home \u003e Concepts \u003e Imperative vs. Declarative",
     "content": "Imperative Deployments, Competing Pipelines In a very simple ecosystem, an imperative approach to deployments can be effective. For each target environment, the component promotion (the staging from Test to Production for example) can be timed by the DevOps engineer to ensure the combination of components that were tested are consistent with those that go live.\nDrift, When things go wrong… In this example, due to an oversight, the user interface was promoted to Production without the correct API version. The user interface fails in production even though it worked in test as expected, and a critical dependent API operation is now not available due to a drift.\nBackend Frontend To add more complications, there is another version of the user interface in test now. What version of the API does it require?\nThis approach is not scalable, where an ecosystem has many components, and many environments, the complexity grows exponentially and the chances of manual errors leading to inconsistency increase.\nSee an alternative, Declarative Desired State.\nImplementation Patterns with CDAF Imperative Deployment for pipeline constructs.",
     "description": "Imperative Deployments, Competing Pipelines",
     "tags": [
       "Kb"
     ],
     "title": "Imperative Deployments",
-    "uri": "/20-principles-and-concepts/50-imperative-vs-declarative/10-imperative/index.html"
+    "uri": "/25-concepts/50-imperative-vs-declarative/10-imperative/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts",
+    "breadcrumb": "Home \u003e Principles",
     "content": "As mentioned in the Continuous Delivery Automation Framework (CDAF) introduction, this is one of the founding principles…\nLoose Coupling : Designed for workstation implementation first, with no tight coupling to any given automation tool-set Lowest Common Denominator : Using the minimum of the tool-chain plugins \u0026 capabilities, to ensure loose coupling Package Portability : Package Task execution designed for automated push / pull or manual deployment While this approach protects the pipeline from degradation due to plugin issues, and allows the author to control behaviour, e.g. logging, retry, it is fundamentally important from an ownership, portability and reusability perspective.\nShift-Left \u0026 Failing Fast Shift-left is the principle of bringing solution aspects closer to the developer, as the cost of failing early is exponentially less costly than failing in production. While this discipline is commonly associated with software development, it should be considered a fundamental objective for all aspects of the solution, including infrastructure and configuration management.\nConsistent Ways of Working Infrastructure, Application and Testing automation should follow the same patterns of delivery. By doing so, a full, tested, solution can be delivered repeatably and predictably.\nContributor Ownership By constructing and testing the automation locally, the contributor can ensure it is healthy prior to committing to source control and executing in the pipeline. The more features that are performed within the automation itself, and the less dependency on any given pipeline, reduces the friction of changing vendor should that be required or desired. See the do nothing pipeline for an elaboration on automation health.\nReusable Asset By creating Infrastructure, Application and Testing automation output that is portable and autonomous, it can be used for not only the pipeline deployment, but for local execution, allowing the creation of production-like environments at will. See the feedback loop realisation for a detailed example, based on the feedback loop approach.",
     "description": "Works on my Machine",
     "tags": [],
     "title": "Loose Coupling",
-    "uri": "/20-principles-and-concepts/10-loose-coupling/index.html"
+    "uri": "/20-principles/10-loose-coupling/index.html"
   },
   {
     "breadcrumb": "Home \u003e Declarative Release \u003e Terraform Kubernetes",
@@ -279,14 +279,14 @@ var relearn_searchindex = [
     "uri": "/30-imperative-deployment/20-asp-net-web-deploy/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts \u003e Branch Plans",
+    "breadcrumb": "Home \u003e Concepts \u003e Branch Plans",
     "content": "Where the pipeline tool does not support approval gating, but a review and approval mechanism is desired, the “Pull Request”/“Merge Request” can be used. The resulting approval will rebuild the solution and deliver it to the defined environment.\nBranch Based Deployment There are a variety of methods used within a branch based deployment approach, the following is a common example.\nA long-living branch is defined for each target environment, in this example dev, test and release. A source of truth branch exists (main) which does not trigger a deployment.\nUnlike Continuous Delivery, a separate build is created for each environment, e.g. #64 in development, #65 in acceptance test, etc.\nThe long-lived branches provide a high level of concurrency and flexibility to skip stages, or deploy a selected feature or fix (known as “Cherry-picking”).\nTo “promote” changes from feature to development, then on to test and production, a pull request is raised for each stage. In this scenario it is typically a fellow developer that reviews and approves the change, and not a business user, i.e. Product Owner.\nThe merge triggers the corresponding build and deploy for the target branch/environment.",
     "description": "Branch Based Deployment",
     "tags": [
       "Kb"
     ],
     "title": "Branch Deploy",
-    "uri": "/20-principles-and-concepts/90-branch-plans/20-branch-deploy/index.html"
+    "uri": "/25-concepts/90-branch-plans/20-branch-deploy/index.html"
   },
   {
     "breadcrumb": "Home \u003e Release Train \u003e Azure DevOps (ADO) Release",
@@ -353,14 +353,14 @@ var relearn_searchindex = [
     "uri": "/70-authoritative-release/50-custom-state-management/20-build-once/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts \u003e Imperative vs. Declarative",
+    "breadcrumb": "Home \u003e Concepts \u003e Imperative vs. Declarative",
     "content": "Declarative Desired State, Orchestrated Deployment There are two distinct and important concepts to cover, Declarative \u0026 Desired State.\nDeclarative Declarative is a style of implementation where you describe what you want to achieve, rather than how to achieve it. In a declarative approach, you specify the desired outcome or state of the system, and the underlying implementation takes care of the details.\nDesired State Desired State refers to the specific configuration or condition that you want a system to be in. It represents the target state that you want to achieve, and it is often used in the context of infrastructure management, configuration management, and orchestration.\nOrchestrated Deployment Orchestrated Deployment is a process of managing and automating the deployment of applications and services in a way that ensures they are deployed in the desired state. It involves coordinating various components and resources to achieve the desired outcome, often using tools and frameworks that support declarative configurations.\nIn an orchestrated deployment, you would typically define the desired state of your application, such as the number of replicas, resource requirements, and network configurations. The orchestration tool would then take care of deploying the application according to the specified desired state, ensuring that it is running and functioning as intended.\nIn summary, a declarative approach focuses on describing the desired state of the system, while an orchestrated deployment is a method of achieving that desired state through automation and coordination of resources.\nWhat does it actually look like? There are a variety of declarative notations:\nFor virtual machine machines there are Chef, Salt, Puppet, Ansible, etc. and for Windows Desired State Configuration (DSC) or Active Directory Group Policies. For containers there are Kubernetes, Docker Compose, and HashiCorp Nomad. For serverless there are AWS CloudFormation, Azure Resource Manager, and Google Cloud Deployment Manager. For public cloud infrastructure and a broad range open-source and commercial production, Terraform has become the pseudo-standard. This example is Puppet applying environment variables to a Tomcat server.\nDeclaration Application of Desired State Implementation Patterns with CDAF Declarative Release for implementation examples, which incorporate intermediary tools such Ansible Tower, Puppet Enterprise and Terraform Cloud",
     "description": "Declarative Desired State, Orchestrated Deployment",
     "tags": [
       "Kb"
     ],
     "title": "Declarative Desired State",
-    "uri": "/20-principles-and-concepts/50-imperative-vs-declarative/20-declarative-desired-state/index.html"
+    "uri": "/25-concepts/50-imperative-vs-declarative/20-declarative-desired-state/index.html"
   },
   {
     "breadcrumb": "Home \u003e Release Train \u003e Octopus Deploy",
@@ -374,12 +374,12 @@ var relearn_searchindex = [
     "uri": "/80-release-train/30-octopus-deploy/20-deploy-many/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts",
+    "breadcrumb": "Home \u003e Principles",
     "content": "To embed automation into the feature development lifecycle, a pipeline should exist at the earliest possible time, configured to initially “do nothing” at deploy time.\nEnough to make it run A key principle of the Continuous Delivery Automation Framework (CDAF) is loose coupling. The intention is that the same automation that will be performed by the pipeline, can be developed and tested on the local workstation. Once the minimum automation is available, then the pipeline should be created.\nDo-Nothing Pipeline Ensure the pipeline runs successfully through all stages, e.g. if you have, test, staging and production stages, execute a do-nothing process in each to ensure the basic wiring of your pipeline is sound.\nFail Successfully Intentionally push a change which causes the pipeline to fail, to ensure contributors can be confident that the pipeline is not giving false positives.\nWhat Does It look Like Based on the seeded solution getting started guide or using the CDAF samples for Linux or Windows, an operational pipeline can be created quickly.\nWhat is Sprint-0 A do nothing pipeline ensures an automation-first approach, with early detection of build failures, however, this can be taken further. Making your first deployed environment Production!\nTypically pipelines deploy to the development or test environments first, and eventually progress to production; discovering issues later in the software development lifecycle (SDCL). To realise a fail-fast approach, deploy nothing to production first. By nothing, the absolute bare minimum is the objective, typically something that displays the build number. This allows test teams to verify they are working with the correct build, and importantly, proving the delivery pipeline immediately.\nThe production environment can be scaled down as the proving ground for the solution architecture. Only when concurrency is required in your SDLC, should non-production environments be instantiated, based on your production environment, ideally via automation. See release train for an elaboration of how to combine automation of infrastructure, configuration management and software delivery.",
     "description": "Entering Sprint-0",
     "tags": [],
     "title": "Do Nothing Pipeline",
-    "uri": "/20-principles-and-concepts/20-do-nothing-pipeline/index.html"
+    "uri": "/20-principles/20-do-nothing-pipeline/index.html"
   },
   {
     "breadcrumb": "Home \u003e Reference Guide \u003e Feature Configuration",
@@ -425,11 +425,11 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Home",
-    "content": "Principles and Concepts These articles provide the experiences and learnings which lead to creation of the Continuous Delivery Automation Framework (CDAF). Also included are articles to clarify terminology used, and provides context between these and CDAF.\nLoose Coupling Works on my Machine\nDo Nothing Pipeline Entering Sprint-0\nRealising the Feedback Loop Continuous Delivery to Shift-Left\nDevelopment \u0026 Release Autonomous Development Authoritative Release\nImperative vs. Declarative Imperative Deployment vs. Declarative Desired State\nBranch Plans Alternate Branch Strategies",
-    "description": "Principles and Concepts",
+    "content": "CDAF Principles These articles provide the experiences and learnings which lead to creation of the Continuous Delivery Automation Framework (CDAF). Also included are articles to clarify terminology used, and provides context between these and CDAF.\nLoose Coupling Works on my Machine\nDo Nothing Pipeline Entering Sprint-0\nRealising the Feedback Loop Continuous Delivery to Shift-Left\nDevelopment \u0026 Release Autonomous Development Authoritative Release",
+    "description": "CDAF Principles",
     "tags": [],
-    "title": "Principles and Concepts",
-    "uri": "/20-principles-and-concepts/index.html"
+    "title": "Principles",
+    "uri": "/20-principles/index.html"
   },
   {
     "breadcrumb": "Home \u003e CDAF",
@@ -471,6 +471,14 @@ var relearn_searchindex = [
     ],
     "title": "Terraform Build",
     "uri": "/80-release-train/40-terraform-cloud/20-build-once/index.html"
+  },
+  {
+    "breadcrumb": "Home",
+    "content": "Concepts The following are general concepts related to continuous delivery.\nImperative vs. Declarative Imperative Deployment vs. Declarative Desired State\nBranch Plans Alternate Branch Strategies",
+    "description": "Concepts",
+    "tags": [],
+    "title": "Concepts",
+    "uri": "/25-concepts/index.html"
   },
   {
     "breadcrumb": "Home \u003e CDAF \u003e Getting Started",
@@ -557,14 +565,14 @@ var relearn_searchindex = [
     "uri": "/90-reference/20-feature-configuration/30-environment-variables/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts \u003e Branch Plans",
+    "breadcrumb": "Home \u003e Concepts \u003e Branch Plans",
     "content": "GitOps is another branch based deployment approach, however it typically does not have a Continuous Integration construct, and instead deploys directly from source control.\nBranch Based Deployment Directly from Source Control GitOps is commonly portrayed as Trunk Based\nEach target environment maybe defined as a directory, but in many some cases, i.e. to provide a gating mechanism, like Branch Based Deployment, multiple long-lived branches are used.",
     "description": "Branch Based Deployment Directly from Source Control",
     "tags": [
       "Kb"
     ],
     "title": "GitOps",
-    "uri": "/20-principles-and-concepts/90-branch-plans/30-gitops/index.html"
+    "uri": "/25-concepts/90-branch-plans/30-gitops/index.html"
   },
   {
     "breadcrumb": "Home \u003e Declarative Release",
@@ -622,12 +630,12 @@ var relearn_searchindex = [
     "uri": "/80-release-train/30-octopus-deploy/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts",
+    "breadcrumb": "Home \u003e Principles",
     "content": "Continuous Delivery to Shift-Left While the DevOps Feedback-Loop, along with finding issues early by moving production-like environments closer to the developer (Shift-Left), are key principles, there is commonly no tangible way of achieving this.\nIn the typically incremental progression of continuous delivery implementations, eventually automation is built to deliver to production, and typically, that is where the story ends.\nBefore describing the realisation of the feedback loop, it’s important to highlight the underlying framework approaches that make this possible, which are:\nRelease Portability : the output of the build (Continuous Integration) process is a single, self-contained, deployable artefact Loose Coupling : delivery orchestration does not use any proprietary mechanisms to deploy, the pipeline tool simply calls the deployable artefact Artefact Registry : a store of immutable artefacts, not code (repository). These are strictly versioned and ideally offer the ability to download the latest version. In my Sprint Zero approach, I espouse the creation of an end-to-end, do-nothing pipeline before any development begins. The final stage of this pipeline should be to push the deployable artefact to the Artefact Registry.\nBy doing this, a known production state is available as feedback to the developers and testers, by getting the latest version from the Artefact Registry.\nConsistent Ways of Working If this approach is applied consistently between your infrastructure, configuration management and software developers, an automated view of the Production environment is automatically available, without having to inspect the current state of each contributing pipeline.\nBy combining these deployable assets, users have the ability to create a full-stack, production-like environment on demand. This could be wrapped in a graphical user interface or simply run from the command-line.\nArtefact Registries Each registry vendor has different names for general purpose stores, in Azure DevOps it’s called Universal, in GitLab it’s called Generic and in Nexus it’s called Raw.\nClosing note: in the above example provided, there is an Infrastructure-as-Code (IaC)/configuration management deployment package (AZT) and software deployment package (KAT). The software deployment package is a manifest driven, desired state, deployment of containers, the container image publication is not captured in the artefact store as the image build pipeline does not reflect any target environment state.\nFor detailed example the creation and usage of the release artefacts in this article see Terraform Cloud Release Train.",
     "description": "Continuous Delivery to Shift-Left",
     "tags": [],
     "title": "Realising the Feedback Loop",
-    "uri": "/20-principles-and-concepts/30-feedback-loop/index.html"
+    "uri": "/20-principles/30-feedback-loop/index.html"
   },
   {
     "breadcrumb": "Home \u003e Release Train \u003e Ansible Automation Platform",
@@ -686,12 +694,12 @@ var relearn_searchindex = [
     "uri": "/90-reference/30-docker-features/40-container-deploy/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts",
+    "breadcrumb": "Home \u003e Principles",
     "content": "DevOps is not a role or product, it’s a principle. With competing desires, i.e. autonomous vs. authoritative, Development and Operations can have different perspectives and these tools can help provide a viewpoint for operations, driven from a “source of truth”.\nDevelopment Pipelines When speaking of Continuous Integration and Continuous Deployment (CI/CD), the conversations are typically developer centric. However, in enterprise environments, Continuous Delivery is more likely the reality, and it is desirable to be able to deliver a release without the involvement of the feature developers, as there may be many different teams contributing to the solution. Orchestrating these individuals for a release deployment can be a scheduling challenge and distracts those teams from their core purpose.\nTo gather these distributed concerns, it is common to try and apply processes, procedures, governance and standardisation at the development level, which is an Agile anti-pattern. So to provide developer freedom with the release predictability required, these two concerns are divided in autonomy and authority.\nAutonomous Development The key difference from developer centric approaches is that the development teams do not deploy to user environments, instead the end of the development delivery pipeline results in pushing an immutable image to the registry. The development teams can use whatever source control and branch strategy they choose, e.g. Git Flow, Simple Branch Plans, Feature Branches, etc. In this example the development team are using GitHub Actions to build (Docker), test (docker-compose) and publish their component, see Containers at Scale, A Containers Journey.\nThe published image may not the build image, but it must be the production ready (optimised and hardened) image which was verified in the test process.\nEach component or micro service is delivered to the central catalogue, in this example, Docker Hub, but this could be any Open Container Initiative (OCI) Registry, either public or private.\nDelivery Pipelines With the Container Registry being the nexus of the autonomous development teams, now the release definition at a solution level can be declared. This codifies the release, whereas a manual release may involve spreadsheets and workbook documents, the implementation of the release is abstracted by the automation tool, in this case Terraform.\nInfrastructure as Code (IaC) This is the common use case of Terraform. In this example, the delivery of the Kubernetes platform is executed from an Azure DevOps pipeline using a 12-Factor approach, with feature branch development. Releases to production are only based on master and implemented with gating. When a feature is complete and the pull request (PR) processed, the environment created for the feature branch is destroyed (“clean-up Dev”).\nAuthoritative Deployment While Terraform is considered an infrastructure tool, what it actually is, is a flexible, declarative desired state engine. So while it can be utilised to deliver and manage a Kubernetes platform in Azure, it can also be used to deploy applications to the resulting Kubernetes platform. The components are declared as a desired state and applied via the solution pipeline, which may deploy one or more images from the development teams. In this example, the solution deployment development is performed using feature branches and pull requests.\nIn this example, the solution delivery is executed from a, GitLab Pipeline with approval gates.\nViewpoints Each of the viewpoints above are development oriented, so where is the operations pane-of-glass? This is where the intermediary adds value. All solutions in Terraform require a persistent store for state. There are many choices from the default local file system, to public cloud, however the Terraform Cloud offering provides the following advantages:\npersistent storage independent of any provider, e.g. to use AWS you need to create an S3 bucket, which is infrastructure, which you should do via code, but the code would then need an S3 bucket, therein lies a paradox SaaS offering, no maintenance required Execution visibility, regardless of source The last advantage provides the operational visibility. All of the delivery pipelines send their requests, be it IaC or solution via the Terraform Cloud, therefore a complete view of all executions, regardless of pipeline, are visible to the operations team.\nSecret management for all solution are combined into the Terraform SaaS, satisfying any separation of duty requirements, and any dynamically generated attributes that the development team would need to handover to operations is defined as code, and available to authenticated users.\nConclusion Exploit your available tools to provide separation of concerns while providing transparency.\nDon’t let governance stifle creativity, while ensuring freedom doesn’t lead to anarchy.\nPlan for scale and complexity, “we’ll automate that later” commonly leads to “automation never”, after all the building is only as sound as it’s foundations.\nWhat Next? See Imperative vs. Declarative Deployment.",
     "description": "Autonomous Development Authoritative Release",
     "tags": [],
     "title": "Development \u0026 Release",
-    "uri": "/20-principles-and-concepts/40-development-release/index.html"
+    "uri": "/20-principles/40-development-release/index.html"
   },
   {
     "breadcrumb": "Home \u003e CDAF \u003e Getting Started",
@@ -829,12 +837,12 @@ var relearn_searchindex = [
     "uri": "/90-reference/20-feature-configuration/50-extended-processes/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts",
+    "breadcrumb": "Home \u003e Concepts",
     "content": "Imperative Deployment vs. Declarative Desired State Imperative (Procedural Flow): Focuses on the manual execution of a specific sequence of commands, requiring the operator to manage state transitions directly, which increases complexity and the risk of configuration drift.\nDeclarative (Desired-State Flow): Uses an automated orchestrator (a reconciliation loop) that continuously compares the actual system state with a predefined state definition document. It handles provisioning and updates automatically to ensure consistent, self-healing environments.\nWhat Next? Related Principles\nImperative Deployments Declarative Desired State Cattle vs. Pets Implementation Patterns with CDAF\nImperative Deployment for pipeline constructs Declarative Release for implementation examples, which incorporate intermediary tools such Ansible Tower, Puppet Enterprise and Terraform Cloud",
     "description": "Imperative Deployment vs. Declarative Desired State",
     "tags": [],
     "title": "Imperative vs. Declarative",
-    "uri": "/20-principles-and-concepts/50-imperative-vs-declarative/index.html"
+    "uri": "/25-concepts/50-imperative-vs-declarative/index.html"
   },
   {
     "breadcrumb": "Home \u003e Release Train \u003e Terraform Cloud",
@@ -946,14 +954,14 @@ var relearn_searchindex = [
     "uri": "/90-reference/20-feature-configuration/70-sensitive-data-strategies/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts \u003e Imperative vs. Declarative",
+    "breadcrumb": "Home \u003e Concepts \u003e Imperative vs. Declarative",
     "content": "Caring for Servers (The “Pets” Paradigm) In a traditional infrastructure model, servers are treated like domesticated pets. They are given unique names, carefully nurtured, and kept alive at all costs.\nIndividual Identification: Every server has a distinct identity (e.g., prod-oracle-db-02 or billing-app-srv). Engineers know exactly what runs on which machine. Mutable State: Software updates, security patches, and configuration tweaks are applied directly to the live, running server over time. High-Touch Maintenance: When a server acts up, an engineer logs in via SSH to diagnose the issue, read local logs, and manually repair it. The Cost of Failure: Because the server is unique, its downtime is an operational emergency. If it dies, rebuilding it exactly as it was can take hours or days, often leading to data loss or “configuration drift” (where no one is entirely sure how the server was originally configured).\nDisposable Runtimes (The “Cattle” Paradigm) In modern cloud-native architectures, infrastructure is treated like cattle or disposable machinery. Runtimes—such as Docker containers, micro-VMs, or serverless functions—are completely anonymous, identical, and easily replaced.\nAnonymity \u0026 Uniformity: Runtimes do not have individual names; they have auto-generated IDs (e.g., srv-pod-x89f2). Every instance in a cluster is a perfect clone of the other. Immutable Infrastructure: You never modify a running container or runtime. If you need to update an application or patch an OS vulnerability, you build a new container image and swap the old ones out. Automated Lifecycle: Runtimes are designed to be ephemeral. They are spun up when traffic spikes and instantly torn down when demand drops. They might live for only a few minutes or hours. The Cost of Failure: Disposability transforms failure into a non-event. If a container exhibits an error, becomes unresponsive, or runs out of memory, the orchestrator (like Kubernetes) immediately terminates it and provisions a brand-new, healthy replica in seconds.",
     "description": "Cattle vs. Pets",
     "tags": [
       "Kb"
     ],
     "title": "Cattle vs. Pets",
-    "uri": "/20-principles-and-concepts/50-imperative-vs-declarative/80-cattle-vs-pets/index.html"
+    "uri": "/25-concepts/50-imperative-vs-declarative/80-cattle-vs-pets/index.html"
   },
   {
     "breadcrumb": "Home \u003e Release Train \u003e Terraform Cloud",
@@ -987,12 +995,12 @@ var relearn_searchindex = [
     "uri": "/80-release-train/index.html"
   },
   {
-    "breadcrumb": "Home \u003e Principles and Concepts",
+    "breadcrumb": "Home \u003e Concepts",
     "content": "Alternate Branch Strategies Different branch plans do not explicitly define deployment approaches, however, there are common associative methods for each plan, which are described in the subsequent pages. This page provides the baseline terminology that will be used in the remainder of this material.\nTrunk Based Commonly referred to as Trunk Based Development. This is the simplest strategy and is commonly synonymous with Continuous Delivery (more on this to come). The only long running branch is main.\nSimple Branch Plans This branch strategy has been promoted by Microsoft, and is fundamental in their deploy process within Visual Studio. with two (or sometimes more) long-lived branches, e.g. main being used for test and release being used for production. Each additional environment requires another branch.\nGitFlow Originating from distributed source control systems, with prolonged disconnection. The majority of source control tools provided now are centralised server solutions, which obfuscate the underlying distributed architecture. GitFlow has continued, while being adjusted to use Pull Request/Merge Request to merge between branches. This typically has many long-lived branches, e.g. main, develop, release, hot-fix.\nFrom Atlassian https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow",
     "description": "Alternate Branch Strategies",
     "tags": [],
     "title": "Branch Plans",
-    "uri": "/20-principles-and-concepts/90-branch-plans/index.html"
+    "uri": "/25-concepts/90-branch-plans/index.html"
   },
   {
     "breadcrumb": "Home",
