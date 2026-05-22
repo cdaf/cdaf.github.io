@@ -18,30 +18,30 @@
     <meta property="og:type" content="website">
     <meta itemprop="name" content="CDAF :: Concepts &amp; Applied Examples">
     <meta itemprop="description" content="Continuous Delivery Automation Framework">
-    <meta itemprop="wordCount" content="605">
+    <meta itemprop="wordCount" content="606">
     <title>CDAF :: Concepts &amp; Applied Examples</title>
     <link href="/10-cdaf/index.xml" rel="alternate" type="application/rss+xml" title="CDAF :: Concepts &amp; Applied Examples">
     <link href="/10-cdaf/index.print.html" rel="alternate" type="text/html" title="CDAF :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779427209" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779427209" defer></script>
-    <script src="/js/search-lunr.min.js?1779427209" defer></script>
-    <script src="/js/search.min.js?1779427209" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779477710" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779477710" defer></script>
+    <script src="/js/search-lunr.min.js?1779477710" defer></script>
+    <script src="/js/search.min.js?1779477710" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779427209";
+      window.relearn.index_js_url="/searchindex.en.js?1779477710";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779427209" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779427209" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779427209" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779427209" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779477710" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779477710" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779477710" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779477710" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779427209" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779427209" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779427209" rel="stylesheet">
-    <link href="/css/theme.min.css?1779427209" rel="stylesheet">
-    <link href="/css/format-html.min.css?1779427209" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779477710" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779477710" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779477710" rel="stylesheet">
+    <link href="/css/theme.min.css?1779477710" rel="stylesheet">
+    <link href="/css/format-html.min.css?1779477710" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -164,7 +164,7 @@
 <li><strong>Task Definition</strong> : Framework to manage logging, exceptions and errors, to allow the user to focus on the tasks to be performed</li>
 </ul>
 <h3 id="cdaf-what-it-is-and-what-it-is-not">CDAF, what it is, and what it is not<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p>This documentation works through increasingly complex use cases. It is discouraged to open the CDAF code and try to determine it&rsquo;s purpose from the code (although it&rsquo;s open source, so you&rsquo;re most welcome). The framework uses a significant amount of dependeny injection, and without an understanding of the purpose, the code will be quite difficult to follow.</p>
+<p>This documentation works through increasingly complex use cases. It is discouraged to open the CDAF code and try to determine its purpose from the code (although it&rsquo;s open source, so you&rsquo;re most welcome). The framework uses a significant amount of dependency injection, and without an understanding of the purpose, the code will be quite difficult to follow.</p>
 <table>
   <thead>
       <tr>
@@ -183,7 +183,7 @@
       </tr>
       <tr>
           <td>It does not replace your build tools, such as MSBuild, Maven, Ant, etc.</td>
-          <td>It provides a execution engine for your build tasks, to cater for logging, error and exception handling.</td>
+          <td>It provides an execution engine for your build tasks, to cater for logging, error and exception handling.</td>
       </tr>
       <tr>
           <td>CDAF does not know how to deploy your application nor;<br/>does it know how to manage the configuration.</td>
@@ -192,19 +192,19 @@
   </tbody>
 </table>
 <h3 id="geared-for-enterprise-devops"><em>Geared for Enterprise DevOps</em><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
-<p>The framework origin is within Enterprises, deploying production systems for internal and external consumption. Although CDAF is used for product shipping, i.e. the framework is used to deliver itself, this is not it&rsquo;s primary purpose.</p>
+<p>The framework origin is within Enterprises, deploying production systems for internal and external consumption. Although CDAF is used for product shipping, i.e. the framework is used to deliver itself, this is not its primary purpose.</p>
 <h3 id="framework-principles">Framework Principles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>CDAF provides consistency in the solution build, package and delivery mechanics, providing the basis of a code driven delivery, whereby any changes to the methodology are traceable in the source control system. While CDAF focusses on the mechanics of Continuous Delivery, the CI Tools are relied upon for source control integration, artefact retention and providing a graphical user interface for features such as reviewing automated test results and release gating.</p>
-<p><a href="#R-image-1b27f85ff69e9bfdb6171c8285fd3628" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ToolsetIntegration.png" style="height: auto;width: auto;" title="Toolset Integration"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1b27f85ff69e9bfdb6171c8285fd3628"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ToolsetIntegration.png" title="Toolset Integration"></a></p>
+<p><a href="#R-image-68fb8a4ade0c3492841f88dc767cb3e4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ToolsetIntegration.png" style="height: auto;width: auto;" title="Toolset Integration"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-68fb8a4ade0c3492841f88dc767cb3e4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ToolsetIntegration.png" title="Toolset Integration"></a></p>
 <h3 id="common-denominators">Common Denominators<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The following are core capabilities of CI/CD orchestration tools, which are factored into the CDAF design.</p>
 <h4 id="git">Git<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
-<p>Source Control in all the documentation is oriented to Git. There is nothing limiting the use of the framework with other source control system at all because it is loosely coupled, however, there are considerable additional features which work best with Git.</p>
+<p>Source Control in all the documentation is oriented to Git. There is nothing limiting the use of the framework with other source control systems at all because it is loosely coupled, however, there are considerable additional features which work best with Git.</p>
 <h4 id="build-artefacts">Build Artefacts<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
 <p>The results of the CI process can be retained and re-used in deployment process. This basic capability is critical to embrace the build-once/deploy-many principle.</p>
 <h4 id="agents">Agents<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
-<p>CI/CD orchestration tools execute the task workload on Agents. There are a broad range of implementation styles, especially with regards to how the agents communicate with the server,and how tasks are distributed to agents, but the principle is largely the same.</p>
+<p>CI/CD orchestration tools execute the task workload on Agents. There are a broad range of implementation styles, especially with regards to how the agents communicate with the server, and how tasks are distributed to agents, but the principle is largely the same.</p>
 <blockquote>
 <p>some agents are obfuscated from the users, and others will execute tasks in isolated containers on the agent, which will be explored in more detail in the Containers section.</p>
 </blockquote>
@@ -284,8 +284,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779427209" defer></script>
-    <script src="/js/theme.min.js?1779427209" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779477710" defer></script>
+    <script src="/js/theme.min.js?1779477710" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

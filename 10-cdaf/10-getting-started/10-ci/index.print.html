@@ -21,31 +21,31 @@
     <meta property="article:tag" content="Cdaf-Config">
     <meta itemprop="name" content="Seed Solution :: Concepts &amp; Applied Examples">
     <meta itemprop="description" content="Create a Release Package">
-    <meta itemprop="wordCount" content="550">
+    <meta itemprop="wordCount" content="549">
     <meta itemprop="keywords" content="Kb,Cdaf-Config">
     <title>Seed Solution :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/10-cdaf/10-getting-started/10-ci/index.html" rel="canonical" type="text/html" title="Seed Solution :: Concepts &amp; Applied Examples">
     <link href="/10-cdaf/10-getting-started/10-ci/index.xml" rel="alternate" type="application/rss+xml" title="Seed Solution :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779427209" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779427209" defer></script>
-    <script src="/js/search-lunr.min.js?1779427209" defer></script>
-    <script src="/js/search.min.js?1779427209" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779477710" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779477710" defer></script>
+    <script src="/js/search-lunr.min.js?1779477710" defer></script>
+    <script src="/js/search.min.js?1779477710" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779427209";
+      window.relearn.index_js_url="/searchindex.en.js?1779477710";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779427209" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779427209" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779427209" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779427209" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779477710" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779477710" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779477710" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779477710" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779427209" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779427209" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779427209" rel="stylesheet">
-    <link href="/css/theme.min.css?1779427209" rel="stylesheet">
-    <link href="/css/format-print.min.css?1779427209" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779477710" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779477710" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779477710" rel="stylesheet">
+    <link href="/css/theme.min.css?1779477710" rel="stylesheet">
+    <link href="/css/format-print.min.css?1779477710" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -147,7 +147,7 @@
 <h1 id="seed-solution">Seed Solution</h1>
 
 <p>Continuous Integration (CI) is a critical prerequisite of Continuous Delivery/Deployment (CD).</p>
-<h2 id="hahahugoshortcode21s0hbhb">Create a Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode62s0hbhb">Create a Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>To allow the execution of the build and package (CI) process on the DevOps Engineers machine, CDAF is used for both loose coupling and standardisation. CDAF provides a variety of features which provide consistency, especially important and the number of pipelines grow and the team members move between both squads and value streams.</p>
 <h3 id="install-on-windows">Install on Windows<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>To install to current directory, recommend placing in your home directory, or download latest <a href="/static/app/downloads/WU-CDAF.zip">zip</a>.</p>
@@ -171,7 +171,7 @@
 <p>With the focus being delivery, not development, the creation of a consistent, self contained release package is a core CDAF feature used for both component delivery and <em>stand-up/tear-down</em> capabilities. The output of the CDAF CI processs is a single <code>release.ps1</code> file. See <a href="https://blog.cdaf.io/posts/2020-07-29-cdaf-self-extracting-release/" rel="external">Self-extracting release article</a>.</p>
 <h3 id="property-translation">Property Translation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The transformation process converts the human readable <code>.cm</code> files into computer friendly properties file for use in the CD process, i.e. <code>release.ps1</code>. See <a href="/10-cdaf/10-getting-started/50-cd/index.html">Configuration Management, tokenisation and detokenisation documentation</a>.</p>
-<p>A key principle of the Continuous Delivery Automation Framework is loose coupling. This gives the automation developer the  ability to run the automation process on their workstation, well before executing in the pipeline tooling. This principle should be retained where possible so that troubleshooting and feature development can be be bought closer to the developer.</p>
+<p>A key principle of the Continuous Delivery Automation Framework is loose coupling. This gives the automation developer the ability to run the automation process on their workstation, well before executing in the pipeline tooling. This principle should be retained where possible so that troubleshooting and feature development can be brought closer to the developer.</p>
 <blockquote>
 <p>a loosely coupled solution can allow migrating from one pipeline tool to another with minimal effort.</p>
 </blockquote>
@@ -204,8 +204,8 @@
         </div>
       </main>
     </div>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779427209" defer></script>
-    <script src="/js/theme.min.js?1779427209" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779477710" defer></script>
+    <script src="/js/theme.min.js?1779477710" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

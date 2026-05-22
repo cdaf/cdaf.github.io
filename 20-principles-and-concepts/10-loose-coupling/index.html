@@ -18,30 +18,30 @@
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Loose Coupling :: Concepts &amp; Applied Examples">
     <meta itemprop="description" content="Works on my Machine">
-    <meta itemprop="wordCount" content="306">
+    <meta itemprop="wordCount" content="305">
     <title>Loose Coupling :: Concepts &amp; Applied Examples</title>
     <link href="/20-principles-and-concepts/10-loose-coupling/index.xml" rel="alternate" type="application/rss+xml" title="Loose Coupling :: Concepts &amp; Applied Examples">
     <link href="/20-principles-and-concepts/10-loose-coupling/index.print.html" rel="alternate" type="text/html" title="Loose Coupling :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779427209" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779427209" defer></script>
-    <script src="/js/search-lunr.min.js?1779427209" defer></script>
-    <script src="/js/search.min.js?1779427209" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779477710" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779477710" defer></script>
+    <script src="/js/search-lunr.min.js?1779477710" defer></script>
+    <script src="/js/search.min.js?1779477710" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779427209";
+      window.relearn.index_js_url="/searchindex.en.js?1779477710";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779427209" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779427209" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779427209" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779427209" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779477710" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779477710" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779477710" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779477710" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779427209" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779427209" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779427209" rel="stylesheet">
-    <link href="/css/theme.min.css?1779427209" rel="stylesheet">
-    <link href="/css/format-html.min.css?1779427209" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779477710" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779477710" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779477710" rel="stylesheet">
+    <link href="/css/theme.min.css?1779477710" rel="stylesheet">
+    <link href="/css/format-html.min.css?1779477710" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -142,23 +142,23 @@
 
 <h1 id="loose-coupling">Loose Coupling</h1>
 
-<p><a href="#R-image-38e4fb8a1e79811cce6242c100452df1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/works-on-my-machine.png" style="height: auto;width: auto;" title="Works on my Machine"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-38e4fb8a1e79811cce6242c100452df1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/works-on-my-machine.png" title="Works on my Machine"></a></p>
+<p><a href="#R-image-a4b5f04a8ad75c2cc0c046fd9949ac45" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/works-on-my-machine.png" style="height: auto;width: auto;" title="Works on my Machine"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a4b5f04a8ad75c2cc0c046fd9949ac45"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/works-on-my-machine.png" title="Works on my Machine"></a></p>
 <p>As mentioned in the Continuous Delivery Automation Framework (CDAF) <a href="/10-cdaf/index.html">introduction</a>, this is one of the founding principles&hellip;</p>
 <ul>
 <li><strong>Loose Coupling</strong> : Designed for workstation implementation first, with no tight coupling to any given automation tool-set</li>
 <li><strong>Lowest Common Denominator</strong> : Using the minimum of the tool-chain plugins &amp; capabilities, to ensure loose coupling</li>
 <li><strong>Package Portability</strong> : Package Task execution designed for automated push / pull or manual deployment</li>
 </ul>
-<p>While this approach protects the pipeline from degredation due to plugin issues, and allows the author to control behaviour, e.g. logging, retry, it is fundamentally important from an ownership, portability and reusability perspective.</p>
+<p>While this approach protects the pipeline from degradation due to plugin issues, and allows the author to control behaviour, e.g. logging, retry, it is fundamentally important from an ownership, portability and reusability perspective.</p>
 <h4 id="shift-left--failing-fast">Shift-Left &amp; Failing Fast<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
 <p>Shift-left is the principle of bringing solution aspects closer to the developer, as the cost of failing early is exponentially less costly than failing in production. While this discipline is commonly associated with software development, it should be considered a fundamental objective for all aspects of the solution, including infrastructure and configuration management.</p>
 <h4 id="consistent-ways-of-working">Consistent Ways of Working<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
-<p>Infrastructure, Application and Testing automation should follow the same patterns of delivery. By doing so, a full, tested, solution can be delivered repeatabily and predictably.</p>
+<p>Infrastructure, Application and Testing automation should follow the same patterns of delivery. By doing so, a full, tested, solution can be delivered repeatably and predictably.</p>
 <h4 id="contributor-ownership">Contributor Ownership<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
-<p>By constructing and testing the automation locally, the contributor can ensure it is healthy prior to comitting to source control and executing in the pipline. The more features that are performed within the automation itself, and the less dependency on any given pipeline, reduces the friction of changing vendor should that be required or desired. See the <a href="/20-principles-and-concepts/20-do-nothing-pipeline/index.html">do nothing pipeline</a> for an elaboration on automation health.</p>
+<p>By constructing and testing the automation locally, the contributor can ensure it is healthy prior to committing to source control and executing in the pipeline. The more features that are performed within the automation itself, and the less dependency on any given pipeline, reduces the friction of changing vendor should that be required or desired. See the <a href="/20-principles-and-concepts/20-do-nothing-pipeline/index.html">do nothing pipeline</a> for an elaboration on automation health.</p>
 <h4 id="reusable-asset">Reusable Asset<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
-<p>By creating Infrastructure, Application and Testing automation output that is portable and autonomous, it can be used for not only the pipeline deployment, but for local execution, allowing the creation of production like environments at will. See the <a href="/20-principles-and-concepts/30-feedback-loop/index.html">feedback loop realisation</a> for a detailed example, based on <a href="/20-principles-and-concepts/30-feedback-loop/index.html">the feedback loop</a> approach.</p>
+<p>By creating Infrastructure, Application and Testing automation output that is portable and autonomous, it can be used for not only the pipeline deployment, but for local execution, allowing the creation of production-like environments at will. See the <a href="/20-principles-and-concepts/30-feedback-loop/index.html">feedback loop realisation</a> for a detailed example, based on <a href="/20-principles-and-concepts/30-feedback-loop/index.html">the feedback loop</a> approach.</p>
 
   <footer class="footline">
   </footer>
@@ -234,8 +234,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779427209" defer></script>
-    <script src="/js/theme.min.js?1779427209" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779477710" defer></script>
+    <script src="/js/theme.min.js?1779477710" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
