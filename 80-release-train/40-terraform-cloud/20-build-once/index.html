@@ -26,26 +26,26 @@
     <title>Terraform Build :: Concepts &amp; Applied Examples</title>
     <link href="/80-release-train/40-terraform-cloud/20-build-once/index.xml" rel="alternate" type="application/rss+xml" title="Terraform Build :: Concepts &amp; Applied Examples">
     <link href="/80-release-train/40-terraform-cloud/20-build-once/index.print.html" rel="alternate" type="text/html" title="Terraform Build :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779479970" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779479970" defer></script>
-    <script src="/js/search-lunr.min.js?1779479970" defer></script>
-    <script src="/js/search.min.js?1779479970" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779481428" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779481428" defer></script>
+    <script src="/js/search-lunr.min.js?1779481428" defer></script>
+    <script src="/js/search.min.js?1779481428" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779479970";
+      window.relearn.index_js_url="/searchindex.en.js?1779481428";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779479970" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779481428" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779479970" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779479970" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779479970" rel="stylesheet">
-    <link href="/css/theme.min.css?1779479970" rel="stylesheet">
-    <link href="/css/format-html.min.css?1779479970" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779481428" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779481428" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779481428" rel="stylesheet">
+    <link href="/css/theme.min.css?1779481428" rel="stylesheet">
+    <link href="/css/format-html.min.css?1779481428" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -146,7 +146,7 @@
 
 <h1 id="terraform-build">Terraform Build</h1>
 
-<h2 id="hahahugoshortcode69s0hbhb">Immutable Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode67s0hbhb">Immutable Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The key construct for the <em>Authoritative Release</em> is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Terraform dependencies, modules are not downloaded at deploy time; instead they are resolved at <em>build</em> time and packaged into an immutable release package. For a consistent way-of-working, the Terraform <em>build</em> process resolves and validates dependencies.</p>
 <h3 id="build-time-module-resolution">Build-time Module Resolution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Most Terraform module resolution approaches are to pull from source control (Git) or registry at deploy-time, which can require additional credential management, risk unexpected module changes (if tags are used), and introduce potential network connectivity issues. This approach treats modules like software dependencies: resolve them at build time and include them in an all-in-one immutable package.</p>
@@ -189,8 +189,8 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$TASK_NAME<span style="color:#e6db74">] Initialise with local state storage and download modules</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span> -ForegroundColor Cyan
 </span></span><span style="display:flex;"><span>terraform init -upgrade -input=false</span></span></code></pre></div>
-<p><a href="#R-image-f5cca232fa46027aae31e8885a0d345d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-resolve.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f5cca232fa46027aae31e8885a0d345d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-resolve.png" title="Terraform Module Download"></a></p>
+<p><a href="#R-image-e871b701bb00c2df73396b584d904438" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-resolve.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e871b701bb00c2df73396b584d904438"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-resolve.png" title="Terraform Module Download"></a></p>
 <h3 id="validation">Validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Once all modules have been downloaded, syntax is then validated.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Validate Syntax`n&#34; -ForegroundColor Cyan
@@ -198,8 +198,8 @@ terraform validate
 
 Write-Host &#34;[$TASK_NAME] Generate the graph to validate the plan`n&#34; -ForegroundColor Cyan
 terraform graph</code></pre></div>
-<p><a href="#R-image-d2c94b555636eddf745e868e9b2130bc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-validate.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d2c94b555636eddf745e868e9b2130bc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-validate.png" title="Terraform Module Download"></a></p>
+<p><a href="#R-image-3049c9a877706319a7e8ae41413f9c11" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-validate.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3049c9a877706319a7e8ae41413f9c11"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-validate.png" title="Terraform Module Download"></a></p>
 <h3 id="numeric-token-handling">Numeric Token Handling<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>All the deploy-time files are copied into the <code>release</code> directory. Because tokens cannot be used during the build process, an arbitrary numeric is used, and this is then replaced in the resulting <code>release</code> directory. Tokenisation is covered in more detail in the following section</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Tokenise variable file`n&#34; -ForegroundColor Cyan
@@ -207,17 +207,17 @@ REFRSH .terraform\modules\* ..\release\.terraform\modules\
 VECOPY *&#34;.tf&#34; ..\release
 VECOPY *&#34;.json&#34; ..\release
 REPLAC ..\release\variables.tf           &#39;{ default = 3 }&#39;  &#39;{ default = %agent_count% }&#39;</code></pre></div>
-<p><a href="#R-image-27bee3ff2ce234d96ef4c99689513eb4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-post-build-token.png" style="height: auto;width: auto;" title="Terraform Tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-27bee3ff2ce234d96ef4c99689513eb4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-post-build-token.png" title="Terraform Tokenisation"></a></p>
+<p><a href="#R-image-1f3a5288b425797b2fc9f9f8e2020b99" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-post-build-token.png" style="height: auto;width: auto;" title="Terraform Tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1f3a5288b425797b2fc9f9f8e2020b99"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-post-build-token.png" title="Terraform Tokenisation"></a></p>
 <h3 id="release-package">Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The deploy-time components are then copied into the release package, based on the <code>storeFor</code> definition in your solution directory.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Tokenised Terraform Files
 release</code></pre></div>
-<p><a href="#R-image-9ebf31c87156c2c9fcaeb4e0360ebc65" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-package.png" style="height: auto;width: auto;" title="Terraform Package"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9ebf31c87156c2c9fcaeb4e0360ebc65"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-package.png" title="Terraform Package"></a></p>
+<p><a href="#R-image-ab2740e8c7439769da40de34f939119a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-package.png" style="height: auto;width: auto;" title="Terraform Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ab2740e8c7439769da40de34f939119a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-package.png" title="Terraform Package"></a></p>
 <p>The modules and helper scripts are then packed into a self-extracting release executable as per standard CDAF release build process</p>
-<p><a href="#R-image-d89b8bb5d282807a7f023b6b996b84c4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-release.png" style="height: auto;width: auto;" title="Terraform Release"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d89b8bb5d282807a7f023b6b996b84c4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-release.png" title="Terraform Release"></a></p>
+<p><a href="#R-image-7687c08b68dcac01cf21babfb2367706" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-release.png" style="height: auto;width: auto;" title="Terraform Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7687c08b68dcac01cf21babfb2367706"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-release.png" title="Terraform Release"></a></p>
 
   <footer class="footline">
   </footer>
@@ -299,8 +299,8 @@ release</code></pre></div>
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779479970" defer></script>
-    <script src="/js/theme.min.js?1779479970" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779481428" defer></script>
+    <script src="/js/theme.min.js?1779481428" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

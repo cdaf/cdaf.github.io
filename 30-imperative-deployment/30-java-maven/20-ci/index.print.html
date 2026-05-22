@@ -25,26 +25,26 @@
     <title>Continuous Integration (CI) :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/30-imperative-deployment/30-java-maven/20-ci/index.html" rel="canonical" type="text/html" title="Continuous Integration (CI) :: Concepts &amp; Applied Examples">
     <link href="/30-imperative-deployment/30-java-maven/20-ci/index.xml" rel="alternate" type="application/rss+xml" title="Continuous Integration (CI) :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779479970" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779479970" defer></script>
-    <script src="/js/search-lunr.min.js?1779479970" defer></script>
-    <script src="/js/search.min.js?1779479970" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779481428" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779481428" defer></script>
+    <script src="/js/search-lunr.min.js?1779481428" defer></script>
+    <script src="/js/search.min.js?1779481428" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779479970";
+      window.relearn.index_js_url="/searchindex.en.js?1779481428";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779479970" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779481428" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779479970" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779479970" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779479970" rel="stylesheet">
-    <link href="/css/theme.min.css?1779479970" rel="stylesheet">
-    <link href="/css/format-print.min.css?1779479970" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779481428" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779481428" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779481428" rel="stylesheet">
+    <link href="/css/theme.min.css?1779481428" rel="stylesheet">
+    <link href="/css/format-print.min.css?1779481428" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -144,7 +144,7 @@
 
 <h1 id="continuous-integration-ci">Continuous Integration (CI)</h1>
 
-<h2 id="hahahugoshortcode53s0hbhb">Build &amp; Package Once<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode98s0hbhb">Build &amp; Package Once<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>To provide a runtime verification of the build that has been deployed, the version is automatically incremented by placing a variable in the <code>pom.xml</code> file</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 </span></span><span style="display:flex;"><span>
@@ -157,12 +157,12 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;version&gt;</span>0.2.${build.number}<span style="color:#f92672">&lt;/version&gt;</span></span></span></code></pre></div>
 <p>In the <a href="/10-cdaf/10-getting-started/30-ci/index.html">build task</a>, the build number is supplied as a maven parameter</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn --batch-mode --file springboot/pom.xml package -D<span style="color:#e6db74">&#34;build.number=</span><span style="color:#e6db74">${</span>BUILDNUMBER<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span></span></span></code></pre></div>
-<p><a href="#R-image-6c1861968ea1874e0280016f913c9bf7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-mvn.png" style="height: auto;width: auto;" title="Spring Maven Build"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6c1861968ea1874e0280016f913c9bf7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-mvn.png" title="Spring Maven Build"></a></p>
+<p><a href="#R-image-5587273361fb21c16a08250490dfff45" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-mvn.png" style="height: auto;width: auto;" title="Spring Maven Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5587273361fb21c16a08250490dfff45"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-mvn.png" title="Spring Maven Build"></a></p>
 <p>The resulting artefact is in a subdirectory, buy using the -flat parameter in <code>storeForLocal</code> the artefact will be placed in the root of release package.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>springboot/target/springboot.war -flat</code></pre></div>
-<p><a href="#R-image-69a5d8c713b09cbb1025c7f6a3d3c550" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-store-for.png" style="height: auto;width: auto;" title="Package"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-69a5d8c713b09cbb1025c7f6a3d3c550"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-store-for.png" title="Package"></a></p>
+<p><a href="#R-image-8e40d5942a9e8de32908122fa778e8ea" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-store-for.png" style="height: auto;width: auto;" title="Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8e40d5942a9e8de32908122fa778e8ea"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-store-for.png" title="Package"></a></p>
 <h3 id="image-build">Image Build<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>By setting the <code>buildImage</code> property in the <code>CDAF.solution</code> driver file, a docker image build and push is triggered. In this example the image is pushed to an on-premise container registry (Nexus).</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>productName=Springboot Sprint Zero
@@ -177,10 +177,10 @@ CDAF_REGISTRY_USER=${NEXUS_REGISTRY_USER}
 CDAF_REGISTRY_TOKEN=${NEXUS_REGISTRY_PASS}
 
 registryTag=${NEXUS_REGISTRY}/${SOLUTION}:$BUILDNUMBER</code></pre></div>
-<p><a href="#R-image-0ea4cd7f5059ec3749038767a2628cc9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-image-build.png" style="height: auto;width: auto;" title="Image Build"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0ea4cd7f5059ec3749038767a2628cc9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-image-build.png" title="Image Build"></a>
-<a href="#R-image-0c62b25cf234880d6c59fc50e4931b87" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-image-push.png" style="height: auto;width: auto;" title="Image Push"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0c62b25cf234880d6c59fc50e4931b87"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-image-push.png" title="Image Push"></a></p>
+<p><a href="#R-image-4dcd0e20ae88809b79bbaa21bde61d80" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-image-build.png" style="height: auto;width: auto;" title="Image Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4dcd0e20ae88809b79bbaa21bde61d80"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-image-build.png" title="Image Build"></a>
+<a href="#R-image-1bd7f673d68be9e0e9746196a44842a4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/spring-image-push.png" style="height: auto;width: auto;" title="Image Push"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1bd7f673d68be9e0e9746196a44842a4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/spring-image-push.png" title="Image Push"></a></p>
 <p>This image is consumed, along with other autonomous development components, in the <a href="/80-release-train/20-ansible-automation-platform/index.html"><em>Release Train</em></a>.</p>
 
   <footer class="footline">
@@ -189,8 +189,8 @@ registryTag=${NEXUS_REGISTRY}/${SOLUTION}:$BUILDNUMBER</code></pre></div>
         </div>
       </main>
     </div>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779479970" defer></script>
-    <script src="/js/theme.min.js?1779479970" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779481428" defer></script>
+    <script src="/js/theme.min.js?1779481428" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

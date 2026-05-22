@@ -26,26 +26,26 @@
     <title>Ansible Deploy :: Concepts &amp; Applied Examples</title>
     <link href="/80-release-train/20-ansible-automation-platform/50-deploy-many/index.xml" rel="alternate" type="application/rss+xml" title="Ansible Deploy :: Concepts &amp; Applied Examples">
     <link href="/80-release-train/20-ansible-automation-platform/50-deploy-many/index.print.html" rel="alternate" type="text/html" title="Ansible Deploy :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779479970" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779479970" defer></script>
-    <script src="/js/search-lunr.min.js?1779479970" defer></script>
-    <script src="/js/search.min.js?1779479970" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779481428" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779481428" defer></script>
+    <script src="/js/search-lunr.min.js?1779481428" defer></script>
+    <script src="/js/search.min.js?1779481428" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779479970";
+      window.relearn.index_js_url="/searchindex.en.js?1779481428";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779479970" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779481428" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779479970" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779479970" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779479970" rel="stylesheet">
-    <link href="/css/theme.min.css?1779479970" rel="stylesheet">
-    <link href="/css/format-html.min.css?1779479970" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779481428" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779481428" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779481428" rel="stylesheet">
+    <link href="/css/theme.min.css?1779481428" rel="stylesheet">
+    <link href="/css/format-html.min.css?1779481428" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -146,7 +146,7 @@
 
 <h1 id="ansible-deploy">Ansible Deploy</h1>
 
-<h2 id="hahahugoshortcode107s0hbhb">Detokenisation and Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode113s0hbhb">Detokenisation and Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>At deploy time, the solution manifest and environment settings are applied, the following is an extract from the <code>tower.tsk</code>.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>echo &#34;De-tokenise Environment properties prior to loading to Tower&#34;
 DETOKN roles/apache-reverse-proxy/vars/main.yml
@@ -160,8 +160,8 @@ DETOKN roles/rails/vars/main.yml $WORKSPACE/manifest.txt
 
 DETOKN roles/spring/vars/main.yml
 DETOKN roles/spring/vars/main.yml $WORKSPACE/manifest.txt</code></pre></div>
-<p><a href="#R-image-2835b6d26a7591d14853c4d8eac98557" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-detokenisation.png" style="height: auto;width: auto;" title="Ansible Detokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2835b6d26a7591d14853c4d8eac98557"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-detokenisation.png" title="Ansible Detokenisation"></a></p>
+<p><a href="#R-image-13480c80081ead204769e59889ccdab6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-detokenisation.png" style="height: auto;width: auto;" title="Ansible Detokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-13480c80081ead204769e59889ccdab6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-detokenisation.png" title="Ansible Detokenisation"></a></p>
 <p>As the Ansible Automation Platform is the intermediary, the declarations need to be moved to intermediary and then the release triggered. In this example, the desired state is continually apply to remediate any drift, but can also be triggered via a command line interface (CLI). The following extract from <code>towerTemplate.sh</code> sets up the configuration</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>templateID=$(tower-cli job_template list -n &#34;${name}&#34; -f id)
 if [ -z $templateID ]; then
@@ -180,11 +180,11 @@ ${WORKSPACE}/towerTemplate.sh &#34;$TARGET&#34; &#34;$TARGET&#34; &#34;$TARGET&#
 echo &#34;Launch and watch the deployed playbooks&#34;
 templateID=$(tower-cli job_template list -n &#34;$TARGET&#34; -f id)
 tower-cli job launch --job-template=$templateID</code></pre></div>
-<p><a href="#R-image-be672f17d98c2584f8227ff1e2813cad" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-apply.png" style="height: auto;width: auto;" title="Ansible Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-be672f17d98c2584f8227ff1e2813cad"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-apply.png" title="Ansible Apply"></a></p>
+<p><a href="#R-image-34cffdcb75b12e5eb0b04b7bb07675d6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-apply.png" style="height: auto;width: auto;" title="Ansible Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-34cffdcb75b12e5eb0b04b7bb07675d6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-apply.png" title="Ansible Apply"></a></p>
 <p>An overview of deployment activity and state management is available in the intermediary user interface.</p>
-<p><a href="#R-image-b1124a3aabae4cce1bc0a1529ba5c953" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-tower.png" style="height: auto;width: auto;" title="Intermediary User Interface"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b1124a3aabae4cce1bc0a1529ba5c953"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-tower.png" title="Intermediary User Interface"></a></p>
+<p><a href="#R-image-49e7e85da8f6f7f55a7ba9ab5a4cf971" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-tower.png" style="height: auto;width: auto;" title="Intermediary User Interface"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-49e7e85da8f6f7f55a7ba9ab5a4cf971"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-tower.png" title="Intermediary User Interface"></a></p>
 
   <footer class="footline">
   </footer>
@@ -263,8 +263,8 @@ tower-cli job launch --job-template=$templateID</code></pre></div>
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779479970" defer></script>
-    <script src="/js/theme.min.js?1779479970" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779481428" defer></script>
+    <script src="/js/theme.min.js?1779481428" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

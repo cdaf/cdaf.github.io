@@ -26,26 +26,26 @@
     <title>Feedback Loop :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/index.html" rel="canonical" type="text/html" title="Feedback Loop :: Concepts &amp; Applied Examples">
     <link href="/70-authoritative-release/40-terraform-kubernetes/60-feedback-loop/index.xml" rel="alternate" type="application/rss+xml" title="Feedback Loop :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779479970" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779479970" defer></script>
-    <script src="/js/search-lunr.min.js?1779479970" defer></script>
-    <script src="/js/search.min.js?1779479970" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779481428" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779481428" defer></script>
+    <script src="/js/search-lunr.min.js?1779481428" defer></script>
+    <script src="/js/search.min.js?1779481428" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779479970";
+      window.relearn.index_js_url="/searchindex.en.js?1779481428";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779479970" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779479970" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779481428" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779481428" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779479970" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779479970" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779479970" rel="stylesheet">
-    <link href="/css/theme.min.css?1779479970" rel="stylesheet">
-    <link href="/css/format-print.min.css?1779479970" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779481428" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779481428" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779481428" rel="stylesheet">
+    <link href="/css/theme.min.css?1779481428" rel="stylesheet">
+    <link href="/css/format-print.min.css?1779481428" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -146,10 +146,10 @@
 
 <h1 id="feedback-loop">Feedback Loop</h1>
 
-<h2 id="hahahugoshortcode82s0hbhb">Realising the Feedback Loop<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode91s0hbhb">Realising the Feedback Loop<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Based on <a href="https://blog.cdaf.io/articles/2023-07-23-feedback-loop/" rel="external">Realising the Feedback Loop</a>, once the package has been promoted to it&rsquo;s last stage, it is then pushed to the artefact store</p>
-<p><a href="#R-image-53838f9b358d08a7e1e741d3ba5c7ae4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style="height: auto;width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-53838f9b358d08a7e1e741d3ba5c7ae4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-9d4ac408900286226c88bdd2c50cf593" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9d4ac408900286226c88bdd2c50cf593"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Production Artefact"></a></p>
 <p>In this example Azure DevOps (ADO) using the <em>az artifacts</em> extension, see the example <code>push.tsk</code>.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Verify deployable artefact is available`n&#34;
 $package_name = (Get-Item &#34;$(PWD)\release.ps1&#34; -ErrorAction SilentlyContinue).FullName
@@ -171,8 +171,8 @@ Write-Host &#34;[$TASK_NAME]   `$package_name = $package_name&#34;
 
 az artifacts universal publish --organization $ado_org --project $ado_project --scope project --feed $ado_feed --name $SOLUTION --version $version --path $package_name</code></pre></div>
 <p>The package can be retrieved using the semantic version, or <code>latest</code> (current production).</p>
-<p><a href="#R-image-a146712ac80ddf500eb9b9ef1dc905eb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a146712ac80ddf500eb9b9ef1dc905eb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-ef75b2b693f403dd50e332148dbda966" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ef75b2b693f403dd50e332148dbda966"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
 <p>To see how this can be consumed in a <em>Release Train</em> approach, see <a href="/80-release-train/40-terraform-cloud/index.html">Terraform Cloud</a>.</p>
 
   <footer class="footline">
@@ -181,8 +181,8 @@ az artifacts universal publish --organization $ado_org --project $ado_project --
         </div>
       </main>
     </div>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779479970" defer></script>
-    <script src="/js/theme.min.js?1779479970" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779481428" defer></script>
+    <script src="/js/theme.min.js?1779481428" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
