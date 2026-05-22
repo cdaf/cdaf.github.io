@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.160.1">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Cattle vs. Pets">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cattle vs. Pets :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Cattle vs. Pets">
+    <meta property="og:url" content="https://cdaf.io/20-principles-and-concepts/50-imperative-vs-declarative/10-cattle-vs-pets/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Cattle vs. Pets :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Cattle vs. Pets">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Principles and Concepts">
+    <meta property="article:tag" content="Kb">
+    <meta itemprop="name" content="Cattle vs. Pets :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Cattle vs. Pets">
+    <meta itemprop="wordCount" content="304">
+    <meta itemprop="keywords" content="Kb">
+    <title>Cattle vs. Pets :: Concepts &amp; Applied Examples</title>
+    <link href="https://cdaf.io/20-principles-and-concepts/50-imperative-vs-declarative/10-cattle-vs-pets/index.html" rel="canonical" type="text/html" title="Cattle vs. Pets :: Concepts &amp; Applied Examples">
+    <link href="/20-principles-and-concepts/50-imperative-vs-declarative/10-cattle-vs-pets/index.xml" rel="alternate" type="application/rss+xml" title="Cattle vs. Pets :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1779420282" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779420282" defer></script>
+    <script src="/js/search-lunr.min.js?1779420282" defer></script>
+    <script src="/js/search.min.js?1779420282" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1779420282";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1779420282" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779420282" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779420282" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779420282" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1779420282" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779420282" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779420282" rel="stylesheet">
+    <link href="/css/theme.min.css?1779420282" rel="stylesheet">
+    <link href="/css/format-print.min.css?1779420282" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/20-principles-and-concepts\/50-imperative-vs-declarative\/10-cattle-vs-pets\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support print" data-origin="/20-principles-and-concepts/50-imperative-vs-declarative/10-cattle-vs-pets/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/20-principles-and-concepts/index.html"><span itemprop="name">Principles and Concepts</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/20-principles-and-concepts/50-imperative-vs-declarative/index.html"><span itemprop="name">Imperative vs. Declarative</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Cattle vs. Pets</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles-and-concepts/50-imperative-vs-declarative/10-cattle-vs-pets/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles-and-concepts/50-imperative-vs-declarative/index.html" title="Imperative vs. Declarative (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/20-principles-and-concepts/90-branch-plans/index.html" title="Branch Plans (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 20-principles-and-concepts" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="cattle-vs-pets">Cattle vs. Pets</h1>
+
+<p><a href="#R-image-5133d68401e523a5010fbc72efdd53a0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cattle-vs-pets.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5133d68401e523a5010fbc72efdd53a0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cattle-vs-pets.png"></a></p>
+<h2 id="caring-for-servers-the-pets-paradigm">Caring for Servers (The &ldquo;Pets&rdquo; Paradigm)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>In a traditional infrastructure model, servers are treated like domesticated pets. They are given unique names, carefully nurtured, and kept alive at all costs.</p>
+<ul>
+<li>Individual Identification: Every server has a distinct identity (e.g., prod-oracle-db-02 or billing-app-srv). Engineers know exactly what runs on which machine.</li>
+<li>Mutable State: Software updates, security patches, and configuration tweaks are applied directly to the live, running server over time.</li>
+<li>High-Touch Maintenance: When a server acts up, an engineer logs in via SSH to diagnose the issue, read local logs, and manually repair it.</li>
+</ul>
+<p>The Cost of Failure: Because the server is unique, its downtime is an operational emergency. If it dies, rebuilding it exactly as it was can take hours or days, often leading to data loss or &ldquo;configuration drift&rdquo; (where no one is entirely sure how the server was originally configured).</p>
+<h2 id="disposable-runtimes-the-cattle-paradigm">Disposable Runtimes (The &ldquo;Cattle&rdquo; Paradigm)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>In modern cloud-native architectures, infrastructure is treated like cattle or disposable machinery. Runtimes—such as Docker containers, micro-VMs, or serverless functions—are completely anonymous, identical, and easily replaced.</p>
+<ul>
+<li>Anonymity &amp; Uniformity: Runtimes do not have individual names; they have auto-generated IDs (e.g., srv-pod-x89f2). Every instance in a cluster is a perfect clone of the other.</li>
+<li>Immutable Infrastructure: You never modify a running container or runtime. If you need to update an application or patch an OS vulnerability, you build a new container image and swap the old ones out.</li>
+<li>Automated Lifecycle: Runtimes are designed to be ephemeral. They are spun up when traffic spikes and instantly torn down when demand drops. They might live for only a few minutes or hours.</li>
+</ul>
+<p>The Cost of Failure: Disposability transforms failure into a non-event. If a container exhibits an error, becomes unresponsive, or runs out of memory, the orchestrator (like Kubernetes) immediately terminates it and provisions a brand-new, healthy replica in seconds.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779420282" defer></script>
+    <script src="/js/theme.min.js?1779420282" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>
