@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Release :: Concepts &amp; Applied Examples</title>
+    <link>https://cdaf.io/25-concepts/95-release/index.html</link>
+    <description>Release Definitions and Tools</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://cdaf.io/25-concepts/95-release/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
