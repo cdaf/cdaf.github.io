@@ -25,26 +25,26 @@
     <title>Continuous Delivery (CD) :: Concepts &amp; Applied Examples</title>
     <link href="/30-imperative-deployment/40-static-content/30-cd/index.xml" rel="alternate" type="application/rss+xml" title="Continuous Delivery (CD) :: Concepts &amp; Applied Examples">
     <link href="/30-imperative-deployment/40-static-content/30-cd/index.print.html" rel="alternate" type="text/html" title="Continuous Delivery (CD) :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779483099" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779483099" defer></script>
-    <script src="/js/search-lunr.min.js?1779483099" defer></script>
-    <script src="/js/search.min.js?1779483099" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779484564" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779484564" defer></script>
+    <script src="/js/search-lunr.min.js?1779484564" defer></script>
+    <script src="/js/search.min.js?1779484564" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779483099";
+      window.relearn.index_js_url="/searchindex.en.js?1779484564";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779483099" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779483099" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779483099" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779483099" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779484564" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779484564" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779484564" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779484564" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779483099" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779483099" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779483099" rel="stylesheet">
-    <link href="/css/theme.min.css?1779483099" rel="stylesheet">
-    <link href="/css/format-html.min.css?1779483099" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779484564" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779484564" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779484564" rel="stylesheet">
+    <link href="/css/theme.min.css?1779484564" rel="stylesheet">
+    <link href="/css/format-html.min.css?1779484564" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -144,7 +144,7 @@
 
 <h1 id="continuous-delivery-cd">Continuous Delivery (CD)</h1>
 
-<h2 id="hahahugoshortcode49s0hbhb">Deploy Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode75s0hbhb">Deploy Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The continuous delivery has multiple phases, first is a closed-loop test, then are the runtime environments, which are promoted, starting with acceptance test.</p>
 <h3 id="closed-loop-test">Closed-Loop Test<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>This first delivery stage used docker-compose to stand-up, test and tear-down an environment. This environment is transient and not accessible by manual testers.</p>
@@ -161,8 +161,8 @@
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">classb:classb</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">classb</span></span></span></code></pre></div>
-<p><a href="#R-image-bdf14c445bdbdffb14cc011e6c493ffb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-start.png" style="height: auto;width: auto;" title="Closed-loop"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-bdf14c445bdbdffb14cc011e6c493ffb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-start.png" title="Closed-loop"></a></p>
+<p><a href="#R-image-ebfebfaf1db8beef641e3151fa015cec" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-start.png" style="height: auto;width: auto;" title="Closed-loop"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ebfebfaf1db8beef641e3151fa015cec"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-start.png" title="Closed-loop"></a></p>
 <h3 id="release-promotion">Release Promotion<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>After the closed-loop tests have passed, then the deployment to user acceptance test is performed. In source control, the configuration management table defines the target environments and their GTM ID.</p>
 <blockquote>
@@ -172,11 +172,11 @@
 local    TEST    push-static-content.tsk  classb-test.opennz.org  G-JM71HCEG2Q
 local    PROD    push-static-content.tsk  classb.opennz.org       GTM-5VSBHSV</code></pre></div>
 <p>At deploy-time the GTM ID for the target environment is detonised in the static content before pushing it to the content delivery network CDN.</p>
-<p><a href="#R-image-0ec8b1f7f2cda56bdca899171db100e6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-detoken.png" style="height: auto;width: auto;" title="Detokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0ec8b1f7f2cda56bdca899171db100e6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-detoken.png" title="Detokenisation"></a></p>
+<p><a href="#R-image-5b2e1a9052b456f9d35d329aeab10767" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-detoken.png" style="height: auto;width: auto;" title="Detokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5b2e1a9052b456f9d35d329aeab10767"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-detoken.png" title="Detokenisation"></a></p>
 <p>The release includes both the build-time and deploy-time detokenised content.</p>
-<p><a href="#R-image-0eb3df1eff95457f7ac7f94eee6c1a90" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-deployed.png" style="height: auto;width: auto;" title="Deployed Release"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0eb3df1eff95457f7ac7f94eee6c1a90"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-deployed.png" title="Deployed Release"></a></p>
+<p><a href="#R-image-fbbcab6e6671df0b5773f2877a6b0933" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/classb-cd-deployed.png" style="height: auto;width: auto;" title="Deployed Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fbbcab6e6671df0b5773f2877a6b0933"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/classb-cd-deployed.png" title="Deployed Release"></a></p>
 
   <footer class="footline">
   </footer>
@@ -253,8 +253,8 @@ local    PROD    push-static-content.tsk  classb.opennz.org       GTM-5VSBHSV</c
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779483099" defer></script>
-    <script src="/js/theme.min.js?1779483099" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779484564" defer></script>
+    <script src="/js/theme.min.js?1779484564" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

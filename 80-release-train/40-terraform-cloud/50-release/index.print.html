@@ -26,26 +26,26 @@
     <title>Release :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/80-release-train/40-terraform-cloud/50-release/index.html" rel="canonical" type="text/html" title="Release :: Concepts &amp; Applied Examples">
     <link href="/80-release-train/40-terraform-cloud/50-release/index.xml" rel="alternate" type="application/rss+xml" title="Release :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779483099" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779483099" defer></script>
-    <script src="/js/search-lunr.min.js?1779483099" defer></script>
-    <script src="/js/search.min.js?1779483099" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779484564" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779484564" defer></script>
+    <script src="/js/search-lunr.min.js?1779484564" defer></script>
+    <script src="/js/search.min.js?1779484564" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779483099";
+      window.relearn.index_js_url="/searchindex.en.js?1779484564";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779483099" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779483099" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779483099" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779483099" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779484564" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779484564" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779484564" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779484564" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779483099" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779483099" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779483099" rel="stylesheet">
-    <link href="/css/theme.min.css?1779483099" rel="stylesheet">
-    <link href="/css/format-print.min.css?1779483099" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779484564" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779484564" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779484564" rel="stylesheet">
+    <link href="/css/theme.min.css?1779484564" rel="stylesheet">
+    <link href="/css/format-print.min.css?1779484564" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -146,7 +146,7 @@
 
 <h1 id="release">Release</h1>
 
-<h2 id="hahahugoshortcode66s0hbhb">Release Construction<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode58s0hbhb">Release Construction<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The release combines the Infrastructure-as-Code (IaC) Continuous Integration (CI) output with the application components from <a href="/70-authoritative-release/40-terraform-kubernetes/index.html">Terraform Authoritative Release</a>. The application <em>authoritative release package</em> (in green below) declares the image versions to be deployed to the infrastructure provided by the IaC <em>release package</em>.</p>
 <pre class="mermaid actionbar-wrapper align-center ">
 graph LR
@@ -185,19 +185,19 @@ graph LR
 
 </pre>
 <p>In this example, the application release pipeline only deploys to the development environment to verify the package, and then pushes to the artefact store</p>
-<p><a href="#R-image-0d73d4b2c043ed1c71c64bc9eda2a4de" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0d73d4b2c043ed1c71c64bc9eda2a4de"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-21ee70b3dd69caab81c751f987299be4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-21ee70b3dd69caab81c751f987299be4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Terraform Apply"></a></p>
 <p>The package, based on its semantic version, is pulled from this store at deploy time, based on the solution manifest, <code>CDAF.solution</code>.</p>
-<p><a href="#R-image-cbc264c5cb8172346de8313d16e542bb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cbc264c5cb8172346de8313d16e542bb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-1f7d47e3e67b9d7a23215d9355928c6f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1f7d47e3e67b9d7a23215d9355928c6f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>artifactPrefix=0.5
 productName=Azure Terraform for Kubernetes
 solutionName=azt
 
 kat_release=0.4.80</code></pre></div>
 <p>the two release artefacts are promoted together through the pipeline</p>
-<p><a href="#R-image-c84f634eef938ca8108c0be8a367dd90" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c84f634eef938ca8108c0be8a367dd90"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-f62ab20bc74524540681ce807873e04b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f62ab20bc74524540681ce807873e04b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline.png" title="Terraform Apply"></a></p>
 
   <footer class="footline">
   </footer>
@@ -205,22 +205,22 @@ kat_release=0.4.80</code></pre></div>
         </div>
       </main>
     </div>
-    <script src="/js/js-yaml/js-yaml.min.js?1779483099" defer></script>
-    <script src="/js/d3/d3-color.min.js?1779483099" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1779483099" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1779483099" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1779483099" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1779483099" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1779483099" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1779483099" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1779483099" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1779483099" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1779483099" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1779484564" defer></script>
+    <script src="/js/d3/d3-color.min.js?1779484564" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1779484564" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1779484564" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1779484564" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1779484564" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1779484564" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1779484564" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1779484564" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1779484564" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1779484564" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779483099" defer></script>
-    <script src="/js/theme.min.js?1779483099" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779484564" defer></script>
+    <script src="/js/theme.min.js?1779484564" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
