@@ -22,26 +22,26 @@
     <title>Development &amp; Release :: Concepts &amp; Applied Examples</title>
     <link href="/20-principles-and-concepts/40-development-release/index.xml" rel="alternate" type="application/rss+xml" title="Development &amp; Release :: Concepts &amp; Applied Examples">
     <link href="/20-principles-and-concepts/40-development-release/index.print.html" rel="alternate" type="text/html" title="Development &amp; Release :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779414257" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779414257" defer></script>
-    <script src="/js/search-lunr.min.js?1779414257" defer></script>
-    <script src="/js/search.min.js?1779414257" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1779419864" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1779419864" defer></script>
+    <script src="/js/search-lunr.min.js?1779419864" defer></script>
+    <script src="/js/search.min.js?1779419864" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779414257";
+      window.relearn.index_js_url="/searchindex.en.js?1779419864";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779414257" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779414257" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779414257" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779414257" defer></script>
+    <script src="/js/lunr/lunr.min.js?1779419864" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1779419864" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1779419864" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1779419864" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779414257" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779414257" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779414257" rel="stylesheet">
-    <link href="/css/theme.min.css?1779414257" rel="stylesheet">
-    <link href="/css/format-html.min.css?1779414257" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1779419864" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779419864" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779419864" rel="stylesheet">
+    <link href="/css/theme.min.css?1779419864" rel="stylesheet">
+    <link href="/css/format-html.min.css?1779419864" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -154,8 +154,8 @@
 
 <h1 id="development--release">Development &amp; Release</h1>
 
-<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-97e5a9a8a18f36790bebce11a92e652b" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628300439258.jpg" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-97e5a9a8a18f36790bebce11a92e652b"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628300439258.jpg"></a></a></p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-16ffb20d041ee783c187fde2e5da5eca" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628300439258.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-16ffb20d041ee783c187fde2e5da5eca"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628300439258.jpg"></a></a></p>
 <p>DevOps is not a role or product, it’s a principle. With competing desires, i.e. <a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external">autonomous vs. authoritative</a>, Development and Operations can have different perspectives and these tools can help provide a viewpoint for operations, driven from a “source of truth”.</p>
 <h2 id="development-pipelines">Development Pipelines<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>When speaking of Continuous Integration and Continuous Deployment (CI/CD), the conversations are typically developer centric. However, in enterprise environments, Continuous Delivery is more likely the reality, and it is desirable to be able to deliver a release without the involvement of the feature developers, as there may be many different teams contributing to the solution. Orchestrating these individuals for a release deployment can be a scheduling challenge and distracts those teams from their core purpose.</p>
@@ -163,24 +163,24 @@
 <h2 id="autonomous-development">Autonomous Development<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The key difference from developer centric approaches is that the development teams do not deploy to user environments, instead the end of the development delivery pipeline results in pushing an immutable image to the registry. The development teams can use whatever source control and branch strategy they choose, e.g. Git Flow, Simple Branch Plans, Feature Branches, etc. In this example the development team are using GitHub Actions to build (Docker), test (docker-compose) and publish their component, see <a href="https://www.linkedin.com/pulse/containers-scale-jules-clements" rel="external">Containers at Scale, A Containers Journey</a>.</p>
 <p>The published image may not the build image, but it must be the production ready (optimised and hardened) image which was verified in the test process.</p>
-<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-a6d1519d8fe16862961175f5c4aa0285" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282115797.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a6d1519d8fe16862961175f5c4aa0285"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282115797.png"></a></a></p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-3b317dd0f060b4c8dabff1d57d23ef27" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282115797.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3b317dd0f060b4c8dabff1d57d23ef27"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282115797.png"></a></a></p>
 <p>Each component or micro service is delivered to the central catalogue, in this example, Docker Hub, but this could be any Open Container Initiative (OCI) Registry, either public or private.</p>
-<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-aa23605f4f86e0180fa8f59458f4f265" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282146117.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-aa23605f4f86e0180fa8f59458f4f265"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282146117.png"></a></a></p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-279b75f529e3a500f051212f514bc58b" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282146117.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-279b75f529e3a500f051212f514bc58b"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282146117.png"></a></a></p>
 <h2 id="delivery-pipelines">Delivery Pipelines<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>With the Container Registry being the nexus of the autonomous development teams, now the release definition at a solution level can be declared. This codifies the release, whereas a manual release may involve spreadsheets and workbook documents, the implementation of the release is abstracted by the automation tool, in this case Terraform.</p>
 <h2 id="infrastructure-as-code-iac">Infrastructure as Code (IaC)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>This is the common use case of Terraform. In this example, the delivery of the Kubernetes platform is executed from an Azure DevOps pipeline using a 12-Factor approach, with feature branch development. Releases to production are only based on master and implemented with gating. When a feature is complete and the pull request (PR) processed, the environment created for the feature branch is destroyed (“clean-up Dev”).</p>
-<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-fc6d8e072d7c35a60e0d9eead0ac1b76" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282265340.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fc6d8e072d7c35a60e0d9eead0ac1b76"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282265340.png"></a></a></p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-b91357bd72c9ebf4c1c0c6a45c9a4654" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282265340.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b91357bd72c9ebf4c1c0c6a45c9a4654"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282265340.png"></a></a></p>
 <h2 id="authoritative-deployment">Authoritative Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>While Terraform is considered an infrastructure tool, what it actually is, is a flexible, declarative desired state engine. So while it can be utilised to deliver and manage a Kubernetes platform in Azure, it can also be used to deploy applications to the resulting Kubernetes platform. The components are declared as a desired state and applied via the solution pipeline, which may deploy one or more images from the development teams. In this example, the solution deployment development is performed using feature branches and pull requests.</p>
-<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-00475cd6a8f5c3226cb93b9d7024098d" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282326034.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-00475cd6a8f5c3226cb93b9d7024098d"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282326034.png"></a></a></p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-20ea9c281e42d50eff2fa0b8277e2d77" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282326034.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-20ea9c281e42d50eff2fa0b8277e2d77"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282326034.png"></a></a></p>
 <p>In this example, the solution delivery is executed from a, GitLab Pipeline with approval gates.</p>
-<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-c46a5f39b5a3b14c9ab7e0ace10232f1" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282371454.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c46a5f39b5a3b14c9ab7e0ace10232f1"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282371454.png"></a></a></p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-fc2a7db50b32a953877d426de5916950" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282371454.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fc2a7db50b32a953877d426de5916950"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282371454.png"></a></a></p>
 <h2 id="viewpoints">Viewpoints<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Each of the viewpoints above are development oriented, so where is the operations pane-of-glass? This is where the intermediary adds value. All solutions in Terraform require a persistent store for state. There are many choices from the default local file system, to public cloud, however the Terraform Cloud offering provides the following advantages:</p>
 <ul>
@@ -189,11 +189,11 @@
 <li>Execution visibility, regardless of source</li>
 </ul>
 <p>The last advantage provides the operational visibility. All of the delivery pipelines send their requests, be it IaC or solution via the Terraform Cloud, therefore a complete view of all executions, regardless of pipeline, are visible to the operations team.</p>
-<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-79f93ae44b3bab2eea06643c98970846" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282421078.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-79f93ae44b3bab2eea06643c98970846"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282421078.png"></a></a></p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-cfa495f2f0dceb0fff9e7a6a378c0e94" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282421078.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cfa495f2f0dceb0fff9e7a6a378c0e94"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282421078.png"></a></a></p>
 <p>Secret management for all solution are combined into the Terraform SaaS, satisfying any separation of duty requirements, and any dynamically generated attributes that the development team would need to handover to operations is defined as code, and available to authenticated users.</p>
-<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-8af69190745dd4df706b0378806625fc" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282454209.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8af69190745dd4df706b0378806625fc"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282454209.png"></a></a></p>
+<p><a href="https://www.linkedin.com/pulse/autonomous-development-authoritative-release-jules-clements" rel="external"><a href="#R-image-fe68e54deba45aa7beb5b919c58bfe8c" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="/images/1628282454209.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fe68e54deba45aa7beb5b919c58bfe8c"><img class="lazy lightbox lightbox-image" loading="lazy" src="/images/1628282454209.png"></a></a></p>
 <h2 id="conclusion">Conclusion<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Exploit your available tools to provide separation of concerns while providing transparency.</p>
 <p>Don’t let governance stifle creativity, while ensuring freedom doesn’t lead to anarchy.</p>
@@ -275,8 +275,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779414257" defer></script>
-    <script src="/js/theme.min.js?1779414257" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779419864" defer></script>
+    <script src="/js/theme.min.js?1779419864" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
