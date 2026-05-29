@@ -22,26 +22,26 @@
     <title>Terraform Cloud :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/80-release-train/40-terraform-cloud/index.html" rel="canonical" type="text/html" title="Terraform Cloud :: Concepts &amp; Applied Examples">
     <link href="/80-release-train/40-terraform-cloud/index.xml" rel="alternate" type="application/rss+xml" title="Terraform Cloud :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1779512650" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1779512650" defer></script>
-    <script src="/js/search-lunr.min.js?1779512650" defer></script>
-    <script src="/js/search.min.js?1779512650" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1780032543" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1780032543" defer></script>
+    <script src="/js/search-lunr.min.js?1780032543" defer></script>
+    <script src="/js/search.min.js?1780032543" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1779512650";
+      window.relearn.index_js_url="/searchindex.en.js?1780032543";
     </script>
-    <script src="/js/lunr/lunr.min.js?1779512650" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1779512650" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1779512650" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1779512650" defer></script>
+    <script src="/js/lunr/lunr.min.js?1780032543" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1780032543" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1780032543" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1780032543" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1779512650" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1779512650" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1779512650" rel="stylesheet">
-    <link href="/css/theme.min.css?1779512650" rel="stylesheet">
-    <link href="/css/format-print.min.css?1779512650" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1780032543" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780032543" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780032543" rel="stylesheet">
+    <link href="/css/theme.min.css?1780032543" rel="stylesheet">
+    <link href="/css/format-print.min.css?1780032543" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -343,8 +343,8 @@ container  PROD    kat_production  kat-prod    primary            10.224.10.10  
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$TASK_NAME<span style="color:#e6db74">] Initialise with local state storage and download modules</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span> -ForegroundColor Cyan
 </span></span><span style="display:flex;"><span>terraform init -upgrade -input=false</span></span></code></pre></div>
-<p><a href="#R-image-9526285697181dc3f50fab4160083021" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-resolve.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9526285697181dc3f50fab4160083021"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-resolve.png" title="Terraform Module Download"></a></p>
+<p><a href="#R-image-5e759d90bc92da9676e81be7d3ad1c1c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-resolve.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5e759d90bc92da9676e81be7d3ad1c1c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-resolve.png" title="Terraform Module Download"></a></p>
 <h3 id="validation">Validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Once all modules have been downloaded, syntax is then validated.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Validate Syntax`n&#34; -ForegroundColor Cyan
@@ -352,8 +352,8 @@ terraform validate
 
 Write-Host &#34;[$TASK_NAME] Generate the graph to validate the plan`n&#34; -ForegroundColor Cyan
 terraform graph</code></pre></div>
-<p><a href="#R-image-a07c084116c2ae7e54f8fbcf4c0b3c76" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-validate.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a07c084116c2ae7e54f8fbcf4c0b3c76"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-validate.png" title="Terraform Module Download"></a></p>
+<p><a href="#R-image-53aa1a761ff3c7fa4dbc117c3160bbb5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-validate.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-53aa1a761ff3c7fa4dbc117c3160bbb5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-validate.png" title="Terraform Module Download"></a></p>
 <h3 id="numeric-token-handling">Numeric Token Handling<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>All the deploy-time files are copied into the <code>release</code> directory. Because tokens cannot be used during the build process, an arbitrary numeric is used, and this is then replaced in the resulting <code>release</code> directory. Tokenisation is covered in more detail in the following section</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Tokenise variable file`n&#34; -ForegroundColor Cyan
@@ -361,17 +361,17 @@ REFRSH .terraform\modules\* ..\release\.terraform\modules\
 VECOPY *&#34;.tf&#34; ..\release
 VECOPY *&#34;.json&#34; ..\release
 REPLAC ..\release\variables.tf           &#39;{ default = 3 }&#39;  &#39;{ default = %agent_count% }&#39;</code></pre></div>
-<p><a href="#R-image-60f8d3620b42077a1243b1f960841430" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-post-build-token.png" style="height: auto;width: auto;" title="Terraform Tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-60f8d3620b42077a1243b1f960841430"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-post-build-token.png" title="Terraform Tokenisation"></a></p>
+<p><a href="#R-image-c9ba52003d7e56bbfa591d6580db390b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-post-build-token.png" style="height: auto;width: auto;" title="Terraform Tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c9ba52003d7e56bbfa591d6580db390b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-post-build-token.png" title="Terraform Tokenisation"></a></p>
 <h3 id="release-package">Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The deploy-time components are then copied into the release package, based on the <code>storeFor</code> definition in your solution directory.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Tokenised Terraform Files
 release</code></pre></div>
-<p><a href="#R-image-76015e097bc4fcc1acec55e9cdad9097" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-package.png" style="height: auto;width: auto;" title="Terraform Package"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-76015e097bc4fcc1acec55e9cdad9097"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-package.png" title="Terraform Package"></a></p>
+<p><a href="#R-image-459c4537cd33a520019cd02d7051c78f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-package.png" style="height: auto;width: auto;" title="Terraform Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-459c4537cd33a520019cd02d7051c78f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-package.png" title="Terraform Package"></a></p>
 <p>The modules and helper scripts are then packed into a self-extracting release executable as per standard CDAF release build process</p>
-<p><a href="#R-image-cf7658ca2df33035c630493767b38798" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-release.png" style="height: auto;width: auto;" title="Terraform Release"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cf7658ca2df33035c630493767b38798"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-release.png" title="Terraform Release"></a></p>
+<p><a href="#R-image-255f9ecb3eca52b2ef23fe045fbc906f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-release.png" style="height: auto;width: auto;" title="Terraform Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-255f9ecb3eca52b2ef23fe045fbc906f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-release.png" title="Terraform Release"></a></p>
 
   <footer class="footline">
   </footer>
@@ -467,19 +467,19 @@ graph LR
 
 </pre>
 <p>In this example, the application release pipeline only deploys to the development environment to verify the package, and then pushes to the artefact store</p>
-<p><a href="#R-image-6165593d353e0c57c9480d59e80b1b48" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6165593d353e0c57c9480d59e80b1b48"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-8882d7cae29c1c3407b806986297dc92" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8882d7cae29c1c3407b806986297dc92"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Terraform Apply"></a></p>
 <p>The package, based on its semantic version, is pulled from this store at deploy time, based on the solution manifest, <code>CDAF.solution</code>.</p>
-<p><a href="#R-image-aaba51bbc266bff215d23465e5c7bb00" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-aaba51bbc266bff215d23465e5c7bb00"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-e93cabc4d2189a0e48fbac9d40525f98" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e93cabc4d2189a0e48fbac9d40525f98"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>artifactPrefix=0.5
 productName=Azure Terraform for Kubernetes
 solutionName=azt
 
 kat_release=0.4.80</code></pre></div>
 <p>the two release artefacts are promoted together through the pipeline</p>
-<p><a href="#R-image-231c13fd61330f5f1692f24a69707467" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-231c13fd61330f5f1692f24a69707467"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-74514dd7635ede18016082c4a3070573" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-74514dd7635ede18016082c4a3070573"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline.png" title="Terraform Apply"></a></p>
 
   <footer class="footline">
   </footer>
@@ -499,17 +499,17 @@ kat_release=0.4.80</code></pre></div>
 
 <h2 id="hahahugoshortcode71s0hbhb">Terraform Cloud intermediary<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The deployment process itself is processed via the Terraform Cloud intermediary, which decouples the configuration management, and provides state storage and execution processing.</p>
-<p><a href="#R-image-ccc557db2359991642eb9bd30767f663" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-terraform-cloud.png" style="height: auto;width: auto;" title="Terraform Cloud"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ccc557db2359991642eb9bd30767f663"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-terraform-cloud.png" title="Terraform Cloud"></a>.</p>
+<p><a href="#R-image-b4183db6eb1bf23ee10b7c6b8cc3208d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-terraform-cloud.png" style="height: auto;width: auto;" title="Terraform Cloud"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b4183db6eb1bf23ee10b7c6b8cc3208d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-terraform-cloud.png" title="Terraform Cloud"></a>.</p>
 <p>An important aspect of the intermediaries function is to store dynamic outputs, for example, the Infrastructure-as-Code solution provides a Kubernetes cluster, the dynamically created configuration is stored as outputs.</p>
-<p><a href="#R-image-8bb11aff55d4bcefce3500fce6e8d4d4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-outputs.png" style="height: auto;width: auto;" title="Terraform Outputs"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-8bb11aff55d4bcefce3500fce6e8d4d4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-outputs.png" title="Terraform Outputs"></a>.</p>
+<p><a href="#R-image-fef37a65c0f1cebe6f052e8271d4f246" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-outputs.png" style="height: auto;width: auto;" title="Terraform Outputs"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fef37a65c0f1cebe6f052e8271d4f246"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-outputs.png" title="Terraform Outputs"></a>.</p>
 <p>The outputs are made available to the subsequent application deployment process.</p>
-<p><a href="#R-image-d4ad8f94742973e90502adc4ba4a8b15" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-state-sharing.png" style="height: auto;width: auto;" title="Terraform State Sharing"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d4ad8f94742973e90502adc4ba4a8b15"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-state-sharing.png" title="Terraform State Sharing"></a>.</p>
+<p><a href="#R-image-13313017276b3d9997a32a941064f5e4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-state-sharing.png" style="height: auto;width: auto;" title="Terraform State Sharing"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-13313017276b3d9997a32a941064f5e4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-state-sharing.png" title="Terraform State Sharing"></a>.</p>
 <p>The Application components consume the state information that has been shared</p>
-<p><a href="#R-image-47c20b17cb321f8e004d583102a1394e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-plan.png" style="height: auto;width: auto;" title="Terraform Application Planning"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-47c20b17cb321f8e004d583102a1394e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-plan.png" title="Terraform Application Planning"></a>.</p>
+<p><a href="#R-image-936649e139993690e0f730e3c01fa13e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-plan.png" style="height: auto;width: auto;" title="Terraform Application Planning"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-936649e139993690e0f730e3c01fa13e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-plan.png" title="Terraform Application Planning"></a>.</p>
 
   <footer class="footline">
   </footer>
@@ -539,11 +539,11 @@ Write-Host &#34;[$TASK_NAME] Custom Properties Detokenisation`n&#34; -Foreground
 DETOKN variables.tf $azure_groups
 DETOKN variables.tf $azure_credentials reveal</code></pre></div>
 <p>Environment (<code>TARGET</code>) specific de-tokenisation is blue, and solution level de-tokenisation in green:</p>
-<p><a href="#R-image-1acf59748bb44569a08c4153f9205657" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-detokenisation.png" style="height: auto;width: auto;" title="Terraform De-tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1acf59748bb44569a08c4153f9205657"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-detokenisation.png" title="Terraform De-tokenisation"></a></p>
+<p><a href="#R-image-46945faf79201ebb5a4dd6c3541adaaa" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-detokenisation.png" style="height: auto;width: auto;" title="Terraform De-tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-46945faf79201ebb5a4dd6c3541adaaa"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-detokenisation.png" title="Terraform De-tokenisation"></a></p>
 <p>Cluster de-tokenisation is blue, group/region de-tokenisation in green and on-secret elements of the credentials in orange:</p>
-<p><a href="#R-image-d03869a32e9953f946eba47570559d3e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-extended-detokenisation.png" style="height: auto;width: auto;" title="Terraform De-tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d03869a32e9953f946eba47570559d3e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-extended-detokenisation.png" title="Terraform De-tokenisation"></a></p>
+<p><a href="#R-image-088051fe24ca82b9e986e29f28f9006a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-extended-detokenisation.png" style="height: auto;width: auto;" title="Terraform De-tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-088051fe24ca82b9e986e29f28f9006a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-extended-detokenisation.png" title="Terraform De-tokenisation"></a></p>
 <p>Terraform Cloud is being used to perform state management. To avoid false negative reporting on Terraform apply, the operation is performed in a CMD shell.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Azure Secrets are stored in the back-end, the token opens access to these&#34;
 MAKDIR &#34;$env:APPDATA\terraform.d&#34;
@@ -569,11 +569,11 @@ terraform init -upgrade -input=false
 Write-Host &#34;[$TASK_NAME] Default action is plan`n&#34; -ForegroundColor Cyan
 if ( ! $OPT_ARG ) { $OPT_ARG = &#39;plan&#39; }
 EXECMD &#34;terraform $OPT_ARG&#34;</code></pre></div>
-<p><a href="#R-image-74c93f261876988cdd077b8e9970be36" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-terraform-apply.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-74c93f261876988cdd077b8e9970be36"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-terraform-apply.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-f26f6cb03ada20470483959eefda1c65" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-terraform-apply.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f26f6cb03ada20470483959eefda1c65"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-terraform-apply.png" title="Terraform Apply"></a></p>
 <p>Once the infrastructure has been deployed, the application components are installed. The release package is downloaded (in this example an container with the AZ extensions pre-installed is used) and then run for the environment.</p>
-<p><a href="#R-image-d1822a9043ff6277b928672aac3f3aa0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" style="height: auto;width: auto;" title="Application Release download and deploy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d1822a9043ff6277b928672aac3f3aa0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" title="Application Release download and deploy"></a></p>
+<p><a href="#R-image-012e6e4e836bcc64fe63d90da395e501" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" style="height: auto;width: auto;" title="Application Release download and deploy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-012e6e4e836bcc64fe63d90da395e501"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" title="Application Release download and deploy"></a></p>
 
   <footer class="footline">
   </footer>
@@ -593,8 +593,8 @@ EXECMD &#34;terraform $OPT_ARG&#34;</code></pre></div>
 
 <h2 id="hahahugoshortcode75s0hbhb">Realising the Feedback Loop<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Based on <a href="https://blog.cdaf.io/articles/2023-07-23-feedback-loop/" rel="external">Realising the Feedback Loop</a>, once the package has been promoted to it&rsquo;s last stage, it is then pushed to the artefact store</p>
-<p><a href="#R-image-1614d12d140f30bc170c857eb0055231" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline-complete.png" style="height: auto;width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1614d12d140f30bc170c857eb0055231"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline-complete.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-ae70ee698726309f1c802a16418d2ff7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline-complete.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ae70ee698726309f1c802a16418d2ff7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline-complete.png" title="Production Artefact"></a></p>
 <p>In this example Azure DevOps (ADO) using the <em>az artifacts</em> extension, see the example <code>push.tsk</code>.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Verify deployable artefact is available`n&#34;
 $package_name = (Get-Item &#34;$(PWD)\release.ps1&#34; -ErrorAction SilentlyContinue).FullName
@@ -622,12 +622,12 @@ $package_name = (Get-Item &#34;$(PWD)\userenv.ps1&#34; -ErrorAction SilentlyCont
 if ( ! ( $package_name )) { ERRMSG &#34;[PACKAGE_NOT_FOUND] $(PWD)\userenv.ps1 not found!&#34; 9995 }
 az artifacts universal publish --organization &#34;https://cdaf.visualstudio.com&#34; --project $ado_project --scope project --feed $ado_feed --name &#34;userenv&#34; --version $version --path $package_name</code></pre></div>
 <p>The package can be retrieved using the semantic version, or <code>latest</code> (current production).</p>
-<p><a href="#R-image-437e0cc611723296d845f592b3252a1c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-437e0cc611723296d845f592b3252a1c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-artefact.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-a29c27b7f8f3041497174628191aed41" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a29c27b7f8f3041497174628191aed41"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-artefact.png" title="Production Artefact"></a></p>
 <h3 id="operations">Operations<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Operational tasks can be performed using the production (<code>latest</code>) or specific release. In this example, a production-like development environment can be created and destroyed on demand.</p>
-<p><a href="#R-image-707d72cefc7148b31c01df99ee6eb56d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-ops.png" style="height: auto;width: auto;" title="Release Package for Operations"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-707d72cefc7148b31c01df99ee6eb56d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-ops.png" title="Release Package for Operations"></a></p>
+<p><a href="#R-image-e9ed0c323657589496dfe1692dac43b4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-ops.png" style="height: auto;width: auto;" title="Release Package for Operations"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e9ed0c323657589496dfe1692dac43b4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-ops.png" title="Release Package for Operations"></a></p>
 
   <footer class="footline">
   </footer>
@@ -636,22 +636,22 @@ az artifacts universal publish --organization &#34;https://cdaf.visualstudio.com
         </div>
       </main>
     </div>
-    <script src="/js/js-yaml/js-yaml.min.js?1779512650" defer></script>
-    <script src="/js/d3/d3-color.min.js?1779512650" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1779512650" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1779512650" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1779512650" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1779512650" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1779512650" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1779512650" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1779512650" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1779512650" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1779512650" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1780032543" defer></script>
+    <script src="/js/d3/d3-color.min.js?1780032543" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1780032543" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1780032543" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1780032543" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1780032543" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1780032543" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1780032543" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1780032543" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1780032543" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1780032543" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1779512650" defer></script>
-    <script src="/js/theme.min.js?1779512650" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780032543" defer></script>
+    <script src="/js/theme.min.js?1780032543" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
