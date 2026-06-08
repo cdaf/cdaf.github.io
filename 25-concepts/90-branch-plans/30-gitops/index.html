@@ -25,26 +25,26 @@
     <title>GitOps :: Concepts &amp; Applied Examples</title>
     <link href="/25-concepts/90-branch-plans/30-gitops/index.xml" rel="alternate" type="application/rss+xml" title="GitOps :: Concepts &amp; Applied Examples">
     <link href="/25-concepts/90-branch-plans/30-gitops/index.print.html" rel="alternate" type="text/html" title="GitOps :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1780956295" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1780956295" defer></script>
-    <script src="/js/search-lunr.min.js?1780956295" defer></script>
-    <script src="/js/search.min.js?1780956295" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1780956477" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1780956477" defer></script>
+    <script src="/js/search-lunr.min.js?1780956477" defer></script>
+    <script src="/js/search.min.js?1780956477" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1780956295";
+      window.relearn.index_js_url="/searchindex.en.js?1780956477";
     </script>
-    <script src="/js/lunr/lunr.min.js?1780956295" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1780956295" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1780956295" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1780956295" defer></script>
+    <script src="/js/lunr/lunr.min.js?1780956477" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1780956477" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1780956477" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1780956477" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1780956295" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780956295" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780956295" rel="stylesheet">
-    <link href="/css/theme.min.css?1780956295" rel="stylesheet">
-    <link href="/css/format-html.min.css?1780956295" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1780956477" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780956477" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780956477" rel="stylesheet">
+    <link href="/css/theme.min.css?1780956477" rel="stylesheet">
+    <link href="/css/format-html.min.css?1780956477" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -145,13 +145,13 @@
 <h1 id="gitops">GitOps</h1>
 
 <p>GitOps is another branch based deployment approach, however it typically does not have a Continuous Integration construct, and instead deploys directly from source control.</p>
-<h2 id="hahahugoshortcode55s0hbhb">Branch Based Deployment Directly from Source Control<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode69s0hbhb">Branch Based Deployment Directly from Source Control<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>GitOps is commonly portrayed as Trunk Based</p>
-<p><a href="#R-image-b31da46f4d4a13278263965f09963532" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/image-20240701-193813.png" style="height: auto;width: auto;" title="GitOps workflow"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b31da46f4d4a13278263965f09963532"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/image-20240701-193813.png" title="GitOps workflow"></a></p>
+<p><a href="#R-image-d4d53a7fd140ce7699c633e2e8f4f7b0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/image-20240701-193813.png" style="height: auto;width: auto;" title="GitOps workflow"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d4d53a7fd140ce7699c633e2e8f4f7b0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/image-20240701-193813.png" title="GitOps workflow"></a></p>
 <p>Each target environment maybe defined as a directory, but in many some cases, i.e. to provide a gating mechanism, like <a href="/25-concepts/90-branch-plans/20-branch-deploy/index.html">Branch Based Deployment</a>, multiple long-lived branches are used.</p>
-<p><a href="#R-image-2e58ec4c30650e166446ab575d92d63c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/image-20240701-194140.png" style="height: auto;width: auto;" title="GitOps workflow"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2e58ec4c30650e166446ab575d92d63c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/image-20240701-194140.png" title="GitOps workflow"></a></p>
+<p><a href="#R-image-b4979880ea1b8a9c797678e2d127d078" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/image-20240701-194140.png" style="height: auto;width: auto;" title="GitOps workflow"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b4979880ea1b8a9c797678e2d127d078"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/image-20240701-194140.png" title="GitOps workflow"></a></p>
 
   <footer class="footline">
   </footer>
@@ -229,8 +229,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780956295" defer></script>
-    <script src="/js/theme.min.js?1780956295" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780956477" defer></script>
+    <script src="/js/theme.min.js?1780956477" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
