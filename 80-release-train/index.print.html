@@ -22,26 +22,26 @@
     <title>Release Train :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/80-release-train/index.html" rel="canonical" type="text/html" title="Release Train :: Concepts &amp; Applied Examples">
     <link href="/80-release-train/index.xml" rel="alternate" type="application/rss+xml" title="Release Train :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1780954216" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1780954216" defer></script>
-    <script src="/js/search-lunr.min.js?1780954216" defer></script>
-    <script src="/js/search.min.js?1780954216" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1780956295" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1780956295" defer></script>
+    <script src="/js/search-lunr.min.js?1780956295" defer></script>
+    <script src="/js/search.min.js?1780956295" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1780954216";
+      window.relearn.index_js_url="/searchindex.en.js?1780956295";
     </script>
-    <script src="/js/lunr/lunr.min.js?1780954216" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1780954216" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1780954216" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.min.js?1780956295" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1780956295" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1780956295" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1780956295" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780954216" rel="stylesheet">
-    <link href="/css/theme.min.css?1780954216" rel="stylesheet">
-    <link href="/css/format-print.min.css?1780954216" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1780956295" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780956295" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780956295" rel="stylesheet">
+    <link href="/css/theme.min.css?1780956295" rel="stylesheet">
+    <link href="/css/format-print.min.css?1780956295" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -197,7 +197,7 @@
 
 <h1 id="azure-devops-ado-release">Azure DevOps (ADO) Release</h1>
 
-<h2 id="hahahugoshortcode57s0hbhb">Orchestrated Component Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode54s0hbhb">Orchestrated Component Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The <em>Application Stack</em> in this example deploys two components, static content and an API.</p>
 <pre class="mermaid actionbar-wrapper align-center ">
 graph TD
@@ -289,7 +289,7 @@ class TEST,PROD release
 
 <h1 id="component-ci">Component CI</h1>
 
-<h2 id="hahahugoshortcode102s0hbhb">Autonomous Component Build &amp; Test<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode79s0hbhb">Autonomous Component Build &amp; Test<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Each component contains both application code and deployment automation. The development team can imperatively deploy to the dev environment, i.e. the API and Vue application can be deployed separately, with no assurance of version alignment.</p>
 <p>Example Vue <code>properties.cm</code> file, the deployment tool used is <a href="https://developers.cloudflare.com/pages/functions/wrangler-configuration/" rel="external">Wrangler</a>.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context    target  pages_app_project  fqdn                 api_url
@@ -326,8 +326,8 @@ container  PROD   PetStack-Prod  prd</code></pre></div>
 </span></span><span style="display:flex;"><span>          <span style="color:#f92672">testResultsFiles</span>: <span style="color:#e6db74">&#39;**/test-results/*.xml&#39;</span> 
 </span></span><span style="display:flex;"><span>      - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">PublishBuildArtifacts@1</span></span></span></code></pre></div>
 <p>The resulting ADO component pipelines are independent</p>
-<p><a href="#R-image-c4ee78fe460f2d8036bdb452fb4398e5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-pipelines.png" style="height: auto;width: auto;" title="ADO Component pipelines"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c4ee78fe460f2d8036bdb452fb4398e5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-pipelines.png" title="ADO Component pipelines"></a></p>
+<p><a href="#R-image-20c3532dee1f514c81ae3ad1a6427da5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-pipelines.png" style="height: auto;width: auto;" title="ADO Component pipelines"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-20c3532dee1f514c81ae3ad1a6427da5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-pipelines.png" title="ADO Component pipelines"></a></p>
 <p>Next, autonomous deploy&hellip;</p>
 
   <footer class="footline">
@@ -346,7 +346,7 @@ container  PROD   PetStack-Prod  prd</code></pre></div>
 
 <h1 id="component-cd">Component CD</h1>
 
-<h2 id="hahahugoshortcode104s0hbhb">Autonomous Component Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode81s0hbhb">Autonomous Component Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>By using the <code>feature-branch.properties</code> capability of CDAF, branches containing the string <code>dev</code> will deploy to the development environment. This feature allows imperative deployment by the development team, without manipulating the pipeline, and therefore avoiding drift.</p>
 <p><strong>vue</strong></p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Feature Branch name match mapping to environment
@@ -355,11 +355,11 @@ dev=DEV</code></pre></div>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Feature Branch name &#34;contains&#34; mapping to environment
 dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
 <p>In the feature branch, where <code>dev</code> is in the branch name, CDAF will detect and execute a deployment, using the mapping above to invoke a release to <code>DEV</code>.</p>
-<p><a href="#R-image-53917a8c1a592fcc29587422b31e1bc2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-feature-branch.png" style="height: auto;width: auto;" title="ADO Component feature branch"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-53917a8c1a592fcc29587422b31e1bc2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-feature-branch.png" title="ADO Component feature branch"></a></p>
+<p><a href="#R-image-ecee6e9131cd24dfa66e71704ffb500b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-feature-branch.png" style="height: auto;width: auto;" title="ADO Component feature branch"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ecee6e9131cd24dfa66e71704ffb500b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-feature-branch.png" title="ADO Component feature branch"></a></p>
 <p>The trunk based pipeline will only push a release artefact from the main branch, with a stand-up/tear-down integration test of the production build.</p>
-<p><a href="#R-image-aad27eb3c13889a62692f6c75bda191e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-trunk-based.png" style="height: auto;width: auto;" title="ADO Component pipelines"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-aad27eb3c13889a62692f6c75bda191e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-trunk-based.png" title="ADO Component pipelines"></a></p>
+<p><a href="#R-image-dd7c4b5d798d1dd250466fabcccb83b4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-trunk-based.png" style="height: auto;width: auto;" title="ADO Component pipelines"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd7c4b5d798d1dd250466fabcccb83b4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-trunk-based.png" title="ADO Component pipelines"></a></p>
 <p>Next, publication&hellip;</p>
 
   <footer class="footline">
@@ -378,13 +378,13 @@ dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
 
 <h1 id="component-publish">Component Publish</h1>
 
-<h2 id="hahahugoshortcode106s0hbhb">Autonomous Component Publication<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode83s0hbhb">Autonomous Component Publication<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>the final stage of the <code>main</code> pipeline is publication. This pushes the release package to the artefact registry.</p>
-<p><a href="#R-image-a72a0d051de1cdc2e124624851fa1f3d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-push.png" style="height: auto;width: auto;" title="ADO Component Push"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a72a0d051de1cdc2e124624851fa1f3d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-push.png" title="ADO Component Push"></a></p>
+<p><a href="#R-image-b8846240e6e5c3b9124e059f59a75534" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-push.png" style="height: auto;width: auto;" title="ADO Component Push"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b8846240e6e5c3b9124e059f59a75534"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-push.png" title="ADO Component Push"></a></p>
 <p>Each component publishes their release package, so although they use different technologies, they are now available as consistent packages, using the CDAF package process, which outputs a self-extract <code>release.ps1</code> (of <code>release.sh</code> for linux) file.</p>
-<p><a href="#R-image-2b736a59f93b58055a05792f8f13e799" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-published.png" style="height: auto;width: auto;" title="ADO Component published"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2b736a59f93b58055a05792f8f13e799"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-published.png" title="ADO Component published"></a></p>
+<p><a href="#R-image-85a7a1ff4f14dcd5a645491329f7c700" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-component-published.png" style="height: auto;width: auto;" title="ADO Component published"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-85a7a1ff4f14dcd5a645491329f7c700"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-component-published.png" title="ADO Component published"></a></p>
 <p>Next, Release&hellip;</p>
 
   <footer class="footline">
@@ -403,25 +403,25 @@ dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
 
 <h1 id="release">Release</h1>
 
-<h2 id="hahahugoshortcode108s0hbhb">Full Stack Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode84s0hbhb">Full Stack Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The ADO Release function is used to create a release, and promote it through the environments. The release obtains the components from the artefact store</p>
-<p><a href="#R-image-9eb92a89bd82e5761404513f798d8506" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-packages.png" style="height: auto;width: auto;" title="ADO Release Packages"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-9eb92a89bd82e5761404513f798d8506"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-packages.png" title="ADO Release Packages"></a></p>
+<p><a href="#R-image-9f8fb538f788ecb246f83ddc31f36d5a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-packages.png" style="height: auto;width: auto;" title="ADO Release Packages"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9f8fb538f788ecb246f83ddc31f36d5a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-packages.png" title="ADO Release Packages"></a></p>
 <p>The Release is defined in order of dependency, i.e. the CloudFlare infrastructure is created/updated and configured with the API, then the front-end is deployed to the infrastructure.</p>
 <blockquote>
 <p>The release itself includes to deployment logic, it simply invokes the packages provided by the component development team.</p>
 </blockquote>
-<p><a href="#R-image-a024f983973255c5537a9bee90ec6e8a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-stages.png" style="height: auto;width: auto;" title="ADO Release Stages"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a024f983973255c5537a9bee90ec6e8a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-stages.png" title="ADO Release Stages"></a></p>
+<p><a href="#R-image-a04a154bd1df20e635bef7b8f2279812" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-stages.png" style="height: auto;width: auto;" title="ADO Release Stages"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a04a154bd1df20e635bef7b8f2279812"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-stages.png" title="ADO Release Stages"></a></p>
 <p>When a new release is created, the latest versions are defaulted, and this defines the manifest for the release, i.e. different versions cannot be deployed to different environments. This ensures the stack is consistency promoted.</p>
 <blockquote>
 <p>The latest versions do not have to selected, but whatever is selected is static for that release instance.</p>
 </blockquote>
-<p><a href="#R-image-5d5a90deafe4a46bd6e26a8736a257c6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-create.png" style="height: auto;width: auto;" title="ADO Release Create"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5d5a90deafe4a46bd6e26a8736a257c6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-create.png" title="ADO Release Create"></a></p>
+<p><a href="#R-image-7f039e728818c30512d80b0c07fbcae6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-create.png" style="height: auto;width: auto;" title="ADO Release Create"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7f039e728818c30512d80b0c07fbcae6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-create.png" title="ADO Release Create"></a></p>
 <p>When the release is promoted, no manual intervention is required, except for approval gates, which can be approved by business or product owners, and does not require any further development effort.</p>
-<p><a href="#R-image-2b87b1004c73725ab346f12c35640695" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-promotion.png" style="height: auto;width: auto;" title="ADO Release Create"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2b87b1004c73725ab346f12c35640695"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-promotion.png" title="ADO Release Create"></a></p>
+<p><a href="#R-image-68bf6eb9fa78f3ddb1ddafd1babc79f9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ado-release-promotion.png" style="height: auto;width: auto;" title="ADO Release Create"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-68bf6eb9fa78f3ddb1ddafd1babc79f9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ado-release-promotion.png" title="ADO Release Create"></a></p>
 
   <footer class="footline">
   </footer>
@@ -433,7 +433,7 @@ dev=DEV release &#39;apply --auto-approve&#39;</code></pre></div>
 
 <h1 id="ansible-automation-platform">Ansible Automation Platform</h1>
 
-<h2 id="hahahugoshortcode59s0hbhb">Full Stack Release using Ansible Automation Platform<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode56s0hbhb">Full Stack Release using Ansible Automation Platform<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <blockquote>
 <p>Ansible Automation Platform is the replacement for Ansible Tower.</p>
 </blockquote>
@@ -543,12 +543,12 @@ classDef release fill:lightgreen
 
 <h1 id="component-pipelines">Component Pipelines</h1>
 
-<h2 id="hahahugoshortcode110s0hbhb">Autonomous Development<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode87s0hbhb">Autonomous Development<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Each development team is responsible to publishing a container image, how they do so it within their control, in this example GitLab and ThoughtWorks Go are used by different teams. The GitLab team are branch based, while the Go team are branch based.</p>
-<p><a href="#R-image-10273b5eab8097ec9b320509978a3136" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-rails-pipeline.png" style="height: auto;width: auto;" title="Rails, trunk based"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-10273b5eab8097ec9b320509978a3136"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-rails-pipeline.png" title="Rails, trunk based"></a></p>
-<p><a href="#R-image-17f2b05bc05f76fd82c5ef64ce0ec256" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-spring-pipeline.png" style="height: auto;width: auto;" title="Spring, branch based"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-17f2b05bc05f76fd82c5ef64ce0ec256"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-spring-pipeline.png" title="Spring, branch based"></a></p>
+<p><a href="#R-image-08c935b5e402389abd1b783019012d9e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-rails-pipeline.png" style="height: auto;width: auto;" title="Rails, trunk based"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-08c935b5e402389abd1b783019012d9e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-rails-pipeline.png" title="Rails, trunk based"></a></p>
+<p><a href="#R-image-796fdf98e9916c96ee213e7aac7b9f52" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-spring-pipeline.png" style="height: auto;width: auto;" title="Spring, branch based"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-796fdf98e9916c96ee213e7aac7b9f52"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-spring-pipeline.png" title="Spring, branch based"></a></p>
 <p>Both teams are using CDAF docker image build and push helpers.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>productName=Ruby on Rails                    productName=Springboot
 </span></span><span style="display:flex;"><span>solutionName=rails                           solutionName=spring
@@ -579,7 +579,7 @@ classDef release fill:lightgreen
 
 <h1 id="manifest">Manifest</h1>
 
-<h2 id="hahahugoshortcode112s0hbhb">Application Stack Declaration<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode88s0hbhb">Application Stack Declaration<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The key component of the package is the release manifest, this <em>declares</em> the component versions of the solution. The <em>desired state engine</em> (Ansible) will ensure <strong>all</strong> components for the release align with the <em>declaration</em> in the manifest. These are added to your <code>CDAF.solution</code> file. To see an example component build, see the <a href="/30-imperative-deployment/30-java-maven/index.html">Java SpringBoot</a> example.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>artifactPrefix=1.2
 productName=Ansible Provisioning
@@ -623,7 +623,7 @@ remote     production  tower.tsk           prod             rails.example.com   
 
 <h1 id="ansible-build">Ansible Build</h1>
 
-<h2 id="hahahugoshortcode114s0hbhb">Immutable Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode90s0hbhb">Immutable Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The key construct for the Release Train is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Ansible dependencies, playbooks are not downloaded at deploy time; instead they are resolved at <em>build</em> time and packaged into an immutable release package. For a consistent way-of-working, the Ansible <em>build</em> process resolves dependencies and validates the playbooks.</p>
 <p>Due to the complexity, a customer build script <code>build.sh</code> is defined, and broken down into the steps below</p>
 <h3 id="sprint-zero">Sprint Zero<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
@@ -643,8 +643,8 @@ remote     production  tower.tsk           prod             rails.example.com   
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> common_collection in $common_collections; <span style="color:#66d9ef">do</span>
 </span></span><span style="display:flex;"><span>	executeExpression <span style="color:#e6db74">&#34;ansible-galaxy collection install </span>$common_collection<span style="color:#e6db74"> </span>$force_install<span style="color:#e6db74"> -p .&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span></span></span></code></pre></div>
-<p><a href="#R-image-31622d439c4be7c253ded49282eb1a5d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-build.png" style="height: auto;width: auto;" title="Ansible Build"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-31622d439c4be7c253ded49282eb1a5d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-build.png" title="Ansible Build"></a></p>
+<p><a href="#R-image-ee2a27e5687f6ac9c47a8f58b268bcdb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-build.png" style="height: auto;width: auto;" title="Ansible Build"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ee2a27e5687f6ac9c47a8f58b268bcdb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-build.png" title="Ansible Build"></a></p>
 <h3 id="validation">Validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Once all playbooks have been downloaded, syntax is then validated.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>for play in `find playbooks/ -maxdepth 1 -type f -name &#39;*.yaml&#39;`; do
@@ -657,17 +657,17 @@ remote     production  tower.tsk           prod             rails.example.com   
 		executeExpression &#34;ansible-playbook ${play} -i $inventory --list-hosts -vv&#34;
 	done
 done</code></pre></div>
-<p><a href="#R-image-3ec06e791cdfdb0f1302b632e53d9b13" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-validate.png" style="height: auto;width: auto;" title="Ansible Validate"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3ec06e791cdfdb0f1302b632e53d9b13"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-validate.png" title="Ansible Validate"></a></p>
+<p><a href="#R-image-315007c2011c6c6a3d2c1ad7523595c0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-validate.png" style="height: auto;width: auto;" title="Ansible Validate"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-315007c2011c6c6a3d2c1ad7523595c0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-validate.png" title="Ansible Validate"></a></p>
 <h3 id="release-package">Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The deploy-time components are then copied into the release package, based on the <code>storeFor</code> definition in your solution directory.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># All Deploy-time Playbooks
 release</code></pre></div>
-<p><a href="#R-image-e1ded3718724f166495095d7e780e44b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-package.png" style="height: auto;width: auto;" title="Ansible Package"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e1ded3718724f166495095d7e780e44b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-package.png" title="Ansible Package"></a></p>
+<p><a href="#R-image-7f56c63546045c4d66d1938a220da1d5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-package.png" style="height: auto;width: auto;" title="Ansible Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7f56c63546045c4d66d1938a220da1d5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-package.png" title="Ansible Package"></a></p>
 <p>The playbooks and helper scripts are then packed into a self-extracting release executable as per standard CDAF release build process</p>
-<p><a href="#R-image-5cd789ca71d02bc699d81f9b931f8717" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-release.png" style="height: auto;width: auto;" title="Ansible Release"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5cd789ca71d02bc699d81f9b931f8717"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-release.png" title="Ansible Release"></a></p>
+<p><a href="#R-image-b9b64f5bf498ec40167188636607d381" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-release.png" style="height: auto;width: auto;" title="Ansible Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b9b64f5bf498ec40167188636607d381"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-release.png" title="Ansible Release"></a></p>
 
   <footer class="footline">
   </footer>
@@ -685,7 +685,7 @@ release</code></pre></div>
 
 <h1 id="ansible-deploy">Ansible Deploy</h1>
 
-<h2 id="hahahugoshortcode116s0hbhb">Detokenisation and Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode92s0hbhb">Detokenisation and Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>At deploy time, the solution manifest and environment settings are applied, the following is an extract from the <code>tower.tsk</code>.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>echo &#34;De-tokenise Environment properties prior to loading to Tower&#34;
 DETOKN roles/apache-reverse-proxy/vars/main.yml
@@ -699,8 +699,8 @@ DETOKN roles/rails/vars/main.yml $WORKSPACE/manifest.txt
 
 DETOKN roles/spring/vars/main.yml
 DETOKN roles/spring/vars/main.yml $WORKSPACE/manifest.txt</code></pre></div>
-<p><a href="#R-image-ee2d120cb2b33f6da398a7db249502f1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-detokenisation.png" style="height: auto;width: auto;" title="Ansible Detokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ee2d120cb2b33f6da398a7db249502f1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-detokenisation.png" title="Ansible Detokenisation"></a></p>
+<p><a href="#R-image-649052df3885a0143e73bd6de2ddfb06" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-detokenisation.png" style="height: auto;width: auto;" title="Ansible Detokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-649052df3885a0143e73bd6de2ddfb06"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-detokenisation.png" title="Ansible Detokenisation"></a></p>
 <p>As the Ansible Automation Platform is the intermediary, the declarations need to be moved to intermediary and then the release triggered. In this example, the desired state is continually apply to remediate any drift, but can also be triggered via a command line interface (CLI). The following extract from <code>towerTemplate.sh</code> sets up the configuration</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>templateID=$(tower-cli job_template list -n &#34;${name}&#34; -f id)
 if [ -z $templateID ]; then
@@ -719,11 +719,11 @@ ${WORKSPACE}/towerTemplate.sh &#34;$TARGET&#34; &#34;$TARGET&#34; &#34;$TARGET&#
 echo &#34;Launch and watch the deployed playbooks&#34;
 templateID=$(tower-cli job_template list -n &#34;$TARGET&#34; -f id)
 tower-cli job launch --job-template=$templateID</code></pre></div>
-<p><a href="#R-image-c9cc16e08e5fbc0b13ffedee78c042e9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-apply.png" style="height: auto;width: auto;" title="Ansible Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c9cc16e08e5fbc0b13ffedee78c042e9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-apply.png" title="Ansible Apply"></a></p>
+<p><a href="#R-image-062db97d64111ac14b0c243c8972a976" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-apply.png" style="height: auto;width: auto;" title="Ansible Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-062db97d64111ac14b0c243c8972a976"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-apply.png" title="Ansible Apply"></a></p>
 <p>An overview of deployment activity and state management is available in the intermediary user interface.</p>
-<p><a href="#R-image-616d01a449882bcc63973e7aca45a2d7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-tower.png" style="height: auto;width: auto;" title="Intermediary User Interface"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-616d01a449882bcc63973e7aca45a2d7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-tower.png" title="Intermediary User Interface"></a></p>
+<p><a href="#R-image-ac275c07ebadb712443510a622620b0c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/ansible-tower.png" style="height: auto;width: auto;" title="Intermediary User Interface"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ac275c07ebadb712443510a622620b0c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/ansible-tower.png" title="Intermediary User Interface"></a></p>
 
   <footer class="footline">
   </footer>
@@ -735,7 +735,7 @@ tower-cli job launch --job-template=$templateID</code></pre></div>
 
 <h1 id="octopus-deploy">Octopus Deploy</h1>
 
-<h2 id="hahahugoshortcode61s0hbhb">Release Orchestration using Octopus Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode59s0hbhb">Release Orchestration using Octopus Deploy<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Octopus Deploy is a dedicated release orchestration tool which does not have build capabilities and does not natively integrate with source control, instead it provides a repository to which build artefacts can be pushed. The following scenario is a stack which comprises a customer-facing application (React) front-end and Platform-as-a-Service (Mulesoft Anypoint) back-end.</p>
 <p>The back-end deployment is itself an authoritative release solution with a source-driven manifest (see <a href="/70-authoritative-release/50-custom-state-management/index.html">Custom Desired State Management Solution</a>). The client will retrieve the static content from the content delivery network (CloudFlare).</p>
 <pre class="mermaid actionbar-wrapper align-center ">
@@ -838,18 +838,18 @@ classDef release fill:lightgreen
 
 <h1 id="octopus-pane-of-glass">Octopus Pane of Glass</h1>
 
-<h2 id="hahahugoshortcode111s0hbhb">Overview of Stack Components<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode94s0hbhb">Overview of Stack Components<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>As an intermediary, Octopus provides release gating, orchestration and an overview of the stack components, and what versions have been promoted to which environments.</p>
-<p><a href="#R-image-475649d872f274b0dc9ffc5d1e036494" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-pane-of-glass.png" style="height: auto;width: auto;" title="Octopus Pane of Glass"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-475649d872f274b0dc9ffc5d1e036494"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-pane-of-glass.png" title="Octopus Pane of Glass"></a></p>
+<p><a href="#R-image-f8ec73884828ac8559154ebaecc8fb11" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-pane-of-glass.png" style="height: auto;width: auto;" title="Octopus Pane of Glass"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f8ec73884828ac8559154ebaecc8fb11"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-pane-of-glass.png" title="Octopus Pane of Glass"></a></p>
 <h3 id="parent-project">Parent Project<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The parent project does not perform any deployment activity itself, it serves as the orchestrator of the child projects, providing gating and sequencing.</p>
-<p><a href="#R-image-c36811944889e1e4bc96ee62338bf94c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-parent-project.png" style="height: auto;width: auto;" title="Octopus Parent Project"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c36811944889e1e4bc96ee62338bf94c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-parent-project.png" title="Octopus Parent Project"></a></p>
+<p><a href="#R-image-4ccb6641a99fb457cadaa87e074c1ba5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-parent-project.png" style="height: auto;width: auto;" title="Octopus Parent Project"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4ccb6641a99fb457cadaa87e074c1ba5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-parent-project.png" title="Octopus Parent Project"></a></p>
 <h3 id="child-projects">Child Projects<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The child project, use the same template process, but each has the release packages that have been build to perform their technology specific deployment process.</p>
-<p><a href="#R-image-720169266a877abfc0fdc62151a47a3b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-child-projects.png" style="height: auto;width: auto;" title="Octopus Child Projects"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-720169266a877abfc0fdc62151a47a3b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-child-projects.png" title="Octopus Child Projects"></a></p>
+<p><a href="#R-image-5b4ad51e57f600c3cbbe88b5b62960c5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-child-projects.png" style="height: auto;width: auto;" title="Octopus Child Projects"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5b4ad51e57f600c3cbbe88b5b62960c5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-child-projects.png" title="Octopus Child Projects"></a></p>
 <h3 id="component-independence">Component Independence<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The approach above does offer the ability to independently promote or roll-back a child component. This can be beneficial for hot-fixes, however, it is discouraged as it breaks the stack alignment principles of the release train.</p>
 
@@ -869,16 +869,16 @@ classDef release fill:lightgreen
 
 <h1 id="decoupled-deployment">Decoupled Deployment</h1>
 
-<h2 id="hahahugoshortcode113s0hbhb">Orchestrated Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode96s0hbhb">Orchestrated Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The core principle of all the examples in this material is the production of a self-contained, immutable release package. This provides loose coupling with tool chains and re-usability for development environments (see <a href="https://blog.cdaf.io/articles/2023-07-23-feedback-loop/" rel="external">Realising the Feedback Loop</a>).</p>
 <p>While Octopus provides a wide range of deployment mechanisms, as a release orchestrator, each child project has the same process, executing the release package for each component against the target environment.</p>
 <h3 id="delivery-lifecycle">Delivery Lifecycle<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Octopus orchestration is called a <em>lifecycle</em>, which is a re-usable pattern. Each child item can use the same <em>lifecycle</em> because the deployment launch process is the same.</p>
-<p><a href="#R-image-4e03803a56ef4297ab828566d375e911" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-lifecycle.png" style="height: auto;width: auto;" title="Octopus Lifecycle"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e03803a56ef4297ab828566d375e911"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-lifecycle.png" title="Octopus Lifecycle"></a></p>
+<p><a href="#R-image-dbb3770f9318eb23b2124a530a9420dc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/octopus-lifecycle.png" style="height: auto;width: auto;" title="Octopus Lifecycle"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dbb3770f9318eb23b2124a530a9420dc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/octopus-lifecycle.png" title="Octopus Lifecycle"></a></p>
 <p>While the launch process is the same, each child components underlying technologies can be very different.</p>
-<p><a href="#R-image-ba2d78bfbc8804849f4c0ebc7a939103" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/Octopus-decoupled-deployment.png" style="height: auto;width: auto;" title="Octopus Deployment"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ba2d78bfbc8804849f4c0ebc7a939103"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/Octopus-decoupled-deployment.png" title="Octopus Deployment"></a></p>
+<p><a href="#R-image-e12840eb2a69db57ed2ad82a2d923245" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/Octopus-decoupled-deployment.png" style="height: auto;width: auto;" title="Octopus Deployment"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e12840eb2a69db57ed2ad82a2d923245"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/Octopus-decoupled-deployment.png" title="Octopus Deployment"></a></p>
 
   <footer class="footline">
   </footer>
@@ -896,10 +896,10 @@ classDef release fill:lightgreen
 
 <h1 id="business-visibility">Business Visibility</h1>
 
-<h2 id="hahahugoshortcode115s0hbhb">Non-technical Release View<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode98s0hbhb">Non-technical Release View<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>After each environment deployment is successful, a Confluence page (one per component/environment) is updated, capturing release details. This provides visibility outside of the toolchain, which is easier to access by business users such as test managers and product owners. Using the <em>content include</em> macro, these pages can be merged.</p>
-<p><a href="#R-image-ec861fbb9613d937eabd7a1fe43cc341" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cloudstack-confluence-view.png" style="height: auto;width: auto;" title="Confluence View"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ec861fbb9613d937eabd7a1fe43cc341"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cloudstack-confluence-view.png" title="Confluence View"></a></p>
+<p><a href="#R-image-190013704ec9bcd9d9815adc783739d5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cloudstack-confluence-view.png" style="height: auto;width: auto;" title="Confluence View"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-190013704ec9bcd9d9815adc783739d5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cloudstack-confluence-view.png" title="Confluence View"></a></p>
 
   <footer class="footline">
   </footer>
@@ -911,7 +911,7 @@ classDef release fill:lightgreen
 
 <h1 id="terraform-cloud">Terraform Cloud</h1>
 
-<h2 id="hahahugoshortcode63s0hbhb">Full Stack Release using Terraform Cloud<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode60s0hbhb">Full Stack Release using Terraform Cloud<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>This Release Train extends the <a href="/70-authoritative-release/40-terraform-kubernetes/index.html">Terraform Kubernetes</a> <em>authoritative release</em>, combining the application stack deployment with the Infrastructure-as-Code solution.</p>
 <pre class="mermaid actionbar-wrapper align-center ">
 graph TD
@@ -1027,7 +1027,7 @@ class TEST,PROD release
 
 <h1 id="manifest">Manifest</h1>
 
-<h2 id="hahahugoshortcode65s0hbhb">Declare Container Deployment as Terraform Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode62s0hbhb">Declare Container Deployment as Terraform Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The key component of the package is the release manifest, this <em>declares</em> the component versions of the solution. The <em>desired state engine</em> (Terraform) will ensure <strong>all</strong> components for the release align with the <em>declaration</em> in the manifest. These are added to your CDAF.solution file.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>solutionName=kat
 artifactPrefix=0.4
@@ -1057,7 +1057,7 @@ container  PROD    kat_production  kat-prod    primary            10.224.10.10  
 
 <h1 id="terraform-build">Terraform Build</h1>
 
-<h2 id="hahahugoshortcode67s0hbhb">Immutable Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode66s0hbhb">Immutable Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The key construct for the <em>Authoritative Release</em> is that all aspects of the release process are predictable and repeatable. To avoid deploy-time variations in Terraform dependencies, modules are not downloaded at deploy time; instead they are resolved at <em>build</em> time and packaged into an immutable release package. For a consistent way-of-working, the Terraform <em>build</em> process resolves and validates dependencies.</p>
 <h3 id="build-time-module-resolution">Build-time Module Resolution<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Most Terraform module resolution approaches are to pull from source control (Git) or registry at deploy-time, which can require additional credential management, risk unexpected module changes (if tags are used), and introduce potential network connectivity issues. This approach treats modules like software dependencies: resolve them at build time and include them in an all-in-one immutable package.</p>
@@ -1100,8 +1100,8 @@ container  PROD    kat_production  kat-prod    primary            10.224.10.10  
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;[</span>$TASK_NAME<span style="color:#e6db74">] Initialise with local state storage and download modules</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span> -ForegroundColor Cyan
 </span></span><span style="display:flex;"><span>terraform init -upgrade -input=false</span></span></code></pre></div>
-<p><a href="#R-image-27f3b6660c28ccb9dbb3ea8a79ed9cb9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-resolve.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-27f3b6660c28ccb9dbb3ea8a79ed9cb9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-resolve.png" title="Terraform Module Download"></a></p>
+<p><a href="#R-image-6e47fc9d08d83b9e2610c965245d8f02" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-resolve.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6e47fc9d08d83b9e2610c965245d8f02"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-resolve.png" title="Terraform Module Download"></a></p>
 <h3 id="validation">Validation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Once all modules have been downloaded, syntax is then validated.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Validate Syntax`n&#34; -ForegroundColor Cyan
@@ -1109,8 +1109,8 @@ terraform validate
 
 Write-Host &#34;[$TASK_NAME] Generate the graph to validate the plan`n&#34; -ForegroundColor Cyan
 terraform graph</code></pre></div>
-<p><a href="#R-image-b4640ac148fc6edd7b9987cd0339be09" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-validate.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b4640ac148fc6edd7b9987cd0339be09"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-validate.png" title="Terraform Module Download"></a></p>
+<p><a href="#R-image-0309bb38961cda072692e49e7519241e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-validate.png" style="height: auto;width: auto;" title="Terraform Module Download"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0309bb38961cda072692e49e7519241e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-validate.png" title="Terraform Module Download"></a></p>
 <h3 id="numeric-token-handling">Numeric Token Handling<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>All the deploy-time files are copied into the <code>release</code> directory. Because tokens cannot be used during the build process, an arbitrary numeric is used, and this is then replaced in the resulting <code>release</code> directory. Tokenisation is covered in more detail in the following section</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Tokenise variable file`n&#34; -ForegroundColor Cyan
@@ -1118,17 +1118,17 @@ REFRSH .terraform\modules\* ..\release\.terraform\modules\
 VECOPY *&#34;.tf&#34; ..\release
 VECOPY *&#34;.json&#34; ..\release
 REPLAC ..\release\variables.tf           &#39;{ default = 3 }&#39;  &#39;{ default = %agent_count% }&#39;</code></pre></div>
-<p><a href="#R-image-0dc74f4c9f521570b2135db7d896ff7e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-post-build-token.png" style="height: auto;width: auto;" title="Terraform Tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0dc74f4c9f521570b2135db7d896ff7e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-post-build-token.png" title="Terraform Tokenisation"></a></p>
+<p><a href="#R-image-f2f321ef3b7228c7c0c24942f45c72a3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-post-build-token.png" style="height: auto;width: auto;" title="Terraform Tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f2f321ef3b7228c7c0c24942f45c72a3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-post-build-token.png" title="Terraform Tokenisation"></a></p>
 <h3 id="release-package">Release Package<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The deploy-time components are then copied into the release package, based on the <code>storeFor</code> definition in your solution directory.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code># Tokenised Terraform Files
 release</code></pre></div>
-<p><a href="#R-image-5d2c7c6be2eb2ade101f553ead86ca1e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-package.png" style="height: auto;width: auto;" title="Terraform Package"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5d2c7c6be2eb2ade101f553ead86ca1e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-package.png" title="Terraform Package"></a></p>
+<p><a href="#R-image-2738b19b7be45f394bc30830b5031a6c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-package.png" style="height: auto;width: auto;" title="Terraform Package"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2738b19b7be45f394bc30830b5031a6c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-package.png" title="Terraform Package"></a></p>
 <p>The modules and helper scripts are then packed into a self-extracting release executable as per standard CDAF release build process</p>
-<p><a href="#R-image-0ae3acdcd53edf1e38bdc5efcdf928e4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-release.png" style="height: auto;width: auto;" title="Terraform Release"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0ae3acdcd53edf1e38bdc5efcdf928e4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-release.png" title="Terraform Release"></a></p>
+<p><a href="#R-image-5f80f4a8e74345fccc3f6d1dc2a91832" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-release.png" style="height: auto;width: auto;" title="Terraform Release"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5f80f4a8e74345fccc3f6d1dc2a91832"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-release.png" title="Terraform Release"></a></p>
 
   <footer class="footline">
   </footer>
@@ -1146,7 +1146,7 @@ release</code></pre></div>
 
 <h1 id="configuration-management">Configuration Management</h1>
 
-<h2 id="hahahugoshortcode69s0hbhb">Tokens and Properties<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode68s0hbhb">Tokens and Properties<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>To avoid a configuration file for each environment, and the inevitable drift between those files, a single, tokenised, definition is used.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>variable &#34;aks_work_space&#34;   { default = &#34;%aks_work_space%&#34; }
 variable &#34;name_space&#34;       { default = &#34;%name_space%&#34; }
@@ -1185,7 +1185,7 @@ PROD    aks_prod        prod        $env:REGISTRY_KEY  CA3CBB1998E86F3237CA1...<
 
 <h1 id="release">Release</h1>
 
-<h2 id="hahahugoshortcode71s0hbhb">Release Construction<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode70s0hbhb">Release Construction<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The release combines the Infrastructure-as-Code (IaC) Continuous Integration (CI) output with the application components from <a href="/70-authoritative-release/40-terraform-kubernetes/index.html">Terraform Authoritative Release</a>. The application <em>authoritative release package</em> (in green below) declares the image versions to be deployed to the infrastructure provided by the IaC <em>release package</em>.</p>
 <pre class="mermaid actionbar-wrapper align-center ">
 graph LR
@@ -1224,19 +1224,19 @@ graph LR
 
 </pre>
 <p>In this example, the application release pipeline only deploys to the development environment to verify the package, and then pushes to the artefact store</p>
-<p><a href="#R-image-4e316b39941a0ae4ba3fd2034714c254" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e316b39941a0ae4ba3fd2034714c254"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-3a26dc1ae774a9fc704dfe8273549dbe" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3a26dc1ae774a9fc704dfe8273549dbe"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-pipeline.png" title="Terraform Apply"></a></p>
 <p>The package, based on its semantic version, is pulled from this store at deploy time, based on the solution manifest, <code>CDAF.solution</code>.</p>
-<p><a href="#R-image-c7d962bebee0e5eabff4b22282524518" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c7d962bebee0e5eabff4b22282524518"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-c132663aef17d4836e94f801cf2b6dc8" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c132663aef17d4836e94f801cf2b6dc8"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-artefact.png" title="Production Artefact"></a></p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>artifactPrefix=0.5
 productName=Azure Terraform for Kubernetes
 solutionName=azt
 
 kat_release=0.4.80</code></pre></div>
 <p>the two release artefacts are promoted together through the pipeline</p>
-<p><a href="#R-image-a4e076812e5c1bbcdbf2acd48fe89ac3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a4e076812e5c1bbcdbf2acd48fe89ac3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-18c46dd22c0032abb1dc7db107bcb9fc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-18c46dd22c0032abb1dc7db107bcb9fc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline.png" title="Terraform Apply"></a></p>
 
   <footer class="footline">
   </footer>
@@ -1254,19 +1254,19 @@ kat_release=0.4.80</code></pre></div>
 
 <h1 id="intermediary">Intermediary</h1>
 
-<h2 id="hahahugoshortcode73s0hbhb">Terraform Cloud intermediary<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode72s0hbhb">Terraform Cloud intermediary<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The deployment process itself is processed via the Terraform Cloud intermediary, which decouples the configuration management, and provides state storage and execution processing.</p>
-<p><a href="#R-image-d0e47f32dc26da2f77caaf25279b0d4a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-terraform-cloud.png" style="height: auto;width: auto;" title="Terraform Cloud"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d0e47f32dc26da2f77caaf25279b0d4a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-terraform-cloud.png" title="Terraform Cloud"></a>.</p>
+<p><a href="#R-image-707062199e929d37ab76280d29aac744" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-terraform-cloud.png" style="height: auto;width: auto;" title="Terraform Cloud"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-707062199e929d37ab76280d29aac744"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-terraform-cloud.png" title="Terraform Cloud"></a>.</p>
 <p>An important aspect of the intermediaries function is to store dynamic outputs, for example, the Infrastructure-as-Code solution provides a Kubernetes cluster, the dynamically created configuration is stored as outputs.</p>
-<p><a href="#R-image-b276d7801842d24a77cff9f9b503967a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-outputs.png" style="height: auto;width: auto;" title="Terraform Outputs"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b276d7801842d24a77cff9f9b503967a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-outputs.png" title="Terraform Outputs"></a>.</p>
+<p><a href="#R-image-3e8a68876c399943bde637c91bbb1aaf" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-outputs.png" style="height: auto;width: auto;" title="Terraform Outputs"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3e8a68876c399943bde637c91bbb1aaf"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-outputs.png" title="Terraform Outputs"></a>.</p>
 <p>The outputs are made available to the subsequent application deployment process.</p>
-<p><a href="#R-image-c03a3c0bd24a231d358dc9a04e5b790b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-state-sharing.png" style="height: auto;width: auto;" title="Terraform State Sharing"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c03a3c0bd24a231d358dc9a04e5b790b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-state-sharing.png" title="Terraform State Sharing"></a>.</p>
+<p><a href="#R-image-e3319a0ea56256dd0777f46313608d5f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-state-sharing.png" style="height: auto;width: auto;" title="Terraform State Sharing"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e3319a0ea56256dd0777f46313608d5f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-state-sharing.png" title="Terraform State Sharing"></a>.</p>
 <p>The Application components consume the state information that has been shared</p>
-<p><a href="#R-image-83a9790684ab09517a9044495a70ed40" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-plan.png" style="height: auto;width: auto;" title="Terraform Application Planning"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-83a9790684ab09517a9044495a70ed40"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-plan.png" title="Terraform Application Planning"></a>.</p>
+<p><a href="#R-image-0d359395fc27785359594bd1219a3ddf" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/kat-plan.png" style="height: auto;width: auto;" title="Terraform Application Planning"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0d359395fc27785359594bd1219a3ddf"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/kat-plan.png" title="Terraform Application Planning"></a>.</p>
 
   <footer class="footline">
   </footer>
@@ -1296,11 +1296,11 @@ Write-Host &#34;[$TASK_NAME] Custom Properties Detokenisation`n&#34; -Foreground
 DETOKN variables.tf $azure_groups
 DETOKN variables.tf $azure_credentials reveal</code></pre></div>
 <p>Environment (<code>TARGET</code>) specific de-tokenisation is blue, and solution level de-tokenisation in green:</p>
-<p><a href="#R-image-5ab9d5a20b2c31efc073f0b967342203" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-detokenisation.png" style="height: auto;width: auto;" title="Terraform De-tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5ab9d5a20b2c31efc073f0b967342203"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-detokenisation.png" title="Terraform De-tokenisation"></a></p>
+<p><a href="#R-image-3877699ec3f2af96af3278b88b4da7c1" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-detokenisation.png" style="height: auto;width: auto;" title="Terraform De-tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3877699ec3f2af96af3278b88b4da7c1"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-detokenisation.png" title="Terraform De-tokenisation"></a></p>
 <p>Cluster de-tokenisation is blue, group/region de-tokenisation in green and on-secret elements of the credentials in orange:</p>
-<p><a href="#R-image-3e021a13d8028012fa181a568f77bc8d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-extended-detokenisation.png" style="height: auto;width: auto;" title="Terraform De-tokenisation"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3e021a13d8028012fa181a568f77bc8d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-extended-detokenisation.png" title="Terraform De-tokenisation"></a></p>
+<p><a href="#R-image-ddf05b43ea8ddc3bbb0fd6f027f7f064" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-extended-detokenisation.png" style="height: auto;width: auto;" title="Terraform De-tokenisation"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ddf05b43ea8ddc3bbb0fd6f027f7f064"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-extended-detokenisation.png" title="Terraform De-tokenisation"></a></p>
 <p>Terraform Cloud is being used to perform state management. To avoid false negative reporting on Terraform apply, the operation is performed in a CMD shell.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Azure Secrets are stored in the back-end, the token opens access to these&#34;
 MAKDIR &#34;$env:APPDATA\terraform.d&#34;
@@ -1326,11 +1326,11 @@ terraform init -upgrade -input=false
 Write-Host &#34;[$TASK_NAME] Default action is plan`n&#34; -ForegroundColor Cyan
 if ( ! $OPT_ARG ) { $OPT_ARG = &#39;plan&#39; }
 EXECMD &#34;terraform $OPT_ARG&#34;</code></pre></div>
-<p><a href="#R-image-a680e3c553878274b6993d5533ea6b74" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-terraform-apply.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a680e3c553878274b6993d5533ea6b74"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-terraform-apply.png" title="Terraform Apply"></a></p>
+<p><a href="#R-image-be268d779efef9dc3fda029bfd329f61" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-terraform-apply.png" style="height: auto;width: auto;" title="Terraform Apply"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-be268d779efef9dc3fda029bfd329f61"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-terraform-apply.png" title="Terraform Apply"></a></p>
 <p>Once the infrastructure has been deployed, the application components are installed. The release package is downloaded (in this example an container with the AZ extensions pre-installed is used) and then run for the environment.</p>
-<p><a href="#R-image-528bda2da660c7a5f76c9b0d3e0cba46" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" style="height: auto;width: auto;" title="Application Release download and deploy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-528bda2da660c7a5f76c9b0d3e0cba46"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" title="Application Release download and deploy"></a></p>
+<p><a href="#R-image-31fc29c2bbf2c1ed1e2d445b3624b7dd" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" style="height: auto;width: auto;" title="Application Release download and deploy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-31fc29c2bbf2c1ed1e2d445b3624b7dd"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-kat-download-and-deploy.png" title="Application Release download and deploy"></a></p>
 
   <footer class="footline">
   </footer>
@@ -1348,10 +1348,10 @@ EXECMD &#34;terraform $OPT_ARG&#34;</code></pre></div>
 
 <h1 id="feedback-loop">Feedback Loop</h1>
 
-<h2 id="hahahugoshortcode77s0hbhb">Realising the Feedback Loop<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode76s0hbhb">Realising the Feedback Loop<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Based on <a href="https://blog.cdaf.io/articles/2023-07-23-feedback-loop/" rel="external">Realising the Feedback Loop</a>, once the package has been promoted to it&rsquo;s last stage, it is then pushed to the artefact store</p>
-<p><a href="#R-image-c188c0a5eb2e74920a0f49f40cac8b53" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline-complete.png" style="height: auto;width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c188c0a5eb2e74920a0f49f40cac8b53"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline-complete.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-9edfbb76ad5846fbf8a2703f7788b3ff" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline-complete.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9edfbb76ad5846fbf8a2703f7788b3ff"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline-complete.png" title="Production Artefact"></a></p>
 <p>In this example Azure DevOps (ADO) using the <em>az artifacts</em> extension, see the example <code>push.tsk</code>.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Verify deployable artefact is available`n&#34;
 $package_name = (Get-Item &#34;$(PWD)\release.ps1&#34; -ErrorAction SilentlyContinue).FullName
@@ -1379,12 +1379,12 @@ $package_name = (Get-Item &#34;$(PWD)\userenv.ps1&#34; -ErrorAction SilentlyCont
 if ( ! ( $package_name )) { ERRMSG &#34;[PACKAGE_NOT_FOUND] $(PWD)\userenv.ps1 not found!&#34; 9995 }
 az artifacts universal publish --organization &#34;https://cdaf.visualstudio.com&#34; --project $ado_project --scope project --feed $ado_feed --name &#34;userenv&#34; --version $version --path $package_name</code></pre></div>
 <p>The package can be retrieved using the semantic version, or <code>latest</code> (current production).</p>
-<p><a href="#R-image-dd3f52a6677e3dc3e9f46f368a0212ea" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd3f52a6677e3dc3e9f46f368a0212ea"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-artefact.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-78a126831d6abfcd7e01ce979a9735d9" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-78a126831d6abfcd7e01ce979a9735d9"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-artefact.png" title="Production Artefact"></a></p>
 <h3 id="operations">Operations<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Operational tasks can be performed using the production (<code>latest</code>) or specific release. In this example, a production-like development environment can be created and destroyed on demand.</p>
-<p><a href="#R-image-cd32104aec3ff005b31d9aac85fdb075" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-ops.png" style="height: auto;width: auto;" title="Release Package for Operations"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cd32104aec3ff005b31d9aac85fdb075"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-ops.png" title="Release Package for Operations"></a></p>
+<p><a href="#R-image-45069e8b99e52331beeac97ac006b958" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-ops.png" style="height: auto;width: auto;" title="Release Package for Operations"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-45069e8b99e52331beeac97ac006b958"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-ops.png" title="Release Package for Operations"></a></p>
 
   <footer class="footline">
   </footer>
@@ -1394,22 +1394,22 @@ az artifacts universal publish --organization &#34;https://cdaf.visualstudio.com
         </div>
       </main>
     </div>
-    <script src="/js/js-yaml/js-yaml.min.js?1780954216" defer></script>
-    <script src="/js/d3/d3-color.min.js?1780954216" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1780954216" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1780954216" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1780954216" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1780954216" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1780954216" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1780954216" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1780954216" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1780954216" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1780954216" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1780956295" defer></script>
+    <script src="/js/d3/d3-color.min.js?1780956295" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1780956295" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1780956295" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1780956295" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1780956295" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1780956295" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1780956295" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1780956295" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1780956295" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1780956295" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780954216" defer></script>
-    <script src="/js/theme.min.js?1780954216" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780956295" defer></script>
+    <script src="/js/theme.min.js?1780956295" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

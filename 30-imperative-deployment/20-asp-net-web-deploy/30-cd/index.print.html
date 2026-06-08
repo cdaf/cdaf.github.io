@@ -25,26 +25,26 @@
     <title>Continuous Delivery (CD) :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/30-imperative-deployment/20-asp-net-web-deploy/30-cd/index.html" rel="canonical" type="text/html" title="Continuous Delivery (CD) :: Concepts &amp; Applied Examples">
     <link href="/30-imperative-deployment/20-asp-net-web-deploy/30-cd/index.xml" rel="alternate" type="application/rss+xml" title="Continuous Delivery (CD) :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1780954216" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1780954216" defer></script>
-    <script src="/js/search-lunr.min.js?1780954216" defer></script>
-    <script src="/js/search.min.js?1780954216" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1780956295" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1780956295" defer></script>
+    <script src="/js/search-lunr.min.js?1780956295" defer></script>
+    <script src="/js/search.min.js?1780956295" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1780954216";
+      window.relearn.index_js_url="/searchindex.en.js?1780956295";
     </script>
-    <script src="/js/lunr/lunr.min.js?1780954216" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1780954216" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1780954216" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.min.js?1780956295" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1780956295" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1780956295" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1780956295" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780954216" rel="stylesheet">
-    <link href="/css/theme.min.css?1780954216" rel="stylesheet">
-    <link href="/css/format-print.min.css?1780954216" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1780956295" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780956295" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780956295" rel="stylesheet">
+    <link href="/css/theme.min.css?1780956295" rel="stylesheet">
+    <link href="/css/format-print.min.css?1780956295" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -144,7 +144,7 @@
 
 <h1 id="continuous-delivery-cd">Continuous Delivery (CD)</h1>
 
-<h2 id="hahahugoshortcode58s0hbhb">Deploy Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode61s0hbhb">Deploy Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The tokenised configuration files need to be detokenised at deploy time. The settings are likely to include both sensitive and non-sensitive values. A core principle of CDAF for sensitive values is based on the 12-Factor approach of using environment variables, while source control is the recommended approach for non-sensitive values.</p>
 <h3 id="why-source-control-for-settings">Why Source Control for Settings?<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>The Continuous Delivery Automation Framework (CDAF) has been engineered for enterprise scale implementations. Large scale organisations typically have a higher focus on gating and auditing, and to provide a change of configuration audit trail, along with a single way-of-working, the configuration changes are applied using the same principles as other deliveries, e.g application development.</p>
@@ -167,8 +167,8 @@ local    PROD    &#34;Default Web Site&#34;   prod        prodsql    prod       
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;Use Web Deploy to deploy the Aware application&#34;</span>
 </span></span><span style="display:flex;"><span>.\MyAspApp.deploy.cmd /Y /M:localhost</span></span></code></pre></div>
-<p><a href="#R-image-2599215c6aea2b0933a72c62b24c10ec" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wol-deploy.png" style="height: auto;width: auto;" title="Deployment"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2599215c6aea2b0933a72c62b24c10ec"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wol-deploy.png" title="Deployment"></a></p>
+<p><a href="#R-image-7f278f3ad48914237fccae04b88df5b2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/wol-deploy.png" style="height: auto;width: auto;" title="Deployment"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7f278f3ad48914237fccae04b88df5b2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/wol-deploy.png" title="Deployment"></a></p>
 <p>The overview of how to construct and test this locally see the <a href="/10-cdaf/10-getting-started/50-cd/index.html">CDAF basics</a>.</p>
 
   <footer class="footline">
@@ -177,8 +177,8 @@ local    PROD    &#34;Default Web Site&#34;   prod        prodsql    prod       
         </div>
       </main>
     </div>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780954216" defer></script>
-    <script src="/js/theme.min.js?1780954216" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780956295" defer></script>
+    <script src="/js/theme.min.js?1780956295" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
