@@ -22,6 +22,17 @@ var relearn_searchindex = [
     "uri": "/70-authoritative-release/30-how-to-helm/20-helm/1-helm-hello-world/index.html"
   },
   {
+    "breadcrumb": "Home \u003e Declarative Release \u003e Autonomous Development",
+    "content": "Declarative Deployment For context see Behaviour Tests as a Product. The development of test automation is autonomous and is not tightly coupled with the solution development. When the solution is ready to execute a set of tests, the versioned package is obtained and executed.\nEnvironment Definitions Configuration Management within the source allows for test execution by simply invoking the test package for the desired environment, e.g. ./package.ps1 PROD, or targeted testing ./package.ps1 PROD_WEB\ncontext target testSuite featureSet resources secrets\rlocal PROD_CLASS SpecFlow.Specs data supabase creds_prd\rlocal PROD_WEB_1 Selenium.Specs login https://example.com/Calculator.html vault_prd\rlocal PROD_WEB_2 Selenium.Specs dashboard https://example.com/Calculator.html\rlocal TEST_CLASS SpecFlow.Specs data supabase creds_tst\rlocal PROD_WEB_1 Selenium.Specs login https://test.example.com/Calculator.html vault_tst\rlocal PROD_WEB_2 Selenium.Specs dashboard https://test.example.com/Calculator.html The delivery phase of the pipeline pushes the package to a registry, with a semantic version. It is these versions that the solution delivery process can consume to provide predictable test results.\ngraph LR\rsubgraph Component A\rRbuild[\"Build\"] --\u003e\rRtest[\"Test\"] --\u003e\rRpublish[\"Publish\u003c/br\u003e1.0.1\"]\rend\rsubgraph Component B\rPbuild[\"Build\"] --\u003e\rPtest[\"Test\"] --\u003e\rPpublish[\"Publish\u003c/br\u003e0.5.9\"]\rend\rsubgraph Test Product\rSbuild[\"Build\"] --\u003e\rStest[\"Test\"] --\u003e\rSpublish[\"Publish\u003c/br\u003e2.0.0\"]\rend\rsubgraph Release\rTEST:::release\rPROD:::release\rend\rstore[(Registry)]\rRpublish --\u003e store\rPpublish --\u003e store\rSpublish --\u003e store\rstore --\u003e TEST\rTEST --\u003e PROD\rclassDef release fill:lightgreen",
+    "description": "Declarative Deployment",
+    "tags": [
+      "Kb",
+      "Declarative"
+    ],
+    "title": "Tests as a Product",
+    "uri": "/70-authoritative-release/10-autonomous-development/20-tests-as-a-product/index.html"
+  },
+  {
     "breadcrumb": "Home \u003e Declarative Release \u003e How to Helm \u003e Helm",
     "content": "To avoid the creation of multiple values YAML files, and the inherent structural drift of those files, a single file should be defined with tokenised settings. The CDAF configuration management feature can be used to provide a human readable settings definition which gives an abstraction from the complexity of the Helm files.\nexample.cm context target replicaCount port\rcontainer LINUX 1 8081\rcontainer dev 1 8080\rcontainer TEST 2 8001\rcontainer PROD 2 8000 Now the values YAML contains tokens for deploy time replacement.\nreplicaCount: \"%replicaCount%\" image: repository: docker.io/cdaf/fastapi tag: \"50\" service: port: \"%port%\"",
     "description": "DRY Principles and Avoiding Drift",
@@ -474,7 +485,7 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Home",
-    "content": "Concepts The following are general concepts related to continuous delivery.\nImperative vs. Declarative Imperative Deployment vs. Declarative Desired State\nBranch Plans Alternate Branch Strategies\nRelease Release Definitions and Tools",
+    "content": "Concepts The following are general concepts related to continuous delivery.\nImperative vs. Declarative Imperative Deployment vs. Declarative Desired State\nBranch Plans Alternate Branch Strategies\nRelease Release Definitions and Tools\nBehaviour Tests as a Product Test Automation for Long Running Release Cycles",
     "description": "Concepts",
     "tags": [],
     "title": "Concepts",
@@ -1040,6 +1051,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Release",
     "uri": "/25-concepts/95-release/index.html"
+  },
+  {
+    "breadcrumb": "Home \u003e Concepts",
+    "content": "Test Automation for Long Running Release Cycles While build-once/deploy-many software releasing is well established, test automation is commonly executed directly from source, sometimes with branches to cover variations. As an alternative, I encourage packaging (versioning) test automation. As a reusable product, tests can be re-run from your artefact registry without exposure to the transient nature of source control.\nPackage Management A stand along packgae registry can be used as described above, or if using an integrated tooling offering, the registry included can be used.\nImplementation Patterns with CDAF One of the key features of CDAF is that packages are abstracted from the implementation ecosystem, e.g. NodeJS, .NET, Python, etc. and a single, self-extracting script is the output of the CI process. It is this which is published in the registry, and executed by reference to perform automated tests.\nNote: if your automated test product is a container image, the release package script will provide a wrapper to execute the container based test and capture the output.\nAutonomous Development Example Incorporation with a Release Pipeline Test Product(s) can be included as part of the component manifests in the following release disciplines.\nDeclarative Release for implementation examples, which incorporate intermediary tools such Ansible Tower, Puppet Enterprise and Terraform Cloud Release Trains for implementation examples, which incorporate Octopus Deploy and Azure DevOps Release feature",
+    "description": "Test Automation for Long Running Release Cycles",
+    "tags": [],
+    "title": "Behaviour Tests as a Product",
+    "uri": "/25-concepts/97-tests-as-product/index.html"
   },
   {
     "breadcrumb": "Home \u003e Declarative Release \u003e How to Helm \u003e Desired State Release",

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.160.1">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Test Automation for Long Running Release Cycles">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Behaviour Tests as a Product :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Test Automation for Long Running Release Cycles">
+    <meta property="og:url" content="https://cdaf.io/25-concepts/97-tests-as-product/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Behaviour Tests as a Product :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Test Automation for Long Running Release Cycles">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Behaviour Tests as a Product :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Test Automation for Long Running Release Cycles">
+    <meta itemprop="wordCount" content="221">
+    <title>Behaviour Tests as a Product :: Concepts &amp; Applied Examples</title>
+    <link href="/25-concepts/97-tests-as-product/index.xml" rel="alternate" type="application/rss+xml" title="Behaviour Tests as a Product :: Concepts &amp; Applied Examples">
+    <link href="/25-concepts/97-tests-as-product/index.print.html" rel="alternate" type="text/html" title="Behaviour Tests as a Product :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1780954216" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1780954216" defer></script>
+    <script src="/js/search-lunr.min.js?1780954216" defer></script>
+    <script src="/js/search.min.js?1780954216" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1780954216";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1780954216" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780954216" rel="stylesheet">
+    <link href="/css/theme.min.css?1780954216" rel="stylesheet">
+    <link href="/css/format-html.min.css?1780954216" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/25-concepts\/97-tests-as-product\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/25-concepts/97-tests-as-product/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#hahahugoshortcode27s0hbhb">HAHAHUGOSHORTCODE27s0HBHB</a>
+      <ul>
+        <li><a href="#package-management">Package Management</a></li>
+        <li><a href="#implementation-patterns-with-cdaf">Implementation Patterns with CDAF</a></li>
+        <li><a href="#incorporation-with-a-release-pipeline">Incorporation with a Release Pipeline</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/25-concepts/index.html"><span itemprop="name">Concepts</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Behaviour Tests as a Product</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/25-concepts/97-tests-as-product/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/25-concepts/95-release/index.html" title="Release (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/30-imperative-deployment/index.html" title="Imperative Deployment (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 25-concepts" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="behaviour-tests-as-a-product">Behaviour Tests as a Product</h1>
+
+<h2 id="hahahugoshortcode27s0hbhb">Test Automation for Long Running Release Cycles<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>While build-once/deploy-many software releasing is well established, test automation is commonly executed directly from source, sometimes with branches to cover variations. As an alternative, I encourage packaging (versioning) test automation. As a reusable product, tests can be re-run from your artefact registry without exposure to the transient nature of source control.</p>
+<p><a href="#R-image-d4d2870ff5850d8d929b1e321fa42064" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/tests-as-product.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d4d2870ff5850d8d929b1e321fa42064"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/tests-as-product.png"></a></p>
+<h3 id="package-management">Package Management<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>A stand along packgae registry can be used as described above, or if using an integrated tooling offering, the registry included can be used.</p>
+<p><a href="#R-image-1fe7ec6842da6ae32f3c4ed85130ba64" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/tests-as-product-registries.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1fe7ec6842da6ae32f3c4ed85130ba64"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/tests-as-product-registries.png"></a></p>
+<h3 id="implementation-patterns-with-cdaf">Implementation Patterns with CDAF<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>One of the key features of CDAF is that packages are abstracted from the implementation ecosystem, e.g. NodeJS, .NET, Python, etc. and a single, self-extracting script is the output of the CI process. It is this which is published in the registry, and executed by reference to perform automated tests.</p>
+<blockquote>
+<p>Note: if your automated test product is a container image, the release package script will provide a wrapper to execute the container based test and capture the output.</p>
+</blockquote>
+<ul>
+<li><a href="/70-authoritative-release/10-autonomous-development/20-tests-as-a-product/index.html">Autonomous Development Example</a></li>
+</ul>
+<h3 id="incorporation-with-a-release-pipeline">Incorporation with a Release Pipeline<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Test Product(s) can be included as part of the component manifests in the following release disciplines.</p>
+<ul>
+<li><a href="/70-authoritative-release/index.html">Declarative Release</a> for implementation examples, which incorporate intermediary tools such Ansible Tower, Puppet Enterprise and Terraform Cloud</li>
+<li><a href="/80-release-train/index.html">Release Trains</a> for implementation examples, which incorporate Octopus Deploy and Azure DevOps Release feature</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><img src="/images/cdaf.png" alt="Continuous Delivery Automation Framework">
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/10-cdaf/index.html"><a class="padding default-animation" href="/10-cdaf/index.html"><i class='fas fa-cog'></i>  CDAF</a><ul id="R-subsections-a9cb0b536404115325c82530a716c7b6" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/20-principles/index.html"><a class="padding default-animation" href="/20-principles/index.html"><i class='fas fa-comments'></i>  Principles</a><ul id="R-subsections-23c48d22b02be837664fce51dfef72ce" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/25-concepts/index.html"><a class="padding default-animation" href="/25-concepts/index.html"><i class='fa-regular fa-lightbulb'></i>  Concepts</a><ul id="R-subsections-705a1229a29f12cab5780068d923751c" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/25-concepts/50-imperative-vs-declarative/index.html"><a class="padding default-animation" href="/25-concepts/50-imperative-vs-declarative/index.html"><i class="fa-solid fa-hand-holding-hand"></i>  Imperative vs. Declarative</a><ul id="R-subsections-820f5a625061dd2fb5e3a63804a6d4e7" class="collapsible-menu"></ul></li>
+            <li class="alwaysopen " data-nav-id="/25-concepts/90-branch-plans/index.html"><a class="padding default-animation" href="/25-concepts/90-branch-plans/index.html"><i class='fas fa-code-branch'></i>  Branch Plans</a><ul id="R-subsections-c210232d031178564d03caba10b8604a" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/25-concepts/95-release/index.html"><a class="padding" href="/25-concepts/95-release/index.html"><i class='fa-solid fa-cube'></i>  Release</a></li>
+            <li class="active " data-nav-id="/25-concepts/97-tests-as-product/index.html"><a class="padding" href="/25-concepts/97-tests-as-product/index.html"><i class='fa-solid fa-vial-circle-check'></i>  Behaviour Tests as a Product</a></li></ul></li>
+            <li class="" data-nav-id="/30-imperative-deployment/index.html"><a class="padding default-animation" href="/30-imperative-deployment/index.html"><i class='fas fa-sliders-h'></i>  Imperative Deployment</a><ul id="R-subsections-722c8ca13d31320f538888833a3e334d" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/70-authoritative-release/index.html"><a class="padding default-animation" href="/70-authoritative-release/index.html"><i class='fas fa-list-ul'></i>  Declarative Release</a><ul id="R-subsections-68c0ef55a5adef0606066638d7090400" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/80-release-train/index.html"><a class="padding default-animation" href="/80-release-train/index.html"><i class='fas fa-train'></i>  Release Train</a><ul id="R-subsections-09e687527bd6b4dfd4f3f5e086fdef34" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/90-reference/index.html"><a class="padding default-animation" href="/90-reference/index.html"><i class='fas fa-info'></i>  Reference Guide</a><ul id="R-subsections-9643d01fd581153bc72452a8807c50b7" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/cdaf/"><a class="padding" href="https://github.com/cdaf/" rel="external"><i class='fab fa-github'></i> Contribute & Support</a></li>
+            <li class="" data-nav-id="https://nz.linkedin.com/in/jules-clements-842b589/"><a class="padding" href="https://nz.linkedin.com/in/jules-clements-842b589/" rel="external"><i class='fab fa-linkedin'></i> Blogs & Articles</a></li>
+            <li class="" data-nav-id="https://hub.docker.com/u/cdaf/"><a class="padding" href="https://hub.docker.com/u/cdaf/" rel="external"><i class='fab fa-docker'></i> CDAF Images</a></li>
+            <li class="" data-nav-id="/tags"><a class="padding" href="/tags"><i class='fas fa-tags'></i> Tags</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780954216" defer></script>
+    <script src="/js/theme.min.js?1780954216" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

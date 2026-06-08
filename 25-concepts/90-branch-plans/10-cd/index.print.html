@@ -25,26 +25,26 @@
     <title>Continuous Delivery :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/25-concepts/90-branch-plans/10-cd/index.html" rel="canonical" type="text/html" title="Continuous Delivery :: Concepts &amp; Applied Examples">
     <link href="/25-concepts/90-branch-plans/10-cd/index.xml" rel="alternate" type="application/rss+xml" title="Continuous Delivery :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1780118025" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1780118025" defer></script>
-    <script src="/js/search-lunr.min.js?1780118025" defer></script>
-    <script src="/js/search.min.js?1780118025" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1780954216" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1780954216" defer></script>
+    <script src="/js/search-lunr.min.js?1780954216" defer></script>
+    <script src="/js/search.min.js?1780954216" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1780118025";
+      window.relearn.index_js_url="/searchindex.en.js?1780954216";
     </script>
-    <script src="/js/lunr/lunr.min.js?1780118025" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1780118025" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1780118025" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1780118025" defer></script>
+    <script src="/js/lunr/lunr.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1780954216" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1780118025" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780118025" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780118025" rel="stylesheet">
-    <link href="/css/theme.min.css?1780118025" rel="stylesheet">
-    <link href="/css/format-print.min.css?1780118025" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780954216" rel="stylesheet">
+    <link href="/css/theme.min.css?1780954216" rel="stylesheet">
+    <link href="/css/format-print.min.css?1780954216" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -145,24 +145,24 @@
 <h1 id="continuous-delivery">Continuous Delivery</h1>
 
 <p>Continuous Delivery (CD) decouples the release activity from development activity. Unlike Continuous Deployment, Continuous Delivery has one or more approval gates. At time of writing, the majority of pipeline tools support approval gates, with the exception of the GitHub Free tier.</p>
-<h2 id="hahahugoshortcode82s0hbhb">The Continuous Delivery Maturity Model<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode48s0hbhb">The Continuous Delivery Maturity Model<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>A fundamental aspect of Continuous Delivery is to build once and deploy many times. This means the output of the development process (Continuous Integration) is an artefact which can be re-used to deploy to multiple environments. The artefact represents the <em>Release</em>. Once this artefact is produced, the developer input is complete, and a non-development user, i.e. Test Managed or Product Owner can promote the release through various environments to production.</p>
 <p>In this example, the first stage is Continuous Integration (CI) which produces the release. Each stage after that is automatically executed, with an integration test stage, and then deployment to the <em>staging</em> environment. After the deployment to staging, the pipeline stop, awaiting approval.</p>
-<p><a href="#R-image-d97e7a4d1559a6d23e1f258327612d72" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cd-pipeline-example.png" style="height: auto;width: auto;" title="CD Pipeline Example"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d97e7a4d1559a6d23e1f258327612d72"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cd-pipeline-example.png" title="CD Pipeline Example"></a></p>
+<p><a href="#R-image-7ab607a1daa84339e6289e2f3b683623" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cd-pipeline-example.png" style="height: auto;width: auto;" title="CD Pipeline Example"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7ab607a1daa84339e6289e2f3b683623"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cd-pipeline-example.png" title="CD Pipeline Example"></a></p>
 <p>The release artefact in this example is <code>#26</code>, and this is re-used in each deployment phase.</p>
-<p><a href="#R-image-fe9daf9280d46e9615184888f948ac06" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/release-26.png" style="height: auto;width: auto;" title="Release Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fe9daf9280d46e9615184888f948ac06"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/release-26.png" title="Release Artefact"></a></p>
+<p><a href="#R-image-8cbc60f4c8e3261a813490c946e9fb9f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/release-26.png" style="height: auto;width: auto;" title="Release Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8cbc60f4c8e3261a813490c946e9fb9f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/release-26.png" title="Release Artefact"></a></p>
 <p>The approval gate advises the approver of what release is currently in production (<code>#23</code>) and what release will be deployed.</p>
-<p><a href="#R-image-b057d8c10da2fbd5b3366a5ad2d66337" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/approval-gate.png" style="height: auto;width: auto;" title="Approval Gate"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b057d8c10da2fbd5b3366a5ad2d66337"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/approval-gate.png" title="Approval Gate"></a></p>
+<p><a href="#R-image-0236c981719e1685fd19c109a1cc5fef" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/approval-gate.png" style="height: auto;width: auto;" title="Approval Gate"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0236c981719e1685fd19c109a1cc5fef"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/approval-gate.png" title="Approval Gate"></a></p>
 <p>Once approved, the same artefact that was tested, is now promoted to Production, completing the pipeline.</p>
-<p><a href="#R-image-76d0d0b300a9e63da60c3dc5e54611c5" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/deploy.png" style="height: auto;width: auto;" title="Production Deploy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-76d0d0b300a9e63da60c3dc5e54611c5"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/deploy.png" title="Production Deploy"></a></p>
+<p><a href="#R-image-2cabc498020821db5911352e678748a4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/deploy.png" style="height: auto;width: auto;" title="Production Deploy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2cabc498020821db5911352e678748a4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/deploy.png" title="Production Deploy"></a></p>
 <hr>
 <p>See the following reference from <a href="https://www.infoq.com/articles/Continuous-Delivery-Maturity-Model/" rel="external">https://www.infoq.com/articles/Continuous-Delivery-Maturity-Model</a> for the <em>build once/deploy many construct</em>.</p>
-<p><a href="#R-image-37082b4a059dd8464283ad9424813acc" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cdmm.png" style="height: auto;width: auto;" title="The Continuous Delivery Maturity Model"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-37082b4a059dd8464283ad9424813acc"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cdmm.png" title="The Continuous Delivery Maturity Model"></a></p>
+<p><a href="#R-image-29cd0be1f4a3a836ac8eb21da9eb47f6" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/cdmm.png" style="height: auto;width: auto;" title="The Continuous Delivery Maturity Model"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-29cd0be1f4a3a836ac8eb21da9eb47f6"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/cdmm.png" title="The Continuous Delivery Maturity Model"></a></p>
 
   <footer class="footline">
   </footer>
@@ -170,8 +170,8 @@
         </div>
       </main>
     </div>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780118025" defer></script>
-    <script src="/js/theme.min.js?1780118025" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780954216" defer></script>
+    <script src="/js/theme.min.js?1780954216" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

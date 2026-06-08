@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.160.1">
+    <meta name="generator" content="Relearn 9.0.3">
+    <meta name="description" content="Declarative Deployment">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tests as a Product :: Concepts &amp; Applied Examples">
+    <meta name="twitter:description" content="Declarative Deployment">
+    <meta property="og:url" content="https://cdaf.io/70-authoritative-release/10-autonomous-development/20-tests-as-a-product/index.html">
+    <meta property="og:site_name" content="Concepts & Applied Examples">
+    <meta property="og:title" content="Tests as a Product :: Concepts &amp; Applied Examples">
+    <meta property="og:description" content="Declarative Deployment">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Declarative Release">
+    <meta property="article:tag" content="Kb">
+    <meta property="article:tag" content="Declarative">
+    <meta itemprop="name" content="Tests as a Product :: Concepts &amp; Applied Examples">
+    <meta itemprop="description" content="Declarative Deployment">
+    <meta itemprop="wordCount" content="198">
+    <meta itemprop="keywords" content="Kb,Declarative">
+    <title>Tests as a Product :: Concepts &amp; Applied Examples</title>
+    <link href="/70-authoritative-release/10-autonomous-development/20-tests-as-a-product/index.xml" rel="alternate" type="application/rss+xml" title="Tests as a Product :: Concepts &amp; Applied Examples">
+    <link href="/70-authoritative-release/10-autonomous-development/20-tests-as-a-product/index.print.html" rel="alternate" type="text/html" title="Tests as a Product :: Concepts &amp; Applied Examples">
+    <link href="/css/auto-complete/auto-complete.min.css?1780954216" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1780954216" defer></script>
+    <script src="/js/search-lunr.min.js?1780954216" defer></script>
+    <script src="/js/search.min.js?1780954216" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1780954216";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1780954216" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780954216" rel="stylesheet">
+    <link href="/css/theme.min.css?1780954216" rel="stylesheet">
+    <link href="/css/format-html.min.css?1780954216" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/70-authoritative-release\/10-autonomous-development\/20-tests-as-a-product\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/cdaf.io';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'green' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/70-authoritative-release/10-autonomous-development/20-tests-as-a-product/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/70-authoritative-release/index.html"><span itemprop="name">Declarative Release</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/70-authoritative-release/10-autonomous-development/index.html"><span itemprop="name">Autonomous Development</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Tests as a Product</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/10-autonomous-development/20-tests-as-a-product/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html" title="Authoritative Release (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/30-how-to-helm/index.html" title="How to Helm (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 70-authoritative-release" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/tags/declarative/index.html">Declarative</a></li>
+    <li><a class="term-link" href="/tags/kb/index.html">Kb</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="tests-as-a-product">Tests as a Product</h1>
+
+<h2 id="hahahugoshortcode66s0hbhb">Declarative Deployment<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>For context see <a href="/25-concepts/97-tests-as-product/index.html">Behaviour Tests as a Product</a>. The development of test automation is autonomous and is not tightly coupled with the solution development. When the solution is ready to execute a set of tests, the versioned package is obtained and executed.</p>
+<h3 id="environment-definitions">Environment Definitions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><a href="/90-reference/20-feature-configuration/10-configuration-mapping/index.html">Configuration Management</a> within the source allows for test execution by simply invoking the test package for the desired environment, e.g. <code>./package.ps1 PROD</code>, or targeted testing <code>./package.ps1 PROD_WEB</code></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>context  target      testSuite       featureSet  resources                                 secrets
+local    PROD_CLASS  SpecFlow.Specs  data        supabase                                  creds_prd
+local    PROD_WEB_1  Selenium.Specs  login       https://example.com/Calculator.html       vault_prd
+local    PROD_WEB_2  Selenium.Specs  dashboard   https://example.com/Calculator.html
+
+local    TEST_CLASS  SpecFlow.Specs  data        supabase                                  creds_tst
+local    PROD_WEB_1  Selenium.Specs  login       https://test.example.com/Calculator.html  vault_tst
+local    PROD_WEB_2  Selenium.Specs  dashboard   https://test.example.com/Calculator.html</code></pre></div>
+<p>The <em>delivery</em> phase of the pipeline pushes the package to a registry, with a semantic version. It is these versions that the solution delivery process can consume to provide predictable test results.</p>
+<pre class="mermaid actionbar-wrapper align-center ">
+graph LR
+
+  subgraph Component A
+    Rbuild[&#34;Build&#34;] --&gt;
+    Rtest[&#34;Test&#34;] --&gt;
+    Rpublish[&#34;Publish&lt;/br&gt;1.0.1&#34;]
+  end
+  subgraph Component B
+    Pbuild[&#34;Build&#34;] --&gt;
+    Ptest[&#34;Test&#34;] --&gt;
+    Ppublish[&#34;Publish&lt;/br&gt;0.5.9&#34;]
+  end
+  subgraph Test Product
+    Sbuild[&#34;Build&#34;] --&gt;
+    Stest[&#34;Test&#34;] --&gt;
+    Spublish[&#34;Publish&lt;/br&gt;2.0.0&#34;]
+  end
+
+  subgraph Release
+    TEST:::release
+    PROD:::release
+  end
+
+  store[(Registry)]
+  
+  Rpublish --&gt; store
+  Ppublish --&gt; store
+  Spublish --&gt; store
+  store --&gt; TEST
+  TEST --&gt; PROD
+
+classDef release fill:lightgreen
+</pre>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><img src="/images/cdaf.png" alt="Continuous Delivery Automation Framework">
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/10-cdaf/index.html"><a class="padding default-animation" href="/10-cdaf/index.html"><i class='fas fa-cog'></i>  CDAF</a><ul id="R-subsections-a9cb0b536404115325c82530a716c7b6" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/20-principles/index.html"><a class="padding default-animation" href="/20-principles/index.html"><i class='fas fa-comments'></i>  Principles</a><ul id="R-subsections-23c48d22b02be837664fce51dfef72ce" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/25-concepts/index.html"><a class="padding default-animation" href="/25-concepts/index.html"><i class='fa-regular fa-lightbulb'></i>  Concepts</a><ul id="R-subsections-705a1229a29f12cab5780068d923751c" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/30-imperative-deployment/index.html"><a class="padding default-animation" href="/30-imperative-deployment/index.html"><i class='fas fa-sliders-h'></i>  Imperative Deployment</a><ul id="R-subsections-722c8ca13d31320f538888833a3e334d" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/70-authoritative-release/index.html"><a class="padding default-animation" href="/70-authoritative-release/index.html"><i class='fas fa-list-ul'></i>  Declarative Release</a><ul id="R-subsections-68c0ef55a5adef0606066638d7090400" class="collapsible-menu">
+            <li class="parent alwaysopen " data-nav-id="/70-authoritative-release/10-autonomous-development/index.html"><a class="padding default-animation" href="/70-authoritative-release/10-autonomous-development/index.html"><i class='fa-solid fa-file-code'></i>  Autonomous Development</a><ul id="R-subsections-a89a2941d66f85579265999d8d0e635d" class="collapsible-menu">
+            <li class="" data-nav-id="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html"><a class="padding" href="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html">Authoritative Release</a></li>
+            <li class="active " data-nav-id="/70-authoritative-release/10-autonomous-development/20-tests-as-a-product/index.html"><a class="padding" href="/70-authoritative-release/10-autonomous-development/20-tests-as-a-product/index.html">Tests as a Product</a></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/30-how-to-helm/index.html"><a class="padding default-animation" href="/70-authoritative-release/30-how-to-helm/index.html"><i class='fas fa-life-ring'></i>  How to Helm</a><ul id="R-subsections-7b97fc7442d8ace66e2dff36a4837ddc" class="collapsible-menu"></ul></li>
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/40-terraform-kubernetes/index.html"><a class="padding default-animation" href="/70-authoritative-release/40-terraform-kubernetes/index.html"><i class='fas fa-box-open'></i>  Terraform Kubernetes</a><ul id="R-subsections-71308cf3f957fa966a32aded7f4446cc" class="collapsible-menu"></ul></li>
+            <li class="alwaysopen " data-nav-id="/70-authoritative-release/50-custom-state-management/index.html"><a class="padding default-animation" href="/70-authoritative-release/50-custom-state-management/index.html"><i class='fas fa-file-alt'></i>  Custom State Management</a><ul id="R-subsections-53d4115c82630cc4824e48d86883a4bf" class="collapsible-menu"></ul></li></ul></li>
+            <li class="" data-nav-id="/80-release-train/index.html"><a class="padding default-animation" href="/80-release-train/index.html"><i class='fas fa-train'></i>  Release Train</a><ul id="R-subsections-09e687527bd6b4dfd4f3f5e086fdef34" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/90-reference/index.html"><a class="padding default-animation" href="/90-reference/index.html"><i class='fas fa-info'></i>  Reference Guide</a><ul id="R-subsections-9643d01fd581153bc72452a8807c50b7" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/cdaf/"><a class="padding" href="https://github.com/cdaf/" rel="external"><i class='fab fa-github'></i> Contribute & Support</a></li>
+            <li class="" data-nav-id="https://nz.linkedin.com/in/jules-clements-842b589/"><a class="padding" href="https://nz.linkedin.com/in/jules-clements-842b589/" rel="external"><i class='fab fa-linkedin'></i> Blogs & Articles</a></li>
+            <li class="" data-nav-id="https://hub.docker.com/u/cdaf/"><a class="padding" href="https://hub.docker.com/u/cdaf/" rel="external"><i class='fab fa-docker'></i> CDAF Images</a></li>
+            <li class="" data-nav-id="/tags"><a class="padding" href="/tags"><i class='fas fa-tags'></i> Tags</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/js-yaml/js-yaml.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-color.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1780954216" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1780954216" defer></script>
+    <script>
+      window.relearn.themeUseMermaid = JSON.parse("{}");
+    </script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780954216" defer></script>
+    <script src="/js/theme.min.js?1780954216" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

@@ -22,26 +22,26 @@
     <title>How to Helm :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/70-authoritative-release/30-how-to-helm/index.html" rel="canonical" type="text/html" title="How to Helm :: Concepts &amp; Applied Examples">
     <link href="/70-authoritative-release/30-how-to-helm/index.xml" rel="alternate" type="application/rss+xml" title="How to Helm :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1780118025" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1780118025" defer></script>
-    <script src="/js/search-lunr.min.js?1780118025" defer></script>
-    <script src="/js/search.min.js?1780118025" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1780954216" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1780954216" defer></script>
+    <script src="/js/search-lunr.min.js?1780954216" defer></script>
+    <script src="/js/search.min.js?1780954216" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1780118025";
+      window.relearn.index_js_url="/searchindex.en.js?1780954216";
     </script>
-    <script src="/js/lunr/lunr.min.js?1780118025" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1780118025" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1780118025" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1780118025" defer></script>
+    <script src="/js/lunr/lunr.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1780954216" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1780954216" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1780118025" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780118025" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780118025" rel="stylesheet">
-    <link href="/css/theme.min.css?1780118025" rel="stylesheet">
-    <link href="/css/format-print.min.css?1780118025" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1780954216" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1780954216" rel="stylesheet">
+    <link href="/css/theme.min.css?1780954216" rel="stylesheet">
+    <link href="/css/format-print.min.css?1780954216" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -107,7 +107,7 @@
                 <div class="topbar-content-wrapper">
 <nav class="TableOfContents">
   <ul>
-    <li><a href="#hahahugoshortcode68s0hbhb">HAHAHUGOSHORTCODE68s0HBHB</a></li>
+    <li><a href="#hahahugoshortcode43s0hbhb">HAHAHUGOSHORTCODE43s0HBHB</a></li>
     <li><a href="#helm">Helm</a></li>
     <li><a href="#desired-state-release">Desired State Release</a></li>
   </ul>
@@ -123,7 +123,7 @@
 <span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/30-how-to-helm/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/10-autonomous-development/10-authoritative-release/index.html" title="Authoritative Release (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/10-autonomous-development/20-tests-as-a-product/index.html" title="Tests as a Product (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><a href="/70-authoritative-release/30-how-to-helm/20-helm/index.html" title="Helm (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
@@ -149,7 +149,7 @@
 
 <h1 id="how-to-helm">How to Helm</h1>
 
-<h2 id="hahahugoshortcode68s0hbhb">Declarative Desired State Container Deployment using Helm<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode43s0hbhb">Declarative Desired State Container Deployment using Helm<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>This approach is based on <a href="https://blog.cdaf.io/articles/autonomous-development-authoritative-release/" rel="external">Autonomous Development, Authoritative Release</a> which decouples the development process from the release process.</p>
 <blockquote>
 <p>This is an alternative implementation to <a href="/70-authoritative-release/40-terraform-kubernetes/index.html">Terraform Application Stack</a>, using Helm instead of Terraform, but with the same core principles of <strong>runtime versioning</strong> and <strong>desired state</strong>.</p>
@@ -479,7 +479,7 @@ container  PROD    2             8000</code></pre></div>
 
 <h1 id="desired-state-release">Desired State Release</h1>
 
-<h2 id="hahahugoshortcode103s0hbhb">Full Stack Release Helm/Kubernetes<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode81s0hbhb">Full Stack Release Helm/Kubernetes<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>To manage an application stack holistically, a <em>Declaration</em> is required. From this declaration, desired state can be calculated, i.e. what changes need to be made for an environment to be aligned to the declaration. The tool used in this example is Helmsman, however, another tool, Helmfile has fundamentally the same configuration constructs. Each gather one or more Helm applications to create an application stack. Only the necessary components will be updated if a change is determined, based on a calculated state change.</p>
 <pre class="mermaid actionbar-wrapper align-left ">
 graph TD
@@ -544,7 +544,7 @@ class app1,app2,app3,app4 dashed
 
 <h1 id="build-once-deploy-many">Build Once, Deploy Many</h1>
 
-<h2 id="hahahugoshortcode106s0hbhb">CI Process for Declarative Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode83s0hbhb">CI Process for Declarative Release<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The following example is Helmsman, but the same mechanism works for Helmfile also.</p>
 <p>Using DRY principles, a single declaration of the application stack is used, and tokens applied for deploy-time environment variations.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
@@ -627,7 +627,7 @@ class ci,cd dashed
 
 <h1 id="helmsman-deploy-time">Helmsman Deploy-Time</h1>
 
-<h2 id="hahahugoshortcode108s0hbhb">Built Once, Deployed Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode85s0hbhb">Built Once, Deployed Many<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>This example is the deploy time process for Helmsman, although it is fundamentally the same for Helmfile. The tokenised application stack declaration is de-tokenised to apply the correct name_space at deploy time.</p>
 <h4 id="helmtsk">helm.tsk<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sed -i -- <span style="color:#e6db74">&#34;s•name_space•*****•g&#34;</span> ranger.yaml</span></span></code></pre></div>
@@ -695,7 +695,7 @@ NOTICE: Finished: Install release [ ranger ] version [ 0.1.0 ] in namespace [ te
 
 <h1 id="dry">DRY</h1>
 
-<h2 id="hahahugoshortcode109s0hbhb">Don&#39;t Repeat Yourself<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode87s0hbhb">Don&#39;t Repeat Yourself<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>The key to using Helm charts rather than simply authoring Kubernetes YAML definitions is the use of templates. This way a deployment pattern can be defined once, with only the deploy time, application specific, values being changed.</p>
 <p>From the Helm template the health probes are hard coded, replace these with shared definitions, <code>.Values.service.port</code> &amp; <code>.Values.service.probeContext</code>.</p>
 <h4 id="deploymentyaml">deployment.yaml<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
@@ -763,7 +763,7 @@ NOTICE: Finished: Install release [ ranger ] version [ 0.1.0 ] in namespace [ te
 
 <h1 id="helmsman-secrets">Helmsman Secrets</h1>
 
-<h2 id="hahahugoshortcode111s0hbhb">Sensitive Data Management<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode89s0hbhb">Sensitive Data Management<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Define the secret in your chart with a substitution value.</p>
 <h4 id="secretsyaml">secrets.yaml<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
@@ -825,7 +825,7 @@ NOTICE: Finished: Install release [ ranger ] version [ 0.1.0 ] in namespace [ te
 
 <h1 id="helmsman-version-constraints">Helmsman Version Constraints</h1>
 
-<h2 id="hahahugoshortcode114s0hbhb">Helmsman Update Limitations<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode91s0hbhb">Helmsman Update Limitations<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Some changes cannot be updated in place, an example of this is the service port. If this is changed, the chart version has be updated or the existing deployment manually removed.</p>
 
   <footer class="footline">
@@ -836,22 +836,22 @@ NOTICE: Finished: Install release [ ranger ] version [ 0.1.0 ] in namespace [ te
         </div>
       </main>
     </div>
-    <script src="/js/js-yaml/js-yaml.min.js?1780118025" defer></script>
-    <script src="/js/d3/d3-color.min.js?1780118025" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1780118025" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1780118025" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1780118025" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1780118025" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1780118025" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1780118025" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1780118025" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1780118025" defer></script>
-    <script src="/js/mermaid/mermaid.min.js?1780118025" defer></script>
+    <script src="/js/js-yaml/js-yaml.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-color.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1780954216" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1780954216" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1780954216" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{}");
     </script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780118025" defer></script>
-    <script src="/js/theme.min.js?1780118025" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1780954216" defer></script>
+    <script src="/js/theme.min.js?1780954216" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

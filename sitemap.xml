@@ -7,6 +7,9 @@
     <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/20-helm/1-helm-hello-world/index.html</loc>
   </url>
   <url>
+    <loc>https://cdaf.io/70-authoritative-release/10-autonomous-development/20-tests-as-a-product/index.html</loc>
+  </url>
+  <url>
     <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/20-helm/2-tokenised-values/index.html</loc>
   </url>
   <url>
@@ -308,6 +311,9 @@
   </url>
   <url>
     <loc>https://cdaf.io/25-concepts/95-release/index.html</loc>
+  </url>
+  <url>
+    <loc>https://cdaf.io/25-concepts/97-tests-as-product/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/70-authoritative-release/30-how-to-helm/30-desiredstate/3010-package/index.html</loc>
