@@ -19,6 +19,9 @@
     <loc>https://cdaf.io/index.html</loc>
   </url>
   <url>
+    <loc>https://cdaf.io/80-release-train/30-octopus-deploy/05-octopus-with-external-registry/index.html</loc>
+  </url>
+  <url>
     <loc>https://cdaf.io/70-authoritative-release/10-autonomous-development/index.html</loc>
   </url>
   <url>
@@ -278,6 +281,9 @@
   </url>
   <url>
     <loc>https://cdaf.io/80-release-train/40-terraform-cloud/70-deploy/index.html</loc>
+  </url>
+  <url>
+    <loc>https://cdaf.io/80-release-train/30-octopus-deploy/70-octopus-with-containers/index.html</loc>
   </url>
   <url>
     <loc>https://cdaf.io/10-cdaf/10-getting-started/70-remote-tasks/index.html</loc>

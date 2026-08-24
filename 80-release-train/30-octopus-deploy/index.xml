@@ -8,6 +8,13 @@
     <language>en</language>
     <atom:link href="https://cdaf.io/80-release-train/30-octopus-deploy/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Octopus with External Registry</title>
+      <link>https://cdaf.io/80-release-train/30-octopus-deploy/05-octopus-with-external-registry/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/05-octopus-with-external-registry/index.html</guid>
+      <description>Overview of Stack Components</description>
+    </item>
+    <item>
       <title>Octopus Pane of Glass</title>
       <link>https://cdaf.io/80-release-train/30-octopus-deploy/10-manifest/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -27,6 +34,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://cdaf.io/80-release-train/30-octopus-deploy/60-business-visibility/index.html</guid>
       <description>Non-technical Release View</description>
+    </item>
+    <item>
+      <title>Octopus with Containers</title>
+      <link>https://cdaf.io/80-release-train/30-octopus-deploy/70-octopus-with-containers/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/70-octopus-with-containers/index.html</guid>
+      <description>Overview of Stack Components</description>
     </item>
   </channel>
 </rss>

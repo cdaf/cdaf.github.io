@@ -8,6 +8,13 @@
     <language>en</language>
     <atom:link href="https://cdaf.io/tags/12-factors/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Octopus with External Registry</title>
+      <link>https://cdaf.io/80-release-train/30-octopus-deploy/05-octopus-with-external-registry/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/05-octopus-with-external-registry/index.html</guid>
+      <description>Overview of Stack Components</description>
+    </item>
+    <item>
       <title>Component CI</title>
       <link>https://cdaf.io/80-release-train/10-ado-release/10-component-ci/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -195,6 +202,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://cdaf.io/80-release-train/40-terraform-cloud/70-deploy/index.html</guid>
       <description>Deploy-time Detokenisation</description>
+    </item>
+    <item>
+      <title>Octopus with Containers</title>
+      <link>https://cdaf.io/80-release-train/30-octopus-deploy/70-octopus-with-containers/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cdaf.io/80-release-train/30-octopus-deploy/70-octopus-with-containers/index.html</guid>
+      <description>Overview of Stack Components</description>
     </item>
     <item>
       <title>Feedback Loop</title>
