@@ -26,26 +26,26 @@
     <title>Feedback Loop :: Concepts &amp; Applied Examples</title>
     <link href="https://cdaf.io/80-release-train/40-terraform-cloud/80-feedback-loop/index.html" rel="canonical" type="text/html" title="Feedback Loop :: Concepts &amp; Applied Examples">
     <link href="/80-release-train/40-terraform-cloud/80-feedback-loop/index.xml" rel="alternate" type="application/rss+xml" title="Feedback Loop :: Concepts &amp; Applied Examples">
-    <link href="/css/auto-complete/auto-complete.min.css?1787549286" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1787549286" defer></script>
-    <script src="/js/search-lunr.min.js?1787549286" defer></script>
-    <script src="/js/search.min.js?1787549286" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1791269875" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1791269875" defer></script>
+    <script src="/js/search-lunr.min.js?1791269875" defer></script>
+    <script src="/js/search.min.js?1791269875" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1787549286";
+      window.relearn.index_js_url="/searchindex.en.js?1791269875";
     </script>
-    <script src="/js/lunr/lunr.min.js?1787549286" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1787549286" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1787549286" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1787549286" defer></script>
+    <script src="/js/lunr/lunr.min.js?1791269875" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1791269875" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1791269875" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1791269875" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1787549286" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1787549286" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1787549286" rel="stylesheet">
-    <link href="/css/theme.min.css?1787549286" rel="stylesheet">
-    <link href="/css/format-print.min.css?1787549286" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1791269875" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1791269875" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1791269875" rel="stylesheet">
+    <link href="/css/theme.min.css?1791269875" rel="stylesheet">
+    <link href="/css/format-print.min.css?1791269875" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -146,10 +146,10 @@
 
 <h1 id="feedback-loop">Feedback Loop</h1>
 
-<h2 id="hahahugoshortcode70s0hbhb">Realising the Feedback Loop<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="hahahugoshortcode75s0hbhb">Realising the Feedback Loop<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <p>Based on <a href="https://blog.cdaf.io/articles/2023-07-23-feedback-loop/" rel="external">Realising the Feedback Loop</a>, once the package has been promoted to it&rsquo;s last stage, it is then pushed to the artefact store</p>
-<p><a href="#R-image-a54a09b3c3b352972cf9d21329aff780" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline-complete.png" style="height: auto;width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a54a09b3c3b352972cf9d21329aff780"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline-complete.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-2cd2f9206c0fc6b178888ac204cb9b4b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-pipeline-complete.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2cd2f9206c0fc6b178888ac204cb9b4b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-pipeline-complete.png" title="Production Artefact"></a></p>
 <p>In this example Azure DevOps (ADO) using the <em>az artifacts</em> extension, see the example <code>push.tsk</code>.</p>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>Write-Host &#34;[$TASK_NAME] Verify deployable artefact is available`n&#34;
 $package_name = (Get-Item &#34;$(PWD)\release.ps1&#34; -ErrorAction SilentlyContinue).FullName
@@ -177,12 +177,12 @@ $package_name = (Get-Item &#34;$(PWD)\userenv.ps1&#34; -ErrorAction SilentlyCont
 if ( ! ( $package_name )) { ERRMSG &#34;[PACKAGE_NOT_FOUND] $(PWD)\userenv.ps1 not found!&#34; 9995 }
 az artifacts universal publish --organization &#34;https://cdaf.visualstudio.com&#34; --project $ado_project --scope project --feed $ado_feed --name &#34;userenv&#34; --version $version --path $package_name</code></pre></div>
 <p>The package can be retrieved using the semantic version, or <code>latest</code> (current production).</p>
-<p><a href="#R-image-13f422b3c816392a345fa8850dea325b" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-13f422b3c816392a345fa8850dea325b"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-artefact.png" title="Production Artefact"></a></p>
+<p><a href="#R-image-c3e5678b6d6296c63479d7d1c1abc839" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-artefact.png" style="height: auto;width: auto;" title="Production Artefact"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c3e5678b6d6296c63479d7d1c1abc839"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-artefact.png" title="Production Artefact"></a></p>
 <h3 id="operations">Operations<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
 <p>Operational tasks can be performed using the production (<code>latest</code>) or specific release. In this example, a production-like development environment can be created and destroyed on demand.</p>
-<p><a href="#R-image-196bf70cb26c72b295b732058751c499" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-ops.png" style="height: auto;width: auto;" title="Release Package for Operations"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-196bf70cb26c72b295b732058751c499"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-ops.png" title="Release Package for Operations"></a></p>
+<p><a href="#R-image-4b69432f2aa87a5abf9f42b3e1f6631d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/images/azt-ops.png" style="height: auto;width: auto;" title="Release Package for Operations"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4b69432f2aa87a5abf9f42b3e1f6631d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/images/azt-ops.png" title="Release Package for Operations"></a></p>
 
   <footer class="footline">
   </footer>
@@ -190,8 +190,8 @@ az artifacts universal publish --organization &#34;https://cdaf.visualstudio.com
         </div>
       </main>
     </div>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1787549286" defer></script>
-    <script src="/js/theme.min.js?1787549286" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1791269875" defer></script>
+    <script src="/js/theme.min.js?1791269875" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
